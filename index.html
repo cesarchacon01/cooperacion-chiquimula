@@ -380,10 +380,27 @@ function renderStats(filtrados){
     return b+(c.poblacion_total_estimada||0);
   },0), 0);
 
+  // En la vista municipal, este indicador cambia de escala: ya no cuenta municipios,
+  // sino lugares poblados con presencia respecto del catálogo territorial completo.
+  let terceraTarjeta='';
+  if(muniTerritorial){
+    const munChoices=(CATALOGO?.choices&&CATALOGO.choices.municipios)||{};
+    const totalCatalogo=Object.values(CATALOGO?.lugares_poblados||{}).filter(meta=>
+      (munChoices[meta.municipio_codigo]||meta.municipio_codigo)===muniTerritorial
+    ).length;
+    const lugaresConPresencia=new Set();
+    filtrados.forEach(p=>(p.comunidades||[]).forEach(c=>{
+      if(c.municipio===muniTerritorial && c.codigo_lugar) lugaresConPresencia.add(c.codigo_lugar);
+    }));
+    terceraTarjeta=`<div class="stat-card"><div class="label">Lugares poblados con presencia</div><div class="value">${lugaresConPresencia.size} <span style="font-size:16px;color:#8B9199;font-weight:500;">de ${totalCatalogo}</span></div></div>`;
+  }else{
+    terceraTarjeta=`<div class="stat-card"><div class="label">Municipios con presencia</div><div class="value">${munis.size} <span style="font-size:16px;color:#8B9199;font-weight:500;">de 11</span></div></div>`;
+  }
+
   document.getElementById('stats').innerHTML = `
     <div class="stat-card"><div class="label">Organizaciones</div><div class="value">${orgs}</div></div>
     <div class="stat-card"><div class="label">Programas / proyectos</div><div class="value">${progs}</div></div>
-    <div class="stat-card"><div class="label">Municipios con presencia</div><div class="value">${munis.size} <span style="font-size:16px;color:#8B9199;font-weight:500;">${muniTerritorial?'en el municipio':'de 11'}</span></div></div>
+    ${terceraTarjeta}
     <div class="stat-card"><div class="label">Población atendida (aprox.)</div><div class="value">${poblacion.toLocaleString('es-GT')}</div></div>
   `;
 }
