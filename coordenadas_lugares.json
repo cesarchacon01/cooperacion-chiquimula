@@ -1,0 +1,4082 @@
+{
+  "chiquimula_chiquimula": {
+    "lat": 14.79442,
+    "lon": -89.54527,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_alta_mira_6": {
+    "lat": 14.827235,
+    "lon": -89.54019,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_bella_vista": {
+    "lat": 14.806862,
+    "lon": -89.57929,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_campollano": {
+    "lat": 14.77457,
+    "lon": -89.55826,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_canaan": {
+    "lat": 14.802162,
+    "lon": -89.56257,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_carrizal": {
+    "lat": 14.757773,
+    "lon": -89.65348,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_chisja": {
+    "lat": 14.756131,
+    "lon": -89.49169,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_aguacate": {
+    "lat": 14.839054,
+    "lon": -89.69604,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_anonal": {
+    "lat": 14.813574,
+    "lon": -89.70932,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_barrial": {
+    "lat": 14.791606,
+    "lon": -89.6732,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_carrizal": {
+    "lat": 14.819616,
+    "lon": -89.63554,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_cedro": {
+    "lat": 14.827042,
+    "lon": -89.51749,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_cerron": {
+    "lat": 14.807507,
+    "lon": -89.61955,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_chilar": {
+    "lat": 14.71738,
+    "lon": -89.50891,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_conacaste": {
+    "lat": 14.856414,
+    "lon": -89.61787,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_durazno": {
+    "lat": 14.829245,
+    "lon": -89.67129,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_filo_del_carrizal": {
+    "lat": 14.807527,
+    "lon": -89.65578,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_guayabo": {
+    "lat": 14.866305,
+    "lon": -89.60026,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_ingeniero": {
+    "lat": 14.845706,
+    "lon": -89.51836,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_jute": {
+    "lat": 14.803401,
+    "lon": -89.60001,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_limon": {
+    "lat": 14.799362,
+    "lon": -89.61087,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_matasano": {
+    "lat": 14.768479,
+    "lon": -89.69707,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_morral": {
+    "lat": 14.808435,
+    "lon": -89.50251,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_nanzal": {
+    "lat": 14.75512,
+    "lon": -89.50726,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_obraje": {
+    "lat": 14.748833,
+    "lon": -89.52945,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_palmar": {
+    "lat": 14.84518,
+    "lon": -89.62846,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_palmarcito": {
+    "lat": 14.842165,
+    "lon": -89.46955,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_paraiso": {
+    "lat": 14.766287,
+    "lon": -89.55744,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_pato": {
+    "lat": 14.771404,
+    "lon": -89.65138,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_pinalito": {
+    "lat": 14.858234,
+    "lon": -89.58916,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_puerta_el_pinal": {
+    "lat": 14.818062,
+    "lon": -89.47585,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_potrerillos": {
+    "lat": 14.765976,
+    "lon": -89.49771,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_poxte": {
+    "lat": 14.783397,
+    "lon": -89.63717,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_sauce": {
+    "lat": 14.769739,
+    "lon": -89.66534,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_sauce_2": {
+    "lat": 14.769739,
+    "lon": -89.66534,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_guayabillas": {
+    "lat": 14.847199,
+    "lon": -89.63606,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_guior": {
+    "lat": 14.813105,
+    "lon": -89.60691,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_hacienda_el_santo": {
+    "lat": 14.76221,
+    "lon": -89.48995,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_jicaral": {
+    "lat": 14.734231,
+    "lon": -89.48871,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_jurgayon": {
+    "lat": 14.807872,
+    "lon": -89.52356,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_la_catocha": {
+    "lat": 14.777102,
+    "lon": -89.64896,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_la_laguna": {
+    "lat": 14.789884,
+    "lon": -89.62123,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_la_ponderosa": {
+    "lat": 14.778625,
+    "lon": -89.53275,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_la_puente": {
+    "lat": 14.793521,
+    "lon": -89.46036,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_puerta_de_la_montana": {
+    "lat": 14.823541,
+    "lon": -89.47326,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_las_cruces": {
+    "lat": 14.778638,
+    "lon": -89.68966,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_las_mesas": {
+    "lat": 14.816977,
+    "lon": -89.61503,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_las_tablas": {
+    "lat": 14.838581,
+    "lon": -89.68574,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_limar": {
+    "lat": 14.813808,
+    "lon": -89.67107,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_los_calambres": {
+    "lat": 14.844522,
+    "lon": -89.67478,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_morral_2": {
+    "lat": 14.808435,
+    "lon": -89.50251,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_los_felipe": {
+    "lat": 14.830306,
+    "lon": -89.62867,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_los_gallardos": {
+    "lat": 14.822594,
+    "lon": -89.56321,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_los_garcia": {
+    "lat": 14.826035,
+    "lon": -89.64234,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_roble": {
+    "lat": 14.851456,
+    "lon": -89.62177,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_los_vidal": {
+    "lat": 14.777751,
+    "lon": -89.49106,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_magueyal": {
+    "lat": 14.774845,
+    "lon": -89.58143,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_maraxco": {
+    "lat": 14.850497,
+    "lon": -89.57758,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_plan_del_jocote": {
+    "lat": 14.852966,
+    "lon": -89.5833,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_monjon": {
+    "lat": 14.827875,
+    "lon": -89.64471,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_nanzal": {
+    "lat": 14.839515,
+    "lon": -89.63444,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_nueva_esperanza": {
+    "lat": 14.83235,
+    "lon": -89.46729,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_paija": {
+    "lat": 14.738583,
+    "lon": -89.51501,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_la_oscurana": {
+    "lat": 14.784466,
+    "lon": -89.65877,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_paso_del_credo": {
+    "lat": 14.838966,
+    "lon": -89.50456,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_petapilla": {
+    "lat": 14.825795,
+    "lon": -89.52755,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_pinalon": {
+    "lat": 14.803091,
+    "lon": -89.67142,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_plan_de_la_brea": {
+    "lat": 14.869985,
+    "lon": -89.61726,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_plan_del_guineo": {
+    "lat": 14.797803,
+    "lon": -89.66312,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_plan_del_jocote_2": {
+    "lat": 14.852966,
+    "lon": -89.5833,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_quebrada_seca": {
+    "lat": 14.737412,
+    "lon": -89.49023,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_rincon_de_santa_barbara": {
+    "lat": 14.849267,
+    "lon": -89.46606,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_roble_amarillo": {
+    "lat": 14.807493,
+    "lon": -89.63848,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_sabana_grande": {
+    "lat": 14.741112,
+    "lon": -89.5412,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_los_sagastumes": {
+    "lat": 14.826538,
+    "lon": -89.60095,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_san_antonio": {
+    "lat": 14.819043,
+    "lon": -89.50379,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_san_esteban": {
+    "lat": 14.754236,
+    "lon": -89.52007,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_san_jorge": {
+    "lat": 14.738026,
+    "lon": -89.47866,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_san_miguel": {
+    "lat": 14.82476,
+    "lon": -89.48668,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_santa_barbara": {
+    "lat": 14.850735,
+    "lon": -89.4834,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_santa_elena": {
+    "lat": 14.717456,
+    "lon": -89.49716,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_shusho_abajo": {
+    "lat": 14.813122,
+    "lon": -89.54805,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_shusho_arriba": {
+    "lat": 14.821851,
+    "lon": -89.59403,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_shusho_enmedio": {
+    "lat": 14.820114,
+    "lon": -89.55442,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_sillon_abajo": {
+    "lat": 14.794765,
+    "lon": -89.49436,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_sillon_arriba": {
+    "lat": 14.782477,
+    "lon": -89.48426,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_tablon_del_ocotal": {
+    "lat": 14.838153,
+    "lon": -89.47943,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_taco_arriba": {
+    "lat": 14.784578,
+    "lon": -89.6046,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_tapazan": {
+    "lat": 14.865126,
+    "lon": -89.47399,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_terrero_barroso": {
+    "lat": 14.764186,
+    "lon": -89.63836,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_ticanlu": {
+    "lat": 14.821964,
+    "lon": -89.57265,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_ticanto_castillo": {
+    "lat": 14.811101,
+    "lon": -89.52054,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_ticanto_morales": {
+    "lat": 14.808444,
+    "lon": -89.52019,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_tierra_blanca": {
+    "lat": 14.766052,
+    "lon": -89.68128,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_trapechito": {
+    "lat": 14.805989,
+    "lon": -89.60995,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_vado_hondo": {
+    "lat": 14.733595,
+    "lon": -89.50555,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_vega_arriba": {
+    "lat": 14.759551,
+    "lon": -89.56141,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_vidal": {
+    "lat": 14.807318,
+    "lon": -89.52918,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_villas_de_chiquimula": {
+    "lat": 14.776119,
+    "lon": -89.55522,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_villas_de_manolo": {
+    "lat": 14.81057,
+    "lon": -89.52372,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_vista_hermosa": {
+    "lat": 14.824604,
+    "lon": -89.54176,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_xororagua": {
+    "lat": 14.766806,
+    "lon": -89.57862,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_el_morral_3": {
+    "lat": 14.808435,
+    "lon": -89.50251,
+    "fuente": "INE Censo 2018"
+  },
+  "chiquimula_piedra_quemada": {
+    "lat": 14.817255,
+    "lon": -89.65865,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jose_la_arada_san_jose_la_arada": {
+    "lat": 14.722911,
+    "lon": -89.58348,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jose_la_arada_buena_vista": {
+    "lat": 14.740795,
+    "lon": -89.56891,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jose_la_arada_cerro_de_cal": {
+    "lat": 14.692697,
+    "lon": -89.56114,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jose_la_arada_chilar": {
+    "lat": 14.723687,
+    "lon": -89.64484,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jose_la_arada_el_carrizal": {
+    "lat": 14.720346,
+    "lon": -89.55651,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jose_la_arada_el_carrizal_2": {
+    "lat": 14.720346,
+    "lon": -89.55651,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jose_la_arada_el_junquillo": {
+    "lat": 14.733385,
+    "lon": -89.56562,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jose_la_arada_el_potrero": {
+    "lat": 14.674605,
+    "lon": -89.57864,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jose_la_arada_el_rincon": {
+    "lat": 14.690205,
+    "lon": -89.61847,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jose_la_arada_el_rodeo_abajo": {
+    "lat": 14.681221,
+    "lon": -89.57813,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jose_la_arada_guacamayas_abajo": {
+    "lat": 14.672109,
+    "lon": -89.59165,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jose_la_arada_la_joya": {
+    "lat": 14.695969,
+    "lon": -89.61785,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jose_la_arada_la_torera": {
+    "lat": 14.715114,
+    "lon": -89.6137,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jose_la_arada_los_cimientos": {
+    "lat": 14.689208,
+    "lon": -89.63888,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jose_la_arada_los_encuentros": {
+    "lat": 14.7205,
+    "lon": -89.59986,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jose_la_arada_plan_redondo": {
+    "lat": 14.672144,
+    "lon": -89.56211,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jose_la_arada_el_rodeo_arriba": {
+    "lat": 14.68636,
+    "lon": -89.57222,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jose_la_arada_santa_rosa": {
+    "lat": 14.690658,
+    "lon": -89.60151,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jose_la_arada_saspan": {
+    "lat": 14.710264,
+    "lon": -89.54798,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jose_la_arada_tashan": {
+    "lat": 14.744297,
+    "lon": -89.61025,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jose_la_arada_tierra_colorada": {
+    "lat": 14.74723,
+    "lon": -89.5757,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jose_la_arada_tobar": {
+    "lat": 14.722266,
+    "lon": -89.65486,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_san_juan_ermita": {
+    "lat": 14.764502,
+    "lon": -89.43082,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_buena_vista": {
+    "lat": 14.769026,
+    "lon": -89.43672,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_el_carrizal": {
+    "lat": 14.757204,
+    "lon": -89.40227,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_caulotes": {
+    "lat": 14.77359,
+    "lon": -89.43591,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_chanco": {
+    "lat": 14.711739,
+    "lon": -89.44421,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_chispan_jaral": {
+    "lat": 14.698007,
+    "lon": -89.40405,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_churischan": {
+    "lat": 14.738684,
+    "lon": -89.40514,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_los_coronados": {
+    "lat": 14.72014,
+    "lon": -89.42323,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_corral_de_piedra": {
+    "lat": 14.708258,
+    "lon": -89.45448,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_los_coyotes": {
+    "lat": 14.706773,
+    "lon": -89.4296,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_el_cerron": {
+    "lat": 14.737778,
+    "lon": -89.41593,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_el_coco": {
+    "lat": 14.770472,
+    "lon": -89.41069,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_los_encuentros": {
+    "lat": 14.718788,
+    "lon": -89.40369,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_la_ceiba": {
+    "lat": 14.730719,
+    "lon": -89.44672,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_ceibita_centro": {
+    "lat": 14.777953,
+    "lon": -89.42117,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_la_esperanza": {
+    "lat": 14.723738,
+    "lon": -89.41012,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_la_muneca": {
+    "lat": 14.720843,
+    "lon": -89.46393,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_lagunetas": {
+    "lat": 14.748168,
+    "lon": -89.39585,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_los_lopez": {
+    "lat": 14.729972,
+    "lon": -89.40247,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_los_planes": {
+    "lat": 14.753308,
+    "lon": -89.4404,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_el_magueyal": {
+    "lat": 14.724867,
+    "lon": -89.38212,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_el_matasano": {
+    "lat": 14.703833,
+    "lon": -89.39361,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_minas_abajo": {
+    "lat": 14.76996,
+    "lon": -89.44983,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_minas_arriba": {
+    "lat": 14.784261,
+    "lon": -89.45182,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_miramundo": {
+    "lat": 14.752959,
+    "lon": -89.42079,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_el_mojon": {
+    "lat": 14.700861,
+    "lon": -89.41506,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_penasco": {
+    "lat": 14.773104,
+    "lon": -89.44374,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_las_piletas": {
+    "lat": 14.713238,
+    "lon": -89.43693,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_quequexque": {
+    "lat": 14.71629,
+    "lon": -89.37791,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_rio_arriba": {
+    "lat": 14.719871,
+    "lon": -89.41374,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_el_roblarcito": {
+    "lat": 14.70892,
+    "lon": -89.3861,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_el_salitron": {
+    "lat": 14.703533,
+    "lon": -89.45965,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_san_antonio_lajas": {
+    "lat": 14.722381,
+    "lon": -89.43106,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_zarzal_1": {
+    "lat": 14.784574,
+    "lon": -89.43443,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_zarzal_2": {
+    "lat": 14.78969,
+    "lon": -89.43183,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_tasharja": {
+    "lat": 14.722378,
+    "lon": -89.3931,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_tasharja_abajo": {
+    "lat": 14.717173,
+    "lon": -89.39065,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_tasharja_arriba": {
+    "lat": 14.732324,
+    "lon": -89.38962,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_ticanlu": {
+    "lat": 14.739077,
+    "lon": -89.46328,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_veguitas": {
+    "lat": 14.748383,
+    "lon": -89.45778,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_vivienda_nueva": {
+    "lat": 14.750106,
+    "lon": -89.44752,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_el_campo": {
+    "lat": 14.769105,
+    "lon": -89.43046,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_el_cementerio": {
+    "lat": 14.769046,
+    "lon": -89.42783,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_el_escopetazo": {
+    "lat": 14.766463,
+    "lon": -89.43136,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_la_escuela": {
+    "lat": 14.762364,
+    "lon": -89.43285,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_linda_vista": {
+    "lat": 14.760707,
+    "lon": -89.44113,
+    "fuente": "INE Censo 2018"
+  },
+  "san_juan_ermita_la_tejera": {
+    "lat": 14.761523,
+    "lon": -89.43696,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_jocotan": {
+    "lat": 14.819268,
+    "lon": -89.3896,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_agua_fria": {
+    "lat": 14.910379,
+    "lon": -89.36469,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_agua_zarca": {
+    "lat": 14.837105,
+    "lon": -89.39621,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_amatillo": {
+    "lat": 14.793433,
+    "lon": -89.42808,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_pinalito_matasano": {
+    "lat": 14.855738,
+    "lon": -89.38686,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_canapara_abajo": {
+    "lat": 14.764622,
+    "lon": -89.37885,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_canapara_arriba": {
+    "lat": 14.759889,
+    "lon": -89.38797,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_los_cardona": {
+    "lat": 14.797278,
+    "lon": -89.38254,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_quebrada_seca_oquen": {
+    "lat": 14.794206,
+    "lon": -89.41783,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_colmenas": {
+    "lat": 14.761289,
+    "lon": -89.23219,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_conacaste_centro": {
+    "lat": 14.876225,
+    "lon": -89.44263,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_copanito": {
+    "lat": 14.837743,
+    "lon": -89.42876,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_cruz_de_charma": {
+    "lat": 14.773436,
+    "lon": -89.34033,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_talquetzal_centro": {
+    "lat": 14.901031,
+    "lon": -89.35593,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_la_cumbre": {
+    "lat": 14.784881,
+    "lon": -89.24616,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_el_angel_las_flores": {
+    "lat": 14.84901,
+    "lon": -89.43855,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_el_arenal": {
+    "lat": 14.832812,
+    "lon": -89.4357,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_el_candelero_centro": {
+    "lat": 14.869356,
+    "lon": -89.40788,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_el_cementerio": {
+    "lat": 14.83718,
+    "lon": -89.42279,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_el_cerron": {
+    "lat": 14.819417,
+    "lon": -89.44433,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_despoblado_oquen": {
+    "lat": 14.816941,
+    "lon": -89.41227,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_escobillal": {
+    "lat": 14.802476,
+    "lon": -89.40816,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_el_filo": {
+    "lat": 14.905908,
+    "lon": -89.36014,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_el_limar": {
+    "lat": 14.772841,
+    "lon": -89.27969,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_suchiquer_plan_del_mango": {
+    "lat": 14.815444,
+    "lon": -89.43056,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_el_morrito": {
+    "lat": 14.86314,
+    "lon": -89.4382,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_el_pajalito": {
+    "lat": 14.851401,
+    "lon": -89.45709,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_nuevo_palmar": {
+    "lat": 14.830567,
+    "lon": -89.4192,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_pinalito": {
+    "lat": 14.873898,
+    "lon": -89.41545,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_el_tablon": {
+    "lat": 14.834451,
+    "lon": -89.40038,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_el_tular": {
+    "lat": 14.846104,
+    "lon": -89.43114,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_el_zapote": {
+    "lat": 14.77894,
+    "lon": -89.29517,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_el_zapotillo_aldea_las_flores": {
+    "lat": 14.8509,
+    "lon": -89.44837,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_encuentro_la_ceiba": {
+    "lat": 14.843519,
+    "lon": -89.41012,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_guaraquiche_centro": {
+    "lat": 14.849955,
+    "lon": -89.4007,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_guior": {
+    "lat": 14.828037,
+    "lon": -89.41955,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_guapinol": {
+    "lat": 14.841104,
+    "lon": -89.43096,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_guareruche": {
+    "lat": 14.838701,
+    "lon": -89.4259,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_guayabillas_centro": {
+    "lat": 14.886033,
+    "lon": -89.44319,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_el_guayabo": {
+    "lat": 14.78192,
+    "lon": -89.3138,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_ingenio_guaraquiche": {
+    "lat": 14.862739,
+    "lon": -89.39213,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_la_arada": {
+    "lat": 14.79155,
+    "lon": -89.36118,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_la_ceiba": {
+    "lat": 14.891713,
+    "lon": -89.36353,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_la_cruz": {
+    "lat": 14.845831,
+    "lon": -89.44063,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_la_esperanza": {
+    "lat": 14.850067,
+    "lon": -89.44294,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_la_mina": {
+    "lat": 14.801103,
+    "lon": -89.44653,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_la_palmilla": {
+    "lat": 14.881491,
+    "lon": -89.3626,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_la_puerta": {
+    "lat": 14.825696,
+    "lon": -89.43389,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_las_crucitas": {
+    "lat": 14.780098,
+    "lon": -89.40737,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_las_flores": {
+    "lat": 14.847352,
+    "lon": -89.44565,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_los_perez": {
+    "lat": 14.898728,
+    "lon": -89.36397,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_los_vados": {
+    "lat": 14.789551,
+    "lon": -89.39843,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_mal_paso": {
+    "lat": 14.775136,
+    "lon": -89.25364,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_matasano_centro": {
+    "lat": 14.851056,
+    "lon": -89.381,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_mojon": {
+    "lat": 14.773145,
+    "lon": -89.234,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_el_naranjo": {
+    "lat": 14.786275,
+    "lon": -89.29852,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_ocumbla": {
+    "lat": 14.782041,
+    "lon": -89.32531,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_ojo_de_agua_escondido": {
+    "lat": 14.864809,
+    "lon": -89.41878,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_oquen": {
+    "lat": 14.804965,
+    "lon": -89.41637,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_suchiquer_oratorio": {
+    "lat": 14.813163,
+    "lon": -89.4383,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_oregano": {
+    "lat": 14.87402,
+    "lon": -89.46361,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_pacren": {
+    "lat": 14.78848,
+    "lon": -89.37534,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_palmar": {
+    "lat": 14.857119,
+    "lon": -89.37903,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_barrio_nuevo_guayabillas": {
+    "lat": 14.89507,
+    "lon": -89.44068,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_pelillo_negro_centro": {
+    "lat": 14.82899,
+    "lon": -89.4406,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_el_llano": {
+    "lat": 14.835408,
+    "lon": -89.44687,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_pericon": {
+    "lat": 14.788171,
+    "lon": -89.3391,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_piedra_parada": {
+    "lat": 14.736948,
+    "lon": -89.37776,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_suchiquen_pinalito": {
+    "lat": 14.818654,
+    "lon": -89.41903,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_planes_del_guineal": {
+    "lat": 14.764957,
+    "lon": -89.27284,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_potrero": {
+    "lat": 14.752035,
+    "lon": -89.372,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_potrerito": {
+    "lat": 14.878132,
+    "lon": -89.43599,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_quebrada_seca": {
+    "lat": 14.830282,
+    "lon": -89.39264,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_rodeito": {
+    "lat": 14.747583,
+    "lon": -89.3194,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_san_pedrito": {
+    "lat": 14.856026,
+    "lon": -89.4476,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_suchiquer_centro": {
+    "lat": 14.807599,
+    "lon": -89.42976,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_suchiquer_guapinol": {
+    "lat": 14.815881,
+    "lon": -89.42638,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_tansha": {
+    "lat": 14.780168,
+    "lon": -89.24308,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_tatutu": {
+    "lat": 14.768674,
+    "lon": -89.3193,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_tesoro_abajo": {
+    "lat": 14.777822,
+    "lon": -89.40176,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_tesoro_arriba": {
+    "lat": 14.77637,
+    "lon": -89.38992,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_tierra_blanca": {
+    "lat": 14.803068,
+    "lon": -89.3965,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_tierra_blanca_2": {
+    "lat": 14.803068,
+    "lon": -89.3965,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_encuentro_guaraquiche": {
+    "lat": 14.828571,
+    "lon": -89.40344,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_tontoles": {
+    "lat": 14.782237,
+    "lon": -89.27606,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_tunuco_abajo": {
+    "lat": 14.768916,
+    "lon": -89.36269,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_tunuco_arriba": {
+    "lat": 14.754412,
+    "lon": -89.34988,
+    "fuente": "INE Censo 2018"
+  },
+  "jocotan_los_garcia": {
+    "lat": 14.760153,
+    "lon": -89.36787,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_camotan": {
+    "lat": 14.819226,
+    "lon": -89.3717,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_anisillo": {
+    "lat": 14.872371,
+    "lon": -89.2443,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_brasilar": {
+    "lat": 14.830032,
+    "lon": -89.35068,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_cajon_del_rio": {
+    "lat": 14.823424,
+    "lon": -89.26474,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_cajoncito": {
+    "lat": 14.811748,
+    "lon": -89.25282,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_camino_real_o_agua_fria": {
+    "lat": 14.864503,
+    "lon": -89.34557,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_canon_de_tisipe": {
+    "lat": 14.821144,
+    "lon": -89.33346,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_caparja": {
+    "lat": 14.855461,
+    "lon": -89.23929,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_carrizalito": {
+    "lat": 14.849909,
+    "lon": -89.2301,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_caulotes": {
+    "lat": 14.809953,
+    "lon": -89.21227,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_chanco_centro": {
+    "lat": 14.841698,
+    "lon": -89.33624,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_changuis": {
+    "lat": 14.80076,
+    "lon": -89.31279,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_chantiago": {
+    "lat": 14.845259,
+    "lon": -89.28394,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_chapulin": {
+    "lat": 14.799454,
+    "lon": -89.20528,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_coyoles": {
+    "lat": 14.799615,
+    "lon": -89.21591,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_despoblado_centro": {
+    "lat": 14.861583,
+    "lon": -89.27997,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_dos_quebradas": {
+    "lat": 14.803236,
+    "lon": -89.3323,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_chatuncito": {
+    "lat": 14.885371,
+    "lon": -89.32321,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_chiyo": {
+    "lat": 14.792971,
+    "lon": -89.3285,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_chorro": {
+    "lat": 14.80632,
+    "lon": -89.36836,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_florido": {
+    "lat": 14.858121,
+    "lon": -89.23204,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_guayabo": {
+    "lat": 14.837389,
+    "lon": -89.23588,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_jute": {
+    "lat": 14.876491,
+    "lon": -89.23174,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_limar": {
+    "lat": 14.844264,
+    "lon": -89.32425,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_limar_2": {
+    "lat": 14.844264,
+    "lon": -89.32425,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_plan": {
+    "lat": 14.787343,
+    "lon": -89.26257,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_roblar": {
+    "lat": 14.883739,
+    "lon": -89.27067,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_roble": {
+    "lat": 14.797414,
+    "lon": -89.34855,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_tesoro_centro": {
+    "lat": 14.904963,
+    "lon": -89.21419,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_valle": {
+    "lat": 14.803622,
+    "lon": -89.21882,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_escuelero": {
+    "lat": 14.824008,
+    "lon": -89.24328,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_guillermo_guerra": {
+    "lat": 14.81984,
+    "lon": -89.36447,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_guior_centro": {
+    "lat": 14.898072,
+    "lon": -89.26301,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_agua_caliente": {
+    "lat": 14.822257,
+    "lon": -89.36365,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_la_joya": {
+    "lat": 14.809228,
+    "lon": -89.29295,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_la_libertad_centro": {
+    "lat": 14.870226,
+    "lon": -89.27144,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_la_lima": {
+    "lat": 14.892246,
+    "lon": -89.31769,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_la_loma": {
+    "lat": 14.825907,
+    "lon": -89.22092,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_la_sierra": {
+    "lat": 14.896354,
+    "lon": -89.33469,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_lantiquin": {
+    "lat": 14.806706,
+    "lon": -89.36105,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_las_flores": {
+    "lat": 14.815683,
+    "lon": -89.24357,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_plan_morro": {
+    "lat": 14.85073,
+    "lon": -89.31461,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_mineral": {
+    "lat": 14.863834,
+    "lon": -89.31438,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_limon_timote": {
+    "lat": 14.805516,
+    "lon": -89.30504,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_limoncito": {
+    "lat": 14.793149,
+    "lon": -89.31343,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_loma_de_paja": {
+    "lat": 14.788477,
+    "lon": -89.27377,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_los_hernandez": {
+    "lat": 14.834278,
+    "lon": -89.36995,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_los_nacientos": {
+    "lat": 14.890326,
+    "lon": -89.32642,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_marimba": {
+    "lat": 14.803026,
+    "lon": -89.3399,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_morola_centro": {
+    "lat": 14.925629,
+    "lon": -89.19316,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_plan_muyurco": {
+    "lat": 14.806759,
+    "lon": -89.28198,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_nearar": {
+    "lat": 14.827232,
+    "lon": -89.31252,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_cumbre_de_nenoja": {
+    "lat": 14.81601,
+    "lon": -89.30512,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_nuevo_lantiquin": {
+    "lat": 14.810079,
+    "lon": -89.3694,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_ojo_de_agua": {
+    "lat": 14.791489,
+    "lon": -89.26021,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_pajco": {
+    "lat": 14.833036,
+    "lon": -89.35897,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_palala_o_espinal": {
+    "lat": 14.849003,
+    "lon": -89.37364,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_palo_verde_i": {
+    "lat": 14.847283,
+    "lon": -89.34281,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_pashapa": {
+    "lat": 14.83212,
+    "lon": -89.2922,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_pena_blanca": {
+    "lat": 14.795974,
+    "lon": -89.30058,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_petenta": {
+    "lat": 14.828402,
+    "lon": -89.32615,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_piedra_de_fuego": {
+    "lat": 14.872339,
+    "lon": -89.33026,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_pitahaya": {
+    "lat": 14.832506,
+    "lon": -89.33561,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_plan_del_jocote": {
+    "lat": 14.823465,
+    "lon": -89.23026,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_portezuelo": {
+    "lat": 14.82704,
+    "lon": -89.28531,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_quebracho": {
+    "lat": 14.807306,
+    "lon": -89.2292,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_la_quesera": {
+    "lat": 14.857211,
+    "lon": -89.29098,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_roblarcito": {
+    "lat": 14.848516,
+    "lon": -89.24443,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_roblarcito_2": {
+    "lat": 14.848516,
+    "lon": -89.24443,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_rodeo": {
+    "lat": 14.845887,
+    "lon": -89.27458,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_san_antonio": {
+    "lat": 14.87334,
+    "lon": -89.26431,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_sesesmilito": {
+    "lat": 14.928804,
+    "lon": -89.20496,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_shalagua_centro": {
+    "lat": 14.793111,
+    "lon": -89.23956,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_shupa_centro": {
+    "lat": 14.867325,
+    "lon": -89.28738,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_socotoco": {
+    "lat": 14.832688,
+    "lon": -89.27735,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_tachoche_sector_i": {
+    "lat": 14.936937,
+    "lon": -89.22786,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_tajun": {
+    "lat": 14.85745,
+    "lon": -89.25901,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_talco": {
+    "lat": 14.810633,
+    "lon": -89.33556,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_tapuan": {
+    "lat": 14.836569,
+    "lon": -89.37503,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_tierra_blanca": {
+    "lat": 14.810115,
+    "lon": -89.34701,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_tierra_blanca_2": {
+    "lat": 14.810115,
+    "lon": -89.34701,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_tizamarte": {
+    "lat": 14.914872,
+    "lon": -89.22842,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_tisipe": {
+    "lat": 14.819729,
+    "lon": -89.34577,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_toma_de_agua": {
+    "lat": 14.88761,
+    "lon": -89.28074,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_tular": {
+    "lat": 14.811543,
+    "lon": -89.27238,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_ushurja": {
+    "lat": 14.853279,
+    "lon": -89.30269,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_usha": {
+    "lat": 14.839579,
+    "lon": -89.36371,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_volcan_centro": {
+    "lat": 14.884693,
+    "lon": -89.33947,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_barbasco": {
+    "lat": 14.940768,
+    "lon": -89.22477,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_calvario": {
+    "lat": 14.820659,
+    "lon": -89.37061,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_cementerio": {
+    "lat": 14.818097,
+    "lon": -89.37767,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_la_barrera": {
+    "lat": 14.82211,
+    "lon": -89.36841,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_las_brisas": {
+    "lat": 14.816345,
+    "lon": -89.37201,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_barrio_nuevo": {
+    "lat": 14.789508,
+    "lon": -89.24527,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_tempizque": {
+    "lat": 14.81531,
+    "lon": -89.37399,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_calichal": {
+    "lat": 14.899326,
+    "lon": -89.2586,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_caparroza": {
+    "lat": 14.892698,
+    "lon": -89.27361,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_cementerio": {
+    "lat": 14.849549,
+    "lon": -89.26616,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_chaguiton": {
+    "lat": 14.807431,
+    "lon": -89.32894,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_shalom": {
+    "lat": 14.817468,
+    "lon": -89.37365,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_crucitas": {
+    "lat": 14.81486,
+    "lon": -89.35324,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_descombro": {
+    "lat": 14.854272,
+    "lon": -89.33431,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_barrial": {
+    "lat": 14.801629,
+    "lon": -89.21328,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_bordo": {
+    "lat": 14.863293,
+    "lon": -89.27444,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_bordo_2": {
+    "lat": 14.863293,
+    "lon": -89.27444,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_cedral": {
+    "lat": 14.875017,
+    "lon": -89.33375,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_cementerio_2": {
+    "lat": 14.818097,
+    "lon": -89.37767,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_centro": {
+    "lat": 14.815181,
+    "lon": -89.2796,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_chorro_2": {
+    "lat": 14.80632,
+    "lon": -89.36836,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_clavelito": {
+    "lat": 14.796776,
+    "lon": -89.21753,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_cruce": {
+    "lat": 14.868857,
+    "lon": -89.2677,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_limon": {
+    "lat": 14.807264,
+    "lon": -89.30004,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_miradero": {
+    "lat": 14.82022,
+    "lon": -89.25301,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_palmar": {
+    "lat": 14.82471,
+    "lon": -89.25788,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_plan_shalagua": {
+    "lat": 14.791043,
+    "lon": -89.25046,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_porvenir": {
+    "lat": 14.919066,
+    "lon": -89.22206,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_el_roblon": {
+    "lat": 14.904315,
+    "lon": -89.22496,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_filincas": {
+    "lat": 14.817832,
+    "lon": -89.23351,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_guapinol": {
+    "lat": 14.875661,
+    "lon": -89.24945,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_la_cruz": {
+    "lat": 14.824417,
+    "lon": -89.27029,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_la_laguna": {
+    "lat": 14.893945,
+    "lon": -89.34482,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_la_loma_2": {
+    "lat": 14.825907,
+    "lon": -89.22092,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_la_nueva_esperanza": {
+    "lat": 14.903009,
+    "lon": -89.23702,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_la_nueva_esperanza_2": {
+    "lat": 14.903009,
+    "lon": -89.23702,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_la_reforma": {
+    "lat": 14.910022,
+    "lon": -89.21673,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_lantiquin_centro": {
+    "lat": 14.803084,
+    "lon": -89.3658,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_las_cruces": {
+    "lat": 14.82857,
+    "lon": -89.31912,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_las_tinajas": {
+    "lat": 14.804538,
+    "lon": -89.26102,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_los_hermanos": {
+    "lat": 14.890167,
+    "lon": -89.34673,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_los_socorro": {
+    "lat": 14.814145,
+    "lon": -89.34875,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_manchame": {
+    "lat": 14.853819,
+    "lon": -89.24492,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_nearar_cumbre": {
+    "lat": 14.831078,
+    "lon": -89.30577,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_ojo_de_agua_2": {
+    "lat": 14.791489,
+    "lon": -89.26021,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_palmarcito": {
+    "lat": 14.821482,
+    "lon": -89.32564,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_pinalito": {
+    "lat": 14.878951,
+    "lon": -89.3524,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_pinalito_2": {
+    "lat": 14.878951,
+    "lon": -89.3524,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_plan_centro": {
+    "lat": 14.796805,
+    "lon": -89.33984,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_plan_marimba": {
+    "lat": 14.80035,
+    "lon": -89.34331,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_quebrada_grande": {
+    "lat": 14.847624,
+    "lon": -89.31051,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_sector_ii": {
+    "lat": 14.937978,
+    "lon": -89.23148,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_sector_iii": {
+    "lat": 14.933212,
+    "lon": -89.22595,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_zarzal": {
+    "lat": 14.911572,
+    "lon": -89.19547,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_zarzal_2": {
+    "lat": 14.911572,
+    "lon": -89.19547,
+    "fuente": "INE Censo 2018"
+  },
+  "camotan_pajco_barrio_nuevo": {
+    "lat": 14.836823,
+    "lon": -89.35862,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_olopa": {
+    "lat": 14.690299,
+    "lon": -89.34933,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_agua_blanca": {
+    "lat": 14.744624,
+    "lon": -89.3335,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_el_cementerio": {
+    "lat": 14.690021,
+    "lon": -89.33874,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_los_planes": {
+    "lat": 14.725228,
+    "lon": -89.30456,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_el_chucte": {
+    "lat": 14.696124,
+    "lon": -89.32239,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_el_cerron": {
+    "lat": 14.710645,
+    "lon": -89.28635,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_el_paternito": {
+    "lat": 14.708205,
+    "lon": -89.27058,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_el_amatillo": {
+    "lat": 14.737844,
+    "lon": -89.24108,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_el_carrizal": {
+    "lat": 14.717272,
+    "lon": -89.25026,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_el_guayabo": {
+    "lat": 14.699175,
+    "lon": -89.37731,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_el_palmar_y_el_guayabal": {
+    "lat": 14.668561,
+    "lon": -89.34039,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_el_oratorio": {
+    "lat": 14.736768,
+    "lon": -89.34851,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_el_roblarcito": {
+    "lat": 14.731577,
+    "lon": -89.33832,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_el_rodeo": {
+    "lat": 14.665697,
+    "lon": -89.29019,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_el_tablon_de_cayur": {
+    "lat": 14.71418,
+    "lon": -89.31858,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_la_cumbre": {
+    "lat": 14.689688,
+    "lon": -89.28474,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_tuticopote_la_laguna": {
+    "lat": 14.724209,
+    "lon": -89.3338,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_la_prensa": {
+    "lat": 14.728254,
+    "lon": -89.26594,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_laguna_de_cayur": {
+    "lat": 14.70598,
+    "lon": -89.30542,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_las_palmas": {
+    "lat": 14.680226,
+    "lon": -89.3109,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_las_pomas": {
+    "lat": 14.657413,
+    "lon": -89.32571,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_los_ramirez": {
+    "lat": 14.655881,
+    "lon": -89.30423,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_nochan": {
+    "lat": 14.679734,
+    "lon": -89.36759,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_piedra_de_amolar": {
+    "lat": 14.700761,
+    "lon": -89.30097,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_santa_maria": {
+    "lat": 14.658491,
+    "lon": -89.35578,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_talquetzal": {
+    "lat": 14.702561,
+    "lon": -89.34045,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_tituque": {
+    "lat": 14.718058,
+    "lon": -89.3616,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_valle_nuevo": {
+    "lat": 14.674314,
+    "lon": -89.29567,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_el_balastre": {
+    "lat": 14.719256,
+    "lon": -89.28374,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_el_bendito": {
+    "lat": 14.729777,
+    "lon": -89.34787,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_el_cintal": {
+    "lat": 14.688571,
+    "lon": -89.31855,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_el_tercero": {
+    "lat": 14.703366,
+    "lon": -89.38441,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_la_casona": {
+    "lat": 14.694706,
+    "lon": -89.36896,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_la_consolacion": {
+    "lat": 14.726939,
+    "lon": -89.23904,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_la_cumbrita": {
+    "lat": 14.694608,
+    "lon": -89.28939,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_la_prensa_abajo": {
+    "lat": 14.728109,
+    "lon": -89.257,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_la_prensa_arriba": {
+    "lat": 14.724917,
+    "lon": -89.27421,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_las_brisas": {
+    "lat": 14.712163,
+    "lon": -89.31152,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_las_flores": {
+    "lat": 14.718246,
+    "lon": -89.32249,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_las_pitahayas": {
+    "lat": 14.686777,
+    "lon": -89.30485,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_los_cafetales": {
+    "lat": 14.717676,
+    "lon": -89.37046,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_los_garcia": {
+    "lat": 14.706069,
+    "lon": -89.35458,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_los_gutierrez": {
+    "lat": 14.714577,
+    "lon": -89.30186,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_los_lirios": {
+    "lat": 14.682987,
+    "lon": -89.28461,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_los_pinos": {
+    "lat": 14.717151,
+    "lon": -89.31295,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_los_ramos": {
+    "lat": 14.700477,
+    "lon": -89.33143,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_los_segundos": {
+    "lat": 14.653369,
+    "lon": -89.36234,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_los_vasquez": {
+    "lat": 14.686296,
+    "lon": -89.2795,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_pie_de_la_cumbre": {
+    "lat": 14.692957,
+    "lon": -89.29636,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_piedra_picada": {
+    "lat": 14.727941,
+    "lon": -89.32861,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_puente_la_avanzada": {
+    "lat": 14.699077,
+    "lon": -89.31046,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_tituque_abajo": {
+    "lat": 14.727843,
+    "lon": -89.36132,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_toroja": {
+    "lat": 14.722063,
+    "lon": -89.35078,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_tuticopote_abajo": {
+    "lat": 14.724744,
+    "lon": -89.34382,
+    "fuente": "INE Censo 2018"
+  },
+  "olopa_tuticopote_centro": {
+    "lat": 14.717588,
+    "lon": -89.33983,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_esquipulas": {
+    "lat": 14.565573,
+    "lon": -89.35128,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_agua_caliente": {
+    "lat": 14.541894,
+    "lon": -89.28444,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_agua_zarca": {
+    "lat": 14.587607,
+    "lon": -89.2799,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_atulapa": {
+    "lat": 14.567787,
+    "lon": -89.31274,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_el_barrial": {
+    "lat": 14.524712,
+    "lon": -89.29999,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_belen": {
+    "lat": 14.598428,
+    "lon": -89.35801,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_bojorquez": {
+    "lat": 14.577336,
+    "lon": -89.28168,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_boyero": {
+    "lat": 14.589471,
+    "lon": -89.31645,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_canas": {
+    "lat": 14.632794,
+    "lon": -89.24592,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_cafetales": {
+    "lat": 14.626864,
+    "lon": -89.16952,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_canada_del_pino": {
+    "lat": 14.735973,
+    "lon": -89.18496,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_carboneras": {
+    "lat": 14.73515,
+    "lon": -89.2234,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_carrizal": {
+    "lat": 14.647405,
+    "lon": -89.15881,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_la_ceibita": {
+    "lat": 14.619527,
+    "lon": -89.27124,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_cerron": {
+    "lat": 14.585146,
+    "lon": -89.25857,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_chanmagua": {
+    "lat": 14.626648,
+    "lon": -89.20282,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_chiramay": {
+    "lat": 14.609898,
+    "lon": -89.36501,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_ciracil": {
+    "lat": 14.578124,
+    "lon": -89.36251,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_colinas_de_montecristo": {
+    "lat": 14.558833,
+    "lon": -89.33588,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_cruz_alta": {
+    "lat": 14.5625,
+    "lon": -89.38786,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_cuesta_del_pedrero": {
+    "lat": 14.578938,
+    "lon": -89.19597,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_cuevitas": {
+    "lat": 14.631957,
+    "lon": -89.29896,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_cuevitas_2": {
+    "lat": 14.631957,
+    "lon": -89.29896,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_carrunche": {
+    "lat": 14.548606,
+    "lon": -89.39188,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_el_duraznal": {
+    "lat": 14.509238,
+    "lon": -89.36868,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_cerron_2": {
+    "lat": 14.585146,
+    "lon": -89.25857,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_el_empedrado": {
+    "lat": 14.62492,
+    "lon": -89.22057,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_encino": {
+    "lat": 14.634562,
+    "lon": -89.27353,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_el_jicaro": {
+    "lat": 14.642853,
+    "lon": -89.23246,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_el_mojon": {
+    "lat": 14.707181,
+    "lon": -89.22478,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_el_tablon": {
+    "lat": 14.564595,
+    "lon": -89.29751,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_el_tablon_2": {
+    "lat": 14.564595,
+    "lon": -89.29751,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_el_zompopero": {
+    "lat": 14.543539,
+    "lon": -89.29668,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_el_horno": {
+    "lat": 14.746968,
+    "lon": -89.16891,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_entre_rios": {
+    "lat": 14.591934,
+    "lon": -89.16733,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_la_fortuna": {
+    "lat": 14.60959,
+    "lon": -89.25276,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_guayavito": {
+    "lat": 14.518313,
+    "lon": -89.31024,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_zapotalito": {
+    "lat": 14.588208,
+    "lon": -89.21867,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_horcones": {
+    "lat": 14.70104,
+    "lon": -89.23604,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_horno_de_vides": {
+    "lat": 14.590792,
+    "lon": -89.26865,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_el_incienso": {
+    "lat": 14.592823,
+    "lon": -89.234,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_jesus_y_maria": {
+    "lat": 14.564285,
+    "lon": -89.37049,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_el_jocotal": {
+    "lat": 14.523716,
+    "lon": -89.34505,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_joyas_verdes": {
+    "lat": 14.61021,
+    "lon": -89.26118,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_joyitas": {
+    "lat": 14.701923,
+    "lon": -89.14614,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_la_aradona": {
+    "lat": 14.60721,
+    "lon": -89.15855,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_la_brea": {
+    "lat": 14.564177,
+    "lon": -89.25446,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_la_brea_arriba": {
+    "lat": 14.577051,
+    "lon": -89.2503,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_la_canada": {
+    "lat": 14.725621,
+    "lon": -89.17069,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_la_cuestona": {
+    "lat": 14.51943,
+    "lon": -89.35183,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_la_granadilla": {
+    "lat": 14.489865,
+    "lon": -89.3346,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_lagunas": {
+    "lat": 14.656825,
+    "lon": -89.25714,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_la_ruda": {
+    "lat": 14.594986,
+    "lon": -89.36792,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_las_toreras": {
+    "lat": 14.518699,
+    "lon": -89.33631,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_laguna_seca": {
+    "lat": 14.649956,
+    "lon": -89.19728,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_canoas": {
+    "lat": 14.56314,
+    "lon": -89.2663,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_las_penas": {
+    "lat": 14.608684,
+    "lon": -89.24176,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_las_pozas": {
+    "lat": 14.619584,
+    "lon": -89.18665,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_las_sopas": {
+    "lat": 14.657154,
+    "lon": -89.21211,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_el_limon": {
+    "lat": 14.535162,
+    "lon": -89.34473,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_llano_de_los_toros": {
+    "lat": 14.652488,
+    "lon": -89.17855,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_llano_de_san_gaspar": {
+    "lat": 14.733119,
+    "lon": -89.17028,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_llano_largo": {
+    "lat": 14.616428,
+    "lon": -89.17532,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_loma_alta": {
+    "lat": 14.623756,
+    "lon": -89.17892,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_loma_del_mango": {
+    "lat": 14.716861,
+    "lon": -89.142,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_pericos": {
+    "lat": 14.690573,
+    "lon": -89.16191,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_los_tecolotes": {
+    "lat": 14.551297,
+    "lon": -89.35759,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_los_vados": {
+    "lat": 14.623313,
+    "lon": -89.34984,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_malcinga": {
+    "lat": 14.705526,
+    "lon": -89.19222,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_malcotal": {
+    "lat": 14.602643,
+    "lon": -89.19154,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_mirador": {
+    "lat": 14.629088,
+    "lon": -89.28632,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_montecinas": {
+    "lat": 14.551264,
+    "lon": -89.31116,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_monteros": {
+    "lat": 14.755433,
+    "lon": -89.17394,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_nuevo_san_jose_las_lagrimas": {
+    "lat": 14.779747,
+    "lon": -89.19091,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_olopita": {
+    "lat": 14.603977,
+    "lon": -89.30141,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_el_palmar": {
+    "lat": 14.584141,
+    "lon": -89.24368,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_pasalja": {
+    "lat": 14.690668,
+    "lon": -89.17612,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_pedregal": {
+    "lat": 14.611574,
+    "lon": -89.19349,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_el_pesote": {
+    "lat": 14.600576,
+    "lon": -89.24883,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_piedra_de_amolar": {
+    "lat": 14.69717,
+    "lon": -89.26868,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_piedra_redonda": {
+    "lat": 14.641356,
+    "lon": -89.34962,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_pinal": {
+    "lat": 14.626105,
+    "lon": -89.25672,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_el_pinalito": {
+    "lat": 14.638077,
+    "lon": -89.25404,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_plan_de_la_arada": {
+    "lat": 14.497802,
+    "lon": -89.35421,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_potrerillos": {
+    "lat": 14.613103,
+    "lon": -89.22247,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_rincon_de_maria": {
+    "lat": 14.622899,
+    "lon": -89.24076,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_la_arrinconada": {
+    "lat": 14.615696,
+    "lon": -89.1609,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_el_salitre": {
+    "lat": 14.651859,
+    "lon": -89.22075,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_san_antonio": {
+    "lat": 14.620362,
+    "lon": -89.24639,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_san_francisco_buena_vista": {
+    "lat": 14.616723,
+    "lon": -89.23144,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_san_isidro": {
+    "lat": 14.589797,
+    "lon": -89.181,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_san_joaquin": {
+    "lat": 14.533577,
+    "lon": -89.36093,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_san_jose_el_sillon": {
+    "lat": 14.551615,
+    "lon": -89.3773,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_san_juan": {
+    "lat": 14.567405,
+    "lon": -89.35627,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_san_nicolas": {
+    "lat": 14.538956,
+    "lon": -89.32718,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_santa_rosalia": {
+    "lat": 14.551855,
+    "lon": -89.3427,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_tablon_del_sulay": {
+    "lat": 14.709541,
+    "lon": -89.16591,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_tareas": {
+    "lat": 14.645908,
+    "lon": -89.25386,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_techacin": {
+    "lat": 14.58008,
+    "lon": -89.3763,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_timushan": {
+    "lat": 14.721193,
+    "lon": -89.17874,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_tizaquin": {
+    "lat": 14.546033,
+    "lon": -89.37156,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_tontoles_arriba": {
+    "lat": 14.608982,
+    "lon": -89.28955,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_valle_dolores": {
+    "lat": 14.603384,
+    "lon": -89.33897,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_valle_de_jesus": {
+    "lat": 14.588946,
+    "lon": -89.20038,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_valles_de_maria": {
+    "lat": 14.57099,
+    "lon": -89.32673,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_varales": {
+    "lat": 14.638996,
+    "lon": -89.18549,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_vega_grande": {
+    "lat": 14.715477,
+    "lon": -89.13728,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_zapotal": {
+    "lat": 14.602276,
+    "lon": -89.21481,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_zarzal": {
+    "lat": 14.613605,
+    "lon": -89.21336,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_zarzalito": {
+    "lat": 14.718465,
+    "lon": -89.2327,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_chacalapa": {
+    "lat": 14.5608,
+    "lon": -89.34351,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_jesus_y_maria_2": {
+    "lat": 14.564285,
+    "lon": -89.37049,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_pashapa": {
+    "lat": 14.579077,
+    "lon": -89.34475,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_san_juaquin": {
+    "lat": 14.56935,
+    "lon": -89.35218,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_san_jose_palo_negro": {
+    "lat": 14.563767,
+    "lon": -89.35735,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_san_sebastian": {
+    "lat": 14.566193,
+    "lon": -89.3481,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_santa_ana": {
+    "lat": 14.582801,
+    "lon": -89.35497,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_santiaguito": {
+    "lat": 14.571876,
+    "lon": -89.35464,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_de_santa_lucia": {
+    "lat": 14.576174,
+    "lon": -89.35839,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_los_arcos": {
+    "lat": 14.573495,
+    "lon": -89.35591,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_los_pinos": {
+    "lat": 14.56302,
+    "lon": -89.3403,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_quirio_catano_i": {
+    "lat": 14.558628,
+    "lon": -89.35202,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_san_jose_obrero": {
+    "lat": 14.563596,
+    "lon": -89.33553,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_san_juan_2": {
+    "lat": 14.567405,
+    "lon": -89.35627,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_san_mateo_i": {
+    "lat": 14.568097,
+    "lon": -89.34812,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_san_mateo_ii": {
+    "lat": 14.569157,
+    "lon": -89.3459,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_santa_gudelia": {
+    "lat": 14.565688,
+    "lon": -89.35522,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_santa_marta": {
+    "lat": 14.563894,
+    "lon": -89.34607,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_tikal": {
+    "lat": 14.56179,
+    "lon": -89.35836,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_vista_hermosa": {
+    "lat": 14.564613,
+    "lon": -89.34361,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_quinta_bella": {
+    "lat": 14.575308,
+    "lon": -89.35362,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_lomas_de_santa_ana": {
+    "lat": 14.582846,
+    "lon": -89.36129,
+    "fuente": "INE Censo 2018"
+  },
+  "esquipulas_quirio_catano_ii": {
+    "lat": 14.562369,
+    "lon": -89.35532,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_concepcion_las_minas": {
+    "lat": 14.521752,
+    "lon": -89.45616,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_agua_caliente": {
+    "lat": 14.540179,
+    "lon": -89.49625,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_agua_caliente_2": {
+    "lat": 14.540179,
+    "lon": -89.49625,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_anguiatu": {
+    "lat": 14.422851,
+    "lon": -89.4491,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_apantes": {
+    "lat": 14.54462,
+    "lon": -89.40904,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_monte_barroso": {
+    "lat": 14.511102,
+    "lon": -89.45523,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_bordo_el_llano": {
+    "lat": 14.464715,
+    "lon": -89.46106,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_casa_quemada": {
+    "lat": 14.552379,
+    "lon": -89.43105,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_cruz_calle": {
+    "lat": 14.490064,
+    "lon": -89.4661,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_cruz_de_ocote": {
+    "lat": 14.515924,
+    "lon": -89.46527,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_cuesta_del_horno": {
+    "lat": 14.519849,
+    "lon": -89.42407,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_dolores": {
+    "lat": 14.512115,
+    "lon": -89.50774,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_el_ahorcado": {
+    "lat": 14.547105,
+    "lon": -89.4515,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_el_jicaro": {
+    "lat": 14.518767,
+    "lon": -89.4493,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_el_olvido": {
+    "lat": 14.524893,
+    "lon": -89.41574,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_el_pinto": {
+    "lat": 14.443871,
+    "lon": -89.46051,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_el_rodeito": {
+    "lat": 14.533752,
+    "lon": -89.45478,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_el_socorro": {
+    "lat": 14.480986,
+    "lon": -89.43391,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_el_yajal": {
+    "lat": 14.538986,
+    "lon": -89.40078,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_la_ermita": {
+    "lat": 14.467977,
+    "lon": -89.45907,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_guacamayas": {
+    "lat": 14.542507,
+    "lon": -89.46381,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_jicaro_peinado": {
+    "lat": 14.539914,
+    "lon": -89.43751,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_la_canada": {
+    "lat": 14.465218,
+    "lon": -89.42743,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_la_leona": {
+    "lat": 14.446394,
+    "lon": -89.45685,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_las_anonas": {
+    "lat": 14.499836,
+    "lon": -89.46456,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_las_cruces": {
+    "lat": 14.537687,
+    "lon": -89.41151,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_liquidambar": {
+    "lat": 14.517095,
+    "lon": -89.43552,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_conacaste": {
+    "lat": 14.458676,
+    "lon": -89.46672,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_alambrados": {
+    "lat": 14.428837,
+    "lon": -89.47213,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_limones": {
+    "lat": 14.484216,
+    "lon": -89.46314,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_los_planes": {
+    "lat": 14.450526,
+    "lon": -89.384,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_el_obispo": {
+    "lat": 14.506962,
+    "lon": -89.41195,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_el_obraje": {
+    "lat": 14.469671,
+    "lon": -89.48729,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_plan_del_tigre": {
+    "lat": 14.526423,
+    "lon": -89.40911,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_el_platanar": {
+    "lat": 14.503804,
+    "lon": -89.51622,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_quebrachos": {
+    "lat": 14.466461,
+    "lon": -89.48391,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_la_quesera": {
+    "lat": 14.514429,
+    "lon": -89.47349,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_roble_gacho": {
+    "lat": 14.546789,
+    "lon": -89.48136,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_rodeo_las_lajas": {
+    "lat": 14.497907,
+    "lon": -89.47157,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_rodeo_el_espino": {
+    "lat": 14.514981,
+    "lon": -89.52729,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_sacramento": {
+    "lat": 14.51032,
+    "lon": -89.4953,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_san_antonio": {
+    "lat": 14.471485,
+    "lon": -89.49375,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_san_isidro": {
+    "lat": 14.496913,
+    "lon": -89.4568,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_san_jose": {
+    "lat": 14.498762,
+    "lon": -89.43945,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_san_vicente": {
+    "lat": 14.532122,
+    "lon": -89.51388,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_santa_anita": {
+    "lat": 14.437749,
+    "lon": -89.5056,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_solapado": {
+    "lat": 14.530024,
+    "lon": -89.46272,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_valeriano": {
+    "lat": 14.413282,
+    "lon": -89.50385,
+    "fuente": "INE Censo 2018"
+  },
+  "concepcion_las_minas_valle_arriba": {
+    "lat": 14.509805,
+    "lon": -89.44553,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_quezaltepeque": {
+    "lat": 14.635639,
+    "lon": -89.4428,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_aceitillal": {
+    "lat": 14.579163,
+    "lon": -89.51854,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_achiote": {
+    "lat": 14.618129,
+    "lon": -89.52209,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_agua_caliente": {
+    "lat": 14.639622,
+    "lon": -89.45997,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_azacualpa": {
+    "lat": 14.657882,
+    "lon": -89.43318,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_caulotes": {
+    "lat": 14.656836,
+    "lon": -89.44493,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_las_cebollas": {
+    "lat": 14.587982,
+    "lon": -89.41549,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_charaguin": {
+    "lat": 14.66563,
+    "lon": -89.36977,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_chiramay": {
+    "lat": 14.624076,
+    "lon": -89.37289,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_cimarron": {
+    "lat": 14.689191,
+    "lon": -89.45116,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_ciracil": {
+    "lat": 14.662235,
+    "lon": -89.47259,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_el_comun": {
+    "lat": 14.663658,
+    "lon": -89.40721,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_concepcion": {
+    "lat": 14.606308,
+    "lon": -89.51726,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_cruz_de_piedra": {
+    "lat": 14.667294,
+    "lon": -89.44331,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_cubiletes": {
+    "lat": 14.566457,
+    "lon": -89.50985,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_cuje": {
+    "lat": 14.63217,
+    "lon": -89.39568,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_cuje_2": {
+    "lat": 14.63217,
+    "lon": -89.39568,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_el_chile": {
+    "lat": 14.621385,
+    "lon": -89.38965,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_comun_los_mendez": {
+    "lat": 14.674891,
+    "lon": -89.46964,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_encuentros_abajo": {
+    "lat": 14.621832,
+    "lon": -89.46042,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_encuentros_arriba": {
+    "lat": 14.614806,
+    "lon": -89.45296,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_espinal": {
+    "lat": 14.616562,
+    "lon": -89.51807,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_estanzuela_abajo": {
+    "lat": 14.613043,
+    "lon": -89.50451,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_estanzuela_arriba": {
+    "lat": 14.594376,
+    "lon": -89.51768,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_guatalon": {
+    "lat": 14.666632,
+    "lon": -89.41236,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_el_guayabo": {
+    "lat": 14.597084,
+    "lon": -89.50911,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_javillal": {
+    "lat": 14.612837,
+    "lon": -89.51878,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_jicaro": {
+    "lat": 14.559857,
+    "lon": -89.48678,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_la_canada": {
+    "lat": 14.587278,
+    "lon": -89.52373,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_la_cidra": {
+    "lat": 14.645751,
+    "lon": -89.37216,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_la_pena": {
+    "lat": 14.609804,
+    "lon": -89.40394,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_la_ruda": {
+    "lat": 14.613997,
+    "lon": -89.37485,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_limon": {
+    "lat": 14.616589,
+    "lon": -89.52972,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_llano_de_san_marcos": {
+    "lat": 14.608227,
+    "lon": -89.50004,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_llano_galan": {
+    "lat": 14.65876,
+    "lon": -89.39937,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_llano_grande": {
+    "lat": 14.624695,
+    "lon": -89.44196,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_los_espana": {
+    "lat": 14.64456,
+    "lon": -89.50634,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_los_perez": {
+    "lat": 14.613944,
+    "lon": -89.48537,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_los_planes": {
+    "lat": 14.632043,
+    "lon": -89.38027,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_morro_grande": {
+    "lat": 14.654093,
+    "lon": -89.46201,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_nochan": {
+    "lat": 14.680882,
+    "lon": -89.38081,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_ojo_de_agua_de_la_garza": {
+    "lat": 14.692838,
+    "lon": -89.41079,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_padre_miguel": {
+    "lat": 14.566272,
+    "lon": -89.45407,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_el_palmar": {
+    "lat": 14.587537,
+    "lon": -89.49253,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_palmilla": {
+    "lat": 14.677454000000001,
+    "lon": -89.44846,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_palmilla_abajo": {
+    "lat": 14.662986,
+    "lon": -89.45452,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_pedregal": {
+    "lat": 14.632014,
+    "lon": -89.41248,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_pedregalito": {
+    "lat": 14.612143,
+    "lon": -89.43461,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_penitas": {
+    "lat": 14.642621,
+    "lon": -89.43429,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_piedras_gordas": {
+    "lat": 14.545372,
+    "lon": -89.51808,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_pinalito": {
+    "lat": 14.678537,
+    "lon": -89.44056,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_mojon_agua_zarca": {
+    "lat": 14.651531,
+    "lon": -89.4146,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_plan_del_pito": {
+    "lat": 14.594394,
+    "lon": -89.44644,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_portezuelo": {
+    "lat": 14.608168,
+    "lon": -89.51478,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_potrerillo": {
+    "lat": 14.621882,
+    "lon": -89.4093,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_pozas": {
+    "lat": 14.604045,
+    "lon": -89.5298,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_puerta_de_la_montana": {
+    "lat": 14.674514,
+    "lon": -89.39118,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_quequexque": {
+    "lat": 14.63367,
+    "lon": -89.39035,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_recibimiento": {
+    "lat": 14.629202,
+    "lon": -89.42605,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_rio_grande": {
+    "lat": 14.640203,
+    "lon": -89.48457,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_salfate": {
+    "lat": 14.605443,
+    "lon": -89.45165,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_san_antonio": {
+    "lat": 14.608157,
+    "lon": -89.50806,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_san_antonio_2": {
+    "lat": 14.608157,
+    "lon": -89.50806,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_san_jacintillo": {
+    "lat": 14.626931,
+    "lon": -89.48108,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_san_jose": {
+    "lat": 14.583665,
+    "lon": -89.50616,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_san_juan": {
+    "lat": 14.567562,
+    "lon": -89.52861,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_san_nicolas": {
+    "lat": 14.663868,
+    "lon": -89.46448,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_santa_cruz": {
+    "lat": 14.597968,
+    "lon": -89.46953,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_tablon": {
+    "lat": 14.625455,
+    "lon": -89.52796,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_tichanchor": {
+    "lat": 14.584755,
+    "lon": -89.53272,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_tierra_colorada": {
+    "lat": 14.595205,
+    "lon": -89.45347,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_tituque": {
+    "lat": 14.658557,
+    "lon": -89.38081,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_yerbabuena": {
+    "lat": 14.625435,
+    "lon": -89.49959,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_yocon": {
+    "lat": 14.634891,
+    "lon": -89.43313,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_el_calvario": {
+    "lat": 14.639807,
+    "lon": -89.44231,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_el_puente": {
+    "lat": 14.635956,
+    "lon": -89.44559,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_la_concordia": {
+    "lat": 14.63387,
+    "lon": -89.44246,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_las_palmas": {
+    "lat": 14.632853,
+    "lon": -89.43999,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_san_sebastian": {
+    "lat": 14.637915,
+    "lon": -89.44415,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_santa_barbar": {
+    "lat": 14.63606,
+    "lon": -89.44059,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_el_inde": {
+    "lat": 14.632816,
+    "lon": -89.44199,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_la_ceiba": {
+    "lat": 14.631448,
+    "lon": -89.44493,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_las_margaritas": {
+    "lat": 14.631434,
+    "lon": -89.44152,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_las_verapaces": {
+    "lat": 14.63254,
+    "lon": -89.44953,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_los_pinos": {
+    "lat": 14.629355,
+    "lon": -89.44325,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_santa_filomena": {
+    "lat": 14.632335,
+    "lon": -89.43859,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_santa_filomena_2": {
+    "lat": 14.631867,
+    "lon": -89.43605,
+    "fuente": "INE Censo 2018"
+  },
+  "quezaltepeque_villa_lorena": {
+    "lat": 14.632411,
+    "lon": -89.4433,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_san_jacinto": {
+    "lat": 14.674073,
+    "lon": -89.50219,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_agua_zarca": {
+    "lat": 14.677257,
+    "lon": -89.52119,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_dolores": {
+    "lat": 14.649112,
+    "lon": -89.51696,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_el_carrizal": {
+    "lat": 14.65759,
+    "lon": -89.49212,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_el_escalon": {
+    "lat": 14.689941,
+    "lon": -89.49484,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_el_jocotal": {
+    "lat": 14.728594,
+    "lon": -89.477,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_la_majada": {
+    "lat": 14.704116,
+    "lon": -89.49371,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_las_lomas": {
+    "lat": 14.668849,
+    "lon": -89.52597,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_los_agosto": {
+    "lat": 14.722809,
+    "lon": -89.47067,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_los_borja": {
+    "lat": 14.695869,
+    "lon": -89.50711,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_valle_de_la_escuela": {
+    "lat": 14.735186,
+    "lon": -89.47043,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_los_lopez": {
+    "lat": 14.681587,
+    "lon": -89.53585,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_los_molina": {
+    "lat": 14.702615,
+    "lon": -89.50671,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_los_pascual": {
+    "lat": 14.697144,
+    "lon": -89.52106,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_los_perez": {
+    "lat": 14.705106,
+    "lon": -89.52081,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_los_ramos_norte": {
+    "lat": 14.706034,
+    "lon": -89.50951,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_montanuelas": {
+    "lat": 14.669387,
+    "lon": -89.5462,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_pastores": {
+    "lat": 14.699576,
+    "lon": -89.49875,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_pueblo_nuevo": {
+    "lat": 14.6679,
+    "lon": -89.50559,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_los_carranza": {
+    "lat": 14.654849,
+    "lon": -89.4996,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_santa_cruz": {
+    "lat": 14.641505,
+    "lon": -89.53494,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_tizubin": {
+    "lat": 14.69386,
+    "lon": -89.51302,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_valle_de_la_escuela_2": {
+    "lat": 14.735186,
+    "lon": -89.47043,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_valle_nuevo": {
+    "lat": 14.690178,
+    "lon": -89.53294,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_zapote_abajo": {
+    "lat": 14.659469,
+    "lon": -89.54476,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_el_zapote": {
+    "lat": 14.660473,
+    "lon": -89.55222,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_el_jocotal_2": {
+    "lat": 14.728594,
+    "lon": -89.477,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_el_tamarindo": {
+    "lat": 14.676794,
+    "lon": -89.50589,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_san_jacinto_san_jorge": {
+    "lat": 14.683086,
+    "lon": -89.50102,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_el_palmar": {
+    "lat": 14.665634,
+    "lon": -89.51491,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_los_agustines": {
+    "lat": 14.675834,
+    "lon": -89.52918,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_los_borja_2": {
+    "lat": 14.695869,
+    "lon": -89.50711,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_los_gonzales": {
+    "lat": 14.685072,
+    "lon": -89.51907,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_los_mauricio": {
+    "lat": 14.664662,
+    "lon": -89.52339,
+    "fuente": "INE Censo 2018"
+  },
+  "san_jacinto_los_ramos_del_sur": {
+    "lat": 14.69385,
+    "lon": -89.51222,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_ipala": {
+    "lat": 14.616009,
+    "lon": -89.62168,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_agua_tibia": {
+    "lat": 14.575763,
+    "lon": -89.57256,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_los_arrozales": {
+    "lat": 14.542393,
+    "lon": -89.54715,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_buena_vista": {
+    "lat": 14.578916,
+    "lon": -89.57317,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_buena_vista_2": {
+    "lat": 14.578916,
+    "lon": -89.57317,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_cacahuatepeque": {
+    "lat": 14.529763,
+    "lon": -89.54929,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_cana_vieja": {
+    "lat": 14.567271,
+    "lon": -89.56527,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_cececapa": {
+    "lat": 14.681772,
+    "lon": -89.61669,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_ceniceras": {
+    "lat": 14.627056,
+    "lon": -89.5664,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_chaguiton": {
+    "lat": 14.550425,
+    "lon": -89.65381,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_ciracil": {
+    "lat": 14.657193,
+    "lon": -89.56969,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_cruz_de_villeda": {
+    "lat": 14.620772,
+    "lon": -89.66801,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_dolores": {
+    "lat": 14.625468,
+    "lon": -89.60179,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_el_amatillo": {
+    "lat": 14.529354,
+    "lon": -89.59642,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_el_calvario": {
+    "lat": 14.617164,
+    "lon": -89.61169,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_el_caulote": {
+    "lat": 14.553415,
+    "lon": -89.66854,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_el_chaguite": {
+    "lat": 14.638319,
+    "lon": -89.58161,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_el_chaparroncito": {
+    "lat": 14.567819,
+    "lon": -89.65621,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_el_cuje": {
+    "lat": 14.53706,
+    "lon": -89.58217,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_el_jocote": {
+    "lat": 14.65163,
+    "lon": -89.57742,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_el_jute": {
+    "lat": 14.550052,
+    "lon": -89.55279,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_el_rosario": {
+    "lat": 14.599104,
+    "lon": -89.57294,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_el_sauce": {
+    "lat": 14.547559,
+    "lon": -89.67259,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_el_suyate": {
+    "lat": 14.635113,
+    "lon": -89.61962,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_el_tianque": {
+    "lat": 14.52686,
+    "lon": -89.60357,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_estacion_agua_blanca": {
+    "lat": 14.521922,
+    "lon": -89.61084,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_guachipilin": {
+    "lat": 14.499421,
+    "lon": -89.58459,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_jicamapa": {
+    "lat": 14.660755,
+    "lon": -89.63509,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_el_jicaral": {
+    "lat": 14.535974,
+    "lon": -89.56282,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_el_jocotillo": {
+    "lat": 14.506016,
+    "lon": -89.59488,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_julumichapa": {
+    "lat": 14.553293,
+    "lon": -89.60242,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_la_coronada": {
+    "lat": 14.617298,
+    "lon": -89.58763,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_la_cuesta": {
+    "lat": 14.534131,
+    "lon": -89.54119,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_la_esperanza": {
+    "lat": 14.594303,
+    "lon": -89.62892,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_la_granja": {
+    "lat": 14.643851,
+    "lon": -89.58733,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_la_lima": {
+    "lat": 14.525985,
+    "lon": -89.55585,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_la_pena": {
+    "lat": 14.514345,
+    "lon": -89.60038,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_la_pila": {
+    "lat": 14.624589,
+    "lon": -89.65533,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_la_tuna": {
+    "lat": 14.57362,
+    "lon": -89.5864,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_cofradias": {
+    "lat": 14.569794,
+    "lon": -89.68219,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_las_cruces": {
+    "lat": 14.637353,
+    "lon": -89.56917,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_las_cuevitas": {
+    "lat": 14.503646,
+    "lon": -89.56475,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_llano_grande": {
+    "lat": 14.656724,
+    "lon": -89.58928,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_los_achiotes": {
+    "lat": 14.486699,
+    "lon": -89.5808,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_los_cerritos": {
+    "lat": 14.540254,
+    "lon": -89.5774,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_los_horcones": {
+    "lat": 14.547861,
+    "lon": -89.69342,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_el_obraje": {
+    "lat": 14.624259,
+    "lon": -89.63506,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_palo_grande": {
+    "lat": 14.512742,
+    "lon": -89.59363,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_san_francisco": {
+    "lat": 14.546608,
+    "lon": -89.68699,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_san_isidro": {
+    "lat": 14.579394,
+    "lon": -89.66318,
+    "fuente": "INE Censo 2018"
+  },
+  "ipala_la_zarzona": {
+    "lat": 14.676556,
+    "lon": -89.62241,
+    "fuente": "INE Censo 2018"
+  }
+}
