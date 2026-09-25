@@ -1,143 +1,7 @@
 {
-  "generado": "2026-09-25T18:32:07.709212+00:00",
+  "generado": "2026-09-25T18:34:20.095668+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. Base territorial del XLSForm: 996 lugares poblados.",
-  "programas": [
-    {
-      "organizacion": "ddd",
-      "tipo_actor": "Cooperación bilateral",
-      "pais_origen": "d",
-      "contacto": "d",
-      "nombre_programa": "d",
-      "tipo_atencion": "Emergencia / respuesta humanitaria",
-      "sector": [
-        "Agua y saneamiento",
-        "Ambiente y cambio climático",
-        "Gobernanza y fortalecimiento institucional",
-        "Reducción de riesgo ante desastres",
-        "Desarrollo económico local"
-      ],
-      "modalidad": [
-        "Asistencia técnica",
-        "Financiamiento directo",
-        "Donación en especie",
-        "Mixta",
-        "Otra"
-      ],
-      "fecha_inicio": "",
-      "tipo_duracion": "Sí, tiene fecha de finalización definida",
-      "fecha_fin": "2026-11-21",
-      "duracion_aproximada": "",
-      "estado_programa": "En ejecución",
-      "contraparte_gubernamental": "rrr",
-      "monto_rango": "",
-      "monto_rango_codigo": "",
-      "fuente_financiamiento": [
-        "Fondos propios"
-      ],
-      "espacios_coordinacion": [
-        "Mesa Técnica Agroclimática"
-      ],
-      "disposicion_coordinar": "",
-      "beneficiarios_institucionales": {
-        "Oficina Municipal de Juventud": 0,
-        "Oficina Municipal de Desarrollo Económico Local": 0
-      },
-      "municipios_cobertura_institucional": [
-        "Camotán",
-        "Chiquimula"
-      ],
-      "comunidades": [
-        {
-          "codigo_lugar": "chiquimula_alta_mira_6",
-          "lugar_poblado": "Alta Mira 6",
-          "municipio": "Chiquimula",
-          "clasificacion": "Otro",
-          "viviendas_catalogo": 45,
-          "lat": 14.827235,
-          "lon": -89.54019,
-          "poblacion_meta": [
-            "Mujeres"
-          ],
-          "pm_cantidades": {
-            "Mujeres": 0
-          },
-          "poblacion_total_estimada": 0,
-          "accion_comunidad": [
-            "Viveros forestales"
-          ],
-          "ac_cantidades": {
-            "Viveros forestales": 1
-          },
-          "etnia": [
-            "Xinka"
-          ],
-          "grupo_etario": [
-            "Adultez (30-59 años)"
-          ],
-          "area": ""
-        },
-        {
-          "codigo_lugar": "chiquimula_la_oscurana",
-          "lugar_poblado": "La Oscurana",
-          "municipio": "Chiquimula",
-          "clasificacion": "Aldea",
-          "viviendas_catalogo": 26,
-          "lat": 14.784466,
-          "lon": -89.65877,
-          "poblacion_meta": [
-            "Hogares / familias"
-          ],
-          "pm_cantidades": {
-            "Hogares / familias": 4
-          },
-          "poblacion_total_estimada": 4,
-          "accion_comunidad": [
-            "Organizaciones comunitarias / COCODES"
-          ],
-          "ac_cantidades": {
-            "Organizaciones comunitarias / COCODES": 1
-          },
-          "etnia": [
-            "Xinka"
-          ],
-          "grupo_etario": [
-            "Adolescencia (13-17 años)",
-            "Adultez (30-59 años)"
-          ],
-          "area": "Rural"
-        },
-        {
-          "codigo_lugar": "san_juan_ermita_penasco",
-          "lugar_poblado": "Peñasco",
-          "municipio": "San Juan Ermita",
-          "clasificacion": "Caserío",
-          "viviendas_catalogo": 21,
-          "lat": 14.773104,
-          "lon": -89.44374,
-          "poblacion_meta": [
-            "Personas con discapacidad"
-          ],
-          "pm_cantidades": {
-            "Personas con discapacidad": 45
-          },
-          "poblacion_total_estimada": 45,
-          "accion_comunidad": [
-            "Cooperativas o asociaciones productivas"
-          ],
-          "ac_cantidades": {
-            "Cooperativas o asociaciones productivas": 4
-          },
-          "etnia": [
-            "Xinka"
-          ],
-          "grupo_etario": [
-            "Juventud (18-29 años)"
-          ],
-          "area": "Mixta"
-        }
-      ]
-    }
-  ],
+  "programas": [],
   "municipios": [
     "Camotán",
     "Chiquimula",
@@ -153,56 +17,26 @@
   ],
   "resumen_municipio": {
     "Camotán": {
-      "organizaciones": [
-        "ddd"
-      ],
-      "total_programas": 1,
+      "organizaciones": [],
+      "total_programas": 0,
       "comunidades_cubiertas": 0,
       "comunidades_total_catalogo": 155,
       "inversion_estimada": 0,
-      "sectores": {
-        "Agua y saneamiento": 1,
-        "Ambiente y cambio climático": 1,
-        "Gobernanza y fortalecimiento institucional": 1,
-        "Reducción de riesgo ante desastres": 1,
-        "Desarrollo económico local": 1
-      },
-      "estado": {
-        "En ejecución": 1
-      },
-      "instituciones": {
-        "Oficina Municipal de Juventud": 0,
-        "Oficina Municipal de Desarrollo Económico Local": 0
-      },
-      "fuente_financiamiento": {
-        "Fondos propios": 1
-      }
+      "sectores": {},
+      "estado": {},
+      "instituciones": {},
+      "fuente_financiamiento": {}
     },
     "Chiquimula": {
-      "organizaciones": [
-        "ddd"
-      ],
-      "total_programas": 1,
-      "comunidades_cubiertas": 2,
+      "organizaciones": [],
+      "total_programas": 0,
+      "comunidades_cubiertas": 0,
       "comunidades_total_catalogo": 124,
       "inversion_estimada": 0,
-      "sectores": {
-        "Agua y saneamiento": 1,
-        "Ambiente y cambio climático": 1,
-        "Gobernanza y fortalecimiento institucional": 1,
-        "Reducción de riesgo ante desastres": 1,
-        "Desarrollo económico local": 1
-      },
-      "estado": {
-        "En ejecución": 1
-      },
-      "instituciones": {
-        "Oficina Municipal de Juventud": 0,
-        "Oficina Municipal de Desarrollo Económico Local": 0
-      },
-      "fuente_financiamiento": {
-        "Fondos propios": 1
-      }
+      "sectores": {},
+      "estado": {},
+      "instituciones": {},
+      "fuente_financiamiento": {}
     },
     "Concepción las Minas": {
       "organizaciones": [],
@@ -293,56 +127,18 @@
       "fuente_financiamiento": {}
     },
     "San Juan Ermita": {
-      "organizaciones": [
-        "ddd"
-      ],
-      "total_programas": 1,
-      "comunidades_cubiertas": 1,
+      "organizaciones": [],
+      "total_programas": 0,
+      "comunidades_cubiertas": 0,
       "comunidades_total_catalogo": 50,
       "inversion_estimada": 0,
-      "sectores": {
-        "Agua y saneamiento": 1,
-        "Ambiente y cambio climático": 1,
-        "Gobernanza y fortalecimiento institucional": 1,
-        "Reducción de riesgo ante desastres": 1,
-        "Desarrollo económico local": 1
-      },
-      "estado": {
-        "En ejecución": 1
-      },
+      "sectores": {},
+      "estado": {},
       "instituciones": {},
-      "fuente_financiamiento": {
-        "Fondos propios": 1
-      }
+      "fuente_financiamiento": {}
     }
   },
-  "matriz_sector_municipio": {
-    "Agua y saneamiento": {
-      "Chiquimula": 1,
-      "Camotán": 1,
-      "San Juan Ermita": 1
-    },
-    "Ambiente y cambio climático": {
-      "Chiquimula": 1,
-      "Camotán": 1,
-      "San Juan Ermita": 1
-    },
-    "Gobernanza y fortalecimiento institucional": {
-      "Chiquimula": 1,
-      "Camotán": 1,
-      "San Juan Ermita": 1
-    },
-    "Reducción de riesgo ante desastres": {
-      "Chiquimula": 1,
-      "Camotán": 1,
-      "San Juan Ermita": 1
-    },
-    "Desarrollo económico local": {
-      "Chiquimula": 1,
-      "Camotán": 1,
-      "San Juan Ermita": 1
-    }
-  },
+  "matriz_sector_municipio": {},
   "comunidades_sin_cobertura": [
     {
       "codigo_lugar": "chiquimula_chiquimula",
@@ -350,6 +146,13 @@
       "municipio": "Chiquimula",
       "lat": 14.79442,
       "lon": -89.54527
+    },
+    {
+      "codigo_lugar": "chiquimula_alta_mira_6",
+      "lugar_poblado": "Alta Mira 6",
+      "municipio": "Chiquimula",
+      "lat": 14.827235,
+      "lon": -89.54019
     },
     {
       "codigo_lugar": "chiquimula_bella_vista",
@@ -777,6 +580,13 @@
       "municipio": "Chiquimula",
       "lat": 14.738583,
       "lon": -89.51501
+    },
+    {
+      "codigo_lugar": "chiquimula_la_oscurana",
+      "lugar_poblado": "La Oscurana",
+      "municipio": "Chiquimula",
+      "lat": 14.784466,
+      "lon": -89.65877
     },
     {
       "codigo_lugar": "chiquimula_paso_del_credo",
@@ -1393,6 +1203,13 @@
       "municipio": "San Juan Ermita",
       "lat": 14.700861,
       "lon": -89.41506
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_penasco",
+      "lugar_poblado": "Peñasco",
+      "municipio": "San Juan Ermita",
+      "lat": 14.773104,
+      "lon": -89.44374
     },
     {
       "codigo_lugar": "san_juan_ermita_las_piletas",
@@ -6037,37 +5854,18 @@
     }
   ],
   "duplicidad": [],
-  "instituciones_resumen": {
-    "Oficina Municipal de Juventud": 0,
-    "Oficina Municipal de Desarrollo Económico Local": 0
-  },
-  "matriz_poblacion_accion": {
-    "Mujeres": {
-      "Viveros forestales": 1
-    },
-    "Hogares / familias": {
-      "Organizaciones comunitarias / COCODES": 1
-    },
-    "Personas con discapacidad": {
-      "Cooperativas o asociaciones productivas": 1
-    }
-  },
+  "instituciones_resumen": {},
+  "matriz_poblacion_accion": {},
   "inversion": {
     "total_estimada": 0,
     "programas_con_monto": 0,
-    "programas_sin_monto": 1,
-    "por_sector": {
-      "Agua y saneamiento": 0,
-      "Ambiente y cambio climático": 0,
-      "Gobernanza y fortalecimiento institucional": 0,
-      "Reducción de riesgo ante desastres": 0,
-      "Desarrollo económico local": 0
-    },
+    "programas_sin_monto": 0,
+    "por_sector": {},
     "nota_metodologica": "Estimación técnica para visualización basada en puntos medios de rangos; no representa ejecución financiera auditada."
   },
   "control": {
-    "registros_kobo": 1,
-    "programas_procesados": 1,
+    "registros_kobo": 0,
+    "programas_procesados": 0,
     "lugares_catalogo": 996,
     "lugares_con_coordenadas": 816
   }
