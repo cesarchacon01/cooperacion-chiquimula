@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-25T05:50:18.415560+00:00",
+  "generado": "2026-09-25T06:05:59.017582+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. Base territorial del XLSForm: 996 lugares poblados.",
   "programas": [
     {
@@ -53,8 +53,8 @@
           "municipio": "Chiquimula",
           "clasificacion": "Otro",
           "viviendas_catalogo": 45,
-          "lat": null,
-          "lon": null,
+          "lat": 14.827235,
+          "lon": -89.54019,
           "poblacion_meta": [
             "Mujeres"
           ],
@@ -82,8 +82,8 @@
           "municipio": "Chiquimula",
           "clasificacion": "Aldea",
           "viviendas_catalogo": 26,
-          "lat": null,
-          "lon": null,
+          "lat": 14.784466,
+          "lon": -89.65877,
           "poblacion_meta": [
             "Hogares / familias"
           ],
@@ -112,8 +112,8 @@
           "municipio": "San Juan Ermita",
           "clasificacion": "Caserío",
           "viviendas_catalogo": 21,
-          "lat": null,
-          "lon": null,
+          "lat": 14.773104,
+          "lon": -89.44374,
           "poblacion_meta": [
             "Personas con discapacidad"
           ],
@@ -318,32 +318,5724 @@
   },
   "matriz_sector_municipio": {
     "Agua y saneamiento": {
+      "San Juan Ermita": 1,
       "Chiquimula": 1,
-      "Camotán": 1,
-      "San Juan Ermita": 1
+      "Camotán": 1
     },
     "Ambiente y cambio climático": {
+      "San Juan Ermita": 1,
       "Chiquimula": 1,
-      "Camotán": 1,
-      "San Juan Ermita": 1
+      "Camotán": 1
     },
     "Gobernanza y fortalecimiento institucional": {
+      "San Juan Ermita": 1,
       "Chiquimula": 1,
-      "Camotán": 1,
-      "San Juan Ermita": 1
+      "Camotán": 1
     },
     "Reducción de riesgo ante desastres": {
+      "San Juan Ermita": 1,
       "Chiquimula": 1,
-      "Camotán": 1,
-      "San Juan Ermita": 1
+      "Camotán": 1
     },
     "Desarrollo económico local": {
+      "San Juan Ermita": 1,
       "Chiquimula": 1,
-      "Camotán": 1,
-      "San Juan Ermita": 1
+      "Camotán": 1
     }
   },
-  "comunidades_sin_cobertura": [],
+  "comunidades_sin_cobertura": [
+    {
+      "codigo_lugar": "chiquimula_chiquimula",
+      "lugar_poblado": "Chiquimula",
+      "municipio": "Chiquimula",
+      "lat": 14.79442,
+      "lon": -89.54527
+    },
+    {
+      "codigo_lugar": "chiquimula_bella_vista",
+      "lugar_poblado": "Bella Vista",
+      "municipio": "Chiquimula",
+      "lat": 14.806862,
+      "lon": -89.57929
+    },
+    {
+      "codigo_lugar": "chiquimula_campollano",
+      "lugar_poblado": "Campollano",
+      "municipio": "Chiquimula",
+      "lat": 14.77457,
+      "lon": -89.55826
+    },
+    {
+      "codigo_lugar": "chiquimula_canaan",
+      "lugar_poblado": "Canaan",
+      "municipio": "Chiquimula",
+      "lat": 14.802162,
+      "lon": -89.56257
+    },
+    {
+      "codigo_lugar": "chiquimula_carrizal",
+      "lugar_poblado": "Carrizal",
+      "municipio": "Chiquimula",
+      "lat": 14.757773,
+      "lon": -89.65348
+    },
+    {
+      "codigo_lugar": "chiquimula_chisja",
+      "lugar_poblado": "Chisja",
+      "municipio": "Chiquimula",
+      "lat": 14.756131,
+      "lon": -89.49169
+    },
+    {
+      "codigo_lugar": "chiquimula_el_aguacate",
+      "lugar_poblado": "El Aguacate",
+      "municipio": "Chiquimula",
+      "lat": 14.839054,
+      "lon": -89.69604
+    },
+    {
+      "codigo_lugar": "chiquimula_anonal",
+      "lugar_poblado": "Anonal",
+      "municipio": "Chiquimula",
+      "lat": 14.813574,
+      "lon": -89.70932
+    },
+    {
+      "codigo_lugar": "chiquimula_el_barrial",
+      "lugar_poblado": "El Barrial",
+      "municipio": "Chiquimula",
+      "lat": 14.791606,
+      "lon": -89.6732
+    },
+    {
+      "codigo_lugar": "chiquimula_el_carrizal",
+      "lugar_poblado": "El Carrizal",
+      "municipio": "Chiquimula",
+      "lat": 14.819616,
+      "lon": -89.63554
+    },
+    {
+      "codigo_lugar": "chiquimula_el_cedro",
+      "lugar_poblado": "El Cedro",
+      "municipio": "Chiquimula",
+      "lat": 14.827042,
+      "lon": -89.51749
+    },
+    {
+      "codigo_lugar": "chiquimula_cerron",
+      "lugar_poblado": "Cerron",
+      "municipio": "Chiquimula",
+      "lat": 14.807507,
+      "lon": -89.61955
+    },
+    {
+      "codigo_lugar": "chiquimula_el_chilar",
+      "lugar_poblado": "El Chilar",
+      "municipio": "Chiquimula",
+      "lat": 14.71738,
+      "lon": -89.50891
+    },
+    {
+      "codigo_lugar": "chiquimula_el_conacaste",
+      "lugar_poblado": "El Conacaste",
+      "municipio": "Chiquimula",
+      "lat": 14.856414,
+      "lon": -89.61787
+    },
+    {
+      "codigo_lugar": "chiquimula_el_durazno",
+      "lugar_poblado": "El Durazno",
+      "municipio": "Chiquimula",
+      "lat": 14.829245,
+      "lon": -89.67129
+    },
+    {
+      "codigo_lugar": "chiquimula_filo_del_carrizal",
+      "lugar_poblado": "Filo Del Carrizal",
+      "municipio": "Chiquimula",
+      "lat": 14.807527,
+      "lon": -89.65578
+    },
+    {
+      "codigo_lugar": "chiquimula_el_guayabo",
+      "lugar_poblado": "El Guayabo",
+      "municipio": "Chiquimula",
+      "lat": 14.866305,
+      "lon": -89.60026
+    },
+    {
+      "codigo_lugar": "chiquimula_el_ingeniero",
+      "lugar_poblado": "El Ingeniero",
+      "municipio": "Chiquimula",
+      "lat": 14.845706,
+      "lon": -89.51836
+    },
+    {
+      "codigo_lugar": "chiquimula_el_jute",
+      "lugar_poblado": "El Jute",
+      "municipio": "Chiquimula",
+      "lat": 14.803401,
+      "lon": -89.60001
+    },
+    {
+      "codigo_lugar": "chiquimula_el_limon",
+      "lugar_poblado": "El Limon",
+      "municipio": "Chiquimula",
+      "lat": 14.799362,
+      "lon": -89.61087
+    },
+    {
+      "codigo_lugar": "chiquimula_el_matasano",
+      "lugar_poblado": "El Matasano",
+      "municipio": "Chiquimula",
+      "lat": 14.768479,
+      "lon": -89.69707
+    },
+    {
+      "codigo_lugar": "chiquimula_el_morral",
+      "lugar_poblado": "El Morral",
+      "municipio": "Chiquimula",
+      "lat": 14.808435,
+      "lon": -89.50251
+    },
+    {
+      "codigo_lugar": "chiquimula_el_nanzal",
+      "lugar_poblado": "El Nanzal",
+      "municipio": "Chiquimula",
+      "lat": 14.75512,
+      "lon": -89.50726
+    },
+    {
+      "codigo_lugar": "chiquimula_el_obraje",
+      "lugar_poblado": "El Obraje",
+      "municipio": "Chiquimula",
+      "lat": 14.748833,
+      "lon": -89.52945
+    },
+    {
+      "codigo_lugar": "chiquimula_el_palmar",
+      "lugar_poblado": "El Palmar",
+      "municipio": "Chiquimula",
+      "lat": 14.84518,
+      "lon": -89.62846
+    },
+    {
+      "codigo_lugar": "chiquimula_el_palmarcito",
+      "lugar_poblado": "El Palmarcito",
+      "municipio": "Chiquimula",
+      "lat": 14.842165,
+      "lon": -89.46955
+    },
+    {
+      "codigo_lugar": "chiquimula_el_paraiso",
+      "lugar_poblado": "El Paraiso",
+      "municipio": "Chiquimula",
+      "lat": 14.766287,
+      "lon": -89.55744
+    },
+    {
+      "codigo_lugar": "chiquimula_el_pato",
+      "lugar_poblado": "El Pato",
+      "municipio": "Chiquimula",
+      "lat": 14.771404,
+      "lon": -89.65138
+    },
+    {
+      "codigo_lugar": "chiquimula_el_pinalito",
+      "lugar_poblado": "El Pinalito",
+      "municipio": "Chiquimula",
+      "lat": 14.858234,
+      "lon": -89.58916
+    },
+    {
+      "codigo_lugar": "chiquimula_puerta_el_pinal",
+      "lugar_poblado": "Puerta El Pinal",
+      "municipio": "Chiquimula",
+      "lat": 14.818062,
+      "lon": -89.47585
+    },
+    {
+      "codigo_lugar": "chiquimula_potrerillos",
+      "lugar_poblado": "Potrerillos",
+      "municipio": "Chiquimula",
+      "lat": 14.765976,
+      "lon": -89.49771
+    },
+    {
+      "codigo_lugar": "chiquimula_el_poxte",
+      "lugar_poblado": "El Poxte",
+      "municipio": "Chiquimula",
+      "lat": 14.783397,
+      "lon": -89.63717
+    },
+    {
+      "codigo_lugar": "chiquimula_el_sauce",
+      "lugar_poblado": "El Sauce",
+      "municipio": "Chiquimula",
+      "lat": 14.769739,
+      "lon": -89.66534
+    },
+    {
+      "codigo_lugar": "chiquimula_el_sauce_2",
+      "lugar_poblado": "El Sauce",
+      "municipio": "Chiquimula",
+      "lat": 14.769739,
+      "lon": -89.66534
+    },
+    {
+      "codigo_lugar": "chiquimula_guayabillas",
+      "lugar_poblado": "Guayabillas",
+      "municipio": "Chiquimula",
+      "lat": 14.847199,
+      "lon": -89.63606
+    },
+    {
+      "codigo_lugar": "chiquimula_guior",
+      "lugar_poblado": "Guior",
+      "municipio": "Chiquimula",
+      "lat": 14.813105,
+      "lon": -89.60691
+    },
+    {
+      "codigo_lugar": "chiquimula_hacienda_el_santo",
+      "lugar_poblado": "Hacienda El Santo",
+      "municipio": "Chiquimula",
+      "lat": 14.76221,
+      "lon": -89.48995
+    },
+    {
+      "codigo_lugar": "chiquimula_el_jicaral",
+      "lugar_poblado": "El Jicaral",
+      "municipio": "Chiquimula",
+      "lat": 14.734231,
+      "lon": -89.48871
+    },
+    {
+      "codigo_lugar": "chiquimula_jurgayon",
+      "lugar_poblado": "Jurgayon",
+      "municipio": "Chiquimula",
+      "lat": 14.807872,
+      "lon": -89.52356
+    },
+    {
+      "codigo_lugar": "chiquimula_la_catocha",
+      "lugar_poblado": "La Catocha",
+      "municipio": "Chiquimula",
+      "lat": 14.777102,
+      "lon": -89.64896
+    },
+    {
+      "codigo_lugar": "chiquimula_la_laguna",
+      "lugar_poblado": "La Laguna",
+      "municipio": "Chiquimula",
+      "lat": 14.789884,
+      "lon": -89.62123
+    },
+    {
+      "codigo_lugar": "chiquimula_la_ponderosa",
+      "lugar_poblado": "La Ponderosa",
+      "municipio": "Chiquimula",
+      "lat": 14.778625,
+      "lon": -89.53275
+    },
+    {
+      "codigo_lugar": "chiquimula_la_puente",
+      "lugar_poblado": "La Puente",
+      "municipio": "Chiquimula",
+      "lat": 14.793521,
+      "lon": -89.46036
+    },
+    {
+      "codigo_lugar": "chiquimula_puerta_de_la_montana",
+      "lugar_poblado": "Puerta De La Montaña",
+      "municipio": "Chiquimula",
+      "lat": 14.823541,
+      "lon": -89.47326
+    },
+    {
+      "codigo_lugar": "chiquimula_las_cruces",
+      "lugar_poblado": "Las Cruces",
+      "municipio": "Chiquimula",
+      "lat": 14.778638,
+      "lon": -89.68966
+    },
+    {
+      "codigo_lugar": "chiquimula_las_mesas",
+      "lugar_poblado": "Las Mesas",
+      "municipio": "Chiquimula",
+      "lat": 14.816977,
+      "lon": -89.61503
+    },
+    {
+      "codigo_lugar": "chiquimula_las_tablas",
+      "lugar_poblado": "Las Tablas",
+      "municipio": "Chiquimula",
+      "lat": 14.838581,
+      "lon": -89.68574
+    },
+    {
+      "codigo_lugar": "chiquimula_el_limar",
+      "lugar_poblado": "El Limar",
+      "municipio": "Chiquimula",
+      "lat": 14.813808,
+      "lon": -89.67107
+    },
+    {
+      "codigo_lugar": "chiquimula_los_calambres",
+      "lugar_poblado": "Los Calambres",
+      "municipio": "Chiquimula",
+      "lat": 14.844522,
+      "lon": -89.67478
+    },
+    {
+      "codigo_lugar": "chiquimula_el_morral_2",
+      "lugar_poblado": "El Morral",
+      "municipio": "Chiquimula",
+      "lat": 14.808435,
+      "lon": -89.50251
+    },
+    {
+      "codigo_lugar": "chiquimula_los_felipe",
+      "lugar_poblado": "Los Felipe",
+      "municipio": "Chiquimula",
+      "lat": 14.830306,
+      "lon": -89.62867
+    },
+    {
+      "codigo_lugar": "chiquimula_los_gallardos",
+      "lugar_poblado": "Los Gallardos",
+      "municipio": "Chiquimula",
+      "lat": 14.822594,
+      "lon": -89.56321
+    },
+    {
+      "codigo_lugar": "chiquimula_los_garcia",
+      "lugar_poblado": "Los Garcia",
+      "municipio": "Chiquimula",
+      "lat": 14.826035,
+      "lon": -89.64234
+    },
+    {
+      "codigo_lugar": "chiquimula_el_roble",
+      "lugar_poblado": "El Roble",
+      "municipio": "Chiquimula",
+      "lat": 14.851456,
+      "lon": -89.62177
+    },
+    {
+      "codigo_lugar": "chiquimula_los_vidal",
+      "lugar_poblado": "Los Vidal",
+      "municipio": "Chiquimula",
+      "lat": 14.777751,
+      "lon": -89.49106
+    },
+    {
+      "codigo_lugar": "chiquimula_magueyal",
+      "lugar_poblado": "Magueyal",
+      "municipio": "Chiquimula",
+      "lat": 14.774845,
+      "lon": -89.58143
+    },
+    {
+      "codigo_lugar": "chiquimula_maraxco",
+      "lugar_poblado": "Maraxco",
+      "municipio": "Chiquimula",
+      "lat": 14.850497,
+      "lon": -89.57758
+    },
+    {
+      "codigo_lugar": "chiquimula_plan_del_jocote",
+      "lugar_poblado": "Plan Del Jocote",
+      "municipio": "Chiquimula",
+      "lat": 14.852966,
+      "lon": -89.5833
+    },
+    {
+      "codigo_lugar": "chiquimula_el_monjon",
+      "lugar_poblado": "El Monjon",
+      "municipio": "Chiquimula",
+      "lat": 14.827875,
+      "lon": -89.64471
+    },
+    {
+      "codigo_lugar": "chiquimula_nanzal",
+      "lugar_poblado": "Nanzal",
+      "municipio": "Chiquimula",
+      "lat": 14.839515,
+      "lon": -89.63444
+    },
+    {
+      "codigo_lugar": "chiquimula_nueva_esperanza",
+      "lugar_poblado": "Nueva Esperanza",
+      "municipio": "Chiquimula",
+      "lat": 14.83235,
+      "lon": -89.46729
+    },
+    {
+      "codigo_lugar": "chiquimula_paija",
+      "lugar_poblado": "Paija",
+      "municipio": "Chiquimula",
+      "lat": 14.738583,
+      "lon": -89.51501
+    },
+    {
+      "codigo_lugar": "chiquimula_paso_del_credo",
+      "lugar_poblado": "Paso Del Credo",
+      "municipio": "Chiquimula",
+      "lat": 14.838966,
+      "lon": -89.50456
+    },
+    {
+      "codigo_lugar": "chiquimula_petapilla",
+      "lugar_poblado": "Petapilla",
+      "municipio": "Chiquimula",
+      "lat": 14.825795,
+      "lon": -89.52755
+    },
+    {
+      "codigo_lugar": "chiquimula_el_pinalon",
+      "lugar_poblado": "El Pinalon",
+      "municipio": "Chiquimula",
+      "lat": 14.803091,
+      "lon": -89.67142
+    },
+    {
+      "codigo_lugar": "chiquimula_plan_de_la_brea",
+      "lugar_poblado": "Plan De La Brea",
+      "municipio": "Chiquimula",
+      "lat": 14.869985,
+      "lon": -89.61726
+    },
+    {
+      "codigo_lugar": "chiquimula_plan_del_guineo",
+      "lugar_poblado": "Plan Del Guineo",
+      "municipio": "Chiquimula",
+      "lat": 14.797803,
+      "lon": -89.66312
+    },
+    {
+      "codigo_lugar": "chiquimula_plan_del_jocote_2",
+      "lugar_poblado": "Plan Del Jocote",
+      "municipio": "Chiquimula",
+      "lat": 14.852966,
+      "lon": -89.5833
+    },
+    {
+      "codigo_lugar": "chiquimula_quebrada_seca",
+      "lugar_poblado": "Quebrada Seca",
+      "municipio": "Chiquimula",
+      "lat": 14.737412,
+      "lon": -89.49023
+    },
+    {
+      "codigo_lugar": "chiquimula_rincon_de_santa_barbara",
+      "lugar_poblado": "Rincon De Santa Barbara",
+      "municipio": "Chiquimula",
+      "lat": 14.849267,
+      "lon": -89.46606
+    },
+    {
+      "codigo_lugar": "chiquimula_roble_amarillo",
+      "lugar_poblado": "Roble Amarillo",
+      "municipio": "Chiquimula",
+      "lat": 14.807493,
+      "lon": -89.63848
+    },
+    {
+      "codigo_lugar": "chiquimula_sabana_grande",
+      "lugar_poblado": "Sabana Grande",
+      "municipio": "Chiquimula",
+      "lat": 14.741112,
+      "lon": -89.5412
+    },
+    {
+      "codigo_lugar": "chiquimula_los_sagastumes",
+      "lugar_poblado": "Los Sagastumes",
+      "municipio": "Chiquimula",
+      "lat": 14.826538,
+      "lon": -89.60095
+    },
+    {
+      "codigo_lugar": "chiquimula_san_antonio",
+      "lugar_poblado": "San Antonio",
+      "municipio": "Chiquimula",
+      "lat": 14.819043,
+      "lon": -89.50379
+    },
+    {
+      "codigo_lugar": "chiquimula_san_esteban",
+      "lugar_poblado": "San Esteban",
+      "municipio": "Chiquimula",
+      "lat": 14.754236,
+      "lon": -89.52007
+    },
+    {
+      "codigo_lugar": "chiquimula_san_jorge",
+      "lugar_poblado": "San Jorge",
+      "municipio": "Chiquimula",
+      "lat": 14.738026,
+      "lon": -89.47866
+    },
+    {
+      "codigo_lugar": "chiquimula_san_miguel",
+      "lugar_poblado": "San Miguel",
+      "municipio": "Chiquimula",
+      "lat": 14.82476,
+      "lon": -89.48668
+    },
+    {
+      "codigo_lugar": "chiquimula_santa_barbara",
+      "lugar_poblado": "Santa Barbara",
+      "municipio": "Chiquimula",
+      "lat": 14.850735,
+      "lon": -89.4834
+    },
+    {
+      "codigo_lugar": "chiquimula_santa_elena",
+      "lugar_poblado": "Santa Elena",
+      "municipio": "Chiquimula",
+      "lat": 14.717456,
+      "lon": -89.49716
+    },
+    {
+      "codigo_lugar": "chiquimula_shusho_abajo",
+      "lugar_poblado": "Shusho Abajo",
+      "municipio": "Chiquimula",
+      "lat": 14.813122,
+      "lon": -89.54805
+    },
+    {
+      "codigo_lugar": "chiquimula_shusho_arriba",
+      "lugar_poblado": "Shusho Arriba",
+      "municipio": "Chiquimula",
+      "lat": 14.821851,
+      "lon": -89.59403
+    },
+    {
+      "codigo_lugar": "chiquimula_shusho_enmedio",
+      "lugar_poblado": "Shusho Enmedio",
+      "municipio": "Chiquimula",
+      "lat": 14.820114,
+      "lon": -89.55442
+    },
+    {
+      "codigo_lugar": "chiquimula_sillon_abajo",
+      "lugar_poblado": "Sillon Abajo",
+      "municipio": "Chiquimula",
+      "lat": 14.794765,
+      "lon": -89.49436
+    },
+    {
+      "codigo_lugar": "chiquimula_sillon_arriba",
+      "lugar_poblado": "Sillon Arriba",
+      "municipio": "Chiquimula",
+      "lat": 14.782477,
+      "lon": -89.48426
+    },
+    {
+      "codigo_lugar": "chiquimula_tablon_del_ocotal",
+      "lugar_poblado": "Tablon Del Ocotal",
+      "municipio": "Chiquimula",
+      "lat": 14.838153,
+      "lon": -89.47943
+    },
+    {
+      "codigo_lugar": "chiquimula_taco_arriba",
+      "lugar_poblado": "Taco Arriba",
+      "municipio": "Chiquimula",
+      "lat": 14.784578,
+      "lon": -89.6046
+    },
+    {
+      "codigo_lugar": "chiquimula_tapazan",
+      "lugar_poblado": "Tapazan",
+      "municipio": "Chiquimula",
+      "lat": 14.865126,
+      "lon": -89.47399
+    },
+    {
+      "codigo_lugar": "chiquimula_terrero_barroso",
+      "lugar_poblado": "Terrero Barroso",
+      "municipio": "Chiquimula",
+      "lat": 14.764186,
+      "lon": -89.63836
+    },
+    {
+      "codigo_lugar": "chiquimula_ticanlu",
+      "lugar_poblado": "Ticanlu",
+      "municipio": "Chiquimula",
+      "lat": 14.821964,
+      "lon": -89.57265
+    },
+    {
+      "codigo_lugar": "chiquimula_ticanto_castillo",
+      "lugar_poblado": "Ticanto Castillo",
+      "municipio": "Chiquimula",
+      "lat": 14.811101,
+      "lon": -89.52054
+    },
+    {
+      "codigo_lugar": "chiquimula_ticanto_morales",
+      "lugar_poblado": "Ticanto Morales",
+      "municipio": "Chiquimula",
+      "lat": 14.808444,
+      "lon": -89.52019
+    },
+    {
+      "codigo_lugar": "chiquimula_tierra_blanca",
+      "lugar_poblado": "Tierra Blanca",
+      "municipio": "Chiquimula",
+      "lat": 14.766052,
+      "lon": -89.68128
+    },
+    {
+      "codigo_lugar": "chiquimula_trapechito",
+      "lugar_poblado": "Trapechito",
+      "municipio": "Chiquimula",
+      "lat": 14.805989,
+      "lon": -89.60995
+    },
+    {
+      "codigo_lugar": "chiquimula_vado_hondo",
+      "lugar_poblado": "Vado Hondo",
+      "municipio": "Chiquimula",
+      "lat": 14.733595,
+      "lon": -89.50555
+    },
+    {
+      "codigo_lugar": "chiquimula_vega_arriba",
+      "lugar_poblado": "Vega Arriba",
+      "municipio": "Chiquimula",
+      "lat": 14.759551,
+      "lon": -89.56141
+    },
+    {
+      "codigo_lugar": "chiquimula_vidal",
+      "lugar_poblado": "Vidal",
+      "municipio": "Chiquimula",
+      "lat": 14.807318,
+      "lon": -89.52918
+    },
+    {
+      "codigo_lugar": "chiquimula_villas_de_chiquimula",
+      "lugar_poblado": "Villas De Chiquimula",
+      "municipio": "Chiquimula",
+      "lat": 14.776119,
+      "lon": -89.55522
+    },
+    {
+      "codigo_lugar": "chiquimula_villas_de_manolo",
+      "lugar_poblado": "Villas De Manolo",
+      "municipio": "Chiquimula",
+      "lat": 14.81057,
+      "lon": -89.52372
+    },
+    {
+      "codigo_lugar": "chiquimula_vista_hermosa",
+      "lugar_poblado": "Vista Hermosa",
+      "municipio": "Chiquimula",
+      "lat": 14.824604,
+      "lon": -89.54176
+    },
+    {
+      "codigo_lugar": "chiquimula_xororagua",
+      "lugar_poblado": "Xororagua",
+      "municipio": "Chiquimula",
+      "lat": 14.766806,
+      "lon": -89.57862
+    },
+    {
+      "codigo_lugar": "chiquimula_el_morral_3",
+      "lugar_poblado": "El Morral",
+      "municipio": "Chiquimula",
+      "lat": 14.808435,
+      "lon": -89.50251
+    },
+    {
+      "codigo_lugar": "chiquimula_piedra_quemada",
+      "lugar_poblado": "Piedra Quemada",
+      "municipio": "Chiquimula",
+      "lat": 14.817255,
+      "lon": -89.65865
+    },
+    {
+      "codigo_lugar": "san_jose_la_arada_san_jose_la_arada",
+      "lugar_poblado": "San Jose La Arada",
+      "municipio": "San José la Arada",
+      "lat": 14.722911,
+      "lon": -89.58348
+    },
+    {
+      "codigo_lugar": "san_jose_la_arada_buena_vista",
+      "lugar_poblado": "Buena Vista",
+      "municipio": "San José la Arada",
+      "lat": 14.740795,
+      "lon": -89.56891
+    },
+    {
+      "codigo_lugar": "san_jose_la_arada_cerro_de_cal",
+      "lugar_poblado": "Cerro De Cal",
+      "municipio": "San José la Arada",
+      "lat": 14.692697,
+      "lon": -89.56114
+    },
+    {
+      "codigo_lugar": "san_jose_la_arada_chilar",
+      "lugar_poblado": "Chilar",
+      "municipio": "San José la Arada",
+      "lat": 14.723687,
+      "lon": -89.64484
+    },
+    {
+      "codigo_lugar": "san_jose_la_arada_el_carrizal",
+      "lugar_poblado": "El Carrizal",
+      "municipio": "San José la Arada",
+      "lat": 14.720346,
+      "lon": -89.55651
+    },
+    {
+      "codigo_lugar": "san_jose_la_arada_el_carrizal_2",
+      "lugar_poblado": "El Carrizal",
+      "municipio": "San José la Arada",
+      "lat": 14.720346,
+      "lon": -89.55651
+    },
+    {
+      "codigo_lugar": "san_jose_la_arada_el_junquillo",
+      "lugar_poblado": "El Junquillo",
+      "municipio": "San José la Arada",
+      "lat": 14.733385,
+      "lon": -89.56562
+    },
+    {
+      "codigo_lugar": "san_jose_la_arada_el_potrero",
+      "lugar_poblado": "El Potrero",
+      "municipio": "San José la Arada",
+      "lat": 14.674605,
+      "lon": -89.57864
+    },
+    {
+      "codigo_lugar": "san_jose_la_arada_el_rincon",
+      "lugar_poblado": "El Rincon",
+      "municipio": "San José la Arada",
+      "lat": 14.690205,
+      "lon": -89.61847
+    },
+    {
+      "codigo_lugar": "san_jose_la_arada_el_rodeo_abajo",
+      "lugar_poblado": "El Rodeo Abajo",
+      "municipio": "San José la Arada",
+      "lat": 14.681221,
+      "lon": -89.57813
+    },
+    {
+      "codigo_lugar": "san_jose_la_arada_guacamayas_abajo",
+      "lugar_poblado": "Guacamayas Abajo",
+      "municipio": "San José la Arada",
+      "lat": 14.672109,
+      "lon": -89.59165
+    },
+    {
+      "codigo_lugar": "san_jose_la_arada_la_joya",
+      "lugar_poblado": "La Joya",
+      "municipio": "San José la Arada",
+      "lat": 14.695969,
+      "lon": -89.61785
+    },
+    {
+      "codigo_lugar": "san_jose_la_arada_la_torera",
+      "lugar_poblado": "La Torera",
+      "municipio": "San José la Arada",
+      "lat": 14.715114,
+      "lon": -89.6137
+    },
+    {
+      "codigo_lugar": "san_jose_la_arada_los_cimientos",
+      "lugar_poblado": "Los Cimientos",
+      "municipio": "San José la Arada",
+      "lat": 14.689208,
+      "lon": -89.63888
+    },
+    {
+      "codigo_lugar": "san_jose_la_arada_los_encuentros",
+      "lugar_poblado": "Los Encuentros",
+      "municipio": "San José la Arada",
+      "lat": 14.7205,
+      "lon": -89.59986
+    },
+    {
+      "codigo_lugar": "san_jose_la_arada_plan_redondo",
+      "lugar_poblado": "Plan Redondo",
+      "municipio": "San José la Arada",
+      "lat": 14.672144,
+      "lon": -89.56211
+    },
+    {
+      "codigo_lugar": "san_jose_la_arada_el_rodeo_arriba",
+      "lugar_poblado": "El Rodeo Arriba",
+      "municipio": "San José la Arada",
+      "lat": 14.68636,
+      "lon": -89.57222
+    },
+    {
+      "codigo_lugar": "san_jose_la_arada_santa_rosa",
+      "lugar_poblado": "Santa Rosa",
+      "municipio": "San José la Arada",
+      "lat": 14.690658,
+      "lon": -89.60151
+    },
+    {
+      "codigo_lugar": "san_jose_la_arada_saspan",
+      "lugar_poblado": "Saspan",
+      "municipio": "San José la Arada",
+      "lat": 14.710264,
+      "lon": -89.54798
+    },
+    {
+      "codigo_lugar": "san_jose_la_arada_tashan",
+      "lugar_poblado": "Tashan",
+      "municipio": "San José la Arada",
+      "lat": 14.744297,
+      "lon": -89.61025
+    },
+    {
+      "codigo_lugar": "san_jose_la_arada_tierra_colorada",
+      "lugar_poblado": "Tierra Colorada",
+      "municipio": "San José la Arada",
+      "lat": 14.74723,
+      "lon": -89.5757
+    },
+    {
+      "codigo_lugar": "san_jose_la_arada_tobar",
+      "lugar_poblado": "Tobar",
+      "municipio": "San José la Arada",
+      "lat": 14.722266,
+      "lon": -89.65486
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_san_juan_ermita",
+      "lugar_poblado": "San Juan Ermita",
+      "municipio": "San Juan Ermita",
+      "lat": 14.764502,
+      "lon": -89.43082
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_buena_vista",
+      "lugar_poblado": "Buena Vista",
+      "municipio": "San Juan Ermita",
+      "lat": 14.769026,
+      "lon": -89.43672
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_el_carrizal",
+      "lugar_poblado": "El Carrizal",
+      "municipio": "San Juan Ermita",
+      "lat": 14.757204,
+      "lon": -89.40227
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_caulotes",
+      "lugar_poblado": "Caulotes",
+      "municipio": "San Juan Ermita",
+      "lat": 14.77359,
+      "lon": -89.43591
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_chanco",
+      "lugar_poblado": "Chanco",
+      "municipio": "San Juan Ermita",
+      "lat": 14.711739,
+      "lon": -89.44421
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_chispan_jaral",
+      "lugar_poblado": "Chispan Jaral",
+      "municipio": "San Juan Ermita",
+      "lat": 14.698007,
+      "lon": -89.40405
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_churischan",
+      "lugar_poblado": "Churischan",
+      "municipio": "San Juan Ermita",
+      "lat": 14.738684,
+      "lon": -89.40514
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_los_coronados",
+      "lugar_poblado": "Los Coronados",
+      "municipio": "San Juan Ermita",
+      "lat": 14.72014,
+      "lon": -89.42323
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_corral_de_piedra",
+      "lugar_poblado": "Corral De Piedra",
+      "municipio": "San Juan Ermita",
+      "lat": 14.708258,
+      "lon": -89.45448
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_los_coyotes",
+      "lugar_poblado": "Los Coyotes",
+      "municipio": "San Juan Ermita",
+      "lat": 14.706773,
+      "lon": -89.4296
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_el_cerron",
+      "lugar_poblado": "El Cerron",
+      "municipio": "San Juan Ermita",
+      "lat": 14.737778,
+      "lon": -89.41593
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_el_coco",
+      "lugar_poblado": "El Coco",
+      "municipio": "San Juan Ermita",
+      "lat": 14.770472,
+      "lon": -89.41069
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_los_encuentros",
+      "lugar_poblado": "Los Encuentros",
+      "municipio": "San Juan Ermita",
+      "lat": 14.718788,
+      "lon": -89.40369
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_la_ceiba",
+      "lugar_poblado": "La Ceiba",
+      "municipio": "San Juan Ermita",
+      "lat": 14.730719,
+      "lon": -89.44672
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_ceibita_centro",
+      "lugar_poblado": "Ceibita Centro",
+      "municipio": "San Juan Ermita",
+      "lat": 14.777953,
+      "lon": -89.42117
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_la_esperanza",
+      "lugar_poblado": "La Esperanza",
+      "municipio": "San Juan Ermita",
+      "lat": 14.723738,
+      "lon": -89.41012
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_la_muneca",
+      "lugar_poblado": "La Muneca",
+      "municipio": "San Juan Ermita",
+      "lat": 14.720843,
+      "lon": -89.46393
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_lagunetas",
+      "lugar_poblado": "Lagunetas",
+      "municipio": "San Juan Ermita",
+      "lat": 14.748168,
+      "lon": -89.39585
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_los_lopez",
+      "lugar_poblado": "Los Lopez",
+      "municipio": "San Juan Ermita",
+      "lat": 14.729972,
+      "lon": -89.40247
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_los_planes",
+      "lugar_poblado": "Los Planes",
+      "municipio": "San Juan Ermita",
+      "lat": 14.753308,
+      "lon": -89.4404
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_el_magueyal",
+      "lugar_poblado": "El Magueyal",
+      "municipio": "San Juan Ermita",
+      "lat": 14.724867,
+      "lon": -89.38212
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_el_matasano",
+      "lugar_poblado": "El Matasano",
+      "municipio": "San Juan Ermita",
+      "lat": 14.703833,
+      "lon": -89.39361
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_minas_abajo",
+      "lugar_poblado": "Minas Abajo",
+      "municipio": "San Juan Ermita",
+      "lat": 14.76996,
+      "lon": -89.44983
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_minas_arriba",
+      "lugar_poblado": "Minas Arriba",
+      "municipio": "San Juan Ermita",
+      "lat": 14.784261,
+      "lon": -89.45182
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_miramundo",
+      "lugar_poblado": "Miramundo",
+      "municipio": "San Juan Ermita",
+      "lat": 14.752959,
+      "lon": -89.42079
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_el_mojon",
+      "lugar_poblado": "El Mojon",
+      "municipio": "San Juan Ermita",
+      "lat": 14.700861,
+      "lon": -89.41506
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_las_piletas",
+      "lugar_poblado": "Las Piletas",
+      "municipio": "San Juan Ermita",
+      "lat": 14.713238,
+      "lon": -89.43693
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_quequexque",
+      "lugar_poblado": "Quequexque",
+      "municipio": "San Juan Ermita",
+      "lat": 14.71629,
+      "lon": -89.37791
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_rio_arriba",
+      "lugar_poblado": "Rio Arriba",
+      "municipio": "San Juan Ermita",
+      "lat": 14.719871,
+      "lon": -89.41374
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_el_roblarcito",
+      "lugar_poblado": "El Roblarcito",
+      "municipio": "San Juan Ermita",
+      "lat": 14.70892,
+      "lon": -89.3861
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_el_salitron",
+      "lugar_poblado": "El Salitron",
+      "municipio": "San Juan Ermita",
+      "lat": 14.703533,
+      "lon": -89.45965
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_san_antonio_lajas",
+      "lugar_poblado": "San Antonio Lajas",
+      "municipio": "San Juan Ermita",
+      "lat": 14.722381,
+      "lon": -89.43106
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_zarzal_1",
+      "lugar_poblado": "Zarzal 1",
+      "municipio": "San Juan Ermita",
+      "lat": 14.784574,
+      "lon": -89.43443
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_zarzal_2",
+      "lugar_poblado": "Zarzal 2",
+      "municipio": "San Juan Ermita",
+      "lat": 14.78969,
+      "lon": -89.43183
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_tasharja",
+      "lugar_poblado": "Tasharja",
+      "municipio": "San Juan Ermita",
+      "lat": 14.722378,
+      "lon": -89.3931
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_tasharja_abajo",
+      "lugar_poblado": "Tasharja Abajo",
+      "municipio": "San Juan Ermita",
+      "lat": 14.717173,
+      "lon": -89.39065
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_tasharja_arriba",
+      "lugar_poblado": "Tasharja Arriba",
+      "municipio": "San Juan Ermita",
+      "lat": 14.732324,
+      "lon": -89.38962
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_ticanlu",
+      "lugar_poblado": "Ticanlu",
+      "municipio": "San Juan Ermita",
+      "lat": 14.739077,
+      "lon": -89.46328
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_veguitas",
+      "lugar_poblado": "Veguitas",
+      "municipio": "San Juan Ermita",
+      "lat": 14.748383,
+      "lon": -89.45778
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_vivienda_nueva",
+      "lugar_poblado": "Vivienda Nueva",
+      "municipio": "San Juan Ermita",
+      "lat": 14.750106,
+      "lon": -89.44752
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_el_campo",
+      "lugar_poblado": "El Campo",
+      "municipio": "San Juan Ermita",
+      "lat": 14.769105,
+      "lon": -89.43046
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_el_cementerio",
+      "lugar_poblado": "El Cementerio",
+      "municipio": "San Juan Ermita",
+      "lat": 14.769046,
+      "lon": -89.42783
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_el_escopetazo",
+      "lugar_poblado": "El Escopetazo",
+      "municipio": "San Juan Ermita",
+      "lat": 14.766463,
+      "lon": -89.43136
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_la_escuela",
+      "lugar_poblado": "La Escuela",
+      "municipio": "San Juan Ermita",
+      "lat": 14.762364,
+      "lon": -89.43285
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_linda_vista",
+      "lugar_poblado": "Linda Vista",
+      "municipio": "San Juan Ermita",
+      "lat": 14.760707,
+      "lon": -89.44113
+    },
+    {
+      "codigo_lugar": "san_juan_ermita_la_tejera",
+      "lugar_poblado": "La Tejera",
+      "municipio": "San Juan Ermita",
+      "lat": 14.761523,
+      "lon": -89.43696
+    },
+    {
+      "codigo_lugar": "jocotan_jocotan",
+      "lugar_poblado": "Jocotan",
+      "municipio": "Jocotán",
+      "lat": 14.819268,
+      "lon": -89.3896
+    },
+    {
+      "codigo_lugar": "jocotan_agua_fria",
+      "lugar_poblado": "Agua Fria",
+      "municipio": "Jocotán",
+      "lat": 14.910379,
+      "lon": -89.36469
+    },
+    {
+      "codigo_lugar": "jocotan_agua_zarca",
+      "lugar_poblado": "Agua Zarca",
+      "municipio": "Jocotán",
+      "lat": 14.837105,
+      "lon": -89.39621
+    },
+    {
+      "codigo_lugar": "jocotan_amatillo",
+      "lugar_poblado": "Amatillo",
+      "municipio": "Jocotán",
+      "lat": 14.793433,
+      "lon": -89.42808
+    },
+    {
+      "codigo_lugar": "jocotan_pinalito_matasano",
+      "lugar_poblado": "Pinalito Matasano",
+      "municipio": "Jocotán",
+      "lat": 14.855738,
+      "lon": -89.38686
+    },
+    {
+      "codigo_lugar": "jocotan_canapara_abajo",
+      "lugar_poblado": "Canapara Abajo ",
+      "municipio": "Jocotán",
+      "lat": 14.764622,
+      "lon": -89.37885
+    },
+    {
+      "codigo_lugar": "jocotan_canapara_arriba",
+      "lugar_poblado": "Canapara Arriba",
+      "municipio": "Jocotán",
+      "lat": 14.759889,
+      "lon": -89.38797
+    },
+    {
+      "codigo_lugar": "jocotan_los_cardona",
+      "lugar_poblado": "Los Cardona",
+      "municipio": "Jocotán",
+      "lat": 14.797278,
+      "lon": -89.38254
+    },
+    {
+      "codigo_lugar": "jocotan_quebrada_seca_oquen",
+      "lugar_poblado": "Quebrada Seca Oquen",
+      "municipio": "Jocotán",
+      "lat": 14.794206,
+      "lon": -89.41783
+    },
+    {
+      "codigo_lugar": "jocotan_colmenas",
+      "lugar_poblado": "Colmenas",
+      "municipio": "Jocotán",
+      "lat": 14.761289,
+      "lon": -89.23219
+    },
+    {
+      "codigo_lugar": "jocotan_conacaste_centro",
+      "lugar_poblado": "Conacaste Centro",
+      "municipio": "Jocotán",
+      "lat": 14.876225,
+      "lon": -89.44263
+    },
+    {
+      "codigo_lugar": "jocotan_copanito",
+      "lugar_poblado": "Copanito",
+      "municipio": "Jocotán",
+      "lat": 14.837743,
+      "lon": -89.42876
+    },
+    {
+      "codigo_lugar": "jocotan_cruz_de_charma",
+      "lugar_poblado": "Cruz De Charma",
+      "municipio": "Jocotán",
+      "lat": 14.773436,
+      "lon": -89.34033
+    },
+    {
+      "codigo_lugar": "jocotan_talquetzal_centro",
+      "lugar_poblado": "Talquetzal Centro",
+      "municipio": "Jocotán",
+      "lat": 14.901031,
+      "lon": -89.35593
+    },
+    {
+      "codigo_lugar": "jocotan_la_cumbre",
+      "lugar_poblado": "La Cumbre",
+      "municipio": "Jocotán",
+      "lat": 14.784881,
+      "lon": -89.24616
+    },
+    {
+      "codigo_lugar": "jocotan_el_angel_las_flores",
+      "lugar_poblado": "El Angel, Las Flores",
+      "municipio": "Jocotán",
+      "lat": 14.84901,
+      "lon": -89.43855
+    },
+    {
+      "codigo_lugar": "jocotan_el_arenal",
+      "lugar_poblado": "El Arenal",
+      "municipio": "Jocotán",
+      "lat": 14.832812,
+      "lon": -89.4357
+    },
+    {
+      "codigo_lugar": "jocotan_el_candelero_centro",
+      "lugar_poblado": "El Candelero Centro",
+      "municipio": "Jocotán",
+      "lat": 14.869356,
+      "lon": -89.40788
+    },
+    {
+      "codigo_lugar": "jocotan_el_cementerio",
+      "lugar_poblado": "El Cementerio",
+      "municipio": "Jocotán",
+      "lat": 14.83718,
+      "lon": -89.42279
+    },
+    {
+      "codigo_lugar": "jocotan_el_cerron",
+      "lugar_poblado": "El Cerron",
+      "municipio": "Jocotán",
+      "lat": 14.819417,
+      "lon": -89.44433
+    },
+    {
+      "codigo_lugar": "jocotan_despoblado_oquen",
+      "lugar_poblado": "Despoblado Oquen",
+      "municipio": "Jocotán",
+      "lat": 14.816941,
+      "lon": -89.41227
+    },
+    {
+      "codigo_lugar": "jocotan_escobillal",
+      "lugar_poblado": "Escobillal",
+      "municipio": "Jocotán",
+      "lat": 14.802476,
+      "lon": -89.40816
+    },
+    {
+      "codigo_lugar": "jocotan_el_filo",
+      "lugar_poblado": "El Filo",
+      "municipio": "Jocotán",
+      "lat": 14.905908,
+      "lon": -89.36014
+    },
+    {
+      "codigo_lugar": "jocotan_el_limar",
+      "lugar_poblado": "El Limar",
+      "municipio": "Jocotán",
+      "lat": 14.772841,
+      "lon": -89.27969
+    },
+    {
+      "codigo_lugar": "jocotan_suchiquer_plan_del_mango",
+      "lugar_poblado": "Suchiquer Plan Del Mango",
+      "municipio": "Jocotán",
+      "lat": 14.815444,
+      "lon": -89.43056
+    },
+    {
+      "codigo_lugar": "jocotan_el_morrito",
+      "lugar_poblado": "El Morrito",
+      "municipio": "Jocotán",
+      "lat": 14.86314,
+      "lon": -89.4382
+    },
+    {
+      "codigo_lugar": "jocotan_el_pajalito",
+      "lugar_poblado": "El Pajalito",
+      "municipio": "Jocotán",
+      "lat": 14.851401,
+      "lon": -89.45709
+    },
+    {
+      "codigo_lugar": "jocotan_nuevo_palmar",
+      "lugar_poblado": "Nuevo Palmar",
+      "municipio": "Jocotán",
+      "lat": 14.830567,
+      "lon": -89.4192
+    },
+    {
+      "codigo_lugar": "jocotan_pinalito",
+      "lugar_poblado": "Pinalito",
+      "municipio": "Jocotán",
+      "lat": 14.873898,
+      "lon": -89.41545
+    },
+    {
+      "codigo_lugar": "jocotan_el_tablon",
+      "lugar_poblado": "El Tablon",
+      "municipio": "Jocotán",
+      "lat": 14.834451,
+      "lon": -89.40038
+    },
+    {
+      "codigo_lugar": "jocotan_el_tular",
+      "lugar_poblado": "El Tular",
+      "municipio": "Jocotán",
+      "lat": 14.846104,
+      "lon": -89.43114
+    },
+    {
+      "codigo_lugar": "jocotan_el_zapote",
+      "lugar_poblado": "El Zapote",
+      "municipio": "Jocotán",
+      "lat": 14.77894,
+      "lon": -89.29517
+    },
+    {
+      "codigo_lugar": "jocotan_el_zapotillo_aldea_las_flores",
+      "lugar_poblado": "El Zapotillo Aldea Las Flores",
+      "municipio": "Jocotán",
+      "lat": 14.8509,
+      "lon": -89.44837
+    },
+    {
+      "codigo_lugar": "jocotan_encuentro_la_ceiba",
+      "lugar_poblado": "Encuentro La Ceiba",
+      "municipio": "Jocotán",
+      "lat": 14.843519,
+      "lon": -89.41012
+    },
+    {
+      "codigo_lugar": "jocotan_guaraquiche_centro",
+      "lugar_poblado": "Guaraquiche Centro",
+      "municipio": "Jocotán",
+      "lat": 14.849955,
+      "lon": -89.4007
+    },
+    {
+      "codigo_lugar": "jocotan_guior",
+      "lugar_poblado": "Guior",
+      "municipio": "Jocotán",
+      "lat": 14.828037,
+      "lon": -89.41955
+    },
+    {
+      "codigo_lugar": "jocotan_guapinol",
+      "lugar_poblado": "Guapinol",
+      "municipio": "Jocotán",
+      "lat": 14.841104,
+      "lon": -89.43096
+    },
+    {
+      "codigo_lugar": "jocotan_guareruche",
+      "lugar_poblado": "Guareruche",
+      "municipio": "Jocotán",
+      "lat": 14.838701,
+      "lon": -89.4259
+    },
+    {
+      "codigo_lugar": "jocotan_guayabillas_centro",
+      "lugar_poblado": "Guayabillas Centro ",
+      "municipio": "Jocotán",
+      "lat": 14.886033,
+      "lon": -89.44319
+    },
+    {
+      "codigo_lugar": "jocotan_el_guayabo",
+      "lugar_poblado": "El Guayabo",
+      "municipio": "Jocotán",
+      "lat": 14.78192,
+      "lon": -89.3138
+    },
+    {
+      "codigo_lugar": "jocotan_ingenio_guaraquiche",
+      "lugar_poblado": "Ingenio Guaraquiche",
+      "municipio": "Jocotán",
+      "lat": 14.862739,
+      "lon": -89.39213
+    },
+    {
+      "codigo_lugar": "jocotan_la_arada",
+      "lugar_poblado": "La Arada ",
+      "municipio": "Jocotán",
+      "lat": 14.79155,
+      "lon": -89.36118
+    },
+    {
+      "codigo_lugar": "jocotan_la_ceiba",
+      "lugar_poblado": "La Ceiba",
+      "municipio": "Jocotán",
+      "lat": 14.891713,
+      "lon": -89.36353
+    },
+    {
+      "codigo_lugar": "jocotan_la_cruz",
+      "lugar_poblado": "La Cruz",
+      "municipio": "Jocotán",
+      "lat": 14.845831,
+      "lon": -89.44063
+    },
+    {
+      "codigo_lugar": "jocotan_la_esperanza",
+      "lugar_poblado": "La Esperanza",
+      "municipio": "Jocotán",
+      "lat": 14.850067,
+      "lon": -89.44294
+    },
+    {
+      "codigo_lugar": "jocotan_la_mina",
+      "lugar_poblado": "La Mina ",
+      "municipio": "Jocotán",
+      "lat": 14.801103,
+      "lon": -89.44653
+    },
+    {
+      "codigo_lugar": "jocotan_la_palmilla",
+      "lugar_poblado": "La Palmilla ",
+      "municipio": "Jocotán",
+      "lat": 14.881491,
+      "lon": -89.3626
+    },
+    {
+      "codigo_lugar": "jocotan_la_puerta",
+      "lugar_poblado": "La Puerta",
+      "municipio": "Jocotán",
+      "lat": 14.825696,
+      "lon": -89.43389
+    },
+    {
+      "codigo_lugar": "jocotan_las_crucitas",
+      "lugar_poblado": "Las Crucitas",
+      "municipio": "Jocotán",
+      "lat": 14.780098,
+      "lon": -89.40737
+    },
+    {
+      "codigo_lugar": "jocotan_las_flores",
+      "lugar_poblado": "Las Flores",
+      "municipio": "Jocotán",
+      "lat": 14.847352,
+      "lon": -89.44565
+    },
+    {
+      "codigo_lugar": "jocotan_los_perez",
+      "lugar_poblado": "Los Perez",
+      "municipio": "Jocotán",
+      "lat": 14.898728,
+      "lon": -89.36397
+    },
+    {
+      "codigo_lugar": "jocotan_los_vados",
+      "lugar_poblado": "Los Vados",
+      "municipio": "Jocotán",
+      "lat": 14.789551,
+      "lon": -89.39843
+    },
+    {
+      "codigo_lugar": "jocotan_mal_paso",
+      "lugar_poblado": "Mal Paso",
+      "municipio": "Jocotán",
+      "lat": 14.775136,
+      "lon": -89.25364
+    },
+    {
+      "codigo_lugar": "jocotan_matasano_centro",
+      "lugar_poblado": "Matasano Centro ",
+      "municipio": "Jocotán",
+      "lat": 14.851056,
+      "lon": -89.381
+    },
+    {
+      "codigo_lugar": "jocotan_mojon",
+      "lugar_poblado": "Mojon",
+      "municipio": "Jocotán",
+      "lat": 14.773145,
+      "lon": -89.234
+    },
+    {
+      "codigo_lugar": "jocotan_el_naranjo",
+      "lugar_poblado": "El Naranjo",
+      "municipio": "Jocotán",
+      "lat": 14.786275,
+      "lon": -89.29852
+    },
+    {
+      "codigo_lugar": "jocotan_ocumbla",
+      "lugar_poblado": "Ocumbla",
+      "municipio": "Jocotán",
+      "lat": 14.782041,
+      "lon": -89.32531
+    },
+    {
+      "codigo_lugar": "jocotan_ojo_de_agua_escondido",
+      "lugar_poblado": "Ojo De Agua Escondido",
+      "municipio": "Jocotán",
+      "lat": 14.864809,
+      "lon": -89.41878
+    },
+    {
+      "codigo_lugar": "jocotan_oquen",
+      "lugar_poblado": "Oquen",
+      "municipio": "Jocotán",
+      "lat": 14.804965,
+      "lon": -89.41637
+    },
+    {
+      "codigo_lugar": "jocotan_suchiquer_oratorio",
+      "lugar_poblado": "Suchiquer Oratorio",
+      "municipio": "Jocotán",
+      "lat": 14.813163,
+      "lon": -89.4383
+    },
+    {
+      "codigo_lugar": "jocotan_oregano",
+      "lugar_poblado": "Oregano",
+      "municipio": "Jocotán",
+      "lat": 14.87402,
+      "lon": -89.46361
+    },
+    {
+      "codigo_lugar": "jocotan_pacren",
+      "lugar_poblado": "Pacren",
+      "municipio": "Jocotán",
+      "lat": 14.78848,
+      "lon": -89.37534
+    },
+    {
+      "codigo_lugar": "jocotan_palmar",
+      "lugar_poblado": "Palmar",
+      "municipio": "Jocotán",
+      "lat": 14.857119,
+      "lon": -89.37903
+    },
+    {
+      "codigo_lugar": "jocotan_barrio_nuevo_guayabillas",
+      "lugar_poblado": "Barrio Nuevo Guayabillas",
+      "municipio": "Jocotán",
+      "lat": 14.89507,
+      "lon": -89.44068
+    },
+    {
+      "codigo_lugar": "jocotan_pelillo_negro_centro",
+      "lugar_poblado": "Pelillo Negro Centro",
+      "municipio": "Jocotán",
+      "lat": 14.82899,
+      "lon": -89.4406
+    },
+    {
+      "codigo_lugar": "jocotan_el_llano",
+      "lugar_poblado": "El Llano",
+      "municipio": "Jocotán",
+      "lat": 14.835408,
+      "lon": -89.44687
+    },
+    {
+      "codigo_lugar": "jocotan_pericon",
+      "lugar_poblado": "Pericon",
+      "municipio": "Jocotán",
+      "lat": 14.788171,
+      "lon": -89.3391
+    },
+    {
+      "codigo_lugar": "jocotan_piedra_parada",
+      "lugar_poblado": "Piedra Parada",
+      "municipio": "Jocotán",
+      "lat": 14.736948,
+      "lon": -89.37776
+    },
+    {
+      "codigo_lugar": "jocotan_suchiquen_pinalito",
+      "lugar_poblado": "Suchiquen Pinalito",
+      "municipio": "Jocotán",
+      "lat": 14.818654,
+      "lon": -89.41903
+    },
+    {
+      "codigo_lugar": "jocotan_planes_del_guineal",
+      "lugar_poblado": "Planes Del Guineal",
+      "municipio": "Jocotán",
+      "lat": 14.764957,
+      "lon": -89.27284
+    },
+    {
+      "codigo_lugar": "jocotan_potrero",
+      "lugar_poblado": "Potrero",
+      "municipio": "Jocotán",
+      "lat": 14.752035,
+      "lon": -89.372
+    },
+    {
+      "codigo_lugar": "jocotan_potrerito",
+      "lugar_poblado": "Potrerito",
+      "municipio": "Jocotán",
+      "lat": 14.878132,
+      "lon": -89.43599
+    },
+    {
+      "codigo_lugar": "jocotan_quebrada_seca",
+      "lugar_poblado": "Quebrada Seca",
+      "municipio": "Jocotán",
+      "lat": 14.830282,
+      "lon": -89.39264
+    },
+    {
+      "codigo_lugar": "jocotan_rodeito",
+      "lugar_poblado": "Rodeito",
+      "municipio": "Jocotán",
+      "lat": 14.747583,
+      "lon": -89.3194
+    },
+    {
+      "codigo_lugar": "jocotan_san_pedrito",
+      "lugar_poblado": "San Pedrito",
+      "municipio": "Jocotán",
+      "lat": 14.856026,
+      "lon": -89.4476
+    },
+    {
+      "codigo_lugar": "jocotan_suchiquer_centro",
+      "lugar_poblado": "Suchiquer Centro",
+      "municipio": "Jocotán",
+      "lat": 14.807599,
+      "lon": -89.42976
+    },
+    {
+      "codigo_lugar": "jocotan_suchiquer_guapinol",
+      "lugar_poblado": "Suchiquer Guapinol",
+      "municipio": "Jocotán",
+      "lat": 14.815881,
+      "lon": -89.42638
+    },
+    {
+      "codigo_lugar": "jocotan_tansha",
+      "lugar_poblado": "Tansha",
+      "municipio": "Jocotán",
+      "lat": 14.780168,
+      "lon": -89.24308
+    },
+    {
+      "codigo_lugar": "jocotan_tatutu",
+      "lugar_poblado": "Tatutu",
+      "municipio": "Jocotán",
+      "lat": 14.768674,
+      "lon": -89.3193
+    },
+    {
+      "codigo_lugar": "jocotan_tesoro_abajo",
+      "lugar_poblado": "Tesoro Abajo",
+      "municipio": "Jocotán",
+      "lat": 14.777822,
+      "lon": -89.40176
+    },
+    {
+      "codigo_lugar": "jocotan_tesoro_arriba",
+      "lugar_poblado": "Tesoro Arriba",
+      "municipio": "Jocotán",
+      "lat": 14.77637,
+      "lon": -89.38992
+    },
+    {
+      "codigo_lugar": "jocotan_tierra_blanca",
+      "lugar_poblado": "Tierra Blanca",
+      "municipio": "Jocotán",
+      "lat": 14.803068,
+      "lon": -89.3965
+    },
+    {
+      "codigo_lugar": "jocotan_tierra_blanca_2",
+      "lugar_poblado": "Tierra Blanca",
+      "municipio": "Jocotán",
+      "lat": 14.803068,
+      "lon": -89.3965
+    },
+    {
+      "codigo_lugar": "jocotan_encuentro_guaraquiche",
+      "lugar_poblado": "Encuentro Guaraquiche",
+      "municipio": "Jocotán",
+      "lat": 14.828571,
+      "lon": -89.40344
+    },
+    {
+      "codigo_lugar": "jocotan_tontoles",
+      "lugar_poblado": "Tontoles",
+      "municipio": "Jocotán",
+      "lat": 14.782237,
+      "lon": -89.27606
+    },
+    {
+      "codigo_lugar": "jocotan_tunuco_abajo",
+      "lugar_poblado": "Tunuco Abajo",
+      "municipio": "Jocotán",
+      "lat": 14.768916,
+      "lon": -89.36269
+    },
+    {
+      "codigo_lugar": "jocotan_tunuco_arriba",
+      "lugar_poblado": "Tunuco Arriba",
+      "municipio": "Jocotán",
+      "lat": 14.754412,
+      "lon": -89.34988
+    },
+    {
+      "codigo_lugar": "jocotan_los_garcia",
+      "lugar_poblado": "Los Garcia",
+      "municipio": "Jocotán",
+      "lat": 14.760153,
+      "lon": -89.36787
+    },
+    {
+      "codigo_lugar": "camotan_camotan",
+      "lugar_poblado": "Camotan",
+      "municipio": "Camotán",
+      "lat": 14.819226,
+      "lon": -89.3717
+    },
+    {
+      "codigo_lugar": "camotan_anisillo",
+      "lugar_poblado": "Anisillo",
+      "municipio": "Camotán",
+      "lat": 14.872371,
+      "lon": -89.2443
+    },
+    {
+      "codigo_lugar": "camotan_brasilar",
+      "lugar_poblado": "Brasilar",
+      "municipio": "Camotán",
+      "lat": 14.830032,
+      "lon": -89.35068
+    },
+    {
+      "codigo_lugar": "camotan_cajon_del_rio",
+      "lugar_poblado": "Cajon Del Rio",
+      "municipio": "Camotán",
+      "lat": 14.823424,
+      "lon": -89.26474
+    },
+    {
+      "codigo_lugar": "camotan_cajoncito",
+      "lugar_poblado": "Cajoncito",
+      "municipio": "Camotán",
+      "lat": 14.811748,
+      "lon": -89.25282
+    },
+    {
+      "codigo_lugar": "camotan_camino_real_o_agua_fria",
+      "lugar_poblado": "Camino Real O Agua Fria",
+      "municipio": "Camotán",
+      "lat": 14.864503,
+      "lon": -89.34557
+    },
+    {
+      "codigo_lugar": "camotan_canon_de_tisipe",
+      "lugar_poblado": "Cañon De Tisipe",
+      "municipio": "Camotán",
+      "lat": 14.821144,
+      "lon": -89.33346
+    },
+    {
+      "codigo_lugar": "camotan_caparja",
+      "lugar_poblado": "Caparja",
+      "municipio": "Camotán",
+      "lat": 14.855461,
+      "lon": -89.23929
+    },
+    {
+      "codigo_lugar": "camotan_carrizalito",
+      "lugar_poblado": "Carrizalito",
+      "municipio": "Camotán",
+      "lat": 14.849909,
+      "lon": -89.2301
+    },
+    {
+      "codigo_lugar": "camotan_caulotes",
+      "lugar_poblado": "Caulotes",
+      "municipio": "Camotán",
+      "lat": 14.809953,
+      "lon": -89.21227
+    },
+    {
+      "codigo_lugar": "camotan_chanco_centro",
+      "lugar_poblado": "Chanco Centro",
+      "municipio": "Camotán",
+      "lat": 14.841698,
+      "lon": -89.33624
+    },
+    {
+      "codigo_lugar": "camotan_changuis",
+      "lugar_poblado": "Changuis",
+      "municipio": "Camotán",
+      "lat": 14.80076,
+      "lon": -89.31279
+    },
+    {
+      "codigo_lugar": "camotan_chantiago",
+      "lugar_poblado": "Chantiago",
+      "municipio": "Camotán",
+      "lat": 14.845259,
+      "lon": -89.28394
+    },
+    {
+      "codigo_lugar": "camotan_chapulin",
+      "lugar_poblado": "Chapulin",
+      "municipio": "Camotán",
+      "lat": 14.799454,
+      "lon": -89.20528
+    },
+    {
+      "codigo_lugar": "camotan_coyoles",
+      "lugar_poblado": "Coyoles",
+      "municipio": "Camotán",
+      "lat": 14.799615,
+      "lon": -89.21591
+    },
+    {
+      "codigo_lugar": "camotan_despoblado_centro",
+      "lugar_poblado": "Despoblado Centro",
+      "municipio": "Camotán",
+      "lat": 14.861583,
+      "lon": -89.27997
+    },
+    {
+      "codigo_lugar": "camotan_dos_quebradas",
+      "lugar_poblado": "Dos Quebradas",
+      "municipio": "Camotán",
+      "lat": 14.803236,
+      "lon": -89.3323
+    },
+    {
+      "codigo_lugar": "camotan_chatuncito",
+      "lugar_poblado": "Chatuncito",
+      "municipio": "Camotán",
+      "lat": 14.885371,
+      "lon": -89.32321
+    },
+    {
+      "codigo_lugar": "camotan_el_chiyo",
+      "lugar_poblado": "El Chiyo",
+      "municipio": "Camotán",
+      "lat": 14.792971,
+      "lon": -89.3285
+    },
+    {
+      "codigo_lugar": "camotan_el_chorro",
+      "lugar_poblado": "El Chorro",
+      "municipio": "Camotán",
+      "lat": 14.80632,
+      "lon": -89.36836
+    },
+    {
+      "codigo_lugar": "camotan_el_florido",
+      "lugar_poblado": "El Florido",
+      "municipio": "Camotán",
+      "lat": 14.858121,
+      "lon": -89.23204
+    },
+    {
+      "codigo_lugar": "camotan_el_guayabo",
+      "lugar_poblado": "El Guayabo",
+      "municipio": "Camotán",
+      "lat": 14.837389,
+      "lon": -89.23588
+    },
+    {
+      "codigo_lugar": "camotan_el_jute",
+      "lugar_poblado": "El Jute",
+      "municipio": "Camotán",
+      "lat": 14.876491,
+      "lon": -89.23174
+    },
+    {
+      "codigo_lugar": "camotan_el_limar",
+      "lugar_poblado": "El Limar",
+      "municipio": "Camotán",
+      "lat": 14.844264,
+      "lon": -89.32425
+    },
+    {
+      "codigo_lugar": "camotan_el_limar_2",
+      "lugar_poblado": "El Limar",
+      "municipio": "Camotán",
+      "lat": 14.844264,
+      "lon": -89.32425
+    },
+    {
+      "codigo_lugar": "camotan_el_plan",
+      "lugar_poblado": "El Plan",
+      "municipio": "Camotán",
+      "lat": 14.787343,
+      "lon": -89.26257
+    },
+    {
+      "codigo_lugar": "camotan_el_roblar",
+      "lugar_poblado": "El Roblar",
+      "municipio": "Camotán",
+      "lat": 14.883739,
+      "lon": -89.27067
+    },
+    {
+      "codigo_lugar": "camotan_el_roble",
+      "lugar_poblado": "El Roble",
+      "municipio": "Camotán",
+      "lat": 14.797414,
+      "lon": -89.34855
+    },
+    {
+      "codigo_lugar": "camotan_tesoro_centro",
+      "lugar_poblado": "Tesoro Centro",
+      "municipio": "Camotán",
+      "lat": 14.904963,
+      "lon": -89.21419
+    },
+    {
+      "codigo_lugar": "camotan_el_valle",
+      "lugar_poblado": "El Valle",
+      "municipio": "Camotán",
+      "lat": 14.803622,
+      "lon": -89.21882
+    },
+    {
+      "codigo_lugar": "camotan_el_escuelero",
+      "lugar_poblado": "El Escuelero",
+      "municipio": "Camotán",
+      "lat": 14.824008,
+      "lon": -89.24328
+    },
+    {
+      "codigo_lugar": "camotan_guillermo_guerra",
+      "lugar_poblado": "Guillermo Guerra",
+      "municipio": "Camotán",
+      "lat": 14.81984,
+      "lon": -89.36447
+    },
+    {
+      "codigo_lugar": "camotan_guior_centro",
+      "lugar_poblado": "Guior Centro",
+      "municipio": "Camotán",
+      "lat": 14.898072,
+      "lon": -89.26301
+    },
+    {
+      "codigo_lugar": "camotan_agua_caliente",
+      "lugar_poblado": "Agua Caliente",
+      "municipio": "Camotán",
+      "lat": 14.822257,
+      "lon": -89.36365
+    },
+    {
+      "codigo_lugar": "camotan_la_joya",
+      "lugar_poblado": "La Joya",
+      "municipio": "Camotán",
+      "lat": 14.809228,
+      "lon": -89.29295
+    },
+    {
+      "codigo_lugar": "camotan_la_libertad_centro",
+      "lugar_poblado": "La Libertad Centro",
+      "municipio": "Camotán",
+      "lat": 14.870226,
+      "lon": -89.27144
+    },
+    {
+      "codigo_lugar": "camotan_la_lima",
+      "lugar_poblado": "La Lima",
+      "municipio": "Camotán",
+      "lat": 14.892246,
+      "lon": -89.31769
+    },
+    {
+      "codigo_lugar": "camotan_la_loma",
+      "lugar_poblado": "La Loma",
+      "municipio": "Camotán",
+      "lat": 14.825907,
+      "lon": -89.22092
+    },
+    {
+      "codigo_lugar": "camotan_la_sierra",
+      "lugar_poblado": "La Sierra",
+      "municipio": "Camotán",
+      "lat": 14.896354,
+      "lon": -89.33469
+    },
+    {
+      "codigo_lugar": "camotan_lantiquin",
+      "lugar_poblado": "Lantiquin",
+      "municipio": "Camotán",
+      "lat": 14.806706,
+      "lon": -89.36105
+    },
+    {
+      "codigo_lugar": "camotan_las_flores",
+      "lugar_poblado": "Las Flores",
+      "municipio": "Camotán",
+      "lat": 14.815683,
+      "lon": -89.24357
+    },
+    {
+      "codigo_lugar": "camotan_plan_morro",
+      "lugar_poblado": "Plan Morro",
+      "municipio": "Camotán",
+      "lat": 14.85073,
+      "lon": -89.31461
+    },
+    {
+      "codigo_lugar": "camotan_el_mineral",
+      "lugar_poblado": "El Mineral",
+      "municipio": "Camotán",
+      "lat": 14.863834,
+      "lon": -89.31438
+    },
+    {
+      "codigo_lugar": "camotan_el_limon_timote",
+      "lugar_poblado": "El Limon Timote",
+      "municipio": "Camotán",
+      "lat": 14.805516,
+      "lon": -89.30504
+    },
+    {
+      "codigo_lugar": "camotan_limoncito",
+      "lugar_poblado": "Limoncito",
+      "municipio": "Camotán",
+      "lat": 14.793149,
+      "lon": -89.31343
+    },
+    {
+      "codigo_lugar": "camotan_loma_de_paja",
+      "lugar_poblado": "Loma De Paja",
+      "municipio": "Camotán",
+      "lat": 14.788477,
+      "lon": -89.27377
+    },
+    {
+      "codigo_lugar": "camotan_los_hernandez",
+      "lugar_poblado": "Los Hernandez",
+      "municipio": "Camotán",
+      "lat": 14.834278,
+      "lon": -89.36995
+    },
+    {
+      "codigo_lugar": "camotan_los_nacientos",
+      "lugar_poblado": "Los Nacientos",
+      "municipio": "Camotán",
+      "lat": 14.890326,
+      "lon": -89.32642
+    },
+    {
+      "codigo_lugar": "camotan_marimba",
+      "lugar_poblado": "Marimba",
+      "municipio": "Camotán",
+      "lat": 14.803026,
+      "lon": -89.3399
+    },
+    {
+      "codigo_lugar": "camotan_morola_centro",
+      "lugar_poblado": "Morola Centro",
+      "municipio": "Camotán",
+      "lat": 14.925629,
+      "lon": -89.19316
+    },
+    {
+      "codigo_lugar": "camotan_plan_muyurco",
+      "lugar_poblado": "Plan Muyurco",
+      "municipio": "Camotán",
+      "lat": 14.806759,
+      "lon": -89.28198
+    },
+    {
+      "codigo_lugar": "camotan_nearar",
+      "lugar_poblado": "Nearar",
+      "municipio": "Camotán",
+      "lat": 14.827232,
+      "lon": -89.31252
+    },
+    {
+      "codigo_lugar": "camotan_cumbre_de_nenoja",
+      "lugar_poblado": "Cumbre De Nenoja",
+      "municipio": "Camotán",
+      "lat": 14.81601,
+      "lon": -89.30512
+    },
+    {
+      "codigo_lugar": "camotan_nuevo_lantiquin",
+      "lugar_poblado": "Nuevo Lantiquin",
+      "municipio": "Camotán",
+      "lat": 14.810079,
+      "lon": -89.3694
+    },
+    {
+      "codigo_lugar": "camotan_ojo_de_agua",
+      "lugar_poblado": "Ojo De Agua",
+      "municipio": "Camotán",
+      "lat": 14.791489,
+      "lon": -89.26021
+    },
+    {
+      "codigo_lugar": "camotan_pajco",
+      "lugar_poblado": "Pajco",
+      "municipio": "Camotán",
+      "lat": 14.833036,
+      "lon": -89.35897
+    },
+    {
+      "codigo_lugar": "camotan_palala_o_espinal",
+      "lugar_poblado": "Palala O Espinal",
+      "municipio": "Camotán",
+      "lat": 14.849003,
+      "lon": -89.37364
+    },
+    {
+      "codigo_lugar": "camotan_palo_verde_i",
+      "lugar_poblado": "Palo Verde I",
+      "municipio": "Camotán",
+      "lat": 14.847283,
+      "lon": -89.34281
+    },
+    {
+      "codigo_lugar": "camotan_pashapa",
+      "lugar_poblado": "Pashapa",
+      "municipio": "Camotán",
+      "lat": 14.83212,
+      "lon": -89.2922
+    },
+    {
+      "codigo_lugar": "camotan_pena_blanca",
+      "lugar_poblado": "Peña Blanca",
+      "municipio": "Camotán",
+      "lat": 14.795974,
+      "lon": -89.30058
+    },
+    {
+      "codigo_lugar": "camotan_petenta",
+      "lugar_poblado": "Petenta",
+      "municipio": "Camotán",
+      "lat": 14.828402,
+      "lon": -89.32615
+    },
+    {
+      "codigo_lugar": "camotan_piedra_de_fuego",
+      "lugar_poblado": "Piedra De Fuego",
+      "municipio": "Camotán",
+      "lat": 14.872339,
+      "lon": -89.33026
+    },
+    {
+      "codigo_lugar": "camotan_pitahaya",
+      "lugar_poblado": "Pitahaya",
+      "municipio": "Camotán",
+      "lat": 14.832506,
+      "lon": -89.33561
+    },
+    {
+      "codigo_lugar": "camotan_plan_del_jocote",
+      "lugar_poblado": "Plan Del Jocote",
+      "municipio": "Camotán",
+      "lat": 14.823465,
+      "lon": -89.23026
+    },
+    {
+      "codigo_lugar": "camotan_portezuelo",
+      "lugar_poblado": "Portezuelo",
+      "municipio": "Camotán",
+      "lat": 14.82704,
+      "lon": -89.28531
+    },
+    {
+      "codigo_lugar": "camotan_quebracho",
+      "lugar_poblado": "Quebracho",
+      "municipio": "Camotán",
+      "lat": 14.807306,
+      "lon": -89.2292
+    },
+    {
+      "codigo_lugar": "camotan_la_quesera",
+      "lugar_poblado": "La Quesera",
+      "municipio": "Camotán",
+      "lat": 14.857211,
+      "lon": -89.29098
+    },
+    {
+      "codigo_lugar": "camotan_roblarcito",
+      "lugar_poblado": "Roblarcito",
+      "municipio": "Camotán",
+      "lat": 14.848516,
+      "lon": -89.24443
+    },
+    {
+      "codigo_lugar": "camotan_roblarcito_2",
+      "lugar_poblado": "Roblarcito",
+      "municipio": "Camotán",
+      "lat": 14.848516,
+      "lon": -89.24443
+    },
+    {
+      "codigo_lugar": "camotan_rodeo",
+      "lugar_poblado": "Rodeo",
+      "municipio": "Camotán",
+      "lat": 14.845887,
+      "lon": -89.27458
+    },
+    {
+      "codigo_lugar": "camotan_san_antonio",
+      "lugar_poblado": "San Antonio",
+      "municipio": "Camotán",
+      "lat": 14.87334,
+      "lon": -89.26431
+    },
+    {
+      "codigo_lugar": "camotan_sesesmilito",
+      "lugar_poblado": "Sesesmilito",
+      "municipio": "Camotán",
+      "lat": 14.928804,
+      "lon": -89.20496
+    },
+    {
+      "codigo_lugar": "camotan_shalagua_centro",
+      "lugar_poblado": "Shalagua Centro",
+      "municipio": "Camotán",
+      "lat": 14.793111,
+      "lon": -89.23956
+    },
+    {
+      "codigo_lugar": "camotan_shupa_centro",
+      "lugar_poblado": "Shupa Centro",
+      "municipio": "Camotán",
+      "lat": 14.867325,
+      "lon": -89.28738
+    },
+    {
+      "codigo_lugar": "camotan_socotoco",
+      "lugar_poblado": "Socotoco",
+      "municipio": "Camotán",
+      "lat": 14.832688,
+      "lon": -89.27735
+    },
+    {
+      "codigo_lugar": "camotan_tachoche_sector_i",
+      "lugar_poblado": "Tachoche Sector I",
+      "municipio": "Camotán",
+      "lat": 14.936937,
+      "lon": -89.22786
+    },
+    {
+      "codigo_lugar": "camotan_tajun",
+      "lugar_poblado": "Tajun",
+      "municipio": "Camotán",
+      "lat": 14.85745,
+      "lon": -89.25901
+    },
+    {
+      "codigo_lugar": "camotan_talco",
+      "lugar_poblado": "Talco",
+      "municipio": "Camotán",
+      "lat": 14.810633,
+      "lon": -89.33556
+    },
+    {
+      "codigo_lugar": "camotan_tapuan",
+      "lugar_poblado": "TapuaN",
+      "municipio": "Camotán",
+      "lat": 14.836569,
+      "lon": -89.37503
+    },
+    {
+      "codigo_lugar": "camotan_tierra_blanca",
+      "lugar_poblado": "Tierra Blanca",
+      "municipio": "Camotán",
+      "lat": 14.810115,
+      "lon": -89.34701
+    },
+    {
+      "codigo_lugar": "camotan_tierra_blanca_2",
+      "lugar_poblado": "Tierra Blanca",
+      "municipio": "Camotán",
+      "lat": 14.810115,
+      "lon": -89.34701
+    },
+    {
+      "codigo_lugar": "camotan_tizamarte",
+      "lugar_poblado": "Tizamarte",
+      "municipio": "Camotán",
+      "lat": 14.914872,
+      "lon": -89.22842
+    },
+    {
+      "codigo_lugar": "camotan_tisipe",
+      "lugar_poblado": "Tisipe",
+      "municipio": "Camotán",
+      "lat": 14.819729,
+      "lon": -89.34577
+    },
+    {
+      "codigo_lugar": "camotan_toma_de_agua",
+      "lugar_poblado": "Toma De Agua",
+      "municipio": "Camotán",
+      "lat": 14.88761,
+      "lon": -89.28074
+    },
+    {
+      "codigo_lugar": "camotan_el_tular",
+      "lugar_poblado": "El Tular",
+      "municipio": "Camotán",
+      "lat": 14.811543,
+      "lon": -89.27238
+    },
+    {
+      "codigo_lugar": "camotan_ushurja",
+      "lugar_poblado": "Ushurja",
+      "municipio": "Camotán",
+      "lat": 14.853279,
+      "lon": -89.30269
+    },
+    {
+      "codigo_lugar": "camotan_usha",
+      "lugar_poblado": "Usha",
+      "municipio": "Camotán",
+      "lat": 14.839579,
+      "lon": -89.36371
+    },
+    {
+      "codigo_lugar": "camotan_el_volcan_centro",
+      "lugar_poblado": "El Volcan Centro",
+      "municipio": "Camotán",
+      "lat": 14.884693,
+      "lon": -89.33947
+    },
+    {
+      "codigo_lugar": "camotan_barbasco",
+      "lugar_poblado": "Barbasco",
+      "municipio": "Camotán",
+      "lat": 14.940768,
+      "lon": -89.22477
+    },
+    {
+      "codigo_lugar": "camotan_calvario",
+      "lugar_poblado": "Calvario",
+      "municipio": "Camotán",
+      "lat": 14.820659,
+      "lon": -89.37061
+    },
+    {
+      "codigo_lugar": "camotan_el_cementerio",
+      "lugar_poblado": "El Cementerio",
+      "municipio": "Camotán",
+      "lat": 14.818097,
+      "lon": -89.37767
+    },
+    {
+      "codigo_lugar": "camotan_la_barrera",
+      "lugar_poblado": "La Barrera",
+      "municipio": "Camotán",
+      "lat": 14.82211,
+      "lon": -89.36841
+    },
+    {
+      "codigo_lugar": "camotan_las_brisas",
+      "lugar_poblado": "Las Brisas",
+      "municipio": "Camotán",
+      "lat": 14.816345,
+      "lon": -89.37201
+    },
+    {
+      "codigo_lugar": "camotan_barrio_nuevo",
+      "lugar_poblado": "Barrio Nuevo",
+      "municipio": "Camotán",
+      "lat": 14.789508,
+      "lon": -89.24527
+    },
+    {
+      "codigo_lugar": "camotan_tempizque",
+      "lugar_poblado": "Tempizque",
+      "municipio": "Camotán",
+      "lat": 14.81531,
+      "lon": -89.37399
+    },
+    {
+      "codigo_lugar": "camotan_calichal",
+      "lugar_poblado": "Calichal",
+      "municipio": "Camotán",
+      "lat": 14.899326,
+      "lon": -89.2586
+    },
+    {
+      "codigo_lugar": "camotan_caparroza",
+      "lugar_poblado": "Caparroza",
+      "municipio": "Camotán",
+      "lat": 14.892698,
+      "lon": -89.27361
+    },
+    {
+      "codigo_lugar": "camotan_cementerio",
+      "lugar_poblado": "Cementerio",
+      "municipio": "Camotán",
+      "lat": 14.849549,
+      "lon": -89.26616
+    },
+    {
+      "codigo_lugar": "camotan_chaguiton",
+      "lugar_poblado": "Chaguiton",
+      "municipio": "Camotán",
+      "lat": 14.807431,
+      "lon": -89.32894
+    },
+    {
+      "codigo_lugar": "camotan_shalom",
+      "lugar_poblado": "Shalom",
+      "municipio": "Camotán",
+      "lat": 14.817468,
+      "lon": -89.37365
+    },
+    {
+      "codigo_lugar": "camotan_crucitas",
+      "lugar_poblado": "Crucitas",
+      "municipio": "Camotán",
+      "lat": 14.81486,
+      "lon": -89.35324
+    },
+    {
+      "codigo_lugar": "camotan_descombro",
+      "lugar_poblado": "Descombro",
+      "municipio": "Camotán",
+      "lat": 14.854272,
+      "lon": -89.33431
+    },
+    {
+      "codigo_lugar": "camotan_el_barrial",
+      "lugar_poblado": "El Barrial",
+      "municipio": "Camotán",
+      "lat": 14.801629,
+      "lon": -89.21328
+    },
+    {
+      "codigo_lugar": "camotan_el_bordo",
+      "lugar_poblado": "El Bordo",
+      "municipio": "Camotán",
+      "lat": 14.863293,
+      "lon": -89.27444
+    },
+    {
+      "codigo_lugar": "camotan_el_bordo_2",
+      "lugar_poblado": "El Bordo",
+      "municipio": "Camotán",
+      "lat": 14.863293,
+      "lon": -89.27444
+    },
+    {
+      "codigo_lugar": "camotan_el_cedral",
+      "lugar_poblado": "El Cedral",
+      "municipio": "Camotán",
+      "lat": 14.875017,
+      "lon": -89.33375
+    },
+    {
+      "codigo_lugar": "camotan_el_cementerio_2",
+      "lugar_poblado": "El Cementerio",
+      "municipio": "Camotán",
+      "lat": 14.818097,
+      "lon": -89.37767
+    },
+    {
+      "codigo_lugar": "camotan_el_centro",
+      "lugar_poblado": "El Centro",
+      "municipio": "Camotán",
+      "lat": 14.815181,
+      "lon": -89.2796
+    },
+    {
+      "codigo_lugar": "camotan_el_chorro_2",
+      "lugar_poblado": "El Chorro",
+      "municipio": "Camotán",
+      "lat": 14.80632,
+      "lon": -89.36836
+    },
+    {
+      "codigo_lugar": "camotan_el_clavelito",
+      "lugar_poblado": "El Clavelito",
+      "municipio": "Camotán",
+      "lat": 14.796776,
+      "lon": -89.21753
+    },
+    {
+      "codigo_lugar": "camotan_el_cruce",
+      "lugar_poblado": "El Cruce",
+      "municipio": "Camotán",
+      "lat": 14.868857,
+      "lon": -89.2677
+    },
+    {
+      "codigo_lugar": "camotan_el_limon",
+      "lugar_poblado": "El Limon",
+      "municipio": "Camotán",
+      "lat": 14.807264,
+      "lon": -89.30004
+    },
+    {
+      "codigo_lugar": "camotan_el_miradero",
+      "lugar_poblado": "El Miradero",
+      "municipio": "Camotán",
+      "lat": 14.82022,
+      "lon": -89.25301
+    },
+    {
+      "codigo_lugar": "camotan_el_palmar",
+      "lugar_poblado": "El Palmar",
+      "municipio": "Camotán",
+      "lat": 14.82471,
+      "lon": -89.25788
+    },
+    {
+      "codigo_lugar": "camotan_el_plan_shalagua",
+      "lugar_poblado": "El Plan Shalagua",
+      "municipio": "Camotán",
+      "lat": 14.791043,
+      "lon": -89.25046
+    },
+    {
+      "codigo_lugar": "camotan_el_porvenir",
+      "lugar_poblado": "El Porvenir",
+      "municipio": "Camotán",
+      "lat": 14.919066,
+      "lon": -89.22206
+    },
+    {
+      "codigo_lugar": "camotan_el_roblon",
+      "lugar_poblado": "El Roblon",
+      "municipio": "Camotán",
+      "lat": 14.904315,
+      "lon": -89.22496
+    },
+    {
+      "codigo_lugar": "camotan_filincas",
+      "lugar_poblado": "Filincas",
+      "municipio": "Camotán",
+      "lat": 14.817832,
+      "lon": -89.23351
+    },
+    {
+      "codigo_lugar": "camotan_guapinol",
+      "lugar_poblado": "Guapinol",
+      "municipio": "Camotán",
+      "lat": 14.875661,
+      "lon": -89.24945
+    },
+    {
+      "codigo_lugar": "camotan_la_cruz",
+      "lugar_poblado": "La Cruz",
+      "municipio": "Camotán",
+      "lat": 14.824417,
+      "lon": -89.27029
+    },
+    {
+      "codigo_lugar": "camotan_la_laguna",
+      "lugar_poblado": "La Laguna",
+      "municipio": "Camotán",
+      "lat": 14.893945,
+      "lon": -89.34482
+    },
+    {
+      "codigo_lugar": "camotan_la_loma_2",
+      "lugar_poblado": "La Loma",
+      "municipio": "Camotán",
+      "lat": 14.825907,
+      "lon": -89.22092
+    },
+    {
+      "codigo_lugar": "camotan_la_nueva_esperanza",
+      "lugar_poblado": "La Nueva Esperanza",
+      "municipio": "Camotán",
+      "lat": 14.903009,
+      "lon": -89.23702
+    },
+    {
+      "codigo_lugar": "camotan_la_nueva_esperanza_2",
+      "lugar_poblado": "La Nueva Esperanza",
+      "municipio": "Camotán",
+      "lat": 14.903009,
+      "lon": -89.23702
+    },
+    {
+      "codigo_lugar": "camotan_la_reforma",
+      "lugar_poblado": "La Reforma",
+      "municipio": "Camotán",
+      "lat": 14.910022,
+      "lon": -89.21673
+    },
+    {
+      "codigo_lugar": "camotan_lantiquin_centro",
+      "lugar_poblado": "Lantiquin Centro",
+      "municipio": "Camotán",
+      "lat": 14.803084,
+      "lon": -89.3658
+    },
+    {
+      "codigo_lugar": "camotan_las_cruces",
+      "lugar_poblado": "Las Cruces",
+      "municipio": "Camotán",
+      "lat": 14.82857,
+      "lon": -89.31912
+    },
+    {
+      "codigo_lugar": "camotan_las_tinajas",
+      "lugar_poblado": "Las Tinajas",
+      "municipio": "Camotán",
+      "lat": 14.804538,
+      "lon": -89.26102
+    },
+    {
+      "codigo_lugar": "camotan_los_hermanos",
+      "lugar_poblado": "Los Hermanos",
+      "municipio": "Camotán",
+      "lat": 14.890167,
+      "lon": -89.34673
+    },
+    {
+      "codigo_lugar": "camotan_los_socorro",
+      "lugar_poblado": "Los Socorro",
+      "municipio": "Camotán",
+      "lat": 14.814145,
+      "lon": -89.34875
+    },
+    {
+      "codigo_lugar": "camotan_manchame",
+      "lugar_poblado": "Manchame",
+      "municipio": "Camotán",
+      "lat": 14.853819,
+      "lon": -89.24492
+    },
+    {
+      "codigo_lugar": "camotan_nearar_cumbre",
+      "lugar_poblado": "Nearar Cumbre",
+      "municipio": "Camotán",
+      "lat": 14.831078,
+      "lon": -89.30577
+    },
+    {
+      "codigo_lugar": "camotan_ojo_de_agua_2",
+      "lugar_poblado": "Ojo De Agua",
+      "municipio": "Camotán",
+      "lat": 14.791489,
+      "lon": -89.26021
+    },
+    {
+      "codigo_lugar": "camotan_palmarcito",
+      "lugar_poblado": "Palmarcito",
+      "municipio": "Camotán",
+      "lat": 14.821482,
+      "lon": -89.32564
+    },
+    {
+      "codigo_lugar": "camotan_pinalito",
+      "lugar_poblado": "Pinalito",
+      "municipio": "Camotán",
+      "lat": 14.878951,
+      "lon": -89.3524
+    },
+    {
+      "codigo_lugar": "camotan_pinalito_2",
+      "lugar_poblado": "Pinalito",
+      "municipio": "Camotán",
+      "lat": 14.878951,
+      "lon": -89.3524
+    },
+    {
+      "codigo_lugar": "camotan_plan_centro",
+      "lugar_poblado": "Plan Centro",
+      "municipio": "Camotán",
+      "lat": 14.796805,
+      "lon": -89.33984
+    },
+    {
+      "codigo_lugar": "camotan_plan_marimba",
+      "lugar_poblado": "Plan Marimba",
+      "municipio": "Camotán",
+      "lat": 14.80035,
+      "lon": -89.34331
+    },
+    {
+      "codigo_lugar": "camotan_quebrada_grande",
+      "lugar_poblado": "Quebrada Grande",
+      "municipio": "Camotán",
+      "lat": 14.847624,
+      "lon": -89.31051
+    },
+    {
+      "codigo_lugar": "camotan_sector_ii",
+      "lugar_poblado": "Sector Ii",
+      "municipio": "Camotán",
+      "lat": 14.937978,
+      "lon": -89.23148
+    },
+    {
+      "codigo_lugar": "camotan_sector_iii",
+      "lugar_poblado": "Sector Iii",
+      "municipio": "Camotán",
+      "lat": 14.933212,
+      "lon": -89.22595
+    },
+    {
+      "codigo_lugar": "camotan_zarzal",
+      "lugar_poblado": "Zarzal",
+      "municipio": "Camotán",
+      "lat": 14.911572,
+      "lon": -89.19547
+    },
+    {
+      "codigo_lugar": "camotan_zarzal_2",
+      "lugar_poblado": "Zarzal",
+      "municipio": "Camotán",
+      "lat": 14.911572,
+      "lon": -89.19547
+    },
+    {
+      "codigo_lugar": "camotan_pajco_barrio_nuevo",
+      "lugar_poblado": "Pajco, Barrio Nuevo",
+      "municipio": "Camotán",
+      "lat": 14.836823,
+      "lon": -89.35862
+    },
+    {
+      "codigo_lugar": "olopa_olopa",
+      "lugar_poblado": "Olopa",
+      "municipio": "Olopa",
+      "lat": 14.690299,
+      "lon": -89.34933
+    },
+    {
+      "codigo_lugar": "olopa_agua_blanca",
+      "lugar_poblado": "Agua Blanca",
+      "municipio": "Olopa",
+      "lat": 14.744624,
+      "lon": -89.3335
+    },
+    {
+      "codigo_lugar": "olopa_el_cementerio",
+      "lugar_poblado": "El Cementerio",
+      "municipio": "Olopa",
+      "lat": 14.690021,
+      "lon": -89.33874
+    },
+    {
+      "codigo_lugar": "olopa_los_planes",
+      "lugar_poblado": "Los Planes",
+      "municipio": "Olopa",
+      "lat": 14.725228,
+      "lon": -89.30456
+    },
+    {
+      "codigo_lugar": "olopa_el_chucte",
+      "lugar_poblado": "El Chucte",
+      "municipio": "Olopa",
+      "lat": 14.696124,
+      "lon": -89.32239
+    },
+    {
+      "codigo_lugar": "olopa_el_cerron",
+      "lugar_poblado": "El Cerron",
+      "municipio": "Olopa",
+      "lat": 14.710645,
+      "lon": -89.28635
+    },
+    {
+      "codigo_lugar": "olopa_el_paternito",
+      "lugar_poblado": "El Paternito",
+      "municipio": "Olopa",
+      "lat": 14.708205,
+      "lon": -89.27058
+    },
+    {
+      "codigo_lugar": "olopa_el_amatillo",
+      "lugar_poblado": "El Amatillo",
+      "municipio": "Olopa",
+      "lat": 14.737844,
+      "lon": -89.24108
+    },
+    {
+      "codigo_lugar": "olopa_el_carrizal",
+      "lugar_poblado": "El Carrizal",
+      "municipio": "Olopa",
+      "lat": 14.717272,
+      "lon": -89.25026
+    },
+    {
+      "codigo_lugar": "olopa_el_guayabo",
+      "lugar_poblado": "El Guayabo",
+      "municipio": "Olopa",
+      "lat": 14.699175,
+      "lon": -89.37731
+    },
+    {
+      "codigo_lugar": "olopa_el_palmar_y_el_guayabal",
+      "lugar_poblado": "El Palmar Y El Guayabal",
+      "municipio": "Olopa",
+      "lat": 14.668561,
+      "lon": -89.34039
+    },
+    {
+      "codigo_lugar": "olopa_el_oratorio",
+      "lugar_poblado": "El Oratorio",
+      "municipio": "Olopa",
+      "lat": 14.736768,
+      "lon": -89.34851
+    },
+    {
+      "codigo_lugar": "olopa_el_roblarcito",
+      "lugar_poblado": "El Roblarcito",
+      "municipio": "Olopa",
+      "lat": 14.731577,
+      "lon": -89.33832
+    },
+    {
+      "codigo_lugar": "olopa_el_rodeo",
+      "lugar_poblado": "El Rodeo",
+      "municipio": "Olopa",
+      "lat": 14.665697,
+      "lon": -89.29019
+    },
+    {
+      "codigo_lugar": "olopa_el_tablon_de_cayur",
+      "lugar_poblado": "El Tablon De Cayur",
+      "municipio": "Olopa",
+      "lat": 14.71418,
+      "lon": -89.31858
+    },
+    {
+      "codigo_lugar": "olopa_la_cumbre",
+      "lugar_poblado": "La Cumbre",
+      "municipio": "Olopa",
+      "lat": 14.689688,
+      "lon": -89.28474
+    },
+    {
+      "codigo_lugar": "olopa_tuticopote_la_laguna",
+      "lugar_poblado": "Tuticopote La Laguna",
+      "municipio": "Olopa",
+      "lat": 14.724209,
+      "lon": -89.3338
+    },
+    {
+      "codigo_lugar": "olopa_la_prensa",
+      "lugar_poblado": "La Prensa",
+      "municipio": "Olopa",
+      "lat": 14.728254,
+      "lon": -89.26594
+    },
+    {
+      "codigo_lugar": "olopa_laguna_de_cayur",
+      "lugar_poblado": "Laguna De Cayur",
+      "municipio": "Olopa",
+      "lat": 14.70598,
+      "lon": -89.30542
+    },
+    {
+      "codigo_lugar": "olopa_las_palmas",
+      "lugar_poblado": "Las Palmas",
+      "municipio": "Olopa",
+      "lat": 14.680226,
+      "lon": -89.3109
+    },
+    {
+      "codigo_lugar": "olopa_las_pomas",
+      "lugar_poblado": "Las Pomas",
+      "municipio": "Olopa",
+      "lat": 14.657413,
+      "lon": -89.32571
+    },
+    {
+      "codigo_lugar": "olopa_los_ramirez",
+      "lugar_poblado": "Los Ramirez",
+      "municipio": "Olopa",
+      "lat": 14.655881,
+      "lon": -89.30423
+    },
+    {
+      "codigo_lugar": "olopa_nochan",
+      "lugar_poblado": "Nochan",
+      "municipio": "Olopa",
+      "lat": 14.679734,
+      "lon": -89.36759
+    },
+    {
+      "codigo_lugar": "olopa_piedra_de_amolar",
+      "lugar_poblado": "Piedra De Amolar",
+      "municipio": "Olopa",
+      "lat": 14.700761,
+      "lon": -89.30097
+    },
+    {
+      "codigo_lugar": "olopa_santa_maria",
+      "lugar_poblado": "Santa Maria",
+      "municipio": "Olopa",
+      "lat": 14.658491,
+      "lon": -89.35578
+    },
+    {
+      "codigo_lugar": "olopa_talquetzal",
+      "lugar_poblado": "Talquetzal",
+      "municipio": "Olopa",
+      "lat": 14.702561,
+      "lon": -89.34045
+    },
+    {
+      "codigo_lugar": "olopa_tituque",
+      "lugar_poblado": "Tituque",
+      "municipio": "Olopa",
+      "lat": 14.718058,
+      "lon": -89.3616
+    },
+    {
+      "codigo_lugar": "olopa_valle_nuevo",
+      "lugar_poblado": "Valle Nuevo",
+      "municipio": "Olopa",
+      "lat": 14.674314,
+      "lon": -89.29567
+    },
+    {
+      "codigo_lugar": "olopa_el_balastre",
+      "lugar_poblado": "El Balastre",
+      "municipio": "Olopa",
+      "lat": 14.719256,
+      "lon": -89.28374
+    },
+    {
+      "codigo_lugar": "olopa_el_bendito",
+      "lugar_poblado": "El Bendito",
+      "municipio": "Olopa",
+      "lat": 14.729777,
+      "lon": -89.34787
+    },
+    {
+      "codigo_lugar": "olopa_el_cintal",
+      "lugar_poblado": "El Cintal",
+      "municipio": "Olopa",
+      "lat": 14.688571,
+      "lon": -89.31855
+    },
+    {
+      "codigo_lugar": "olopa_el_tercero",
+      "lugar_poblado": "El Tercero",
+      "municipio": "Olopa",
+      "lat": 14.703366,
+      "lon": -89.38441
+    },
+    {
+      "codigo_lugar": "olopa_la_casona",
+      "lugar_poblado": "La Casona",
+      "municipio": "Olopa",
+      "lat": 14.694706,
+      "lon": -89.36896
+    },
+    {
+      "codigo_lugar": "olopa_la_consolacion",
+      "lugar_poblado": "La Consolacion",
+      "municipio": "Olopa",
+      "lat": 14.726939,
+      "lon": -89.23904
+    },
+    {
+      "codigo_lugar": "olopa_la_cumbrita",
+      "lugar_poblado": "La Cumbrita",
+      "municipio": "Olopa",
+      "lat": 14.694608,
+      "lon": -89.28939
+    },
+    {
+      "codigo_lugar": "olopa_la_prensa_abajo",
+      "lugar_poblado": "La Prensa Abajo",
+      "municipio": "Olopa",
+      "lat": 14.728109,
+      "lon": -89.257
+    },
+    {
+      "codigo_lugar": "olopa_la_prensa_arriba",
+      "lugar_poblado": "La Prensa Arriba",
+      "municipio": "Olopa",
+      "lat": 14.724917,
+      "lon": -89.27421
+    },
+    {
+      "codigo_lugar": "olopa_las_brisas",
+      "lugar_poblado": "Las Brisas",
+      "municipio": "Olopa",
+      "lat": 14.712163,
+      "lon": -89.31152
+    },
+    {
+      "codigo_lugar": "olopa_las_flores",
+      "lugar_poblado": "Las Flores",
+      "municipio": "Olopa",
+      "lat": 14.718246,
+      "lon": -89.32249
+    },
+    {
+      "codigo_lugar": "olopa_las_pitahayas",
+      "lugar_poblado": "Las Pitahayas",
+      "municipio": "Olopa",
+      "lat": 14.686777,
+      "lon": -89.30485
+    },
+    {
+      "codigo_lugar": "olopa_los_cafetales",
+      "lugar_poblado": "Los Cafetales",
+      "municipio": "Olopa",
+      "lat": 14.717676,
+      "lon": -89.37046
+    },
+    {
+      "codigo_lugar": "olopa_los_garcia",
+      "lugar_poblado": "Los Garcia",
+      "municipio": "Olopa",
+      "lat": 14.706069,
+      "lon": -89.35458
+    },
+    {
+      "codigo_lugar": "olopa_los_gutierrez",
+      "lugar_poblado": "Los Gutierrez",
+      "municipio": "Olopa",
+      "lat": 14.714577,
+      "lon": -89.30186
+    },
+    {
+      "codigo_lugar": "olopa_los_lirios",
+      "lugar_poblado": "Los Lirios",
+      "municipio": "Olopa",
+      "lat": 14.682987,
+      "lon": -89.28461
+    },
+    {
+      "codigo_lugar": "olopa_los_pinos",
+      "lugar_poblado": "Los Pinos",
+      "municipio": "Olopa",
+      "lat": 14.717151,
+      "lon": -89.31295
+    },
+    {
+      "codigo_lugar": "olopa_los_ramos",
+      "lugar_poblado": "Los Ramos",
+      "municipio": "Olopa",
+      "lat": 14.700477,
+      "lon": -89.33143
+    },
+    {
+      "codigo_lugar": "olopa_los_segundos",
+      "lugar_poblado": "Los Segundos",
+      "municipio": "Olopa",
+      "lat": 14.653369,
+      "lon": -89.36234
+    },
+    {
+      "codigo_lugar": "olopa_los_vasquez",
+      "lugar_poblado": "Los Vasquez",
+      "municipio": "Olopa",
+      "lat": 14.686296,
+      "lon": -89.2795
+    },
+    {
+      "codigo_lugar": "olopa_pie_de_la_cumbre",
+      "lugar_poblado": "Pie De La Cumbre",
+      "municipio": "Olopa",
+      "lat": 14.692957,
+      "lon": -89.29636
+    },
+    {
+      "codigo_lugar": "olopa_piedra_picada",
+      "lugar_poblado": "Piedra Picada",
+      "municipio": "Olopa",
+      "lat": 14.727941,
+      "lon": -89.32861
+    },
+    {
+      "codigo_lugar": "olopa_puente_la_avanzada",
+      "lugar_poblado": "Puente La Avanzada",
+      "municipio": "Olopa",
+      "lat": 14.699077,
+      "lon": -89.31046
+    },
+    {
+      "codigo_lugar": "olopa_tituque_abajo",
+      "lugar_poblado": "Tituque Abajo",
+      "municipio": "Olopa",
+      "lat": 14.727843,
+      "lon": -89.36132
+    },
+    {
+      "codigo_lugar": "olopa_toroja",
+      "lugar_poblado": "Toroja",
+      "municipio": "Olopa",
+      "lat": 14.722063,
+      "lon": -89.35078
+    },
+    {
+      "codigo_lugar": "olopa_tuticopote_abajo",
+      "lugar_poblado": "Tuticopote Abajo",
+      "municipio": "Olopa",
+      "lat": 14.724744,
+      "lon": -89.34382
+    },
+    {
+      "codigo_lugar": "olopa_tuticopote_centro",
+      "lugar_poblado": "Tuticopote Centro",
+      "municipio": "Olopa",
+      "lat": 14.717588,
+      "lon": -89.33983
+    },
+    {
+      "codigo_lugar": "esquipulas_esquipulas",
+      "lugar_poblado": "Esquipulas",
+      "municipio": "Esquipulas",
+      "lat": 14.565573,
+      "lon": -89.35128
+    },
+    {
+      "codigo_lugar": "esquipulas_agua_caliente",
+      "lugar_poblado": "Agua Caliente",
+      "municipio": "Esquipulas",
+      "lat": 14.541894,
+      "lon": -89.28444
+    },
+    {
+      "codigo_lugar": "esquipulas_agua_zarca",
+      "lugar_poblado": "Agua Zarca",
+      "municipio": "Esquipulas",
+      "lat": 14.587607,
+      "lon": -89.2799
+    },
+    {
+      "codigo_lugar": "esquipulas_atulapa",
+      "lugar_poblado": "Atulapa",
+      "municipio": "Esquipulas",
+      "lat": 14.567787,
+      "lon": -89.31274
+    },
+    {
+      "codigo_lugar": "esquipulas_el_barrial",
+      "lugar_poblado": "El Barrial",
+      "municipio": "Esquipulas",
+      "lat": 14.524712,
+      "lon": -89.29999
+    },
+    {
+      "codigo_lugar": "esquipulas_belen",
+      "lugar_poblado": "Belen",
+      "municipio": "Esquipulas",
+      "lat": 14.598428,
+      "lon": -89.35801
+    },
+    {
+      "codigo_lugar": "esquipulas_bojorquez",
+      "lugar_poblado": "Bojorquez",
+      "municipio": "Esquipulas",
+      "lat": 14.577336,
+      "lon": -89.28168
+    },
+    {
+      "codigo_lugar": "esquipulas_boyero",
+      "lugar_poblado": "Boyero ",
+      "municipio": "Esquipulas",
+      "lat": 14.589471,
+      "lon": -89.31645
+    },
+    {
+      "codigo_lugar": "esquipulas_canas",
+      "lugar_poblado": "Cañas",
+      "municipio": "Esquipulas",
+      "lat": 14.632794,
+      "lon": -89.24592
+    },
+    {
+      "codigo_lugar": "esquipulas_cafetales",
+      "lugar_poblado": "Cafetales",
+      "municipio": "Esquipulas",
+      "lat": 14.626864,
+      "lon": -89.16952
+    },
+    {
+      "codigo_lugar": "esquipulas_canada_del_pino",
+      "lugar_poblado": "Cañada Del Pino",
+      "municipio": "Esquipulas",
+      "lat": 14.735973,
+      "lon": -89.18496
+    },
+    {
+      "codigo_lugar": "esquipulas_carboneras",
+      "lugar_poblado": "Carboneras",
+      "municipio": "Esquipulas",
+      "lat": 14.73515,
+      "lon": -89.2234
+    },
+    {
+      "codigo_lugar": "esquipulas_carrizal",
+      "lugar_poblado": "Carrizal",
+      "municipio": "Esquipulas",
+      "lat": 14.647405,
+      "lon": -89.15881
+    },
+    {
+      "codigo_lugar": "esquipulas_la_ceibita",
+      "lugar_poblado": "La Ceibita",
+      "municipio": "Esquipulas",
+      "lat": 14.619527,
+      "lon": -89.27124
+    },
+    {
+      "codigo_lugar": "esquipulas_cerron",
+      "lugar_poblado": "Cerron",
+      "municipio": "Esquipulas",
+      "lat": 14.585146,
+      "lon": -89.25857
+    },
+    {
+      "codigo_lugar": "esquipulas_chanmagua",
+      "lugar_poblado": "Chanmagua",
+      "municipio": "Esquipulas",
+      "lat": 14.626648,
+      "lon": -89.20282
+    },
+    {
+      "codigo_lugar": "esquipulas_chiramay",
+      "lugar_poblado": "Chiramay",
+      "municipio": "Esquipulas",
+      "lat": 14.609898,
+      "lon": -89.36501
+    },
+    {
+      "codigo_lugar": "esquipulas_ciracil",
+      "lugar_poblado": "Ciracil",
+      "municipio": "Esquipulas",
+      "lat": 14.578124,
+      "lon": -89.36251
+    },
+    {
+      "codigo_lugar": "esquipulas_colinas_de_montecristo",
+      "lugar_poblado": "Colinas De Montecristo",
+      "municipio": "Esquipulas",
+      "lat": 14.558833,
+      "lon": -89.33588
+    },
+    {
+      "codigo_lugar": "esquipulas_cruz_alta",
+      "lugar_poblado": "Cruz Alta",
+      "municipio": "Esquipulas",
+      "lat": 14.5625,
+      "lon": -89.38786
+    },
+    {
+      "codigo_lugar": "esquipulas_cuesta_del_pedrero",
+      "lugar_poblado": "Cuesta Del Pedrero",
+      "municipio": "Esquipulas",
+      "lat": 14.578938,
+      "lon": -89.19597
+    },
+    {
+      "codigo_lugar": "esquipulas_cuevitas",
+      "lugar_poblado": "Cuevitas",
+      "municipio": "Esquipulas",
+      "lat": 14.631957,
+      "lon": -89.29896
+    },
+    {
+      "codigo_lugar": "esquipulas_cuevitas_2",
+      "lugar_poblado": "Cuevitas",
+      "municipio": "Esquipulas",
+      "lat": 14.631957,
+      "lon": -89.29896
+    },
+    {
+      "codigo_lugar": "esquipulas_carrunche",
+      "lugar_poblado": "Carrunche",
+      "municipio": "Esquipulas",
+      "lat": 14.548606,
+      "lon": -89.39188
+    },
+    {
+      "codigo_lugar": "esquipulas_el_duraznal",
+      "lugar_poblado": "El Duraznal",
+      "municipio": "Esquipulas",
+      "lat": 14.509238,
+      "lon": -89.36868
+    },
+    {
+      "codigo_lugar": "esquipulas_cerron_2",
+      "lugar_poblado": "Cerron",
+      "municipio": "Esquipulas",
+      "lat": 14.585146,
+      "lon": -89.25857
+    },
+    {
+      "codigo_lugar": "esquipulas_el_empedrado",
+      "lugar_poblado": "El Empedrado",
+      "municipio": "Esquipulas",
+      "lat": 14.62492,
+      "lon": -89.22057
+    },
+    {
+      "codigo_lugar": "esquipulas_encino",
+      "lugar_poblado": "Encino",
+      "municipio": "Esquipulas",
+      "lat": 14.634562,
+      "lon": -89.27353
+    },
+    {
+      "codigo_lugar": "esquipulas_el_jicaro",
+      "lugar_poblado": "El Jicaro",
+      "municipio": "Esquipulas",
+      "lat": 14.642853,
+      "lon": -89.23246
+    },
+    {
+      "codigo_lugar": "esquipulas_el_mojon",
+      "lugar_poblado": "El Mojon",
+      "municipio": "Esquipulas",
+      "lat": 14.707181,
+      "lon": -89.22478
+    },
+    {
+      "codigo_lugar": "esquipulas_el_tablon",
+      "lugar_poblado": "El Tablon",
+      "municipio": "Esquipulas",
+      "lat": 14.564595,
+      "lon": -89.29751
+    },
+    {
+      "codigo_lugar": "esquipulas_el_tablon_2",
+      "lugar_poblado": "El Tablon",
+      "municipio": "Esquipulas",
+      "lat": 14.564595,
+      "lon": -89.29751
+    },
+    {
+      "codigo_lugar": "esquipulas_el_zompopero",
+      "lugar_poblado": "El Zompopero",
+      "municipio": "Esquipulas",
+      "lat": 14.543539,
+      "lon": -89.29668
+    },
+    {
+      "codigo_lugar": "esquipulas_el_horno",
+      "lugar_poblado": "El Horno",
+      "municipio": "Esquipulas",
+      "lat": 14.746968,
+      "lon": -89.16891
+    },
+    {
+      "codigo_lugar": "esquipulas_entre_rios",
+      "lugar_poblado": "Entre Rios",
+      "municipio": "Esquipulas",
+      "lat": 14.591934,
+      "lon": -89.16733
+    },
+    {
+      "codigo_lugar": "esquipulas_la_fortuna",
+      "lugar_poblado": "La Fortuna",
+      "municipio": "Esquipulas",
+      "lat": 14.60959,
+      "lon": -89.25276
+    },
+    {
+      "codigo_lugar": "esquipulas_guayavito",
+      "lugar_poblado": "Guayavito",
+      "municipio": "Esquipulas",
+      "lat": 14.518313,
+      "lon": -89.31024
+    },
+    {
+      "codigo_lugar": "esquipulas_zapotalito",
+      "lugar_poblado": "Zapotalito",
+      "municipio": "Esquipulas",
+      "lat": 14.588208,
+      "lon": -89.21867
+    },
+    {
+      "codigo_lugar": "esquipulas_horcones",
+      "lugar_poblado": "Horcones",
+      "municipio": "Esquipulas",
+      "lat": 14.70104,
+      "lon": -89.23604
+    },
+    {
+      "codigo_lugar": "esquipulas_horno_de_vides",
+      "lugar_poblado": "Horno De Vides",
+      "municipio": "Esquipulas",
+      "lat": 14.590792,
+      "lon": -89.26865
+    },
+    {
+      "codigo_lugar": "esquipulas_el_incienso",
+      "lugar_poblado": "El Incienso",
+      "municipio": "Esquipulas",
+      "lat": 14.592823,
+      "lon": -89.234
+    },
+    {
+      "codigo_lugar": "esquipulas_jesus_y_maria",
+      "lugar_poblado": "Jesus Y Maria",
+      "municipio": "Esquipulas",
+      "lat": 14.564285,
+      "lon": -89.37049
+    },
+    {
+      "codigo_lugar": "esquipulas_el_jocotal",
+      "lugar_poblado": "El Jocotal",
+      "municipio": "Esquipulas",
+      "lat": 14.523716,
+      "lon": -89.34505
+    },
+    {
+      "codigo_lugar": "esquipulas_joyas_verdes",
+      "lugar_poblado": "Joyas Verdes",
+      "municipio": "Esquipulas",
+      "lat": 14.61021,
+      "lon": -89.26118
+    },
+    {
+      "codigo_lugar": "esquipulas_joyitas",
+      "lugar_poblado": "Joyitas",
+      "municipio": "Esquipulas",
+      "lat": 14.701923,
+      "lon": -89.14614
+    },
+    {
+      "codigo_lugar": "esquipulas_la_aradona",
+      "lugar_poblado": "La Aradona",
+      "municipio": "Esquipulas",
+      "lat": 14.60721,
+      "lon": -89.15855
+    },
+    {
+      "codigo_lugar": "esquipulas_la_brea",
+      "lugar_poblado": "La Brea",
+      "municipio": "Esquipulas",
+      "lat": 14.564177,
+      "lon": -89.25446
+    },
+    {
+      "codigo_lugar": "esquipulas_la_brea_arriba",
+      "lugar_poblado": "La Brea Arriba",
+      "municipio": "Esquipulas",
+      "lat": 14.577051,
+      "lon": -89.2503
+    },
+    {
+      "codigo_lugar": "esquipulas_la_canada",
+      "lugar_poblado": "La Cañada",
+      "municipio": "Esquipulas",
+      "lat": 14.725621,
+      "lon": -89.17069
+    },
+    {
+      "codigo_lugar": "esquipulas_la_cuestona",
+      "lugar_poblado": "La Cuestona",
+      "municipio": "Esquipulas",
+      "lat": 14.51943,
+      "lon": -89.35183
+    },
+    {
+      "codigo_lugar": "esquipulas_la_granadilla",
+      "lugar_poblado": "La Granadilla",
+      "municipio": "Esquipulas",
+      "lat": 14.489865,
+      "lon": -89.3346
+    },
+    {
+      "codigo_lugar": "esquipulas_lagunas",
+      "lugar_poblado": "Lagunas",
+      "municipio": "Esquipulas",
+      "lat": 14.656825,
+      "lon": -89.25714
+    },
+    {
+      "codigo_lugar": "esquipulas_la_ruda",
+      "lugar_poblado": "La Ruda",
+      "municipio": "Esquipulas",
+      "lat": 14.594986,
+      "lon": -89.36792
+    },
+    {
+      "codigo_lugar": "esquipulas_las_toreras",
+      "lugar_poblado": "Las Toreras",
+      "municipio": "Esquipulas",
+      "lat": 14.518699,
+      "lon": -89.33631
+    },
+    {
+      "codigo_lugar": "esquipulas_laguna_seca",
+      "lugar_poblado": "Laguna Seca",
+      "municipio": "Esquipulas",
+      "lat": 14.649956,
+      "lon": -89.19728
+    },
+    {
+      "codigo_lugar": "esquipulas_canoas",
+      "lugar_poblado": "Canoas",
+      "municipio": "Esquipulas",
+      "lat": 14.56314,
+      "lon": -89.2663
+    },
+    {
+      "codigo_lugar": "esquipulas_las_penas",
+      "lugar_poblado": "Las Peñas",
+      "municipio": "Esquipulas",
+      "lat": 14.608684,
+      "lon": -89.24176
+    },
+    {
+      "codigo_lugar": "esquipulas_las_pozas",
+      "lugar_poblado": "Las Pozas",
+      "municipio": "Esquipulas",
+      "lat": 14.619584,
+      "lon": -89.18665
+    },
+    {
+      "codigo_lugar": "esquipulas_las_sopas",
+      "lugar_poblado": "Las Sopas",
+      "municipio": "Esquipulas",
+      "lat": 14.657154,
+      "lon": -89.21211
+    },
+    {
+      "codigo_lugar": "esquipulas_el_limon",
+      "lugar_poblado": "El Limon",
+      "municipio": "Esquipulas",
+      "lat": 14.535162,
+      "lon": -89.34473
+    },
+    {
+      "codigo_lugar": "esquipulas_llano_de_los_toros",
+      "lugar_poblado": "Llano De Los Toros",
+      "municipio": "Esquipulas",
+      "lat": 14.652488,
+      "lon": -89.17855
+    },
+    {
+      "codigo_lugar": "esquipulas_llano_de_san_gaspar",
+      "lugar_poblado": "Llano De San Gaspar",
+      "municipio": "Esquipulas",
+      "lat": 14.733119,
+      "lon": -89.17028
+    },
+    {
+      "codigo_lugar": "esquipulas_llano_largo",
+      "lugar_poblado": "Llano Largo",
+      "municipio": "Esquipulas",
+      "lat": 14.616428,
+      "lon": -89.17532
+    },
+    {
+      "codigo_lugar": "esquipulas_loma_alta",
+      "lugar_poblado": "Loma Alta",
+      "municipio": "Esquipulas",
+      "lat": 14.623756,
+      "lon": -89.17892
+    },
+    {
+      "codigo_lugar": "esquipulas_loma_del_mango",
+      "lugar_poblado": "Loma Del Mango",
+      "municipio": "Esquipulas",
+      "lat": 14.716861,
+      "lon": -89.142
+    },
+    {
+      "codigo_lugar": "esquipulas_pericos",
+      "lugar_poblado": "Pericos",
+      "municipio": "Esquipulas",
+      "lat": 14.690573,
+      "lon": -89.16191
+    },
+    {
+      "codigo_lugar": "esquipulas_los_tecolotes",
+      "lugar_poblado": "Los Tecolotes",
+      "municipio": "Esquipulas",
+      "lat": 14.551297,
+      "lon": -89.35759
+    },
+    {
+      "codigo_lugar": "esquipulas_los_vados",
+      "lugar_poblado": "Los Vados",
+      "municipio": "Esquipulas",
+      "lat": 14.623313,
+      "lon": -89.34984
+    },
+    {
+      "codigo_lugar": "esquipulas_malcinga",
+      "lugar_poblado": "Malcinga",
+      "municipio": "Esquipulas",
+      "lat": 14.705526,
+      "lon": -89.19222
+    },
+    {
+      "codigo_lugar": "esquipulas_malcotal",
+      "lugar_poblado": "Malcotal",
+      "municipio": "Esquipulas",
+      "lat": 14.602643,
+      "lon": -89.19154
+    },
+    {
+      "codigo_lugar": "esquipulas_mirador",
+      "lugar_poblado": "Mirador",
+      "municipio": "Esquipulas",
+      "lat": 14.629088,
+      "lon": -89.28632
+    },
+    {
+      "codigo_lugar": "esquipulas_montecinas",
+      "lugar_poblado": "Montecinas",
+      "municipio": "Esquipulas",
+      "lat": 14.551264,
+      "lon": -89.31116
+    },
+    {
+      "codigo_lugar": "esquipulas_monteros",
+      "lugar_poblado": "Monteros",
+      "municipio": "Esquipulas",
+      "lat": 14.755433,
+      "lon": -89.17394
+    },
+    {
+      "codigo_lugar": "esquipulas_nuevo_san_jose_las_lagrimas",
+      "lugar_poblado": "Nuevo San Jose Las Lagrimas",
+      "municipio": "Esquipulas",
+      "lat": 14.779747,
+      "lon": -89.19091
+    },
+    {
+      "codigo_lugar": "esquipulas_olopita",
+      "lugar_poblado": "Olopita",
+      "municipio": "Esquipulas",
+      "lat": 14.603977,
+      "lon": -89.30141
+    },
+    {
+      "codigo_lugar": "esquipulas_el_palmar",
+      "lugar_poblado": "El Palmar",
+      "municipio": "Esquipulas",
+      "lat": 14.584141,
+      "lon": -89.24368
+    },
+    {
+      "codigo_lugar": "esquipulas_pasalja",
+      "lugar_poblado": "Pasalja",
+      "municipio": "Esquipulas",
+      "lat": 14.690668,
+      "lon": -89.17612
+    },
+    {
+      "codigo_lugar": "esquipulas_pedregal",
+      "lugar_poblado": "Pedregal",
+      "municipio": "Esquipulas",
+      "lat": 14.611574,
+      "lon": -89.19349
+    },
+    {
+      "codigo_lugar": "esquipulas_el_pesote",
+      "lugar_poblado": "El Pesote",
+      "municipio": "Esquipulas",
+      "lat": 14.600576,
+      "lon": -89.24883
+    },
+    {
+      "codigo_lugar": "esquipulas_piedra_de_amolar",
+      "lugar_poblado": "Piedra De Amolar",
+      "municipio": "Esquipulas",
+      "lat": 14.69717,
+      "lon": -89.26868
+    },
+    {
+      "codigo_lugar": "esquipulas_piedra_redonda",
+      "lugar_poblado": "Piedra Redonda",
+      "municipio": "Esquipulas",
+      "lat": 14.641356,
+      "lon": -89.34962
+    },
+    {
+      "codigo_lugar": "esquipulas_pinal",
+      "lugar_poblado": "Pinal",
+      "municipio": "Esquipulas",
+      "lat": 14.626105,
+      "lon": -89.25672
+    },
+    {
+      "codigo_lugar": "esquipulas_el_pinalito",
+      "lugar_poblado": "El Pinalito",
+      "municipio": "Esquipulas",
+      "lat": 14.638077,
+      "lon": -89.25404
+    },
+    {
+      "codigo_lugar": "esquipulas_plan_de_la_arada",
+      "lugar_poblado": "Plan De La Arada",
+      "municipio": "Esquipulas",
+      "lat": 14.497802,
+      "lon": -89.35421
+    },
+    {
+      "codigo_lugar": "esquipulas_potrerillos",
+      "lugar_poblado": "Potrerillos",
+      "municipio": "Esquipulas",
+      "lat": 14.613103,
+      "lon": -89.22247
+    },
+    {
+      "codigo_lugar": "esquipulas_rincon_de_maria",
+      "lugar_poblado": "Rincon De Maria",
+      "municipio": "Esquipulas",
+      "lat": 14.622899,
+      "lon": -89.24076
+    },
+    {
+      "codigo_lugar": "esquipulas_la_arrinconada",
+      "lugar_poblado": "La Arrinconada",
+      "municipio": "Esquipulas",
+      "lat": 14.615696,
+      "lon": -89.1609
+    },
+    {
+      "codigo_lugar": "esquipulas_el_salitre",
+      "lugar_poblado": "El Salitre",
+      "municipio": "Esquipulas",
+      "lat": 14.651859,
+      "lon": -89.22075
+    },
+    {
+      "codigo_lugar": "esquipulas_san_antonio",
+      "lugar_poblado": "San Antonio",
+      "municipio": "Esquipulas",
+      "lat": 14.620362,
+      "lon": -89.24639
+    },
+    {
+      "codigo_lugar": "esquipulas_san_francisco_buena_vista",
+      "lugar_poblado": "San Francisco Buena Vista",
+      "municipio": "Esquipulas",
+      "lat": 14.616723,
+      "lon": -89.23144
+    },
+    {
+      "codigo_lugar": "esquipulas_san_isidro",
+      "lugar_poblado": "San Isidro",
+      "municipio": "Esquipulas",
+      "lat": 14.589797,
+      "lon": -89.181
+    },
+    {
+      "codigo_lugar": "esquipulas_san_joaquin",
+      "lugar_poblado": "San Joaquin",
+      "municipio": "Esquipulas",
+      "lat": 14.533577,
+      "lon": -89.36093
+    },
+    {
+      "codigo_lugar": "esquipulas_san_jose_el_sillon",
+      "lugar_poblado": "San Jose (El Sillon)",
+      "municipio": "Esquipulas",
+      "lat": 14.551615,
+      "lon": -89.3773
+    },
+    {
+      "codigo_lugar": "esquipulas_san_juan",
+      "lugar_poblado": "San Juan",
+      "municipio": "Esquipulas",
+      "lat": 14.567405,
+      "lon": -89.35627
+    },
+    {
+      "codigo_lugar": "esquipulas_san_nicolas",
+      "lugar_poblado": "San Nicolas",
+      "municipio": "Esquipulas",
+      "lat": 14.538956,
+      "lon": -89.32718
+    },
+    {
+      "codigo_lugar": "esquipulas_santa_rosalia",
+      "lugar_poblado": "Santa Rosalia",
+      "municipio": "Esquipulas",
+      "lat": 14.551855,
+      "lon": -89.3427
+    },
+    {
+      "codigo_lugar": "esquipulas_tablon_del_sulay",
+      "lugar_poblado": "Tablon Del Sulay",
+      "municipio": "Esquipulas",
+      "lat": 14.709541,
+      "lon": -89.16591
+    },
+    {
+      "codigo_lugar": "esquipulas_tareas",
+      "lugar_poblado": "Tareas",
+      "municipio": "Esquipulas",
+      "lat": 14.645908,
+      "lon": -89.25386
+    },
+    {
+      "codigo_lugar": "esquipulas_techacin",
+      "lugar_poblado": "Techacin",
+      "municipio": "Esquipulas",
+      "lat": 14.58008,
+      "lon": -89.3763
+    },
+    {
+      "codigo_lugar": "esquipulas_timushan",
+      "lugar_poblado": "Timushan",
+      "municipio": "Esquipulas",
+      "lat": 14.721193,
+      "lon": -89.17874
+    },
+    {
+      "codigo_lugar": "esquipulas_tizaquin",
+      "lugar_poblado": "Tizaquin",
+      "municipio": "Esquipulas",
+      "lat": 14.546033,
+      "lon": -89.37156
+    },
+    {
+      "codigo_lugar": "esquipulas_tontoles_arriba",
+      "lugar_poblado": "Tontoles Arriba",
+      "municipio": "Esquipulas",
+      "lat": 14.608982,
+      "lon": -89.28955
+    },
+    {
+      "codigo_lugar": "esquipulas_valle_dolores",
+      "lugar_poblado": "Valle Dolores",
+      "municipio": "Esquipulas",
+      "lat": 14.603384,
+      "lon": -89.33897
+    },
+    {
+      "codigo_lugar": "esquipulas_valle_de_jesus",
+      "lugar_poblado": "Valle De Jesus",
+      "municipio": "Esquipulas",
+      "lat": 14.588946,
+      "lon": -89.20038
+    },
+    {
+      "codigo_lugar": "esquipulas_valles_de_maria",
+      "lugar_poblado": "Valles De Maria",
+      "municipio": "Esquipulas",
+      "lat": 14.57099,
+      "lon": -89.32673
+    },
+    {
+      "codigo_lugar": "esquipulas_varales",
+      "lugar_poblado": "Varales",
+      "municipio": "Esquipulas",
+      "lat": 14.638996,
+      "lon": -89.18549
+    },
+    {
+      "codigo_lugar": "esquipulas_vega_grande",
+      "lugar_poblado": "Vega Grande",
+      "municipio": "Esquipulas",
+      "lat": 14.715477,
+      "lon": -89.13728
+    },
+    {
+      "codigo_lugar": "esquipulas_zapotal",
+      "lugar_poblado": "Zapotal",
+      "municipio": "Esquipulas",
+      "lat": 14.602276,
+      "lon": -89.21481
+    },
+    {
+      "codigo_lugar": "esquipulas_zarzal",
+      "lugar_poblado": "Zarzal",
+      "municipio": "Esquipulas",
+      "lat": 14.613605,
+      "lon": -89.21336
+    },
+    {
+      "codigo_lugar": "esquipulas_zarzalito",
+      "lugar_poblado": "Zarzalito",
+      "municipio": "Esquipulas",
+      "lat": 14.718465,
+      "lon": -89.2327
+    },
+    {
+      "codigo_lugar": "esquipulas_chacalapa",
+      "lugar_poblado": "Chacalapa",
+      "municipio": "Esquipulas",
+      "lat": 14.5608,
+      "lon": -89.34351
+    },
+    {
+      "codigo_lugar": "esquipulas_jesus_y_maria_2",
+      "lugar_poblado": "Jesus Y Maria",
+      "municipio": "Esquipulas",
+      "lat": 14.564285,
+      "lon": -89.37049
+    },
+    {
+      "codigo_lugar": "esquipulas_pashapa",
+      "lugar_poblado": "Pashapa",
+      "municipio": "Esquipulas",
+      "lat": 14.579077,
+      "lon": -89.34475
+    },
+    {
+      "codigo_lugar": "esquipulas_san_juaquin",
+      "lugar_poblado": "San Juaquin",
+      "municipio": "Esquipulas",
+      "lat": 14.56935,
+      "lon": -89.35218
+    },
+    {
+      "codigo_lugar": "esquipulas_san_jose_palo_negro",
+      "lugar_poblado": "San Jose Palo Negro",
+      "municipio": "Esquipulas",
+      "lat": 14.563767,
+      "lon": -89.35735
+    },
+    {
+      "codigo_lugar": "esquipulas_san_sebastian",
+      "lugar_poblado": "San Sebastian",
+      "municipio": "Esquipulas",
+      "lat": 14.566193,
+      "lon": -89.3481
+    },
+    {
+      "codigo_lugar": "esquipulas_santa_ana",
+      "lugar_poblado": "Santa Ana",
+      "municipio": "Esquipulas",
+      "lat": 14.582801,
+      "lon": -89.35497
+    },
+    {
+      "codigo_lugar": "esquipulas_santiaguito",
+      "lugar_poblado": "Santiaguito",
+      "municipio": "Esquipulas",
+      "lat": 14.571876,
+      "lon": -89.35464
+    },
+    {
+      "codigo_lugar": "esquipulas_de_santa_lucia",
+      "lugar_poblado": "De Santa Lucia",
+      "municipio": "Esquipulas",
+      "lat": 14.576174,
+      "lon": -89.35839
+    },
+    {
+      "codigo_lugar": "esquipulas_los_arcos",
+      "lugar_poblado": "Los Arcos",
+      "municipio": "Esquipulas",
+      "lat": 14.573495,
+      "lon": -89.35591
+    },
+    {
+      "codigo_lugar": "esquipulas_los_pinos",
+      "lugar_poblado": "Los Pinos",
+      "municipio": "Esquipulas",
+      "lat": 14.56302,
+      "lon": -89.3403
+    },
+    {
+      "codigo_lugar": "esquipulas_quirio_catano_i",
+      "lugar_poblado": "Quirio Cataño I",
+      "municipio": "Esquipulas",
+      "lat": 14.558628,
+      "lon": -89.35202
+    },
+    {
+      "codigo_lugar": "esquipulas_san_jose_obrero",
+      "lugar_poblado": "San Jose Obrero",
+      "municipio": "Esquipulas",
+      "lat": 14.563596,
+      "lon": -89.33553
+    },
+    {
+      "codigo_lugar": "esquipulas_san_juan_2",
+      "lugar_poblado": "San Juan",
+      "municipio": "Esquipulas",
+      "lat": 14.567405,
+      "lon": -89.35627
+    },
+    {
+      "codigo_lugar": "esquipulas_san_mateo_i",
+      "lugar_poblado": "San Mateo I",
+      "municipio": "Esquipulas",
+      "lat": 14.568097,
+      "lon": -89.34812
+    },
+    {
+      "codigo_lugar": "esquipulas_san_mateo_ii",
+      "lugar_poblado": "San Mateo Ii",
+      "municipio": "Esquipulas",
+      "lat": 14.569157,
+      "lon": -89.3459
+    },
+    {
+      "codigo_lugar": "esquipulas_santa_gudelia",
+      "lugar_poblado": "Santa Gudelia",
+      "municipio": "Esquipulas",
+      "lat": 14.565688,
+      "lon": -89.35522
+    },
+    {
+      "codigo_lugar": "esquipulas_santa_marta",
+      "lugar_poblado": "Santa Marta",
+      "municipio": "Esquipulas",
+      "lat": 14.563894,
+      "lon": -89.34607
+    },
+    {
+      "codigo_lugar": "esquipulas_tikal",
+      "lugar_poblado": "Tikal",
+      "municipio": "Esquipulas",
+      "lat": 14.56179,
+      "lon": -89.35836
+    },
+    {
+      "codigo_lugar": "esquipulas_vista_hermosa",
+      "lugar_poblado": "Vista Hermosa",
+      "municipio": "Esquipulas",
+      "lat": 14.564613,
+      "lon": -89.34361
+    },
+    {
+      "codigo_lugar": "esquipulas_quinta_bella",
+      "lugar_poblado": "Quinta Bella",
+      "municipio": "Esquipulas",
+      "lat": 14.575308,
+      "lon": -89.35362
+    },
+    {
+      "codigo_lugar": "esquipulas_lomas_de_santa_ana",
+      "lugar_poblado": "Lomas De Santa Ana",
+      "municipio": "Esquipulas",
+      "lat": 14.582846,
+      "lon": -89.36129
+    },
+    {
+      "codigo_lugar": "esquipulas_quirio_catano_ii",
+      "lugar_poblado": "Quirio Cataño Ii",
+      "municipio": "Esquipulas",
+      "lat": 14.562369,
+      "lon": -89.35532
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_concepcion_las_minas",
+      "lugar_poblado": "Concepcion Las Minas",
+      "municipio": "Concepción las Minas",
+      "lat": 14.521752,
+      "lon": -89.45616
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_agua_caliente",
+      "lugar_poblado": "Agua Caliente",
+      "municipio": "Concepción las Minas",
+      "lat": 14.540179,
+      "lon": -89.49625
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_agua_caliente_2",
+      "lugar_poblado": "Agua Caliente",
+      "municipio": "Concepción las Minas",
+      "lat": 14.540179,
+      "lon": -89.49625
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_anguiatu",
+      "lugar_poblado": "Anguiatu",
+      "municipio": "Concepción las Minas",
+      "lat": 14.422851,
+      "lon": -89.4491
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_apantes",
+      "lugar_poblado": "Apantes",
+      "municipio": "Concepción las Minas",
+      "lat": 14.54462,
+      "lon": -89.40904
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_monte_barroso",
+      "lugar_poblado": "Monte Barroso",
+      "municipio": "Concepción las Minas",
+      "lat": 14.511102,
+      "lon": -89.45523
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_bordo_el_llano",
+      "lugar_poblado": "Bordo El Llano",
+      "municipio": "Concepción las Minas",
+      "lat": 14.464715,
+      "lon": -89.46106
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_casa_quemada",
+      "lugar_poblado": "Casa Quemada",
+      "municipio": "Concepción las Minas",
+      "lat": 14.552379,
+      "lon": -89.43105
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_cruz_calle",
+      "lugar_poblado": "Cruz Calle",
+      "municipio": "Concepción las Minas",
+      "lat": 14.490064,
+      "lon": -89.4661
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_cruz_de_ocote",
+      "lugar_poblado": "Cruz De Ocote",
+      "municipio": "Concepción las Minas",
+      "lat": 14.515924,
+      "lon": -89.46527
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_cuesta_del_horno",
+      "lugar_poblado": "Cuesta Del Horno",
+      "municipio": "Concepción las Minas",
+      "lat": 14.519849,
+      "lon": -89.42407
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_dolores",
+      "lugar_poblado": "Dolores",
+      "municipio": "Concepción las Minas",
+      "lat": 14.512115,
+      "lon": -89.50774
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_el_ahorcado",
+      "lugar_poblado": "El Ahorcado",
+      "municipio": "Concepción las Minas",
+      "lat": 14.547105,
+      "lon": -89.4515
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_el_jicaro",
+      "lugar_poblado": "El Jicaro",
+      "municipio": "Concepción las Minas",
+      "lat": 14.518767,
+      "lon": -89.4493
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_el_olvido",
+      "lugar_poblado": "El Olvido",
+      "municipio": "Concepción las Minas",
+      "lat": 14.524893,
+      "lon": -89.41574
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_el_pinto",
+      "lugar_poblado": "El Pinto",
+      "municipio": "Concepción las Minas",
+      "lat": 14.443871,
+      "lon": -89.46051
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_el_rodeito",
+      "lugar_poblado": "El Rodeito",
+      "municipio": "Concepción las Minas",
+      "lat": 14.533752,
+      "lon": -89.45478
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_el_socorro",
+      "lugar_poblado": "El Socorro",
+      "municipio": "Concepción las Minas",
+      "lat": 14.480986,
+      "lon": -89.43391
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_el_yajal",
+      "lugar_poblado": "El Yajal",
+      "municipio": "Concepción las Minas",
+      "lat": 14.538986,
+      "lon": -89.40078
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_la_ermita",
+      "lugar_poblado": "La Ermita",
+      "municipio": "Concepción las Minas",
+      "lat": 14.467977,
+      "lon": -89.45907
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_guacamayas",
+      "lugar_poblado": "Guacamayas",
+      "municipio": "Concepción las Minas",
+      "lat": 14.542507,
+      "lon": -89.46381
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_jicaro_peinado",
+      "lugar_poblado": "Jicaro Peinado",
+      "municipio": "Concepción las Minas",
+      "lat": 14.539914,
+      "lon": -89.43751
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_la_canada",
+      "lugar_poblado": "La Cañada",
+      "municipio": "Concepción las Minas",
+      "lat": 14.465218,
+      "lon": -89.42743
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_la_leona",
+      "lugar_poblado": "La Leona",
+      "municipio": "Concepción las Minas",
+      "lat": 14.446394,
+      "lon": -89.45685
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_las_anonas",
+      "lugar_poblado": "Las Anonas",
+      "municipio": "Concepción las Minas",
+      "lat": 14.499836,
+      "lon": -89.46456
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_las_cruces",
+      "lugar_poblado": "Las Cruces",
+      "municipio": "Concepción las Minas",
+      "lat": 14.537687,
+      "lon": -89.41151
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_liquidambar",
+      "lugar_poblado": "Liquidambar",
+      "municipio": "Concepción las Minas",
+      "lat": 14.517095,
+      "lon": -89.43552
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_conacaste",
+      "lugar_poblado": "Conacaste",
+      "municipio": "Concepción las Minas",
+      "lat": 14.458676,
+      "lon": -89.46672
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_alambrados",
+      "lugar_poblado": "Alambrados",
+      "municipio": "Concepción las Minas",
+      "lat": 14.428837,
+      "lon": -89.47213
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_limones",
+      "lugar_poblado": "Limones",
+      "municipio": "Concepción las Minas",
+      "lat": 14.484216,
+      "lon": -89.46314
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_los_planes",
+      "lugar_poblado": "Los Planes",
+      "municipio": "Concepción las Minas",
+      "lat": 14.450526,
+      "lon": -89.384
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_el_obispo",
+      "lugar_poblado": "El Obispo",
+      "municipio": "Concepción las Minas",
+      "lat": 14.506962,
+      "lon": -89.41195
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_el_obraje",
+      "lugar_poblado": "El Obraje",
+      "municipio": "Concepción las Minas",
+      "lat": 14.469671,
+      "lon": -89.48729
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_plan_del_tigre",
+      "lugar_poblado": "Plan Del Tigre",
+      "municipio": "Concepción las Minas",
+      "lat": 14.526423,
+      "lon": -89.40911
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_el_platanar",
+      "lugar_poblado": "El Platanar",
+      "municipio": "Concepción las Minas",
+      "lat": 14.503804,
+      "lon": -89.51622
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_quebrachos",
+      "lugar_poblado": "Quebrachos",
+      "municipio": "Concepción las Minas",
+      "lat": 14.466461,
+      "lon": -89.48391
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_la_quesera",
+      "lugar_poblado": "La Quesera",
+      "municipio": "Concepción las Minas",
+      "lat": 14.514429,
+      "lon": -89.47349
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_roble_gacho",
+      "lugar_poblado": "Roble Gacho",
+      "municipio": "Concepción las Minas",
+      "lat": 14.546789,
+      "lon": -89.48136
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_rodeo_las_lajas",
+      "lugar_poblado": "Rodeo Las Lajas",
+      "municipio": "Concepción las Minas",
+      "lat": 14.497907,
+      "lon": -89.47157
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_rodeo_el_espino",
+      "lugar_poblado": "Rodeo El Espino",
+      "municipio": "Concepción las Minas",
+      "lat": 14.514981,
+      "lon": -89.52729
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_sacramento",
+      "lugar_poblado": "Sacramento",
+      "municipio": "Concepción las Minas",
+      "lat": 14.51032,
+      "lon": -89.4953
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_san_antonio",
+      "lugar_poblado": "San Antonio",
+      "municipio": "Concepción las Minas",
+      "lat": 14.471485,
+      "lon": -89.49375
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_san_isidro",
+      "lugar_poblado": "San Isidro",
+      "municipio": "Concepción las Minas",
+      "lat": 14.496913,
+      "lon": -89.4568
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_san_jose",
+      "lugar_poblado": "San Jose",
+      "municipio": "Concepción las Minas",
+      "lat": 14.498762,
+      "lon": -89.43945
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_san_vicente",
+      "lugar_poblado": "San Vicente",
+      "municipio": "Concepción las Minas",
+      "lat": 14.532122,
+      "lon": -89.51388
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_santa_anita",
+      "lugar_poblado": "Santa Anita",
+      "municipio": "Concepción las Minas",
+      "lat": 14.437749,
+      "lon": -89.5056
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_solapado",
+      "lugar_poblado": "Solapado",
+      "municipio": "Concepción las Minas",
+      "lat": 14.530024,
+      "lon": -89.46272
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_valeriano",
+      "lugar_poblado": "Valeriano",
+      "municipio": "Concepción las Minas",
+      "lat": 14.413282,
+      "lon": -89.50385
+    },
+    {
+      "codigo_lugar": "concepcion_las_minas_valle_arriba",
+      "lugar_poblado": "Valle Arriba",
+      "municipio": "Concepción las Minas",
+      "lat": 14.509805,
+      "lon": -89.44553
+    },
+    {
+      "codigo_lugar": "quezaltepeque_quezaltepeque",
+      "lugar_poblado": "Quezaltepeque",
+      "municipio": "Quezaltepeque",
+      "lat": 14.635639,
+      "lon": -89.4428
+    },
+    {
+      "codigo_lugar": "quezaltepeque_aceitillal",
+      "lugar_poblado": "Aceitillal",
+      "municipio": "Quezaltepeque",
+      "lat": 14.579163,
+      "lon": -89.51854
+    },
+    {
+      "codigo_lugar": "quezaltepeque_achiote",
+      "lugar_poblado": "Achiote",
+      "municipio": "Quezaltepeque",
+      "lat": 14.618129,
+      "lon": -89.52209
+    },
+    {
+      "codigo_lugar": "quezaltepeque_agua_caliente",
+      "lugar_poblado": "Agua Caliente",
+      "municipio": "Quezaltepeque",
+      "lat": 14.639622,
+      "lon": -89.45997
+    },
+    {
+      "codigo_lugar": "quezaltepeque_azacualpa",
+      "lugar_poblado": "Azacualpa",
+      "municipio": "Quezaltepeque",
+      "lat": 14.657882,
+      "lon": -89.43318
+    },
+    {
+      "codigo_lugar": "quezaltepeque_caulotes",
+      "lugar_poblado": "Caulotes",
+      "municipio": "Quezaltepeque",
+      "lat": 14.656836,
+      "lon": -89.44493
+    },
+    {
+      "codigo_lugar": "quezaltepeque_las_cebollas",
+      "lugar_poblado": "Las Cebollas",
+      "municipio": "Quezaltepeque",
+      "lat": 14.587982,
+      "lon": -89.41549
+    },
+    {
+      "codigo_lugar": "quezaltepeque_charaguin",
+      "lugar_poblado": "Charaguin",
+      "municipio": "Quezaltepeque",
+      "lat": 14.66563,
+      "lon": -89.36977
+    },
+    {
+      "codigo_lugar": "quezaltepeque_chiramay",
+      "lugar_poblado": "Chiramay",
+      "municipio": "Quezaltepeque",
+      "lat": 14.624076,
+      "lon": -89.37289
+    },
+    {
+      "codigo_lugar": "quezaltepeque_cimarron",
+      "lugar_poblado": "Cimarron",
+      "municipio": "Quezaltepeque",
+      "lat": 14.689191,
+      "lon": -89.45116
+    },
+    {
+      "codigo_lugar": "quezaltepeque_ciracil",
+      "lugar_poblado": "Ciracil",
+      "municipio": "Quezaltepeque",
+      "lat": 14.662235,
+      "lon": -89.47259
+    },
+    {
+      "codigo_lugar": "quezaltepeque_el_comun",
+      "lugar_poblado": "El Comun",
+      "municipio": "Quezaltepeque",
+      "lat": 14.663658,
+      "lon": -89.40721
+    },
+    {
+      "codigo_lugar": "quezaltepeque_concepcion",
+      "lugar_poblado": "Concepcion",
+      "municipio": "Quezaltepeque",
+      "lat": 14.606308,
+      "lon": -89.51726
+    },
+    {
+      "codigo_lugar": "quezaltepeque_cruz_de_piedra",
+      "lugar_poblado": "Cruz De Piedra",
+      "municipio": "Quezaltepeque",
+      "lat": 14.667294,
+      "lon": -89.44331
+    },
+    {
+      "codigo_lugar": "quezaltepeque_cubiletes",
+      "lugar_poblado": "Cubiletes",
+      "municipio": "Quezaltepeque",
+      "lat": 14.566457,
+      "lon": -89.50985
+    },
+    {
+      "codigo_lugar": "quezaltepeque_cuje",
+      "lugar_poblado": "Cuje",
+      "municipio": "Quezaltepeque",
+      "lat": 14.63217,
+      "lon": -89.39568
+    },
+    {
+      "codigo_lugar": "quezaltepeque_cuje_2",
+      "lugar_poblado": "Cuje",
+      "municipio": "Quezaltepeque",
+      "lat": 14.63217,
+      "lon": -89.39568
+    },
+    {
+      "codigo_lugar": "quezaltepeque_el_chile",
+      "lugar_poblado": "El Chile",
+      "municipio": "Quezaltepeque",
+      "lat": 14.621385,
+      "lon": -89.38965
+    },
+    {
+      "codigo_lugar": "quezaltepeque_comun_los_mendez",
+      "lugar_poblado": "Comun Los Mendez",
+      "municipio": "Quezaltepeque",
+      "lat": 14.674891,
+      "lon": -89.46964
+    },
+    {
+      "codigo_lugar": "quezaltepeque_encuentros_abajo",
+      "lugar_poblado": "Encuentros Abajo",
+      "municipio": "Quezaltepeque",
+      "lat": 14.621832,
+      "lon": -89.46042
+    },
+    {
+      "codigo_lugar": "quezaltepeque_encuentros_arriba",
+      "lugar_poblado": "Encuentros Arriba",
+      "municipio": "Quezaltepeque",
+      "lat": 14.614806,
+      "lon": -89.45296
+    },
+    {
+      "codigo_lugar": "quezaltepeque_espinal",
+      "lugar_poblado": "Espinal",
+      "municipio": "Quezaltepeque",
+      "lat": 14.616562,
+      "lon": -89.51807
+    },
+    {
+      "codigo_lugar": "quezaltepeque_estanzuela_abajo",
+      "lugar_poblado": "Estanzuela Abajo",
+      "municipio": "Quezaltepeque",
+      "lat": 14.613043,
+      "lon": -89.50451
+    },
+    {
+      "codigo_lugar": "quezaltepeque_estanzuela_arriba",
+      "lugar_poblado": "Estanzuela Arriba",
+      "municipio": "Quezaltepeque",
+      "lat": 14.594376,
+      "lon": -89.51768
+    },
+    {
+      "codigo_lugar": "quezaltepeque_guatalon",
+      "lugar_poblado": "Guatalon",
+      "municipio": "Quezaltepeque",
+      "lat": 14.666632,
+      "lon": -89.41236
+    },
+    {
+      "codigo_lugar": "quezaltepeque_el_guayabo",
+      "lugar_poblado": "El Guayabo",
+      "municipio": "Quezaltepeque",
+      "lat": 14.597084,
+      "lon": -89.50911
+    },
+    {
+      "codigo_lugar": "quezaltepeque_javillal",
+      "lugar_poblado": "Javillal",
+      "municipio": "Quezaltepeque",
+      "lat": 14.612837,
+      "lon": -89.51878
+    },
+    {
+      "codigo_lugar": "quezaltepeque_jicaro",
+      "lugar_poblado": "Jicaro",
+      "municipio": "Quezaltepeque",
+      "lat": 14.559857,
+      "lon": -89.48678
+    },
+    {
+      "codigo_lugar": "quezaltepeque_la_canada",
+      "lugar_poblado": "La Cañada",
+      "municipio": "Quezaltepeque",
+      "lat": 14.587278,
+      "lon": -89.52373
+    },
+    {
+      "codigo_lugar": "quezaltepeque_la_cidra",
+      "lugar_poblado": "La Cidra",
+      "municipio": "Quezaltepeque",
+      "lat": 14.645751,
+      "lon": -89.37216
+    },
+    {
+      "codigo_lugar": "quezaltepeque_la_pena",
+      "lugar_poblado": "La Peña",
+      "municipio": "Quezaltepeque",
+      "lat": 14.609804,
+      "lon": -89.40394
+    },
+    {
+      "codigo_lugar": "quezaltepeque_la_ruda",
+      "lugar_poblado": "La Ruda",
+      "municipio": "Quezaltepeque",
+      "lat": 14.613997,
+      "lon": -89.37485
+    },
+    {
+      "codigo_lugar": "quezaltepeque_limon",
+      "lugar_poblado": "Limon",
+      "municipio": "Quezaltepeque",
+      "lat": 14.616589,
+      "lon": -89.52972
+    },
+    {
+      "codigo_lugar": "quezaltepeque_llano_de_san_marcos",
+      "lugar_poblado": "Llano De San Marcos",
+      "municipio": "Quezaltepeque",
+      "lat": 14.608227,
+      "lon": -89.50004
+    },
+    {
+      "codigo_lugar": "quezaltepeque_llano_galan",
+      "lugar_poblado": "Llano Galan",
+      "municipio": "Quezaltepeque",
+      "lat": 14.65876,
+      "lon": -89.39937
+    },
+    {
+      "codigo_lugar": "quezaltepeque_llano_grande",
+      "lugar_poblado": "Llano Grande",
+      "municipio": "Quezaltepeque",
+      "lat": 14.624695,
+      "lon": -89.44196
+    },
+    {
+      "codigo_lugar": "quezaltepeque_los_espana",
+      "lugar_poblado": "Los España",
+      "municipio": "Quezaltepeque",
+      "lat": 14.64456,
+      "lon": -89.50634
+    },
+    {
+      "codigo_lugar": "quezaltepeque_los_perez",
+      "lugar_poblado": "Los Perez",
+      "municipio": "Quezaltepeque",
+      "lat": 14.613944,
+      "lon": -89.48537
+    },
+    {
+      "codigo_lugar": "quezaltepeque_los_planes",
+      "lugar_poblado": "Los Planes",
+      "municipio": "Quezaltepeque",
+      "lat": 14.632043,
+      "lon": -89.38027
+    },
+    {
+      "codigo_lugar": "quezaltepeque_morro_grande",
+      "lugar_poblado": "Morro Grande",
+      "municipio": "Quezaltepeque",
+      "lat": 14.654093,
+      "lon": -89.46201
+    },
+    {
+      "codigo_lugar": "quezaltepeque_nochan",
+      "lugar_poblado": "Nochan",
+      "municipio": "Quezaltepeque",
+      "lat": 14.680882,
+      "lon": -89.38081
+    },
+    {
+      "codigo_lugar": "quezaltepeque_ojo_de_agua_de_la_garza",
+      "lugar_poblado": "Ojo De Agua De La Garza",
+      "municipio": "Quezaltepeque",
+      "lat": 14.692838,
+      "lon": -89.41079
+    },
+    {
+      "codigo_lugar": "quezaltepeque_padre_miguel",
+      "lugar_poblado": "Padre Miguel",
+      "municipio": "Quezaltepeque",
+      "lat": 14.566272,
+      "lon": -89.45407
+    },
+    {
+      "codigo_lugar": "quezaltepeque_el_palmar",
+      "lugar_poblado": "El Palmar",
+      "municipio": "Quezaltepeque",
+      "lat": 14.587537,
+      "lon": -89.49253
+    },
+    {
+      "codigo_lugar": "quezaltepeque_palmilla",
+      "lugar_poblado": "Palmilla",
+      "municipio": "Quezaltepeque",
+      "lat": 14.677454000000001,
+      "lon": -89.44846
+    },
+    {
+      "codigo_lugar": "quezaltepeque_palmilla_abajo",
+      "lugar_poblado": "Palmilla Abajo",
+      "municipio": "Quezaltepeque",
+      "lat": 14.662986,
+      "lon": -89.45452
+    },
+    {
+      "codigo_lugar": "quezaltepeque_pedregal",
+      "lugar_poblado": "Pedregal",
+      "municipio": "Quezaltepeque",
+      "lat": 14.632014,
+      "lon": -89.41248
+    },
+    {
+      "codigo_lugar": "quezaltepeque_pedregalito",
+      "lugar_poblado": "Pedregalito",
+      "municipio": "Quezaltepeque",
+      "lat": 14.612143,
+      "lon": -89.43461
+    },
+    {
+      "codigo_lugar": "quezaltepeque_penitas",
+      "lugar_poblado": "Peñitas",
+      "municipio": "Quezaltepeque",
+      "lat": 14.642621,
+      "lon": -89.43429
+    },
+    {
+      "codigo_lugar": "quezaltepeque_piedras_gordas",
+      "lugar_poblado": "Piedras Gordas",
+      "municipio": "Quezaltepeque",
+      "lat": 14.545372,
+      "lon": -89.51808
+    },
+    {
+      "codigo_lugar": "quezaltepeque_pinalito",
+      "lugar_poblado": "Pinalito",
+      "municipio": "Quezaltepeque",
+      "lat": 14.678537,
+      "lon": -89.44056
+    },
+    {
+      "codigo_lugar": "quezaltepeque_mojon_agua_zarca",
+      "lugar_poblado": "Mojon Agua Zarca",
+      "municipio": "Quezaltepeque",
+      "lat": 14.651531,
+      "lon": -89.4146
+    },
+    {
+      "codigo_lugar": "quezaltepeque_plan_del_pito",
+      "lugar_poblado": "Plan Del Pito",
+      "municipio": "Quezaltepeque",
+      "lat": 14.594394,
+      "lon": -89.44644
+    },
+    {
+      "codigo_lugar": "quezaltepeque_portezuelo",
+      "lugar_poblado": "Portezuelo",
+      "municipio": "Quezaltepeque",
+      "lat": 14.608168,
+      "lon": -89.51478
+    },
+    {
+      "codigo_lugar": "quezaltepeque_potrerillo",
+      "lugar_poblado": "Potrerillo",
+      "municipio": "Quezaltepeque",
+      "lat": 14.621882,
+      "lon": -89.4093
+    },
+    {
+      "codigo_lugar": "quezaltepeque_pozas",
+      "lugar_poblado": "Pozas",
+      "municipio": "Quezaltepeque",
+      "lat": 14.604045,
+      "lon": -89.5298
+    },
+    {
+      "codigo_lugar": "quezaltepeque_puerta_de_la_montana",
+      "lugar_poblado": "Puerta De La Montaña",
+      "municipio": "Quezaltepeque",
+      "lat": 14.674514,
+      "lon": -89.39118
+    },
+    {
+      "codigo_lugar": "quezaltepeque_quequexque",
+      "lugar_poblado": "Quequexque",
+      "municipio": "Quezaltepeque",
+      "lat": 14.63367,
+      "lon": -89.39035
+    },
+    {
+      "codigo_lugar": "quezaltepeque_recibimiento",
+      "lugar_poblado": "Recibimiento",
+      "municipio": "Quezaltepeque",
+      "lat": 14.629202,
+      "lon": -89.42605
+    },
+    {
+      "codigo_lugar": "quezaltepeque_rio_grande",
+      "lugar_poblado": "Rio Grande",
+      "municipio": "Quezaltepeque",
+      "lat": 14.640203,
+      "lon": -89.48457
+    },
+    {
+      "codigo_lugar": "quezaltepeque_salfate",
+      "lugar_poblado": "Salfate",
+      "municipio": "Quezaltepeque",
+      "lat": 14.605443,
+      "lon": -89.45165
+    },
+    {
+      "codigo_lugar": "quezaltepeque_san_antonio",
+      "lugar_poblado": "San Antonio",
+      "municipio": "Quezaltepeque",
+      "lat": 14.608157,
+      "lon": -89.50806
+    },
+    {
+      "codigo_lugar": "quezaltepeque_san_antonio_2",
+      "lugar_poblado": "San Antonio",
+      "municipio": "Quezaltepeque",
+      "lat": 14.608157,
+      "lon": -89.50806
+    },
+    {
+      "codigo_lugar": "quezaltepeque_san_jacintillo",
+      "lugar_poblado": "San Jacintillo",
+      "municipio": "Quezaltepeque",
+      "lat": 14.626931,
+      "lon": -89.48108
+    },
+    {
+      "codigo_lugar": "quezaltepeque_san_jose",
+      "lugar_poblado": "San Jose",
+      "municipio": "Quezaltepeque",
+      "lat": 14.583665,
+      "lon": -89.50616
+    },
+    {
+      "codigo_lugar": "quezaltepeque_san_juan",
+      "lugar_poblado": "San Juan",
+      "municipio": "Quezaltepeque",
+      "lat": 14.567562,
+      "lon": -89.52861
+    },
+    {
+      "codigo_lugar": "quezaltepeque_san_nicolas",
+      "lugar_poblado": "San Nicolas",
+      "municipio": "Quezaltepeque",
+      "lat": 14.663868,
+      "lon": -89.46448
+    },
+    {
+      "codigo_lugar": "quezaltepeque_santa_cruz",
+      "lugar_poblado": "Santa Cruz",
+      "municipio": "Quezaltepeque",
+      "lat": 14.597968,
+      "lon": -89.46953
+    },
+    {
+      "codigo_lugar": "quezaltepeque_tablon",
+      "lugar_poblado": "Tablon",
+      "municipio": "Quezaltepeque",
+      "lat": 14.625455,
+      "lon": -89.52796
+    },
+    {
+      "codigo_lugar": "quezaltepeque_tichanchor",
+      "lugar_poblado": "Tichanchor",
+      "municipio": "Quezaltepeque",
+      "lat": 14.584755,
+      "lon": -89.53272
+    },
+    {
+      "codigo_lugar": "quezaltepeque_tierra_colorada",
+      "lugar_poblado": "Tierra Colorada",
+      "municipio": "Quezaltepeque",
+      "lat": 14.595205,
+      "lon": -89.45347
+    },
+    {
+      "codigo_lugar": "quezaltepeque_tituque",
+      "lugar_poblado": "Tituque",
+      "municipio": "Quezaltepeque",
+      "lat": 14.658557,
+      "lon": -89.38081
+    },
+    {
+      "codigo_lugar": "quezaltepeque_yerbabuena",
+      "lugar_poblado": "Yerbabuena",
+      "municipio": "Quezaltepeque",
+      "lat": 14.625435,
+      "lon": -89.49959
+    },
+    {
+      "codigo_lugar": "quezaltepeque_yocon",
+      "lugar_poblado": "Yocon",
+      "municipio": "Quezaltepeque",
+      "lat": 14.634891,
+      "lon": -89.43313
+    },
+    {
+      "codigo_lugar": "quezaltepeque_el_calvario",
+      "lugar_poblado": "El Calvario",
+      "municipio": "Quezaltepeque",
+      "lat": 14.639807,
+      "lon": -89.44231
+    },
+    {
+      "codigo_lugar": "quezaltepeque_el_puente",
+      "lugar_poblado": "El Puente",
+      "municipio": "Quezaltepeque",
+      "lat": 14.635956,
+      "lon": -89.44559
+    },
+    {
+      "codigo_lugar": "quezaltepeque_la_concordia",
+      "lugar_poblado": "La Concordia",
+      "municipio": "Quezaltepeque",
+      "lat": 14.63387,
+      "lon": -89.44246
+    },
+    {
+      "codigo_lugar": "quezaltepeque_las_palmas",
+      "lugar_poblado": "Las Palmas",
+      "municipio": "Quezaltepeque",
+      "lat": 14.632853,
+      "lon": -89.43999
+    },
+    {
+      "codigo_lugar": "quezaltepeque_san_sebastian",
+      "lugar_poblado": "San Sebastian",
+      "municipio": "Quezaltepeque",
+      "lat": 14.637915,
+      "lon": -89.44415
+    },
+    {
+      "codigo_lugar": "quezaltepeque_santa_barbar",
+      "lugar_poblado": "Santa Barbar",
+      "municipio": "Quezaltepeque",
+      "lat": 14.63606,
+      "lon": -89.44059
+    },
+    {
+      "codigo_lugar": "quezaltepeque_el_inde",
+      "lugar_poblado": "El Inde",
+      "municipio": "Quezaltepeque",
+      "lat": 14.632816,
+      "lon": -89.44199
+    },
+    {
+      "codigo_lugar": "quezaltepeque_la_ceiba",
+      "lugar_poblado": "La Ceiba",
+      "municipio": "Quezaltepeque",
+      "lat": 14.631448,
+      "lon": -89.44493
+    },
+    {
+      "codigo_lugar": "quezaltepeque_las_margaritas",
+      "lugar_poblado": "Las Margaritas",
+      "municipio": "Quezaltepeque",
+      "lat": 14.631434,
+      "lon": -89.44152
+    },
+    {
+      "codigo_lugar": "quezaltepeque_las_verapaces",
+      "lugar_poblado": "Las Verapaces",
+      "municipio": "Quezaltepeque",
+      "lat": 14.63254,
+      "lon": -89.44953
+    },
+    {
+      "codigo_lugar": "quezaltepeque_los_pinos",
+      "lugar_poblado": "Los Pinos",
+      "municipio": "Quezaltepeque",
+      "lat": 14.629355,
+      "lon": -89.44325
+    },
+    {
+      "codigo_lugar": "quezaltepeque_santa_filomena",
+      "lugar_poblado": "Santa Filomena",
+      "municipio": "Quezaltepeque",
+      "lat": 14.632335,
+      "lon": -89.43859
+    },
+    {
+      "codigo_lugar": "quezaltepeque_santa_filomena_2",
+      "lugar_poblado": "Santa Filomena 2",
+      "municipio": "Quezaltepeque",
+      "lat": 14.631867,
+      "lon": -89.43605
+    },
+    {
+      "codigo_lugar": "quezaltepeque_villa_lorena",
+      "lugar_poblado": "Villa Lorena",
+      "municipio": "Quezaltepeque",
+      "lat": 14.632411,
+      "lon": -89.4433
+    },
+    {
+      "codigo_lugar": "san_jacinto_san_jacinto",
+      "lugar_poblado": "San Jacinto",
+      "municipio": "San Jacinto",
+      "lat": 14.674073,
+      "lon": -89.50219
+    },
+    {
+      "codigo_lugar": "san_jacinto_agua_zarca",
+      "lugar_poblado": "Agua Zarca",
+      "municipio": "San Jacinto",
+      "lat": 14.677257,
+      "lon": -89.52119
+    },
+    {
+      "codigo_lugar": "san_jacinto_dolores",
+      "lugar_poblado": "Dolores",
+      "municipio": "San Jacinto",
+      "lat": 14.649112,
+      "lon": -89.51696
+    },
+    {
+      "codigo_lugar": "san_jacinto_el_carrizal",
+      "lugar_poblado": "El Carrizal ",
+      "municipio": "San Jacinto",
+      "lat": 14.65759,
+      "lon": -89.49212
+    },
+    {
+      "codigo_lugar": "san_jacinto_el_escalon",
+      "lugar_poblado": "El Escalon",
+      "municipio": "San Jacinto",
+      "lat": 14.689941,
+      "lon": -89.49484
+    },
+    {
+      "codigo_lugar": "san_jacinto_el_jocotal",
+      "lugar_poblado": "El Jocotal",
+      "municipio": "San Jacinto",
+      "lat": 14.728594,
+      "lon": -89.477
+    },
+    {
+      "codigo_lugar": "san_jacinto_la_majada",
+      "lugar_poblado": "La Majada",
+      "municipio": "San Jacinto",
+      "lat": 14.704116,
+      "lon": -89.49371
+    },
+    {
+      "codigo_lugar": "san_jacinto_las_lomas",
+      "lugar_poblado": "Las Lomas",
+      "municipio": "San Jacinto",
+      "lat": 14.668849,
+      "lon": -89.52597
+    },
+    {
+      "codigo_lugar": "san_jacinto_los_agosto",
+      "lugar_poblado": "Los Agosto",
+      "municipio": "San Jacinto",
+      "lat": 14.722809,
+      "lon": -89.47067
+    },
+    {
+      "codigo_lugar": "san_jacinto_los_borja",
+      "lugar_poblado": "Los Borja",
+      "municipio": "San Jacinto",
+      "lat": 14.695869,
+      "lon": -89.50711
+    },
+    {
+      "codigo_lugar": "san_jacinto_valle_de_la_escuela",
+      "lugar_poblado": "Valle De La Escuela",
+      "municipio": "San Jacinto",
+      "lat": 14.735186,
+      "lon": -89.47043
+    },
+    {
+      "codigo_lugar": "san_jacinto_los_lopez",
+      "lugar_poblado": "Los Lopez",
+      "municipio": "San Jacinto",
+      "lat": 14.681587,
+      "lon": -89.53585
+    },
+    {
+      "codigo_lugar": "san_jacinto_los_molina",
+      "lugar_poblado": "Los Molina",
+      "municipio": "San Jacinto",
+      "lat": 14.702615,
+      "lon": -89.50671
+    },
+    {
+      "codigo_lugar": "san_jacinto_los_pascual",
+      "lugar_poblado": "Los Pascual",
+      "municipio": "San Jacinto",
+      "lat": 14.697144,
+      "lon": -89.52106
+    },
+    {
+      "codigo_lugar": "san_jacinto_los_perez",
+      "lugar_poblado": "Los Perez",
+      "municipio": "San Jacinto",
+      "lat": 14.705106,
+      "lon": -89.52081
+    },
+    {
+      "codigo_lugar": "san_jacinto_los_ramos_norte",
+      "lugar_poblado": "Los Ramos Norte",
+      "municipio": "San Jacinto",
+      "lat": 14.706034,
+      "lon": -89.50951
+    },
+    {
+      "codigo_lugar": "san_jacinto_montanuelas",
+      "lugar_poblado": "Montañuelas",
+      "municipio": "San Jacinto",
+      "lat": 14.669387,
+      "lon": -89.5462
+    },
+    {
+      "codigo_lugar": "san_jacinto_pastores",
+      "lugar_poblado": "Pastores",
+      "municipio": "San Jacinto",
+      "lat": 14.699576,
+      "lon": -89.49875
+    },
+    {
+      "codigo_lugar": "san_jacinto_pueblo_nuevo",
+      "lugar_poblado": "Pueblo Nuevo",
+      "municipio": "San Jacinto",
+      "lat": 14.6679,
+      "lon": -89.50559
+    },
+    {
+      "codigo_lugar": "san_jacinto_los_carranza",
+      "lugar_poblado": "Los Carranza",
+      "municipio": "San Jacinto",
+      "lat": 14.654849,
+      "lon": -89.4996
+    },
+    {
+      "codigo_lugar": "san_jacinto_santa_cruz",
+      "lugar_poblado": "Santa Cruz",
+      "municipio": "San Jacinto",
+      "lat": 14.641505,
+      "lon": -89.53494
+    },
+    {
+      "codigo_lugar": "san_jacinto_tizubin",
+      "lugar_poblado": "Tizubin",
+      "municipio": "San Jacinto",
+      "lat": 14.69386,
+      "lon": -89.51302
+    },
+    {
+      "codigo_lugar": "san_jacinto_valle_de_la_escuela_2",
+      "lugar_poblado": "Valle De La Escuela",
+      "municipio": "San Jacinto",
+      "lat": 14.735186,
+      "lon": -89.47043
+    },
+    {
+      "codigo_lugar": "san_jacinto_valle_nuevo",
+      "lugar_poblado": "Valle Nuevo",
+      "municipio": "San Jacinto",
+      "lat": 14.690178,
+      "lon": -89.53294
+    },
+    {
+      "codigo_lugar": "san_jacinto_zapote_abajo",
+      "lugar_poblado": "Zapote Abajo",
+      "municipio": "San Jacinto",
+      "lat": 14.659469,
+      "lon": -89.54476
+    },
+    {
+      "codigo_lugar": "san_jacinto_el_zapote",
+      "lugar_poblado": "El Zapote",
+      "municipio": "San Jacinto",
+      "lat": 14.660473,
+      "lon": -89.55222
+    },
+    {
+      "codigo_lugar": "san_jacinto_el_jocotal_2",
+      "lugar_poblado": "El Jocotal",
+      "municipio": "San Jacinto",
+      "lat": 14.728594,
+      "lon": -89.477
+    },
+    {
+      "codigo_lugar": "san_jacinto_el_tamarindo",
+      "lugar_poblado": "El Tamarindo",
+      "municipio": "San Jacinto",
+      "lat": 14.676794,
+      "lon": -89.50589
+    },
+    {
+      "codigo_lugar": "san_jacinto_san_jacinto_san_jorge",
+      "lugar_poblado": "San Jacinto, San Jorge",
+      "municipio": "San Jacinto",
+      "lat": 14.683086,
+      "lon": -89.50102
+    },
+    {
+      "codigo_lugar": "san_jacinto_el_palmar",
+      "lugar_poblado": "El Palmar",
+      "municipio": "San Jacinto",
+      "lat": 14.665634,
+      "lon": -89.51491
+    },
+    {
+      "codigo_lugar": "san_jacinto_los_agustines",
+      "lugar_poblado": "Los Agustines",
+      "municipio": "San Jacinto",
+      "lat": 14.675834,
+      "lon": -89.52918
+    },
+    {
+      "codigo_lugar": "san_jacinto_los_borja_2",
+      "lugar_poblado": "Los Borja",
+      "municipio": "San Jacinto",
+      "lat": 14.695869,
+      "lon": -89.50711
+    },
+    {
+      "codigo_lugar": "san_jacinto_los_gonzales",
+      "lugar_poblado": "Los Gonzales",
+      "municipio": "San Jacinto",
+      "lat": 14.685072,
+      "lon": -89.51907
+    },
+    {
+      "codigo_lugar": "san_jacinto_los_mauricio",
+      "lugar_poblado": "Los Mauricio",
+      "municipio": "San Jacinto",
+      "lat": 14.664662,
+      "lon": -89.52339
+    },
+    {
+      "codigo_lugar": "san_jacinto_los_ramos_del_sur",
+      "lugar_poblado": "Los Ramos Del Sur",
+      "municipio": "San Jacinto",
+      "lat": 14.69385,
+      "lon": -89.51222
+    },
+    {
+      "codigo_lugar": "ipala_ipala",
+      "lugar_poblado": "Ipala",
+      "municipio": "Ipala",
+      "lat": 14.616009,
+      "lon": -89.62168
+    },
+    {
+      "codigo_lugar": "ipala_agua_tibia",
+      "lugar_poblado": "Agua Tibia",
+      "municipio": "Ipala",
+      "lat": 14.575763,
+      "lon": -89.57256
+    },
+    {
+      "codigo_lugar": "ipala_los_arrozales",
+      "lugar_poblado": "Los Arrozales",
+      "municipio": "Ipala",
+      "lat": 14.542393,
+      "lon": -89.54715
+    },
+    {
+      "codigo_lugar": "ipala_buena_vista",
+      "lugar_poblado": "Buena Vista",
+      "municipio": "Ipala",
+      "lat": 14.578916,
+      "lon": -89.57317
+    },
+    {
+      "codigo_lugar": "ipala_buena_vista_2",
+      "lugar_poblado": "Buena Vista",
+      "municipio": "Ipala",
+      "lat": 14.578916,
+      "lon": -89.57317
+    },
+    {
+      "codigo_lugar": "ipala_cacahuatepeque",
+      "lugar_poblado": "Cacahuatepeque",
+      "municipio": "Ipala",
+      "lat": 14.529763,
+      "lon": -89.54929
+    },
+    {
+      "codigo_lugar": "ipala_cana_vieja",
+      "lugar_poblado": "Caña Vieja",
+      "municipio": "Ipala",
+      "lat": 14.567271,
+      "lon": -89.56527
+    },
+    {
+      "codigo_lugar": "ipala_cececapa",
+      "lugar_poblado": "Cececapa",
+      "municipio": "Ipala",
+      "lat": 14.681772,
+      "lon": -89.61669
+    },
+    {
+      "codigo_lugar": "ipala_ceniceras",
+      "lugar_poblado": "Ceniceras",
+      "municipio": "Ipala",
+      "lat": 14.627056,
+      "lon": -89.5664
+    },
+    {
+      "codigo_lugar": "ipala_chaguiton",
+      "lugar_poblado": "Chaguiton",
+      "municipio": "Ipala",
+      "lat": 14.550425,
+      "lon": -89.65381
+    },
+    {
+      "codigo_lugar": "ipala_ciracil",
+      "lugar_poblado": "Ciracil",
+      "municipio": "Ipala",
+      "lat": 14.657193,
+      "lon": -89.56969
+    },
+    {
+      "codigo_lugar": "ipala_cruz_de_villeda",
+      "lugar_poblado": "Cruz De Villeda",
+      "municipio": "Ipala",
+      "lat": 14.620772,
+      "lon": -89.66801
+    },
+    {
+      "codigo_lugar": "ipala_dolores",
+      "lugar_poblado": "Dolores",
+      "municipio": "Ipala",
+      "lat": 14.625468,
+      "lon": -89.60179
+    },
+    {
+      "codigo_lugar": "ipala_el_amatillo",
+      "lugar_poblado": "El Amatillo",
+      "municipio": "Ipala",
+      "lat": 14.529354,
+      "lon": -89.59642
+    },
+    {
+      "codigo_lugar": "ipala_el_calvario",
+      "lugar_poblado": "El Calvario",
+      "municipio": "Ipala",
+      "lat": 14.617164,
+      "lon": -89.61169
+    },
+    {
+      "codigo_lugar": "ipala_el_caulote",
+      "lugar_poblado": "El Caulote",
+      "municipio": "Ipala",
+      "lat": 14.553415,
+      "lon": -89.66854
+    },
+    {
+      "codigo_lugar": "ipala_el_chaguite",
+      "lugar_poblado": "El Chaguite",
+      "municipio": "Ipala",
+      "lat": 14.638319,
+      "lon": -89.58161
+    },
+    {
+      "codigo_lugar": "ipala_el_chaparroncito",
+      "lugar_poblado": "El Chaparroncito",
+      "municipio": "Ipala",
+      "lat": 14.567819,
+      "lon": -89.65621
+    },
+    {
+      "codigo_lugar": "ipala_el_cuje",
+      "lugar_poblado": "El Cuje",
+      "municipio": "Ipala",
+      "lat": 14.53706,
+      "lon": -89.58217
+    },
+    {
+      "codigo_lugar": "ipala_el_jocote",
+      "lugar_poblado": "El Jocote",
+      "municipio": "Ipala",
+      "lat": 14.65163,
+      "lon": -89.57742
+    },
+    {
+      "codigo_lugar": "ipala_el_jute",
+      "lugar_poblado": "El Jute",
+      "municipio": "Ipala",
+      "lat": 14.550052,
+      "lon": -89.55279
+    },
+    {
+      "codigo_lugar": "ipala_el_rosario",
+      "lugar_poblado": "El Rosario",
+      "municipio": "Ipala",
+      "lat": 14.599104,
+      "lon": -89.57294
+    },
+    {
+      "codigo_lugar": "ipala_el_sauce",
+      "lugar_poblado": "El Sauce",
+      "municipio": "Ipala",
+      "lat": 14.547559,
+      "lon": -89.67259
+    },
+    {
+      "codigo_lugar": "ipala_el_suyate",
+      "lugar_poblado": "El Suyate",
+      "municipio": "Ipala",
+      "lat": 14.635113,
+      "lon": -89.61962
+    },
+    {
+      "codigo_lugar": "ipala_el_tianque",
+      "lugar_poblado": "El Tianque",
+      "municipio": "Ipala",
+      "lat": 14.52686,
+      "lon": -89.60357
+    },
+    {
+      "codigo_lugar": "ipala_estacion_agua_blanca",
+      "lugar_poblado": "Estacion Agua Blanca",
+      "municipio": "Ipala",
+      "lat": 14.521922,
+      "lon": -89.61084
+    },
+    {
+      "codigo_lugar": "ipala_guachipilin",
+      "lugar_poblado": "Guachipilin",
+      "municipio": "Ipala",
+      "lat": 14.499421,
+      "lon": -89.58459
+    },
+    {
+      "codigo_lugar": "ipala_jicamapa",
+      "lugar_poblado": "Jicamapa",
+      "municipio": "Ipala",
+      "lat": 14.660755,
+      "lon": -89.63509
+    },
+    {
+      "codigo_lugar": "ipala_el_jicaral",
+      "lugar_poblado": "El Jicaral",
+      "municipio": "Ipala",
+      "lat": 14.535974,
+      "lon": -89.56282
+    },
+    {
+      "codigo_lugar": "ipala_el_jocotillo",
+      "lugar_poblado": "El Jocotillo",
+      "municipio": "Ipala",
+      "lat": 14.506016,
+      "lon": -89.59488
+    },
+    {
+      "codigo_lugar": "ipala_julumichapa",
+      "lugar_poblado": "Julumichapa",
+      "municipio": "Ipala",
+      "lat": 14.553293,
+      "lon": -89.60242
+    },
+    {
+      "codigo_lugar": "ipala_la_coronada",
+      "lugar_poblado": "La Coronada",
+      "municipio": "Ipala",
+      "lat": 14.617298,
+      "lon": -89.58763
+    },
+    {
+      "codigo_lugar": "ipala_la_cuesta",
+      "lugar_poblado": "La Cuesta",
+      "municipio": "Ipala",
+      "lat": 14.534131,
+      "lon": -89.54119
+    },
+    {
+      "codigo_lugar": "ipala_la_esperanza",
+      "lugar_poblado": "La Esperanza",
+      "municipio": "Ipala",
+      "lat": 14.594303,
+      "lon": -89.62892
+    },
+    {
+      "codigo_lugar": "ipala_la_granja",
+      "lugar_poblado": "La Granja",
+      "municipio": "Ipala",
+      "lat": 14.643851,
+      "lon": -89.58733
+    },
+    {
+      "codigo_lugar": "ipala_la_lima",
+      "lugar_poblado": "La Lima",
+      "municipio": "Ipala",
+      "lat": 14.525985,
+      "lon": -89.55585
+    },
+    {
+      "codigo_lugar": "ipala_la_pena",
+      "lugar_poblado": "La Peña",
+      "municipio": "Ipala",
+      "lat": 14.514345,
+      "lon": -89.60038
+    },
+    {
+      "codigo_lugar": "ipala_la_pila",
+      "lugar_poblado": "La Pila",
+      "municipio": "Ipala",
+      "lat": 14.624589,
+      "lon": -89.65533
+    },
+    {
+      "codigo_lugar": "ipala_la_tuna",
+      "lugar_poblado": "La Tuna",
+      "municipio": "Ipala",
+      "lat": 14.57362,
+      "lon": -89.5864
+    },
+    {
+      "codigo_lugar": "ipala_cofradias",
+      "lugar_poblado": "Cofradias",
+      "municipio": "Ipala",
+      "lat": 14.569794,
+      "lon": -89.68219
+    },
+    {
+      "codigo_lugar": "ipala_las_cruces",
+      "lugar_poblado": "Las Cruces",
+      "municipio": "Ipala",
+      "lat": 14.637353,
+      "lon": -89.56917
+    },
+    {
+      "codigo_lugar": "ipala_las_cuevitas",
+      "lugar_poblado": "Las Cuevitas",
+      "municipio": "Ipala",
+      "lat": 14.503646,
+      "lon": -89.56475
+    },
+    {
+      "codigo_lugar": "ipala_llano_grande",
+      "lugar_poblado": "Llano Grande",
+      "municipio": "Ipala",
+      "lat": 14.656724,
+      "lon": -89.58928
+    },
+    {
+      "codigo_lugar": "ipala_los_achiotes",
+      "lugar_poblado": "Los Achiotes",
+      "municipio": "Ipala",
+      "lat": 14.486699,
+      "lon": -89.5808
+    },
+    {
+      "codigo_lugar": "ipala_los_cerritos",
+      "lugar_poblado": "Los Cerritos",
+      "municipio": "Ipala",
+      "lat": 14.540254,
+      "lon": -89.5774
+    },
+    {
+      "codigo_lugar": "ipala_los_horcones",
+      "lugar_poblado": "Los Horcones",
+      "municipio": "Ipala",
+      "lat": 14.547861,
+      "lon": -89.69342
+    },
+    {
+      "codigo_lugar": "ipala_el_obraje",
+      "lugar_poblado": "El Obraje",
+      "municipio": "Ipala",
+      "lat": 14.624259,
+      "lon": -89.63506
+    },
+    {
+      "codigo_lugar": "ipala_palo_grande",
+      "lugar_poblado": "Palo Grande",
+      "municipio": "Ipala",
+      "lat": 14.512742,
+      "lon": -89.59363
+    },
+    {
+      "codigo_lugar": "ipala_san_francisco",
+      "lugar_poblado": "San Francisco",
+      "municipio": "Ipala",
+      "lat": 14.546608,
+      "lon": -89.68699
+    },
+    {
+      "codigo_lugar": "ipala_san_isidro",
+      "lugar_poblado": "San Isidro",
+      "municipio": "Ipala",
+      "lat": 14.579394,
+      "lon": -89.66318
+    },
+    {
+      "codigo_lugar": "ipala_la_zarzona",
+      "lugar_poblado": "La Zarzona",
+      "municipio": "Ipala",
+      "lat": 14.676556,
+      "lon": -89.62241
+    }
+  ],
   "duplicidad": [],
   "instituciones_resumen": {
     "Oficina Municipal de Juventud": 0,
@@ -377,6 +6069,6 @@
     "registros_kobo": 1,
     "programas_procesados": 1,
     "lugares_catalogo": 996,
-    "lugares_con_coordenadas": 0
+    "lugares_con_coordenadas": 816
   }
 }
