@@ -54,6 +54,7 @@
   .legend{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:12px;color:var(--muted);flex-wrap:wrap;}
   .legend .bar{width:140px;height:8px;border-radius:6px;background:linear-gradient(90deg,#D6DDE2,#003058);}
   .legend .dot{width:11px;height:11px;border-radius:50%;display:inline-block;margin-right:5px;vertical-align:middle;}
+  .territorial-summary{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px}.territorial-summary .mini{border:1px solid var(--line);border-radius:9px;padding:10px;background:#fff}.territorial-summary .mini b{display:block;font-family:'Source Serif 4',serif;font-size:22px;color:var(--navy);line-height:1}.territorial-summary .mini span{font-size:11px;color:var(--muted)}.boundary-note{font-size:10px;color:var(--muted);margin-top:7px}
   .side-title{font-size:17px;font-weight:700;color:var(--navy);margin:0 0 4px;}
   .side-sub{font-size:13px;color:var(--muted);margin:0 0 12px;}
   .org-row{display:flex;justify-content:space-between;padding:9px 0;border-top:1px solid #EFEBE2;font-size:14px;}
@@ -137,14 +138,17 @@
         <div class="side-sub">Los puntos sólidos muestran cooperación registrada. Active “Base territorial” para consultar los lugares poblados georreferenciados; un punto hueco significa “sin presencia de cooperación registrada”.</div>
         <div id="map"></div>
         <div class="legend">
-          <span>Menor presencia</span><div class="bar"></div><span>Mayor presencia</span>
-          <span style="margin-left:14px;"><span class="dot" style="background:#fff;border:2px solid #C98A6B;"></span>Sin cobertura registrada</span>
+          <span><span class="dot" style="background:#003058;border:2px solid #fff;box-shadow:0 0 0 1px #003058;"></span>Cooperación registrada</span>
+          <span><span class="dot" style="background:#fff;border:2px solid #C98A6B;"></span>Lugar poblado · base territorial</span>
+          <span style="margin-left:8px;">Intensidad:</span><span>menor</span><div class="bar"></div><span>mayor</span>
         </div>
+        <div class="boundary-note">Límites municipales: servicio geográfico de CONRED · La ausencia de registro no confirma una brecha de atención.</div>
       </div>
       <div>
         <div class="card" id="panel-comunidad">
-          <div class="side-title">Seleccioná un punto del mapa</div>
-          <div class="side-sub">Hacé clic en una comunidad para ver el detalle de organizaciones activas ahí, o en un punto hueco para ver que no hay cobertura registrada.</div>
+          <div class="side-title">Resumen territorial</div>
+          <div class="side-sub">El resumen se actualiza según el municipio seleccionado y los filtros de cooperación.</div>
+          <div id="resumen-territorial"></div>
         </div>
       </div>
     </div>
@@ -281,7 +285,7 @@ function mostrarVista(id){
 }
 
 const filtros = { sector:'', atencion:'', actor:'', estado:'', municipio:'' };
-let CATALOGO=null, COORDS={}, baseLayer=null, coopLayer=null, basePlaces=[];
+let CATALOGO=null, COORDS={}, baseLayer=null, coopLayer=null, basePlaces=[], limitesLayer=null, LIMITES=null;
 
 function limpiarFiltros(){
   Object.keys(filtros).forEach(k=>filtros[k]='');
@@ -420,6 +424,8 @@ function renderMapa(filtrados){
     const bounds=(document.getElementById('layer-base').checked ? visibles : pts);
     if(bounds.length) map.fitBounds(L.latLngBounds(bounds),{padding:[30,30],maxZoom:13});
   }
+  actualizarLimitesMunicipales();
+  renderResumenTerritorial(filtrados);
 }
 
 
@@ -437,6 +443,68 @@ function actualizarEstiloBasePorZoom(){
       layer.setStyle({weight:style.weight,fillOpacity:style.fillOpacity,opacity:style.opacity});
     }
   });
+}
+
+function normalizarTexto(v){
+  return (v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
+}
+
+function estiloLimite(feature){
+  const sel=document.getElementById('t-municipio')?.value||'';
+  const nombre=feature?.properties?.nombre_1||'';
+  const activo=sel && normalizarTexto(nombre)===normalizarTexto(sel);
+  return {color:activo?'#003058':'#66798A',weight:activo?3:1.35,opacity:activo?1:.72,fillColor:'#DFB26F',fillOpacity:activo?.08:.018};
+}
+
+function actualizarLimitesMunicipales(){
+  if(!limitesLayer) return;
+  limitesLayer.setStyle(estiloLimite);
+  const sel=document.getElementById('t-municipio')?.value||'';
+  if(sel){
+    let target=null;
+    limitesLayer.eachLayer(l=>{ if(normalizarTexto(l.feature?.properties?.nombre_1)===normalizarTexto(sel)) target=l; });
+    if(target) map.fitBounds(target.getBounds(),{padding:[25,25],maxZoom:12});
+  }
+}
+
+async function cargarLimitesMunicipales(){
+  try{
+    const endpoint='https://sig.conred.gob.gt/server/rest/services/Hosted/Limites_municipales/FeatureServer/0/query';
+    const q=new URLSearchParams({where:"depto_1='Chiquimula'",outFields:'cod_dept_1,cod_muni_1,nombre_1,depto_1',returnGeometry:'true',outSR:'4326',f:'geojson'});
+    const r=await fetch(endpoint+'?'+q.toString());
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    LIMITES=await r.json();
+    limitesLayer=L.geoJSON(LIMITES,{style:estiloLimite,onEachFeature:(f,l)=>l.bindTooltip(f.properties?.nombre_1||'Municipio',{sticky:true,direction:'center',className:'municipio-tip'})}).addTo(map);
+    if(limitesLayer.bringToBack) limitesLayer.bringToBack();
+  }catch(e){ console.warn('Límites municipales no disponibles',e); }
+}
+
+function renderResumenTerritorial(filtrados){
+  const panel=document.getElementById('panel-comunidad');
+  if(!panel) return;
+  const muni=document.getElementById('t-municipio')?.value||'';
+  const base=basePlaces.filter(p=>!muni||p.municipio===muni);
+  const codigosCoop=new Set();
+  const orgs=new Set();
+  const programas=new Set();
+  filtrados.forEach(pr=>{
+    (pr.comunidades||[]).forEach(c=>{
+      if((!muni||c.municipio===muni) && c.lat!=null){ if(c.codigo_lugar) codigosCoop.add(c.codigo_lugar); orgs.add(pr.organizacion); programas.add(pr.nombre_programa); }
+    });
+  });
+  const conPresencia=base.filter(p=>codigosCoop.has(p.codigo)).length;
+  const sinPresencia=Math.max(0,base.length-conPresencia);
+  panel.innerHTML=`<div class="side-title">${muni?muni:'Resumen territorial'}</div>
+    <div class="side-sub">${muni?'Consulta municipal':'Departamento de Chiquimula'} · información según los filtros activos.</div>
+    <div class="territorial-summary">
+      <div class="mini"><b>${base.length.toLocaleString('es-GT')}</b><span>Lugares georreferenciados</span></div>
+      <div class="mini"><b>${conPresencia.toLocaleString('es-GT')}</b><span>Con presencia registrada</span></div>
+      <div class="mini"><b>${sinPresencia.toLocaleString('es-GT')}</b><span>Sin presencia registrada</span></div>
+      <div class="mini"><b>${orgs.size}</b><span>Organizaciones registradas</span></div>
+    </div>
+    <div class="side-title" style="font-size:14px;margin-top:15px;">Programas / proyectos</div>
+    <div class="side-sub">${programas.size} registrado(s) para esta consulta.</div>
+    <div class="side-sub" style="margin-top:10px;">Seleccioná un punto del mapa para ver su detalle.</div>`;
 }
 
 function mostrarPanelTerritorial(p){
@@ -691,6 +759,7 @@ async function iniciar(){
   baseLayer = L.layerGroup().addTo(markersLayer);
   // Ajusta únicamente la simbología al acercar/alejar, sin recalcular filtros ni extensión.
   map.on('zoomend', actualizarEstiloBasePorZoom);
+  await cargarLimitesMunicipales();
   await cargarBaseTerritorial();
 
   poblarSelects();
