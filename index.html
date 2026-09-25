@@ -92,6 +92,9 @@
 .community-kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:12px 0 14px}.community-kpi{border:1px solid #E3E6E8;border-radius:9px;padding:9px 10px;background:#FAFBFC}.community-kpi b{display:block;color:var(--navy);font-family:Georgia,serif;font-size:19px}.community-kpi span{font-size:10px;color:#68717C}
 .intervention-list{display:flex;flex-direction:column;gap:10px;margin-top:10px}.intervention-card{border:1px solid #DDE2E6;border-left:3px solid var(--gold);border-radius:9px;padding:11px 12px;background:#fff}.intervention-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.intervention-org{font-weight:800;color:var(--navy);font-size:13px}.intervention-program{font-size:12px;color:#4F5965;margin-top:2px}.intervention-meta{display:grid;grid-template-columns:1fr 1fr;gap:7px 12px;margin-top:9px}.intervention-meta div{font-size:11px;color:#5F6873}.intervention-meta b{display:block;color:#243444;font-size:10px;text-transform:uppercase;letter-spacing:.02em;margin-bottom:2px}.convergence-note{margin-top:12px;padding:10px 11px;border:1px solid #E6D5B7;border-radius:9px;background:#FBF8F2;font-size:11px;color:#5B5144}.sector-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:3px}.sector-tag{display:inline-block;padding:3px 7px;border:1px solid #D7DEE5;border-radius:999px;background:#F7F9FA;color:#34485A;font-size:10px;line-height:1.2}.investment-box{margin-top:9px;padding:8px 10px;border:1px solid #E5D6BB;border-radius:8px;background:#FCFAF6}.investment-box b{display:block;color:#243444;font-size:10px;text-transform:uppercase;letter-spacing:.02em;margin-bottom:3px}.investment-value{font-size:12px;font-weight:700;color:var(--navy)}.investment-kind{font-size:10px;color:#707983;margin-top:2px}.community-section-title{font-size:13px;font-weight:800;color:var(--navy);margin-top:14px;margin-bottom:5px}
 @media(max-width:700px){.intervention-meta,.community-kpis{grid-template-columns:1fr}}
+
+/* Ficha ejecutiva por organización */
+.org-toolbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:14px 0 20px}.org-toolbar label{font-size:12px;font-weight:700;color:var(--muted)}.org-toolbar select{min-width:280px}.org-layout{display:grid;grid-template-columns:1.25fr .75fr;gap:20px;align-items:start}.org-side{display:flex;flex-direction:column;gap:16px}.org-map-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:18px}.org-map{height:420px;border-radius:11px;overflow:hidden;margin-top:10px}.org-note{font-size:11px;color:var(--muted);margin-top:8px;line-height:1.4}.org-list-row{padding:9px 0;border-top:1px solid #EFEBE2;font-size:13px}.org-list-row:first-child{border-top:none}.org-list-row b{color:var(--navy)}.org-kpi-sub{margin-top:4px;font-size:11px;color:var(--muted)}@media(max-width:960px){.org-layout{grid-template-columns:1fr}.org-map{height:360px}}
 </style>
 </head>
 <body>
@@ -255,11 +258,28 @@
     </div>
   </section>
 
-  <!-- ===== VISTA: INSTITUCIONES ===== -->
+  <!-- ===== VISTA: INSTITUCIONES / ORGANIZACIONES ===== -->
   <section class="view" id="view-instituciones">
-    <div class="section-title">Fortalecimiento institucional</div>
-    <div class="section-sub">Instituciones y organizaciones fortalecidas por los programas de cooperación, con la cantidad total reportada y los municipios donde ocurre.</div>
-    <table id="tabla-instituciones"><thead><tr><th>TIPO DE INSTITUCIÓN</th><th>CANTIDAD TOTAL</th><th>MUNICIPIOS</th></tr></thead><tbody></tbody></table>
+    <div class="section-title">Ficha ejecutiva por organización</div>
+    <div class="section-sub">Consulta la presencia territorial de cada actor de cooperación: dónde trabaja, mediante qué programas/proyectos, en qué sectores, con qué población y qué capacidades fortalece.</div>
+    <div class="org-toolbar"><label>ORGANIZACIÓN</label><select id="f-organizacion-panel"></select></div>
+    <div class="stats" id="stats-organizacion"></div>
+    <div class="org-layout">
+      <div class="org-map-card">
+        <div class="side-title">Presencia territorial de la organización</div>
+        <div class="side-sub" id="submap-organizacion">Lugares poblados e intervención institucional/municipal reportada.</div>
+        <div id="map-organizacion" class="org-map"></div>
+        <div class="legend"><span><span class="dot" style="background:#003058"></span>Presencia comunitaria</span><span><span class="dot" style="background:#DFB26F"></span>Presencia institucional / municipal</span></div>
+        <div class="org-note">La presencia institucional/municipal puede existir sin que se hayan reportado lugares poblados específicos. La ausencia de un punto comunitario no confirma una brecha de atención.</div>
+      </div>
+      <div class="org-side">
+        <div class="card"><div class="side-title">Perfil de la organización</div><div id="perfil-organizacion"></div></div>
+        <div class="card"><div class="side-title">Población atendida / meta</div><div class="side-sub">Cantidades mostradas por grupo tal como fueron reportadas; no se interpretan como personas únicas.</div><div id="poblacion-organizacion"></div></div>
+        <div class="card"><div class="side-title">Acciones / capacidades locales</div><div id="acciones-organizacion"></div></div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:20px"><div class="side-title">Programas y proyectos de la organización</div><div style="overflow-x:auto"><table id="tabla-programas-organizacion"><thead><tr><th>PROGRAMA / PROYECTO</th><th>TIPO DE ATENCIÓN</th><th>ESTADO</th><th>SECTORES</th><th>MUNICIPIOS</th><th>PERÍODO</th><th>INVERSIÓN REPORTADA</th></tr></thead><tbody></tbody></table></div></div>
+    <div class="card" style="margin-top:20px"><div class="side-title">Cobertura comunitaria registrada</div><div class="section-sub" id="sub-cobertura-organizacion"></div><div style="overflow-x:auto"><table id="tabla-comunidades-organizacion"><thead><tr><th>MUNICIPIO</th><th>LUGAR POBLADO</th><th>PROGRAMA / PROYECTO</th><th>POBLACIÓN META</th><th>ACCIÓN / CAPACIDAD</th></tr></thead><tbody></tbody></table></div></div>
   </section>
 
   <!-- ===== VISTA: POBLACIÓN × ACCIÓN ===== -->
@@ -309,6 +329,7 @@ function mostrarVista(id){
   document.getElementById('view-'+id).classList.add('active');
   document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active', b.dataset.view===id));
   if(id==='mapa' && map){ setTimeout(()=>map.invalidateSize(), 50); }
+  if(id==='instituciones'){ setTimeout(()=>{ if(orgMap) orgMap.invalidateSize(); renderOrganizacion(); },80); }
 }
 
 const filtros = { sector:'', atencion:'', actor:'', estado:'', municipio:'' };
@@ -876,14 +897,82 @@ function renderInversion(){
     : '<tr><td colspan="2" class="empty">Sin montos indicados todavía.</td></tr>';
 }
 
-function renderInstituciones(){
-  const tb = document.querySelector('#tabla-instituciones tbody');
-  const entradas = Object.entries(DATA.instituciones_resumen);
-  tb.innerHTML = entradas.length
-    ? entradas.sort((a,b)=>b[1].cantidad_total-a[1].cantidad_total)
-        .map(([tipo,d])=>`<tr><td>${tipo}</td><td>${d.cantidad_total}</td><td><div class="pill-list">${d.municipios.map(m=>`<span class="pill">${m}</span>`).join('')}</div></td></tr>`).join('')
-    : '<tr><td colspan="3" class="empty">Ningún programa reportó fortalecimiento institucional todavía.</td></tr>';
+let orgMap=null, orgCommunityLayer=null, orgInstitutionalLayer=null;
+
+function poblarSelectorOrganizacion(){
+  const sel=document.getElementById('f-organizacion-panel');
+  if(!sel) return;
+  const orgs=[...new Set((DATA.programas||[]).map(p=>p.organizacion).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es'));
+  sel.innerHTML=orgs.map(o=>`<option value="${o}">${o}</option>`).join('');
+  sel.onchange=()=>renderOrganizacion();
+  if(orgs.length) renderOrganizacion();
 }
+
+function initOrgMap(){
+  if(orgMap) return;
+  orgMap=L.map('map-organizacion',{zoomControl:true}).setView([14.75,-89.45],9);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}).addTo(orgMap);
+  orgInstitutionalLayer=L.layerGroup().addTo(orgMap);
+  orgCommunityLayer=L.layerGroup().addTo(orgMap);
+}
+
+function renderOrganizacion(){
+  const sel=document.getElementById('f-organizacion-panel');
+  if(!sel || !sel.value) return;
+  const org=sel.value;
+  const programas=(DATA.programas||[]).filter(p=>p.organizacion===org);
+  const tipos=[...new Set(programas.map(p=>p.tipo_actor).filter(Boolean))];
+  const sectores=[...new Set(programas.flatMap(p=>p.sector||[]).filter(Boolean))];
+  const munCom=new Set(), munInst=new Set(), lugares=new Map(), estados=new Set();
+  const pob={}, acciones={};
+  programas.forEach(p=>{
+    if(p.estado_programa) estados.add(p.estado_programa);
+    (p.municipios_cobertura_institucional||[]).forEach(m=>munInst.add(m));
+    (p.comunidades||[]).forEach(c=>{
+      if(c.municipio) munCom.add(c.municipio);
+      const key=c.codigo_lugar||`${c.municipio}|${c.lugar_poblado}`;
+      if(!lugares.has(key)) lugares.set(key,{...c,programas:new Set(),sectores:new Set()});
+      const x=lugares.get(key); if(p.nombre_programa)x.programas.add(p.nombre_programa); (p.sector||[]).forEach(v=>x.sectores.add(v));
+      (c.poblacion_meta||[]).forEach(g=>{ if(!pob[g])pob[g]={registros:0,cantidad:0,conCantidad:false}; pob[g].registros++; const n=Number((c.pm_cantidades||{})[g]); if(Number.isFinite(n)&&n>0){pob[g].cantidad+=n;pob[g].conCantidad=true;} });
+      (c.accion_comunidad||[]).forEach(a=>acciones[a]=(acciones[a]||0)+1);
+    });
+  });
+  const munTotal=new Set([...munCom,...munInst]);
+  document.getElementById('stats-organizacion').innerHTML=`
+    <div class="stat-card"><div class="label">Programas / proyectos</div><div class="value">${programas.length}</div></div>
+    <div class="stat-card"><div class="label">Municipios con presencia</div><div class="value">${munTotal.size}</div><div class="org-kpi-sub">${munCom.size} comunitaria · ${munInst.size} institucional/municipal</div></div>
+    <div class="stat-card"><div class="label">Lugares con presencia comunitaria</div><div class="value">${lugares.size}</div></div>
+    <div class="stat-card"><div class="label">Sectores registrados</div><div class="value">${sectores.length}</div></div>`;
+  document.getElementById('perfil-organizacion').innerHTML=`
+    <div class="org-list-row"><b>Tipo de actor</b><div>${tipos.join(', ')||'No reportado'}</div></div>
+    <div class="org-list-row"><b>Sectores</b><div class="pill-list" style="margin-top:6px">${sectores.length?sectores.map(x=>`<span class="pill">${x}</span>`).join(''):'No reportados'}</div></div>
+    <div class="org-list-row"><b>Estado de los programas</b><div>${[...estados].join(', ')||'No reportado'}</div></div>
+    <div class="org-list-row"><b>Municipios con presencia comunitaria</b><div>${[...munCom].sort().join(', ')||'Ninguno reportado'}</div></div>
+    <div class="org-list-row"><b>Municipios con presencia institucional / municipal</b><div>${[...munInst].sort().join(', ')||'Ninguno reportado'}</div></div>`;
+  const pe=Object.entries(pob).sort((a,b)=>b[1].registros-a[1].registros);
+  document.getElementById('poblacion-organizacion').innerHTML=pe.length?pe.map(([g,v])=>`<div class="inst-row"><span>${g}</span><span>${v.conCantidad?v.cantidad.toLocaleString('es-GT'):'Cantidad no reportada'}</span></div>`).join(''):'<div class="empty">Sin población meta reportada.</div>';
+  const ae=Object.entries(acciones).sort((a,b)=>b[1]-a[1]);
+  document.getElementById('acciones-organizacion').innerHTML=ae.length?ae.map(([a,n])=>`<div class="inst-row"><span>${a}</span><span>${n} registro${n===1?'':'s'}</span></div>`).join(''):'<div class="empty">Sin acciones/capacidades reportadas.</div>';
+  const periodo=p=>`${p.fecha_inicio||'No reportado'} → ${p.fecha_fin||'No reportada'}`;
+  document.querySelector('#tabla-programas-organizacion tbody').innerHTML=programas.length?programas.map(p=>{
+    const ms=new Set([...(p.comunidades||[]).map(c=>c.municipio),...(p.municipios_cobertura_institucional||[])]);
+    return `<tr><td><b>${p.nombre_programa||'—'}</b></td><td>${p.tipo_atencion||'—'}</td><td>${p.estado_programa||'—'}</td><td>${(p.sector||[]).join(', ')||'—'}</td><td>${[...ms].filter(Boolean).join(', ')||'—'}</td><td>${periodo(p)}</td><td>${p.monto_rango||'No reportada'}</td></tr>`;
+  }).join(''):'<tr><td colspan="7" class="empty">Sin programas/proyectos registrados.</td></tr>';
+  const rows=[]; programas.forEach(p=>(p.comunidades||[]).forEach(c=>rows.push({p,c})));
+  document.getElementById('sub-cobertura-organizacion').textContent=`${lugares.size} lugares poblados con presencia comunitaria registrada en ${munCom.size} municipio${munCom.size===1?'':'s'}.`;
+  document.querySelector('#tabla-comunidades-organizacion tbody').innerHTML=rows.length?rows.sort((a,b)=>(a.c.municipio||'').localeCompare(b.c.municipio||'','es')||(a.c.lugar_poblado||'').localeCompare(b.c.lugar_poblado||'','es')).map(({p,c})=>`<tr><td>${c.municipio||'—'}</td><td><b>${c.lugar_poblado||'—'}</b></td><td>${p.nombre_programa||'—'}</td><td>${(c.poblacion_meta||[]).join(', ')||'—'}</td><td>${(c.accion_comunidad||[]).join(', ')||'—'}</td></tr>`).join(''):'<tr><td colspan="5" class="empty">Sin presencia comunitaria registrada.</td></tr>';
+
+  initOrgMap(); orgCommunityLayer.clearLayers(); orgInstitutionalLayer.clearLayers();
+  const bounds=[];
+  lugares.forEach(c=>{ if(Number.isFinite(Number(c.lat))&&Number.isFinite(Number(c.lon))){ const ll=[Number(c.lat),Number(c.lon)]; bounds.push(ll); const mk=L.circleMarker(ll,{radius:7,color:'#003058',fillColor:'#003058',fillOpacity:.9,weight:2}); mk.bindPopup(`<b>${c.lugar_poblado}</b><br>${c.municipio}<br><span style="color:#5B6672">Presencia comunitaria registrada</span>`); mk.addTo(orgCommunityLayer); }});
+  // Para municipios con presencia institucional sin punto comunitario, usamos el centro promedio de los lugares georreferenciados del municipio solo como referencia cartográfica.
+  [...munInst].forEach(m=>{ const pts=basePlaces.filter(x=>x.municipio===m&&Number.isFinite(Number(x.lat))&&Number.isFinite(Number(x.lon))); if(!pts.length)return; const lat=pts.reduce((a,x)=>a+Number(x.lat),0)/pts.length, lon=pts.reduce((a,x)=>a+Number(x.lon),0)/pts.length; const ll=[lat,lon]; bounds.push(ll); const mk=L.circleMarker(ll,{radius:9,color:'#C99048',fillColor:'#DFB26F',fillOpacity:.65,weight:2,dashArray:'4 3'}); mk.bindPopup(`<b>${m}</b><br>Presencia institucional / municipal reportada<br><span style="color:#5B6672">Marcador de referencia municipal; no representa una comunidad específica.</span>`); mk.addTo(orgInstitutionalLayer); });
+  if(bounds.length) orgMap.fitBounds(bounds,{padding:[30,30],maxZoom:12}); else orgMap.setView([14.75,-89.45],9);
+  document.getElementById('submap-organizacion').textContent=`${org}: ${lugares.size} lugares con presencia comunitaria; ${munInst.size} municipios con presencia institucional/municipal reportada.`;
+  setTimeout(()=>orgMap.invalidateSize(),50);
+}
+
+function renderInstituciones(){ poblarSelectorOrganizacion(); }
 
 function renderPoblacionAccion(){
   const matriz = DATA.matriz_poblacion_accion || {};
