@@ -318,7 +318,7 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
   <!-- ===== VISTA: MATRIZ ===== -->
   <section class="view" id="view-matriz">
     <div class="section-title">Matriz Sector × Municipio</div>
-    <div class="section-sub">Cantidad de programas por sector en cada municipio. Las celdas en rojo son ceros — ausencia de cooperación registrada en ese cruce, no necesariamente una brecha confirmada (para eso hace falta contrastar con datos de necesidad).</div>
+    <div class="section-sub">Cantidad de programas/proyectos registrados por sector en cada municipio. La última columna indica cuántos municipios tienen al menos una presencia registrada en ese sector; no suma programas entre municipios. Las celdas en cero indican ausencia de cooperación registrada en ese cruce, no necesariamente una brecha confirmada.</div>
     <div class="matrix-wrap"><table class="matrix" id="tabla-matriz"></table></div>
   </section>
 
@@ -898,15 +898,15 @@ function renderMatriz(){
   sectores.forEach(s=>Object.keys(DATA.matriz_sector_municipio[s]).forEach(m=>municipiosSet.add(m)));
   const municipios = [...municipiosSet].sort();
 
-  let html = '<tr><th>SECTOR \\ MUNICIPIO</th>' + municipios.map(m=>`<th>${m}</th>`).join('') + '<th>TOTAL</th></tr>';
+  let html = '<tr><th>SECTOR \\ MUNICIPIO</th>' + municipios.map(m=>`<th>${m}</th>`).join('') + '<th>MUNICIPIOS CON PRESENCIA</th></tr>';
   sectores.forEach(s=>{
-    let total = 0;
+    let municipiosConPresencia = 0;
     const celdas = municipios.map(m=>{
       const n = (DATA.matriz_sector_municipio[s][m]) || 0;
-      total += n;
-      return `<td class="${n===0?'zero':''}">${n||0}</td>`;
+      if(n > 0) municipiosConPresencia += 1;
+      return `<td class="${n===0?'zero':''}" title="${n>0 ? `${n} programa(s)/proyecto(s) registrado(s) en ${m}` : `Sin presencia registrada en ${m}`}">${n||0}</td>`;
     }).join('');
-    html += `<tr><td class="rowhead">${s}</td>${celdas}<td style="font-weight:700;">${total}</td></tr>`;
+    html += `<tr><td class="rowhead">${s}</td>${celdas}<td style="font-weight:700;" title="Número de municipios con al menos un programa/proyecto registrado en este sector">${municipiosConPresencia}</td></tr>`;
   });
   document.getElementById('tabla-matriz').innerHTML = html;
 }
