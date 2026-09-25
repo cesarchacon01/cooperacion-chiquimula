@@ -163,7 +163,7 @@
   <!-- ===== VISTA: POR MUNICIPIO (ficha ejecutiva territorial) ===== -->
   <section class="view" id="view-municipio">
     <div class="section-title">Ficha ejecutiva municipal</div>
-    <div class="section-sub">Consulta consolidada de la cooperación registrada en cada municipio: quién interviene, dónde, en qué sectores, con qué población y mediante qué acciones. La ausencia de registros no confirma por sí sola una brecha de atención.</div>
+    <div class="section-sub">Consulta consolidada de la cooperación registrada en cada municipio: quién interviene, dónde, en qué sectores, con qué población y mediante qué acciones. La ficha distingue presencia comunitaria de presencia institucional/municipal; la ausencia de registros no confirma por sí sola una brecha de atención.</div>
     <div class="filters">
       <label>MUNICIPIO</label>
       <select id="f-municipio-panel"></select>
@@ -817,12 +817,17 @@ function renderMunicipio(){
   const cubiertas=Object.keys(porComunidad).length;
   const totalCatalogo=r.comunidades_total_catalogo||comunidadesBase.length;
   const sinPresencia=Math.max(0,totalCatalogo-cubiertas);
+  // La presencia institucional/municipal es distinta de la presencia comunitaria.
+  // Un programa puede reportar trabajo con instituciones del municipio sin haber
+  // registrado lugares poblados específicos.
+  const programasInstitucionales=programas.filter(p=>(p.municipios_cobertura_institucional||[]).includes(m));
+  const presenciaInstitucional=programasInstitucionales.length>0;
 
   document.getElementById('stats-municipio').innerHTML = `
     <div class="stat-card"><div class="label">Organizaciones</div><div class="value">${r.organizaciones.length}</div></div>
     <div class="stat-card"><div class="label">Programas / proyectos</div><div class="value">${programas.length}</div></div>
-    <div class="stat-card"><div class="label">Lugares con presencia</div><div class="value">${cubiertas} <span style="font-size:16px;color:#8B9199;font-weight:500;">de ${totalCatalogo}</span></div></div>
-    <div class="stat-card"><div class="label">Sin presencia registrada</div><div class="value">${sinPresencia}</div></div>`;
+    <div class="stat-card"><div class="label">Presencia comunitaria</div><div class="value">${cubiertas} <span style="font-size:16px;color:#8B9199;font-weight:500;">de ${totalCatalogo}</span></div><div style="margin-top:5px;font-size:12px;color:#6B7280;">lugares poblados con registro</div></div>
+    <div class="stat-card"><div class="label">Presencia institucional / municipal</div><div class="value" style="font-size:24px;">${presenciaInstitucional?'Sí':'No registrada'}</div><div style="margin-top:5px;font-size:12px;color:#6B7280;">${presenciaInstitucional?programasInstitucionales.length+' programa'+(programasInstitucionales.length===1?'':'s')+' con cobertura institucional':'Sin cobertura institucional reportada'}</div></div>`;
 
   const sectorEntries=Object.entries(r.sectores||{}), maxSector=Math.max(1,...sectorEntries.map(e=>e[1]));
   document.getElementById('barras-sector-municipio').innerHTML=sectorEntries.length?sectorEntries.sort((a,b)=>b[1]-a[1]).map(([s,n])=>barra(s,n,maxSector)).join(''):'<div class="empty">Sin programas registrados en este municipio.</div>';
@@ -843,10 +848,10 @@ function renderMunicipio(){
   const tbc=document.querySelector('#tabla-comunidades-municipio tbody');
   const comEntries=Object.values(porComunidad).sort((a,b)=>a.lugar.localeCompare(b.lugar,'es'));
   tbc.innerHTML=comEntries.length?comEntries.map(c=>`<tr><td><b>${c.lugar}</b></td><td>${[...c.orgs].join(', ')||'—'}</td><td>${[...c.programas].join(', ')||'—'}</td><td>${[...c.sectores].join(', ')||'—'}</td><td>${[...c.estados].join(', ')||'—'}</td></tr>`).join(''):'<tr><td colspan="5" class="empty">Sin presencia comunitaria registrada.</td></tr>';
-  document.getElementById('sub-cobertura-municipio').textContent=`${cubiertas} lugares con presencia registrada de ${totalCatalogo} lugares del catálogo municipal. ${sinPresencia} aparecen sin presencia registrada; esto no confirma por sí solo una brecha de atención.`;
+  document.getElementById('sub-cobertura-municipio').textContent=`${cubiertas} lugares con presencia comunitaria registrada de ${totalCatalogo} lugares del catálogo municipal. ${sinPresencia} aparecen sin presencia comunitaria registrada. Esto no significa que el municipio no tenga cooperación: la cobertura institucional/municipal se reporta por separado y la ausencia de registro comunitario no confirma por sí sola una brecha de atención.`;
 
   const instEntries=Object.entries(r.instituciones||{});
-  document.getElementById('lista-instituciones-municipio').innerHTML=instEntries.length?instEntries.map(([tipo,n])=>`<div class="inst-row"><span>${tipo}</span><span>${n}</span></div>`).join(''):'<div class="empty">Sin fortalecimiento institucional reportado aquí.</div>';
+  document.getElementById('lista-instituciones-municipio').innerHTML=instEntries.length?instEntries.map(([tipo,n])=>`<div class="inst-row"><span>${tipo}</span><span>${Number(n)>0?Number(n).toLocaleString('es-GT'):'Cantidad no reportada'}</span></div>`).join(''):'<div class="empty">Sin fortalecimiento institucional reportado aquí.</div>';
   const fuenteEntries=Object.entries(r.fuente_financiamiento||{});
   document.getElementById('lista-fuente-municipio').innerHTML=fuenteEntries.length?fuenteEntries.map(([f,n])=>`<div class="inst-row"><span>${f}</span><span>${n}</span></div>`).join(''):'<div class="empty">Sin fuente de financiamiento reportada.</div>';
 }
