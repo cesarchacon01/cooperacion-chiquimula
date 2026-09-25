@@ -160,10 +160,10 @@
     </div>
   </section>
 
-  <!-- ===== VISTA: POR MUNICIPIO (panel de decisión) ===== -->
+  <!-- ===== VISTA: POR MUNICIPIO (ficha ejecutiva territorial) ===== -->
   <section class="view" id="view-municipio">
-    <div class="section-title">Panel por municipio</div>
-    <div class="section-sub">Vista consolidada para decidir dónde priorizar: cobertura territorial, inversión estimada, sectores y estado de los programas, todo filtrado a un solo municipio.</div>
+    <div class="section-title">Ficha ejecutiva municipal</div>
+    <div class="section-sub">Consulta consolidada de la cooperación registrada en cada municipio: quién interviene, dónde, en qué sectores, con qué población y mediante qué acciones. La ausencia de registros no confirma por sí sola una brecha de atención.</div>
     <div class="filters">
       <label>MUNICIPIO</label>
       <select id="f-municipio-panel"></select>
@@ -171,8 +171,8 @@
     <div class="stats" id="stats-municipio"></div>
     <div class="layout">
       <div class="card">
-        <div class="side-title">Sectores en este municipio</div>
-        <div class="side-sub">Cantidad de programas por sector.</div>
+        <div class="side-title">Sectores de intervención</div>
+        <div class="side-sub">Número de programas/proyectos registrados por sector.</div>
         <div id="barras-sector-municipio"></div>
         <div class="side-title" style="margin-top:22px;">Estado de los programas</div>
         <div id="barras-estado-municipio"></div>
@@ -183,13 +183,34 @@
           <div id="lista-orgs-municipio" class="pill-list"></div>
         </div>
         <div class="card" style="margin-top:16px;">
-          <div class="side-title">Instituciones fortalecidas</div>
-          <div id="lista-instituciones-municipio"></div>
+          <div class="side-title">Población atendida / meta</div>
+          <div class="side-sub">Grupos reportados en las comunidades del municipio. Las cantidades se muestran por grupo y no se interpretan como personas únicas.</div>
+          <div id="poblacion-municipio"></div>
         </div>
         <div class="card" style="margin-top:16px;">
-          <div class="side-title">Fuente de financiamiento</div>
-          <div id="lista-fuente-municipio"></div>
+          <div class="side-title">Acciones / capacidades locales</div>
+          <div id="acciones-municipio"></div>
         </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="side-title">Programas y proyectos registrados</div>
+      <div class="side-sub">Cada fila corresponde a un programa/proyecto con presencia comunitaria o institucional reportada en el municipio.</div>
+      <div style="overflow-x:auto"><table id="tabla-programas-municipio"><thead><tr><th>ORGANIZACIÓN</th><th>PROGRAMA / PROYECTO</th><th>TIPO DE ATENCIÓN</th><th>ESTADO</th><th>SECTORES</th><th>PERÍODO</th><th>INVERSIÓN REPORTADA</th></tr></thead><tbody></tbody></table></div>
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="side-title">Cobertura por lugar poblado</div>
+      <div class="side-sub" id="sub-cobertura-municipio"></div>
+      <div style="overflow-x:auto"><table id="tabla-comunidades-municipio"><thead><tr><th>LUGAR POBLADO</th><th>ORGANIZACIONES</th><th>PROGRAMAS</th><th>SECTORES</th><th>ESTADO</th></tr></thead><tbody></tbody></table></div>
+    </div>
+    <div class="layout" style="margin-top:16px;">
+      <div class="card">
+        <div class="side-title">Instituciones fortalecidas</div>
+        <div id="lista-instituciones-municipio"></div>
+      </div>
+      <div class="card">
+        <div class="side-title">Fuentes de financiamiento reportadas</div>
+        <div id="lista-fuente-municipio"></div>
       </div>
     </div>
   </section>
@@ -752,38 +773,65 @@ function renderMunicipio(){
   const r = DATA.resumen_municipio[m];
   if(!r) return;
 
+  const programas = DATA.programas.filter(p => {
+    const comunitaria=(p.comunidades||[]).some(c=>c.municipio===m);
+    const institucional=(p.municipios_cobertura_institucional||[]).includes(m);
+    return comunitaria || institucional;
+  });
+  const comunidadesBase=basePlaces.filter(x=>x.municipio===m);
+  const porComunidad={};
+  const pob={}; const acciones={};
+  programas.forEach(p=>{
+    (p.comunidades||[]).filter(c=>c.municipio===m).forEach(c=>{
+      const key=c.codigo_lugar||c.lugar_poblado;
+      if(!porComunidad[key]) porComunidad[key]={lugar:c.lugar_poblado,orgs:new Set(),programas:new Set(),sectores:new Set(),estados:new Set()};
+      const x=porComunidad[key];
+      if(p.organizacion) x.orgs.add(p.organizacion); if(p.nombre_programa) x.programas.add(p.nombre_programa);
+      (p.sector||[]).forEach(v=>x.sectores.add(v)); if(p.estado_programa) x.estados.add(p.estado_programa);
+      (c.poblacion_meta||[]).forEach(grupo=>{
+        if(!pob[grupo]) pob[grupo]={registros:0,cantidad:0,conCantidad:false};
+        pob[grupo].registros++;
+        const n=Number((c.pm_cantidades||{})[grupo]);
+        if(Number.isFinite(n)&&n>0){pob[grupo].cantidad+=n;pob[grupo].conCantidad=true;}
+      });
+      (c.accion_comunidad||[]).forEach(a=>{acciones[a]=(acciones[a]||0)+1;});
+    });
+  });
+  const cubiertas=Object.keys(porComunidad).length;
+  const totalCatalogo=r.comunidades_total_catalogo||comunidadesBase.length;
+  const sinPresencia=Math.max(0,totalCatalogo-cubiertas);
+
   document.getElementById('stats-municipio').innerHTML = `
     <div class="stat-card"><div class="label">Organizaciones</div><div class="value">${r.organizaciones.length}</div></div>
-    <div class="stat-card"><div class="label">Programas</div><div class="value">${r.total_programas}</div></div>
-    <div class="stat-card"><div class="label">Comunidades cubiertas</div><div class="value">${r.comunidades_cubiertas} <span style="font-size:16px;color:#8B9199;font-weight:500;">de ${r.comunidades_total_catalogo}</span></div></div>
-    <div class="stat-card"><div class="label">Inversión estimada</div><div class="value" style="font-size:22px;">${formatoQ(r.inversion_estimada)}</div></div>
-  `;
+    <div class="stat-card"><div class="label">Programas / proyectos</div><div class="value">${programas.length}</div></div>
+    <div class="stat-card"><div class="label">Lugares con presencia</div><div class="value">${cubiertas} <span style="font-size:16px;color:#8B9199;font-weight:500;">de ${totalCatalogo}</span></div></div>
+    <div class="stat-card"><div class="label">Sin presencia registrada</div><div class="value">${sinPresencia}</div></div>`;
 
-  const sectorEntries = Object.entries(r.sectores);
-  const maxSector = Math.max(1, ...sectorEntries.map(e=>e[1]));
-  document.getElementById('barras-sector-municipio').innerHTML = sectorEntries.length
-    ? sectorEntries.sort((a,b)=>b[1]-a[1]).map(([s,n])=>barra(s,n,maxSector)).join('')
-    : '<div class="empty">Sin programas registrados en este municipio.</div>';
+  const sectorEntries=Object.entries(r.sectores||{}), maxSector=Math.max(1,...sectorEntries.map(e=>e[1]));
+  document.getElementById('barras-sector-municipio').innerHTML=sectorEntries.length?sectorEntries.sort((a,b)=>b[1]-a[1]).map(([s,n])=>barra(s,n,maxSector)).join(''):'<div class="empty">Sin programas registrados en este municipio.</div>';
+  const estadoEntries=Object.entries(r.estado||{}), maxEstado=Math.max(1,...estadoEntries.map(e=>e[1]));
+  document.getElementById('barras-estado-municipio').innerHTML=estadoEntries.length?estadoEntries.sort((a,b)=>b[1]-a[1]).map(([s,n])=>barra(s,n,maxEstado)).join(''):'<div class="empty">Sin estado reportado.</div>';
+  document.getElementById('lista-orgs-municipio').innerHTML=r.organizaciones.length?r.organizaciones.map(o=>`<span class="pill">${o}</span>`).join(''):'<div class="empty">Ninguna organización registrada todavía.</div>';
 
-  const estadoEntries = Object.entries(r.estado);
-  const maxEstado = Math.max(1, ...estadoEntries.map(e=>e[1]));
-  document.getElementById('barras-estado-municipio').innerHTML = estadoEntries.length
-    ? estadoEntries.sort((a,b)=>b[1]-a[1]).map(([s,n])=>barra(s,n,maxEstado)).join('')
-    : '<div class="empty">—</div>';
+  const pobEntries=Object.entries(pob).sort((a,b)=>b[1].registros-a[1].registros);
+  document.getElementById('poblacion-municipio').innerHTML=pobEntries.length?pobEntries.map(([g,v])=>`<div class="inst-row"><span>${g}</span><span>${v.conCantidad?v.cantidad.toLocaleString('es-GT'):'Cantidad no reportada'}</span></div>`).join(''):'<div class="empty">Sin población meta reportada.</div>';
+  const acEntries=Object.entries(acciones).sort((a,b)=>b[1]-a[1]);
+  document.getElementById('acciones-municipio').innerHTML=acEntries.length?acEntries.map(([a,n])=>`<div class="inst-row"><span>${a}</span><span>${n} registro${n===1?'':'s'}</span></div>`).join(''):'<div class="empty">Sin acciones/capacidades reportadas.</div>';
 
-  document.getElementById('lista-orgs-municipio').innerHTML = r.organizaciones.length
-    ? r.organizaciones.map(o=>`<span class="pill">${o}</span>`).join('')
-    : '<div class="empty">Ninguna organización registrada todavía.</div>';
+  const invTexto=p=>p.monto_rango||'No reportada';
+  const periodo=p=>{const i=p.fecha_inicio||'No reportado', f=p.fecha_fin||'No reportada'; return `${i} → ${f}`;};
+  const tbp=document.querySelector('#tabla-programas-municipio tbody');
+  tbp.innerHTML=programas.length?programas.map(p=>`<tr><td><b>${p.organizacion||'—'}</b></td><td>${p.nombre_programa||'—'}</td><td>${p.tipo_atencion||'—'}</td><td>${p.estado_programa||'—'}</td><td>${(p.sector||[]).join(', ')||'—'}</td><td>${periodo(p)}</td><td>${invTexto(p)}</td></tr>`).join(''):'<tr><td colspan="7" class="empty">Sin programas/proyectos registrados.</td></tr>';
 
-  const instEntries = Object.entries(r.instituciones);
-  document.getElementById('lista-instituciones-municipio').innerHTML = instEntries.length
-    ? instEntries.map(([tipo,n])=>`<div class="inst-row"><span>${tipo}</span><span>${n}</span></div>`).join('')
-    : '<div class="empty">Sin fortalecimiento institucional reportado aquí.</div>';
+  const tbc=document.querySelector('#tabla-comunidades-municipio tbody');
+  const comEntries=Object.values(porComunidad).sort((a,b)=>a.lugar.localeCompare(b.lugar,'es'));
+  tbc.innerHTML=comEntries.length?comEntries.map(c=>`<tr><td><b>${c.lugar}</b></td><td>${[...c.orgs].join(', ')||'—'}</td><td>${[...c.programas].join(', ')||'—'}</td><td>${[...c.sectores].join(', ')||'—'}</td><td>${[...c.estados].join(', ')||'—'}</td></tr>`).join(''):'<tr><td colspan="5" class="empty">Sin presencia comunitaria registrada.</td></tr>';
+  document.getElementById('sub-cobertura-municipio').textContent=`${cubiertas} lugares con presencia registrada de ${totalCatalogo} lugares del catálogo municipal. ${sinPresencia} aparecen sin presencia registrada; esto no confirma por sí solo una brecha de atención.`;
 
-  const fuenteEntries = Object.entries(r.fuente_financiamiento);
-  document.getElementById('lista-fuente-municipio').innerHTML = fuenteEntries.length
-    ? fuenteEntries.map(([f,n])=>`<div class="inst-row"><span>${f}</span><span>${n}</span></div>`).join('')
-    : '<div class="empty">Sin dato de financiamiento.</div>';
+  const instEntries=Object.entries(r.instituciones||{});
+  document.getElementById('lista-instituciones-municipio').innerHTML=instEntries.length?instEntries.map(([tipo,n])=>`<div class="inst-row"><span>${tipo}</span><span>${n}</span></div>`).join(''):'<div class="empty">Sin fortalecimiento institucional reportado aquí.</div>';
+  const fuenteEntries=Object.entries(r.fuente_financiamiento||{});
+  document.getElementById('lista-fuente-municipio').innerHTML=fuenteEntries.length?fuenteEntries.map(([f,n])=>`<div class="inst-row"><span>${f}</span><span>${n}</span></div>`).join(''):'<div class="empty">Sin fuente de financiamiento reportada.</div>';
 }
 
 function renderInversion(){
