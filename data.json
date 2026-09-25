@@ -1,0 +1,13 @@
+{
+  "generado": "2026-09-24T00:00:00-06:00",
+  "nota": "Base preparada para datos reales de cooperación",
+  "programas": [],
+  "municipios": ["Camotán","Chiquimula","Concepción Las Minas","Esquipulas","Ipala","Jocotán","Olopa","Quezaltepeque","San Jacinto","San José La Arada","San Juan Ermita"],
+  "resumen_municipio": {},
+  "matriz_sector_municipio": {},
+  "comunidades_sin_cobertura": [],
+  "duplicidad": [],
+  "instituciones_resumen": {},
+  "matriz_poblacion_accion": {},
+  "inversion": {"total_estimada":0,"programas_con_monto":0,"programas_sin_monto":0,"por_sector":{}}
+}
