@@ -267,19 +267,50 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
 
   <!-- ===== VISTA: INVERSIÓN ===== -->
   <section class="view" id="view-inversion">
-    <div class="section-title">Inversión de la cooperación (estimada)</div>
-    <div class="section-sub">Cada programa reporta un <b>rango</b> de inversión, no un monto exacto. Para dar una magnitud comparable, se usa el punto medio de cada rango (ej. "Q500,000–Q2,000,000" → Q1,250,000). Es una aproximación para priorizar, no una cifra contable real.</div>
+    <div class="section-title">Inversión reportada de la cooperación</div>
+    <div class="section-sub">Consulta de los montos o rangos de inversión tal como fueron reportados por cada programa/proyecto. No se calculan puntos medios ni se distribuyen montos entre municipios o sectores. “No reportada” significa únicamente que el registro no contiene un monto o rango de inversión.</div>
+
+    <div class="filters" style="margin-top:14px;">
+      <span class="filter-label">FILTROS</span>
+      <select id="inv-organizacion"><option value="">Organización: todas</option></select>
+      <select id="inv-municipio"><option value="">Municipio: todos</option></select>
+      <select id="inv-estado"><option value="">Estado: todos</option></select>
+      <button class="clear-btn" id="inv-limpiar">Limpiar filtros</button>
+    </div>
+
     <div class="stats" id="stats-inversion"></div>
+
     <div class="layout">
       <div class="card">
-        <div class="side-title">Inversión estimada por municipio</div>
-        <div class="side-sub">Cuando un programa cubre varios municipios, su monto se reparte en partes iguales entre ellos.</div>
-        <table id="tabla-inversion-municipio"><thead><tr><th>MUNICIPIO</th><th>INVERSIÓN ESTIMADA</th><th>PROGRAMAS</th></tr></thead><tbody></tbody></table>
+        <div class="side-title">Programas / proyectos e inversión reportada</div>
+        <div class="side-sub">Se conserva el dato original reportado. Un rango no se convierte en una cifra estimada.</div>
+        <div style="overflow-x:auto">
+          <table id="tabla-inversion-programas">
+            <thead><tr><th>ORGANIZACIÓN</th><th>PROGRAMA / PROYECTO</th><th>INVERSIÓN REPORTADA</th><th>ESTADO</th><th>MUNICIPIOS</th><th>SECTORES</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
       </div>
       <div class="card">
-        <div class="side-title">Inversión estimada por sector</div>
-        <div class="side-sub">Cuando un programa toca varios sectores, su monto se reparte en partes iguales entre ellos.</div>
-        <table id="tabla-inversion-sector"><thead><tr><th>SECTOR</th><th>INVERSIÓN ESTIMADA</th></tr></thead><tbody></tbody></table>
+        <div class="side-title">Lectura territorial</div>
+        <div class="side-sub">Número de programas/proyectos con presencia registrada por municipio y situación del dato de inversión.</div>
+        <div id="inv-territorial"></div>
+      </div>
+    </div>
+
+    <div class="layout" style="margin-top:16px;">
+      <div class="card">
+        <div class="side-title">Cobertura del dato de inversión</div>
+        <div class="side-sub">Permite identificar qué registros cuentan con información financiera y cuáles requieren completar el dato.</div>
+        <div id="inv-calidad"></div>
+      </div>
+      <div class="card">
+        <div class="side-title">Criterio de interpretación</div>
+        <div class="side-sub">Esta vista no presenta una inversión total departamental cuando los registros contienen rangos o datos no comparables.</div>
+        <div class="inst-row"><span>Monto o rango reportado</span><span>Se muestra literalmente</span></div>
+        <div class="inst-row"><span>Rango de inversión</span><span>No se calcula punto medio</span></div>
+        <div class="inst-row"><span>Varios municipios/sectores</span><span>No se reparte el monto</span></div>
+        <div class="inst-row"><span>Sin dato financiero</span><span>No reportada</span></div>
       </div>
     </div>
   </section>
@@ -984,23 +1015,116 @@ function renderMunicipio(){
 }
 
 function renderInversion(){
-  const inv = DATA.inversion;
+  const programas = DATA.programas || [];
+  const selOrg = document.getElementById('inv-organizacion');
+  const selMun = document.getElementById('inv-municipio');
+  const selEst = document.getElementById('inv-estado');
+
+  const municipiosPrograma = p => [...new Set([
+    ...(p.comunidades||[]).map(c=>c.municipio),
+    ...(p.municipios_cobertura_institucional||[])
+  ].filter(Boolean))];
+
+  const inversionPrograma = p => {
+    const candidatos = [
+      p.inversion_reportada, p.rango_inversion, p.inversion_rango,
+      p.monto_inversion, p.inversion, p.monto_rango
+    ];
+    const v = candidatos.find(x => x !== undefined && x !== null && String(x).trim() !== '');
+    return v === undefined ? '' : String(v).trim();
+  };
+
+  const esNoReportada = v => {
+    const x = String(v||'').trim().toLowerCase();
+    return !x || ['no reportada','no reportado','sin dato','n/a','na','—','-'].includes(x);
+  };
+
+  const pareceRango = v => {
+    const x=String(v||'').toLowerCase();
+    return /(\ba\b|hasta|–|—| - |entre)/.test(x) && /\d/.test(x);
+  };
+
+  const poblar = (sel, vals, etiqueta) => {
+    if(!sel || sel.dataset.ready==='1') return;
+    [...new Set(vals.filter(Boolean))].sort((a,b)=>String(a).localeCompare(String(b),'es'))
+      .forEach(v=>sel.add(new Option(v,v)));
+    sel.dataset.ready='1';
+    sel.onchange=renderInversion;
+  };
+
+  poblar(selOrg, programas.map(p=>p.organizacion), 'Organización');
+  poblar(selMun, programas.flatMap(municipiosPrograma), 'Municipio');
+  poblar(selEst, programas.map(p=>p.estado_programa), 'Estado');
+
+  const org = selOrg?.value || '';
+  const mun = selMun?.value || '';
+  const est = selEst?.value || '';
+
+  const filtrados = programas.filter(p =>
+    (!org || p.organizacion===org) &&
+    (!est || p.estado_programa===est) &&
+    (!mun || municipiosPrograma(p).includes(mun))
+  );
+
+  const conDato = filtrados.filter(p=>!esNoReportada(inversionPrograma(p)));
+  const sinDato = filtrados.filter(p=>esNoReportada(inversionPrograma(p)));
+  const conRango = conDato.filter(p=>pareceRango(inversionPrograma(p)));
+  const orgs = new Set(filtrados.map(p=>p.organizacion).filter(Boolean));
+  const munis = new Set(filtrados.flatMap(municipiosPrograma));
+
   document.getElementById('stats-inversion').innerHTML = `
-    <div class="stat-card"><div class="label">Inversión total estimada</div><div class="value" style="font-size:24px;">${formatoQ(inv.total_estimada)}</div></div>
-    <div class="stat-card"><div class="label">Programas con monto indicado</div><div class="value">${inv.programas_con_monto}</div></div>
-    <div class="stat-card"><div class="label">Programas sin monto / prefieren no indicar</div><div class="value">${inv.programas_sin_monto}</div></div>
+    <div class="stat-card"><div class="label">Programas / proyectos</div><div class="value">${filtrados.length}</div></div>
+    <div class="stat-card"><div class="label">Con inversión reportada</div><div class="value">${conDato.length}</div></div>
+    <div class="stat-card"><div class="label">Sin inversión reportada</div><div class="value">${sinDato.length}</div></div>
+    <div class="stat-card"><div class="label">Municipios con presencia</div><div class="value">${munis.size}</div><div class="small">${orgs.size} organización${orgs.size===1?'':'es'}</div></div>
   `;
 
-  const filas = Object.entries(DATA.resumen_municipio)
-    .map(([m,r])=>[m, r.inversion_estimada, r.total_programas])
-    .sort((a,b)=>b[1]-a[1]);
-  document.querySelector('#tabla-inversion-municipio tbody').innerHTML = filas
-    .map(([m,inv,n])=>`<tr><td>${m}</td><td>${formatoQ(inv)}</td><td>${n}</td></tr>`).join('');
+  const tbody=document.querySelector('#tabla-inversion-programas tbody');
+  tbody.innerHTML = filtrados.length ? filtrados.map(p=>{
+    const inv=inversionPrograma(p);
+    return `<tr>
+      <td><b>${escaparHtml(p.organizacion||'—')}</b></td>
+      <td>${escaparHtml(p.nombre_programa||'—')}</td>
+      <td><b>${escaparHtml(esNoReportada(inv)?'No reportada':inv)}</b></td>
+      <td>${escaparHtml(p.estado_programa||'—')}</td>
+      <td>${escaparHtml(municipiosPrograma(p).join(', ')||'—')}</td>
+      <td>${escaparHtml((p.sector||[]).join(', ')||'—')}</td>
+    </tr>`;
+  }).join('') : '<tr><td colspan="6" class="empty">No hay programas/proyectos que cumplan los filtros seleccionados.</td></tr>';
 
-  const filasSector = Object.entries(inv.por_sector).sort((a,b)=>b[1]-a[1]);
-  document.querySelector('#tabla-inversion-sector tbody').innerHTML = filasSector.length
-    ? filasSector.map(([s,v])=>`<tr><td>${s}</td><td>${formatoQ(v)}</td></tr>`).join('')
-    : '<tr><td colspan="2" class="empty">Sin montos indicados todavía.</td></tr>';
+  const porMuni={};
+  filtrados.forEach(p=>{
+    const tiene=!esNoReportada(inversionPrograma(p));
+    municipiosPrograma(p).forEach(m=>{
+      if(!porMuni[m]) porMuni[m]={programas:new Set(), con:0, sin:0};
+      porMuni[m].programas.add((p.organizacion||'')+'|'+(p.nombre_programa||''));
+      if(tiene) porMuni[m].con++; else porMuni[m].sin++;
+    });
+  });
+  const territorial=Object.entries(porMuni).sort((a,b)=>b[1].programas.size-a[1].programas.size);
+  document.getElementById('inv-territorial').innerHTML = territorial.length ? territorial.map(([m,v])=>`
+    <div class="inst-row"><span><b>${escaparHtml(m)}</b><br><span class="small">${v.programas.size} programa${v.programas.size===1?'':'s'}</span></span>
+    <span>${v.con} con dato · ${v.sin} sin dato</span></div>`).join('') :
+    '<div class="empty">Sin presencia territorial para esta consulta.</div>';
+
+  const pct = filtrados.length ? Math.round((conDato.length/filtrados.length)*100) : 0;
+  document.getElementById('inv-calidad').innerHTML = `
+    <div class="inst-row"><span>Registros con dato de inversión</span><span><b>${conDato.length} de ${filtrados.length}</b> (${pct}%)</span></div>
+    <div class="inst-row"><span>Registros con rango identificable</span><span>${conRango.length}</span></div>
+    <div class="inst-row"><span>Registros sin dato de inversión</span><span>${sinDato.length}</span></div>
+    ${sinDato.length ? `<div class="side-sub" style="margin-top:12px;">Pendiente de completar: ${sinDato.map(p=>escaparHtml((p.organizacion||'—')+' · '+(p.nombre_programa||'—'))).join('; ')}</div>` : ''}
+  `;
+
+  const limpiar=document.getElementById('inv-limpiar');
+  if(limpiar && limpiar.dataset.ready!=='1'){
+    limpiar.dataset.ready='1';
+    limpiar.onclick=()=>{
+      if(selOrg) selOrg.value='';
+      if(selMun) selMun.value='';
+      if(selEst) selEst.value='';
+      renderInversion();
+    };
+  }
 }
 
 let orgMap=null, orgCommunityLayer=null, orgInstitutionalLayer=null;
