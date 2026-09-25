@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-25T16:59:52.229332+00:00",
+  "generado": "2026-09-25T17:08:26.468068+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. Base territorial del XLSForm: 996 lugares poblados.",
   "programas": [
     {
@@ -318,29 +318,29 @@
   },
   "matriz_sector_municipio": {
     "Agua y saneamiento": {
-      "San Juan Ermita": 1,
       "Chiquimula": 1,
-      "Camotán": 1
+      "Camotán": 1,
+      "San Juan Ermita": 1
     },
     "Ambiente y cambio climático": {
-      "San Juan Ermita": 1,
       "Chiquimula": 1,
-      "Camotán": 1
+      "Camotán": 1,
+      "San Juan Ermita": 1
     },
     "Gobernanza y fortalecimiento institucional": {
-      "San Juan Ermita": 1,
       "Chiquimula": 1,
-      "Camotán": 1
+      "Camotán": 1,
+      "San Juan Ermita": 1
     },
     "Reducción de riesgo ante desastres": {
-      "San Juan Ermita": 1,
       "Chiquimula": 1,
-      "Camotán": 1
+      "Camotán": 1,
+      "San Juan Ermita": 1
     },
     "Desarrollo económico local": {
-      "San Juan Ermita": 1,
       "Chiquimula": 1,
-      "Camotán": 1
+      "Camotán": 1,
+      "San Juan Ermita": 1
     }
   },
   "comunidades_sin_cobertura": [
