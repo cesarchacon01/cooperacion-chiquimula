@@ -390,7 +390,16 @@ function renderMapa(filtrados){
     const coopCodes=new Set(puntos.map(p=>p.codigo).filter(Boolean));
     basePlaces.filter(p=>(!muniSel||p.municipio===muniSel)&&(!lugarSel||p.codigo===lugarSel)).forEach(p=>{
       if(coopCodes.has(p.codigo)) return;
-      const marker=L.circleMarker([p.lat,p.lon],{radius:4.5,fillColor:'#fff',color:'#C98A6B',weight:1.6,fillOpacity:.95,opacity:.95});
+      // La base territorial cambia de jerarquía visual según el zoom:
+      // vista departamental = discreta; municipio/comunidad = más legible.
+      const z=map.getZoom();
+      const baseStyle = z >= 13
+        ? {radius:5.2,fillColor:'#fff',color:'#C98A6B',weight:1.6,fillOpacity:.88,opacity:.92}
+        : z >= 11
+          ? {radius:3.8,fillColor:'#fff',color:'#C98A6B',weight:1.25,fillOpacity:.62,opacity:.72}
+          : {radius:2.5,fillColor:'#fff',color:'#C98A6B',weight:1.0,fillOpacity:.32,opacity:.48};
+      const marker=L.circleMarker([p.lat,p.lon],baseStyle);
+      marker._territorialBase=true;
       marker.bindTooltip(`${p.lugar} · ${p.municipio}`,{direction:'top',opacity:.9});
       marker.bindPopup(`<b>${p.lugar}</b> (${p.municipio})<br><span style="color:#6B7280">${p.clasificacion||'Lugar poblado'}</span><br><br><b>Sin presencia de cooperación registrada</b>`);
       marker.on('click',()=>mostrarPanelTerritorial(p));
@@ -411,6 +420,23 @@ function renderMapa(filtrados){
     const bounds=(document.getElementById('layer-base').checked ? visibles : pts);
     if(bounds.length) map.fitBounds(L.latLngBounds(bounds),{padding:[30,30],maxZoom:13});
   }
+}
+
+
+function actualizarEstiloBasePorZoom(){
+  if(!baseLayer || !map) return;
+  const z=map.getZoom();
+  const style = z >= 13
+    ? {radius:5.2,weight:1.6,fillOpacity:.88,opacity:.92}
+    : z >= 11
+      ? {radius:3.8,weight:1.25,fillOpacity:.62,opacity:.72}
+      : {radius:2.5,weight:1.0,fillOpacity:.32,opacity:.48};
+  baseLayer.eachLayer(layer=>{
+    if(layer && layer._territorialBase && layer.setStyle){
+      layer.setRadius(style.radius);
+      layer.setStyle({weight:style.weight,fillOpacity:style.fillOpacity,opacity:style.opacity});
+    }
+  });
 }
 
 function mostrarPanelTerritorial(p){
@@ -663,6 +689,8 @@ async function iniciar(){
   markersLayer = L.layerGroup().addTo(map);
   coopLayer = L.layerGroup().addTo(markersLayer);
   baseLayer = L.layerGroup().addTo(markersLayer);
+  // Ajusta únicamente la simbología al acercar/alejar, sin recalcular filtros ni extensión.
+  map.on('zoomend', actualizarEstiloBasePorZoom);
   await cargarBaseTerritorial();
 
   poblarSelects();
