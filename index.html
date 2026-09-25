@@ -95,14 +95,18 @@
 
 /* Ficha ejecutiva por organización */
 /* La ficha de organizaciones aprovecha pantallas de escritorio amplias sin alterar las demás vistas */
-#view-instituciones.active{width:min(1760px,calc(100vw - 64px));max-width:none;position:relative;left:50%;transform:translateX(-50%)}
+/* Ancho real de pantalla para Instituciones: se libera también el contenedor <main>. */
+main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;padding-right:4vw;box-sizing:border-box}
+#view-instituciones.active{width:100%;max-width:none;margin:0;position:static;left:auto;transform:none}
 .org-toolbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:14px 0 20px}.org-toolbar label{font-size:12px;font-weight:700;color:var(--muted)}.org-toolbar select{min-width:340px}
-.org-layout{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(340px,.75fr);gap:20px;align-items:start}.org-side{display:flex;flex-direction:column;gap:16px}.org-map-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:18px}.org-map{height:560px;border-radius:11px;overflow:hidden;margin-top:10px}.org-note{font-size:11px;color:var(--muted);margin-top:8px;line-height:1.4}.org-list-row{padding:9px 0;border-top:1px solid #EFEBE2;font-size:13px}.org-list-row:first-child{border-top:none}.org-list-row b{color:var(--navy)}.org-kpi-sub{margin-top:4px;font-size:11px;color:var(--muted)}
-#view-instituciones .stats{grid-template-columns:repeat(4,minmax(180px,1fr))}
+.org-layout{display:grid;grid-template-columns:minmax(0,2.25fr) minmax(380px,1fr);gap:24px;align-items:start}.org-side{display:flex;flex-direction:column;gap:16px}.org-map-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:18px}.org-map{height:620px;border-radius:11px;overflow:hidden;margin-top:10px}.org-note{font-size:11px;color:var(--muted);margin-top:8px;line-height:1.4}.org-list-row{padding:9px 0;border-top:1px solid #EFEBE2;font-size:13px}.org-list-row:first-child{border-top:none}.org-list-row b{color:var(--navy)}.org-kpi-sub{margin-top:4px;font-size:11px;color:var(--muted)}
+#view-instituciones .stats{grid-template-columns:repeat(4,minmax(200px,1fr));gap:18px}
 #view-instituciones .card table{table-layout:auto}
 #view-instituciones .card{overflow:hidden}
-@media(max-width:1200px){#view-instituciones.active{width:100%;left:auto;transform:none}.org-layout{grid-template-columns:1.35fr .85fr}.org-map{height:480px}}
-@media(max-width:960px){.org-layout{grid-template-columns:1fr}.org-map{height:380px}#view-instituciones .stats{grid-template-columns:repeat(2,minmax(160px,1fr))}.org-toolbar select{min-width:240px}}
+@media(min-width:1800px){main:has(#view-instituciones.active){padding-left:5vw;padding-right:5vw}.org-layout{grid-template-columns:minmax(0,2.4fr) minmax(420px,1fr)}.org-map{height:650px}}
+@media(max-width:1200px){main:has(#view-instituciones.active){padding-left:24px;padding-right:24px}.org-layout{grid-template-columns:1.45fr .85fr}.org-map{height:500px}}
+@media(max-width:960px){.org-layout{grid-template-columns:1fr}.org-map{height:400px}#view-instituciones .stats{grid-template-columns:repeat(2,minmax(160px,1fr))}.org-toolbar select{min-width:240px}}
+@media(max-width:700px){main:has(#view-instituciones.active){padding-left:16px;padding-right:16px}}
 </style>
 </head>
 <body>
