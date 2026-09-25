@@ -90,7 +90,7 @@
 /* Ficha territorial multi-intervención */
 .panel-back{display:inline-flex;align-items:center;gap:6px;border:1px solid #D8DEE5;background:#fff;color:var(--navy);border-radius:8px;padding:7px 10px;font-size:12px;font-weight:700;cursor:pointer;margin-bottom:12px}.panel-back:hover{background:#F4F7F9}
 .community-kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:12px 0 14px}.community-kpi{border:1px solid #E3E6E8;border-radius:9px;padding:9px 10px;background:#FAFBFC}.community-kpi b{display:block;color:var(--navy);font-family:Georgia,serif;font-size:19px}.community-kpi span{font-size:10px;color:#68717C}
-.intervention-list{display:flex;flex-direction:column;gap:10px;margin-top:10px}.intervention-card{border:1px solid #DDE2E6;border-left:3px solid var(--gold);border-radius:9px;padding:11px 12px;background:#fff}.intervention-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.intervention-org{font-weight:800;color:var(--navy);font-size:13px}.intervention-program{font-size:12px;color:#4F5965;margin-top:2px}.intervention-meta{display:grid;grid-template-columns:1fr 1fr;gap:7px 12px;margin-top:9px}.intervention-meta div{font-size:11px;color:#5F6873}.intervention-meta b{display:block;color:#243444;font-size:10px;text-transform:uppercase;letter-spacing:.02em;margin-bottom:2px}.convergence-note{margin-top:12px;padding:10px 11px;border:1px solid #E6D5B7;border-radius:9px;background:#FBF8F2;font-size:11px;color:#5B5144}.community-section-title{font-size:13px;font-weight:800;color:var(--navy);margin-top:14px;margin-bottom:5px}
+.intervention-list{display:flex;flex-direction:column;gap:10px;margin-top:10px}.intervention-card{border:1px solid #DDE2E6;border-left:3px solid var(--gold);border-radius:9px;padding:11px 12px;background:#fff}.intervention-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.intervention-org{font-weight:800;color:var(--navy);font-size:13px}.intervention-program{font-size:12px;color:#4F5965;margin-top:2px}.intervention-meta{display:grid;grid-template-columns:1fr 1fr;gap:7px 12px;margin-top:9px}.intervention-meta div{font-size:11px;color:#5F6873}.intervention-meta b{display:block;color:#243444;font-size:10px;text-transform:uppercase;letter-spacing:.02em;margin-bottom:2px}.convergence-note{margin-top:12px;padding:10px 11px;border:1px solid #E6D5B7;border-radius:9px;background:#FBF8F2;font-size:11px;color:#5B5144}.sector-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:3px}.sector-tag{display:inline-block;padding:3px 7px;border:1px solid #D7DEE5;border-radius:999px;background:#F7F9FA;color:#34485A;font-size:10px;line-height:1.2}.investment-box{margin-top:9px;padding:8px 10px;border:1px solid #E5D6BB;border-radius:8px;background:#FCFAF6}.investment-box b{display:block;color:#243444;font-size:10px;text-transform:uppercase;letter-spacing:.02em;margin-bottom:3px}.investment-value{font-size:12px;font-weight:700;color:var(--navy)}.investment-kind{font-size:10px;color:#707983;margin-top:2px}.community-section-title{font-size:13px;font-weight:800;color:var(--navy);margin-top:14px;margin-bottom:5px}
 @media(max-width:700px){.intervention-meta,.community-kpis{grid-template-columns:1fr}}
 </style>
 </head>
@@ -394,7 +394,10 @@ function renderMapa(filtrados){
         organizacion:p.organizacion, sector:p.sector||[], programa:p.nombre_programa, cantidades:c.pm_cantidades,
         tipo_actor:p.tipo_actor||'', tipo_atencion:p.tipo_atencion||'', estado:p.estado_programa||'',
         fecha_inicio:p.fecha_inicio||'', fecha_fin:p.fecha_fin||'', poblacion_meta:c.poblacion_meta||[],
-        acciones:c.accion_comunidad||[]
+        acciones:c.accion_comunidad||[],
+        inversion_reportada:p.inversion_reportada ?? p.rango_inversion ?? p.inversion_rango ?? p.monto_inversion ?? p.inversion ?? '',
+        moneda:p.moneda_inversion ?? p.moneda ?? 'Q',
+        tipo_inversion:p.tipo_inversion ?? p.modalidad_inversion ?? ''
       });
       (c.poblacion_meta||[]).forEach(x=>porPunto[key].poblacion.add(x));
       (c.accion_comunidad||[]).forEach(x=>porPunto[key].acciones.add(x));
@@ -599,23 +602,49 @@ function mostrarPanelComunidad(p){
   const cantidades=p.entradas.map(e=>Number(e.cantidades)).filter(n=>Number.isFinite(n)&&n>0);
   const totalCantidades=cantidades.reduce((a,b)=>a+b,0);
 
+  const fechaLegible=v=>{
+    if(!v) return 'No reportada';
+    const x=String(v).slice(0,10);
+    const m=x.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    return m?`${m[3]}/${m[2]}/${m[1]}`:x;
+  };
+  const inversionInfo=e=>{
+    let v=e.inversion_reportada;
+    if(v===null||v===undefined||String(v).trim()===''||String(v).trim()==='0') return {valor:'No reportada',tipo:'Sin monto o rango reportado'};
+    const raw=String(v).trim();
+    const moneda=(e.moneda||'Q').trim();
+    let tipo=(e.tipo_inversion||'').trim();
+    if(!tipo){
+      tipo=/\b(a|hasta|entre)\b|[-–—]/i.test(raw)?'Rango reportado':'Monto reportado';
+    }
+    let valor=raw;
+    if(/^\d+(\.\d+)?$/.test(raw)) valor=`${moneda} ${Number(raw).toLocaleString('es-GT')}`;
+    else if(moneda && !raw.toUpperCase().startsWith(moneda.toUpperCase()) && !/[A-Z]{3}\s?\d/i.test(raw)) valor=`${moneda} ${raw}`;
+    return {valor,tipo};
+  };
+
   const tarjetas=p.entradas.map((e,i)=>{
-    const periodo=[e.fecha_inicio,e.fecha_fin].filter(Boolean).map(x=>String(x).slice(0,10)).join(' → ')||'No reportado';
-    const sec=(e.sector||[]).join(', ')||'No reportado';
+    const sec=e.sector||[];
     const pob=(e.poblacion_meta||[]).join(', ')||'No reportada';
     const acc=(e.acciones||[]).join(', ')||'No reportada';
+    const inv=inversionInfo(e);
     return `<div class="intervention-card">
-      <div class="intervention-head"><div><div class="intervention-org">${escaparHtml(e.organizacion||'Organización no indicada')}</div><div class="intervention-program">${escaparHtml(e.programa||'Programa/proyecto no indicado')}</div></div><span class="tag">${i+1}</span></div>
+      <div class="intervention-head"><div>
+        <div class="intervention-org">${escaparHtml(e.organizacion||'Organización no indicada')}</div>
+        <div class="intervention-program"><b>Programa / proyecto:</b> ${escaparHtml(e.programa||'No indicado')}</div>
+      </div><span class="tag">${i+1}</span></div>
       <div class="intervention-meta">
         <div><b>Tipo de actor</b>${escaparHtml(e.tipo_actor||'No reportado')}</div>
         <div><b>Tipo de atención</b>${escaparHtml(e.tipo_atencion||'No reportado')}</div>
-        <div><b>Sector(es)</b>${escaparHtml(sec)}</div>
+        <div><b>Sector(es)</b><div class="sector-tags">${sec.length?sec.map(x=>`<span class="sector-tag">${escaparHtml(x)}</span>`).join(''):'No reportado'}</div></div>
         <div><b>Estado</b>${escaparHtml(e.estado||'No reportado')}</div>
-        <div><b>Período</b>${escaparHtml(periodo)}</div>
+        <div><b>Inicio</b>${escaparHtml(fechaLegible(e.fecha_inicio))}</div>
+        <div><b>Finalización</b>${escaparHtml(fechaLegible(e.fecha_fin))}</div>
         <div><b>Cantidad reportada</b>${Number(e.cantidades)>0?Number(e.cantidades).toLocaleString('es-GT'):'No reportada'}</div>
         <div><b>Población meta</b>${escaparHtml(pob)}</div>
         <div><b>Acción / capacidad local</b>${escaparHtml(acc)}</div>
       </div>
+      <div class="investment-box"><b>Inversión reportada</b><div class="investment-value">${escaparHtml(inv.valor)}</div><div class="investment-kind">${escaparHtml(inv.tipo)} · se muestra el dato reportado, sin estimar puntos medios.</div></div>
     </div>`;
   }).join('');
 
@@ -632,14 +661,15 @@ function mostrarPanelComunidad(p){
       <div class="community-kpi"><b>${orgs.length}</b><span>Organizaciones</span></div>
       <div class="community-kpi"><b>${programas.length}</b><span>Programas / proyectos</span></div>
       <div class="community-kpi"><b>${sectores.length}</b><span>Sectores registrados</span></div>
-      <div class="community-kpi"><b>${totalCantidades?totalCantidades.toLocaleString('es-GT'):'—'}</b><span>Cantidad reportada*</span></div>
+      <div class="community-kpi"><b>${p.entradas.length}</b><span>Intervenciones registradas</span></div>
     </div>
+    ${totalCantidades?`<div class="side-sub" style="margin-top:7px;"><b>Cantidad acumulada reportada:</b> ${totalCantidades.toLocaleString('es-GT')}* </div>`:''}
     ${poblaciones.length?`<div class="community-section-title">Población atendida / meta</div><div class="pill-list">${poblaciones.map(x=>`<span class="pill">${escaparHtml(x)}</span>`).join('')}</div>`:''}
     ${acciones.length?`<div class="community-section-title">Qué existe / se fortalece ahí</div><div class="pill-list">${acciones.map(x=>`<span class="pill">${escaparHtml(x)}</span>`).join('')}</div>`:''}
     ${nota}
     <div class="community-section-title">Intervenciones registradas (${p.entradas.length})</div>
     <div class="intervention-list">${tarjetas}</div>
-    <div class="side-sub" style="margin-top:10px;">* La cantidad se presenta tal como fue reportada por cada intervención; no se asume que corresponda a personas únicas y puede existir traslape entre registros.</div>`;
+    <div class="side-sub" style="margin-top:10px;">* Las cantidades se presentan tal como fueron reportadas por cada intervención. No se asume que correspondan a personas únicas y puede existir traslape entre registros.</div>`;
 }
 
 function renderMapaYStats(){
