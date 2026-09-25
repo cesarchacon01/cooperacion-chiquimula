@@ -86,6 +86,12 @@
   .barra-track{background:#EFEBE2;border-radius:6px;height:10px;overflow:hidden;}
   .barra-fill{background:var(--navy);height:100%;border-radius:6px;}
   .inst-row{display:flex;justify-content:space-between;padding:8px 0;border-top:1px solid #EFEBE2;font-size:14px;}
+
+/* Ficha territorial multi-intervención */
+.panel-back{display:inline-flex;align-items:center;gap:6px;border:1px solid #D8DEE5;background:#fff;color:var(--navy);border-radius:8px;padding:7px 10px;font-size:12px;font-weight:700;cursor:pointer;margin-bottom:12px}.panel-back:hover{background:#F4F7F9}
+.community-kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:12px 0 14px}.community-kpi{border:1px solid #E3E6E8;border-radius:9px;padding:9px 10px;background:#FAFBFC}.community-kpi b{display:block;color:var(--navy);font-family:Georgia,serif;font-size:19px}.community-kpi span{font-size:10px;color:#68717C}
+.intervention-list{display:flex;flex-direction:column;gap:10px;margin-top:10px}.intervention-card{border:1px solid #DDE2E6;border-left:3px solid var(--gold);border-radius:9px;padding:11px 12px;background:#fff}.intervention-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.intervention-org{font-weight:800;color:var(--navy);font-size:13px}.intervention-program{font-size:12px;color:#4F5965;margin-top:2px}.intervention-meta{display:grid;grid-template-columns:1fr 1fr;gap:7px 12px;margin-top:9px}.intervention-meta div{font-size:11px;color:#5F6873}.intervention-meta b{display:block;color:#243444;font-size:10px;text-transform:uppercase;letter-spacing:.02em;margin-bottom:2px}.convergence-note{margin-top:12px;padding:10px 11px;border:1px solid #E6D5B7;border-radius:9px;background:#FBF8F2;font-size:11px;color:#5B5144}.community-section-title{font-size:13px;font-weight:800;color:var(--navy);margin-top:14px;margin-bottom:5px}
+@media(max-width:700px){.intervention-meta,.community-kpis{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -384,7 +390,12 @@ function renderMapa(filtrados){
       if(lugarTerritorial && c.codigo_lugar!==lugarTerritorial) return;
       const key = c.codigo_lugar || (c.lugar_poblado+'|'+c.municipio);
       if(!porPunto[key]) porPunto[key] = {codigo:c.codigo_lugar||'',lat:c.lat, lon:c.lon, municipio:c.municipio, lugar:c.lugar_poblado, entradas:[], poblacion:new Set(), acciones:new Set()};
-      porPunto[key].entradas.push({organizacion:p.organizacion, sector:p.sector, programa:p.nombre_programa, cantidades:c.pm_cantidades});
+      porPunto[key].entradas.push({
+        organizacion:p.organizacion, sector:p.sector||[], programa:p.nombre_programa, cantidades:c.pm_cantidades,
+        tipo_actor:p.tipo_actor||'', tipo_atencion:p.tipo_atencion||'', estado:p.estado_programa||'',
+        fecha_inicio:p.fecha_inicio||'', fecha_fin:p.fecha_fin||'', poblacion_meta:c.poblacion_meta||[],
+        acciones:c.accion_comunidad||[]
+      });
       (c.poblacion_meta||[]).forEach(x=>porPunto[key].poblacion.add(x));
       (c.accion_comunidad||[]).forEach(x=>porPunto[key].acciones.add(x));
     });
@@ -537,10 +548,39 @@ function renderResumenTerritorial(filtrados){
     <div class="side-sub" style="margin-top:10px;">Seleccioná un punto del mapa para ver su detalle.</div>`;
 }
 
+function sincronizarConsultaConPunto(p){
+  const tm=document.getElementById('t-municipio'), tl=document.getElementById('t-lugar');
+  if(!tm || !tl) return;
+  if(tm.value!==p.municipio){
+    tm.value=p.municipio;
+    tl.innerHTML='<option value="">Lugar poblado: todos</option>';
+    basePlaces.filter(x=>x.municipio===p.municipio).sort((a,b)=>a.lugar.localeCompare(b.lugar,'es')).forEach(x=>tl.add(new Option(`${x.lugar} · ${x.clasificacion||'Lugar poblado'}`,x.codigo)));
+    tl.disabled=false;
+  }
+  if(p.codigo) tl.value=p.codigo;
+}
+
+function volverResumenMunicipal(){
+  const tl=document.getElementById('t-lugar');
+  if(tl) tl.value='';
+  if(map) map.closePopup();
+  renderMapaYStats();
+}
+
+function botonVolverResumen(municipio){
+  return `<button class="panel-back" onclick="volverResumenMunicipal()">← Volver al resumen de ${municipio||'Chiquimula'}</button>`;
+}
+
+function escaparHtml(v){
+  return String(v??'').replace(/[&<>'"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]));
+}
+
 function mostrarPanelTerritorial(p){
+  sincronizarConsultaConPunto(p);
   document.getElementById('panel-comunidad').innerHTML=`
-    <div class="side-title">${p.lugar}</div>
-    <div class="side-sub">${p.municipio} · ${p.clasificacion||'Lugar poblado'}</div>
+    ${botonVolverResumen(p.municipio)}
+    <div class="side-title">${escaparHtml(p.lugar)}</div>
+    <div class="side-sub">${escaparHtml(p.municipio)} · ${escaparHtml(p.clasificacion||'Lugar poblado')}</div>
     <div style="margin-top:14px;padding:12px;border:1px solid #E5D5C2;border-radius:10px;background:#FBF8F2;">
       <b style="color:var(--navy);">Sin presencia de cooperación registrada</b>
       <p class="side-sub" style="margin-top:5px;">Esto indica ausencia de registros en el sistema para este lugar poblado; no implica ausencia de necesidades ni confirma una brecha de atención.</p>
@@ -550,37 +590,56 @@ function mostrarPanelTerritorial(p){
 }
 
 function mostrarPanelComunidad(p){
-  const orgsUnicas = [...new Set(p.entradas.map(e=>e.organizacion))];
-  const orgsHtml = orgsUnicas.map(o=>{
-    const sectores = new Set();
-    p.entradas.filter(e=>e.organizacion===o).forEach(e=>e.sector.forEach(s=>sectores.add(s)));
-    return `<div class="org-row"><span>${o}</span><span class="sec">${[...sectores].join(', ')}</span></div>`;
+  sincronizarConsultaConPunto(p);
+  const orgs=[...new Set(p.entradas.map(e=>e.organizacion).filter(Boolean))];
+  const programas=[...new Set(p.entradas.map(e=>e.programa).filter(Boolean))];
+  const sectores=[...new Set(p.entradas.flatMap(e=>e.sector||[]).filter(Boolean))];
+  const poblaciones=[...new Set(p.entradas.flatMap(e=>e.poblacion_meta||[]).filter(Boolean))];
+  const acciones=[...new Set(p.entradas.flatMap(e=>e.acciones||[]).filter(Boolean))];
+  const cantidades=p.entradas.map(e=>Number(e.cantidades)).filter(n=>Number.isFinite(n)&&n>0);
+  const totalCantidades=cantidades.reduce((a,b)=>a+b,0);
+
+  const tarjetas=p.entradas.map((e,i)=>{
+    const periodo=[e.fecha_inicio,e.fecha_fin].filter(Boolean).map(x=>String(x).slice(0,10)).join(' → ')||'No reportado';
+    const sec=(e.sector||[]).join(', ')||'No reportado';
+    const pob=(e.poblacion_meta||[]).join(', ')||'No reportada';
+    const acc=(e.acciones||[]).join(', ')||'No reportada';
+    return `<div class="intervention-card">
+      <div class="intervention-head"><div><div class="intervention-org">${escaparHtml(e.organizacion||'Organización no indicada')}</div><div class="intervention-program">${escaparHtml(e.programa||'Programa/proyecto no indicado')}</div></div><span class="tag">${i+1}</span></div>
+      <div class="intervention-meta">
+        <div><b>Tipo de actor</b>${escaparHtml(e.tipo_actor||'No reportado')}</div>
+        <div><b>Tipo de atención</b>${escaparHtml(e.tipo_atencion||'No reportado')}</div>
+        <div><b>Sector(es)</b>${escaparHtml(sec)}</div>
+        <div><b>Estado</b>${escaparHtml(e.estado||'No reportado')}</div>
+        <div><b>Período</b>${escaparHtml(periodo)}</div>
+        <div><b>Cantidad reportada</b>${Number(e.cantidades)>0?Number(e.cantidades).toLocaleString('es-GT'):'No reportada'}</div>
+        <div><b>Población meta</b>${escaparHtml(pob)}</div>
+        <div><b>Acción / capacidad local</b>${escaparHtml(acc)}</div>
+      </div>
+    </div>`;
   }).join('');
 
-  const sectorOrg = {};
-  p.entradas.forEach(e=> e.sector.forEach(s=>{ sectorOrg[s]=sectorOrg[s]||new Set(); sectorOrg[s].add(e.organizacion); }));
-  let alertaHtml = '';
-  Object.entries(sectorOrg).forEach(([sector,orgs])=>{
-    if(orgs.size>1) alertaHtml += `<div class="alert"><b>Posible duplicidad de esfuerzos</b><p>${[...orgs].join(' y ')} trabajan el mismo sector — ${sector} — en ${p.lugar}.</p></div>`;
-  });
+  const coincidencias={};
+  p.entradas.forEach(e=>(e.sector||[]).forEach(s=>{coincidencias[s]=coincidencias[s]||new Set(); coincidencias[s].add(e.organizacion)}));
+  const convergencias=Object.entries(coincidencias).filter(([,os])=>os.size>1);
+  const nota=convergencias.length ? `<div class="convergence-note"><b>Convergencia territorial registrada.</b> ${convergencias.map(([s,os])=>`${[...os].join(', ')} coinciden en ${s}`).join('; ')}. Esto no implica duplicidad; requiere revisar población, actividades, período y alcance.</div>`:'';
 
-  const poblacionHtml = p.poblacion.size
-    ? [...p.poblacion].map(x=>`<span class="pill">${x}</span>`).join('')
-    : '<span class="side-sub">Sin categoría de población registrada</span>';
-  const accionesHtml = p.acciones.size
-    ? [...p.acciones].map(x=>`<span class="pill">${x}</span>`).join('')
-    : '<span class="side-sub">Sin organización/infraestructura registrada</span>';
-
-  document.getElementById('panel-comunidad').innerHTML = `
-    <div class="side-title">${p.lugar}</div>
-    <div class="side-sub">${p.municipio} &middot; ${orgsUnicas.length} organización(es)</div>
-    ${orgsHtml}
-    <div class="side-title" style="font-size:14px; margin-top:16px;">A quién atiende</div>
-    <div class="pill-list">${poblacionHtml}</div>
-    <div class="side-title" style="font-size:14px; margin-top:12px;">Qué existe / se fortalece ahí</div>
-    <div class="pill-list">${accionesHtml}</div>
-    ${alertaHtml}
-  `;
+  document.getElementById('panel-comunidad').innerHTML=`
+    ${botonVolverResumen(p.municipio)}
+    <div class="side-title">${escaparHtml(p.lugar)}</div>
+    <div class="side-sub">${escaparHtml(p.municipio)} · ficha territorial de cooperación</div>
+    <div class="community-kpis">
+      <div class="community-kpi"><b>${orgs.length}</b><span>Organizaciones</span></div>
+      <div class="community-kpi"><b>${programas.length}</b><span>Programas / proyectos</span></div>
+      <div class="community-kpi"><b>${sectores.length}</b><span>Sectores registrados</span></div>
+      <div class="community-kpi"><b>${totalCantidades?totalCantidades.toLocaleString('es-GT'):'—'}</b><span>Cantidad reportada*</span></div>
+    </div>
+    ${poblaciones.length?`<div class="community-section-title">Población atendida / meta</div><div class="pill-list">${poblaciones.map(x=>`<span class="pill">${escaparHtml(x)}</span>`).join('')}</div>`:''}
+    ${acciones.length?`<div class="community-section-title">Qué existe / se fortalece ahí</div><div class="pill-list">${acciones.map(x=>`<span class="pill">${escaparHtml(x)}</span>`).join('')}</div>`:''}
+    ${nota}
+    <div class="community-section-title">Intervenciones registradas (${p.entradas.length})</div>
+    <div class="intervention-list">${tarjetas}</div>
+    <div class="side-sub" style="margin-top:10px;">* La cantidad se presenta tal como fue reportada por cada intervención; no se asume que corresponda a personas únicas y puede existir traslape entre registros.</div>`;
 }
 
 function renderMapaYStats(){
