@@ -739,6 +739,10 @@ function escaparHtml(v){
   return String(v??'').replace(/[&<>'"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]));
 }
 
+// Alias usado por la vista Población × Acción.
+// Mantiene un único escape HTML y evita errores de renderizado.
+const esc = escaparHtml;
+
 function mostrarPanelTerritorial(p){
   sincronizarConsultaConPunto(p);
   document.getElementById('panel-comunidad').innerHTML=`
