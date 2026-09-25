@@ -332,16 +332,31 @@ function poblarSelects(){
 }
 
 function renderStats(filtrados){
-  const orgs = new Set(filtrados.map(p=>p.organizacion)).size;
-  const progs = filtrados.length;
+  const muniTerritorial=document.getElementById('t-municipio')?.value||'';
+  const lugarTerritorial=document.getElementById('t-lugar')?.value||'';
+  const relevantes=filtrados.filter(p=>{
+    if(!muniTerritorial && !lugarTerritorial) return true;
+    return (p.comunidades||[]).some(c=>(!muniTerritorial||c.municipio===muniTerritorial)&&(!lugarTerritorial||c.codigo_lugar===lugarTerritorial));
+  });
+  const orgs = new Set(relevantes.map(p=>p.organizacion)).size;
+  const progs = relevantes.length;
   const munis = new Set();
-  filtrados.forEach(p=>{ p.comunidades.forEach(c=>c.municipio && munis.add(c.municipio)); p.municipios_cobertura_institucional.forEach(m=>munis.add(m)); });
-  const poblacion = filtrados.reduce((a,p)=>a + p.comunidades.reduce((b,c)=>b+(c.poblacion_total_estimada||0),0), 0);
+  relevantes.forEach(p=>{
+    (p.comunidades||[]).forEach(c=>{
+      if((!muniTerritorial||c.municipio===muniTerritorial)&&(!lugarTerritorial||c.codigo_lugar===lugarTerritorial)&&c.municipio) munis.add(c.municipio);
+    });
+    if(!muniTerritorial && !lugarTerritorial) (p.municipios_cobertura_institucional||[]).forEach(m=>munis.add(m));
+  });
+  const poblacion = relevantes.reduce((a,p)=>a + (p.comunidades||[]).reduce((b,c)=>{
+    if(muniTerritorial && c.municipio!==muniTerritorial) return b;
+    if(lugarTerritorial && c.codigo_lugar!==lugarTerritorial) return b;
+    return b+(c.poblacion_total_estimada||0);
+  },0), 0);
 
   document.getElementById('stats').innerHTML = `
     <div class="stat-card"><div class="label">Organizaciones</div><div class="value">${orgs}</div></div>
     <div class="stat-card"><div class="label">Programas / proyectos</div><div class="value">${progs}</div></div>
-    <div class="stat-card"><div class="label">Municipios con presencia</div><div class="value">${munis.size} <span style="font-size:16px;color:#8B9199;font-weight:500;">de 11</span></div></div>
+    <div class="stat-card"><div class="label">Municipios con presencia</div><div class="value">${munis.size} <span style="font-size:16px;color:#8B9199;font-weight:500;">${muniTerritorial?'en el municipio':'de 11'}</span></div></div>
     <div class="stat-card"><div class="label">Población atendida (aprox.)</div><div class="value">${poblacion.toLocaleString('es-GT')}</div></div>
   `;
 }
@@ -358,10 +373,15 @@ function renderMapa(filtrados){
   if(baseLayer) baseLayer.clearLayers();
   if(coopLayer) coopLayer.clearLayers();
 
+  const muniTerritorial=document.getElementById('t-municipio')?.value||'';
+  const lugarTerritorial=document.getElementById('t-lugar')?.value||'';
   const porPunto = {};
   filtrados.forEach(p=>{
     p.comunidades.forEach(c=>{
       if(c.lat==null) return;
+      // La consulta territorial restringe también los puntos de cooperación.
+      if(muniTerritorial && c.municipio!==muniTerritorial) return;
+      if(lugarTerritorial && c.codigo_lugar!==lugarTerritorial) return;
       const key = c.codigo_lugar || (c.lugar_poblado+'|'+c.municipio);
       if(!porPunto[key]) porPunto[key] = {codigo:c.codigo_lugar||'',lat:c.lat, lon:c.lon, municipio:c.municipio, lugar:c.lugar_poblado, entradas:[], poblacion:new Set(), acciones:new Set()};
       porPunto[key].entradas.push({organizacion:p.organizacion, sector:p.sector, programa:p.nombre_programa, cantidades:c.pm_cantidades});
@@ -425,7 +445,17 @@ function renderMapa(filtrados){
     if(bounds.length) map.fitBounds(L.latLngBounds(bounds),{padding:[30,30],maxZoom:13});
   }
   actualizarLimitesMunicipales();
-  renderResumenTerritorial(filtrados);
+  // Si se eligió un lugar poblado, mostrar su ficha inmediatamente;
+  // si no, mantener el resumen departamental/municipal.
+  if(lugarSel){
+    const coop=puntos.find(x=>x.codigo===lugarSel);
+    const base=basePlaces.find(x=>x.codigo===lugarSel);
+    if(coop) mostrarPanelComunidad(coop);
+    else if(base) mostrarPanelTerritorial(base);
+    else renderResumenTerritorial(filtrados);
+  } else {
+    renderResumenTerritorial(filtrados);
+  }
 }
 
 
@@ -494,8 +524,8 @@ function renderResumenTerritorial(filtrados){
   });
   const conPresencia=base.filter(p=>codigosCoop.has(p.codigo)).length;
   const sinPresencia=Math.max(0,base.length-conPresencia);
-  panel.innerHTML=`<div class="side-title">${muni?muni:'Resumen territorial'}</div>
-    <div class="side-sub">${muni?'Consulta municipal':'Departamento de Chiquimula'} · información según los filtros activos.</div>
+  panel.innerHTML=`<div class="side-title">${muni?'Municipio de '+muni:'Resumen territorial'}</div>
+    <div class="side-sub">${muni?'Consulta municipal · lugares poblados del municipio':'Departamento de Chiquimula'} · información según los filtros activos.</div>
     <div class="territorial-summary">
       <div class="mini"><b>${base.length.toLocaleString('es-GT')}</b><span>Lugares georreferenciados</span></div>
       <div class="mini"><b>${conPresencia.toLocaleString('es-GT')}</b><span>Con presencia registrada</span></div>
