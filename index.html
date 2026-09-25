@@ -127,7 +127,7 @@
       <select id="t-municipio"><option value="">Municipio: todos</option></select>
       <select id="t-lugar" disabled><option value="">Lugar poblado: todos</option></select>
       <label class="layer-toggle"><input type="checkbox" id="layer-coop" checked> Cooperación registrada</label>
-      <label class="layer-toggle"><input type="checkbox" id="layer-base"> Base territorial</label>
+      <label class="layer-toggle"><input type="checkbox" id="layer-base" checked> Base territorial</label>
       <span class="territorial-note" id="territorial-status">Base territorial disponible</span>
     </div>
 
@@ -349,7 +349,8 @@ function colorPorConteo(n, max){
 }
 
 function renderMapa(filtrados){
-  markersLayer.clearLayers();
+  // Limpiar únicamente el contenido de cada capa. No limpiar markersLayer,
+  // porque eso desprende baseLayer y coopLayer del mapa y vuelve invisibles los puntos.
   if(baseLayer) baseLayer.clearLayers();
   if(coopLayer) coopLayer.clearLayers();
 
@@ -389,13 +390,15 @@ function renderMapa(filtrados){
     const coopCodes=new Set(puntos.map(p=>p.codigo).filter(Boolean));
     basePlaces.filter(p=>(!muniSel||p.municipio===muniSel)&&(!lugarSel||p.codigo===lugarSel)).forEach(p=>{
       if(coopCodes.has(p.codigo)) return;
-      const marker=L.circleMarker([p.lat,p.lon],{radius:4,fillColor:'#fff',color:'#C98A6B',weight:1.5,fillOpacity:.9,opacity:.85});
+      const marker=L.circleMarker([p.lat,p.lon],{radius:4.5,fillColor:'#fff',color:'#C98A6B',weight:1.6,fillOpacity:.95,opacity:.95});
       marker.bindTooltip(`${p.lugar} · ${p.municipio}`,{direction:'top',opacity:.9});
       marker.bindPopup(`<b>${p.lugar}</b> (${p.municipio})<br><span style="color:#6B7280">${p.clasificacion||'Lugar poblado'}</span><br><br><b>Sin presencia de cooperación registrada</b>`);
       marker.on('click',()=>mostrarPanelTerritorial(p));
       marker.addTo(baseLayer);
     });
+    if(baseLayer && baseLayer.bringToBack) baseLayer.bringToBack();
   }
+  if(coopLayer && coopLayer.bringToFront) coopLayer.bringToFront();
 
   const lugarSel=document.getElementById('t-lugar').value;
   if(lugarSel){
