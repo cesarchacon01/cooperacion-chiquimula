@@ -40,6 +40,11 @@
   .stat-card .value{font-size:28px;font-weight:700;color:var(--navy);margin-top:4px;}
   .filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:20px;}
   .filters label{font-size:12px;font-weight:600;color:var(--muted);margin-right:4px;}
+  .territorial-tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:-8px 0 18px;padding:12px 14px;background:#fff;border:1px solid var(--line);border-radius:12px;}
+  .territorial-tools select{min-width:190px;}
+  .layer-toggle{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:600;color:var(--navy);padding:7px 10px;border:1px solid var(--line);border-radius:18px;background:#fff;}
+  .layer-toggle input{accent-color:var(--navy);}
+  .territorial-note{font-size:11px;color:var(--muted);margin-left:auto;}
   select{border:1px solid var(--border);background:#fff;border-radius:20px;padding:8px 14px;font-size:13px;font-family:inherit;color:var(--text);}
   .clear-btn{font-size:13px;color:var(--navy);font-weight:600;cursor:pointer;border:none;background:none;}
   .layout{display:grid;grid-template-columns:1.7fr 1fr;gap:20px;align-items:start;}
@@ -117,10 +122,19 @@
       <button class="clear-btn" onclick="limpiarFiltros()">Limpiar filtros</button>
     </div>
 
+    <div class="territorial-tools">
+      <label style="font-size:12px;font-weight:600;color:var(--muted);">CONSULTA TERRITORIAL</label>
+      <select id="t-municipio"><option value="">Municipio: todos</option></select>
+      <select id="t-lugar" disabled><option value="">Lugar poblado: todos</option></select>
+      <label class="layer-toggle"><input type="checkbox" id="layer-coop" checked> Cooperación registrada</label>
+      <label class="layer-toggle"><input type="checkbox" id="layer-base"> Base territorial</label>
+      <span class="territorial-note" id="territorial-status">Base territorial disponible</span>
+    </div>
+
     <div class="layout">
       <div class="card">
         <div class="side-title">Presencia de cooperación por comunidad</div>
-        <div class="side-sub">Cada punto es una comunidad atendida. El tamaño y color indican cuántas organizaciones hay ahí. Los puntos huecos son comunidades del catálogo sin ningún programa registrado.</div>
+        <div class="side-sub">Los puntos sólidos muestran cooperación registrada. Active “Base territorial” para consultar los lugares poblados georreferenciados; un punto hueco significa “sin presencia de cooperación registrada”.</div>
         <div id="map"></div>
         <div class="legend">
           <span>Menor presencia</span><div class="bar"></div><span>Mayor presencia</span>
@@ -267,6 +281,7 @@ function mostrarVista(id){
 }
 
 const filtros = { sector:'', atencion:'', actor:'', estado:'', municipio:'' };
+let CATALOGO=null, COORDS={}, baseLayer=null, coopLayer=null, basePlaces=[];
 
 function limpiarFiltros(){
   Object.keys(filtros).forEach(k=>filtros[k]='');
@@ -335,14 +350,16 @@ function colorPorConteo(n, max){
 
 function renderMapa(filtrados){
   markersLayer.clearLayers();
+  if(baseLayer) baseLayer.clearLayers();
+  if(coopLayer) coopLayer.clearLayers();
 
   const porPunto = {};
   filtrados.forEach(p=>{
     p.comunidades.forEach(c=>{
       if(c.lat==null) return;
-      const key = c.lugar_poblado+'|'+c.municipio;
-      if(!porPunto[key]) porPunto[key] = {lat:c.lat, lon:c.lon, municipio:c.municipio, lugar:c.lugar_poblado, entradas:[], poblacion:new Set(), acciones:new Set()};
-      porPunto[key].entradas.push({organizacion:p.organizacion, sector:p.sector, programa:p.nombre_programa, cantidades: c.pm_cantidades});
+      const key = c.codigo_lugar || (c.lugar_poblado+'|'+c.municipio);
+      if(!porPunto[key]) porPunto[key] = {codigo:c.codigo_lugar||'',lat:c.lat, lon:c.lon, municipio:c.municipio, lugar:c.lugar_poblado, entradas:[], poblacion:new Set(), acciones:new Set()};
+      porPunto[key].entradas.push({organizacion:p.organizacion, sector:p.sector, programa:p.nombre_programa, cantidades:c.pm_cantidades});
       (c.poblacion_meta||[]).forEach(x=>porPunto[key].poblacion.add(x));
       (c.accion_comunidad||[]).forEach(x=>porPunto[key].acciones.add(x));
     });
@@ -350,34 +367,59 @@ function renderMapa(filtrados){
   const puntos = Object.values(porPunto);
   const maxConteo = Math.max(1, ...puntos.map(p=>new Set(p.entradas.map(e=>e.organizacion)).size));
 
-  puntos.forEach(p=>{
-    const orgsUnicas = new Set(p.entradas.map(e=>e.organizacion));
-    const n = orgsUnicas.size;
-    const marker = L.circleMarker([p.lat,p.lon], {radius:7+n*3, fillColor:colorPorConteo(n,maxConteo), color:'#fff', weight:1.5, fillOpacity:0.9});
-    const listaOrgs = [...orgsUnicas].map(o=>{
-      const sectores = new Set();
-      p.entradas.filter(e=>e.organizacion===o).forEach(e=>e.sector.forEach(s=>sectores.add(s)));
-      return `<b>${o}</b> — ${[...sectores].join(', ')}`;
-    }).join('<br>');
-    marker.bindPopup(`<b>${p.lugar}</b> (${p.municipio})<br>${n} organización(es)<br><br>${listaOrgs}`);
-    marker.on('click', ()=>mostrarPanelComunidad(p));
-    marker.addTo(markersLayer);
-  });
-
-  // Puntos huecos: comunidades sin cobertura (solo si no hay filtros activos, para no confundir)
-  const sinFiltros = !filtros.sector && !filtros.atencion && !filtros.actor && !filtros.estado && !filtros.municipio;
-  if(sinFiltros){
-    DATA.comunidades_sin_cobertura.forEach(c=>{
-      const marker = L.circleMarker([c.lat,c.lon], {radius:5, fillColor:'#fff', color:'#C98A6B', weight:2, fillOpacity:1});
-      marker.bindPopup(`<b>${c.lugar_poblado}</b> (${c.municipio})<br>Sin cobertura registrada`);
-      marker.addTo(markersLayer);
+  if(document.getElementById('layer-coop').checked){
+    puntos.forEach(p=>{
+      const orgsUnicas = new Set(p.entradas.map(e=>e.organizacion));
+      const n = orgsUnicas.size;
+      const marker = L.circleMarker([p.lat,p.lon], {radius:7+n*3, fillColor:colorPorConteo(n,maxConteo), color:'#fff', weight:1.5, fillOpacity:0.92});
+      const listaOrgs = [...orgsUnicas].map(o=>{
+        const sectores = new Set();
+        p.entradas.filter(e=>e.organizacion===o).forEach(e=>e.sector.forEach(s=>sectores.add(s)));
+        return `<b>${o}</b> — ${[...sectores].join(', ')}`;
+      }).join('<br>');
+      marker.bindPopup(`<b>${p.lugar}</b> (${p.municipio})<br>${n} organización(es)<br><br>${listaOrgs}`);
+      marker.on('click', ()=>mostrarPanelComunidad(p));
+      marker.addTo(coopLayer);
     });
   }
 
-  const todosPuntos = puntos.map(p=>[p.lat,p.lon]).concat(sinFiltros ? DATA.comunidades_sin_cobertura.map(c=>[c.lat,c.lon]) : []);
-  if(todosPuntos.length){
-    map.fitBounds(L.latLngBounds(todosPuntos), {padding:[30,30]});
+  if(document.getElementById('layer-base').checked){
+    const muniSel=document.getElementById('t-municipio').value;
+    const lugarSel=document.getElementById('t-lugar').value;
+    const coopCodes=new Set(puntos.map(p=>p.codigo).filter(Boolean));
+    basePlaces.filter(p=>(!muniSel||p.municipio===muniSel)&&(!lugarSel||p.codigo===lugarSel)).forEach(p=>{
+      if(coopCodes.has(p.codigo)) return;
+      const marker=L.circleMarker([p.lat,p.lon],{radius:4,fillColor:'#fff',color:'#C98A6B',weight:1.5,fillOpacity:.9,opacity:.85});
+      marker.bindTooltip(`${p.lugar} · ${p.municipio}`,{direction:'top',opacity:.9});
+      marker.bindPopup(`<b>${p.lugar}</b> (${p.municipio})<br><span style="color:#6B7280">${p.clasificacion||'Lugar poblado'}</span><br><br><b>Sin presencia de cooperación registrada</b>`);
+      marker.on('click',()=>mostrarPanelTerritorial(p));
+      marker.addTo(baseLayer);
+    });
   }
+
+  const lugarSel=document.getElementById('t-lugar').value;
+  if(lugarSel){
+    const p=basePlaces.find(x=>x.codigo===lugarSel);
+    if(p) map.setView([p.lat,p.lon],15);
+  } else {
+    const muniSel=document.getElementById('t-municipio').value;
+    const visibles=basePlaces.filter(p=>!muniSel||p.municipio===muniSel).map(p=>[p.lat,p.lon]);
+    const pts=puntos.map(p=>[p.lat,p.lon]);
+    const bounds=(document.getElementById('layer-base').checked ? visibles : pts);
+    if(bounds.length) map.fitBounds(L.latLngBounds(bounds),{padding:[30,30],maxZoom:13});
+  }
+}
+
+function mostrarPanelTerritorial(p){
+  document.getElementById('panel-comunidad').innerHTML=`
+    <div class="side-title">${p.lugar}</div>
+    <div class="side-sub">${p.municipio} · ${p.clasificacion||'Lugar poblado'}</div>
+    <div style="margin-top:14px;padding:12px;border:1px solid #E5D5C2;border-radius:10px;background:#FBF8F2;">
+      <b style="color:var(--navy);">Sin presencia de cooperación registrada</b>
+      <p class="side-sub" style="margin-top:5px;">Esto indica ausencia de registros en el sistema para este lugar poblado; no implica ausencia de necesidades ni confirma una brecha de atención.</p>
+    </div>
+    ${p.viviendas ? `<div class="side-title" style="font-size:14px;margin-top:14px;">Referencia territorial</div><div class="side-sub">Viviendas en catálogo: ${Number(p.viviendas).toLocaleString('es-GT')}</div>`:''}
+  `;
 }
 
 function mostrarPanelComunidad(p){
@@ -579,6 +621,34 @@ function renderProgramas(){
   }).join('') || '<tr><td colspan="6" class="empty">Todavía no hay programas registrados.</td></tr>';
 }
 
+async function cargarBaseTerritorial(){
+  try{
+    const [rc,rx]=await Promise.all([fetch('catalogo_xlsform.json'),fetch('coordenadas_lugares.json')]);
+    if(!rc.ok||!rx.ok) throw new Error('No se pudo leer la base territorial');
+    CATALOGO=await rc.json(); COORDS=await rx.json();
+    const munChoices=(CATALOGO.choices&&CATALOGO.choices.municipios)||{};
+    basePlaces=Object.entries(CATALOGO.lugares_poblados||{}).filter(([codigo])=>COORDS[codigo]).map(([codigo,m])=>({
+      codigo, municipio:munChoices[m.municipio_codigo]||m.municipio_codigo, lugar:m.lugar_poblado,
+      clasificacion:m.clasificacion||'', viviendas:m.viviendas||0, lat:COORDS[codigo].lat, lon:COORDS[codigo].lon
+    }));
+    const tm=document.getElementById('t-municipio'), tl=document.getElementById('t-lugar');
+    [...new Set(basePlaces.map(p=>p.municipio))].sort().forEach(m=>tm.add(new Option(m,m)));
+    function llenarLugares(){
+      const m=tm.value; tl.innerHTML='<option value="">Lugar poblado: todos</option>';
+      const lista=basePlaces.filter(p=>!m||p.municipio===m).sort((a,b)=>a.lugar.localeCompare(b.lugar,'es'));
+      lista.forEach(p=>tl.add(new Option(`${p.lugar} · ${p.clasificacion||'Lugar poblado'}`,p.codigo)));
+      tl.disabled=!m; renderMapaYStats();
+    }
+    tm.onchange=llenarLugares; tl.onchange=()=>renderMapaYStats();
+    document.getElementById('layer-base').onchange=()=>renderMapaYStats();
+    document.getElementById('layer-coop').onchange=()=>renderMapaYStats();
+    document.getElementById('territorial-status').textContent=`${basePlaces.length} lugares georreferenciados disponibles`;
+  }catch(e){
+    document.getElementById('territorial-status').textContent='Base territorial no disponible';
+    document.getElementById('layer-base').disabled=true;
+  }
+}
+
 async function iniciar(){
   initNav();
   const res = await fetch('data.json');
@@ -588,6 +658,9 @@ async function iniciar(){
   map = L.map('map').setView([14.75, -89.45], 10);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution:'&copy; OpenStreetMap contributors', maxZoom:18}).addTo(map);
   markersLayer = L.layerGroup().addTo(map);
+  coopLayer = L.layerGroup().addTo(markersLayer);
+  baseLayer = L.layerGroup().addTo(markersLayer);
+  await cargarBaseTerritorial();
 
   poblarSelects();
   poblarSelectorMunicipio();
