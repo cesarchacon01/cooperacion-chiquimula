@@ -592,6 +592,26 @@ function mostrarPanelTerritorial(p){
   `;
 }
 
+function desglosePoblacion(e){
+  const raw=e&&e.cantidades;
+  if(raw && typeof raw==='object' && !Array.isArray(raw)){
+    return Object.entries(raw)
+      .map(([grupo,valor])=>({grupo,valor:Number(valor)}))
+      .filter(x=>Number.isFinite(x.valor)&&x.valor>0);
+  }
+  const n=Number(raw);
+  if(Number.isFinite(n)&&n>0){
+    const grupos=(e.poblacion_meta||[]);
+    return [{grupo:grupos.length===1?grupos[0]:'Cantidad reportada',valor:n}];
+  }
+  return [];
+}
+function resumenCantidadPoblacion(entradas){
+  const items=(entradas||[]).flatMap(desglosePoblacion);
+  if(!items.length) return {valor:'—',detalle:'Sin cantidad reportada'};
+  if(items.length===1) return {valor:items[0].valor.toLocaleString('es-GT'),detalle:items[0].grupo};
+  return {valor:'Ver desglose',detalle:`${items.length} cantidades reportadas`};
+}
 function mostrarPanelComunidad(p){
   sincronizarConsultaConPunto(p);
   const orgs=[...new Set(p.entradas.map(e=>e.organizacion).filter(Boolean))];
@@ -599,8 +619,7 @@ function mostrarPanelComunidad(p){
   const sectores=[...new Set(p.entradas.flatMap(e=>e.sector||[]).filter(Boolean))];
   const poblaciones=[...new Set(p.entradas.flatMap(e=>e.poblacion_meta||[]).filter(Boolean))];
   const acciones=[...new Set(p.entradas.flatMap(e=>e.acciones||[]).filter(Boolean))];
-  const cantidades=p.entradas.map(e=>Number(e.cantidades)).filter(n=>Number.isFinite(n)&&n>0);
-  const totalCantidades=cantidades.reduce((a,b)=>a+b,0);
+  const resumenPoblacion=resumenCantidadPoblacion(p.entradas);
 
   const fechaLegible=v=>{
     if(!v) return 'No reportada';
@@ -640,7 +659,7 @@ function mostrarPanelComunidad(p){
         <div><b>Estado</b>${escaparHtml(e.estado||'No reportado')}</div>
         <div><b>Inicio</b>${escaparHtml(fechaLegible(e.fecha_inicio))}</div>
         <div><b>Finalización</b>${escaparHtml(fechaLegible(e.fecha_fin))}</div>
-        <div><b>Cantidad reportada</b>${Number(e.cantidades)>0?Number(e.cantidades).toLocaleString('es-GT'):'No reportada'}</div>
+        <div style="grid-column:1/-1"><b>Población atendida reportada</b>${desglosePoblacion(e).length?`<div class="pill-list" style="margin-top:5px">${desglosePoblacion(e).map(x=>`<span class="pill">${escaparHtml(x.grupo)}: <strong>${x.valor.toLocaleString('es-GT')}</strong></span>`).join('')}</div>`:'No reportada'}</div>
         <div><b>Población meta</b>${escaparHtml(pob)}</div>
         <div><b>Acción / capacidad local</b>${escaparHtml(acc)}</div>
       </div>
@@ -661,15 +680,14 @@ function mostrarPanelComunidad(p){
       <div class="community-kpi"><b>${orgs.length}</b><span>Organizaciones</span></div>
       <div class="community-kpi"><b>${programas.length}</b><span>Programas / proyectos</span></div>
       <div class="community-kpi"><b>${sectores.length}</b><span>Sectores registrados</span></div>
-      <div class="community-kpi"><b>${p.entradas.length}</b><span>Intervenciones registradas</span></div>
+      <div class="community-kpi"><b>${escaparHtml(resumenPoblacion.valor)}</b><span>Población reportada*</span><small style="display:block;color:#6B7280;margin-top:3px">${escaparHtml(resumenPoblacion.detalle)}</small></div>
     </div>
-    ${totalCantidades?`<div class="side-sub" style="margin-top:7px;"><b>Cantidad acumulada reportada:</b> ${totalCantidades.toLocaleString('es-GT')}* </div>`:''}
     ${poblaciones.length?`<div class="community-section-title">Población atendida / meta</div><div class="pill-list">${poblaciones.map(x=>`<span class="pill">${escaparHtml(x)}</span>`).join('')}</div>`:''}
     ${acciones.length?`<div class="community-section-title">Qué existe / se fortalece ahí</div><div class="pill-list">${acciones.map(x=>`<span class="pill">${escaparHtml(x)}</span>`).join('')}</div>`:''}
     ${nota}
     <div class="community-section-title">Intervenciones registradas (${p.entradas.length})</div>
     <div class="intervention-list">${tarjetas}</div>
-    <div class="side-sub" style="margin-top:10px;">* Las cantidades se presentan tal como fueron reportadas por cada intervención. No se asume que correspondan a personas únicas y puede existir traslape entre registros.</div>`;
+    <div class="side-sub" style="margin-top:10px;">* Las cantidades se muestran por grupo de población tal como fueron reportadas en Kobo. No se suman como personas únicas cuando existen varios grupos o intervenciones, porque puede haber traslape entre registros.</div>`;
 }
 
 function renderMapaYStats(){
