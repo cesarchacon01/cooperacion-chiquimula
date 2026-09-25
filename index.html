@@ -377,8 +377,8 @@ function renderMapa(filtrados){
   const lugarTerritorial=document.getElementById('t-lugar')?.value||'';
   const porPunto = {};
   filtrados.forEach(p=>{
-    p.comunidades.forEach(c=>{
-      if(c.lat==null) return;
+    (p.comunidades||[]).forEach(c=>{
+      if(c.lat==null || c.lon==null) return;
       // La consulta territorial restringe también los puntos de cooperación.
       if(muniTerritorial && c.municipio!==muniTerritorial) return;
       if(lugarTerritorial && c.codigo_lugar!==lugarTerritorial) return;
@@ -761,12 +761,21 @@ async function cargarBaseTerritorial(){
     const tm=document.getElementById('t-municipio'), tl=document.getElementById('t-lugar');
     [...new Set(basePlaces.map(p=>p.municipio))].sort().forEach(m=>tm.add(new Option(m,m)));
     function llenarLugares(){
-      const m=tm.value; tl.innerHTML='<option value="">Lugar poblado: todos</option>';
+      const m=tm.value;
+      // Cada cambio de municipio inicia una consulta territorial nueva.
+      // Evita conservar en el panel la comunidad seleccionada previamente.
+      tl.innerHTML='<option value="">Lugar poblado: todos</option>';
+      tl.value='';
+      if(map) map.closePopup();
       const lista=basePlaces.filter(p=>!m||p.municipio===m).sort((a,b)=>a.lugar.localeCompare(b.lugar,'es'));
       lista.forEach(p=>tl.add(new Option(`${p.lugar} · ${p.clasificacion||'Lugar poblado'}`,p.codigo)));
-      tl.disabled=!m; renderMapaYStats();
+      tl.disabled=!m;
+      // Primero se recalculan mapa/indicadores; renderMapa deja el panel en resumen
+      // mientras no exista un lugar poblado seleccionado.
+      renderMapaYStats();
     }
-    tm.onchange=llenarLugares; tl.onchange=()=>renderMapaYStats();
+    tm.onchange=llenarLugares;
+    tl.onchange=()=>{ if(map) map.closePopup(); renderMapaYStats(); };
     document.getElementById('layer-base').onchange=()=>renderMapaYStats();
     document.getElementById('layer-coop').onchange=()=>renderMapaYStats();
     document.getElementById('territorial-status').textContent=`${basePlaces.length} lugares georreferenciados disponibles`;
@@ -784,9 +793,11 @@ async function iniciar(){
 
   map = L.map('map').setView([14.75, -89.45], 10);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution:'&copy; OpenStreetMap contributors', maxZoom:18}).addTo(map);
-  markersLayer = L.layerGroup().addTo(map);
-  coopLayer = L.layerGroup().addTo(markersLayer);
-  baseLayer = L.layerGroup().addTo(markersLayer);
+  // Capas independientes: evita que limpiar una capa contenedora afecte
+  // accidentalmente la visibilidad de cooperación o base territorial.
+  markersLayer = null;
+  baseLayer = L.layerGroup().addTo(map);
+  coopLayer = L.layerGroup().addTo(map);
   // Ajusta únicamente la simbología al acercar/alejar, sin recalcular filtros ni extensión.
   map.on('zoomend', actualizarEstiloBasePorZoom);
   await cargarLimitesMunicipales();
