@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-28T13:53:04.420549+00:00",
+  "generado": "2026-09-28T23:15:41.503096+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. Base territorial del XLSForm: 996 lugares poblados.",
   "programas": [
     {
@@ -67,6 +67,181 @@
           "area": "Mixta"
         }
       ]
+    },
+    {
+      "organizacion": "Asociación Aldeas Infantiles SOS Guatemala",
+      "tipo_actor": "ONG internacional",
+      "pais_origen": "",
+      "contacto": "Kevin Armando Monroy Guerrero",
+      "nombre_programa": "Proyecto Estandar",
+      "tipo_atencion": "Ambas (emergencia y desarrollo)",
+      "sector": [
+        "Seguridad alimentaria y nutricional",
+        "Gobernanza y fortalecimiento institucional",
+        "Protección (niñez, migrantes, víctimas de violencia)"
+      ],
+      "modalidad": [
+        "Asistencia técnica",
+        "Fortalecimiento institucional"
+      ],
+      "fecha_inicio": "1983-04-15",
+      "tipo_duracion": "Aún no está definida",
+      "fecha_fin": "",
+      "duracion_aproximada": "",
+      "estado_programa": "En ejecución",
+      "contraparte_gubernamental": "Municipalidad de Jocotán",
+      "monto_rango": "",
+      "monto_rango_codigo": "",
+      "fuente_financiamiento": [
+        "Donante internacional"
+      ],
+      "espacios_coordinacion": [
+        "COMUSAN",
+        "COE (Coordinadora/Comité de Emergencia)"
+      ],
+      "disposicion_coordinar": "Sí",
+      "beneficiarios_institucionales": {
+        "Municipalidades": 1,
+        "COMUSAN (Comisión Municipal de Seguridad Alimentaria y Nutricional)": 1,
+        "Otro": 2
+      },
+      "municipios_cobertura_institucional": [
+        "Chiquimula",
+        "Jocotán"
+      ],
+      "comunidades": [
+        {
+          "codigo_lugar": "jocotan_oquen",
+          "lugar_poblado": "Oquen",
+          "municipio": "Jocotán",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 421,
+          "lat": 14.804965,
+          "lon": -89.41637,
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias",
+            "Padres, madres y cuidadores"
+          ],
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 160,
+            "Hogares / familias": 200,
+            "Padres, madres y cuidadores": 200
+          },
+          "poblacion_total_estimada": 200,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 5,
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)": 1
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        }
+      ]
+    },
+    {
+      "organizacion": "Programa de las Naciones Unidas para el Desarrollo PNUD",
+      "tipo_actor": "Cooperación multilateral",
+      "pais_origen": "",
+      "contacto": "Luis Boror",
+      "nombre_programa": "Proyecto: Mejorar la Calidad del Gasto Público en Seguridad Alimentaria y Nutrición",
+      "tipo_atencion": "Desarrollo / atención ordinaria",
+      "sector": [
+        "Seguridad alimentaria y nutricional"
+      ],
+      "modalidad": [
+        "Asistencia técnica",
+        "Fortalecimiento institucional"
+      ],
+      "fecha_inicio": "",
+      "tipo_duracion": "Sí, tiene fecha de finalización definida",
+      "fecha_fin": "2027-12-31",
+      "duracion_aproximada": "",
+      "estado_programa": "En ejecución",
+      "contraparte_gubernamental": "SESAN",
+      "monto_rango": "",
+      "monto_rango_codigo": "",
+      "fuente_financiamiento": [],
+      "espacios_coordinacion": [
+        "Mesa de Cooperación",
+        "CODESAN",
+        "COMUSAN"
+      ],
+      "disposicion_coordinar": "",
+      "beneficiarios_institucionales": {
+        "Municipalidades": 3,
+        "Dirección Municipal de Planificación (DMP)": 3,
+        "Oficina/Dirección Municipal de Seguridad Alimentaria y Nutricional (SAN)": 3
+      },
+      "municipios_cobertura_institucional": [
+        "Camotán",
+        "Jocotán",
+        "Olopa"
+      ],
+      "comunidades": [
+        {
+          "codigo_lugar": "jocotan_jocotan",
+          "lugar_poblado": "Jocotan",
+          "municipio": "Jocotán",
+          "clasificacion": "Pueblo",
+          "viviendas_catalogo": 1344,
+          "lat": 14.819268,
+          "lon": -89.3896,
+          "poblacion_meta": [],
+          "pm_cantidades": {},
+          "poblacion_total_estimada": 0,
+          "accion_comunidad": [],
+          "ac_cantidades": {},
+          "etnia": [],
+          "grupo_etario": [],
+          "area": ""
+        },
+        {
+          "codigo_lugar": "camotan_camotan",
+          "lugar_poblado": "Camotan",
+          "municipio": "Camotán",
+          "clasificacion": "Pueblo",
+          "viviendas_catalogo": 159,
+          "lat": 14.819226,
+          "lon": -89.3717,
+          "poblacion_meta": [],
+          "pm_cantidades": {},
+          "poblacion_total_estimada": 0,
+          "accion_comunidad": [],
+          "ac_cantidades": {},
+          "etnia": [],
+          "grupo_etario": [],
+          "area": ""
+        },
+        {
+          "codigo_lugar": "olopa_olopa",
+          "lugar_poblado": "Olopa",
+          "municipio": "Olopa",
+          "clasificacion": "Pueblo",
+          "viviendas_catalogo": 601,
+          "lat": 14.690299,
+          "lon": -89.34933,
+          "poblacion_meta": [],
+          "pm_cantidades": {},
+          "poblacion_total_estimada": 0,
+          "accion_comunidad": [],
+          "ac_cantidades": {},
+          "etnia": [],
+          "grupo_etario": [],
+          "area": ""
+        }
+      ]
     }
   ],
   "municipios": [
@@ -85,34 +260,54 @@
   "resumen_municipio": {
     "Camotán": {
       "organizaciones": [
-        "Internacional"
+        "Internacional",
+        "Programa de las Naciones Unidas para el Desarrollo PNUD"
       ],
-      "total_programas": 1,
-      "comunidades_cubiertas": 1,
+      "total_programas": 2,
+      "comunidades_cubiertas": 2,
       "comunidades_total_catalogo": 155,
       "inversion_estimada": 0,
       "sectores": {
         "Educación": 1,
-        "Salud": 1
+        "Salud": 1,
+        "Seguridad alimentaria y nutricional": 1
       },
       "estado": {
-        "En ejecución": 1
+        "En ejecución": 2
       },
-      "instituciones": {},
+      "instituciones": {
+        "Municipalidades": 3,
+        "Dirección Municipal de Planificación (DMP)": 3,
+        "Oficina/Dirección Municipal de Seguridad Alimentaria y Nutricional (SAN)": 3
+      },
       "fuente_financiamiento": {
         "Donante internacional": 1
       }
     },
     "Chiquimula": {
-      "organizaciones": [],
-      "total_programas": 0,
+      "organizaciones": [
+        "Asociación Aldeas Infantiles SOS Guatemala"
+      ],
+      "total_programas": 1,
       "comunidades_cubiertas": 0,
       "comunidades_total_catalogo": 124,
       "inversion_estimada": 0,
-      "sectores": {},
-      "estado": {},
-      "instituciones": {},
-      "fuente_financiamiento": {}
+      "sectores": {
+        "Seguridad alimentaria y nutricional": 1,
+        "Gobernanza y fortalecimiento institucional": 1,
+        "Protección (niñez, migrantes, víctimas de violencia)": 1
+      },
+      "estado": {
+        "En ejecución": 1
+      },
+      "instituciones": {
+        "Municipalidades": 1,
+        "COMUSAN (Comisión Municipal de Seguridad Alimentaria y Nutricional)": 1,
+        "Otro": 2
+      },
+      "fuente_financiamiento": {
+        "Donante internacional": 1
+      }
     },
     "Concepción las Minas": {
       "organizaciones": [],
@@ -148,25 +343,52 @@
       "fuente_financiamiento": {}
     },
     "Jocotán": {
-      "organizaciones": [],
-      "total_programas": 0,
-      "comunidades_cubiertas": 0,
+      "organizaciones": [
+        "Asociación Aldeas Infantiles SOS Guatemala",
+        "Programa de las Naciones Unidas para el Desarrollo PNUD"
+      ],
+      "total_programas": 2,
+      "comunidades_cubiertas": 2,
       "comunidades_total_catalogo": 89,
       "inversion_estimada": 0,
-      "sectores": {},
-      "estado": {},
-      "instituciones": {},
-      "fuente_financiamiento": {}
+      "sectores": {
+        "Seguridad alimentaria y nutricional": 2,
+        "Gobernanza y fortalecimiento institucional": 1,
+        "Protección (niñez, migrantes, víctimas de violencia)": 1
+      },
+      "estado": {
+        "En ejecución": 2
+      },
+      "instituciones": {
+        "Municipalidades": 4,
+        "COMUSAN (Comisión Municipal de Seguridad Alimentaria y Nutricional)": 1,
+        "Otro": 2,
+        "Dirección Municipal de Planificación (DMP)": 3,
+        "Oficina/Dirección Municipal de Seguridad Alimentaria y Nutricional (SAN)": 3
+      },
+      "fuente_financiamiento": {
+        "Donante internacional": 1
+      }
     },
     "Olopa": {
-      "organizaciones": [],
-      "total_programas": 0,
-      "comunidades_cubiertas": 0,
+      "organizaciones": [
+        "Programa de las Naciones Unidas para el Desarrollo PNUD"
+      ],
+      "total_programas": 1,
+      "comunidades_cubiertas": 1,
       "comunidades_total_catalogo": 58,
       "inversion_estimada": 0,
-      "sectores": {},
-      "estado": {},
-      "instituciones": {},
+      "sectores": {
+        "Seguridad alimentaria y nutricional": 1
+      },
+      "estado": {
+        "En ejecución": 1
+      },
+      "instituciones": {
+        "Municipalidades": 3,
+        "Dirección Municipal de Planificación (DMP)": 3,
+        "Oficina/Dirección Municipal de Seguridad Alimentaria y Nutricional (SAN)": 3
+      },
       "fuente_financiamiento": {}
     },
     "Quezaltepeque": {
@@ -220,6 +442,20 @@
     },
     "Salud": {
       "Camotán": 1
+    },
+    "Seguridad alimentaria y nutricional": {
+      "Jocotán": 2,
+      "Chiquimula": 1,
+      "Camotán": 1,
+      "Olopa": 1
+    },
+    "Gobernanza y fortalecimiento institucional": {
+      "Jocotán": 1,
+      "Chiquimula": 1
+    },
+    "Protección (niñez, migrantes, víctimas de violencia)": {
+      "Jocotán": 1,
+      "Chiquimula": 1
     }
   },
   "comunidades_sin_cobertura": [
@@ -1435,13 +1671,6 @@
       "lon": -89.43696
     },
     {
-      "codigo_lugar": "jocotan_jocotan",
-      "lugar_poblado": "Jocotan",
-      "municipio": "Jocotán",
-      "lat": 14.819268,
-      "lon": -89.3896
-    },
-    {
       "codigo_lugar": "jocotan_agua_fria",
       "lugar_poblado": "Agua Fria",
       "municipio": "Jocotán",
@@ -1841,13 +2070,6 @@
       "lon": -89.41878
     },
     {
-      "codigo_lugar": "jocotan_oquen",
-      "lugar_poblado": "Oquen",
-      "municipio": "Jocotán",
-      "lat": 14.804965,
-      "lon": -89.41637
-    },
-    {
       "codigo_lugar": "jocotan_suchiquer_oratorio",
       "lugar_poblado": "Suchiquer Oratorio",
       "municipio": "Jocotán",
@@ -2049,13 +2271,6 @@
       "municipio": "Jocotán",
       "lat": 14.760153,
       "lon": -89.36787
-    },
-    {
-      "codigo_lugar": "camotan_camotan",
-      "lugar_poblado": "Camotan",
-      "municipio": "Camotán",
-      "lat": 14.819226,
-      "lon": -89.3717
     },
     {
       "codigo_lugar": "camotan_anisillo",
@@ -3050,13 +3265,6 @@
       "municipio": "Camotán",
       "lat": 14.836823,
       "lon": -89.35862
-    },
-    {
-      "codigo_lugar": "olopa_olopa",
-      "lugar_poblado": "Olopa",
-      "municipio": "Olopa",
-      "lat": 14.690299,
-      "lon": -89.34933
     },
     {
       "codigo_lugar": "olopa_agua_blanca",
@@ -5930,7 +6138,13 @@
     }
   ],
   "duplicidad": [],
-  "instituciones_resumen": {},
+  "instituciones_resumen": {
+    "Municipalidades": 4,
+    "COMUSAN (Comisión Municipal de Seguridad Alimentaria y Nutricional)": 1,
+    "Otro": 2,
+    "Dirección Municipal de Planificación (DMP)": 3,
+    "Oficina/Dirección Municipal de Seguridad Alimentaria y Nutricional (SAN)": 3
+  },
   "matriz_poblacion_accion": {
     "Mujeres": {
       "Escuelas / centros educativos": 1,
@@ -5938,22 +6152,35 @@
     },
     "Hogares / familias": {
       "Escuelas / centros educativos": 1,
-      "Emprendimientos": 1
+      "Emprendimientos": 1,
+      "Organizaciones comunitarias / COCODES": 1,
+      "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)": 1
+    },
+    "Hogares con niñez menor de 5 años": {
+      "Organizaciones comunitarias / COCODES": 1,
+      "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)": 1
+    },
+    "Padres, madres y cuidadores": {
+      "Organizaciones comunitarias / COCODES": 1,
+      "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)": 1
     }
   },
   "inversion": {
     "total_estimada": 0,
     "programas_con_monto": 0,
-    "programas_sin_monto": 1,
+    "programas_sin_monto": 3,
     "por_sector": {
       "Educación": 0,
-      "Salud": 0
+      "Salud": 0,
+      "Seguridad alimentaria y nutricional": 0,
+      "Gobernanza y fortalecimiento institucional": 0,
+      "Protección (niñez, migrantes, víctimas de violencia)": 0
     },
     "nota_metodologica": "Estimación técnica para visualización basada en puntos medios de rangos; no representa ejecución financiera auditada."
   },
   "control": {
-    "registros_kobo": 1,
-    "programas_procesados": 1,
+    "registros_kobo": 3,
+    "programas_procesados": 3,
     "lugares_catalogo": 996,
     "lugares_con_coordenadas": 816
   }
