@@ -1,6 +1,6 @@
 {
-  "generado": "2026-09-29T12:51:29.439623+00:00",
-  "nota": "Datos sincronizados automáticamente desde KoboToolbox. Base territorial del XLSForm: 996 lugares poblados.",
+  "generado": "2026-09-29T16:51:45.331617+00:00",
+  "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [],
   "municipios": [
     "Camotán",
@@ -25,7 +25,8 @@
       "sectores": {},
       "estado": {},
       "instituciones": {},
-      "fuente_financiamiento": {}
+      "fuente_financiamiento": {},
+      "lugares_adicionales_reportados": 0
     },
     "Chiquimula": {
       "organizaciones": [],
@@ -36,7 +37,8 @@
       "sectores": {},
       "estado": {},
       "instituciones": {},
-      "fuente_financiamiento": {}
+      "fuente_financiamiento": {},
+      "lugares_adicionales_reportados": 0
     },
     "Concepción las Minas": {
       "organizaciones": [],
@@ -47,7 +49,8 @@
       "sectores": {},
       "estado": {},
       "instituciones": {},
-      "fuente_financiamiento": {}
+      "fuente_financiamiento": {},
+      "lugares_adicionales_reportados": 0
     },
     "Esquipulas": {
       "organizaciones": [],
@@ -58,7 +61,8 @@
       "sectores": {},
       "estado": {},
       "instituciones": {},
-      "fuente_financiamiento": {}
+      "fuente_financiamiento": {},
+      "lugares_adicionales_reportados": 0
     },
     "Ipala": {
       "organizaciones": [],
@@ -69,7 +73,8 @@
       "sectores": {},
       "estado": {},
       "instituciones": {},
-      "fuente_financiamiento": {}
+      "fuente_financiamiento": {},
+      "lugares_adicionales_reportados": 0
     },
     "Jocotán": {
       "organizaciones": [],
@@ -80,7 +85,8 @@
       "sectores": {},
       "estado": {},
       "instituciones": {},
-      "fuente_financiamiento": {}
+      "fuente_financiamiento": {},
+      "lugares_adicionales_reportados": 0
     },
     "Olopa": {
       "organizaciones": [],
@@ -91,7 +97,8 @@
       "sectores": {},
       "estado": {},
       "instituciones": {},
-      "fuente_financiamiento": {}
+      "fuente_financiamiento": {},
+      "lugares_adicionales_reportados": 0
     },
     "Quezaltepeque": {
       "organizaciones": [],
@@ -102,7 +109,8 @@
       "sectores": {},
       "estado": {},
       "instituciones": {},
-      "fuente_financiamiento": {}
+      "fuente_financiamiento": {},
+      "lugares_adicionales_reportados": 0
     },
     "San Jacinto": {
       "organizaciones": [],
@@ -113,7 +121,8 @@
       "sectores": {},
       "estado": {},
       "instituciones": {},
-      "fuente_financiamiento": {}
+      "fuente_financiamiento": {},
+      "lugares_adicionales_reportados": 0
     },
     "San José la Arada": {
       "organizaciones": [],
@@ -124,7 +133,8 @@
       "sectores": {},
       "estado": {},
       "instituciones": {},
-      "fuente_financiamiento": {}
+      "fuente_financiamiento": {},
+      "lugares_adicionales_reportados": 0
     },
     "San Juan Ermita": {
       "organizaciones": [],
@@ -135,7 +145,8 @@
       "sectores": {},
       "estado": {},
       "instituciones": {},
-      "fuente_financiamiento": {}
+      "fuente_financiamiento": {},
+      "lugares_adicionales_reportados": 0
     }
   },
   "matriz_sector_municipio": {},
@@ -5853,6 +5864,7 @@
       "lon": -89.62241
     }
   ],
+  "lugares_adicionales_reportados": [],
   "duplicidad": [],
   "instituciones_resumen": {},
   "matriz_poblacion_accion": {},
@@ -5865,6 +5877,7 @@
     "registros_kobo": 0,
     "programas_procesados": 0,
     "lugares_catalogo": 996,
-    "lugares_con_coordenadas": 816
+    "lugares_con_coordenadas": 816,
+    "lugares_adicionales_reportados": 0
   }
 }
