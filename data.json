@@ -1,190 +1,7 @@
 {
-  "generado": "2026-09-29T05:14:07.903176+00:00",
+  "generado": "2026-09-29T05:18:57.975812+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. Base territorial del XLSForm: 996 lugares poblados.",
-  "programas": [
-    {
-      "organizacion": "CRS",
-      "tipo_actor": "ONG internacional",
-      "trabajo_comunitario": "No",
-      "pais_origen": "",
-      "contacto": "César Chacón",
-      "nombre_programa": "RESURGIR",
-      "tipo_atencion": "Desarrollo / atención ordinaria",
-      "sector": [
-        "Gobernanza y fortalecimiento institucional"
-      ],
-      "modalidad": [
-        "Fortalecimiento institucional"
-      ],
-      "fecha_inicio": "2026-04-01",
-      "tipo_duracion": "Sí, tiene fecha de finalización definida",
-      "fecha_fin": "2028-12-29",
-      "duracion_aproximada": "",
-      "estado_programa": "En ejecución",
-      "contraparte_gubernamental": "segeplan",
-      "monto_rango": "Q2,000,000 – Q10,000,000",
-      "monto_rango_codigo": "2m_10m",
-      "fuente_financiamiento": [
-        "Donante internacional"
-      ],
-      "espacios_coordinacion": [
-        "CODESAN",
-        "COMUSAN",
-        "Mesa Técnica Agroclimática"
-      ],
-      "disposicion_coordinar": "Sí",
-      "beneficiarios_institucionales": {
-        "Municipalidades": 4
-      },
-      "municipios_cobertura_institucional": [
-        "Camotán",
-        "Jocotán",
-        "Olopa",
-        "San Juan Ermita"
-      ],
-      "comunidades": []
-    },
-    {
-      "organizacion": "P2R",
-      "tipo_actor": "Otro",
-      "trabajo_comunitario": "Sí",
-      "pais_origen": "",
-      "contacto": "Sindy ChegUen",
-      "nombre_programa": "P2R",
-      "tipo_atencion": "Desarrollo / atención ordinaria",
-      "sector": [
-        "Desarrollo económico local",
-        "AGRICULTURA RESILIENTE"
-      ],
-      "modalidad": [
-        "Asistencia técnica",
-        "Financiamiento directo",
-        "Donación en especie",
-        "Fortalecimiento institucional"
-      ],
-      "fecha_inicio": "2026-09-01",
-      "tipo_duracion": "Sí, tiene fecha de finalización definida",
-      "fecha_fin": "2026-10-10",
-      "duracion_aproximada": "",
-      "estado_programa": "En ejecución",
-      "contraparte_gubernamental": "maga",
-      "monto_rango": "Q500,000 – Q2,000,000",
-      "monto_rango_codigo": "500k_2m",
-      "fuente_financiamiento": [
-        "Donante internacional"
-      ],
-      "espacios_coordinacion": [
-        "COMUSAN",
-        "COMRED",
-        "Cuadrillas Municipales contra Incendios"
-      ],
-      "disposicion_coordinar": "Sí",
-      "beneficiarios_institucionales": {
-        "Municipalidades": 5
-      },
-      "municipios_cobertura_institucional": [
-        "Camotán",
-        "Jocotán",
-        "Olopa",
-        "San Jacinto",
-        "San Juan Ermita"
-      ],
-      "comunidades": [
-        {
-          "codigo_lugar": "chiquimula_campollano",
-          "lugar_poblado": "Campollano",
-          "municipio": "Chiquimula",
-          "clasificacion": "Caserío",
-          "viviendas_catalogo": 90,
-          "lat": 14.77457,
-          "lon": -89.55826,
-          "poblacion_meta": [
-            "Hogares / familias"
-          ],
-          "datos_cuantitativos_poblacion": "Sí",
-          "pm_cantidades": {
-            "Hogares / familias": 200
-          },
-          "poblacion_total_estimada": 200,
-          "accion_comunidad": [
-            "Grupos de Auto Ahorro y Préstamo",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)"
-          ],
-          "ac_cantidades": {
-            "Grupos de Auto Ahorro y Préstamo": 342,
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)": 339
-          },
-          "etnia": [
-            "Garífuna"
-          ],
-          "grupo_etario": [
-            "Juventud (18-29 años)"
-          ],
-          "area": "Rural"
-        },
-        {
-          "codigo_lugar": "quezaltepeque_los_pinos",
-          "lugar_poblado": "Los Pinos",
-          "municipio": "Quezaltepeque",
-          "clasificacion": "Colonia",
-          "viviendas_catalogo": 26,
-          "lat": 14.629355,
-          "lon": -89.44325,
-          "poblacion_meta": [
-            "Migrantes retornados"
-          ],
-          "datos_cuantitativos_poblacion": "Sí",
-          "pm_cantidades": {
-            "Migrantes retornados": 45
-          },
-          "poblacion_total_estimada": 45,
-          "accion_comunidad": [
-            "Emprendimientos"
-          ],
-          "ac_cantidades": {
-            "Emprendimientos": 34
-          },
-          "etnia": [
-            "Garífuna"
-          ],
-          "grupo_etario": [
-            "Adultez (30-59 años)"
-          ],
-          "area": "Rural"
-        },
-        {
-          "codigo_lugar": "ipala_san_nicolas",
-          "lugar_poblado": "San Nicolas",
-          "municipio": "Ipala",
-          "clasificacion": "Paraje",
-          "viviendas_catalogo": 2,
-          "lat": null,
-          "lon": null,
-          "poblacion_meta": [
-            "Pueblos indígenas"
-          ],
-          "datos_cuantitativos_poblacion": "Sí",
-          "pm_cantidades": {
-            "Pueblos indígenas": 34
-          },
-          "poblacion_total_estimada": 34,
-          "accion_comunidad": [
-            "Escuelas / centros educativos"
-          ],
-          "ac_cantidades": {
-            "Escuelas / centros educativos": 0
-          },
-          "etnia": [
-            "Maya"
-          ],
-          "grupo_etario": [
-            "Niñez (0-12 años)"
-          ],
-          "area": "Urbana"
-        }
-      ]
-    }
-  ],
+  "programas": [],
   "municipios": [
     "Camotán",
     "Chiquimula",
@@ -200,52 +17,26 @@
   ],
   "resumen_municipio": {
     "Camotán": {
-      "organizaciones": [
-        "CRS",
-        "P2R"
-      ],
-      "total_programas": 2,
+      "organizaciones": [],
+      "total_programas": 0,
       "comunidades_cubiertas": 0,
       "comunidades_total_catalogo": 155,
       "inversion_estimada": 0,
-      "sectores": {
-        "Gobernanza y fortalecimiento institucional": 1,
-        "Desarrollo económico local": 1,
-        "AGRICULTURA RESILIENTE": 1
-      },
-      "estado": {
-        "En ejecución": 2
-      },
-      "instituciones": {
-        "Municipalidades": {
-          "registros": 2,
-          "cantidad": 9,
-          "con_cantidad": true
-        }
-      },
-      "fuente_financiamiento": {
-        "Donante internacional": 2
-      }
+      "sectores": {},
+      "estado": {},
+      "instituciones": {},
+      "fuente_financiamiento": {}
     },
     "Chiquimula": {
-      "organizaciones": [
-        "P2R"
-      ],
-      "total_programas": 1,
-      "comunidades_cubiertas": 1,
+      "organizaciones": [],
+      "total_programas": 0,
+      "comunidades_cubiertas": 0,
       "comunidades_total_catalogo": 124,
       "inversion_estimada": 0,
-      "sectores": {
-        "Desarrollo económico local": 1,
-        "AGRICULTURA RESILIENTE": 1
-      },
-      "estado": {
-        "En ejecución": 1
-      },
+      "sectores": {},
+      "estado": {},
       "instituciones": {},
-      "fuente_financiamiento": {
-        "Donante internacional": 1
-      }
+      "fuente_financiamiento": {}
     },
     "Concepción las Minas": {
       "organizaciones": [],
@@ -270,126 +61,59 @@
       "fuente_financiamiento": {}
     },
     "Ipala": {
-      "organizaciones": [
-        "P2R"
-      ],
-      "total_programas": 1,
-      "comunidades_cubiertas": 1,
+      "organizaciones": [],
+      "total_programas": 0,
+      "comunidades_cubiertas": 0,
       "comunidades_total_catalogo": 80,
       "inversion_estimada": 0,
-      "sectores": {
-        "Desarrollo económico local": 1,
-        "AGRICULTURA RESILIENTE": 1
-      },
-      "estado": {
-        "En ejecución": 1
-      },
+      "sectores": {},
+      "estado": {},
       "instituciones": {},
-      "fuente_financiamiento": {
-        "Donante internacional": 1
-      }
+      "fuente_financiamiento": {}
     },
     "Jocotán": {
-      "organizaciones": [
-        "CRS",
-        "P2R"
-      ],
-      "total_programas": 2,
+      "organizaciones": [],
+      "total_programas": 0,
       "comunidades_cubiertas": 0,
       "comunidades_total_catalogo": 89,
       "inversion_estimada": 0,
-      "sectores": {
-        "Gobernanza y fortalecimiento institucional": 1,
-        "Desarrollo económico local": 1,
-        "AGRICULTURA RESILIENTE": 1
-      },
-      "estado": {
-        "En ejecución": 2
-      },
-      "instituciones": {
-        "Municipalidades": {
-          "registros": 2,
-          "cantidad": 9,
-          "con_cantidad": true
-        }
-      },
-      "fuente_financiamiento": {
-        "Donante internacional": 2
-      }
+      "sectores": {},
+      "estado": {},
+      "instituciones": {},
+      "fuente_financiamiento": {}
     },
     "Olopa": {
-      "organizaciones": [
-        "CRS",
-        "P2R"
-      ],
-      "total_programas": 2,
+      "organizaciones": [],
+      "total_programas": 0,
       "comunidades_cubiertas": 0,
       "comunidades_total_catalogo": 58,
       "inversion_estimada": 0,
-      "sectores": {
-        "Gobernanza y fortalecimiento institucional": 1,
-        "Desarrollo económico local": 1,
-        "AGRICULTURA RESILIENTE": 1
-      },
-      "estado": {
-        "En ejecución": 2
-      },
-      "instituciones": {
-        "Municipalidades": {
-          "registros": 2,
-          "cantidad": 9,
-          "con_cantidad": true
-        }
-      },
-      "fuente_financiamiento": {
-        "Donante internacional": 2
-      }
+      "sectores": {},
+      "estado": {},
+      "instituciones": {},
+      "fuente_financiamiento": {}
     },
     "Quezaltepeque": {
-      "organizaciones": [
-        "P2R"
-      ],
-      "total_programas": 1,
-      "comunidades_cubiertas": 1,
+      "organizaciones": [],
+      "total_programas": 0,
+      "comunidades_cubiertas": 0,
       "comunidades_total_catalogo": 99,
       "inversion_estimada": 0,
-      "sectores": {
-        "Desarrollo económico local": 1,
-        "AGRICULTURA RESILIENTE": 1
-      },
-      "estado": {
-        "En ejecución": 1
-      },
+      "sectores": {},
+      "estado": {},
       "instituciones": {},
-      "fuente_financiamiento": {
-        "Donante internacional": 1
-      }
+      "fuente_financiamiento": {}
     },
     "San Jacinto": {
-      "organizaciones": [
-        "P2R"
-      ],
-      "total_programas": 1,
+      "organizaciones": [],
+      "total_programas": 0,
       "comunidades_cubiertas": 0,
       "comunidades_total_catalogo": 44,
       "inversion_estimada": 0,
-      "sectores": {
-        "Desarrollo económico local": 1,
-        "AGRICULTURA RESILIENTE": 1
-      },
-      "estado": {
-        "En ejecución": 1
-      },
-      "instituciones": {
-        "Municipalidades": {
-          "registros": 1,
-          "cantidad": 5,
-          "con_cantidad": true
-        }
-      },
-      "fuente_financiamiento": {
-        "Donante internacional": 1
-      }
+      "sectores": {},
+      "estado": {},
+      "instituciones": {},
+      "fuente_financiamiento": {}
     },
     "San José la Arada": {
       "organizaciones": [],
@@ -403,62 +127,18 @@
       "fuente_financiamiento": {}
     },
     "San Juan Ermita": {
-      "organizaciones": [
-        "CRS",
-        "P2R"
-      ],
-      "total_programas": 2,
+      "organizaciones": [],
+      "total_programas": 0,
       "comunidades_cubiertas": 0,
       "comunidades_total_catalogo": 50,
       "inversion_estimada": 0,
-      "sectores": {
-        "Gobernanza y fortalecimiento institucional": 1,
-        "Desarrollo económico local": 1,
-        "AGRICULTURA RESILIENTE": 1
-      },
-      "estado": {
-        "En ejecución": 2
-      },
-      "instituciones": {
-        "Municipalidades": {
-          "registros": 2,
-          "cantidad": 9,
-          "con_cantidad": true
-        }
-      },
-      "fuente_financiamiento": {
-        "Donante internacional": 2
-      }
+      "sectores": {},
+      "estado": {},
+      "instituciones": {},
+      "fuente_financiamiento": {}
     }
   },
-  "matriz_sector_municipio": {
-    "Gobernanza y fortalecimiento institucional": {
-      "San Juan Ermita": 1,
-      "Olopa": 1,
-      "Jocotán": 1,
-      "Camotán": 1
-    },
-    "Desarrollo económico local": {
-      "Olopa": 1,
-      "Ipala": 1,
-      "San Jacinto": 1,
-      "Quezaltepeque": 1,
-      "Jocotán": 1,
-      "Camotán": 1,
-      "San Juan Ermita": 1,
-      "Chiquimula": 1
-    },
-    "AGRICULTURA RESILIENTE": {
-      "Olopa": 1,
-      "Ipala": 1,
-      "San Jacinto": 1,
-      "Quezaltepeque": 1,
-      "Jocotán": 1,
-      "Camotán": 1,
-      "San Juan Ermita": 1,
-      "Chiquimula": 1
-    }
-  },
+  "matriz_sector_municipio": {},
   "comunidades_sin_cobertura": [
     {
       "codigo_lugar": "chiquimula_chiquimula",
@@ -480,6 +160,13 @@
       "municipio": "Chiquimula",
       "lat": 14.806862,
       "lon": -89.57929
+    },
+    {
+      "codigo_lugar": "chiquimula_campollano",
+      "lugar_poblado": "Campollano",
+      "municipio": "Chiquimula",
+      "lat": 14.77457,
+      "lon": -89.55826
     },
     {
       "codigo_lugar": "chiquimula_canaan",
@@ -5536,6 +5223,13 @@
       "lon": -89.44953
     },
     {
+      "codigo_lugar": "quezaltepeque_los_pinos",
+      "lugar_poblado": "Los Pinos",
+      "municipio": "Quezaltepeque",
+      "lat": 14.629355,
+      "lon": -89.44325
+    },
+    {
       "codigo_lugar": "quezaltepeque_santa_filomena",
       "lugar_poblado": "Santa Filomena",
       "municipio": "Quezaltepeque",
@@ -6160,33 +5854,16 @@
     }
   ],
   "duplicidad": [],
-  "instituciones_resumen": {
-    "Municipalidades": {
-      "registros": 2,
-      "cantidad": 9,
-      "con_cantidad": true
-    }
-  },
-  "matriz_poblacion_accion": {
-    "Hogares / familias": {
-      "Grupos de Auto Ahorro y Préstamo": 1,
-      "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)": 1
-    },
-    "Migrantes retornados": {
-      "Emprendimientos": 1
-    },
-    "Pueblos indígenas": {
-      "Escuelas / centros educativos": 1
-    }
-  },
+  "instituciones_resumen": {},
+  "matriz_poblacion_accion": {},
   "inversion": {
-    "programas_con_monto": 2,
+    "programas_con_monto": 0,
     "programas_sin_monto": 0,
     "nota_metodologica": "La inversión se conserva como rango reportado. No se calculan puntos medios ni se distribuyen montos entre municipios o sectores."
   },
   "control": {
-    "registros_kobo": 2,
-    "programas_procesados": 2,
+    "registros_kobo": 0,
+    "programas_procesados": 0,
     "lugares_catalogo": 996,
     "lugares_con_coordenadas": 816
   }
