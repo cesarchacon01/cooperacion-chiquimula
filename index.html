@@ -166,6 +166,16 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
   }
   .map-note-cartografica{font-size:10px;color:#68717C;margin-top:7px;line-height:1.35}
 
+
+  .municipio-tip:before{display:none!important;}
+  .municipio-tip{
+    padding:5px 8px!important;
+    border-radius:5px!important;
+    font-family:Arial,sans-serif!important;
+    font-size:12px!important;
+    letter-spacing:.01em!important;
+  }
+
 </style>
 </head>
 <body>
@@ -835,7 +845,37 @@ async function cargarLimitesMunicipales(){
     if(exteriorMaskLayer) map.removeLayer(exteriorMaskLayer);
   exteriorMaskLayer=agregarMascaraExteriorChiquimula(map);
   agregarContornoDepartamental(map);
-  limitesLayer=L.geoJSON(LIMITES,{style:estiloLimite,onEachFeature:(f,l)=>l.bindTooltip(f.properties?.nombre_1||'Municipio',{sticky:true,direction:'center',className:'municipio-tip'})}).addTo(map);
+  limitesLayer=L.geoJSON(LIMITES,{style:estiloLimite,onEachFeature:(f,l)=>{
+      const nombre=f.properties?.nombre_1||'Municipio';
+      l.bindTooltip(nombre,{sticky:true,direction:'center',className:'municipio-tip'});
+      l.on({
+        mouseover:(e)=>{
+          const target=e.target;
+          target.setStyle({
+            color:'#1971A8',
+            weight:2.5,
+            opacity:1,
+            fillColor:'#8FC1DF',
+            fillOpacity:.20
+          });
+          if(target.bringToFront) target.bringToFront();
+          if(exteriorMaskLayer && exteriorMaskLayer.bringToBack) exteriorMaskLayer.bringToBack();
+          if(instLayer && instLayer.bringToFront) instLayer.bringToFront();
+          if(coopLayer && coopLayer.bringToFront) coopLayer.bringToFront();
+        },
+        mouseout:(e)=>{
+          if(limitesLayer) limitesLayer.resetStyle(e.target);
+        },
+        click:()=>{
+          const sel=document.getElementById('territorio-municipio');
+          if(sel && [...sel.options].some(o=>o.value===nombre)){
+            sel.value=nombre;
+            actualizarLugaresTerritoriales();
+            renderMapa();
+          }
+        }
+      });
+    }}).addTo(map);
     // Los límites quedan visibles sobre el mapa base, pero debajo de los puntos de cooperación.
     if(baseLayer && baseLayer.bringToFront) baseLayer.bringToFront();
     if(instLayer && instLayer.bringToFront) instLayer.bringToFront();
