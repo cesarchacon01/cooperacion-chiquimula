@@ -490,7 +490,7 @@ function mostrarVista(id){
 }
 
 const filtros = { sector:'', atencion:'', actor:'', estado:'', municipio:'' };
-let CATALOGO=null, COORDS={}, baseLayer=null, coopLayer=null, instLayer=null, basePlaces=[], limitesLayer=null, LIMITES=null;
+let CATALOGO=null, COORDS={}, baseLayer=null, coopLayer=null, instLayer=null, basePlaces=[], limitesLayer=null, exteriorMaskLayer=null, LIMITES=null;
 
 
 const SIGLAS_VISOR = new Set([
@@ -805,8 +805,8 @@ function estiloLimite(feature){
   const nombre=feature?.properties?.nombre_1||'';
   const activo=sel && normalizarTexto(nombre)===normalizarTexto(sel);
   return {
-    color:activo?'#0B5F9E':'#60758A',
-    weight:activo?3.0:1.25,
+    color:activo?'#0B5F9E':'#6F8293',
+    weight:activo?3.2:1.15,
     opacity:activo?.95:(sel?.48:.72),
     fillColor:activo?'#DCEAF5':'#FFFFFF',
     fillOpacity:activo?.10:(sel?.010:.004),
@@ -831,8 +831,10 @@ async function cargarLimitesMunicipales(){
     const q=new URLSearchParams({where:"depto_1='Chiquimula'",outFields:'cod_dept_1,cod_muni_1,nombre_1,depto_1',returnGeometry:'true',outSR:'4326',f:'geojson'});
     const r=await fetch(endpoint+'?'+q.toString());
     if(!r.ok) throw new Error('HTTP '+r.status);
-    LIMITES=await r.json();
-    limitesLayer=L.geoJSON(LIMITES,{style:estiloLimite,onEachFeature:(f,l)=>l.bindTooltip(f.properties?.nombre_1||'Municipio',{sticky:true,direction:'center',className:'municipio-tip'})}).addTo(map);
+    LIMITES=limpiarGeometriaLimites(await r.json());
+    if(exteriorMaskLayer) map.removeLayer(exteriorMaskLayer);
+  exteriorMaskLayer=agregarMascaraExteriorChiquimula(map);
+  limitesLayer=L.geoJSON(LIMITES,{style:estiloLimite,onEachFeature:(f,l)=>l.bindTooltip(f.properties?.nombre_1||'Municipio',{sticky:true,direction:'center',className:'municipio-tip'})}).addTo(map);
     // Los límites quedan visibles sobre el mapa base, pero debajo de los puntos de cooperación.
     if(baseLayer && baseLayer.bringToFront) baseLayer.bringToFront();
     if(instLayer && instLayer.bringToFront) instLayer.bringToFront();
@@ -841,8 +843,77 @@ async function cargarLimitesMunicipales(){
 }
 
 
+
+function limpiarGeometriaLimites(geojson){
+  if(!geojson || !Array.isArray(geojson.features)) return geojson;
+  const copia=JSON.parse(JSON.stringify(geojson));
+
+  const bboxRing=(ring)=>{
+    const xs=ring.map(p=>Number(p[0])).filter(Number.isFinite);
+    const ys=ring.map(p=>Number(p[1])).filter(Number.isFinite);
+    if(!xs.length||!ys.length) return null;
+    return {w:Math.max(...xs)-Math.min(...xs),h:Math.max(...ys)-Math.min(...ys)};
+  };
+  const areaBBox=b=>b?b.w*b.h:0;
+
+  copia.features.forEach(f=>{
+    const g=f.geometry;
+    if(!g) return;
+    if(g.type==='Polygon' && Array.isArray(g.coordinates) && g.coordinates.length>1){
+      const outer=g.coordinates[0];
+      const ob=bboxRing(outer), oa=areaBBox(ob);
+      g.coordinates=[outer,...g.coordinates.slice(1).filter(r=>{
+        const rb=bboxRing(r), ra=areaBBox(rb);
+        // Conserva huecos razonables; descarta anillos anómalos casi rectangulares/enormes.
+        return oa>0 && ra < oa*.65;
+      })];
+    }
+    if(g.type==='MultiPolygon' && Array.isArray(g.coordinates)){
+      g.coordinates=g.coordinates.map(poly=>{
+        if(!Array.isArray(poly)||!poly.length) return poly;
+        const outer=poly[0], ob=bboxRing(outer), oa=areaBBox(ob);
+        return [outer,...poly.slice(1).filter(r=>{
+          const rb=bboxRing(r), ra=areaBBox(rb);
+          return oa>0 && ra < oa*.65;
+        })];
+      });
+    }
+  });
+  return copia;
+}
+
+function agregarMascaraExteriorChiquimula(mapa){
+  if(!mapa || !LIMITES || !Array.isArray(LIMITES.features)) return null;
+  try{
+    const bounds=L.geoJSON(LIMITES).getBounds();
+    if(!bounds.isValid()) return null;
+    const sw=bounds.getSouthWest(), ne=bounds.getNorthEast();
+    const padLat=(ne.lat-sw.lat)*1.6, padLng=(ne.lng-sw.lng)*1.6;
+    const exterior=[
+      [sw.lng-padLng,sw.lat-padLat],[ne.lng+padLng,sw.lat-padLat],
+      [ne.lng+padLng,ne.lat+padLat],[sw.lng-padLng,ne.lat+padLat],
+      [sw.lng-padLng,sw.lat-padLat]
+    ];
+    // Holes are each municipal polygon outer ring; together they visually keep
+    // Chiquimula clear while muting the surrounding territory.
+    const holes=[];
+    LIMITES.features.forEach(f=>{
+      const g=f.geometry;
+      if(!g) return;
+      if(g.type==='Polygon' && g.coordinates?.[0]) holes.push(g.coordinates[0]);
+      if(g.type==='MultiPolygon') (g.coordinates||[]).forEach(p=>{if(p?.[0]) holes.push(p[0]);});
+    });
+    if(!holes.length) return null;
+    return L.polygon([exterior,...holes],{
+      stroke:false,fill:true,fillColor:'#F5F2EC',fillOpacity:.48,
+      interactive:false
+    }).addTo(mapa);
+  }catch(e){ return null; }
+}
+
 function agregarLimitesSecundarios(mapa){
   if(!mapa || !LIMITES) return null;
+  agregarMascaraExteriorChiquimula(mapa);
   const capa=L.geoJSON(LIMITES,{
     style:{
       color:'#60758A',weight:1.35,opacity:.72,
