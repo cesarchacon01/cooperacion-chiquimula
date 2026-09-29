@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-29T05:02:57.114886+00:00",
+  "generado": "2026-09-29T05:14:07.903176+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. Base territorial del XLSForm: 996 lugares poblados.",
   "programas": [
     {
@@ -433,30 +433,30 @@
   },
   "matriz_sector_municipio": {
     "Gobernanza y fortalecimiento institucional": {
-      "Olopa": 1,
       "San Juan Ermita": 1,
+      "Olopa": 1,
       "Jocotán": 1,
       "Camotán": 1
     },
     "Desarrollo económico local": {
+      "Olopa": 1,
       "Ipala": 1,
+      "San Jacinto": 1,
+      "Quezaltepeque": 1,
       "Jocotán": 1,
       "Camotán": 1,
-      "Quezaltepeque": 1,
-      "Chiquimula": 1,
       "San Juan Ermita": 1,
-      "Olopa": 1,
-      "San Jacinto": 1
+      "Chiquimula": 1
     },
     "AGRICULTURA RESILIENTE": {
+      "Olopa": 1,
       "Ipala": 1,
+      "San Jacinto": 1,
+      "Quezaltepeque": 1,
       "Jocotán": 1,
       "Camotán": 1,
-      "Quezaltepeque": 1,
-      "Chiquimula": 1,
       "San Juan Ermita": 1,
-      "Olopa": 1,
-      "San Jacinto": 1
+      "Chiquimula": 1
     }
   },
   "comunidades_sin_cobertura": [
