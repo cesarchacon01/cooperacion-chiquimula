@@ -834,6 +834,7 @@ async function cargarLimitesMunicipales(){
     LIMITES=limpiarGeometriaLimites(await r.json());
     if(exteriorMaskLayer) map.removeLayer(exteriorMaskLayer);
   exteriorMaskLayer=agregarMascaraExteriorChiquimula(map);
+  agregarContornoDepartamental(map);
   limitesLayer=L.geoJSON(LIMITES,{style:estiloLimite,onEachFeature:(f,l)=>l.bindTooltip(f.properties?.nombre_1||'Municipio',{sticky:true,direction:'center',className:'municipio-tip'})}).addTo(map);
     // Los límites quedan visibles sobre el mapa base, pero debajo de los puntos de cooperación.
     if(baseLayer && baseLayer.bringToFront) baseLayer.bringToFront();
@@ -911,9 +912,66 @@ function agregarMascaraExteriorChiquimula(mapa){
   }catch(e){ return null; }
 }
 
+
+function agregarContornoDepartamental(mapa){
+  if(!mapa || !LIMITES || !Array.isArray(LIMITES.features)) return null;
+  try{
+    if(!mapa.getPane('departamentoPane')){
+      mapa.createPane('departamentoPane');
+      mapa.getPane('departamentoPane').style.zIndex=397;
+      mapa.getPane('departamentoPane').style.pointerEvents='none';
+    }
+
+    // Construye el perímetro departamental cancelando los segmentos compartidos
+    // entre municipios. Solo sobreviven los tramos que pertenecen a un municipio.
+    const segmentos=new Map();
+    const keyPt=(p)=>`${Number(p[0]).toFixed(5)},${Number(p[1]).toFixed(5)}`;
+    const addRing=(ring)=>{
+      if(!Array.isArray(ring) || ring.length<2) return;
+      for(let i=0;i<ring.length-1;i++){
+        const a=ring[i], b=ring[i+1];
+        if(!Array.isArray(a)||!Array.isArray(b)) continue;
+        const ka=keyPt(a), kb=keyPt(b);
+        const key=ka<kb?`${ka}|${kb}`:`${kb}|${ka}`;
+        const prev=segmentos.get(key);
+        if(prev) prev.count++;
+        else segmentos.set(key,{count:1,a:[Number(a[1]),Number(a[0])],b:[Number(b[1]),Number(b[0])]});
+      }
+    };
+
+    LIMITES.features.forEach(f=>{
+      const g=f.geometry;
+      if(!g) return;
+      if(g.type==='Polygon' && g.coordinates?.[0]) addRing(g.coordinates[0]);
+      if(g.type==='MultiPolygon'){
+        (g.coordinates||[]).forEach(poly=>{ if(poly?.[0]) addRing(poly[0]); });
+      }
+    });
+
+    const exteriores=[...segmentos.values()].filter(s=>s.count===1);
+    const group=L.layerGroup([], {pane:'departamentoPane'}).addTo(mapa);
+    exteriores.forEach(s=>{
+      L.polyline([s.a,s.b],{
+        pane:'departamentoPane',
+        color:'#174F78',
+        weight:3.25,
+        opacity:.94,
+        lineCap:'round',
+        lineJoin:'round',
+        interactive:false
+      }).addTo(group);
+    });
+    return group;
+  }catch(e){
+    console.warn('No fue posible construir el perímetro departamental',e);
+    return null;
+  }
+}
+
 function agregarLimitesSecundarios(mapa){
   if(!mapa || !LIMITES) return null;
   agregarMascaraExteriorChiquimula(mapa);
+  agregarContornoDepartamental(mapa);
   const capa=L.geoJSON(LIMITES,{
     style:{
       color:'#60758A',weight:1.35,opacity:.72,
