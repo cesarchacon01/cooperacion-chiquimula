@@ -41,8 +41,13 @@ def find_repeat(obj, name):
     return []
 
 def num(v):
-    try: return int(float(v)) if v not in (None,'') else 0
-    except: return 0
+    """Devuelve número o None. Un campo vacío no equivale a cero."""
+    if v in (None, ''): return None
+    try:
+        n=float(v)
+        return int(n) if n.is_integer() else n
+    except:
+        return None
 
 def cargar_coordenadas():
     p=BASE/'coordenadas_lugares.json'
@@ -70,9 +75,12 @@ def descargar():
     # Paginación defensiva
     while isinstance(data,dict) and data.get('next'):
         data=api_get(data['next'],token); resultados.extend(data.get('results',[]))
+    # Kobo puede conservar metadatos de envíos eliminados; no deben llegar al visor.
+    resultados=[r for r in resultados if not find_value(r,'_deleted_at',None)]
     return resultados
 
 def programa_desde(rep, actor):
+    trabajo_comunitario=label('si_no',find_value(rep,'trabajo_comunitario',''))
     sectores=labels('sector',find_value(rep,'sector',''))
     if find_value(rep,'sector_otro'):
         sectores=[s for s in sectores if s!='Otro']+[str(find_value(rep,'sector_otro'))]
@@ -98,17 +106,34 @@ def programa_desde(rep, actor):
         lugar=meta.get('lugar_poblado') or code
         lat,lon=coord_for(code)
         pob=labels('poblacion_meta',find_value(c,'poblacion_meta',''))
+        datos_cuantitativos=label('si_no',find_value(c,'datos_cuantitativos_poblacion',''))
+        tiene_cantidades=str(find_value(c,'datos_cuantitativos_poblacion','') or '').lower()=='si'
         cantidades={}
         for pc in ['mujeres','mujeres_embarazadas_lactantes','pueblos_indigenas','migrantes_retornados','personas_discapacidad','adultos_mayores','hogares_ninez_menor_5','familias','agricultores','estudiantes','docentes','padres_cuidadores']:
-            if pc in str(find_value(c,'poblacion_meta','')).split(): cantidades[label('poblacion_meta',pc)]=num(find_value(c,'pm_cant_'+pc))
-        if 'otro' in str(find_value(c,'poblacion_meta','')).split(): cantidades[str(find_value(c,'poblacion_meta_otro','Otro'))]=num(find_value(c,'pm_cant_otro'))
-        acciones=labels('accion_comunidad',find_value(c,'accion_comunidad',''))
+            if pc in str(find_value(c,'poblacion_meta','')).split():
+                cantidades[label('poblacion_meta',pc)]=num(find_value(c,'pm_cant_'+pc)) if tiene_cantidades else None
+        if 'otro' in str(find_value(c,'poblacion_meta','')).split():
+            cantidades[str(find_value(c,'poblacion_meta_otro','Otro'))]=num(find_value(c,'pm_cant_otro')) if tiene_cantidades else None
+
+        acciones=[a for a in labels('accion_comunidad',find_value(c,'accion_comunidad','')) if a!='Ninguna / no aplica']
         ac_counts={}
-        for ac in ['escuelas','organizaciones_comunitarias','cooperativas','grupos_auto_ahorro_prestamo','emprendimientos','colred','cuadrillas_incendios','cader_eca','viveros_forestales','sistemas_riego','infraestructura_productiva_agropecuaria']:
-            if ac in str(find_value(c,'accion_comunidad','')).split(): ac_counts[label('accion_comunidad',ac)]=num(find_value(c,'ac_cant_'+ac))
-        if 'otro' in str(find_value(c,'accion_comunidad','')).split(): ac_counts[str(find_value(c,'accion_comunidad_otro','Otro'))]=num(find_value(c,'ac_cant_otro'))
-        comunidades.append({'codigo_lugar':code,'lugar_poblado':lugar,'municipio':muni,'clasificacion':meta.get('clasificacion'),'viviendas_catalogo':meta.get('viviendas'),'lat':lat,'lon':lon,'poblacion_meta':pob,'pm_cantidades':cantidades,'poblacion_total_estimada':max(cantidades.values(),default=0),'accion_comunidad':acciones,'ac_cantidades':ac_counts,'etnia':labels('etnia',find_value(c,'etnia','')),'grupo_etario':labels('grupo_etario',find_value(c,'grupo_etario','')),'area':label('area',find_value(c,'area',''))})
-    return {'organizacion':actor['organizacion'],'tipo_actor':actor['tipo_actor'],'pais_origen':actor['pais_origen'],'contacto':actor['contacto'],'nombre_programa':str(find_value(rep,'nombre_programa','')),'tipo_atencion':label('tipo_atencion',find_value(rep,'tipo_atencion','')),'sector':sectores,'modalidad':modalidad,'fecha_inicio':str(find_value(rep,'fecha_inicio','') or ''),'tipo_duracion':label('tipo_duracion',find_value(rep,'tipo_duracion','')),'fecha_fin':str(find_value(rep,'fecha_fin','') or ''),'duracion_aproximada':str(find_value(rep,'duracion_aproximada_texto','') or ''),'estado_programa':label('estado_programa',find_value(rep,'estado_programa','')),'contraparte_gubernamental':str(find_value(rep,'contraparte_gubernamental','') or ''),'monto_rango':label('monto_rango',find_value(rep,'monto_rango','')),'monto_rango_codigo':str(find_value(rep,'monto_rango','') or ''),'fuente_financiamiento':fuentes,'espacios_coordinacion':labels('espacios_coordinacion',find_value(rep,'espacios_coordinacion','')),'disposicion_coordinar':label('disposicion_coordinar',find_value(rep,'disposicion_coordinar','')),'beneficiarios_institucionales':inst_counts,'municipios_cobertura_institucional':mun_inst,'comunidades':comunidades}
+        # COCOSAN está en el XLSForm como acción/capacidad, pero no tiene campo de cantidad.
+        acciones_codigos=str(find_value(c,'accion_comunidad','') or '').split()
+        for ac in ['escuelas','organizaciones_comunitarias','cooperativas','grupos_auto_ahorro_prestamo','emprendimientos','colred','cuadrillas_incendios','cader_eca','viveros_forestales','sistemas_riego']:
+            if ac in acciones_codigos:
+                ac_counts[label('accion_comunidad',ac)]=num(find_value(c,'ac_cant_'+ac))
+        if 'infraestructura_productiva_agropecuaria' in acciones_codigos:
+            nombre=str(find_value(c,'accion_comunidad_agropecuaria_otro','') or label('accion_comunidad','infraestructura_productiva_agropecuaria'))
+            ac_counts[nombre]=num(find_value(c,'ac_cant_infraestructura_productiva_agropecuaria'))
+        if 'cocosan' in acciones_codigos:
+            ac_counts[label('accion_comunidad','cocosan')]=None
+        if 'otro' in acciones_codigos:
+            ac_counts[str(find_value(c,'accion_comunidad_otro','Otro'))]=num(find_value(c,'ac_cant_otro'))
+
+        valores_cuantificados=[v for v in cantidades.values() if isinstance(v,(int,float))]
+        poblacion_total_estimada=max(valores_cuantificados) if valores_cuantificados else None
+        comunidades.append({'codigo_lugar':code,'lugar_poblado':lugar,'municipio':muni,'clasificacion':meta.get('clasificacion'),'viviendas_catalogo':meta.get('viviendas'),'lat':lat,'lon':lon,'poblacion_meta':pob,'datos_cuantitativos_poblacion':datos_cuantitativos,'pm_cantidades':cantidades,'poblacion_total_estimada':poblacion_total_estimada,'accion_comunidad':acciones,'ac_cantidades':ac_counts,'etnia':labels('etnia',find_value(c,'etnia','')),'grupo_etario':labels('grupo_etario',find_value(c,'grupo_etario','')),'area':label('area',find_value(c,'area',''))})
+    return {'organizacion':actor['organizacion'],'tipo_actor':actor['tipo_actor'],'trabajo_comunitario':trabajo_comunitario,'pais_origen':actor['pais_origen'],'contacto':actor['contacto'],'nombre_programa':str(find_value(rep,'nombre_programa','')),'tipo_atencion':label('tipo_atencion',find_value(rep,'tipo_atencion','')),'sector':sectores,'modalidad':modalidad,'fecha_inicio':str(find_value(rep,'fecha_inicio','') or ''),'tipo_duracion':label('tipo_duracion',find_value(rep,'tipo_duracion','')),'fecha_fin':str(find_value(rep,'fecha_fin','') or ''),'duracion_aproximada':str(find_value(rep,'duracion_aproximada_texto','') or ''),'estado_programa':label('estado_programa',find_value(rep,'estado_programa','')),'contraparte_gubernamental':str(find_value(rep,'contraparte_gubernamental','') or ''),'monto_rango':label('monto_rango',find_value(rep,'monto_rango','')),'monto_rango_codigo':str(find_value(rep,'monto_rango','') or ''),'fuente_financiamiento':fuentes,'espacios_coordinacion':labels('espacios_coordinacion',find_value(rep,'espacios_coordinacion','')),'disposicion_coordinar':label('disposicion_coordinar',find_value(rep,'disposicion_coordinar','')),'beneficiarios_institucionales':inst_counts,'municipios_cobertura_institucional':mun_inst,'comunidades':comunidades}
 
 def construir(registros):
     programas=[]
@@ -124,16 +149,14 @@ def construir(registros):
         m=label('municipios',meta.get('municipio_codigo',''))
         if m in resumen: resumen[m]['comunidades_total_catalogo']+=1
     matriz={}; inst_res={}; pop_acc={}; dup={}
-    rango_mid={'menos_500k':250000,'500k_2m':1250000,'2m_10m':6000000,'mas_10m':10000000}
-    inv={'total_estimada':0,'programas_con_monto':0,'programas_sin_monto':0,'por_sector':{},'nota_metodologica':'Estimación técnica para visualización basada en puntos medios de rangos; no representa ejecución financiera auditada.'}
+    inv={'programas_con_monto':0,'programas_sin_monto':0,'nota_metodologica':'La inversión se conserva como rango reportado. No se calculan puntos medios ni se distribuyen montos entre municipios o sectores.'}
     for p in programas:
         munis=set([c['municipio'] for c in p['comunidades'] if c['municipio']] + p['municipios_cobertura_institucional'])
-        mid=rango_mid.get(p['monto_rango_codigo'],0)
-        if mid: inv['programas_con_monto']+=1; inv['total_estimada']+=mid
+        tiene_monto=bool(p.get('monto_rango_codigo'))
+        if tiene_monto: inv['programas_con_monto']+=1
         else: inv['programas_sin_monto']+=1
         for s in p['sector']:
             matriz.setdefault(s,{})
-            inv['por_sector'][s]=inv['por_sector'].get(s,0)+(mid/max(1,len(p['sector'])) if mid else 0)
             for m in munis: matriz[s][m]=matriz[s].get(m,0)+1
         for m in munis:
             if m not in resumen: continue
@@ -142,11 +165,16 @@ def construir(registros):
             for s in p['sector']: rr['sectores'][s]=rr['sectores'].get(s,0)+1
             if p['estado_programa']: rr['estado'][p['estado_programa']]=rr['estado'].get(p['estado_programa'],0)+1
             for f in p['fuente_financiamiento']: rr['fuente_financiamiento'][f]=rr['fuente_financiamiento'].get(f,0)+1
-            if mid: rr['inversion_estimada']+=mid/max(1,len(munis))
         for m in p['municipios_cobertura_institucional']:
             if m in resumen:
-                for typ,n in p['beneficiarios_institucionales'].items(): resumen[m]['instituciones'][typ]=resumen[m]['instituciones'].get(typ,0)+n
-        for typ,n in p['beneficiarios_institucionales'].items(): inst_res[typ]=inst_res.get(typ,0)+n
+                for typ,n in p['beneficiarios_institucionales'].items():
+                    if typ not in resumen[m]['instituciones']: resumen[m]['instituciones'][typ]={'registros':0,'cantidad':0,'con_cantidad':False}
+                    z=resumen[m]['instituciones'][typ]; z['registros']+=1
+                    if isinstance(n,(int,float)): z['cantidad']+=n; z['con_cantidad']=True
+        for typ,n in p['beneficiarios_institucionales'].items():
+            if typ not in inst_res: inst_res[typ]={'registros':0,'cantidad':0,'con_cantidad':False}
+            z=inst_res[typ]; z['registros']+=1
+            if isinstance(n,(int,float)): z['cantidad']+=n; z['con_cantidad']=True
         for c in p['comunidades']:
             for po in c['poblacion_meta']:
                 pop_acc.setdefault(po,{})
