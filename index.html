@@ -154,6 +154,18 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
   .map-symbol.institutional{background:#F1C47C;border:2px dashed #B97824;}
   .map-symbol.territorial{background:#fff;border:1.5px solid #C98A6B;}
 
+
+  /* ===== Lenguaje cartográfico común para todos los mapas ===== */
+  .leaflet-container{background:#EEF1EE;}
+  .municipio-tip{
+    background:rgba(255,255,255,.94)!important;
+    border:1px solid #D8DEE5!important;
+    color:#003058!important;
+    font-weight:700!important;
+    box-shadow:0 2px 8px rgba(0,32,64,.10)!important;
+  }
+  .map-note-cartografica{font-size:10px;color:#68717C;margin-top:7px;line-height:1.35}
+
 </style>
 </head>
 <body>
@@ -792,7 +804,14 @@ function estiloLimite(feature){
   const sel=document.getElementById('t-municipio')?.value||'';
   const nombre=feature?.properties?.nombre_1||'';
   const activo=sel && normalizarTexto(nombre)===normalizarTexto(sel);
-  return {color:activo?'#003058':'#7F8B96',weight:activo?3.4:1.15,opacity:activo?1:(sel?.42:.68),fillColor:activo?'#DFB26F':'#FFFFFF',fillOpacity:activo?.10:(sel?.015:.008)};
+  return {
+    color:activo?'#0B5F9E':'#60758A',
+    weight:activo?3.0:1.25,
+    opacity:activo?.95:(sel?.48:.72),
+    fillColor:activo?'#DCEAF5':'#FFFFFF',
+    fillOpacity:activo?.10:(sel?.010:.004),
+    lineCap:'round', lineJoin:'round'
+  };
 }
 
 function actualizarLimitesMunicipales(){
@@ -814,8 +833,28 @@ async function cargarLimitesMunicipales(){
     if(!r.ok) throw new Error('HTTP '+r.status);
     LIMITES=await r.json();
     limitesLayer=L.geoJSON(LIMITES,{style:estiloLimite,onEachFeature:(f,l)=>l.bindTooltip(f.properties?.nombre_1||'Municipio',{sticky:true,direction:'center',className:'municipio-tip'})}).addTo(map);
-    if(limitesLayer.bringToBack) limitesLayer.bringToBack();
+    // Los límites quedan visibles sobre el mapa base, pero debajo de los puntos de cooperación.
+    if(baseLayer && baseLayer.bringToFront) baseLayer.bringToFront();
+    if(instLayer && instLayer.bringToFront) instLayer.bringToFront();
+    if(coopLayer && coopLayer.bringToFront) coopLayer.bringToFront();
   }catch(e){ console.warn('Límites municipales no disponibles',e); }
+}
+
+
+function agregarLimitesSecundarios(mapa){
+  if(!mapa || !LIMITES) return null;
+  const capa=L.geoJSON(LIMITES,{
+    style:{
+      color:'#60758A',weight:1.35,opacity:.72,
+      fillColor:'#FFFFFF',fillOpacity:.004,
+      lineCap:'round',lineJoin:'round'
+    },
+    onEachFeature:(f,l)=>l.bindTooltip(
+      f.properties?.nombre_1||'Municipio',
+      {sticky:true,direction:'center',className:'municipio-tip'}
+    )
+  }).addTo(mapa);
+  return capa;
 }
 
 function renderResumenTerritorial(filtrados){
@@ -1237,7 +1276,7 @@ function renderInversion(){
   }
 }
 
-let orgMap=null, orgCommunityLayer=null, orgInstitutionalLayer=null;
+let orgMap=null, orgCommunityLayer=null, orgInstitutionalLayer=null, orgBoundaryLayer=null;
 
 function poblarSelectorOrganizacion(){
   const sel=document.getElementById('f-organizacion-panel');
@@ -1252,6 +1291,14 @@ function initOrgMap(){
   if(orgMap) return;
   orgMap=L.map('map-organizacion',{zoomControl:true}).setView([14.75,-89.45],9);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}).addTo(orgMap);
+  const legOrg=L.control({position:'bottomleft'});
+  legOrg.onAdd=function(){
+    const d=L.DomUtil.create('div','map-legend-control');
+    d.innerHTML='<div class="map-legend-title">Simbología</div><div><span class="map-symbol community"></span> Presencia comunitaria</div><div><span class="map-symbol institutional"></span> Presencia institucional / municipal</div>';
+    L.DomEvent.disableClickPropagation(d); return d;
+  };
+  legOrg.addTo(orgMap);
+  orgBoundaryLayer=agregarLimitesSecundarios(orgMap);
   orgInstitutionalLayer=L.layerGroup().addTo(orgMap);
   orgCommunityLayer=L.layerGroup().addTo(orgMap);
 }
@@ -1304,9 +1351,9 @@ function renderOrganizacion(){
 
   initOrgMap(); orgCommunityLayer.clearLayers(); orgInstitutionalLayer.clearLayers();
   const bounds=[];
-  lugares.forEach(c=>{ if(Number.isFinite(Number(c.lat))&&Number.isFinite(Number(c.lon))){ const ll=[Number(c.lat),Number(c.lon)]; bounds.push(ll); const mk=L.circleMarker(ll,{radius:7,color:'#003058',fillColor:'#003058',fillOpacity:.9,weight:2}); mk.bindPopup(`<b>${c.lugar_poblado}</b><br>${c.municipio}<br><span style="color:#5B6672">Presencia comunitaria registrada</span>`); mk.addTo(orgCommunityLayer); }});
+  lugares.forEach(c=>{ if(Number.isFinite(Number(c.lat))&&Number.isFinite(Number(c.lon))){ const ll=[Number(c.lat),Number(c.lon)]; bounds.push(ll); const mk=L.circleMarker(ll,{radius:7.5,color:'#FFFFFF',fillColor:'#003058',fillOpacity:.96,weight:2.2}); mk.bindPopup(`<b>${c.lugar_poblado}</b><br>${c.municipio}<br><span style="color:#5B6672">Presencia comunitaria registrada</span>`); mk.addTo(orgCommunityLayer); }});
   // Para municipios con presencia institucional sin punto comunitario, usamos el centro promedio de los lugares georreferenciados del municipio solo como referencia cartográfica.
-  [...munInst].forEach(m=>{ const pts=basePlaces.filter(x=>x.municipio===m&&Number.isFinite(Number(x.lat))&&Number.isFinite(Number(x.lon))); if(!pts.length)return; const lat=pts.reduce((a,x)=>a+Number(x.lat),0)/pts.length, lon=pts.reduce((a,x)=>a+Number(x.lon),0)/pts.length; const ll=[lat,lon]; bounds.push(ll); const mk=L.circleMarker(ll,{radius:9,color:'#C99048',fillColor:'#DFB26F',fillOpacity:.65,weight:2,dashArray:'4 3'}); mk.bindPopup(`<b>${m}</b><br>Presencia institucional / municipal reportada<br><span style="color:#5B6672">Marcador de referencia municipal; no representa una comunidad específica.</span>`); mk.addTo(orgInstitutionalLayer); });
+  [...munInst].forEach(m=>{ const pts=basePlaces.filter(x=>x.municipio===m&&Number.isFinite(Number(x.lat))&&Number.isFinite(Number(x.lon))); if(!pts.length)return; const lat=pts.reduce((a,x)=>a+Number(x.lat),0)/pts.length, lon=pts.reduce((a,x)=>a+Number(x.lon),0)/pts.length; const ll=[lat,lon]; bounds.push(ll); const mk=L.circleMarker(ll,{radius:8.5,color:'#B97824',fillColor:'#F1C47C',fillOpacity:.76,weight:2.2,dashArray:'4 3'}); mk.bindPopup(`<b>${m}</b><br>Presencia institucional / municipal reportada<br><span style="color:#5B6672">Marcador de referencia municipal; no representa una comunidad específica.</span>`); mk.addTo(orgInstitutionalLayer); });
   if(bounds.length) orgMap.fitBounds(bounds,{padding:[30,30],maxZoom:12}); else orgMap.setView([14.75,-89.45],9);
   document.getElementById('submap-organizacion').textContent=`${org}: ${lugares.size} lugares con presencia comunitaria; ${munInst.size} municipios con presencia institucional/municipal reportada.`;
   setTimeout(()=>orgMap.invalidateSize(),50);
@@ -1314,7 +1361,7 @@ function renderOrganizacion(){
 
 function renderInstituciones(){ poblarSelectorOrganizacion(); }
 
-let paMap=null, paLayer=null;
+let paMap=null, paLayer=null, paBoundaryLayer=null;
 
 function valorCantidadPA(c, grupo){
   if(!grupo) return null;
@@ -1370,6 +1417,14 @@ function asegurarMapaPA(){
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
     attribution:'&copy; OpenStreetMap contributors',maxZoom:18
   }).addTo(paMap);
+  const legPA=L.control({position:'bottomleft'});
+  legPA.onAdd=function(){
+    const d=L.DomUtil.create('div','map-legend-control');
+    d.innerHTML='<div class="map-legend-title">Simbología</div><div><span class="map-symbol community"></span> Lugar con intervención registrada</div>';
+    L.DomEvent.disableClickPropagation(d); return d;
+  };
+  legPA.addTo(paMap);
+  paBoundaryLayer=agregarLimitesSecundarios(paMap);
   paLayer=L.layerGroup().addTo(paMap);
 }
 
@@ -1445,7 +1500,7 @@ function renderPoblacionAccion(){
     const orgSet=[...new Set(x.rows.map(r=>r.organizacion))];
     const popSet=[...new Set(x.rows.map(r=>r.poblacion))];
     const actSet=[...new Set(x.rows.map(r=>r.accion))];
-    const mk=L.circleMarker([x.lat,x.lon],{radius:8+Math.min(5,orgSet.length)*2,fillColor:'#003058',color:'#fff',weight:1.5,fillOpacity:.9});
+    const mk=L.circleMarker([x.lat,x.lon],{radius:7+Math.min(4,orgSet.length)*1.6,fillColor:'#003058',color:'#FFFFFF',weight:2,fillOpacity:.96});
     mk.bindPopup(`<b>${esc(x.lugar)}</b> (${esc(x.municipio)})<br><b>${orgSet.length}</b> organización(es)<br><br><b>Población:</b> ${popSet.map(esc).join(', ')}<br><b>Acción:</b> ${actSet.map(esc).join(', ')}`);
     mk.addTo(paLayer); bounds.push([x.lat,x.lon]);
   });
