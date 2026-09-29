@@ -176,6 +176,19 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
     letter-spacing:.01em!important;
   }
 
+
+  .intervention-card{overflow:hidden}
+  .intervention-toggle{width:100%;border:0;background:#fff;padding:0;cursor:pointer;text-align:left;color:inherit;font:inherit}
+  .intervention-toggle:hover .intervention-head{background:#F7FAFC}
+  .intervention-head{padding:11px 12px;transition:background .15s ease}
+  .intervention-summary{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+  .intervention-summary-main{min-width:0;flex:1}
+  .intervention-chevron{font-size:17px;color:#60758A;line-height:1;transition:transform .18s ease;margin-top:2px}
+  .intervention-card.open .intervention-chevron{transform:rotate(180deg)}
+  .intervention-body{display:none;border-top:1px solid #E7EBEF;padding:11px 12px}
+  .intervention-card.open .intervention-body{display:block}
+  .intervention-card:not(.open) .intervention-program{margin-bottom:0}
+
 </style>
 </head>
 <body>
@@ -694,12 +707,8 @@ function renderMapa(filtrados){
       const orgsUnicas = new Set(p.entradas.map(e=>e.organizacion));
       const n = orgsUnicas.size;
       const marker = L.circleMarker([p.lat,p.lon], {radius:7+n*3, fillColor:colorPorConteo(n,maxConteo), color:'#fff', weight:1.5, fillOpacity:0.92});
-      const listaOrgs = [...orgsUnicas].map(o=>{
-        const sectores = new Set();
-        p.entradas.filter(e=>e.organizacion===o).forEach(e=>e.sector.forEach(s=>sectores.add(s)));
-        return `<b>${o}</b> — ${[...sectores].join(', ')}`;
-      }).join('<br>');
-      marker.bindPopup(`<b>${p.lugar}</b> (${p.municipio})<br>${n} organización(es)<br><br>${listaOrgs}`);
+      const programasUnicos=new Set(p.entradas.map(e=>e.programa).filter(Boolean));
+      marker.bindPopup(`<b>${p.lugar}</b> · ${p.municipio}<br><br><b>${n}</b> organización(es) · <b>${programasUnicos.size}</b> programa(s) / proyecto(s)<br><span style="color:#6B7280">El detalle completo se muestra en el panel lateral.</span>`,{maxWidth:285});
       marker.on('click', ()=>mostrarPanelComunidad(p));
       marker.addTo(coopLayer);
     });
@@ -1127,6 +1136,14 @@ function resumenCantidadPoblacion(entradas){
   if(items.length===1) return {valor:items[0].valor.toLocaleString('es-GT'),detalle:items[0].grupo};
   return {valor:'Ver desglose',detalle:`${items.length} cantidades reportadas`};
 }
+function toggleIntervencion(btn){
+  const card=btn?.closest('.intervention-card');
+  if(!card) return;
+  const abrir=!card.classList.contains('open');
+  card.classList.toggle('open',abrir);
+  btn.setAttribute('aria-expanded',abrir?'true':'false');
+}
+
 function mostrarPanelComunidad(p){
   sincronizarConsultaConPunto(p);
   const orgs=[...new Set(p.entradas.map(e=>e.organizacion).filter(Boolean))];
@@ -1162,23 +1179,32 @@ function mostrarPanelComunidad(p){
     const pob=(e.poblacion_meta||[]).join(', ')||'No reportada';
     const acc=(e.acciones||[]).join(', ')||'No reportada';
     const inv=inversionInfo(e);
-    return `<div class="intervention-card">
-      <div class="intervention-head"><div>
-        <div class="intervention-org">${escaparHtml(e.organizacion||'Organización no indicada')}</div>
-        <div class="intervention-program"><b>Programa / proyecto:</b> ${escaparHtml(e.programa||'No indicado')}</div>
-      </div><span class="tag">${i+1}</span></div>
-      <div class="intervention-meta">
-        <div><b>Tipo de actor</b>${escaparHtml(e.tipo_actor||'No reportado')}</div>
-        <div><b>Tipo de atención</b>${escaparHtml(e.tipo_atencion||'No reportado')}</div>
-        <div><b>Sector(es)</b><div class="sector-tags">${sec.length?sec.map(x=>`<span class="sector-tag">${escaparHtml(x)}</span>`).join(''):'No reportado'}</div></div>
-        <div><b>Estado</b>${escaparHtml(e.estado||'No reportado')}</div>
-        <div><b>Inicio</b>${escaparHtml(fechaLegible(e.fecha_inicio))}</div>
-        <div><b>Finalización</b>${escaparHtml(fechaLegible(e.fecha_fin))}</div>
-        <div style="grid-column:1/-1"><b>Población atendida reportada</b>${desglosePoblacion(e).length?`<div class="pill-list" style="margin-top:5px">${desglosePoblacion(e).map(x=>`<span class="pill">${escaparHtml(x.grupo)}: <strong>${x.valor.toLocaleString('es-GT')}</strong></span>`).join('')}</div>`:'No reportada'}</div>
-        <div><b>Población meta</b>${escaparHtml(pob)}</div>
-        <div><b>Acción / capacidad local</b>${escaparHtml(acc)}</div>
+    const abierta=i===0?' open':'';
+    return `<div class="intervention-card${abierta}">
+      <button type="button" class="intervention-toggle" onclick="toggleIntervencion(this)" aria-expanded="${i===0?'true':'false'}">
+        <div class="intervention-head intervention-summary">
+          <div class="intervention-summary-main">
+            <div class="intervention-org">${escaparHtml(e.organizacion||'Organización no indicada')}</div>
+            <div class="intervention-program"><b>Programa / proyecto:</b> ${escaparHtml(e.programa||'No indicado')}</div>
+            <div class="sector-tags" style="margin-top:6px">${sec.length?sec.slice(0,2).map(x=>`<span class="sector-tag">${escaparHtml(x)}</span>`).join(''):'<span class="sector-tag">Sector no reportado</span>'}</div>
+          </div>
+          <span class="tag">${i+1}</span><span class="intervention-chevron">⌄</span>
+        </div>
+      </button>
+      <div class="intervention-body">
+        <div class="intervention-meta">
+          <div><b>Tipo de actor</b>${escaparHtml(e.tipo_actor||'No reportado')}</div>
+          <div><b>Tipo de atención</b>${escaparHtml(e.tipo_atencion||'No reportado')}</div>
+          <div><b>Sector(es)</b><div class="sector-tags">${sec.length?sec.map(x=>`<span class="sector-tag">${escaparHtml(x)}</span>`).join(''):'No reportado'}</div></div>
+          <div><b>Estado</b>${escaparHtml(e.estado||'No reportado')}</div>
+          <div><b>Inicio</b>${escaparHtml(fechaLegible(e.fecha_inicio))}</div>
+          <div><b>Finalización</b>${escaparHtml(fechaLegible(e.fecha_fin))}</div>
+          <div style="grid-column:1/-1"><b>Población atendida reportada</b>${desglosePoblacion(e).length?`<div class="pill-list" style="margin-top:5px">${desglosePoblacion(e).map(x=>`<span class="pill">${escaparHtml(x.grupo)}: <strong>${x.valor.toLocaleString('es-GT')}</strong></span>`).join('')}</div>`:'No reportada'}</div>
+          <div><b>Población meta</b>${escaparHtml(pob)}</div>
+          <div><b>Acción / capacidad local</b>${escaparHtml(acc)}</div>
+        </div>
+        <div class="investment-box"><b>Inversión reportada</b><div class="investment-value">${escaparHtml(inv.valor)}</div><div class="investment-kind">${escaparHtml(inv.tipo)} · se muestra el dato reportado, sin estimar puntos medios.</div></div>
       </div>
-      <div class="investment-box"><b>Inversión reportada</b><div class="investment-value">${escaparHtml(inv.valor)}</div><div class="investment-kind">${escaparHtml(inv.tipo)} · se muestra el dato reportado, sin estimar puntos medios.</div></div>
     </div>`;
   }).join('');
 
