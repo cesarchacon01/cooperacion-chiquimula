@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-29T16:55:42.265480+00:00",
+  "generado": "2026-09-29T17:04:35.287000+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -397,12 +397,12 @@
   },
   "matriz_sector_municipio": {
     "Educación": {
-      "Chiquimula": 1,
-      "Camotán": 1
+      "Camotán": 1,
+      "Chiquimula": 1
     },
     "Protección (niñez, migrantes, víctimas de violencia)": {
-      "Quezaltepeque": 1,
-      "Camotán": 1
+      "Camotán": 1,
+      "Quezaltepeque": 1
     }
   },
   "comunidades_sin_cobertura": [
