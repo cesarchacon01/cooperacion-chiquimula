@@ -468,6 +468,57 @@ function mostrarVista(id){
 const filtros = { sector:'', atencion:'', actor:'', estado:'', municipio:'' };
 let CATALOGO=null, COORDS={}, baseLayer=null, coopLayer=null, basePlaces=[], limitesLayer=null, LIMITES=null;
 
+
+const SIGLAS_VISOR = new Set([
+  'CRS','SEGEPLAN','MAGA','SESAN','CONRED','COMRED','COMUSAN','COCOSAN','COCODE','COCODES',
+  'OMDEL','DMP','UMGIRD','GIRD','SAN','CODESAN','ECA','CADER','GAAP','P2R','ONG','OCHA','PMA'
+]);
+
+function textoUniforme(valor){
+  if(valor===null || valor===undefined) return '';
+  const original=String(valor).trim().replace(/\s+/g,' ');
+  if(!original) return '';
+  // No altera códigos/siglas/proyectos cortos ya escritos como sigla.
+  if(SIGLAS_VISOR.has(original.toUpperCase())) return original.toUpperCase();
+  // Solo corrige frases escritas completamente en MAYÚSCULAS o minúsculas.
+  // Los textos con capitalización intencional se conservan.
+  const letras=original.replace(/[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/g,'');
+  const todoMay=letras && letras===letras.toUpperCase();
+  const todoMin=letras && letras===letras.toLowerCase();
+  if(!(todoMay || todoMin)) return original;
+  const bajo=original.toLocaleLowerCase('es-GT');
+  let salida=bajo.charAt(0).toLocaleUpperCase('es-GT')+bajo.slice(1);
+  salida=salida.split(/(\s+|\/|\(|\)|,|·|-)/).map(tok=>{
+    const up=tok.toUpperCase();
+    return SIGLAS_VISOR.has(up)?up:tok;
+  }).join('');
+  return salida;
+}
+
+function normalizarPresentacionData(data){
+  if(!data || !Array.isArray(data.programas)) return data;
+  const arr = a => Array.isArray(a) ? a.map(textoUniforme) : a;
+  data.programas.forEach(p=>{
+    p.organizacion=textoUniforme(p.organizacion);
+    p.nombre_programa=textoUniforme(p.nombre_programa);
+    p.tipo_actor=textoUniforme(p.tipo_actor);
+    p.tipo_atencion=textoUniforme(p.tipo_atencion);
+    p.estado_programa=textoUniforme(p.estado_programa);
+    p.sector=arr(p.sector);
+    p.modalidad=arr(p.modalidad);
+    p.fuente_financiamiento=arr(p.fuente_financiamiento);
+    p.espacios_coordinacion=arr(p.espacios_coordinacion);
+    p.municipios_cobertura_institucional=arr(p.municipios_cobertura_institucional);
+    (p.comunidades||[]).forEach(c=>{
+      c.poblacion_meta=arr(c.poblacion_meta);
+      c.accion_comunidad=arr(c.accion_comunidad);
+      c.etnia=arr(c.etnia);
+      c.grupo_etario=arr(c.grupo_etario);
+    });
+  });
+  return data;
+}
+
 function limpiarFiltros(){
   Object.keys(filtros).forEach(k=>filtros[k]='');
   ['f-sector','f-atencion','f-actor','f-estado','f-municipio'].forEach(id=>document.getElementById(id).value='');
@@ -1414,7 +1465,7 @@ async function cargarBaseTerritorial(){
 async function iniciar(){
   initNav();
   const res = await fetch(`data.json?v=${Date.now()}`, { cache: 'no-store' });
-  DATA = await res.json();
+  DATA = normalizarPresentacionData(await res.json());
 
 
   map = L.map('map').setView([14.75, -89.45], 10);
