@@ -101,10 +101,24 @@ def programa_desde(rep, actor):
     comunidades=[]
     for c in find_repeat(rep,'cobertura_comunidad'):
         code=str(find_value(c,'lugar_poblado','') or '')
-        meta=LUGARES.get(code,{})
-        muni=label('municipios',meta.get('municipio_codigo',''))
-        lugar=meta.get('lugar_poblado') or code
-        lat,lon=coord_for(code)
+        es_adicional=(code=='otro_lugar_no_lista')
+        if es_adicional:
+            muni_codigo=str(find_value(c,'otro_lugar_municipio','') or '')
+            muni=label('municipios',muni_codigo)
+            lugar=str(find_value(c,'otro_lugar_nombre','') or '').strip() or 'Lugar adicional sin nombre'
+            referencia=str(find_value(c,'otro_lugar_referencia','') or '').strip()
+            # Código estable para agrupar reportes del mismo nombre dentro del mismo municipio.
+            slug=re.sub(r'[^a-z0-9]+','_',lugar.lower()).strip('_')
+            codigo_registro=f"adicional:{muni_codigo}:{slug or 'sin_nombre'}"
+            meta={}
+            lat,lon=None,None
+        else:
+            meta=LUGARES.get(code,{})
+            muni=label('municipios',meta.get('municipio_codigo',''))
+            lugar=meta.get('lugar_poblado') or code
+            referencia=''
+            codigo_registro=code
+            lat,lon=coord_for(code)
         pob=labels('poblacion_meta',find_value(c,'poblacion_meta',''))
         datos_cuantitativos=label('si_no',find_value(c,'datos_cuantitativos_poblacion',''))
         tiene_cantidades=str(find_value(c,'datos_cuantitativos_poblacion','') or '').lower()=='si'
@@ -132,7 +146,7 @@ def programa_desde(rep, actor):
 
         valores_cuantificados=[v for v in cantidades.values() if isinstance(v,(int,float))]
         poblacion_total_estimada=max(valores_cuantificados) if valores_cuantificados else None
-        comunidades.append({'codigo_lugar':code,'lugar_poblado':lugar,'municipio':muni,'clasificacion':meta.get('clasificacion'),'viviendas_catalogo':meta.get('viviendas'),'lat':lat,'lon':lon,'poblacion_meta':pob,'datos_cuantitativos_poblacion':datos_cuantitativos,'pm_cantidades':cantidades,'poblacion_total_estimada':poblacion_total_estimada,'accion_comunidad':acciones,'ac_cantidades':ac_counts,'etnia':labels('etnia',find_value(c,'etnia','')),'grupo_etario':labels('grupo_etario',find_value(c,'grupo_etario','')),'area':label('area',find_value(c,'area',''))})
+        comunidades.append({'codigo_lugar':codigo_registro,'lugar_poblado':lugar,'municipio':muni,'clasificacion':meta.get('clasificacion'),'viviendas_catalogo':meta.get('viviendas'),'lat':lat,'lon':lon,'fuera_catalogo':es_adicional,'estado_validacion':'Pendiente de validación' if es_adicional else 'Catálogo territorial','referencia_lugar':referencia,'poblacion_meta':pob,'datos_cuantitativos_poblacion':datos_cuantitativos,'pm_cantidades':cantidades,'poblacion_total_estimada':poblacion_total_estimada,'accion_comunidad':acciones,'ac_cantidades':ac_counts,'etnia':labels('etnia',find_value(c,'etnia','')),'grupo_etario':labels('grupo_etario',find_value(c,'grupo_etario','')),'area':label('area',find_value(c,'area',''))})
     return {'organizacion':actor['organizacion'],'tipo_actor':actor['tipo_actor'],'trabajo_comunitario':trabajo_comunitario,'pais_origen':actor['pais_origen'],'contacto':actor['contacto'],'nombre_programa':str(find_value(rep,'nombre_programa','')),'tipo_atencion':label('tipo_atencion',find_value(rep,'tipo_atencion','')),'sector':sectores,'modalidad':modalidad,'fecha_inicio':str(find_value(rep,'fecha_inicio','') or ''),'tipo_duracion':label('tipo_duracion',find_value(rep,'tipo_duracion','')),'fecha_fin':str(find_value(rep,'fecha_fin','') or ''),'duracion_aproximada':str(find_value(rep,'duracion_aproximada_texto','') or ''),'estado_programa':label('estado_programa',find_value(rep,'estado_programa','')),'contraparte_gubernamental':str(find_value(rep,'contraparte_gubernamental','') or ''),'monto_rango':label('monto_rango',find_value(rep,'monto_rango','')),'monto_rango_codigo':str(find_value(rep,'monto_rango','') or ''),'fuente_financiamiento':fuentes,'espacios_coordinacion':labels('espacios_coordinacion',find_value(rep,'espacios_coordinacion','')),'disposicion_coordinar':label('disposicion_coordinar',find_value(rep,'disposicion_coordinar','')),'beneficiarios_institucionales':inst_counts,'municipios_cobertura_institucional':mun_inst,'comunidades':comunidades}
 
 def construir(registros):
@@ -182,15 +196,32 @@ def construir(registros):
             for s in p['sector']:
                 key=(c['codigo_lugar'],c['municipio'],s); dup.setdefault(key,set()).add(p['organizacion'])
     for m,rr in resumen.items():
-        rr['organizaciones'].sort(); rr['comunidades_cubiertas']=len({c['codigo_lugar'] for p in programas for c in p['comunidades'] if c['municipio']==m})
-    duplicidad=[{'lugar_poblado':LUGARES.get(k[0],{}).get('lugar_poblado',k[0]),'municipio':k[1],'sector':k[2],'organizaciones':sorted(v)} for k,v in dup.items() if len(v)>1]
-    covered={c['codigo_lugar'] for p in programas for c in p['comunidades']}
+        rr['organizaciones'].sort()
+        rr['comunidades_cubiertas']=len({c['codigo_lugar'] for p in programas for c in p['comunidades'] if c['municipio']==m and not c.get('fuera_catalogo')})
+        rr['lugares_adicionales_reportados']=len({c['codigo_lugar'] for p in programas for c in p['comunidades'] if c['municipio']==m and c.get('fuera_catalogo')})
+    nombre_por_codigo={c['codigo_lugar']:c['lugar_poblado'] for p in programas for c in p['comunidades']}
+    duplicidad=[{'lugar_poblado':LUGARES.get(k[0],{}).get('lugar_poblado',nombre_por_codigo.get(k[0],k[0])),'municipio':k[1],'sector':k[2],'organizaciones':sorted(v)} for k,v in dup.items() if len(v)>1]
+    covered={c['codigo_lugar'] for p in programas for c in p['comunidades'] if not c.get('fuera_catalogo')}
     sin=[]
     for code,meta in LUGARES.items():
         if code in covered: continue
         lat,lon=coord_for(code)
         if lat is not None and lon is not None: sin.append({'codigo_lugar':code,'lugar_poblado':meta['lugar_poblado'],'municipio':label('municipios',meta['municipio_codigo']),'lat':lat,'lon':lon})
-    return {'generado':datetime.now(timezone.utc).isoformat(),'nota':'Datos sincronizados automáticamente desde KoboToolbox. Base territorial del XLSForm: 996 lugares poblados.','programas':programas,'municipios':MUNICIPIOS,'resumen_municipio':resumen,'matriz_sector_municipio':matriz,'comunidades_sin_cobertura':sin,'duplicidad':duplicidad,'instituciones_resumen':inst_res,'matriz_poblacion_accion':pop_acc,'inversion':inv,'control':{'registros_kobo':len(registros),'programas_procesados':len(programas),'lugares_catalogo':len(LUGARES),'lugares_con_coordenadas':len(COORDS)}}
+    adicionales={}
+    for p in programas:
+        for c in p['comunidades']:
+            if not c.get('fuera_catalogo'): continue
+            key=c['codigo_lugar']
+            if key not in adicionales:
+                adicionales[key]={'codigo_lugar':key,'lugar_poblado':c['lugar_poblado'],'municipio':c['municipio'],'referencia_lugar':c.get('referencia_lugar',''),'estado_validacion':'Pendiente de validación','organizaciones':set(),'programas':set()}
+            if p.get('organizacion'): adicionales[key]['organizaciones'].add(p['organizacion'])
+            if p.get('nombre_programa'): adicionales[key]['programas'].add(p['nombre_programa'])
+    adicionales_lista=[]
+    for a in adicionales.values():
+        a['organizaciones']=sorted(a['organizaciones']); a['programas']=sorted(a['programas']); adicionales_lista.append(a)
+    adicionales_lista.sort(key=lambda x:(x['municipio'],x['lugar_poblado']))
+
+    return {'generado':datetime.now(timezone.utc).isoformat(),'nota':'Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.','programas':programas,'municipios':MUNICIPIOS,'resumen_municipio':resumen,'matriz_sector_municipio':matriz,'comunidades_sin_cobertura':sin,'lugares_adicionales_reportados':adicionales_lista,'duplicidad':duplicidad,'instituciones_resumen':inst_res,'matriz_poblacion_accion':pop_acc,'inversion':inv,'control':{'registros_kobo':len(registros),'programas_procesados':len(programas),'lugares_catalogo':len(LUGARES),'lugares_con_coordenadas':len(COORDS),'lugares_adicionales_reportados':len(adicionales_lista)}}
 
 def main():
     try:

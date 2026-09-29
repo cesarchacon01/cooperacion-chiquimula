@@ -190,7 +190,7 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
   .intervention-card:not(.open) .intervention-program{margin-bottom:0}
 
 
-  .coverage-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:16px 0 18px}
+  .coverage-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:16px 0 18px}
   .coverage-kpi{background:#fff;border:1px solid #E2DDD4;border-top:3px solid #DFB26F;border-radius:10px;padding:14px 16px}
   .coverage-kpi .klabel{font-size:11px;color:#5B6672;margin-bottom:5px}.coverage-kpi .kvalue{font-family:Georgia,serif;font-size:25px;font-weight:700;color:#003058}.coverage-kpi .ksub{font-size:10px;color:#6B7280;margin-top:3px}
   .coverage-filter-row{display:grid;grid-template-columns:280px 1fr;gap:18px;align-items:end}.coverage-filter-row select{width:100%;margin-top:6px}
@@ -399,6 +399,12 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
       <div class="section-title">Lugares poblados sin presencia comunitaria registrada</div>
       <div class="section-sub" id="brechas-descripcion"></div>
       <table id="tabla-sin-cobertura"><thead><tr><th>MUNICIPIO</th><th>LUGAR POBLADO</th><th>GEORREFERENCIADO</th><th>PRESENCIA INSTITUCIONAL EN EL MUNICIPIO</th></tr></thead><tbody></tbody></table>
+    </div>
+
+    <div class="card" style="margin-bottom:20px;">
+      <div class="section-title">Lugares adicionales reportados</div>
+      <div class="section-sub">Lugares informados por las organizaciones que no fueron seleccionados del catálogo territorial. Se mantienen separados hasta su validación.</div>
+      <table id="tabla-lugares-adicionales"><thead><tr><th>MUNICIPIO</th><th>LUGAR REPORTADO</th><th>REFERENCIA</th><th>ORGANIZACIÓN / PROGRAMA</th><th>ESTADO</th></tr></thead><tbody></tbody></table>
     </div>
 
     <div class="card">
@@ -1283,33 +1289,45 @@ function renderMatriz(){
 
 function renderBrechas(){
   const sel=document.getElementById('brechas-municipio');
-  if(!sel) return;
+  if(!sel || !CATALOGO) return;
 
-  const municipios=[...new Set(basePlaces.map(x=>x.municipio).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es'));
+  const munChoices=(CATALOGO.choices&&CATALOGO.choices.municipios)||{};
+  const catalogoCompleto=Object.entries(CATALOGO.lugares_poblados||{}).map(([codigo,m])=>({
+    codigo,
+    municipio:munChoices[m.municipio_codigo]||m.municipio_codigo,
+    lugar:m.lugar_poblado,
+    clasificacion:m.clasificacion||'',
+    viviendas:m.viviendas||0,
+    lat:COORDS[codigo]?.lat ?? null,
+    lon:COORDS[codigo]?.lon ?? null
+  }));
+  const municipios=[...new Set(catalogoCompleto.map(x=>x.municipio).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es'));
   if(sel.options.length===1) municipios.forEach(m=>sel.add(new Option(m,m)));
   const municipio=sel.value;
 
-  const presencia=new Set();
+  const presenciaCatalogo=new Set();
   (DATA.programas||[]).forEach(p=>(p.comunidades||[]).forEach(c=>{
-    if(c.municipio && c.lugar) presencia.add(`${c.municipio}|||${c.lugar}`);
+    if(c.codigo_lugar && !c.fuera_catalogo) presenciaCatalogo.add(c.codigo_lugar);
   }));
   const institucional=new Set();
   (DATA.programas||[]).forEach(p=>(p.municipios_cobertura_institucional||[]).forEach(m=>institucional.add(m)));
 
-  const catalogo=(basePlaces||[]).filter(x=>!municipio || x.municipio===municipio);
-  const conPresencia=catalogo.filter(x=>presencia.has(`${x.municipio}|||${x.lugar}`));
-  const sinPresencia=catalogo.filter(x=>!presencia.has(`${x.municipio}|||${x.lugar}`));
+  const catalogo=catalogoCompleto.filter(x=>!municipio || x.municipio===municipio);
+  const conPresencia=catalogo.filter(x=>presenciaCatalogo.has(x.codigo));
+  const sinPresencia=catalogo.filter(x=>!presenciaCatalogo.has(x.codigo));
   const georef=catalogo.filter(x=>Number.isFinite(Number(x.lat)) && Number.isFinite(Number(x.lon)));
+  const adicionales=(DATA.lugares_adicionales_reportados||[]).filter(x=>!municipio || x.municipio===municipio);
   const pct=catalogo.length?Math.round(conPresencia.length/catalogo.length*100):0;
 
   document.getElementById('brechas-kpis').innerHTML=`
     <div class="coverage-kpi"><div class="klabel">Lugares del catálogo</div><div class="kvalue">${catalogo.length.toLocaleString('es-GT')}</div><div class="ksub">${municipio||'Departamento de Chiquimula'}</div></div>
     <div class="coverage-kpi"><div class="klabel">Con presencia comunitaria registrada</div><div class="kvalue">${conPresencia.length.toLocaleString('es-GT')}</div><div class="ksub">${pct}% del catálogo consultado</div></div>
     <div class="coverage-kpi"><div class="klabel">Sin presencia comunitaria registrada</div><div class="kvalue">${sinPresencia.length.toLocaleString('es-GT')}</div><div class="ksub">No equivale automáticamente a brecha</div></div>
-    <div class="coverage-kpi"><div class="klabel">Georreferenciados</div><div class="kvalue">${georef.length.toLocaleString('es-GT')}</div><div class="ksub">${catalogo.length-georef.length} sin coordenadas disponibles</div></div>`;
+    <div class="coverage-kpi"><div class="klabel">Georreferenciados</div><div class="kvalue">${georef.length.toLocaleString('es-GT')}</div><div class="ksub">${catalogo.length-georef.length} sin coordenadas disponibles</div></div>
+    <div class="coverage-kpi"><div class="klabel">Lugares adicionales reportados</div><div class="kvalue">${adicionales.length.toLocaleString('es-GT')}</div><div class="ksub">Pendientes de validación; no modifican el catálogo</div></div>`;
 
   document.getElementById('brechas-descripcion').textContent=
-    `${sinPresencia.length.toLocaleString('es-GT')} de ${catalogo.length.toLocaleString('es-GT')} lugares poblados ${municipio?'de '+municipio:'del departamento'} no tienen presencia comunitaria registrada en la información reportada actualmente.`;
+    `${sinPresencia.length.toLocaleString('es-GT')} de ${catalogo.length.toLocaleString('es-GT')} lugares poblados ${municipio?'de '+municipio:'del departamento'} no tienen presencia comunitaria registrada en la información reportada actualmente. Los lugares adicionales se muestran por separado y no alteran este denominador.`;
 
   const tbSin=document.querySelector('#tabla-sin-cobertura tbody');
   tbSin.innerHTML=sinPresencia.map(x=>{
@@ -1317,6 +1335,12 @@ function renderBrechas(){
     const inst=institucional.has(x.municipio);
     return `<tr><td>${escaparHtml(x.municipio)}</td><td>${escaparHtml(x.lugar)}</td><td><span class="coverage-status ${geo?'yes':''}">${geo?'Sí':'No'}</span></td><td><span class="coverage-status ${inst?'yes':''}">${inst?'Sí':'No reportada'}</span></td></tr>`;
   }).join('') || '<tr><td colspan="4" class="empty">Todos los lugares del catálogo consultado tienen presencia comunitaria registrada.</td></tr>';
+
+  const tbAd=document.querySelector('#tabla-lugares-adicionales tbody');
+  tbAd.innerHTML=adicionales.length ? adicionales.map(a=>{
+    const interv=[...(a.organizaciones||[]),...(a.programas||[])].filter(Boolean).join(' · ')||'—';
+    return `<tr><td>${escaparHtml(a.municipio||'—')}</td><td><b>${escaparHtml(a.lugar_poblado||'—')}</b></td><td>${escaparHtml(a.referencia_lugar||'—')}</td><td>${escaparHtml(interv)}</td><td><span class="coverage-status">${escaparHtml(a.estado_validacion||'Pendiente de validación')}</span></td></tr>`;
+  }).join('') : '<tr><td colspan="5" class="empty">No hay lugares adicionales reportados para esta consulta.</td></tr>';
 
   const tbDup=document.querySelector('#tabla-duplicidad tbody');
   const dup=(DATA.duplicidad||[]).filter(d=>!municipio || d.municipio===municipio);
@@ -1357,7 +1381,7 @@ function renderMunicipio(){
   programas.forEach(p=>{
     (p.comunidades||[]).filter(c=>c.municipio===m).forEach(c=>{
       const key=c.codigo_lugar||c.lugar_poblado;
-      if(!porComunidad[key]) porComunidad[key]={lugar:c.lugar_poblado,orgs:new Set(),programas:new Set(),sectores:new Set(),estados:new Set()};
+      if(!porComunidad[key]) porComunidad[key]={lugar:c.lugar_poblado,fuera_catalogo:!!c.fuera_catalogo,orgs:new Set(),programas:new Set(),sectores:new Set(),estados:new Set()};
       const x=porComunidad[key];
       if(p.organizacion) x.orgs.add(p.organizacion); if(p.nombre_programa) x.programas.add(p.nombre_programa);
       (p.sector||[]).forEach(v=>x.sectores.add(v)); if(p.estado_programa) x.estados.add(p.estado_programa);
@@ -1370,9 +1394,11 @@ function renderMunicipio(){
       (c.accion_comunidad||[]).forEach(a=>{acciones[a]=(acciones[a]||0)+1;});
     });
   });
+  const cubiertasCatalogo=new Set(programas.flatMap(p=>(p.comunidades||[]).filter(c=>c.municipio===m && !c.fuera_catalogo).map(c=>c.codigo_lugar))).size;
+  const adicionalesMunicipio=new Set(programas.flatMap(p=>(p.comunidades||[]).filter(c=>c.municipio===m && c.fuera_catalogo).map(c=>c.codigo_lugar))).size;
   const cubiertas=Object.keys(porComunidad).length;
   const totalCatalogo=r.comunidades_total_catalogo||comunidadesBase.length;
-  const sinPresencia=Math.max(0,totalCatalogo-cubiertas);
+  const sinPresencia=Math.max(0,totalCatalogo-cubiertasCatalogo);
   // La presencia institucional/municipal es distinta de la presencia comunitaria.
   // Un programa puede reportar trabajo con instituciones del municipio sin haber
   // registrado lugares poblados específicos.
@@ -1382,7 +1408,7 @@ function renderMunicipio(){
   document.getElementById('stats-municipio').innerHTML = `
     <div class="stat-card"><div class="label">Organizaciones</div><div class="value">${r.organizaciones.length}</div></div>
     <div class="stat-card"><div class="label">Programas / proyectos</div><div class="value">${programas.length}</div></div>
-    <div class="stat-card"><div class="label">Presencia comunitaria</div><div class="value">${cubiertas} <span style="font-size:16px;color:#8B9199;font-weight:500;">de ${totalCatalogo}</span></div><div style="margin-top:5px;font-size:12px;color:#6B7280;">lugares poblados con registro</div></div>
+    <div class="stat-card"><div class="label">Presencia comunitaria</div><div class="value">${cubiertasCatalogo} <span style="font-size:16px;color:#8B9199;font-weight:500;">de ${totalCatalogo}</span></div><div style="margin-top:5px;font-size:12px;color:#6B7280;">lugares del catálogo${adicionalesMunicipio?` · ${adicionalesMunicipio} adicional${adicionalesMunicipio===1?'':'es'} por validar`:''}</div></div>
     <div class="stat-card"><div class="label">Presencia institucional / municipal</div><div class="value" style="font-size:24px;">${presenciaInstitucional?'Sí':'No registrada'}</div><div style="margin-top:5px;font-size:12px;color:#6B7280;">${presenciaInstitucional?programasInstitucionales.length+' programa'+(programasInstitucionales.length===1?'':'s')+' con cobertura institucional':'Sin cobertura institucional reportada'}</div></div>`;
 
   const sectorEntries=Object.entries(r.sectores||{}), maxSector=Math.max(1,...sectorEntries.map(e=>e[1]));
@@ -1403,8 +1429,8 @@ function renderMunicipio(){
 
   const tbc=document.querySelector('#tabla-comunidades-municipio tbody');
   const comEntries=Object.values(porComunidad).sort((a,b)=>a.lugar.localeCompare(b.lugar,'es'));
-  tbc.innerHTML=comEntries.length?comEntries.map(c=>`<tr><td><b>${c.lugar}</b></td><td>${[...c.orgs].join(', ')||'—'}</td><td>${[...c.programas].join(', ')||'—'}</td><td>${[...c.sectores].join(', ')||'—'}</td><td>${[...c.estados].join(', ')||'—'}</td></tr>`).join(''):'<tr><td colspan="5" class="empty">Sin presencia comunitaria registrada.</td></tr>';
-  document.getElementById('sub-cobertura-municipio').textContent=`${cubiertas} lugares con presencia comunitaria registrada de ${totalCatalogo} lugares del catálogo municipal. ${sinPresencia} aparecen sin presencia comunitaria registrada. Esto no significa que el municipio no tenga cooperación: la cobertura institucional/municipal se reporta por separado y la ausencia de registro comunitario no confirma por sí sola una brecha de atención.`;
+  tbc.innerHTML=comEntries.length?comEntries.map(c=>`<tr><td><b>${c.lugar}</b>${c.fuera_catalogo?' <span class="tag warn">Pendiente de validación</span>':''}</td><td>${[...c.orgs].join(', ')||'—'}</td><td>${[...c.programas].join(', ')||'—'}</td><td>${[...c.sectores].join(', ')||'—'}</td><td>${[...c.estados].join(', ')||'—'}</td></tr>`).join(''):'<tr><td colspan="5" class="empty">Sin presencia comunitaria registrada.</td></tr>';
+  document.getElementById('sub-cobertura-municipio').textContent=`${cubiertasCatalogo} lugares del catálogo tienen presencia comunitaria registrada de ${totalCatalogo}. ${sinPresencia} aparecen sin presencia comunitaria registrada.${adicionalesMunicipio?` Además, existen ${adicionalesMunicipio} lugar${adicionalesMunicipio===1?'':'es'} adicional${adicionalesMunicipio===1?'':'es'} reportado${adicionalesMunicipio===1?'':'s'} pendiente${adicionalesMunicipio===1?'':'s'} de validación; no se suma${adicionalesMunicipio===1?'':'n'} al catálogo.`:''} La ausencia de registro comunitario no confirma por sí sola una brecha de atención.`;
 
   const instEntries=Object.entries(r.instituciones||{});
   document.getElementById('lista-instituciones-municipio').innerHTML=instEntries.length?instEntries.map(([tipo,d])=>{
@@ -1602,7 +1628,7 @@ function renderOrganizacion(){
   }).join(''):'<tr><td colspan="7" class="empty">Sin programas/proyectos registrados.</td></tr>';
   const rows=[]; programas.forEach(p=>(p.comunidades||[]).forEach(c=>rows.push({p,c})));
   document.getElementById('sub-cobertura-organizacion').textContent=`${lugares.size} lugares poblados con presencia comunitaria registrada en ${munCom.size} municipio${munCom.size===1?'':'s'}.`;
-  document.querySelector('#tabla-comunidades-organizacion tbody').innerHTML=rows.length?rows.sort((a,b)=>(a.c.municipio||'').localeCompare(b.c.municipio||'','es')||(a.c.lugar_poblado||'').localeCompare(b.c.lugar_poblado||'','es')).map(({p,c})=>`<tr><td>${c.municipio||'—'}</td><td><b>${c.lugar_poblado||'—'}</b></td><td>${p.nombre_programa||'—'}</td><td>${(c.poblacion_meta||[]).join(', ')||'—'}</td><td>${(c.accion_comunidad||[]).join(', ')||'—'}</td></tr>`).join(''):'<tr><td colspan="5" class="empty">Sin presencia comunitaria registrada.</td></tr>';
+  document.querySelector('#tabla-comunidades-organizacion tbody').innerHTML=rows.length?rows.sort((a,b)=>(a.c.municipio||'').localeCompare(b.c.municipio||'','es')||(a.c.lugar_poblado||'').localeCompare(b.c.lugar_poblado||'','es')).map(({p,c})=>`<tr><td>${c.municipio||'—'}</td><td><b>${c.lugar_poblado||'—'}</b>${c.fuera_catalogo?' <span class="tag warn">Pendiente de validación</span>':''}</td><td>${p.nombre_programa||'—'}</td><td>${(c.poblacion_meta||[]).join(', ')||'—'}</td><td>${(c.accion_comunidad||[]).join(', ')||'—'}</td></tr>`).join(''):'<tr><td colspan="5" class="empty">Sin presencia comunitaria registrada.</td></tr>';
 
   initOrgMap(); orgCommunityLayer.clearLayers(); orgInstitutionalLayer.clearLayers();
   const bounds=[];
