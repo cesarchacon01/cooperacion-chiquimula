@@ -1,72 +1,7 @@
 {
-  "generado": "2026-09-29T06:14:26.935212+00:00",
+  "generado": "2026-09-29T06:19:39.459582+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. Base territorial del XLSForm: 996 lugares poblados.",
-  "programas": [
-    {
-      "organizacion": "Asociación de desarrollo integral de san jacinto ADISJA",
-      "tipo_actor": "ONG internacional",
-      "trabajo_comunitario": "",
-      "pais_origen": "",
-      "contacto": "Juan José sosa",
-      "nombre_programa": "Cadenas blf",
-      "tipo_atencion": "Desarrollo / atención ordinaria",
-      "sector": [
-        "Desarrollo económico local"
-      ],
-      "modalidad": [],
-      "fecha_inicio": "2026-03-05",
-      "tipo_duracion": "Sí, tiene fecha de finalización definida",
-      "fecha_fin": "2027-06-16",
-      "duracion_aproximada": "",
-      "estado_programa": "En ejecución",
-      "contraparte_gubernamental": "Ong",
-      "monto_rango": "Prefiere no indicar",
-      "monto_rango_codigo": "prefiere_no_indicar",
-      "fuente_financiamiento": [
-        "Donante internacional"
-      ],
-      "espacios_coordinacion": [
-        "No participa"
-      ],
-      "disposicion_coordinar": "Sí",
-      "beneficiarios_institucionales": {},
-      "municipios_cobertura_institucional": [],
-      "comunidades": [
-        {
-          "codigo_lugar": "san_jacinto_san_jacinto",
-          "lugar_poblado": "San Jacinto",
-          "municipio": "San Jacinto",
-          "clasificacion": "Pueblo",
-          "viviendas_catalogo": 186,
-          "lat": 14.674073,
-          "lon": -89.50219,
-          "poblacion_meta": [
-            "Agricultores / productores"
-          ],
-          "datos_cuantitativos_poblacion": "",
-          "pm_cantidades": {
-            "Agricultores / productores": null
-          },
-          "poblacion_total_estimada": null,
-          "accion_comunidad": [
-            "Cooperativas o asociaciones productivas"
-          ],
-          "ac_cantidades": {
-            "Cooperativas o asociaciones productivas": 52
-          },
-          "etnia": [
-            "Ladino/Mestizo"
-          ],
-          "grupo_etario": [
-            "Juventud (18-29 años)",
-            "Adultez (30-59 años)",
-            "Adulto mayor (60+ años)"
-          ],
-          "area": "Rural"
-        }
-      ]
-    }
-  ],
+  "programas": [],
   "municipios": [
     "Camotán",
     "Chiquimula",
@@ -170,23 +105,15 @@
       "fuente_financiamiento": {}
     },
     "San Jacinto": {
-      "organizaciones": [
-        "Asociación de desarrollo integral de san jacinto ADISJA"
-      ],
-      "total_programas": 1,
-      "comunidades_cubiertas": 1,
+      "organizaciones": [],
+      "total_programas": 0,
+      "comunidades_cubiertas": 0,
       "comunidades_total_catalogo": 44,
       "inversion_estimada": 0,
-      "sectores": {
-        "Desarrollo económico local": 1
-      },
-      "estado": {
-        "En ejecución": 1
-      },
+      "sectores": {},
+      "estado": {},
       "instituciones": {},
-      "fuente_financiamiento": {
-        "Donante internacional": 1
-      }
+      "fuente_financiamiento": {}
     },
     "San José la Arada": {
       "organizaciones": [],
@@ -211,11 +138,7 @@
       "fuente_financiamiento": {}
     }
   },
-  "matriz_sector_municipio": {
-    "Desarrollo económico local": {
-      "San Jacinto": 1
-    }
-  },
+  "matriz_sector_municipio": {},
   "comunidades_sin_cobertura": [
     {
       "codigo_lugar": "chiquimula_chiquimula",
@@ -5328,6 +5251,13 @@
       "lon": -89.4433
     },
     {
+      "codigo_lugar": "san_jacinto_san_jacinto",
+      "lugar_poblado": "San Jacinto",
+      "municipio": "San Jacinto",
+      "lat": 14.674073,
+      "lon": -89.50219
+    },
+    {
       "codigo_lugar": "san_jacinto_agua_zarca",
       "lugar_poblado": "Agua Zarca",
       "municipio": "San Jacinto",
@@ -5925,19 +5855,15 @@
   ],
   "duplicidad": [],
   "instituciones_resumen": {},
-  "matriz_poblacion_accion": {
-    "Agricultores / productores": {
-      "Cooperativas o asociaciones productivas": 1
-    }
-  },
+  "matriz_poblacion_accion": {},
   "inversion": {
-    "programas_con_monto": 1,
+    "programas_con_monto": 0,
     "programas_sin_monto": 0,
     "nota_metodologica": "La inversión se conserva como rango reportado. No se calculan puntos medios ni se distribuyen montos entre municipios o sectores."
   },
   "control": {
-    "registros_kobo": 1,
-    "programas_procesados": 1,
+    "registros_kobo": 0,
+    "programas_procesados": 0,
     "lugares_catalogo": 996,
     "lugares_con_coordenadas": 816
   }
