@@ -539,8 +539,12 @@ function mostrarVista(id){
   document.getElementById('view-'+id).classList.add('active');
   document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active', b.dataset.view===id));
   if(id==='mapa' && map){ setTimeout(()=>map.invalidateSize(), 50); }
-  if(id==='instituciones'){ setTimeout(()=>{ if(orgMap) orgMap.invalidateSize(); renderOrganizacion(); },80); }
+  if(id==='inversion') renderInversion();
+  if(id==='matriz') renderMatriz();
+  if(id==='brechas') renderBrechas();
+  if(id==='instituciones'){ renderInstituciones(); setTimeout(()=>{ if(orgMap) orgMap.invalidateSize(); renderOrganizacion(); },80); }
   if(id==='poblacion-accion'){ setTimeout(()=>{ renderPoblacionAccion(); if(paMap) paMap.invalidateSize(); },80); }
+  if(id==='programas') renderProgramas();
 }
 
 const filtros = { sector:'', atencion:'', actor:'', estado:'', municipio:'' };
@@ -1269,22 +1273,40 @@ function renderMapaYStats(){
 }
 
 function renderMatriz(){
-  const sectores = Object.keys(DATA.matriz_sector_municipio).sort();
-  const municipiosSet = new Set();
-  sectores.forEach(s=>Object.keys(DATA.matriz_sector_municipio[s]).forEach(m=>municipiosSet.add(m)));
-  const municipios = [...municipiosSet].sort();
-
-  let html = '<tr><th>SECTOR \\ MUNICIPIO</th>' + municipios.map(m=>`<th>${m}</th>`).join('') + '<th>MUNICIPIOS CON PRESENCIA</th></tr>';
-  sectores.forEach(s=>{
-    let municipiosConPresencia = 0;
-    const celdas = municipios.map(m=>{
-      const n = (DATA.matriz_sector_municipio[s][m]) || 0;
-      if(n > 0) municipiosConPresencia += 1;
-      return `<td class="${n===0?'zero':''}" title="${n>0 ? `${n} programa(s)/proyecto(s) registrado(s) en ${m}` : `Sin presencia registrada en ${m}`}">${n||0}</td>`;
-    }).join('');
-    html += `<tr><td class="rowhead">${s}</td>${celdas}<td style="font-weight:700;" title="Número de municipios con al menos un programa/proyecto registrado en este sector">${municipiosConPresencia}</td></tr>`;
+  // Se deriva de programas para que la vista no dependa de un agregado opcional de data.json.
+  const matriz={};
+  (DATA.programas||[]).forEach(p=>{
+    const sectores=(p.sector||[]).filter(Boolean);
+    const municipios=[...new Set([
+      ...(p.comunidades||[]).map(c=>c.municipio),
+      ...(p.municipios_cobertura_institucional||[])
+    ].filter(Boolean))];
+    sectores.forEach(sec=>{
+      if(!matriz[sec]) matriz[sec]={};
+      municipios.forEach(m=>matriz[sec][m]=(matriz[sec][m]||0)+1);
+    });
   });
-  document.getElementById('tabla-matriz').innerHTML = html;
+  const sectores=Object.keys(matriz).sort((a,b)=>a.localeCompare(b,'es'));
+  const municipios=[...new Set((DATA.programas||[]).flatMap(p=>[
+    ...(p.comunidades||[]).map(c=>c.municipio),
+    ...(p.municipios_cobertura_institucional||[])
+  ]).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es'));
+  const tabla=document.getElementById('tabla-matriz');
+  if(!tabla) return;
+  if(!sectores.length || !municipios.length){
+    tabla.innerHTML='<tr><td class="empty">Todavía no hay información suficiente para construir la matriz sector × municipio.</td></tr>';
+    return;
+  }
+  let html='<tr><th>SECTOR \\ MUNICIPIO</th>'+municipios.map(m=>`<th>${escaparHtml(m)}</th>`).join('')+'<th>MUNICIPIOS CON PRESENCIA</th></tr>';
+  sectores.forEach(sec=>{
+    let con=0;
+    const celdas=municipios.map(m=>{
+      const n=matriz[sec][m]||0; if(n>0) con++;
+      return `<td class="${n===0?'zero':''}" title="${n>0?`${n} programa(s)/proyecto(s) registrado(s) en ${escaparHtml(m)}`:`Sin presencia registrada en ${escaparHtml(m)}`}">${n}</td>`;
+    }).join('');
+    html+=`<tr><td class="rowhead">${escaparHtml(sec)}</td>${celdas}<td style="font-weight:700">${con}</td></tr>`;
+  });
+  tabla.innerHTML=html;
 }
 
 function renderBrechas(){
@@ -1794,13 +1816,13 @@ function renderPoblacionAccion(){
 function renderProgramas(){
   const tb = document.querySelector('#tabla-programas tbody');
   tb.innerHTML = DATA.programas.map(p=>{
-    const munis = new Set(p.comunidades.map(c=>c.municipio).filter(Boolean).concat(p.municipios_cobertura_institucional));
+    const munis = new Set((p.comunidades||[]).map(c=>c.municipio).filter(Boolean).concat(p.municipios_cobertura_institucional||[]));
     const munisTxt = [...munis].slice(0,3).join(', ') + (munis.size>3 ? ' +'+(munis.size-3) : '');
     const estadoClase = p.estado_programa==='Finalizado' ? 'tag' : (p.estado_programa==='Próximo a finalizar' ? 'tag warn' : 'tag');
     return `<tr>
       <td>${p.organizacion}</td>
       <td>${p.nombre_programa}</td>
-      <td>${p.sector.join(', ')}</td>
+      <td>${(p.sector||[]).join(', ')||'—'}</td>
       <td><span class="${estadoClase}">${p.estado_programa||'—'}</span></td>
       <td>${(p.fecha_inicio||'').slice(0,4)}–${(p.fecha_fin||'').slice(0,4)||'?'}</td>
       <td>${munisTxt||'—'}</td>
@@ -1880,12 +1902,9 @@ async function iniciar(){
   poblarSelects();
   poblarSelectorMunicipio();
   renderMapaYStats();
-  renderInversion();
-  renderMatriz();
-  renderBrechas();
-  renderInstituciones();
-  renderPoblacionAccion();
-  renderProgramas();
+  [renderInversion,renderMatriz,renderBrechas,renderInstituciones,renderPoblacionAccion,renderProgramas].forEach(fn=>{
+    try{ fn(); }catch(err){ console.error('Error al inicializar vista', fn.name, err); }
+  });
 }
 
 iniciar();
