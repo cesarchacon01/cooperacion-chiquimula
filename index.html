@@ -728,11 +728,16 @@ function renderMapa(filtrados){
       const orgs=[...new Set(progs.map(p=>p.organizacion).filter(Boolean))];
       const programas=[...new Set(progs.map(p=>p.nombre_programa).filter(Boolean))];
       const mk=L.circleMarker([lat,lon],{
-        radius:8,color:'#B97824',fillColor:'#F1C47C',
+        pane:'coopPane',radius:8,color:'#B97824',fillColor:'#F1C47C',
         fillOpacity:.72,weight:2.2,dashArray:'4 3'
       });
-      mk.bindTooltip(`${m} · presencia institucional/municipal`,{direction:'top',opacity:.95});
-      mk.bindPopup(`<b>${m}</b><br><b>Presencia institucional / municipal</b><br>${orgs.length} organización(es)<br>${programas.length} programa(s) / proyecto(s)<br><br><span style="color:#5B6672">Marcador de referencia municipal; no representa una comunidad específica.</span>`);
+      mk.bindTooltip(`${m} · presencia institucional/municipal`,{direction:'top',opacity:.95,permanent:false,sticky:false});
+      mk.bindPopup(`<b>${m}</b><br><b>Presencia institucional / municipal</b><br>${orgs.length} organización(es)<br>${programas.length} programa(s) / proyecto(s)<br><br><span style="color:#5B6672">Marcador de referencia municipal; no representa una comunidad específica.</span>`,{closeButton:true,autoPan:true});
+      mk.on('click',(e)=>{
+        if(e?.originalEvent) L.DomEvent.stopPropagation(e.originalEvent);
+        mk.closeTooltip();
+        map.closeTooltip();
+      });
       mk.addTo(instLayer);
     });
   }
@@ -847,7 +852,7 @@ async function cargarLimitesMunicipales(){
   agregarContornoDepartamental(map);
   limitesLayer=L.geoJSON(LIMITES,{style:estiloLimite,onEachFeature:(f,l)=>{
       const nombre=f.properties?.nombre_1||'Municipio';
-      l.bindTooltip(nombre,{sticky:true,direction:'center',className:'municipio-tip'});
+      l.bindTooltip(nombre,{sticky:false,direction:'center',className:'municipio-tip',permanent:false,opacity:.94});
       l.on({
         mouseover:(e)=>{
           const target=e.target;
@@ -866,7 +871,9 @@ async function cargarLimitesMunicipales(){
         mouseout:(e)=>{
           if(limitesLayer) limitesLayer.resetStyle(e.target);
         },
-        click:()=>{
+        click:(e)=>{
+          if(e?.target?.closeTooltip) e.target.closeTooltip();
+          map.closeTooltip();
           const sel=document.getElementById('territorio-municipio');
           if(sel && [...sel.options].some(o=>o.value===nombre)){
             sel.value=nombre;
