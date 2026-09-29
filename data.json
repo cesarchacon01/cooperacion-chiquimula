@@ -1,216 +1,7 @@
 {
-  "generado": "2026-09-29T17:04:35.287000+00:00",
+  "generado": "2026-09-29T17:19:56.162393+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
-  "programas": [
-    {
-      "organizacion": "dd",
-      "tipo_actor": "Cooperación bilateral",
-      "trabajo_comunitario": "Sí",
-      "pais_origen": "d",
-      "contacto": "d",
-      "nombre_programa": "d",
-      "tipo_atencion": "Emergencia / respuesta humanitaria",
-      "sector": [
-        "Educación"
-      ],
-      "modalidad": [
-        "Asistencia técnica"
-      ],
-      "fecha_inicio": "2026-09-07",
-      "tipo_duracion": "Sí, tiene fecha de finalización definida",
-      "fecha_fin": "2026-09-25",
-      "duracion_aproximada": "",
-      "estado_programa": "En ejecución",
-      "contraparte_gubernamental": "ddddd,dddd",
-      "monto_rango": "Q2,000,000 – Q10,000,000",
-      "monto_rango_codigo": "2m_10m",
-      "fuente_financiamiento": [
-        "Fondos propios"
-      ],
-      "espacios_coordinacion": [
-        "CODESAN"
-      ],
-      "disposicion_coordinar": "Sí",
-      "beneficiarios_institucionales": {
-        "Municipalidades": 1
-      },
-      "municipios_cobertura_institucional": [
-        "Camotán"
-      ],
-      "comunidades": [
-        {
-          "codigo_lugar": "adicional:camotan:jiote",
-          "lugar_poblado": "jiote",
-          "municipio": "Camotán",
-          "clasificacion": null,
-          "viviendas_catalogo": null,
-          "lat": null,
-          "lon": null,
-          "fuera_catalogo": true,
-          "estado_validacion": "Pendiente de validación",
-          "referencia_lugar": "sabana grande",
-          "poblacion_meta": [
-            "Mujeres"
-          ],
-          "datos_cuantitativos_poblacion": "Sí",
-          "pm_cantidades": {
-            "Mujeres": 23
-          },
-          "poblacion_total_estimada": 23,
-          "accion_comunidad": [
-            "Escuelas / centros educativos"
-          ],
-          "ac_cantidades": {
-            "Escuelas / centros educativos": 1
-          },
-          "etnia": [
-            "Garífuna"
-          ],
-          "grupo_etario": [
-            "Juventud (18-29 años)"
-          ],
-          "area": "Rural"
-        },
-        {
-          "codigo_lugar": "chiquimula_chiquimula",
-          "lugar_poblado": "Chiquimula",
-          "municipio": "Chiquimula",
-          "clasificacion": "Ciudad",
-          "viviendas_catalogo": 9169,
-          "lat": 14.79442,
-          "lon": -89.54527,
-          "fuera_catalogo": false,
-          "estado_validacion": "Catálogo territorial",
-          "referencia_lugar": "",
-          "poblacion_meta": [
-            "Adultos mayores"
-          ],
-          "datos_cuantitativos_poblacion": "Sí",
-          "pm_cantidades": {
-            "Adultos mayores": 3
-          },
-          "poblacion_total_estimada": 3,
-          "accion_comunidad": [
-            "Escuelas / centros educativos"
-          ],
-          "ac_cantidades": {
-            "Escuelas / centros educativos": 3
-          },
-          "etnia": [
-            "Garífuna"
-          ],
-          "grupo_etario": [
-            "Niñez (0-12 años)"
-          ],
-          "area": "Rural"
-        },
-        {
-          "codigo_lugar": "chiquimula_la_ponderosa",
-          "lugar_poblado": "La Ponderosa",
-          "municipio": "Chiquimula",
-          "clasificacion": "Finca",
-          "viviendas_catalogo": 28,
-          "lat": 14.778625,
-          "lon": -89.53275,
-          "fuera_catalogo": false,
-          "estado_validacion": "Catálogo territorial",
-          "referencia_lugar": "",
-          "poblacion_meta": [
-            "Pueblos indígenas"
-          ],
-          "datos_cuantitativos_poblacion": "No",
-          "pm_cantidades": {
-            "Pueblos indígenas": null
-          },
-          "poblacion_total_estimada": null,
-          "accion_comunidad": [
-            "Cooperativas o asociaciones productivas"
-          ],
-          "ac_cantidades": {
-            "Cooperativas o asociaciones productivas": 3
-          },
-          "etnia": [
-            "Ladino/Mestizo"
-          ],
-          "grupo_etario": [
-            "Niñez (0-12 años)"
-          ],
-          "area": "Urbana"
-        }
-      ]
-    },
-    {
-      "organizacion": "dd",
-      "tipo_actor": "Cooperación bilateral",
-      "trabajo_comunitario": "Sí",
-      "pais_origen": "d",
-      "contacto": "d",
-      "nombre_programa": "xxx",
-      "tipo_atencion": "Ambas (emergencia y desarrollo)",
-      "sector": [
-        "Protección (niñez, migrantes, víctimas de violencia)"
-      ],
-      "modalidad": [
-        "Financiamiento directo"
-      ],
-      "fecha_inicio": "2026-09-08",
-      "tipo_duracion": "No hay fecha exacta, pero puedo indicar una duración aproximada",
-      "fecha_fin": "",
-      "duracion_aproximada": "8",
-      "estado_programa": "Por iniciar",
-      "contraparte_gubernamental": "ddd,vvv",
-      "monto_rango": "Menos de Q500,000",
-      "monto_rango_codigo": "menos_500k",
-      "fuente_financiamiento": [
-        "Fondos propios"
-      ],
-      "espacios_coordinacion": [
-        "Mesa Técnica Agroclimática"
-      ],
-      "disposicion_coordinar": "Sí",
-      "beneficiarios_institucionales": {
-        "Centros o puestos de salud": 3
-      },
-      "municipios_cobertura_institucional": [
-        "Camotán"
-      ],
-      "comunidades": [
-        {
-          "codigo_lugar": "quezaltepeque_jicaro",
-          "lugar_poblado": "Jicaro",
-          "municipio": "Quezaltepeque",
-          "clasificacion": "Caserío",
-          "viviendas_catalogo": 63,
-          "lat": 14.559857,
-          "lon": -89.48678,
-          "fuera_catalogo": false,
-          "estado_validacion": "Catálogo territorial",
-          "referencia_lugar": "",
-          "poblacion_meta": [
-            "Padres, madres y cuidadores"
-          ],
-          "datos_cuantitativos_poblacion": "Sí",
-          "pm_cantidades": {
-            "Padres, madres y cuidadores": 45
-          },
-          "poblacion_total_estimada": 45,
-          "accion_comunidad": [
-            "Organizaciones comunitarias / COCODES"
-          ],
-          "ac_cantidades": {
-            "Organizaciones comunitarias / COCODES": 3
-          },
-          "etnia": [
-            "Maya"
-          ],
-          "grupo_etario": [
-            "Juventud (18-29 años)"
-          ],
-          "area": "Rural"
-        }
-      ]
-    }
-  ],
+  "programas": [],
   "municipios": [
     "Camotán",
     "Chiquimula",
@@ -226,56 +17,27 @@
   ],
   "resumen_municipio": {
     "Camotán": {
-      "organizaciones": [
-        "dd"
-      ],
-      "total_programas": 2,
+      "organizaciones": [],
+      "total_programas": 0,
       "comunidades_cubiertas": 0,
       "comunidades_total_catalogo": 155,
       "inversion_estimada": 0,
-      "sectores": {
-        "Educación": 1,
-        "Protección (niñez, migrantes, víctimas de violencia)": 1
-      },
-      "estado": {
-        "En ejecución": 1,
-        "Por iniciar": 1
-      },
-      "instituciones": {
-        "Municipalidades": {
-          "registros": 1,
-          "cantidad": 1,
-          "con_cantidad": true
-        },
-        "Centros o puestos de salud": {
-          "registros": 1,
-          "cantidad": 3,
-          "con_cantidad": true
-        }
-      },
-      "fuente_financiamiento": {
-        "Fondos propios": 2
-      },
-      "lugares_adicionales_reportados": 1
+      "sectores": {},
+      "estado": {},
+      "instituciones": {},
+      "fuente_financiamiento": {},
+      "lugares_adicionales_reportados": 0
     },
     "Chiquimula": {
-      "organizaciones": [
-        "dd"
-      ],
-      "total_programas": 1,
-      "comunidades_cubiertas": 2,
+      "organizaciones": [],
+      "total_programas": 0,
+      "comunidades_cubiertas": 0,
       "comunidades_total_catalogo": 124,
       "inversion_estimada": 0,
-      "sectores": {
-        "Educación": 1
-      },
-      "estado": {
-        "En ejecución": 1
-      },
+      "sectores": {},
+      "estado": {},
       "instituciones": {},
-      "fuente_financiamiento": {
-        "Fondos propios": 1
-      },
+      "fuente_financiamiento": {},
       "lugares_adicionales_reportados": 0
     },
     "Concepción las Minas": {
@@ -339,23 +101,15 @@
       "lugares_adicionales_reportados": 0
     },
     "Quezaltepeque": {
-      "organizaciones": [
-        "dd"
-      ],
-      "total_programas": 1,
-      "comunidades_cubiertas": 1,
+      "organizaciones": [],
+      "total_programas": 0,
+      "comunidades_cubiertas": 0,
       "comunidades_total_catalogo": 99,
       "inversion_estimada": 0,
-      "sectores": {
-        "Protección (niñez, migrantes, víctimas de violencia)": 1
-      },
-      "estado": {
-        "Por iniciar": 1
-      },
+      "sectores": {},
+      "estado": {},
       "instituciones": {},
-      "fuente_financiamiento": {
-        "Fondos propios": 1
-      },
+      "fuente_financiamiento": {},
       "lugares_adicionales_reportados": 0
     },
     "San Jacinto": {
@@ -395,17 +149,15 @@
       "lugares_adicionales_reportados": 0
     }
   },
-  "matriz_sector_municipio": {
-    "Educación": {
-      "Camotán": 1,
-      "Chiquimula": 1
-    },
-    "Protección (niñez, migrantes, víctimas de violencia)": {
-      "Camotán": 1,
-      "Quezaltepeque": 1
-    }
-  },
+  "matriz_sector_municipio": {},
   "comunidades_sin_cobertura": [
+    {
+      "codigo_lugar": "chiquimula_chiquimula",
+      "lugar_poblado": "Chiquimula",
+      "municipio": "Chiquimula",
+      "lat": 14.79442,
+      "lon": -89.54527
+    },
     {
       "codigo_lugar": "chiquimula_alta_mira_6",
       "lugar_poblado": "Alta Mira 6",
@@ -692,6 +444,13 @@
       "municipio": "Chiquimula",
       "lat": 14.789884,
       "lon": -89.62123
+    },
+    {
+      "codigo_lugar": "chiquimula_la_ponderosa",
+      "lugar_poblado": "La Ponderosa",
+      "municipio": "Chiquimula",
+      "lat": 14.778625,
+      "lon": -89.53275
     },
     {
       "codigo_lugar": "chiquimula_la_puente",
@@ -5076,6 +4835,13 @@
       "lon": -89.51878
     },
     {
+      "codigo_lugar": "quezaltepeque_jicaro",
+      "lugar_poblado": "Jicaro",
+      "municipio": "Quezaltepeque",
+      "lat": 14.559857,
+      "lon": -89.48678
+    },
+    {
       "codigo_lugar": "quezaltepeque_la_canada",
       "lugar_poblado": "La Cañada",
       "municipio": "Quezaltepeque",
@@ -6098,58 +5864,20 @@
       "lon": -89.62241
     }
   ],
-  "lugares_adicionales_reportados": [
-    {
-      "codigo_lugar": "adicional:camotan:jiote",
-      "lugar_poblado": "jiote",
-      "municipio": "Camotán",
-      "referencia_lugar": "sabana grande",
-      "estado_validacion": "Pendiente de validación",
-      "organizaciones": [
-        "dd"
-      ],
-      "programas": [
-        "d"
-      ]
-    }
-  ],
+  "lugares_adicionales_reportados": [],
   "duplicidad": [],
-  "instituciones_resumen": {
-    "Municipalidades": {
-      "registros": 1,
-      "cantidad": 1,
-      "con_cantidad": true
-    },
-    "Centros o puestos de salud": {
-      "registros": 1,
-      "cantidad": 3,
-      "con_cantidad": true
-    }
-  },
-  "matriz_poblacion_accion": {
-    "Mujeres": {
-      "Escuelas / centros educativos": 1
-    },
-    "Adultos mayores": {
-      "Escuelas / centros educativos": 1
-    },
-    "Pueblos indígenas": {
-      "Cooperativas o asociaciones productivas": 1
-    },
-    "Padres, madres y cuidadores": {
-      "Organizaciones comunitarias / COCODES": 1
-    }
-  },
+  "instituciones_resumen": {},
+  "matriz_poblacion_accion": {},
   "inversion": {
-    "programas_con_monto": 2,
+    "programas_con_monto": 0,
     "programas_sin_monto": 0,
     "nota_metodologica": "La inversión se conserva como rango reportado. No se calculan puntos medios ni se distribuyen montos entre municipios o sectores."
   },
   "control": {
-    "registros_kobo": 1,
-    "programas_procesados": 2,
+    "registros_kobo": 0,
+    "programas_procesados": 0,
     "lugares_catalogo": 996,
     "lugares_con_coordenadas": 816,
-    "lugares_adicionales_reportados": 1
+    "lugares_adicionales_reportados": 0
   }
 }
