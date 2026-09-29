@@ -142,6 +142,18 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
 }
 @media(max-width:620px){.pa-stats{grid-template-columns:1fr}}
 
+
+  .map-legend-control{
+    background:rgba(255,255,255,.94); padding:8px 10px; border:1px solid #D9D3C8;
+    border-radius:8px; box-shadow:0 1px 5px rgba(0,0,0,.14); color:#334155;
+    font-size:11px; line-height:1.65;
+  }
+  .map-legend-title{font-weight:700;color:#003058;margin-bottom:2px;}
+  .map-symbol{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px;box-sizing:border-box;}
+  .map-symbol.community{background:#003058;border:1.5px solid #fff;box-shadow:0 0 0 1px #003058;}
+  .map-symbol.institutional{background:#F1C47C;border:2px dashed #B97824;}
+  .map-symbol.territorial{background:#fff;border:1.5px solid #C98A6B;}
+
 </style>
 </head>
 <body>
@@ -466,7 +478,7 @@ function mostrarVista(id){
 }
 
 const filtros = { sector:'', atencion:'', actor:'', estado:'', municipio:'' };
-let CATALOGO=null, COORDS={}, baseLayer=null, coopLayer=null, basePlaces=[], limitesLayer=null, LIMITES=null;
+let CATALOGO=null, COORDS={}, baseLayer=null, coopLayer=null, instLayer=null, basePlaces=[], limitesLayer=null, LIMITES=null;
 
 
 const SIGLAS_VISOR = new Set([
@@ -626,6 +638,7 @@ function renderMapa(filtrados){
   // porque eso desprende baseLayer y coopLayer del mapa y vuelve invisibles los puntos.
   if(baseLayer) baseLayer.clearLayers();
   if(coopLayer) coopLayer.clearLayers();
+  if(instLayer) instLayer.clearLayers();
 
   const muniTerritorial=document.getElementById('t-municipio')?.value||'';
   const lugarTerritorial=document.getElementById('t-lugar')?.value||'';
@@ -670,6 +683,38 @@ function renderMapa(filtrados){
     });
   }
 
+
+  // Presencia institucional/municipal: marcador de referencia en el centro
+  // promedio de los lugares georreferenciados del municipio. No representa
+  // una comunidad específica.
+  const instMunicipios = new Map();
+  filtrados.forEach(p=>{
+    (p.municipios_cobertura_institucional||[]).forEach(m=>{
+      if(muniTerritorial && m!==muniTerritorial) return;
+      if(!instMunicipios.has(m)) instMunicipios.set(m,[]);
+      instMunicipios.get(m).push(p);
+    });
+  });
+  const instPts=[];
+  if(document.getElementById('layer-coop').checked && instLayer){
+    instMunicipios.forEach((progs,m)=>{
+      const pts=basePlaces.filter(x=>x.municipio===m && Number.isFinite(Number(x.lat)) && Number.isFinite(Number(x.lon)));
+      if(!pts.length) return;
+      const lat=pts.reduce((a,x)=>a+Number(x.lat),0)/pts.length;
+      const lon=pts.reduce((a,x)=>a+Number(x.lon),0)/pts.length;
+      instPts.push([lat,lon]);
+      const orgs=[...new Set(progs.map(p=>p.organizacion).filter(Boolean))];
+      const programas=[...new Set(progs.map(p=>p.nombre_programa).filter(Boolean))];
+      const mk=L.circleMarker([lat,lon],{
+        radius:8,color:'#B97824',fillColor:'#F1C47C',
+        fillOpacity:.72,weight:2.2,dashArray:'4 3'
+      });
+      mk.bindTooltip(`${m} · presencia institucional/municipal`,{direction:'top',opacity:.95});
+      mk.bindPopup(`<b>${m}</b><br><b>Presencia institucional / municipal</b><br>${orgs.length} organización(es)<br>${programas.length} programa(s) / proyecto(s)<br><br><span style="color:#5B6672">Marcador de referencia municipal; no representa una comunidad específica.</span>`);
+      mk.addTo(instLayer);
+    });
+  }
+
   if(document.getElementById('layer-base').checked){
     const muniSel=document.getElementById('t-municipio').value;
     const lugarSel=document.getElementById('t-lugar').value;
@@ -693,6 +738,7 @@ function renderMapa(filtrados){
     });
     if(baseLayer && baseLayer.bringToBack) baseLayer.bringToBack();
   }
+  if(instLayer && instLayer.bringToFront) instLayer.bringToFront();
   if(coopLayer && coopLayer.bringToFront) coopLayer.bringToFront();
 
   const lugarSel=document.getElementById('t-lugar').value;
@@ -703,7 +749,8 @@ function renderMapa(filtrados){
     const muniSel=document.getElementById('t-municipio').value;
     const visibles=basePlaces.filter(p=>!muniSel||p.municipio===muniSel).map(p=>[p.lat,p.lon]);
     const pts=puntos.map(p=>[p.lat,p.lon]);
-    const bounds=(document.getElementById('layer-base').checked ? visibles : pts);
+    const consultaPts=[...pts,...instPts];
+    const bounds=(document.getElementById('layer-base').checked ? visibles : consultaPts);
     if(bounds.length) map.fitBounds(L.latLngBounds(bounds),{padding:[30,30],maxZoom:13});
   }
   actualizarLimitesMunicipales();
@@ -745,7 +792,7 @@ function estiloLimite(feature){
   const sel=document.getElementById('t-municipio')?.value||'';
   const nombre=feature?.properties?.nombre_1||'';
   const activo=sel && normalizarTexto(nombre)===normalizarTexto(sel);
-  return {color:activo?'#003058':'#66798A',weight:activo?3:1.35,opacity:activo?1:.72,fillColor:'#DFB26F',fillOpacity:activo?.08:.018};
+  return {color:activo?'#003058':'#7F8B96',weight:activo?3.4:1.15,opacity:activo?1:(sel?.42:.68),fillColor:activo?'#DFB26F':'#FFFFFF',fillOpacity:activo?.10:(sel?.015:.008)};
 }
 
 function actualizarLimitesMunicipales(){
@@ -1474,7 +1521,21 @@ async function iniciar(){
   // accidentalmente la visibilidad de cooperación o base territorial.
   markersLayer = null;
   baseLayer = L.layerGroup().addTo(map);
+  instLayer = L.layerGroup().addTo(map);
   coopLayer = L.layerGroup().addTo(map);
+
+  const leyendaMapa=L.control({position:'bottomleft'});
+  leyendaMapa.onAdd=function(){
+    const div=L.DomUtil.create('div','map-legend-control');
+    div.innerHTML=`
+      <div class="map-legend-title">Simbología</div>
+      <div><span class="map-symbol community"></span> Cooperación comunitaria</div>
+      <div><span class="map-symbol institutional"></span> Presencia institucional / municipal</div>
+      <div><span class="map-symbol territorial"></span> Base territorial</div>`;
+    L.DomEvent.disableClickPropagation(div);
+    return div;
+  };
+  leyendaMapa.addTo(map);
   // Ajusta únicamente la simbología al acercar/alejar, sin recalcular filtros ni extensión.
   map.on('zoomend', actualizarEstiloBasePorZoom);
   await cargarLimitesMunicipales();
