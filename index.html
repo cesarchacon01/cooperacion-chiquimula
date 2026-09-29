@@ -189,6 +189,15 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
   .intervention-card.open .intervention-body{display:block}
   .intervention-card:not(.open) .intervention-program{margin-bottom:0}
 
+
+  .coverage-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:16px 0 18px}
+  .coverage-kpi{background:#fff;border:1px solid #E2DDD4;border-top:3px solid #DFB26F;border-radius:10px;padding:14px 16px}
+  .coverage-kpi .klabel{font-size:11px;color:#5B6672;margin-bottom:5px}.coverage-kpi .kvalue{font-family:Georgia,serif;font-size:25px;font-weight:700;color:#003058}.coverage-kpi .ksub{font-size:10px;color:#6B7280;margin-top:3px}
+  .coverage-filter-row{display:grid;grid-template-columns:280px 1fr;gap:18px;align-items:end}.coverage-filter-row select{width:100%;margin-top:6px}
+  .method-note{background:#FFF8EC;border:1px solid #E7D3AE;border-radius:8px;padding:10px 12px;font-size:11px;line-height:1.45;color:#5C4B31}
+  .coverage-status{display:inline-block;border-radius:12px;padding:3px 8px;font-size:10px;background:#F1F3F5;color:#4B5563}.coverage-status.yes{background:#EAF4EE;color:#2F6B45}
+  @media(max-width:900px){.coverage-kpis{grid-template-columns:repeat(2,1fr)}.coverage-filter-row{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -369,17 +378,33 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
     <div class="matrix-wrap"><table class="matrix" id="tabla-matriz"></table></div>
   </section>
 
-  <!-- ===== VISTA: BRECHAS ===== -->
+  <!-- ===== VISTA: COBERTURA / BRECHAS ===== -->
   <section class="view" id="view-brechas">
+    <div class="section-title">Cobertura territorial registrada</div>
+    <div class="section-sub">Lectura de la presencia comunitaria reportada frente al catálogo territorial. La ausencia de registro no confirma por sí sola una brecha de atención.</div>
+
+    <div class="coverage-kpis" id="brechas-kpis"></div>
+
     <div class="card" style="margin-bottom:20px;">
-      <div class="section-title">Comunidades del catálogo sin cobertura registrada</div>
-      <div class="section-sub">De las 996 comunidades de Chiquimula, estas no aparecen en ningún programa reportado hasta ahora.</div>
-      <table id="tabla-sin-cobertura"><thead><tr><th>MUNICIPIO</th><th>COMUNIDAD</th><th>VIVIENDAS (censo)</th></tr></thead><tbody></tbody></table>
+      <div class="coverage-filter-row">
+        <div>
+          <label style="font-size:11px;color:#52616F">MUNICIPIO</label>
+          <select id="brechas-municipio" onchange="renderBrechas()"><option value="">Todos los municipios</option></select>
+        </div>
+        <div class="method-note"><b>Nota metodológica</b><br>“Sin presencia comunitaria registrada” significa únicamente que, con la información reportada actualmente en el mapeo, no se identificó una intervención comunitaria en ese lugar poblado. <b>No confirma por sí sola una brecha de atención.</b></div>
+      </div>
     </div>
+
+    <div class="card" style="margin-bottom:20px;">
+      <div class="section-title">Lugares poblados sin presencia comunitaria registrada</div>
+      <div class="section-sub" id="brechas-descripcion"></div>
+      <table id="tabla-sin-cobertura"><thead><tr><th>MUNICIPIO</th><th>LUGAR POBLADO</th><th>GEORREFERENCIADO</th><th>PRESENCIA INSTITUCIONAL EN EL MUNICIPIO</th></tr></thead><tbody></tbody></table>
+    </div>
+
     <div class="card">
-      <div class="section-title">Posible duplicidad de esfuerzos</div>
-      <div class="section-sub">Comunidades donde más de una organización trabaja el mismo sector.</div>
-      <table id="tabla-duplicidad"><thead><tr><th>COMUNIDAD</th><th>MUNICIPIO</th><th>SECTOR</th><th>ORGANIZACIONES</th></tr></thead><tbody></tbody></table>
+      <div class="section-title">Coincidencia de organizaciones por sector</div>
+      <div class="section-sub">Lugares donde más de una organización reporta trabajo en el mismo sector. La coincidencia no implica por sí sola duplicidad: puede reflejar complementariedad o coordinación.</div>
+      <table id="tabla-duplicidad"><thead><tr><th>LUGAR POBLADO</th><th>MUNICIPIO</th><th>SECTOR</th><th>ORGANIZACIONES</th></tr></thead><tbody></tbody></table>
     </div>
   </section>
 
@@ -1257,19 +1282,47 @@ function renderMatriz(){
 }
 
 function renderBrechas(){
-  const tbSin = document.querySelector('#tabla-sin-cobertura tbody');
-  if(!DATA.comunidades_sin_cobertura.length){
-    tbSin.innerHTML = '<tr><td colspan="3" class="empty">Todas las comunidades del catálogo tienen al menos un programa registrado.</td></tr>';
-  } else {
-    tbSin.innerHTML = DATA.comunidades_sin_cobertura
-      .sort((a,b)=> (b.viviendas||0)-(a.viviendas||0))
-      .map(c=>`<tr><td>${c.municipio}</td><td>${c.lugar_poblado}</td><td>${c.viviendas ?? '—'}</td></tr>`).join('');
-  }
+  const sel=document.getElementById('brechas-municipio');
+  if(!sel) return;
 
-  const tbDup = document.querySelector('#tabla-duplicidad tbody');
-  tbDup.innerHTML = DATA.duplicidad.length
-    ? DATA.duplicidad.map(d=>`<tr><td>${d.lugar_poblado}</td><td>${d.municipio}</td><td>${d.sector}</td><td>${d.organizaciones.join(', ')}</td></tr>`).join('')
-    : '<tr><td colspan="4" class="empty">No se detectó duplicidad de sector en ninguna comunidad.</td></tr>';
+  const municipios=[...new Set(basePlaces.map(x=>x.municipio).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es'));
+  if(sel.options.length===1) municipios.forEach(m=>sel.add(new Option(m,m)));
+  const municipio=sel.value;
+
+  const presencia=new Set();
+  (DATA.programas||[]).forEach(p=>(p.comunidades||[]).forEach(c=>{
+    if(c.municipio && c.lugar) presencia.add(`${c.municipio}|||${c.lugar}`);
+  }));
+  const institucional=new Set();
+  (DATA.programas||[]).forEach(p=>(p.municipios_cobertura_institucional||[]).forEach(m=>institucional.add(m)));
+
+  const catalogo=(basePlaces||[]).filter(x=>!municipio || x.municipio===municipio);
+  const conPresencia=catalogo.filter(x=>presencia.has(`${x.municipio}|||${x.lugar}`));
+  const sinPresencia=catalogo.filter(x=>!presencia.has(`${x.municipio}|||${x.lugar}`));
+  const georef=catalogo.filter(x=>Number.isFinite(Number(x.lat)) && Number.isFinite(Number(x.lon)));
+  const pct=catalogo.length?Math.round(conPresencia.length/catalogo.length*100):0;
+
+  document.getElementById('brechas-kpis').innerHTML=`
+    <div class="coverage-kpi"><div class="klabel">Lugares del catálogo</div><div class="kvalue">${catalogo.length.toLocaleString('es-GT')}</div><div class="ksub">${municipio||'Departamento de Chiquimula'}</div></div>
+    <div class="coverage-kpi"><div class="klabel">Con presencia comunitaria registrada</div><div class="kvalue">${conPresencia.length.toLocaleString('es-GT')}</div><div class="ksub">${pct}% del catálogo consultado</div></div>
+    <div class="coverage-kpi"><div class="klabel">Sin presencia comunitaria registrada</div><div class="kvalue">${sinPresencia.length.toLocaleString('es-GT')}</div><div class="ksub">No equivale automáticamente a brecha</div></div>
+    <div class="coverage-kpi"><div class="klabel">Georreferenciados</div><div class="kvalue">${georef.length.toLocaleString('es-GT')}</div><div class="ksub">${catalogo.length-georef.length} sin coordenadas disponibles</div></div>`;
+
+  document.getElementById('brechas-descripcion').textContent=
+    `${sinPresencia.length.toLocaleString('es-GT')} de ${catalogo.length.toLocaleString('es-GT')} lugares poblados ${municipio?'de '+municipio:'del departamento'} no tienen presencia comunitaria registrada en la información reportada actualmente.`;
+
+  const tbSin=document.querySelector('#tabla-sin-cobertura tbody');
+  tbSin.innerHTML=sinPresencia.map(x=>{
+    const geo=Number.isFinite(Number(x.lat)) && Number.isFinite(Number(x.lon));
+    const inst=institucional.has(x.municipio);
+    return `<tr><td>${escaparHtml(x.municipio)}</td><td>${escaparHtml(x.lugar)}</td><td><span class="coverage-status ${geo?'yes':''}">${geo?'Sí':'No'}</span></td><td><span class="coverage-status ${inst?'yes':''}">${inst?'Sí':'No reportada'}</span></td></tr>`;
+  }).join('') || '<tr><td colspan="4" class="empty">Todos los lugares del catálogo consultado tienen presencia comunitaria registrada.</td></tr>';
+
+  const tbDup=document.querySelector('#tabla-duplicidad tbody');
+  const dup=(DATA.duplicidad||[]).filter(d=>!municipio || d.municipio===municipio);
+  tbDup.innerHTML=dup.length
+    ? dup.map(d=>`<tr><td>${escaparHtml(d.lugar_poblado)}</td><td>${escaparHtml(d.municipio)}</td><td>${escaparHtml(d.sector)}</td><td>${d.organizaciones.map(escaparHtml).join(', ')}</td></tr>`).join('')
+    : '<tr><td colspan="4" class="empty">No se registran coincidencias de más de una organización en el mismo sector para esta consulta.</td></tr>';
 }
 
 function formatoQ(n){
