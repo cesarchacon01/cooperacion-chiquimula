@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-30T05:31:39.311594+00:00",
+  "generado": "2026-09-30T12:33:20.890438+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -837,9 +837,9 @@
   },
   "matriz_sector_municipio": {
     "Desarrollo económico local": {
-      "Jocotán": 3,
       "Olopa": 1,
       "Chiquimula": 1,
+      "Jocotán": 3,
       "Camotán": 2
     },
     "Seguridad alimentaria y nutricional": {
