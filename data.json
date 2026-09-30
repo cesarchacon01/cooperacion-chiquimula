@@ -1,7 +1,628 @@
 {
-  "generado": "2026-09-29T22:14:43.609613+00:00",
+  "generado": "2026-09-30T02:28:41.923536+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
-  "programas": [],
+  "programas": [
+    {
+      "organizacion": "Asociación de Servicios y Desarrollo Socioeconómico de Chiquimula -ASEDECHI-",
+      "tipo_actor": "Otro",
+      "trabajo_comunitario": "Sí",
+      "pais_origen": "",
+      "contacto": "Mirian del Cid Hernández",
+      "nombre_programa": "FIDECSEM-ASEDECHI",
+      "tipo_atencion": "Desarrollo / atención ordinaria",
+      "sector": [
+        "Desarrollo económico local"
+      ],
+      "modalidad": [
+        "Financiamiento directo"
+      ],
+      "fecha_inicio": "2010-08-02",
+      "tipo_duracion": "Aún no está definida",
+      "fecha_fin": "",
+      "duracion_aproximada": "",
+      "estado_programa": "En ejecución",
+      "contraparte_gubernamental": "Banrural S.A.",
+      "monto_rango": "Q500,000 – Q2,000,000",
+      "monto_rango_codigo": "500k_2m",
+      "fuente_financiamiento": [
+        "Fondos propios"
+      ],
+      "espacios_coordinacion": [
+        "Mesa de Cooperación",
+        "CODESAN",
+        "Mesa Técnica Agroclimática",
+        "Otro"
+      ],
+      "disposicion_coordinar": "Sí",
+      "beneficiarios_institucionales": {},
+      "municipios_cobertura_institucional": [],
+      "comunidades": [
+        {
+          "codigo_lugar": "chiquimula_maraxco",
+          "lugar_poblado": "Maraxco",
+          "municipio": "Chiquimula",
+          "clasificacion": "Paraje",
+          "viviendas_catalogo": 1103,
+          "lat": 14.850497,
+          "lon": -89.57758,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Agricultores / productores",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 19,
+            "Agricultores / productores": 7,
+            "Comerciantes": 36
+          },
+          "poblacion_total_estimada": 36,
+          "accion_comunidad": [],
+          "ac_cantidades": {},
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "chiquimula_chiquimula",
+          "lugar_poblado": "Chiquimula",
+          "municipio": "Chiquimula",
+          "clasificacion": "Ciudad",
+          "viviendas_catalogo": 9169,
+          "lat": 14.79442,
+          "lon": -89.54527,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 14,
+            "Comenciantes": 14
+          },
+          "poblacion_total_estimada": 14,
+          "accion_comunidad": [],
+          "ac_cantidades": {},
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Adultez (30-59 años)"
+          ],
+          "area": "Urbana"
+        },
+        {
+          "codigo_lugar": "chiquimula_santa_elena",
+          "lugar_poblado": "Santa Elena",
+          "municipio": "Chiquimula",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 403,
+          "lat": 14.717456,
+          "lon": -89.49716,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 8,
+            "Comerciantes": 3
+          },
+          "poblacion_total_estimada": 8,
+          "accion_comunidad": [],
+          "ac_cantidades": {},
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "olopa_laguna_de_cayur",
+          "lugar_poblado": "Laguna De Cayur",
+          "municipio": "Olopa",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 51,
+          "lat": 14.70598,
+          "lon": -89.30542,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Agricultores / productores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 8,
+            "Agricultores / productores": 5
+          },
+          "poblacion_total_estimada": 8,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "caficultura": 13
+          },
+          "etnia": [
+            "Maya"
+          ],
+          "grupo_etario": [
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "jocotan_rodeito",
+          "lugar_poblado": "Rodeito",
+          "municipio": "Jocotán",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 321,
+          "lat": 14.747583,
+          "lon": -89.3194,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Agricultores / productores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Agricultores / productores": 8
+          },
+          "poblacion_total_estimada": 8,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Caficultura": 8
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "olopa_el_tablon_de_cayur",
+          "lugar_poblado": "El Tablon De Cayur",
+          "municipio": "Olopa",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 83,
+          "lat": 14.71418,
+          "lon": -89.31858,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Agricultores / productores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 4,
+            "Agricultores / productores": 7
+          },
+          "poblacion_total_estimada": 7,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "caficultura": 11
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        }
+      ]
+    },
+    {
+      "organizacion": "Asociación de Servicios y Desarrollo Socioeconómico de Chiquimula -ASEDECHI-",
+      "tipo_actor": "Otro",
+      "trabajo_comunitario": "Sí",
+      "pais_origen": "",
+      "contacto": "Mirian del Cid Hernández",
+      "nombre_programa": "Fortalecimiento de la preparación comunitaria para la respuesta y recuperación ante desastres en Centroamérica – Guatemala, Fase III (ATECA)",
+      "tipo_atencion": "Desarrollo / atención ordinaria",
+      "sector": [
+        "Seguridad alimentaria y nutricional",
+        "Gobernanza y fortalecimiento institucional",
+        "Desarrollo económico local"
+      ],
+      "modalidad": [
+        "Financiamiento directo"
+      ],
+      "fecha_inicio": "2023-01-02",
+      "tipo_duracion": "Sí, tiene fecha de finalización definida",
+      "fecha_fin": "2026-12-31",
+      "duracion_aproximada": "",
+      "estado_programa": "Próximo a finalizar",
+      "contraparte_gubernamental": "Municipalidadades, SECONRED",
+      "monto_rango": "Q500,000 – Q2,000,000",
+      "monto_rango_codigo": "500k_2m",
+      "fuente_financiamiento": [
+        "Donante internacional"
+      ],
+      "espacios_coordinacion": [
+        "COMUSAN",
+        "Mesa Técnica Agroclimática",
+        "COMRED",
+        "Otro"
+      ],
+      "disposicion_coordinar": "Sí",
+      "beneficiarios_institucionales": {
+        "COMRED (Coordinadora Municipal para la Reducción de Desastres)": 2,
+        "Oficina Municipal de Gestión Integral de Riesgo de Desastres (GIRD)": 2
+      },
+      "municipios_cobertura_institucional": [
+        "Camotán",
+        "Jocotán"
+      ],
+      "comunidades": [
+        {
+          "codigo_lugar": "jocotan_el_naranjo",
+          "lugar_poblado": "El Naranjo",
+          "municipio": "Jocotán",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 114,
+          "lat": 14.786275,
+          "lon": -89.29852,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Agricultores / productores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 67,
+            "Agricultores / productores": 86
+          },
+          "poblacion_total_estimada": 86,
+          "accion_comunidad": [
+            "Emprendimientos",
+            "COLRED (Coordinadora Local para la Reducción de Desastres)"
+          ],
+          "ac_cantidades": {
+            "Emprendimientos": 2,
+            "COLRED (Coordinadora Local para la Reducción de Desastres)": -2
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "jocotan_tierra_blanca_2",
+          "lugar_poblado": "Tierra Blanca",
+          "municipio": "Jocotán",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 179,
+          "lat": 14.803068,
+          "lon": -89.3965,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Agricultores / productores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 152,
+            "Agricultores / productores": 171
+          },
+          "poblacion_total_estimada": 171,
+          "accion_comunidad": [
+            "Emprendimientos",
+            "COLRED (Coordinadora Local para la Reducción de Desastres)"
+          ],
+          "ac_cantidades": {
+            "Emprendimientos": 1,
+            "COLRED (Coordinadora Local para la Reducción de Desastres)": -2
+          },
+          "etnia": [
+            "Maya"
+          ],
+          "grupo_etario": [
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "jocotan_talquetzal_centro",
+          "lugar_poblado": "Talquetzal Centro",
+          "municipio": "Jocotán",
+          "clasificacion": "Caserío",
+          "viviendas_catalogo": 155,
+          "lat": 14.901031,
+          "lon": -89.35593,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Agricultores / productores",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 65,
+            "Agricultores / productores": 11,
+            "Apicultores": 3
+          },
+          "poblacion_total_estimada": 65,
+          "accion_comunidad": [
+            "Emprendimientos",
+            "COLRED (Coordinadora Local para la Reducción de Desastres)"
+          ],
+          "ac_cantidades": {
+            "Emprendimientos": 6,
+            "COLRED (Coordinadora Local para la Reducción de Desastres)": 1
+          },
+          "etnia": [
+            "Maya"
+          ],
+          "grupo_etario": [
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "camotan_guior_centro",
+          "lugar_poblado": "Guior Centro",
+          "municipio": "Camotán",
+          "clasificacion": "Paraje",
+          "viviendas_catalogo": 103,
+          "lat": 14.898072,
+          "lon": -89.26301,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Agricultores / productores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 58,
+            "Agricultores / productores": 17
+          },
+          "poblacion_total_estimada": 58,
+          "accion_comunidad": [
+            "Emprendimientos",
+            "COLRED (Coordinadora Local para la Reducción de Desastres)"
+          ],
+          "ac_cantidades": {
+            "Emprendimientos": 3,
+            "COLRED (Coordinadora Local para la Reducción de Desastres)": 1
+          },
+          "etnia": [
+            "Maya"
+          ],
+          "grupo_etario": [
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "camotan_marimba",
+          "lugar_poblado": "Marimba",
+          "municipio": "Camotán",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 22,
+          "lat": 14.803026,
+          "lon": -89.3399,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Agricultores / productores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 114,
+            "Agricultores / productores": 16
+          },
+          "poblacion_total_estimada": 114,
+          "accion_comunidad": [
+            "Emprendimientos",
+            "COLRED (Coordinadora Local para la Reducción de Desastres)"
+          ],
+          "ac_cantidades": {
+            "Emprendimientos": 2,
+            "COLRED (Coordinadora Local para la Reducción de Desastres)": 1
+          },
+          "etnia": [
+            "Maya"
+          ],
+          "grupo_etario": [
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "camotan_la_libertad_centro",
+          "lugar_poblado": "La Libertad Centro",
+          "municipio": "Camotán",
+          "clasificacion": "Paraje",
+          "viviendas_catalogo": 142,
+          "lat": 14.870226,
+          "lon": -89.27144,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Agricultores / productores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 53,
+            "Agricultores / productores": 7
+          },
+          "poblacion_total_estimada": 53,
+          "accion_comunidad": [
+            "Emprendimientos",
+            "COLRED (Coordinadora Local para la Reducción de Desastres)"
+          ],
+          "ac_cantidades": {
+            "Emprendimientos": 2,
+            "COLRED (Coordinadora Local para la Reducción de Desastres)": 1
+          },
+          "etnia": [
+            "Maya"
+          ],
+          "grupo_etario": [
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        }
+      ]
+    },
+    {
+      "organizacion": "Asociación de Servicios y Desarrollo Socioeconómico de Chiquimula -ASEDECHI-",
+      "tipo_actor": "Otro",
+      "trabajo_comunitario": "Sí",
+      "pais_origen": "",
+      "contacto": "Mirian del Cid Hernández",
+      "nombre_programa": "Empoderamiento Economico de mujeres y jóvenes y su participación en la acción climática",
+      "tipo_atencion": "Desarrollo / atención ordinaria",
+      "sector": [
+        "Seguridad alimentaria y nutricional",
+        "Ambiente y cambio climático",
+        "Desarrollo económico local",
+        "Género"
+      ],
+      "modalidad": [
+        "Asistencia técnica",
+        "Financiamiento directo"
+      ],
+      "fecha_inicio": "2025-02-02",
+      "tipo_duracion": "Sí, tiene fecha de finalización definida",
+      "fecha_fin": "2027-02-28",
+      "duracion_aproximada": "",
+      "estado_programa": "En ejecución",
+      "contraparte_gubernamental": "Municipalidades, CUNORI",
+      "monto_rango": "Q500,000 – Q2,000,000",
+      "monto_rango_codigo": "500k_2m",
+      "fuente_financiamiento": [
+        "Donante internacional"
+      ],
+      "espacios_coordinacion": [
+        "Mesa de Cooperación"
+      ],
+      "disposicion_coordinar": "Sí",
+      "beneficiarios_institucionales": {},
+      "municipios_cobertura_institucional": [],
+      "comunidades": [
+        {
+          "codigo_lugar": "jocotan_rodeito",
+          "lugar_poblado": "Rodeito",
+          "municipio": "Jocotán",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 321,
+          "lat": 14.747583,
+          "lon": -89.3194,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 45
+          },
+          "poblacion_total_estimada": 45,
+          "accion_comunidad": [
+            "Grupos de Auto Ahorro y Préstamo",
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Grupos de Auto Ahorro y Préstamo": 4,
+            "Plataforma por  los derechos de las mujeres": 70
+          },
+          "etnia": [
+            "Maya"
+          ],
+          "grupo_etario": [
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "camotan_shalagua_centro",
+          "lugar_poblado": "Shalagua Centro",
+          "municipio": "Camotán",
+          "clasificacion": "Paraje",
+          "viviendas_catalogo": 20,
+          "lat": 14.793111,
+          "lon": -89.23956,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 45
+          },
+          "poblacion_total_estimada": 45,
+          "accion_comunidad": [
+            "Cooperativas o asociaciones productivas",
+            "Grupos de Auto Ahorro y Préstamo",
+            "Emprendimientos"
+          ],
+          "ac_cantidades": {
+            "Cooperativas o asociaciones productivas": 1,
+            "Grupos de Auto Ahorro y Préstamo": 2,
+            "Emprendimientos": 5
+          },
+          "etnia": [
+            "Maya"
+          ],
+          "grupo_etario": [
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        }
+      ]
+    }
+  ],
   "municipios": [
     "Camotán",
     "Chiquimula",
@@ -17,27 +638,59 @@
   ],
   "resumen_municipio": {
     "Camotán": {
-      "organizaciones": [],
-      "total_programas": 0,
-      "comunidades_cubiertas": 0,
+      "organizaciones": [
+        "Asociación de Servicios y Desarrollo Socioeconómico de Chiquimula -ASEDECHI-"
+      ],
+      "total_programas": 2,
+      "comunidades_cubiertas": 4,
       "comunidades_total_catalogo": 155,
       "inversion_estimada": 0,
-      "sectores": {},
-      "estado": {},
-      "instituciones": {},
-      "fuente_financiamiento": {},
+      "sectores": {
+        "Seguridad alimentaria y nutricional": 2,
+        "Gobernanza y fortalecimiento institucional": 1,
+        "Desarrollo económico local": 2,
+        "Ambiente y cambio climático": 1,
+        "Género": 1
+      },
+      "estado": {
+        "Próximo a finalizar": 1,
+        "En ejecución": 1
+      },
+      "instituciones": {
+        "COMRED (Coordinadora Municipal para la Reducción de Desastres)": {
+          "registros": 1,
+          "cantidad": 2,
+          "con_cantidad": true
+        },
+        "Oficina Municipal de Gestión Integral de Riesgo de Desastres (GIRD)": {
+          "registros": 1,
+          "cantidad": 2,
+          "con_cantidad": true
+        }
+      },
+      "fuente_financiamiento": {
+        "Donante internacional": 2
+      },
       "lugares_adicionales_reportados": 0
     },
     "Chiquimula": {
-      "organizaciones": [],
-      "total_programas": 0,
-      "comunidades_cubiertas": 0,
+      "organizaciones": [
+        "Asociación de Servicios y Desarrollo Socioeconómico de Chiquimula -ASEDECHI-"
+      ],
+      "total_programas": 1,
+      "comunidades_cubiertas": 3,
       "comunidades_total_catalogo": 124,
       "inversion_estimada": 0,
-      "sectores": {},
-      "estado": {},
+      "sectores": {
+        "Desarrollo económico local": 1
+      },
+      "estado": {
+        "En ejecución": 1
+      },
       "instituciones": {},
-      "fuente_financiamiento": {},
+      "fuente_financiamiento": {
+        "Fondos propios": 1
+      },
       "lugares_adicionales_reportados": 0
     },
     "Concepción las Minas": {
@@ -77,27 +730,60 @@
       "lugares_adicionales_reportados": 0
     },
     "Jocotán": {
-      "organizaciones": [],
-      "total_programas": 0,
-      "comunidades_cubiertas": 0,
+      "organizaciones": [
+        "Asociación de Servicios y Desarrollo Socioeconómico de Chiquimula -ASEDECHI-"
+      ],
+      "total_programas": 3,
+      "comunidades_cubiertas": 4,
       "comunidades_total_catalogo": 89,
       "inversion_estimada": 0,
-      "sectores": {},
-      "estado": {},
-      "instituciones": {},
-      "fuente_financiamiento": {},
+      "sectores": {
+        "Desarrollo económico local": 3,
+        "Seguridad alimentaria y nutricional": 2,
+        "Gobernanza y fortalecimiento institucional": 1,
+        "Ambiente y cambio climático": 1,
+        "Género": 1
+      },
+      "estado": {
+        "En ejecución": 2,
+        "Próximo a finalizar": 1
+      },
+      "instituciones": {
+        "COMRED (Coordinadora Municipal para la Reducción de Desastres)": {
+          "registros": 1,
+          "cantidad": 2,
+          "con_cantidad": true
+        },
+        "Oficina Municipal de Gestión Integral de Riesgo de Desastres (GIRD)": {
+          "registros": 1,
+          "cantidad": 2,
+          "con_cantidad": true
+        }
+      },
+      "fuente_financiamiento": {
+        "Fondos propios": 1,
+        "Donante internacional": 2
+      },
       "lugares_adicionales_reportados": 0
     },
     "Olopa": {
-      "organizaciones": [],
-      "total_programas": 0,
-      "comunidades_cubiertas": 0,
+      "organizaciones": [
+        "Asociación de Servicios y Desarrollo Socioeconómico de Chiquimula -ASEDECHI-"
+      ],
+      "total_programas": 1,
+      "comunidades_cubiertas": 2,
       "comunidades_total_catalogo": 58,
       "inversion_estimada": 0,
-      "sectores": {},
-      "estado": {},
+      "sectores": {
+        "Desarrollo económico local": 1
+      },
+      "estado": {
+        "En ejecución": 1
+      },
       "instituciones": {},
-      "fuente_financiamiento": {},
+      "fuente_financiamiento": {
+        "Fondos propios": 1
+      },
       "lugares_adicionales_reportados": 0
     },
     "Quezaltepeque": {
@@ -149,15 +835,31 @@
       "lugares_adicionales_reportados": 0
     }
   },
-  "matriz_sector_municipio": {},
-  "comunidades_sin_cobertura": [
-    {
-      "codigo_lugar": "chiquimula_chiquimula",
-      "lugar_poblado": "Chiquimula",
-      "municipio": "Chiquimula",
-      "lat": 14.79442,
-      "lon": -89.54527
+  "matriz_sector_municipio": {
+    "Desarrollo económico local": {
+      "Chiquimula": 1,
+      "Olopa": 1,
+      "Jocotán": 3,
+      "Camotán": 2
     },
+    "Seguridad alimentaria y nutricional": {
+      "Camotán": 2,
+      "Jocotán": 2
+    },
+    "Gobernanza y fortalecimiento institucional": {
+      "Camotán": 1,
+      "Jocotán": 1
+    },
+    "Ambiente y cambio climático": {
+      "Camotán": 1,
+      "Jocotán": 1
+    },
+    "Género": {
+      "Camotán": 1,
+      "Jocotán": 1
+    }
+  },
+  "comunidades_sin_cobertura": [
     {
       "codigo_lugar": "chiquimula_alta_mira_6",
       "lugar_poblado": "Alta Mira 6",
@@ -551,13 +1253,6 @@
       "lon": -89.58143
     },
     {
-      "codigo_lugar": "chiquimula_maraxco",
-      "lugar_poblado": "Maraxco",
-      "municipio": "Chiquimula",
-      "lat": 14.850497,
-      "lon": -89.57758
-    },
-    {
       "codigo_lugar": "chiquimula_plan_del_jocote",
       "lugar_poblado": "Plan Del Jocote",
       "municipio": "Chiquimula",
@@ -710,13 +1405,6 @@
       "municipio": "Chiquimula",
       "lat": 14.850735,
       "lon": -89.4834
-    },
-    {
-      "codigo_lugar": "chiquimula_santa_elena",
-      "lugar_poblado": "Santa Elena",
-      "municipio": "Chiquimula",
-      "lat": 14.717456,
-      "lon": -89.49716
     },
     {
       "codigo_lugar": "chiquimula_shusho_abajo",
@@ -1454,13 +2142,6 @@
       "lon": -89.34033
     },
     {
-      "codigo_lugar": "jocotan_talquetzal_centro",
-      "lugar_poblado": "Talquetzal Centro",
-      "municipio": "Jocotán",
-      "lat": 14.901031,
-      "lon": -89.35593
-    },
-    {
       "codigo_lugar": "jocotan_la_cumbre",
       "lugar_poblado": "La Cumbre",
       "municipio": "Jocotán",
@@ -1748,13 +2429,6 @@
       "lon": -89.234
     },
     {
-      "codigo_lugar": "jocotan_el_naranjo",
-      "lugar_poblado": "El Naranjo",
-      "municipio": "Jocotán",
-      "lat": 14.786275,
-      "lon": -89.29852
-    },
-    {
       "codigo_lugar": "jocotan_ocumbla",
       "lugar_poblado": "Ocumbla",
       "municipio": "Jocotán",
@@ -1874,13 +2548,6 @@
       "lon": -89.39264
     },
     {
-      "codigo_lugar": "jocotan_rodeito",
-      "lugar_poblado": "Rodeito",
-      "municipio": "Jocotán",
-      "lat": 14.747583,
-      "lon": -89.3194
-    },
-    {
       "codigo_lugar": "jocotan_san_pedrito",
       "lugar_poblado": "San Pedrito",
       "municipio": "Jocotán",
@@ -1931,13 +2598,6 @@
     },
     {
       "codigo_lugar": "jocotan_tierra_blanca",
-      "lugar_poblado": "Tierra Blanca",
-      "municipio": "Jocotán",
-      "lat": 14.803068,
-      "lon": -89.3965
-    },
-    {
-      "codigo_lugar": "jocotan_tierra_blanca_2",
       "lugar_poblado": "Tierra Blanca",
       "municipio": "Jocotán",
       "lat": 14.803068,
@@ -2203,13 +2863,6 @@
       "lon": -89.36447
     },
     {
-      "codigo_lugar": "camotan_guior_centro",
-      "lugar_poblado": "Guior Centro",
-      "municipio": "Camotán",
-      "lat": 14.898072,
-      "lon": -89.26301
-    },
-    {
       "codigo_lugar": "camotan_agua_caliente",
       "lugar_poblado": "Agua Caliente",
       "municipio": "Camotán",
@@ -2222,13 +2875,6 @@
       "municipio": "Camotán",
       "lat": 14.809228,
       "lon": -89.29295
-    },
-    {
-      "codigo_lugar": "camotan_la_libertad_centro",
-      "lugar_poblado": "La Libertad Centro",
-      "municipio": "Camotán",
-      "lat": 14.870226,
-      "lon": -89.27144
     },
     {
       "codigo_lugar": "camotan_la_lima",
@@ -2313,13 +2959,6 @@
       "municipio": "Camotán",
       "lat": 14.890326,
       "lon": -89.32642
-    },
-    {
-      "codigo_lugar": "camotan_marimba",
-      "lugar_poblado": "Marimba",
-      "municipio": "Camotán",
-      "lat": 14.803026,
-      "lon": -89.3399
     },
     {
       "codigo_lugar": "camotan_morola_centro",
@@ -2481,13 +3120,6 @@
       "municipio": "Camotán",
       "lat": 14.928804,
       "lon": -89.20496
-    },
-    {
-      "codigo_lugar": "camotan_shalagua_centro",
-      "lugar_poblado": "Shalagua Centro",
-      "municipio": "Camotán",
-      "lat": 14.793111,
-      "lon": -89.23956
     },
     {
       "codigo_lugar": "camotan_shupa_centro",
@@ -3085,13 +3717,6 @@
       "lon": -89.29019
     },
     {
-      "codigo_lugar": "olopa_el_tablon_de_cayur",
-      "lugar_poblado": "El Tablon De Cayur",
-      "municipio": "Olopa",
-      "lat": 14.71418,
-      "lon": -89.31858
-    },
-    {
       "codigo_lugar": "olopa_la_cumbre",
       "lugar_poblado": "La Cumbre",
       "municipio": "Olopa",
@@ -3111,13 +3736,6 @@
       "municipio": "Olopa",
       "lat": 14.728254,
       "lon": -89.26594
-    },
-    {
-      "codigo_lugar": "olopa_laguna_de_cayur",
-      "lugar_poblado": "Laguna De Cayur",
-      "municipio": "Olopa",
-      "lat": 14.70598,
-      "lon": -89.30542
     },
     {
       "codigo_lugar": "olopa_las_palmas",
@@ -5866,16 +6484,44 @@
   ],
   "lugares_adicionales_reportados": [],
   "duplicidad": [],
-  "instituciones_resumen": {},
-  "matriz_poblacion_accion": {},
+  "instituciones_resumen": {
+    "COMRED (Coordinadora Municipal para la Reducción de Desastres)": {
+      "registros": 1,
+      "cantidad": 2,
+      "con_cantidad": true
+    },
+    "Oficina Municipal de Gestión Integral de Riesgo de Desastres (GIRD)": {
+      "registros": 1,
+      "cantidad": 2,
+      "con_cantidad": true
+    }
+  },
+  "matriz_poblacion_accion": {
+    "Mujeres": {
+      "Otro": 3,
+      "Emprendimientos": 7,
+      "COLRED (Coordinadora Local para la Reducción de Desastres)": 6,
+      "Grupos de Auto Ahorro y Préstamo": 2,
+      "Cooperativas o asociaciones productivas": 1
+    },
+    "Agricultores / productores": {
+      "Otro": 3,
+      "Emprendimientos": 6,
+      "COLRED (Coordinadora Local para la Reducción de Desastres)": 6
+    },
+    "Otro": {
+      "Emprendimientos": 1,
+      "COLRED (Coordinadora Local para la Reducción de Desastres)": 1
+    }
+  },
   "inversion": {
-    "programas_con_monto": 0,
+    "programas_con_monto": 3,
     "programas_sin_monto": 0,
     "nota_metodologica": "La inversión se conserva como rango reportado. No se calculan puntos medios ni se distribuyen montos entre municipios o sectores."
   },
   "control": {
-    "registros_kobo": 0,
-    "programas_procesados": 0,
+    "registros_kobo": 1,
+    "programas_procesados": 3,
     "lugares_catalogo": 996,
     "lugares_con_coordenadas": 816,
     "lugares_adicionales_reportados": 0
