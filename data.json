@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-30T12:33:20.890438+00:00",
+  "generado": "2026-09-30T22:15:20.403194+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -621,6 +621,90 @@
           "area": "Rural"
         }
       ]
+    },
+    {
+      "organizacion": "Asociación santiago Jocotán, ONG",
+      "tipo_actor": "ONG internacional",
+      "trabajo_comunitario": "Sí",
+      "pais_origen": "",
+      "contacto": "Elder Mariano Pineda Cabrera",
+      "nombre_programa": "NICHIR",
+      "tipo_atencion": "Ambas (emergencia y desarrollo)",
+      "sector": [
+        "Salud",
+        "Seguridad alimentaria y nutricional",
+        "Agua y saneamiento",
+        "Ambiente y cambio climático",
+        "Desarrollo económico local",
+        "Infraestructura"
+      ],
+      "modalidad": [
+        "Mixta"
+      ],
+      "fecha_inicio": "2025-01-01",
+      "tipo_duracion": "Sí, tiene fecha de finalización definida",
+      "fecha_fin": "2026-12-31",
+      "duracion_aproximada": "",
+      "estado_programa": "Próximo a finalizar",
+      "contraparte_gubernamental": "no",
+      "monto_rango": "Q500,000 – Q2,000,000",
+      "monto_rango_codigo": "500k_2m",
+      "fuente_financiamiento": [
+        "Donante internacional"
+      ],
+      "espacios_coordinacion": [
+        "No participa"
+      ],
+      "disposicion_coordinar": "Tal vez / depende del caso",
+      "beneficiarios_institucionales": {
+        "Centros o puestos de salud": 1
+      },
+      "municipios_cobertura_institucional": [
+        "Chiquimula"
+      ],
+      "comunidades": [
+        {
+          "codigo_lugar": "chiquimula_chiquimula",
+          "lugar_poblado": "Chiquimula",
+          "municipio": "Chiquimula",
+          "clasificacion": "Ciudad",
+          "viviendas_catalogo": 9169,
+          "lat": 14.79442,
+          "lon": -89.54527,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Mujeres embarazadas y lactantes",
+            "Hogares con niñez menor de 5 años",
+            "Agricultores / productores"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres": null,
+            "Mujeres embarazadas y lactantes": null,
+            "Hogares con niñez menor de 5 años": null,
+            "Agricultores / productores": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Grupos de Auto Ahorro y Préstamo",
+            "Emprendimientos"
+          ],
+          "ac_cantidades": {
+            "Grupos de Auto Ahorro y Préstamo": 60,
+            "Emprendimientos": 20
+          },
+          "etnia": [
+            "Maya"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)"
+          ],
+          "area": "Rural"
+        }
+      ]
     }
   ],
   "municipios": [
@@ -675,21 +759,35 @@
     },
     "Chiquimula": {
       "organizaciones": [
-        "Asociación de Servicios y Desarrollo Socioeconómico de Chiquimula -ASEDECHI-"
+        "Asociación de Servicios y Desarrollo Socioeconómico de Chiquimula -ASEDECHI-",
+        "Asociación santiago Jocotán, ONG"
       ],
-      "total_programas": 1,
+      "total_programas": 2,
       "comunidades_cubiertas": 3,
       "comunidades_total_catalogo": 124,
       "inversion_estimada": 0,
       "sectores": {
-        "Desarrollo económico local": 1
+        "Desarrollo económico local": 2,
+        "Salud": 1,
+        "Seguridad alimentaria y nutricional": 1,
+        "Agua y saneamiento": 1,
+        "Ambiente y cambio climático": 1,
+        "Infraestructura": 1
       },
       "estado": {
-        "En ejecución": 1
+        "En ejecución": 1,
+        "Próximo a finalizar": 1
       },
-      "instituciones": {},
+      "instituciones": {
+        "Centros o puestos de salud": {
+          "registros": 1,
+          "cantidad": 1,
+          "con_cantidad": true
+        }
+      },
       "fuente_financiamiento": {
-        "Fondos propios": 1
+        "Fondos propios": 1,
+        "Donante internacional": 1
       },
       "lugares_adicionales_reportados": 0
     },
@@ -837,26 +935,37 @@
   },
   "matriz_sector_municipio": {
     "Desarrollo económico local": {
-      "Olopa": 1,
-      "Chiquimula": 1,
       "Jocotán": 3,
+      "Olopa": 1,
+      "Chiquimula": 2,
       "Camotán": 2
     },
     "Seguridad alimentaria y nutricional": {
+      "Jocotán": 2,
       "Camotán": 2,
-      "Jocotán": 2
+      "Chiquimula": 1
     },
     "Gobernanza y fortalecimiento institucional": {
-      "Camotán": 1,
-      "Jocotán": 1
+      "Jocotán": 1,
+      "Camotán": 1
     },
     "Ambiente y cambio climático": {
+      "Jocotán": 1,
       "Camotán": 1,
-      "Jocotán": 1
+      "Chiquimula": 1
     },
     "Género": {
-      "Camotán": 1,
-      "Jocotán": 1
+      "Jocotán": 1,
+      "Camotán": 1
+    },
+    "Salud": {
+      "Chiquimula": 1
+    },
+    "Agua y saneamiento": {
+      "Chiquimula": 1
+    },
+    "Infraestructura": {
+      "Chiquimula": 1
     }
   },
   "comunidades_sin_cobertura": [
@@ -6483,7 +6592,17 @@
     }
   ],
   "lugares_adicionales_reportados": [],
-  "duplicidad": [],
+  "duplicidad": [
+    {
+      "lugar_poblado": "Chiquimula",
+      "municipio": "Chiquimula",
+      "sector": "Desarrollo económico local",
+      "organizaciones": [
+        "Asociación de Servicios y Desarrollo Socioeconómico de Chiquimula -ASEDECHI-",
+        "Asociación santiago Jocotán, ONG"
+      ]
+    }
+  ],
   "instituciones_resumen": {
     "COMRED (Coordinadora Municipal para la Reducción de Desastres)": {
       "registros": 1,
@@ -6494,34 +6613,48 @@
       "registros": 1,
       "cantidad": 2,
       "con_cantidad": true
+    },
+    "Centros o puestos de salud": {
+      "registros": 1,
+      "cantidad": 1,
+      "con_cantidad": true
     }
   },
   "matriz_poblacion_accion": {
     "Mujeres": {
       "Otro": 3,
-      "Emprendimientos": 7,
+      "Emprendimientos": 8,
       "COLRED (Coordinadora Local para la Reducción de Desastres)": 6,
-      "Grupos de Auto Ahorro y Préstamo": 2,
+      "Grupos de Auto Ahorro y Préstamo": 3,
       "Cooperativas o asociaciones productivas": 1
     },
     "Agricultores / productores": {
       "Otro": 3,
-      "Emprendimientos": 6,
-      "COLRED (Coordinadora Local para la Reducción de Desastres)": 6
+      "Emprendimientos": 7,
+      "COLRED (Coordinadora Local para la Reducción de Desastres)": 6,
+      "Grupos de Auto Ahorro y Préstamo": 1
     },
     "Otro": {
       "Emprendimientos": 1,
       "COLRED (Coordinadora Local para la Reducción de Desastres)": 1
+    },
+    "Mujeres embarazadas y lactantes": {
+      "Grupos de Auto Ahorro y Préstamo": 1,
+      "Emprendimientos": 1
+    },
+    "Hogares con niñez menor de 5 años": {
+      "Grupos de Auto Ahorro y Préstamo": 1,
+      "Emprendimientos": 1
     }
   },
   "inversion": {
-    "programas_con_monto": 3,
+    "programas_con_monto": 4,
     "programas_sin_monto": 0,
     "nota_metodologica": "La inversión se conserva como rango reportado. No se calculan puntos medios ni se distribuyen montos entre municipios o sectores."
   },
   "control": {
-    "registros_kobo": 1,
-    "programas_procesados": 3,
+    "registros_kobo": 2,
+    "programas_procesados": 4,
     "lugares_catalogo": 996,
     "lugares_con_coordenadas": 816,
     "lugares_adicionales_reportados": 0
