@@ -443,6 +443,48 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
     <div class="card" style="margin-top:20px"><div class="side-title">Cobertura comunitaria registrada</div><div class="section-sub" id="sub-cobertura-organizacion"></div><div style="overflow-x:auto"><table id="tabla-comunidades-organizacion"><thead><tr><th>MUNICIPIO</th><th>LUGAR POBLADO</th><th>PROGRAMA / PROYECTO</th><th>POBLACIÓN META</th><th>ACCIÓN / CAPACIDAD</th></tr></thead><tbody></tbody></table></div></div>
   </section>
 
+
+  <!-- ===== VISTA: ARTICULACIÓN INSTITUCIONAL ===== -->
+  <section class="view" id="view-articulacion">
+    <div class="section-title">Articulación institucional</div>
+    <div class="section-sub">Vinculación reportada por las organizaciones con espacios de coordinación. Esta vista no implica membresía formal ni participación permanente.</div>
+
+    <div class="filters" style="margin-top:14px;">
+      <label>CONSULTA</label>
+      <select id="art-espacio"><option value="">Espacio: todos</option></select>
+      <select id="art-organizacion"><option value="">Organización: todas</option></select>
+      <select id="art-municipio"><option value="">Municipio: todos</option></select>
+      <select id="art-programa"><option value="">Programa/proyecto: todos</option></select>
+      <button class="clear-btn" onclick="limpiarFiltrosArticulacion()">Limpiar filtros</button>
+    </div>
+
+    <div class="coverage-kpis" id="art-kpis" style="margin-bottom:18px;"></div>
+
+    <div class="card" style="margin-bottom:20px;">
+      <div class="section-title">Espacios de coordinación reportados</div>
+      <div class="section-sub">Resumen de organizaciones y programas/proyectos vinculados a cada espacio según la información reportada.</div>
+      <table id="tabla-art-espacios">
+        <thead><tr><th>ESPACIO DE COORDINACIÓN</th><th>ORGANIZACIONES</th><th>PROGRAMAS / PROYECTOS</th><th>MUNICIPIOS RELACIONADOS</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="card" style="margin-bottom:20px;">
+      <div class="section-title">Matriz Espacio × Organización</div>
+      <div class="section-sub">El valor indica cuántos programas/proyectos de la organización reportan vinculación con el espacio.</div>
+      <div style="overflow-x:auto;"><table id="tabla-art-matriz"></table></div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Detalle de articulación reportada</div>
+      <div class="section-sub">La relación territorial se deriva de la cobertura comunitaria e institucional/municipal reportada por cada programa/proyecto.</div>
+      <table id="tabla-art-detalle">
+        <thead><tr><th>ESPACIO</th><th>ORGANIZACIÓN</th><th>PROGRAMA / PROYECTO</th><th>MUNICIPIOS RELACIONADOS</th><th>SECTOR</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
   <!-- ===== VISTA: POBLACIÓN × ACCIÓN ===== -->
   <section class="view" id="view-poblacion-accion">
     <div class="section-title">Población × Acción</div>
@@ -527,6 +569,7 @@ const VISTAS = [
   {id:'matriz', label:'Matriz Sector × Municipio'},
   {id:'brechas', label:'Brechas'},
   {id:'instituciones', label:'Instituciones'},
+  {id:'articulacion', label:'Articulación institucional'},
   {id:'poblacion-accion', label:'Población × Acción'},
   {id:'programas', label:'Programas'},
 ];
@@ -548,6 +591,7 @@ function mostrarVista(id){
   if(id==='matriz') renderMatriz();
   if(id==='brechas') renderBrechas();
   if(id==='instituciones'){ renderInstituciones(); setTimeout(()=>{ if(orgMap) orgMap.invalidateSize(); renderOrganizacion(); },80); }
+  if(id==='articulacion') renderArticulacion();
   if(id==='poblacion-accion'){ setTimeout(()=>{ renderPoblacionAccion(); if(paMap) paMap.invalidateSize(); },80); }
   if(id==='programas') renderProgramas();
 }
@@ -1720,6 +1764,116 @@ function renderOrganizacion(){
 
 function renderInstituciones(){ poblarSelectorOrganizacion(); }
 
+
+function municipiosProgramaArticulacion(p){
+  return [...new Set([
+    ...(p.comunidades||[]).map(c=>c.municipio),
+    ...(p.municipios_cobertura_institucional||[])
+  ].filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es'));
+}
+
+function registrosArticulacion(){
+  const filas=[];
+  (DATA.programas||[]).forEach(p=>{
+    const espacios=[...new Set((p.espacios_coordinacion||[]).filter(Boolean))];
+    const municipios=municipiosProgramaArticulacion(p);
+    espacios.forEach(espacio=>filas.push({
+      espacio,
+      organizacion:p.organizacion||'—',
+      programa:p.nombre_programa||'—',
+      municipios,
+      sectores:(p.sector||[]).filter(Boolean)
+    }));
+  });
+  return filas;
+}
+
+function poblarFiltrosArticulacion(){
+  const filas=registrosArticulacion();
+  const specs=[
+    ['art-espacio',[...new Set(filas.map(x=>x.espacio))]],
+    ['art-organizacion',[...new Set(filas.map(x=>x.organizacion))]],
+    ['art-municipio',[...new Set(filas.flatMap(x=>x.municipios))]],
+    ['art-programa',[...new Set(filas.map(x=>x.programa))]]
+  ];
+  specs.forEach(([id,vals])=>{
+    const sel=document.getElementById(id);
+    if(!sel || sel.dataset.loaded==='1') return;
+    vals.filter(Boolean).sort((a,b)=>a.localeCompare(b,'es')).forEach(v=>sel.add(new Option(v,v)));
+    sel.dataset.loaded='1';
+    sel.onchange=renderArticulacion;
+  });
+}
+
+function limpiarFiltrosArticulacion(){
+  ['art-espacio','art-organizacion','art-municipio','art-programa'].forEach(id=>{
+    const el=document.getElementById(id); if(el) el.value='';
+  });
+  renderArticulacion();
+}
+
+function renderArticulacion(){
+  poblarFiltrosArticulacion();
+  const espacio=document.getElementById('art-espacio')?.value||'';
+  const org=document.getElementById('art-organizacion')?.value||'';
+  const muni=document.getElementById('art-municipio')?.value||'';
+  const prog=document.getElementById('art-programa')?.value||'';
+
+  const filas=registrosArticulacion().filter(x=>
+    (!espacio||x.espacio===espacio) &&
+    (!org||x.organizacion===org) &&
+    (!muni||x.municipios.includes(muni)) &&
+    (!prog||x.programa===prog)
+  );
+
+  const espacios=[...new Set(filas.map(x=>x.espacio))];
+  const orgs=[...new Set(filas.map(x=>x.organizacion))];
+  const progs=[...new Set(filas.map(x=>x.programa))];
+  const munis=[...new Set(filas.flatMap(x=>x.municipios))];
+
+  document.getElementById('art-kpis').innerHTML=`
+    <div class="coverage-kpi"><div class="klabel">Organizaciones vinculadas</div><div class="kvalue">${orgs.length}</div><div class="ksub">Según vinculación reportada</div></div>
+    <div class="coverage-kpi"><div class="klabel">Espacios de coordinación</div><div class="kvalue">${espacios.length}</div><div class="ksub">Espacios reportados</div></div>
+    <div class="coverage-kpi"><div class="klabel">Programas / proyectos</div><div class="kvalue">${progs.length}</div><div class="ksub">Con articulación reportada</div></div>
+    <div class="coverage-kpi"><div class="klabel">Municipios relacionados</div><div class="kvalue">${munis.length}</div><div class="ksub">Derivados de la cobertura reportada</div></div>`;
+
+  const resumen=new Map();
+  filas.forEach(x=>{
+    if(!resumen.has(x.espacio)) resumen.set(x.espacio,{orgs:new Set(),progs:new Set(),munis:new Set()});
+    const d=resumen.get(x.espacio);
+    d.orgs.add(x.organizacion); d.progs.add(x.programa); x.municipios.forEach(m=>d.munis.add(m));
+  });
+  document.querySelector('#tabla-art-espacios tbody').innerHTML=[...resumen.entries()]
+    .sort((a,b)=>a[0].localeCompare(b[0],'es'))
+    .map(([e,d])=>`<tr><td><b>${escaparHtml(e)}</b></td><td>${d.orgs.size}</td><td>${d.progs.size}</td><td>${escaparHtml([...d.munis].sort((a,b)=>a.localeCompare(b,'es')).join(', ')||'—')}</td></tr>`)
+    .join('') || '<tr><td colspan="4" class="empty">No hay vinculaciones reportadas para esta consulta.</td></tr>';
+
+  const orgCols=[...new Set(filas.map(x=>x.organizacion))].sort((a,b)=>a.localeCompare(b,'es'));
+  const espRows=[...new Set(filas.map(x=>x.espacio))].sort((a,b)=>a.localeCompare(b,'es'));
+  const counts={};
+  filas.forEach(x=>{
+    const k=x.espacio+'|||'+x.organizacion;
+    if(!counts[k]) counts[k]=new Set();
+    counts[k].add(x.programa);
+  });
+  let matriz='<thead><tr><th>ESPACIO DE COORDINACIÓN</th>'+orgCols.map(o=>`<th>${escaparHtml(o)}</th>`).join('')+'<th>ORGANIZACIONES VINCULADAS</th></tr></thead><tbody>';
+  matriz+=espRows.map(e=>{
+    let n=0;
+    const cells=orgCols.map(o=>{
+      const v=counts[e+'|||'+o]?.size||0; if(v>0)n++;
+      return `<td class="${v===0?'zero':''}">${v}</td>`;
+    }).join('');
+    return `<tr><td class="rowhead">${escaparHtml(e)}</td>${cells}<td style="font-weight:700">${n}</td></tr>`;
+  }).join('');
+  matriz+='</tbody>';
+  document.getElementById('tabla-art-matriz').innerHTML=espRows.length?matriz:'<tbody><tr><td class="empty">No hay datos para construir la matriz.</td></tr></tbody>';
+
+  document.querySelector('#tabla-art-detalle tbody').innerHTML=filas
+    .sort((a,b)=>a.espacio.localeCompare(b.espacio,'es')||a.organizacion.localeCompare(b.organizacion,'es'))
+    .map(x=>`<tr><td><b>${escaparHtml(x.espacio)}</b></td><td>${escaparHtml(x.organizacion)}</td><td>${escaparHtml(x.programa)}</td><td>${escaparHtml(x.municipios.join(', ')||'—')}</td><td>${escaparHtml(x.sectores.join(', ')||'—')}</td></tr>`)
+    .join('') || '<tr><td colspan="5" class="empty">No hay vinculaciones reportadas para esta consulta.</td></tr>';
+}
+
 let paMap=null, paLayer=null, paBoundaryLayer=null;
 
 function valorCantidadPA(c, grupo){
@@ -1966,7 +2120,7 @@ async function iniciar(){
   poblarSelects();
   poblarSelectorMunicipio();
   renderMapaYStats();
-  [renderInversion,renderMatriz,renderBrechas,renderInstituciones,renderPoblacionAccion,renderProgramas].forEach(fn=>{
+  [renderInversion,renderMatriz,renderBrechas,renderInstituciones,renderArticulacion,renderPoblacionAccion,renderProgramas].forEach(fn=>{
     try{ fn(); }catch(err){ console.error('Error al inicializar vista', fn.name, err); }
   });
 }
