@@ -390,15 +390,20 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
         <div>
           <label style="font-size:11px;color:#52616F">MUNICIPIO</label>
           <select id="brechas-municipio" onchange="renderBrechas()"><option value="">Todos los municipios</option></select>
+          <select id="brechas-estado" onchange="renderBrechas()" style="margin-top:8px;">
+            <option value="">Estado: todos</option>
+            <option value="con">Con atención registrada</option>
+            <option value="sin">Sin atención registrada</option>
+          </select>
         </div>
-        <div class="method-note"><b>Nota metodológica</b><br>“Sin presencia comunitaria registrada” significa únicamente que, con la información reportada actualmente en el mapeo, no se identificó una intervención comunitaria en ese lugar poblado. <b>No confirma por sí sola una brecha de atención.</b></div>
+        <div class="method-note"><b>Nota metodológica</b><br>“Sin atención registrada” significa únicamente que, con la información reportada actualmente en el mapeo, no se identificó una intervención comunitaria en ese lugar poblado. <b>No confirma por sí sola una brecha de atención.</b> La intensidad se expresa por organizaciones y programas/proyectos registrados, no por personas únicas atendidas.</div>
       </div>
     </div>
 
     <div class="card" style="margin-bottom:20px;">
-      <div class="section-title">Lugares poblados sin presencia comunitaria registrada</div>
+      <div class="section-title">Estado de cobertura registrada por lugar poblado</div>
       <div class="section-sub" id="brechas-descripcion"></div>
-      <table id="tabla-sin-cobertura"><thead><tr><th>MUNICIPIO</th><th>LUGAR POBLADO</th><th>GEORREFERENCIADO</th><th>SITUACIÓN COMUNITARIA</th></tr></thead><tbody></tbody></table>
+      <table id="tabla-sin-cobertura"><thead><tr><th>MUNICIPIO</th><th>LUGAR POBLADO</th><th>GEORREFERENCIADO</th><th>ESTADO DE COBERTURA REGISTRADA</th><th>INTENSIDAD REGISTRADA</th></tr></thead><tbody></tbody></table>
     </div>
 
     <div class="card" style="margin-bottom:20px;">
@@ -1371,13 +1376,43 @@ function renderBrechas(){
     <div class="coverage-kpi"><div class="klabel">Lugares adicionales reportados</div><div class="kvalue">${adicionales.length.toLocaleString('es-GT')}</div><div class="ksub">Pendientes de validación; no modifican el catálogo</div></div>`;
 
   document.getElementById('brechas-descripcion').textContent=
-    `${sinPresencia.length.toLocaleString('es-GT')} de ${catalogo.length.toLocaleString('es-GT')} lugares poblados ${municipio?'de '+municipio:'del departamento'} no tienen presencia comunitaria registrada en la información reportada actualmente. Los lugares adicionales se muestran por separado y no alteran este denominador.`;
+    `${conPresencia.length.toLocaleString('es-GT')} de ${catalogo.length.toLocaleString('es-GT')} lugares poblados ${municipio?'de '+municipio:'del departamento'} tienen atención comunitaria registrada en el mapeo; ${sinPresencia.length.toLocaleString('es-GT')} no tienen atención registrada. Los lugares adicionales se muestran por separado y no alteran este denominador.`;
+
+  // Conteo de intensidad por lugar: organizaciones y programas/proyectos únicos.
+  const intensidadPorLugar=new Map();
+  (DATA.programas||[]).forEach(p=>{
+    (p.comunidades||[]).forEach(c=>{
+      if(!c.codigo_lugar || c.fuera_catalogo) return;
+      if(!intensidadPorLugar.has(c.codigo_lugar)){
+        intensidadPorLugar.set(c.codigo_lugar,{organizaciones:new Set(),programas:new Set()});
+      }
+      const d=intensidadPorLugar.get(c.codigo_lugar);
+      if(p.organizacion) d.organizaciones.add(p.organizacion);
+      if(p.nombre_programa) d.programas.add(p.nombre_programa);
+    });
+  });
+
+  const estadoCobertura=document.getElementById('brechas-estado')?.value||'';
+  const filasCobertura=catalogo.filter(x=>{
+    const tiene=presenciaCatalogo.has(x.codigo);
+    return !estadoCobertura || (estadoCobertura==='con' ? tiene : !tiene);
+  });
 
   const tbSin=document.querySelector('#tabla-sin-cobertura tbody');
-  tbSin.innerHTML=sinPresencia.map(x=>{
+  tbSin.innerHTML=filasCobertura.map(x=>{
     const geo=x.lat!==null && x.lat!==undefined && x.lon!==null && x.lon!==undefined && Number.isFinite(Number(x.lat)) && Number.isFinite(Number(x.lon));
-    return `<tr><td>${escaparHtml(x.municipio)}</td><td>${escaparHtml(x.lugar)}</td><td><span class="coverage-status ${geo?'yes':''}">${geo?'Sí':'No'}</span></td><td><span class="coverage-status">Sin presencia comunitaria registrada</span></td></tr>`;
-  }).join('') || '<tr><td colspan="4" class="empty">Todos los lugares del catálogo consultado tienen presencia comunitaria registrada.</td></tr>';
+    const tiene=presenciaCatalogo.has(x.codigo);
+    const d=intensidadPorLugar.get(x.codigo);
+    const nOrg=d?d.organizaciones.size:0;
+    const nProg=d?d.programas.size:0;
+    const estado=tiene
+      ? '<span class="coverage-status yes">Con atención registrada</span>'
+      : '<span class="coverage-status">Sin atención registrada</span>';
+    const intensidad=tiene
+      ? `${nOrg} organización(es) · ${nProg} programa(s)/proyecto(s)`
+      : '—';
+    return `<tr><td>${escaparHtml(x.municipio)}</td><td>${escaparHtml(x.lugar)}</td><td><span class="coverage-status ${geo?'yes':''}">${geo?'Sí':'No'}</span></td><td>${estado}</td><td>${escaparHtml(intensidad)}</td></tr>`;
+  }).join('') || '<tr><td colspan="5" class="empty">No hay lugares que coincidan con el estado seleccionado.</td></tr>';
 
   const tbAd=document.querySelector('#tabla-lugares-adicionales tbody');
   tbAd.innerHTML=adicionales.length ? adicionales.map(a=>{
