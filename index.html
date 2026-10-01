@@ -453,6 +453,7 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
     <div class="filters" style="margin-top:14px;">
       <label>CONSULTA</label>
       <select id="art-espacio"><option value="">Espacio: todos</option></select>
+      <select id="art-contraparte"><option value="">Contraparte / aliado: todos</option></select>
       <select id="art-organizacion"><option value="">Organización: todas</option></select>
       <select id="art-municipio"><option value="">Municipio: todos</option></select>
       <select id="art-programa"><option value="">Programa/proyecto: todos</option></select>
@@ -471,6 +472,21 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
     </div>
 
     <div class="card" style="margin-bottom:20px;">
+      <div class="section-title">Contrapartes y aliados estratégicos reportados</div>
+      <div class="section-sub">Responde a “¿con quién se articula?”. Se conserva la contraparte o aliado tal como fue reportado por cada programa/proyecto.</div>
+      <table id="tabla-art-contrapartes">
+        <thead><tr><th>CONTRAPARTE / ALIADO</th><th>ORGANIZACIONES QUE REPORTAN VÍNCULO</th><th>PROGRAMAS / PROYECTOS</th><th>ESPACIOS DE COORDINACIÓN RELACIONADOS</th><th>MUNICIPIOS RELACIONADOS</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="card" style="margin-bottom:20px;">
+      <div class="section-title">Matriz Organización × Contraparte / aliado</div>
+      <div class="section-sub">El valor indica cuántos programas/proyectos de cada organización reportan esa contraparte o aliado estratégico.</div>
+      <div style="overflow-x:auto;"><table id="tabla-art-matriz-contrapartes"></table></div>
+    </div>
+
+    <div class="card" style="margin-bottom:20px;">
       <div class="section-title">Matriz Espacio × Organización</div>
       <div class="section-sub">El valor indica cuántos programas/proyectos de la organización reportan vinculación con el espacio.</div>
       <div style="overflow-x:auto;"><table id="tabla-art-matriz"></table></div>
@@ -480,7 +496,7 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
       <div class="section-title">Detalle de articulación reportada</div>
       <div class="section-sub">La relación territorial se deriva de la cobertura comunitaria e institucional/municipal reportada por cada programa/proyecto.</div>
       <table id="tabla-art-detalle">
-        <thead><tr><th>ESPACIO</th><th>ORGANIZACIÓN</th><th>PROGRAMA / PROYECTO</th><th>MUNICIPIOS RELACIONADOS</th><th>SECTOR</th></tr></thead>
+        <thead><tr><th>CONTRAPARTE / ALIADO</th><th>ESPACIO</th><th>ORGANIZACIÓN</th><th>PROGRAMA / PROYECTO</th><th>MUNICIPIOS RELACIONADOS</th><th>SECTOR</th></tr></thead>
         <tbody></tbody>
       </table>
     </div>
@@ -639,6 +655,7 @@ function normalizarPresentacionData(data){
     p.sector=arr(p.sector);
     p.modalidad=arr(p.modalidad);
     p.fuente_financiamiento=arr(p.fuente_financiamiento);
+    p.contraparte_gubernamental=textoUniforme(p.contraparte_gubernamental);
     p.espacios_coordinacion=arr(p.espacios_coordinacion);
     p.municipios_cobertura_institucional=arr(p.municipios_cobertura_institucional);
     (p.comunidades||[]).forEach(c=>{
@@ -1832,14 +1849,22 @@ function registrosArticulacion(){
   const filas=[];
   (DATA.programas||[]).forEach(p=>{
     const espacios=[...new Set((p.espacios_coordinacion||[]).filter(Boolean))];
+    const contraparte=(p.contraparte_gubernamental||'').trim();
     const municipios=municipiosProgramaArticulacion(p);
-    espacios.forEach(espacio=>filas.push({
-      espacio,
+    const base={
+      contraparte,
       organizacion:p.organizacion||'—',
       programa:p.nombre_programa||'—',
       municipios,
       sectores:(p.sector||[]).filter(Boolean)
-    }));
+    };
+    // Una fila por espacio. Si no hay espacio, se conserva el programa para poder
+    // analizar la contraparte/aliado de manera independiente.
+    if(espacios.length){
+      espacios.forEach(espacio=>filas.push({...base,espacio}));
+    }else if(contraparte){
+      filas.push({...base,espacio:''});
+    }
   });
   return filas;
 }
@@ -1848,6 +1873,7 @@ function poblarFiltrosArticulacion(){
   const filas=registrosArticulacion();
   const specs=[
     ['art-espacio',[...new Set(filas.map(x=>x.espacio))]],
+    ['art-contraparte',[...new Set(filas.map(x=>x.contraparte))]],
     ['art-organizacion',[...new Set(filas.map(x=>x.organizacion))]],
     ['art-municipio',[...new Set(filas.flatMap(x=>x.municipios))]],
     ['art-programa',[...new Set(filas.map(x=>x.programa))]]
@@ -1862,7 +1888,7 @@ function poblarFiltrosArticulacion(){
 }
 
 function limpiarFiltrosArticulacion(){
-  ['art-espacio','art-organizacion','art-municipio','art-programa'].forEach(id=>{
+  ['art-espacio','art-contraparte','art-organizacion','art-municipio','art-programa'].forEach(id=>{
     const el=document.getElementById(id); if(el) el.value='';
   });
   renderArticulacion();
@@ -1871,27 +1897,31 @@ function limpiarFiltrosArticulacion(){
 function renderArticulacion(){
   poblarFiltrosArticulacion();
   const espacio=document.getElementById('art-espacio')?.value||'';
+  const contraparte=document.getElementById('art-contraparte')?.value||'';
   const org=document.getElementById('art-organizacion')?.value||'';
   const muni=document.getElementById('art-municipio')?.value||'';
   const prog=document.getElementById('art-programa')?.value||'';
 
   const filas=registrosArticulacion().filter(x=>
     (!espacio||x.espacio===espacio) &&
+    (!contraparte||x.contraparte===contraparte) &&
     (!org||x.organizacion===org) &&
     (!muni||x.municipios.includes(muni)) &&
     (!prog||x.programa===prog)
   );
 
-  const espacios=[...new Set(filas.map(x=>x.espacio))];
+  const espacios=[...new Set(filas.map(x=>x.espacio).filter(Boolean))];
+  const contrapartes=[...new Set(filas.map(x=>x.contraparte).filter(Boolean))];
   const orgs=[...new Set(filas.map(x=>x.organizacion))];
   const progs=[...new Set(filas.map(x=>x.programa))];
   const munis=[...new Set(filas.flatMap(x=>x.municipios))];
 
   document.getElementById('art-kpis').innerHTML=`
     <div class="coverage-kpi"><div class="klabel">Organizaciones vinculadas</div><div class="kvalue">${orgs.length}</div><div class="ksub">Según vinculación reportada</div></div>
-    <div class="coverage-kpi"><div class="klabel">Espacios de coordinación</div><div class="kvalue">${espacios.length}</div><div class="ksub">Espacios reportados</div></div>
+    <div class="coverage-kpi"><div class="klabel">Contrapartes / aliados</div><div class="kvalue">${contrapartes.length}</div><div class="ksub">¿Con quién se articula?</div></div>
+    <div class="coverage-kpi"><div class="klabel">Espacios de coordinación</div><div class="kvalue">${espacios.length}</div><div class="ksub">¿Dónde coordina?</div></div>
     <div class="coverage-kpi"><div class="klabel">Programas / proyectos</div><div class="kvalue">${progs.length}</div><div class="ksub">Con articulación reportada</div></div>
-    <div class="coverage-kpi"><div class="klabel">Municipios relacionados</div><div class="kvalue">${munis.length}</div><div class="ksub">Derivados de la cobertura reportada</div></div>`;
+    <div class="coverage-kpi"><div class="klabel">Municipios relacionados</div><div class="kvalue">${munis.length}</div><div class="ksub">Cobertura de los proyectos</div></div>`;
 
   const resumen=new Map();
   filas.forEach(x=>{
@@ -1903,6 +1933,43 @@ function renderArticulacion(){
     .sort((a,b)=>a[0].localeCompare(b[0],'es'))
     .map(([e,d])=>`<tr><td><b>${escaparHtml(e)}</b></td><td>${d.orgs.size}</td><td>${d.progs.size}</td><td>${escaparHtml([...d.munis].sort((a,b)=>a.localeCompare(b,'es')).join(', ')||'—')}</td></tr>`)
     .join('') || '<tr><td colspan="4" class="empty">No hay vinculaciones reportadas para esta consulta.</td></tr>';
+
+  // Contrapartes / aliados: una lectura independiente de los espacios de coordinación.
+  const resumenContrapartes=new Map();
+  filas.filter(x=>x.contraparte).forEach(x=>{
+    if(!resumenContrapartes.has(x.contraparte)){
+      resumenContrapartes.set(x.contraparte,{orgs:new Set(),progs:new Set(),espacios:new Set(),munis:new Set()});
+    }
+    const d=resumenContrapartes.get(x.contraparte);
+    d.orgs.add(x.organizacion);
+    d.progs.add(x.organizacion+'|||'+x.programa);
+    if(x.espacio)d.espacios.add(x.espacio);
+    x.municipios.forEach(m=>d.munis.add(m));
+  });
+  document.querySelector('#tabla-art-contrapartes tbody').innerHTML=[...resumenContrapartes.entries()]
+    .sort((a,b)=>a[0].localeCompare(b[0],'es'))
+    .map(([c,d])=>`<tr><td><b>${escaparHtml(c)}</b></td><td>${d.orgs.size}</td><td>${d.progs.size}</td><td>${escaparHtml([...d.espacios].sort((a,b)=>a.localeCompare(b,'es')).join(', ')||'—')}</td><td>${escaparHtml([...d.munis].sort((a,b)=>a.localeCompare(b,'es')).join(', ')||'—')}</td></tr>`)
+    .join('') || '<tr><td colspan="5" class="empty">No hay contrapartes o aliados estratégicos reportados para esta consulta.</td></tr>';
+
+  const orgContrCols=[...new Set(filas.filter(x=>x.contraparte).map(x=>x.organizacion))].sort((a,b)=>a.localeCompare(b,'es'));
+  const contrapRows=[...new Set(filas.map(x=>x.contraparte).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es'));
+  const countsContr={};
+  filas.filter(x=>x.contraparte).forEach(x=>{
+    const k=x.contraparte+'|||'+x.organizacion;
+    if(!countsContr[k]) countsContr[k]=new Set();
+    countsContr[k].add(x.programa);
+  });
+  let matrizContr='<thead><tr><th>CONTRAPARTE / ALIADO</th>'+orgContrCols.map(o=>`<th>${escaparHtml(o)}</th>`).join('')+'<th>ORGANIZACIONES VINCULADAS</th></tr></thead><tbody>';
+  matrizContr+=contrapRows.map(c=>{
+    let n=0;
+    const cells=orgContrCols.map(o=>{
+      const v=countsContr[c+'|||'+o]?.size||0; if(v>0)n++;
+      return `<td class="${v===0?'zero':''}">${v}</td>`;
+    }).join('');
+    return `<tr><td class="rowhead">${escaparHtml(c)}</td>${cells}<td style="font-weight:700">${n}</td></tr>`;
+  }).join('');
+  matrizContr+='</tbody>';
+  document.getElementById('tabla-art-matriz-contrapartes').innerHTML=contrapRows.length?matrizContr:'<tbody><tr><td class="empty">No hay contrapartes reportadas para construir la matriz.</td></tr></tbody>';
 
   const orgCols=[...new Set(filas.map(x=>x.organizacion))].sort((a,b)=>a.localeCompare(b,'es'));
   const espRows=[...new Set(filas.map(x=>x.espacio))].sort((a,b)=>a.localeCompare(b,'es'));
@@ -1925,9 +1992,9 @@ function renderArticulacion(){
   document.getElementById('tabla-art-matriz').innerHTML=espRows.length?matriz:'<tbody><tr><td class="empty">No hay datos para construir la matriz.</td></tr></tbody>';
 
   document.querySelector('#tabla-art-detalle tbody').innerHTML=filas
-    .sort((a,b)=>a.espacio.localeCompare(b.espacio,'es')||a.organizacion.localeCompare(b.organizacion,'es'))
-    .map(x=>`<tr><td><b>${escaparHtml(x.espacio)}</b></td><td>${escaparHtml(x.organizacion)}</td><td>${escaparHtml(x.programa)}</td><td>${escaparHtml(x.municipios.join(', ')||'—')}</td><td>${escaparHtml(x.sectores.join(', ')||'—')}</td></tr>`)
-    .join('') || '<tr><td colspan="5" class="empty">No hay vinculaciones reportadas para esta consulta.</td></tr>';
+    .sort((a,b)=>(a.contraparte||'').localeCompare(b.contraparte||'','es')||(a.espacio||'').localeCompare(b.espacio||'','es')||a.organizacion.localeCompare(b.organizacion,'es'))
+    .map(x=>`<tr><td><b>${escaparHtml(x.contraparte||'No reportada')}</b></td><td>${escaparHtml(x.espacio||'No reportado')}</td><td>${escaparHtml(x.organizacion)}</td><td>${escaparHtml(x.programa)}</td><td>${escaparHtml(x.municipios.join(', ')||'—')}</td><td>${escaparHtml(x.sectores.join(', ')||'—')}</td></tr>`)
+    .join('') || '<tr><td colspan="6" class="empty">No hay vinculaciones reportadas para esta consulta.</td></tr>';
 }
 
 let paMap=null, paLayer=null, paBoundaryLayer=null;
