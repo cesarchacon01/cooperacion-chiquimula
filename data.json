@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-01T03:18:10.898546+00:00",
+  "generado": "2026-10-01T03:24:50.355613+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -935,28 +935,28 @@
   },
   "matriz_sector_municipio": {
     "Desarrollo económico local": {
-      "Chiquimula": 2,
       "Olopa": 1,
       "Jocotán": 3,
+      "Chiquimula": 2,
       "Camotán": 2
     },
     "Seguridad alimentaria y nutricional": {
-      "Camotán": 2,
       "Jocotán": 2,
+      "Camotán": 2,
       "Chiquimula": 1
     },
     "Gobernanza y fortalecimiento institucional": {
-      "Camotán": 1,
-      "Jocotán": 1
+      "Jocotán": 1,
+      "Camotán": 1
     },
     "Ambiente y cambio climático": {
-      "Camotán": 1,
       "Jocotán": 1,
+      "Camotán": 1,
       "Chiquimula": 1
     },
     "Género": {
-      "Camotán": 1,
-      "Jocotán": 1
+      "Jocotán": 1,
+      "Camotán": 1
     },
     "Salud": {
       "Chiquimula": 1
