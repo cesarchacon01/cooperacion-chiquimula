@@ -324,7 +324,7 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
   <!-- ===== VISTA: INVERSIÓN ===== -->
   <section class="view" id="view-inversion">
     <div class="section-title">Inversión reportada de la cooperación</div>
-    <div class="section-sub">Consulta de los montos o rangos de inversión tal como fueron reportados por cada programa/proyecto. No se calculan puntos medios ni se distribuyen montos entre municipios o sectores. “No reportada” significa únicamente que el registro no contiene un monto o rango de inversión.</div>
+    <div class="section-sub">Consulta de los montos o rangos de inversión tal como fueron reportados por cada programa/proyecto. El rango agregado suma límites inferiores y superiores identificables; no calcula puntos medios. La inversión se mantiene asociada al programa/proyecto y no se distribuye entre los municipios donde tiene presencia.</div>
 
     <div class="filters" style="margin-top:14px;">
       <span class="filter-label">FILTROS</span>
@@ -349,7 +349,7 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
       </div>
       <div class="card">
         <div class="side-title">Lectura territorial</div>
-        <div class="side-sub">Número de programas/proyectos con presencia registrada por municipio y situación del dato de inversión.</div>
+        <div class="side-sub">Programas/proyectos con presencia registrada por municipio y situación del dato de inversión. Los montos se reportan a nivel de programa/proyecto y no se asignan monetariamente a cada municipio.</div>
         <div id="inv-territorial"></div>
       </div>
     </div>
@@ -362,10 +362,11 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
       </div>
       <div class="card">
         <div class="side-title">Criterio de interpretación</div>
-        <div class="side-sub">Esta vista no presenta una inversión total departamental cuando los registros contienen rangos o datos no comparables.</div>
+        <div class="side-sub">El rango agregado es una suma de límites reportados, no una estimación puntual. Solo se agrega cuando el monto o rango puede interpretarse numéricamente.</div>
         <div class="inst-row"><span>Monto o rango reportado</span><span>Se muestra literalmente</span></div>
-        <div class="inst-row"><span>Rango de inversión</span><span>No se calcula punto medio</span></div>
-        <div class="inst-row"><span>Varios municipios/sectores</span><span>No se reparte el monto</span></div>
+        <div class="inst-row"><span>Rango agregado</span><span>Suma límites inferiores y superiores; no calcula punto medio</span></div>
+        <div class="inst-row"><span>Lectura por municipio</span><span>Muestra presencia de proyectos, no montos territoriales</span></div>
+        <div class="inst-row"><span>Varios municipios/sectores</span><span>El presupuesto del proyecto no se distribuye entre territorios</span></div>
         <div class="inst-row"><span>Sin dato financiero</span><span>No reportada</span></div>
       </div>
     </div>
@@ -1596,6 +1597,56 @@ function renderInversion(){
     return /(\ba\b|hasta|–|—| - |entre)/.test(x) && /\d/.test(x);
   };
 
+  const rangoNumerico = v => {
+    if(esNoReportada(v)) return null;
+    const s=String(v).trim();
+    // Extrae cifras monetarias conservando separadores de miles y decimales.
+    const nums=(s.match(/\d[\d.,]*/g)||[]).map(raw=>{
+      let x=raw.replace(/\s/g,'');
+      // En los datos del formulario se usa principalmente coma como miles.
+      if(x.includes(',') && x.includes('.')){
+        if(x.lastIndexOf('.')>x.lastIndexOf(',')) x=x.replace(/,/g,'');
+        else x=x.replace(/\./g,'').replace(',','.');
+      }else if(x.includes(',')){
+        const parts=x.split(',');
+        x=(parts.length>1 && parts[parts.length-1].length===3) ? parts.join('') : x.replace(',','.');
+      }else if((x.match(/\./g)||[]).length>1){
+        x=x.replace(/\./g,'');
+      }
+      const n=Number(x);
+      return Number.isFinite(n)?n:null;
+    }).filter(n=>n!==null);
+    if(!nums.length) return null;
+    if(nums.length===1) return {min:nums[0],max:nums[0]};
+    return {min:Math.min(nums[0],nums[1]),max:Math.max(nums[0],nums[1])};
+  };
+
+  const formatoQ = n => {
+    if(!Number.isFinite(n)) return '—';
+    if(n>=1000000){
+      const v=n/1000000;
+      return 'Q'+v.toLocaleString('es-GT',{minimumFractionDigits:v<10?1:0,maximumFractionDigits:2})+' M';
+    }
+    if(n>=1000){
+      const v=n/1000;
+      return 'Q'+v.toLocaleString('es-GT',{maximumFractionDigits:1})+' mil';
+    }
+    return 'Q'+n.toLocaleString('es-GT',{maximumFractionDigits:2});
+  };
+
+  const sumarRangos = lista => {
+    const rangos=lista.map(p=>rangoNumerico(inversionPrograma(p))).filter(Boolean);
+    if(!rangos.length) return null;
+    return {
+      min:rangos.reduce((a,r)=>a+r.min,0),
+      max:rangos.reduce((a,r)=>a+r.max,0),
+      registros:rangos.length
+    };
+  };
+
+  const textoRango = r => !r ? 'No calculable' :
+    (Math.abs(r.max-r.min)<0.000001 ? formatoQ(r.min) : `${formatoQ(r.min)} – ${formatoQ(r.max)}`);
+
   const poblar = (sel, vals, etiqueta) => {
     if(!sel || sel.dataset.ready==='1') return;
     [...new Set(vals.filter(Boolean))].sort((a,b)=>String(a).localeCompare(String(b),'es'))
@@ -1624,11 +1675,12 @@ function renderInversion(){
   const orgs = new Set(filtrados.map(p=>p.organizacion).filter(Boolean));
   const munis = new Set(filtrados.flatMap(municipiosPrograma));
 
+  const rangoAgregado=sumarRangos(filtrados);
   document.getElementById('stats-inversion').innerHTML = `
-    <div class="stat-card"><div class="label">Programas / proyectos</div><div class="value">${filtrados.length}</div></div>
-    <div class="stat-card"><div class="label">Con inversión reportada</div><div class="value">${conDato.length}</div></div>
-    <div class="stat-card"><div class="label">Sin inversión reportada</div><div class="value">${sinDato.length}</div></div>
-    <div class="stat-card"><div class="label">Municipios con presencia</div><div class="value">${munis.size}</div><div class="small">${orgs.size} organización${orgs.size===1?'':'es'}</div></div>
+    <div class="stat-card"><div class="label">Programas / proyectos</div><div class="value">${filtrados.length}</div><div class="small">${orgs.size} organización${orgs.size===1?'':'es'}</div></div>
+    <div class="stat-card"><div class="label">Rango de inversión reportada</div><div class="value" style="font-size:22px">${textoRango(rangoAgregado)}</div><div class="small">${rangoAgregado?rangoAgregado.registros:0} registro${rangoAgregado&&rangoAgregado.registros===1?'':'s'} agregable${rangoAgregado&&rangoAgregado.registros===1?'':'s'} · sin punto medio</div></div>
+    <div class="stat-card"><div class="label">Cobertura del dato</div><div class="value">${conDato.length} / ${filtrados.length}</div><div class="small">${sinDato.length} sin inversión reportada</div></div>
+    <div class="stat-card"><div class="label">Municipios con presencia</div><div class="value">${munis.size}</div><div class="small">Sin distribución monetaria por municipio</div></div>
   `;
 
   const tbody=document.querySelector('#tabla-inversion-programas tbody');
@@ -1648,21 +1700,25 @@ function renderInversion(){
   filtrados.forEach(p=>{
     const tiene=!esNoReportada(inversionPrograma(p));
     municipiosPrograma(p).forEach(m=>{
-      if(!porMuni[m]) porMuni[m]={programas:new Set(), con:0, sin:0};
-      porMuni[m].programas.add((p.organizacion||'')+'|'+(p.nombre_programa||''));
+      if(!porMuni[m]) porMuni[m]={programas:new Map(), con:0, sin:0};
+      const clave=(p.organizacion||'')+'|'+(p.nombre_programa||'');
+      porMuni[m].programas.set(clave,p);
       if(tiene) porMuni[m].con++; else porMuni[m].sin++;
     });
   });
   const territorial=Object.entries(porMuni).sort((a,b)=>b[1].programas.size-a[1].programas.size);
   document.getElementById('inv-territorial').innerHTML = territorial.length ? territorial.map(([m,v])=>`
-    <div class="inst-row"><span><b>${escaparHtml(m)}</b><br><span class="small">${v.programas.size} programa${v.programas.size===1?'':'s'}</span></span>
-    <span>${v.con} con dato · ${v.sin} sin dato</span></div>`).join('') :
+    <div class="inst-row" style="align-items:flex-start">
+      <span><b>${escaparHtml(m)}</b><br><span class="small">${v.programas.size} programa${v.programas.size===1?'':'s'} con presencia</span></span>
+      <span style="text-align:right">${v.con} con inversión reportada · ${v.sin} sin dato<br><span class="small">Sin asignación monetaria municipal</span></span>
+    </div>`).join('')+'<div class="side-sub" style="margin-top:12px;">La inversión se reporta a nivel de programa/proyecto. La presencia en un municipio no permite determinar qué parte del presupuesto corresponde específicamente a ese territorio.</div>' :
     '<div class="empty">Sin presencia territorial para esta consulta.</div>';
 
   const pct = filtrados.length ? Math.round((conDato.length/filtrados.length)*100) : 0;
   document.getElementById('inv-calidad').innerHTML = `
     <div class="inst-row"><span>Registros con dato de inversión</span><span><b>${conDato.length} de ${filtrados.length}</b> (${pct}%)</span></div>
     <div class="inst-row"><span>Registros con rango identificable</span><span>${conRango.length}</span></div>
+    <div class="inst-row"><span>Registros agregables numéricamente</span><span>${filtrados.filter(p=>rangoNumerico(inversionPrograma(p))).length}</span></div>
     <div class="inst-row"><span>Registros sin dato de inversión</span><span>${sinDato.length}</span></div>
     ${sinDato.length ? `<div class="side-sub" style="margin-top:12px;">Pendiente de completar: ${sinDato.map(p=>escaparHtml((p.organizacion||'—')+' · '+(p.nombre_programa||'—'))).join('; ')}</div>` : ''}
   `;
