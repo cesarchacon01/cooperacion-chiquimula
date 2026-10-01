@@ -398,7 +398,7 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
     <div class="card" style="margin-bottom:20px;">
       <div class="section-title">Lugares poblados sin presencia comunitaria registrada</div>
       <div class="section-sub" id="brechas-descripcion"></div>
-      <table id="tabla-sin-cobertura"><thead><tr><th>MUNICIPIO</th><th>LUGAR POBLADO</th><th>GEORREFERENCIADO</th><th>PRESENCIA INSTITUCIONAL EN EL MUNICIPIO</th></tr></thead><tbody></tbody></table>
+      <table id="tabla-sin-cobertura"><thead><tr><th>MUNICIPIO</th><th>LUGAR POBLADO</th><th>GEORREFERENCIADO</th><th>SITUACIÓN COMUNITARIA</th></tr></thead><tbody></tbody></table>
     </div>
 
     <div class="card" style="margin-bottom:20px;">
@@ -1359,7 +1359,7 @@ function renderBrechas(){
   const catalogo=catalogoCompleto.filter(x=>!municipio || x.municipio===municipio);
   const conPresencia=catalogo.filter(x=>presenciaCatalogo.has(x.codigo));
   const sinPresencia=catalogo.filter(x=>!presenciaCatalogo.has(x.codigo));
-  const georef=catalogo.filter(x=>Number.isFinite(Number(x.lat)) && Number.isFinite(Number(x.lon)));
+  const georef=catalogo.filter(x=>x.lat!==null && x.lat!==undefined && x.lon!==null && x.lon!==undefined && Number.isFinite(Number(x.lat)) && Number.isFinite(Number(x.lon)));
   const adicionales=(DATA.lugares_adicionales_reportados||[]).filter(x=>!municipio || x.municipio===municipio);
   const pct=catalogo.length?Math.round(conPresencia.length/catalogo.length*100):0;
 
@@ -1375,9 +1375,8 @@ function renderBrechas(){
 
   const tbSin=document.querySelector('#tabla-sin-cobertura tbody');
   tbSin.innerHTML=sinPresencia.map(x=>{
-    const geo=Number.isFinite(Number(x.lat)) && Number.isFinite(Number(x.lon));
-    const inst=institucional.has(x.municipio);
-    return `<tr><td>${escaparHtml(x.municipio)}</td><td>${escaparHtml(x.lugar)}</td><td><span class="coverage-status ${geo?'yes':''}">${geo?'Sí':'No'}</span></td><td><span class="coverage-status ${inst?'yes':''}">${inst?'Sí':'No reportada'}</span></td></tr>`;
+    const geo=x.lat!==null && x.lat!==undefined && x.lon!==null && x.lon!==undefined && Number.isFinite(Number(x.lat)) && Number.isFinite(Number(x.lon));
+    return `<tr><td>${escaparHtml(x.municipio)}</td><td>${escaparHtml(x.lugar)}</td><td><span class="coverage-status ${geo?'yes':''}">${geo?'Sí':'No'}</span></td><td><span class="coverage-status">Sin presencia comunitaria registrada</span></td></tr>`;
   }).join('') || '<tr><td colspan="4" class="empty">Todos los lugares del catálogo consultado tienen presencia comunitaria registrada.</td></tr>';
 
   const tbAd=document.querySelector('#tabla-lugares-adicionales tbody');
