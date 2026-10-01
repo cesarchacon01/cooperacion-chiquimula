@@ -918,11 +918,33 @@ async function cargarLimitesMunicipales(){
         click:(e)=>{
           if(e?.target?.closeTooltip) e.target.closeTooltip();
           map.closeTooltip();
-          const sel=document.getElementById('territorio-municipio');
-          if(sel && [...sel.options].some(o=>o.value===nombre)){
-            sel.value=nombre;
-            actualizarLugaresTerritoriales();
-            renderMapa();
+
+          // El clic sobre un municipio inicia una consulta territorial limpia:
+          // conserva únicamente el municipio seleccionado y restablece los
+          // filtros generales para mostrar toda la cooperación registrada allí.
+          Object.keys(filtros).forEach(k=>filtros[k]='');
+          ['f-sector','f-atencion','f-actor','f-estado','f-municipio'].forEach(id=>{
+            const control=document.getElementById(id);
+            if(control) control.value='';
+          });
+
+          const tm=document.getElementById('t-municipio');
+          const tl=document.getElementById('t-lugar');
+          if(tm && [...tm.options].some(o=>o.value===nombre)){
+            tm.value=nombre;
+
+            // Reinicia y repuebla el selector de lugares del municipio.
+            if(tl){
+              tl.innerHTML='<option value="">Lugar poblado: todos</option>';
+              basePlaces
+                .filter(p=>p.municipio===nombre)
+                .sort((a,b)=>a.lugar.localeCompare(b.lugar,'es'))
+                .forEach(p=>tl.add(new Option(`${p.lugar} · ${p.clasificacion||'Lugar poblado'}`,p.codigo)));
+              tl.value='';
+              tl.disabled=false;
+            }
+
+            renderMapaYStats();
           }
         }
       });
