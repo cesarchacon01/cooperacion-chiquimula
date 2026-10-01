@@ -1897,6 +1897,14 @@ async function iniciar(){
 
   map = L.map('map').setView([14.75, -89.45], 10);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution:'&copy; OpenStreetMap contributors', maxZoom:18}).addTo(map);
+
+  // Pane propio para la cooperación. Algunos marcadores institucionales ya
+  // lo utilizan; debe existir antes de agregarlos al mapa.
+  if(!map.getPane('coopPane')){
+    map.createPane('coopPane');
+    map.getPane('coopPane').style.zIndex = 650;
+  }
+
   // Capas independientes: evita que limpiar una capa contenedora afecte
   // accidentalmente la visibilidad de cooperación o base territorial.
   markersLayer = null;
