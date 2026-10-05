@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-05T20:55:51.056944+00:00",
+  "generado": "2026-10-05T21:06:15.216179+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -308,7 +308,7 @@
           ],
           "ac_cantidades": {
             "Emprendimientos": 2,
-            "COLRED (Coordinadora Local para la Reducción de Desastres)": -2
+            "COLRED (Coordinadora Local para la Reducción de Desastres)": 2
           },
           "etnia": [
             "Ladino/Mestizo"
@@ -345,7 +345,7 @@
           ],
           "ac_cantidades": {
             "Emprendimientos": 1,
-            "COLRED (Coordinadora Local para la Reducción de Desastres)": -2
+            "COLRED (Coordinadora Local para la Reducción de Desastres)": 2
           },
           "etnia": [
             "Maya"
@@ -935,9 +935,9 @@
   },
   "matriz_sector_municipio": {
     "Desarrollo económico local": {
-      "Chiquimula": 2,
       "Jocotán": 3,
       "Olopa": 1,
+      "Chiquimula": 2,
       "Camotán": 2
     },
     "Seguridad alimentaria y nutricional": {
