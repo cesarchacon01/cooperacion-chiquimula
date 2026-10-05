@@ -294,6 +294,13 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
   .mapa-pantalla-completa{position:fixed!important;inset:0!important;width:100vw!important;height:100vh!important;
     z-index:10000!important;margin:0!important;border-radius:0!important}
   body.con-mapa-completo{overflow:hidden}
+  /* ===== Ancho uniforme para todas las vistas ===== */
+  main{max-width:1680px;width:100%;box-sizing:border-box;padding:24px clamp(14px,3vw,48px) 60px}
+  main:has(#view-instituciones.active){max-width:1680px;width:100%;padding-left:clamp(14px,3vw,48px);padding-right:clamp(14px,3vw,48px)}
+  #view-poblacion-accion{width:auto!important;max-width:none}
+  .view{min-width:0}
+  .card,.layout>*,.pa-main>*,.org-layout>*{min-width:0}
+  @media (max-width:640px){ table{max-width:100%} }
 </style>
 </head>
 <body>
@@ -2178,6 +2185,7 @@ function renderOrganizacion(){
   lugares.forEach(c=>{ if(Number.isFinite(Number(c.lat))&&Number.isFinite(Number(c.lon))){ const ll=[Number(c.lat),Number(c.lon)]; bounds.push(ll); const mk=L.circleMarker(ll,{radius:7.5,color:'#FFFFFF',fillColor:'#003058',fillOpacity:.96,weight:2.2}); mk.bindPopup(`<b>${c.lugar_poblado}</b><br>${c.municipio}<br><span style="color:#5B6672">Presencia comunitaria registrada</span>`); mk.addTo(orgCommunityLayer); }});
   // Para municipios con presencia institucional sin punto comunitario, usamos el centro promedio de los lugares georreferenciados del municipio solo como referencia cartográfica.
   [...munInst].forEach(m=>{ const pts=basePlaces.filter(x=>x.municipio===m&&Number.isFinite(Number(x.lat))&&Number.isFinite(Number(x.lon))); if(!pts.length)return; const lat=pts.reduce((a,x)=>a+Number(x.lat),0)/pts.length, lon=pts.reduce((a,x)=>a+Number(x.lon),0)/pts.length; const ll=[lat,lon]; bounds.push(ll); const mk=L.circleMarker(ll,{radius:8.5,color:'#B97824',fillColor:'#F1C47C',fillOpacity:.76,weight:2.2,dashArray:'4 3'}); mk.bindPopup(`<b>${m}</b><br>Presencia institucional / municipal reportada<br><span style="color:#5B6672">Marcador de referencia municipal; no representa una comunidad específica.</span>`); mk.addTo(orgInstitutionalLayer); });
+  orgMap.invalidateSize(); // medir el contenedor antes de encuadrar
   if(bounds.length) orgMap.fitBounds(bounds,{padding:[30,30],maxZoom:12}); else orgMap.setView([14.75,-89.45],9);
   document.getElementById('submap-organizacion').textContent=`${org}: ${lugares.size} lugares con presencia comunitaria; ${munInst.size} municipios con presencia institucional/municipal reportada.`;
   setTimeout(()=>orgMap.invalidateSize(),50);
@@ -2486,6 +2494,7 @@ function renderPoblacionAccion(){
     mk.bindPopup(`<b>${esc(x.lugar)}</b> (${esc(x.municipio)})<br><b>${orgSet.length}</b> organización(es)<br><br><b>Población:</b> ${popSet.map(esc).join(', ')}<br><b>Acción:</b> ${actSet.map(esc).join(', ')}`);
     mk.addTo(paLayer); bounds.push([x.lat,x.lon]);
   });
+  paMap.invalidateSize(); // medir el contenedor antes de encuadrar
   if(bounds.length) paMap.fitBounds(bounds,{padding:[35,35],maxZoom:12});
   else paMap.setView([14.75,-89.45],9);
   document.getElementById('pa-map-sub').textContent=`${Object.keys(porLugar).length} lugares georreferenciados cumplen la consulta.`;
