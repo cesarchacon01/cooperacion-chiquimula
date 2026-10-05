@@ -1312,10 +1312,16 @@ function agregarLimitesSecundarios(mapa){
       fillColor:'#FFFFFF',fillOpacity:.004,
       lineCap:'round',lineJoin:'round'
     },
-    onEachFeature:(f,l)=>l.bindTooltip(
-      f.properties?.nombre_1||'Municipio',
-      {sticky:true,direction:'center',className:'municipio-tip'}
-    )
+    onEachFeature:(f,l)=>{
+      l.bindTooltip(f.properties?.nombre_1||'Municipio',{sticky:true,direction:'center',className:'municipio-tip'});
+      // Mismo comportamiento que el mapa principal: resaltar al pasar el cursor
+      // y encuadrar el municipio con un clic.
+      l.on({
+        mouseover:e=>e.target.setStyle({color:'#1971A8',weight:2.5,opacity:1,fillColor:'#8FC1DF',fillOpacity:.20}),
+        mouseout:e=>capa.resetStyle(e.target),
+        click:e=>{ mapa.closeTooltip(); mapa.fitBounds(e.target.getBounds(),{padding:[25,25],maxZoom:12}); }
+      });
+    }
   }).addTo(mapa);
   return capa;
 }
@@ -1540,22 +1546,34 @@ function prepararMapaCalidad(mapa){
   const osm=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',
     {maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'});
 
-  claro.addTo(mapa); nombresClaro.addTo(mapa);
+  claro.addTo(mapa);
+  let baseActual=claro;
   const bases={'Claro':claro,'Relieve':relieve,'Satélite':satelite,'OpenStreetMap':osm};
   L.control.layers(bases,null,{position:'topright',collapsed:true}).addTo(mapa);
+  // Para no duplicar nombres (p. ej. la cabecera "Chiquimula" y el municipio CHIQUIMULA):
+  // en vista departamental se muestran solo los nombres de municipios del visor;
+  // al acercarse se ocultan y aparecen los nombres de aldeas y caseríos del mapa base.
+  const UMBRAL_DETALLE=10.75;
+  const actualizarNombres=()=>{
+    const detalle=mapa.getZoom()>=UMBRAL_DETALLE;
+    mapa.getContainer().classList.toggle('sin-etiquetas-muni', detalle || mapa.getZoom()<8.75);
+    const quiero = !detalle ? null : (baseActual===claro ? nombresClaro : (baseActual===satelite ? nombresSat : null));
+    [nombresClaro,nombresSat].forEach(l=>{
+      if(l===quiero){ if(!mapa.hasLayer(l)) l.addTo(mapa); }
+      else if(mapa.hasLayer(l)) mapa.removeLayer(l);
+    });
+  };
   mapa.on('baselayerchange',e=>{
-    [nombresClaro,nombresSat].forEach(l=>{ if(mapa.hasLayer(l)) mapa.removeLayer(l); });
-    if(e.layer===claro) nombresClaro.addTo(mapa);
-    if(e.layer===satelite) nombresSat.addTo(mapa);
+    baseActual=e.layer;
     mapa.getContainer().classList.toggle('fondo-oscuro', e.layer===satelite);
+    actualizarNombres();
   });
+  mapa.on('zoomend',actualizarNombres);
 
   L.control.scale({metric:true,imperial:false,position:'bottomright',maxWidth:120}).addTo(mapa);
   agregarControlPantallaCompleta(mapa);
 
-  // Las etiquetas de municipios se ocultan al alejarse demasiado.
-  const ajustarEtiquetas=()=>mapa.getContainer().classList.toggle('sin-etiquetas-muni', mapa.getZoom()<8.75);
-  mapa.on('zoomend',ajustarEtiquetas); ajustarEtiquetas();
+  actualizarNombres();
 }
 
 function agregarControlPantallaCompleta(mapa){
