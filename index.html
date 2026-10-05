@@ -205,6 +205,72 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
   .data-alert{max-width:760px;margin:60px auto;background:#fff;border:1px solid var(--gap-border);border-left:4px solid #B5462B;border-radius:12px;padding:22px 26px;color:var(--text);line-height:1.5}
   .data-alert h2{margin:0 0 8px;color:#7A3420;font-size:18px}
   .calidad-note{background:var(--warn-bg);border-bottom:1px solid var(--warn-border);color:var(--warn-text);font-size:12px;padding:7px 32px}
+  .cierre-card{background:#fff;border:1px solid #E8D9BC;border-left:4px solid #C9862B;border-radius:12px;padding:16px 20px;margin:0 0 18px}
+  .cierre-card.vacio{border-left-color:#C9CED4;border-color:#E2E5E8}
+  .cierre-card h3{margin:0 0 4px;font-size:15px;color:#6B4416}
+  .cierre-card.vacio h3{color:var(--muted)}
+  .cierre-card .cierre-sub{font-size:12px;color:var(--muted);margin-bottom:10px}
+  .cierre-item{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:9px 0;border-top:1px solid #F0EADF;font-size:13px}
+  .cierre-item:first-of-type{border-top:none}
+  .cierre-plazo{font-weight:700;color:#8A4F12}
+  .cierre-plazo.vencido{color:#9B2C2C}
+  .cierre-plazo small{display:block;font-weight:500;color:var(--muted);font-size:11px}
+  .cierre-det{color:var(--muted);font-size:12px;margin-top:2px}
+  .btn-imprimir{margin-left:auto;font-size:12px;font-weight:700;color:#fff;background:var(--navy);border:none;border-radius:8px;padding:8px 14px;cursor:pointer}
+  .solo-impresion{display:none}
+  @media print{
+    @page{size:letter;margin:14mm}
+    body.imprimir-ficha{background:#fff!important}
+    body.imprimir-ficha .top-accent, body.imprimir-ficha nav, body.imprimir-ficha .calidad-note,
+    body.imprimir-ficha .filters, body.imprimir-ficha .csv-btn, body.imprimir-ficha .btn-imprimir,
+    body.imprimir-ficha .view:not(#view-municipio){display:none!important}
+    body.imprimir-ficha #view-municipio{display:block!important}
+    body.imprimir-ficha .solo-impresion{display:block}
+    body.imprimir-ficha .layout{display:block}
+    body.imprimir-ficha .card, body.imprimir-ficha .stat-card, body.imprimir-ficha .cierre-card{box-shadow:none!important;break-inside:avoid;margin-bottom:10px}
+    body.imprimir-ficha table{font-size:10px}
+    body.imprimir-ficha *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+  /* ===== Pantallas pequeñas (celular) ===== */
+  @media (max-width:640px){
+    header{padding:10px 14px;gap:8px}
+    .brand{gap:10px}
+    .brand-logos{gap:8px}
+    .brand-logos .logo-segeplan,.brand-logos .logo-crs{height:32px;max-width:90px}
+    .brand-divider{height:28px}
+    .brand h1{font-size:15px;white-space:normal;line-height:1.2}
+    .brand p{font-size:11.5px}
+    .badge{font-size:10.5px;padding:4px 9px;border-radius:10px}
+    nav{padding:0 6px;scrollbar-width:none}
+    nav::-webkit-scrollbar{display:none}
+    nav button{padding:12px 11px;font-size:13px;white-space:nowrap;flex-shrink:0}
+    .calidad-note{padding:7px 14px}
+    main{padding:14px 12px 40px}
+    .section-title{font-size:17px}
+    .section-sub{font-size:12.5px}
+    .stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    .stat-card{padding:12px!important}
+    .stat-card .value{font-size:22px!important}
+    .stat-card .label{font-size:11px}
+    .card{padding:14px;border-radius:12px}
+    .filters{gap:8px}
+    .filters select,.filters input{flex:1 1 100%;min-width:0;font-size:14px}
+    .filters label{width:100%}
+    .btn-imprimir{margin-left:0;width:100%}
+    #map{height:420px}
+    #map-poblacion-accion{height:360px}
+    .org-map{height:340px!important}
+    table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;font-size:12.5px}
+    td{padding:9px 7px}
+    th{padding:0 7px 7px}
+    .csv-btn{float:none;display:block;margin:0 0 6px auto}
+    .coverage-kpis{grid-template-columns:1fr 1fr;gap:10px}
+    .cierre-item{grid-template-columns:1fr;gap:4px}
+    .leaflet-control-layers,.map-legend-control{font-size:11px;max-width:200px}
+  }
+  @media (max-width:380px){
+    .stats,.coverage-kpis{grid-template-columns:1fr}
+  }
 </style>
 </head>
 <body>
@@ -280,8 +346,11 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
     <div class="filters">
       <label>MUNICIPIO</label>
       <select id="f-municipio-panel"></select>
+      <button type="button" class="btn-imprimir" onclick="imprimirFichaMunicipal()">Imprimir ficha / guardar PDF</button>
     </div>
+    <div class="solo-impresion" id="ficha-encabezado-impresion" style="font-size:13px;color:#444;margin:4px 0 12px;"></div>
     <div class="stats" id="stats-municipio"></div>
+    <div id="cierre-municipio"></div>
     <div class="layout">
       <div class="card">
         <div class="side-title">Sectores de intervención</div>
@@ -377,13 +446,14 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
         <div class="inst-row"><span>Sin dato financiero</span><span>No reportada</span></div>
       </div>
     </div>
-  </section>
-
-  <!-- ===== VISTA: MATRIZ ===== -->
-  <section class="view" id="view-matriz">
-    <div class="section-title">Matriz Sector × Municipio</div>
-    <div class="section-sub">Cantidad de programas/proyectos registrados por sector en cada municipio. La última columna indica cuántos municipios tienen al menos una presencia registrada en ese sector; no suma programas entre municipios. Las celdas en cero indican ausencia de cooperación registrada en ese cruce, no necesariamente una brecha confirmada.</div>
-    <div class="matrix-wrap"><table class="matrix" id="tabla-matriz"></table></div>
+  
+    <div class="card" style="margin-top:22px;" id="bloque-programas">
+    <div class="section-title">Listado de programas y proyectos</div>
+    <div style="overflow-x:auto"><table id="tabla-programas">
+      <thead><tr><th>ORGANIZACIÓN</th><th>PROGRAMA</th><th>SECTOR(ES)</th><th>ESTADO</th><th>VIGENCIA</th><th>MUNICIPIOS</th></tr></thead>
+      <tbody></tbody>
+    </table></div>
+  </div>
   </section>
 
   <!-- ===== VISTA: COBERTURA / BRECHAS ===== -->
@@ -425,6 +495,12 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
       <div class="section-sub">Lugares donde más de una organización reporta trabajo en el mismo sector. La coincidencia no implica por sí sola duplicidad: puede reflejar complementariedad o coordinación.</div>
       <table id="tabla-duplicidad"><thead><tr><th>LUGAR POBLADO</th><th>MUNICIPIO</th><th>SECTOR</th><th>ORGANIZACIONES</th></tr></thead><tbody></tbody></table>
     </div>
+  
+    <div class="card" style="margin-top:22px;" id="bloque-matriz">
+    <div class="section-title" id="titulo-matriz">Matriz Sector × Municipio</div>
+    <div class="section-sub">Cantidad de programas/proyectos registrados por sector en cada municipio. La última columna indica cuántos municipios tienen al menos una presencia registrada en ese sector; no suma programas entre municipios. Las celdas en cero indican ausencia de cooperación registrada en ese cruce, no necesariamente una brecha confirmada.</div>
+    <div class="matrix-wrap"><table class="matrix" id="tabla-matriz"></table></div>
+  </div>
   </section>
 
   <!-- ===== VISTA: INSTITUCIONES / ORGANIZACIONES ===== -->
@@ -570,15 +646,6 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
     </div>
   </section>
 
-  <!-- ===== VISTA: PROGRAMAS ===== -->
-  <section class="view" id="view-programas">
-    <div class="section-title">Listado de programas y proyectos</div>
-    <table id="tabla-programas">
-      <thead><tr><th>ORGANIZACIÓN</th><th>PROGRAMA</th><th>SECTOR(ES)</th><th>ESTADO</th><th>VIGENCIA</th><th>MUNICIPIOS</th></tr></thead>
-      <tbody></tbody>
-    </table>
-  </section>
-
 </main>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -588,14 +655,12 @@ let map, markersLayer;
 
 const VISTAS = [
   {id:'mapa', label:'Mapa'},
-  {id:'municipio', label:'Por Municipio'},
-  {id:'inversion', label:'Inversión'},
-  {id:'matriz', label:'Matriz Sector × Municipio'},
-  {id:'brechas', label:'Cobertura'},
-  {id:'instituciones', label:'Instituciones'},
-  {id:'articulacion', label:'Articulación institucional'},
+  {id:'municipio', label:'Por municipio'},
+  {id:'instituciones', label:'Por organización'},
+  {id:'brechas', label:'Cobertura y sectores'},
+  {id:'inversion', label:'Programas e inversión'},
+  {id:'articulacion', label:'Articulación'},
   {id:'poblacion-accion', label:'Población × Acción'},
-  {id:'programas', label:'Programas'},
 ];
 
 function initNav(){
@@ -606,18 +671,23 @@ function initNav(){
   });
 }
 
+// Vistas fusionadas: se mantienen los identificadores antiguos por compatibilidad.
+const VISTA_ALIAS={matriz:'brechas', programas:'inversion'};
 function mostrarVista(id){
+  const ancla = id==='matriz' ? 'bloque-matriz' : (id==='programas' ? 'bloque-programas' : null);
+  id = VISTA_ALIAS[id] || id;
   document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
   document.getElementById('view-'+id).classList.add('active');
   document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active', b.dataset.view===id));
   if(id==='mapa' && map){ setTimeout(()=>map.invalidateSize(), 50); }
-  if(id==='inversion') renderInversion();
-  if(id==='matriz') renderMatriz();
-  if(id==='brechas') renderBrechas();
+  if(id==='inversion'){ renderInversion(); renderProgramas(); }
+  if(id==='brechas'){ renderBrechas(); renderMatriz(); }
   if(id==='instituciones'){ renderInstituciones(); setTimeout(()=>{ if(orgMap) orgMap.invalidateSize(); renderOrganizacion(); },80); }
   if(id==='articulacion') renderArticulacion();
   if(id==='poblacion-accion'){ setTimeout(()=>{ renderPoblacionAccion(); if(paMap) paMap.invalidateSize(); },80); }
-  if(id==='programas') renderProgramas();
+  const btnActivo=document.querySelector(`nav button[data-view="${id}"]`);
+  if(btnActivo && btnActivo.scrollIntoView) btnActivo.scrollIntoView({inline:'center',block:'nearest'});
+  if(ancla) setTimeout(()=>document.getElementById(ancla)?.scrollIntoView({behavior:'smooth'}),120);
 }
 
 const filtros = { sector:'', atencion:'', actor:'', estado:'', municipio:'' };
@@ -1488,11 +1558,16 @@ function renderBrechas(){
   const georef=catalogo.filter(x=>x.lat!==null && x.lat!==undefined && x.lon!==null && x.lon!==undefined && Number.isFinite(Number(x.lat)) && Number.isFinite(Number(x.lon)));
   const adicionales=(DATA.lugares_adicionales_reportados||[]).filter(x=>!municipio || x.municipio===municipio);
   const pct=catalogo.length?Math.round(conPresencia.length/catalogo.length*100):0;
+  const vivTotal=catalogo.reduce((a,x)=>a+(Number(x.viviendas)||0),0);
+  const vivCon=conPresencia.reduce((a,x)=>a+(Number(x.viviendas)||0),0);
+  const pctViv=vivTotal?(vivCon/vivTotal*100):0;
+  const pctVivTxt=pctViv>0&&pctViv<1?'<1':Math.round(pctViv);
 
   document.getElementById('brechas-kpis').innerHTML=`
     <div class="coverage-kpi"><div class="klabel">Lugares del catálogo</div><div class="kvalue">${catalogo.length.toLocaleString('es-GT')}</div><div class="ksub">${municipio||'Departamento de Chiquimula'}</div></div>
     <div class="coverage-kpi"><div class="klabel">Con presencia comunitaria registrada</div><div class="kvalue">${conPresencia.length.toLocaleString('es-GT')}</div><div class="ksub">${pct}% del catálogo consultado</div></div>
     <div class="coverage-kpi"><div class="klabel">Sin presencia comunitaria registrada</div><div class="kvalue">${sinPresencia.length.toLocaleString('es-GT')}</div><div class="ksub">No equivale automáticamente a brecha</div></div>
+    <div class="coverage-kpi"><div class="klabel">Viviendas en lugares con presencia</div><div class="kvalue">${pctVivTxt}%</div><div class="ksub">${vivCon.toLocaleString('es-GT')} de ${vivTotal.toLocaleString('es-GT')} viviendas del catálogo</div></div>
     <div class="coverage-kpi"><div class="klabel">Georreferenciados</div><div class="kvalue">${georef.length.toLocaleString('es-GT')}</div><div class="ksub">${catalogo.length-georef.length} sin coordenadas disponibles</div></div>
     <div class="coverage-kpi"><div class="klabel">Lugares adicionales reportados</div><div class="kvalue">${adicionales.length.toLocaleString('es-GT')}</div><div class="ksub">Pendientes de validación; no modifican el catálogo</div></div>`;
 
@@ -1574,6 +1649,7 @@ function renderMunicipio(){
     const institucional=(p.municipios_cobertura_institucional||[]).includes(m);
     return comunitaria || institucional;
   });
+  renderCierreMunicipio(m, programas);
   const comunidadesBase=basePlaces.filter(x=>x.municipio===m);
   const porComunidad={};
   const pob={}; const acciones={};
@@ -1641,6 +1717,70 @@ function renderMunicipio(){
   }).join(''):'<div class="empty">Sin fortalecimiento institucional reportado aquí.</div>';
   const fuenteEntries=Object.entries(r.fuente_financiamiento||{});
   document.getElementById('lista-fuente-municipio').innerHTML=fuenteEntries.length?fuenteEntries.map(([f,n])=>`<div class="inst-row"><span>${f}</span><span>${n}</span></div>`).join(''):'<div class="empty">Sin fuente de financiamiento reportada.</div>';
+}
+
+// ---- Cooperación que finaliza ----
+const MESES_ALERTA_CIERRE=12;
+function parseFecha(v){
+  if(!v) return null;
+  const d=new Date(String(v).slice(0,10)+'T00:00:00');
+  return isNaN(d) ? null : d;
+}
+function fechaCorta(d){ return d.toLocaleDateString('es-GT',{day:'2-digit',month:'short',year:'numeric'}); }
+function programasPorCerrar(programas){
+  const hoy=new Date(); hoy.setHours(0,0,0,0);
+  const limite=new Date(hoy); limite.setMonth(limite.getMonth()+MESES_ALERTA_CIERRE);
+  return programas.map(p=>{
+    const fin=parseFecha(p.fecha_fin);
+    const finalizado=/finalizado|suspendido/i.test(p.estado_programa||'');
+    if(finalizado) return null;
+    if(fin && fin<=limite){
+      const dias=Math.round((fin-hoy)/86400000);
+      return {p,fin,dias,vencido:dias<0};
+    }
+    if(!fin && /pr[oó]ximo a finalizar/i.test(p.estado_programa||'')) return {p,fin:null,dias:null,vencido:false};
+    return null;
+  }).filter(Boolean).sort((a,b)=>(a.dias??1e9)-(b.dias??1e9));
+}
+function textoPlazo(x){
+  if(x.dias===null) return 'Sin fecha<small>marcado como próximo a finalizar</small>';
+  if(x.vencido) return `Fecha vencida<small>${fechaCorta(x.fin)} · verificar estado</small>`;
+  const meses=Math.floor(x.dias/30.44);
+  const t=meses>=1 ? `${meses} mes${meses===1?'':'es'}` : `${x.dias} día${x.dias===1?'':'s'}`;
+  return `Faltan ${t}<small>cierra ${fechaCorta(x.fin)}</small>`;
+}
+function renderCierreMunicipio(m, programas){
+  const cont=document.getElementById('cierre-municipio'); if(!cont) return;
+  const lista=programasPorCerrar(programas);
+  if(!lista.length){
+    cont.innerHTML=`<div class="cierre-card vacio"><h3>Cooperación que finaliza</h3><div class="cierre-sub" style="margin:0">Ningún programa registrado en ${escaparHtml(m)} finaliza en los próximos ${MESES_ALERTA_CIERRE} meses.</div></div>`;
+    return;
+  }
+  cont.innerHTML=`<div class="cierre-card"><h3>Cooperación que finaliza en los próximos ${MESES_ALERTA_CIERRE} meses</h3>
+    <div class="cierre-sub">Útil para anticipar en la planificación municipal qué apoyos se retiran. Según la fecha de finalización reportada por cada organización.</div>
+    ${lista.map(x=>{
+      const p=x.p;
+      const lugares=(p.comunidades||[]).filter(c=>c.municipio===m).map(c=>c.lugar_poblado);
+      const inst=(p.municipios_cobertura_institucional||[]).includes(m) ? Object.keys(p.beneficiarios_institucionales||{}) : [];
+      const det=[
+        (p.sector||[]).length?'Sectores: '+p.sector.join(', '):'',
+        lugares.length?`Lugares: ${lugares.join(', ')}`:'',
+        inst.length?`Instituciones: ${inst.join(', ')}`:''
+      ].filter(Boolean).map(escaparHtml).join(' · ');
+      return `<div class="cierre-item"><div class="cierre-plazo ${x.vencido?'vencido':''}">${textoPlazo(x)}</div>
+        <div><b>${escaparHtml(p.organizacion)}</b> — ${escaparHtml(p.nombre_programa)}<div class="cierre-det">${det}</div></div></div>`;
+    }).join('')}</div>`;
+}
+function imprimirFichaMunicipal(){
+  const m=document.getElementById('f-municipio-panel').value;
+  const corte=DATA.generado?new Date(DATA.generado).toLocaleDateString('es-GT',{day:'2-digit',month:'long',year:'numeric'}):'';
+  document.getElementById('ficha-encabezado-impresion').innerHTML=
+    `<b style="font-size:18px;color:#1F3A5F">Municipio de ${escaparHtml(m)}</b><br>Datos del mapeo de actores de cooperación al ${escaparHtml(corte)}. La ausencia de registro no confirma ausencia de atención.`;
+  document.body.classList.add('imprimir-ficha');
+  const quitar=()=>{document.body.classList.remove('imprimir-ficha'); window.removeEventListener('afterprint',quitar);};
+  window.addEventListener('afterprint',quitar);
+  window.print();
+  setTimeout(quitar,1500);
 }
 
 function renderInversion(){
