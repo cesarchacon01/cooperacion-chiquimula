@@ -1514,7 +1514,7 @@ const OPCIONES_MAPA={zoomSnap:0.25, zoomDelta:0.5, wheelPxPerZoomLevel:90, zoomC
 // Todos los círculos de datos reciben una clase para sombra y realce al pasar el cursor.
 L.CircleMarker.mergeOptions({className:'mk'});
 
-const ATRIB_CARTO='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>';
+const ATRIB_GRIS='Teselas &copy; Esri — Esri, HERE, Garmin, &copy; OpenStreetMap';
 const ATRIB_ESRI='Teselas &copy; Esri — Fuentes: Esri, Maxar, USGS, comunidad de usuarios SIG';
 
 function prepararMapaCalidad(mapa){
@@ -1526,10 +1526,11 @@ function prepararMapaCalidad(mapa){
   mapa.getPane('etiquetasMuniPane').style.zIndex=610;
   mapa.getPane('etiquetasMuniPane').style.pointerEvents='none';
 
-  const claro=L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png',
-    {subdomains:'abcd',maxZoom:19,attribution:ATRIB_CARTO});
-  const nombresClaro=L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png',
-    {subdomains:'abcd',maxZoom:19,pane:'etiquetasBasePane',opacity:.9});
+  // Fondo gris claro de Esri: no requiere clave de acceso (CARTO ahora la exige).
+  const claro=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',
+    {maxZoom:19,maxNativeZoom:16,attribution:ATRIB_GRIS});
+  const nombresClaro=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}',
+    {maxZoom:19,maxNativeZoom:16,pane:'etiquetasBasePane',opacity:.85});
   const relieve=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',
     {maxZoom:19,attribution:ATRIB_ESRI});
   const satelite=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
