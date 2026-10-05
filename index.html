@@ -5,12 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mapeo de Actores de Cooperación — SEGEPLAN Chiquimula</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap">
 <style>
   :root{
     --navy:#003058; --navy-deep:#002040; --gold:#DFB26F; --gold-deep:#C99048;
     --bg:#F7F5F0; --card:#FFFFFF; --border:#E6E1D6;
     --text:#16232E; --muted:#5B6672;
-    --warn-bg:#FBF3E4; --warn-border:#E9D5A8; --warn-text:#5C3F0C;
+    --line:#E6E1D6; --warn-bg:#FBF3E4; --warn-border:#E9D5A8; --warn-text:#5C3F0C;
     --gap-bg:#FCE9E4; --gap-border:#EBB7A6; --gap-text:#7A3420;
   }
   *{box-sizing:border-box;}
@@ -76,7 +78,7 @@
   .matrix th, .matrix td{border:1px solid var(--border);padding:10px 14px;text-align:center;white-space:nowrap;}
   .matrix th{background:var(--navy);color:#fff;font-weight:600;}
   .matrix td.rowhead{background:#F0EEE7;font-weight:600;text-align:left;color:var(--navy);}
-  .matrix td.zero{background:var(--gap-bg);color:var(--gap-text);font-weight:700;}
+  .matrix td.zero{background:#F4F5F6;color:#9AA3AD;font-weight:500;}
   .section-title{font-size:19px;font-weight:700;color:var(--navy);margin:0 0 6px;}
   .section-sub{font-size:13px;color:var(--muted);margin:0 0 16px;}
   .pill-list{display:flex;flex-wrap:wrap;gap:6px;}
@@ -198,6 +200,11 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
   .coverage-status{display:inline-block;border-radius:12px;padding:3px 8px;font-size:10px;background:#F1F3F5;color:#4B5563}.coverage-status.yes{background:#EAF4EE;color:#2F6B45}
   @media(max-width:900px){.coverage-kpis{grid-template-columns:repeat(2,1fr)}.coverage-filter-row{grid-template-columns:1fr}}
 
+  .csv-btn{float:right;font-size:11px;font-weight:700;color:var(--navy);background:#fff;border:1px solid #D8DEE5;border-radius:8px;padding:5px 10px;cursor:pointer;margin:0 0 6px 8px}
+  .csv-btn:hover{background:#F4F7F9}
+  .data-alert{max-width:760px;margin:60px auto;background:#fff;border:1px solid var(--gap-border);border-left:4px solid #B5462B;border-radius:12px;padding:22px 26px;color:var(--text);line-height:1.5}
+  .data-alert h2{margin:0 0 8px;color:#7A3420;font-size:18px}
+  .calidad-note{background:var(--warn-bg);border-bottom:1px solid var(--warn-border);color:var(--warn-text);font-size:12px;padding:7px 32px}
 </style>
 </head>
 <body>
@@ -231,7 +238,7 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
       <select id="f-atencion"><option value="">Tipo de atención: todos</option></select>
       <select id="f-actor"><option value="">Tipo de actor: todos</option></select>
       <select id="f-estado"><option value="">Estado: todos</option></select>
-      <select id="f-municipio"><option value="">Municipio: todos</option></select>
+      <select id="f-municipio" style="display:none" aria-hidden="true"><option value="">Municipio: todos</option></select>
       <button class="clear-btn" onclick="limpiarFiltros()">Limpiar filtros</button>
     </div>
 
@@ -584,7 +591,7 @@ const VISTAS = [
   {id:'municipio', label:'Por Municipio'},
   {id:'inversion', label:'Inversión'},
   {id:'matriz', label:'Matriz Sector × Municipio'},
-  {id:'brechas', label:'Brechas'},
+  {id:'brechas', label:'Cobertura'},
   {id:'instituciones', label:'Instituciones'},
   {id:'articulacion', label:'Articulación institucional'},
   {id:'poblacion-accion', label:'Población × Acción'},
@@ -643,6 +650,32 @@ function textoUniforme(valor){
   return salida;
 }
 
+const CALIDAD={negativos:[]};
+
+// Las cantidades de "Otro" llegan con el texto especificado como clave (p. ej. "Comerciantes").
+// Se integran a la lista como "Otro: Comerciantes" para que no se pierdan en los conteos.
+// Los valores negativos se excluyen y se registran para su revisión en Kobo.
+function normalizarCantidades(obj, c, campoLista, p){
+  if(!obj || typeof obj!=='object') return {};
+  const lista=c[campoLista]||[];
+  const salida={};
+  Object.entries(obj).forEach(([k,v])=>{
+    let clave=textoUniforme(k);
+    if(!lista.includes(clave) && lista.includes('Otro')) clave='Otro: '+clave;
+    let n=v;
+    if(v!==null && v!=='' && Number.isFinite(Number(v)) && Number(v)<0){
+      CALIDAD.negativos.push(`${p.organizacion} · ${c.lugar_poblado} · ${k}: ${v}`);
+      n=null;
+    }
+    salida[clave]=n;
+    if(!lista.includes(clave)) lista.push(clave);
+  });
+  if(Object.keys(salida).some(k=>k.startsWith('Otro: '))){
+    c[campoLista]=lista.filter(x=>x!=='Otro');
+  }
+  return salida;
+}
+
 function normalizarPresentacionData(data){
   if(!data || !Array.isArray(data.programas)) return data;
   const arr = a => Array.isArray(a) ? a.map(textoUniforme) : a;
@@ -661,6 +694,8 @@ function normalizarPresentacionData(data){
     (p.comunidades||[]).forEach(c=>{
       c.poblacion_meta=arr(c.poblacion_meta);
       c.accion_comunidad=arr(c.accion_comunidad);
+      c.pm_cantidades=normalizarCantidades(c.pm_cantidades, c, 'poblacion_meta', p);
+      c.ac_cantidades=normalizarCantidades(c.ac_cantidades, c, 'accion_comunidad', p);
       c.etnia=arr(c.etnia);
       c.grupo_etario=arr(c.grupo_etario);
     });
@@ -671,6 +706,8 @@ function normalizarPresentacionData(data){
 function limpiarFiltros(){
   Object.keys(filtros).forEach(k=>filtros[k]='');
   ['f-sector','f-atencion','f-actor','f-estado','f-municipio'].forEach(id=>document.getElementById(id).value='');
+  const tm=document.getElementById('t-municipio');
+  if(tm && tm.value){ tm.value=''; tm.dispatchEvent(new Event('change')); return; }
   renderMapaYStats();
 }
 
@@ -728,14 +765,22 @@ function renderStats(filtrados){
     });
     if(!muniTerritorial && !lugarTerritorial) (p.municipios_cobertura_institucional||[]).forEach(m=>munis.add(m));
   });
-  const valoresPoblacion=[];
+  // Varias organizaciones pueden reportar a la misma población de un lugar.
+  // Para no contar dos veces a las mismas personas se toma un solo valor por lugar
+  // poblado: el mayor reportado. Es una cifra mínima de referencia, no un total exacto.
+  const maxPorLugar={};
   relevantes.forEach(p=>(p.comunidades||[]).forEach(c=>{
     if(muniTerritorial && c.municipio!==muniTerritorial) return;
     if(lugarTerritorial && c.codigo_lugar!==lugarTerritorial) return;
     if(c.poblacion_total_estimada!==null && c.poblacion_total_estimada!==undefined && c.poblacion_total_estimada!==''){
-      const n=Number(c.poblacion_total_estimada); if(Number.isFinite(n)) valoresPoblacion.push(n);
+      const n=Number(c.poblacion_total_estimada);
+      if(Number.isFinite(n) && n>=0){
+        const k=c.codigo_lugar||(c.lugar_poblado+'|'+c.municipio);
+        maxPorLugar[k]=Math.max(maxPorLugar[k]||0,n);
+      }
     }
   }));
+  const valoresPoblacion=Object.values(maxPorLugar);
   const poblacion = valoresPoblacion.reduce((a,b)=>a+b,0);
   const poblacionTexto = valoresPoblacion.length ? poblacion.toLocaleString('es-GT') : 'No reportada';
 
@@ -753,14 +798,14 @@ function renderStats(filtrados){
     }));
     terceraTarjeta=`<div class="stat-card"><div class="label">Lugares poblados con presencia</div><div class="value">${lugaresConPresencia.size} <span style="font-size:16px;color:#8B9199;font-weight:500;">de ${totalCatalogo}</span></div></div>`;
   }else{
-    terceraTarjeta=`<div class="stat-card"><div class="label">Municipios con presencia</div><div class="value">${munis.size} <span style="font-size:16px;color:#8B9199;font-weight:500;">de 11</span></div></div>`;
+    terceraTarjeta=`<div class="stat-card"><div class="label">Municipios con presencia</div><div class="value">${munis.size} <span style="font-size:16px;color:#8B9199;font-weight:500;">de ${(DATA.municipios||[]).length||11}</span></div></div>`;
   }
 
   document.getElementById('stats').innerHTML = `
     <div class="stat-card"><div class="label">Organizaciones</div><div class="value">${orgs}</div></div>
     <div class="stat-card"><div class="label">Programas / proyectos</div><div class="value">${progs}</div></div>
     ${terceraTarjeta}
-    <div class="stat-card"><div class="label">Población atendida (aprox.)</div><div class="value">${poblacionTexto}</div></div>
+    <div class="stat-card"><div class="label">Población atendida (referencia mínima)</div><div class="value">${poblacionTexto}</div><div style="font-size:11px;color:var(--muted);margin-top:4px;">Un valor por lugar poblado, sin sumar reportes repetidos</div></div>
   `;
 }
 
@@ -810,7 +855,7 @@ function renderMapa(filtrados){
       const n = orgsUnicas.size;
       const marker = L.circleMarker([p.lat,p.lon], {radius:7+n*3, fillColor:colorPorConteo(n,maxConteo), color:'#fff', weight:1.5, fillOpacity:0.92});
       const programasUnicos=new Set(p.entradas.map(e=>e.programa).filter(Boolean));
-      marker.bindPopup(`<b>${p.lugar}</b> · ${p.municipio}<br><br><b>${n}</b> organización(es) · <b>${programasUnicos.size}</b> programa(s) / proyecto(s)<br><span style="color:#6B7280">El detalle completo se muestra en el panel lateral.</span>`,{maxWidth:285});
+      marker.bindPopup(`<b>${escaparHtml(p.lugar)}</b> · ${escaparHtml(p.municipio)}<br><br><b>${n}</b> organización(es) · <b>${programasUnicos.size}</b> programa(s) / proyecto(s)<br><span style="color:#6B7280">El detalle completo se muestra en el panel lateral.</span>`,{maxWidth:285});
       marker.on('click', ()=>mostrarPanelComunidad(p));
       marker.addTo(coopLayer);
     });
@@ -842,8 +887,8 @@ function renderMapa(filtrados){
         pane:'coopPane',radius:8,color:'#B97824',fillColor:'#F1C47C',
         fillOpacity:.72,weight:2.2,dashArray:'4 3'
       });
-      mk.bindTooltip(`${m} · presencia institucional/municipal`,{direction:'top',opacity:.95,permanent:false,sticky:false});
-      mk.bindPopup(`<b>${m}</b><br><b>Presencia institucional / municipal</b><br>${orgs.length} organización(es)<br>${programas.length} programa(s) / proyecto(s)<br><br><span style="color:#5B6672">Marcador de referencia municipal; no representa una comunidad específica.</span>`,{closeButton:true,autoPan:true});
+      mk.bindTooltip(`${escaparHtml(m)} · presencia institucional/municipal`,{direction:'top',opacity:.95,permanent:false,sticky:false});
+      mk.bindPopup(`<b>${escaparHtml(m)}</b><br><b>Presencia institucional / municipal</b><br>${orgs.length} organización(es)<br>${programas.length} programa(s) / proyecto(s)<br><br><span style="color:#5B6672">Marcador de referencia municipal; no representa una comunidad específica.</span>`,{closeButton:true,autoPan:true});
       mk.on('click',(e)=>{
         if(e?.originalEvent) L.DomEvent.stopPropagation(e.originalEvent);
         mk.closeTooltip();
@@ -869,8 +914,8 @@ function renderMapa(filtrados){
           : {radius:2.5,fillColor:'#fff',color:'#C98A6B',weight:1.0,fillOpacity:.32,opacity:.48};
       const marker=L.circleMarker([p.lat,p.lon],baseStyle);
       marker._territorialBase=true;
-      marker.bindTooltip(`${p.lugar} · ${p.municipio}`,{direction:'top',opacity:.9});
-      marker.bindPopup(`<b>${p.lugar}</b> (${p.municipio})<br><span style="color:#6B7280">${p.clasificacion||'Lugar poblado'}</span><br><br><b>Sin presencia de cooperación registrada</b>`);
+      marker.bindTooltip(`${escaparHtml(p.lugar)} · ${escaparHtml(p.municipio)}`,{direction:'top',opacity:.9});
+      marker.bindPopup(`<b>${escaparHtml(p.lugar)}</b> (${escaparHtml(p.municipio)})<br><span style="color:#6B7280">${escaparHtml(p.clasificacion||'Lugar poblado')}</span><br><br><b>Sin presencia de cooperación registrada</b>`);
       marker.on('click',()=>mostrarPanelTerritorial(p));
       marker.addTo(baseLayer);
     });
@@ -955,9 +1000,23 @@ async function cargarLimitesMunicipales(){
   try{
     const endpoint='https://sig.conred.gob.gt/server/rest/services/Hosted/Limites_municipales/FeatureServer/0/query';
     const q=new URLSearchParams({where:"depto_1='Chiquimula'",outFields:'cod_dept_1,cod_muni_1,nombre_1,depto_1',returnGeometry:'true',outSR:'4326',f:'geojson'});
-    const r=await fetch(endpoint+'?'+q.toString());
-    if(!r.ok) throw new Error('HTTP '+r.status);
-    LIMITES=limpiarGeometriaLimites(await r.json());
+    // Primero se intenta el servicio de CONRED (con límite de espera);
+    // si falla, se usa la copia local limites_chiquimula.geojson, si existe.
+    let geo=null;
+    try{
+      const ctrl=new AbortController(); const t=setTimeout(()=>ctrl.abort(),8000);
+      const r=await fetch(endpoint+'?'+q.toString(),{signal:ctrl.signal});
+      clearTimeout(t);
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      geo=await r.json();
+      if(!geo.features||!geo.features.length) throw new Error('Respuesta sin municipios');
+    }catch(errConred){
+      console.warn('CONRED no disponible; se intenta la copia local',errConred);
+      const rl=await fetch('limites_chiquimula.geojson');
+      if(!rl.ok) throw new Error('Sin servicio CONRED ni copia local');
+      geo=await rl.json();
+    }
+    LIMITES=limpiarGeometriaLimites(geo);
     if(exteriorMaskLayer) map.removeLayer(exteriorMaskLayer);
   exteriorMaskLayer=agregarMascaraExteriorChiquimula(map);
   agregarContornoDepartamental(map);
@@ -2153,12 +2212,12 @@ function renderProgramas(){
     const munisTxt = [...munis].slice(0,3).join(', ') + (munis.size>3 ? ' +'+(munis.size-3) : '');
     const estadoClase = p.estado_programa==='Finalizado' ? 'tag' : (p.estado_programa==='Próximo a finalizar' ? 'tag warn' : 'tag');
     return `<tr>
-      <td>${p.organizacion}</td>
-      <td>${p.nombre_programa}</td>
-      <td>${(p.sector||[]).join(', ')||'—'}</td>
-      <td><span class="${estadoClase}">${p.estado_programa||'—'}</span></td>
+      <td>${esc(p.organizacion)}</td>
+      <td>${esc(p.nombre_programa)}</td>
+      <td>${esc((p.sector||[]).join(', '))||'—'}</td>
+      <td><span class="${estadoClase}">${esc(p.estado_programa)||'—'}</span></td>
       <td>${(p.fecha_inicio||'').slice(0,4)}–${(p.fecha_fin||'').slice(0,4)||'?'}</td>
-      <td>${munisTxt||'—'}</td>
+      <td>${esc(munisTxt)||'—'}</td>
     </tr>`;
   }).join('') || '<tr><td colspan="6" class="empty">Todavía no hay programas registrados.</td></tr>';
 }
@@ -2177,6 +2236,10 @@ async function cargarBaseTerritorial(){
     [...new Set(basePlaces.map(p=>p.municipio))].sort().forEach(m=>tm.add(new Option(m,m)));
     function llenarLugares(){
       const m=tm.value;
+      // Un solo selector de municipio: la consulta territorial también filtra la cooperación
+      // (incluida la presencia institucional/municipal).
+      filtros.municipio=m;
+      const fm=document.getElementById('f-municipio'); if(fm) fm.value=m;
       // Cada cambio de municipio inicia una consulta territorial nueva.
       // Evita conservar en el panel la comunidad seleccionada previamente.
       tl.innerHTML='<option value="">Lugar poblado: todos</option>';
@@ -2202,8 +2265,32 @@ async function cargarBaseTerritorial(){
 
 async function iniciar(){
   initNav();
-  const res = await fetch(`data.json?v=${Date.now()}`, { cache: 'no-store' });
-  DATA = normalizarPresentacionData(await res.json());
+  try{
+    const res = await fetch(`data.json?v=${Date.now()}`, { cache: 'no-store' });
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    DATA = normalizarPresentacionData(await res.json());
+  }catch(err){
+    console.error('No se pudo cargar data.json', err);
+    document.querySelector('main').innerHTML=`<div class="data-alert"><h2>No se pudieron cargar los datos del mapeo</h2>
+      El visor necesita el archivo <b>data.json</b> en la misma carpeta y debe abrirse desde un servidor web
+      (por ejemplo GitHub Pages); al abrirlo con doble clic el navegador bloquea la lectura de archivos locales.
+      <br><br><span style="color:var(--muted);font-size:13px;">Detalle técnico: ${escaparHtml(err.message)}</span></div>`;
+    return;
+  }
+  try{
+    const ctl=DATA.control||{};
+    const corte=DATA.generado ? new Date(DATA.generado).toLocaleDateString('es-GT',{day:'2-digit',month:'short',year:'numeric'}) : '';
+    document.getElementById('data-badge').textContent=
+      `Datos al ${corte||'—'} · ${ctl.registros_kobo??'—'} registros Kobo · ${ctl.programas_procesados??DATA.programas.length} programas`;
+    document.getElementById('data-badge').title=
+      `Base territorial: ${ctl.lugares_catalogo??''} lugares poblados · ${ctl.lugares_con_coordenadas??''} georreferenciados`;
+    if(CALIDAD.negativos.length){
+      const n=document.createElement('div'); n.className='calidad-note';
+      n.textContent=`Calidad del dato: ${CALIDAD.negativos.length} cantidad(es) negativa(s) se excluyeron de los conteos y deben corregirse en Kobo.`;
+      n.title=CALIDAD.negativos.join('\n');
+      document.querySelector('nav').after(n);
+    }
+  }catch(e){ console.warn(e); }
 
 
   map = L.map('map').setView([14.75, -89.45], 10);
@@ -2248,7 +2335,28 @@ async function iniciar(){
   });
 }
 
-iniciar();
+function exportarTablaCSV(tabla){
+  const filas=[...tabla.querySelectorAll('tr')].map(tr=>[...tr.children].map(td=>{
+    const t=(td.innerText||'').replace(/\s+/g,' ').trim().replace(/"/g,'""');
+    return `"${t}"`;
+  }).join(','));
+  const blob=new Blob(['\ufeff'+filas.join('\r\n')],{type:'text/csv;charset=utf-8'});
+  const vista=tabla.closest('.view');
+  const nombre=(tabla.id||'tabla')+(vista?'_'+vista.id.replace('view-',''):'')+'.csv';
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=nombre;
+  document.body.appendChild(a); a.click(); setTimeout(()=>{URL.revokeObjectURL(a.href); a.remove();},500);
+}
+function agregarBotonesCSV(){
+  document.querySelectorAll('main table').forEach(t=>{
+    if(t.dataset.csv) return; t.dataset.csv='1';
+    const b=document.createElement('button'); b.type='button'; b.className='csv-btn'; b.textContent='Descargar CSV';
+    b.onclick=()=>exportarTablaCSV(t);
+    const cont=t.parentElement.style.overflowX==='auto'||t.parentElement.classList.contains('matrix-wrap')?t.parentElement:t;
+    cont.parentElement.insertBefore(b,cont);
+  });
+}
+
+iniciar().then(()=>{ try{ agregarBotonesCSV(); }catch(e){ console.warn(e); } });
 </script>
 </body>
 </html>
