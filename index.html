@@ -271,6 +271,29 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
   @media (max-width:380px){
     .stats,.coverage-kpis{grid-template-columns:1fr}
   }
+  /* ===== Cartografía ===== */
+  .leaflet-container{font-family:'IBM Plex Sans',system-ui,sans-serif;background:#EEF0EC}
+  .leaflet-container.fondo-oscuro .etiqueta-muni span{color:#fff;text-shadow:0 0 3px #000,0 0 6px rgba(0,0,0,.8)}
+  .mk{filter:drop-shadow(0 1px 1.5px rgba(16,32,52,.35));transition:stroke-width .12s}
+  .mk:hover{stroke-width:3.5px;cursor:pointer}
+  .etiqueta-muni{background:none;border:none;}
+  .etiqueta-muni span{display:block;transform:translate(-50%,-50%);white-space:nowrap;font-size:10.5px;font-weight:700;
+    letter-spacing:.14em;text-transform:uppercase;color:#2F4A66;
+    text-shadow:0 0 2px #fff,0 0 3px #fff,0 0 5px rgba(255,255,255,.95)}
+  .sin-etiquetas-muni .etiqueta-muni{display:none}
+  .leaflet-popup-content-wrapper{border-radius:10px;box-shadow:0 6px 22px rgba(16,32,52,.22);border:1px solid #E4E0D6}
+  .leaflet-popup-content{margin:12px 16px;line-height:1.45}
+  .leaflet-popup-tip{box-shadow:none;border:1px solid #E4E0D6}
+  .leaflet-tooltip{border-radius:6px;border:1px solid #D9D3C8;box-shadow:0 2px 8px rgba(16,32,52,.15);font-size:12px;padding:4px 8px}
+  .leaflet-bar{border:1px solid #D9D3C8!important;box-shadow:0 1px 5px rgba(16,32,52,.12)!important;border-radius:8px!important;overflow:hidden}
+  .leaflet-bar a{color:#1F3A5F!important;width:32px!important;height:32px!important;line-height:32px!important;font-size:16px}
+  .leaflet-control-layers{border-radius:8px!important;border:1px solid #D9D3C8!important;box-shadow:0 1px 5px rgba(16,32,52,.12)!important}
+  .leaflet-control-layers-expanded{padding:8px 12px;font-size:12.5px}
+  .leaflet-control-scale-line{border-color:#5B6672;color:#3D4752;background:rgba(255,255,255,.85);font-size:10.5px}
+  .leaflet-control-attribution{font-size:10px;background:rgba(255,255,255,.75)!important}
+  .mapa-pantalla-completa{position:fixed!important;inset:0!important;width:100vw!important;height:100vh!important;
+    z-index:10000!important;margin:0!important;border-radius:0!important}
+  body.con-mapa-completo{overflow:hidden}
 </style>
 </head>
 <body>
@@ -1090,6 +1113,7 @@ async function cargarLimitesMunicipales(){
     if(exteriorMaskLayer) map.removeLayer(exteriorMaskLayer);
   exteriorMaskLayer=agregarMascaraExteriorChiquimula(map);
   agregarContornoDepartamental(map);
+  agregarEtiquetasMunicipios(map);
   limitesLayer=L.geoJSON(LIMITES,{style:estiloLimite,onEachFeature:(f,l)=>{
       const nombre=f.properties?.nombre_1||'Municipio';
       l.bindTooltip(nombre,{sticky:false,direction:'center',className:'municipio-tip',permanent:false,opacity:.94});
@@ -1281,6 +1305,7 @@ function agregarLimitesSecundarios(mapa){
   if(!mapa || !LIMITES) return null;
   agregarMascaraExteriorChiquimula(mapa);
   agregarContornoDepartamental(mapa);
+  agregarEtiquetasMunicipios(mapa);
   const capa=L.geoJSON(LIMITES,{
     style:{
       color:'#60758A',weight:1.35,opacity:.72,
@@ -1482,6 +1507,111 @@ function mostrarPanelComunidad(p){
     <div class="community-section-title">Intervenciones registradas (${p.entradas.length})</div>
     <div class="intervention-list">${tarjetas}</div>
     <div class="side-sub" style="margin-top:10px;">* Las cantidades se muestran por grupo de población tal como fueron reportadas en Kobo. No se suman como personas únicas cuando existen varios grupos o intervenciones, porque puede haber traslape entre registros.</div>`;
+}
+
+// ================= CARTOGRAFÍA =================
+const OPCIONES_MAPA={zoomSnap:0.25, zoomDelta:0.5, wheelPxPerZoomLevel:90, zoomControl:true};
+// Todos los círculos de datos reciben una clase para sombra y realce al pasar el cursor.
+L.CircleMarker.mergeOptions({className:'mk'});
+
+const ATRIB_CARTO='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>';
+const ATRIB_ESRI='Teselas &copy; Esri — Fuentes: Esri, Maxar, USGS, comunidad de usuarios SIG';
+
+function prepararMapaCalidad(mapa){
+  // Panel de nombres por encima de los datos, sin bloquear clics.
+  mapa.createPane('etiquetasBasePane');
+  mapa.getPane('etiquetasBasePane').style.zIndex=620;
+  mapa.getPane('etiquetasBasePane').style.pointerEvents='none';
+  mapa.createPane('etiquetasMuniPane');
+  mapa.getPane('etiquetasMuniPane').style.zIndex=610;
+  mapa.getPane('etiquetasMuniPane').style.pointerEvents='none';
+
+  const claro=L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png',
+    {subdomains:'abcd',maxZoom:19,attribution:ATRIB_CARTO});
+  const nombresClaro=L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png',
+    {subdomains:'abcd',maxZoom:19,pane:'etiquetasBasePane',opacity:.9});
+  const relieve=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',
+    {maxZoom:19,attribution:ATRIB_ESRI});
+  const satelite=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+    {maxZoom:19,attribution:ATRIB_ESRI});
+  const nombresSat=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',
+    {maxZoom:19,pane:'etiquetasBasePane'});
+  const osm=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+    {maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'});
+
+  claro.addTo(mapa); nombresClaro.addTo(mapa);
+  const bases={'Claro':claro,'Relieve':relieve,'Satélite':satelite,'OpenStreetMap':osm};
+  L.control.layers(bases,null,{position:'topright',collapsed:true}).addTo(mapa);
+  mapa.on('baselayerchange',e=>{
+    [nombresClaro,nombresSat].forEach(l=>{ if(mapa.hasLayer(l)) mapa.removeLayer(l); });
+    if(e.layer===claro) nombresClaro.addTo(mapa);
+    if(e.layer===satelite) nombresSat.addTo(mapa);
+    mapa.getContainer().classList.toggle('fondo-oscuro', e.layer===satelite);
+  });
+
+  L.control.scale({metric:true,imperial:false,position:'bottomright',maxWidth:120}).addTo(mapa);
+  agregarControlPantallaCompleta(mapa);
+
+  // Las etiquetas de municipios se ocultan al alejarse demasiado.
+  const ajustarEtiquetas=()=>mapa.getContainer().classList.toggle('sin-etiquetas-muni', mapa.getZoom()<8.75);
+  mapa.on('zoomend',ajustarEtiquetas); ajustarEtiquetas();
+}
+
+function agregarControlPantallaCompleta(mapa){
+  const Ctrl=L.Control.extend({
+    options:{position:'topleft'},
+    onAdd(){
+      const div=L.DomUtil.create('div','leaflet-bar leaflet-control');
+      const a=L.DomUtil.create('a','btn-pantalla-completa',div);
+      a.href='#'; a.title='Pantalla completa'; a.setAttribute('role','button'); a.innerHTML='&#x26F6;';
+      L.DomEvent.disableClickPropagation(div);
+      L.DomEvent.on(a,'click',ev=>{
+        L.DomEvent.preventDefault(ev);
+        const cont=mapa.getContainer();
+        const activo=cont.classList.toggle('mapa-pantalla-completa');
+        document.body.classList.toggle('con-mapa-completo',activo);
+        a.title=activo?'Salir de pantalla completa':'Pantalla completa';
+        a.innerHTML=activo?'&#x2715;':'&#x26F6;';
+        setTimeout(()=>mapa.invalidateSize(),60);
+      });
+      document.addEventListener('keydown',ev=>{
+        if(ev.key==='Escape' && mapa.getContainer().classList.contains('mapa-pantalla-completa')) a.click();
+      });
+      return div;
+    }
+  });
+  new Ctrl().addTo(mapa);
+}
+
+// Centroide del anillo exterior más grande de cada municipio (ponderado por área).
+function centroideMunicipio(geom){
+  const anillos=[];
+  if(geom.type==='Polygon') anillos.push(geom.coordinates[0]);
+  if(geom.type==='MultiPolygon') geom.coordinates.forEach(p=>anillos.push(p[0]));
+  let mejor=null, mejorArea=0;
+  anillos.forEach(r=>{
+    let A=0,cx=0,cy=0;
+    for(let i=0,j=r.length-1;i<r.length;j=i++){
+      const f=r[j][0]*r[i][1]-r[i][0]*r[j][1];
+      A+=f; cx+=(r[j][0]+r[i][0])*f; cy+=(r[j][1]+r[i][1])*f;
+    }
+    A/=2;
+    if(Math.abs(A)>mejorArea && A!==0){ mejorArea=Math.abs(A); mejor=[cy/(6*A), cx/(6*A)]; }
+  });
+  return mejor;
+}
+function agregarEtiquetasMunicipios(mapa){
+  if(!mapa || !LIMITES || !Array.isArray(LIMITES.features)) return;
+  if(mapa._etiquetasMuni) mapa.removeLayer(mapa._etiquetasMuni);
+  const grupo=L.layerGroup();
+  LIMITES.features.forEach(f=>{
+    const nombre=f.properties?.nombre_1; const c=f.geometry&&centroideMunicipio(f.geometry);
+    if(!nombre || !c || !Number.isFinite(c[0])) return;
+    L.marker(c,{pane:'etiquetasMuniPane',interactive:false,keyboard:false,
+      icon:L.divIcon({className:'etiqueta-muni',html:`<span>${escaparHtml(nombre)}</span>`,iconSize:null})
+    }).addTo(grupo);
+  });
+  grupo.addTo(mapa); mapa._etiquetasMuni=grupo;
 }
 
 function renderMapaYStats(){
@@ -1964,8 +2094,8 @@ function poblarSelectorOrganizacion(){
 
 function initOrgMap(){
   if(orgMap) return;
-  orgMap=L.map('map-organizacion',{zoomControl:true}).setView([14.75,-89.45],9);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}).addTo(orgMap);
+  orgMap=L.map('map-organizacion',OPCIONES_MAPA).setView([14.75,-89.45],9);
+  prepararMapaCalidad(orgMap);
   const legOrg=L.control({position:'bottomleft'});
   legOrg.onAdd=function(){
     const d=L.DomUtil.create('div','map-legend-control');
@@ -2248,10 +2378,8 @@ function poblarSelectPA(rows){
 
 function asegurarMapaPA(){
   if(paMap) return;
-  paMap=L.map('map-poblacion-accion').setView([14.75,-89.45],9);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
-    attribution:'&copy; OpenStreetMap contributors',maxZoom:18
-  }).addTo(paMap);
+  paMap=L.map('map-poblacion-accion',OPCIONES_MAPA).setView([14.75,-89.45],9);
+  prepararMapaCalidad(paMap);
   const legPA=L.control({position:'bottomleft'});
   legPA.onAdd=function(){
     const d=L.DomUtil.create('div','map-legend-control');
@@ -2433,8 +2561,8 @@ async function iniciar(){
   }catch(e){ console.warn(e); }
 
 
-  map = L.map('map').setView([14.75, -89.45], 10);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution:'&copy; OpenStreetMap contributors', maxZoom:18}).addTo(map);
+  map = L.map('map',OPCIONES_MAPA).setView([14.75, -89.45], 10);
+  prepararMapaCalidad(map);
 
   // Pane propio para la cooperación. Algunos marcadores institucionales ya
   // lo utilizan; debe existir antes de agregarlos al mapa.
