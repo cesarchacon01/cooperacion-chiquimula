@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-08T13:27:52.886554+00:00",
+  "generado": "2026-10-08T23:20:23.592914+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -705,6 +705,94 @@
           "area": "Rural"
         }
       ]
+    },
+    {
+      "organizacion": "ORGANIZATION AMERICAN STATES",
+      "tipo_actor": "Otro",
+      "trabajo_comunitario": "Sí",
+      "pais_origen": "",
+      "contacto": "Emmanuel Fontalvo Patiño",
+      "nombre_programa": "Proyecto Fomentando la Seguridad Hídrica en la Región del Trifinio.",
+      "tipo_atencion": "Desarrollo / atención ordinaria",
+      "sector": [
+        "Agua y saneamiento",
+        "Ambiente y cambio climático",
+        "Gobernanza y fortalecimiento institucional",
+        "Desarrollo económico local",
+        "Género"
+      ],
+      "modalidad": [
+        "Financiamiento directo",
+        "Fortalecimiento institucional"
+      ],
+      "fecha_inicio": "2023-06-01",
+      "tipo_duracion": "Sí, tiene fecha de finalización definida",
+      "fecha_fin": "2027-02-28",
+      "duracion_aproximada": "",
+      "estado_programa": "Próximo a finalizar",
+      "contraparte_gubernamental": "Comisión Trinacional del Plan Trifinio",
+      "monto_rango": "Q2,000,000 – Q10,000,000",
+      "monto_rango_codigo": "2m_10m",
+      "fuente_financiamiento": [
+        "Donante internacional"
+      ],
+      "espacios_coordinacion": [
+        "No participa"
+      ],
+      "disposicion_coordinar": "Sí",
+      "beneficiarios_institucionales": {
+        "Municipalidades": 3
+      },
+      "municipios_cobertura_institucional": [
+        "Concepción las Minas",
+        "Esquipulas",
+        "Olopa"
+      ],
+      "comunidades": [
+        {
+          "codigo_lugar": "olopa_olopa",
+          "lugar_poblado": "Olopa",
+          "municipio": "Olopa",
+          "clasificacion": "Pueblo",
+          "viviendas_catalogo": 601,
+          "lat": 14.690299,
+          "lon": -89.34933,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Pueblos indígenas"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres": null,
+            "Pueblos indígenas": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES",
+            "Grupos de Auto Ahorro y Préstamo",
+            "Cuadrillas contra incendios",
+            "Viveros forestales"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 3,
+            "Grupos de Auto Ahorro y Préstamo": 1,
+            "Cuadrillas contra incendios": -1,
+            "Viveros forestales": 8
+          },
+          "etnia": [
+            "Maya",
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        }
+      ]
     }
   ],
   "municipios": [
@@ -792,27 +880,63 @@
       "lugares_adicionales_reportados": 0
     },
     "Concepción las Minas": {
-      "organizaciones": [],
-      "total_programas": 0,
+      "organizaciones": [
+        "ORGANIZATION AMERICAN STATES"
+      ],
+      "total_programas": 1,
       "comunidades_cubiertas": 0,
       "comunidades_total_catalogo": 80,
       "inversion_estimada": 0,
-      "sectores": {},
-      "estado": {},
-      "instituciones": {},
-      "fuente_financiamiento": {},
+      "sectores": {
+        "Agua y saneamiento": 1,
+        "Ambiente y cambio climático": 1,
+        "Gobernanza y fortalecimiento institucional": 1,
+        "Desarrollo económico local": 1,
+        "Género": 1
+      },
+      "estado": {
+        "Próximo a finalizar": 1
+      },
+      "instituciones": {
+        "Municipalidades": {
+          "registros": 1,
+          "cantidad": 3,
+          "con_cantidad": true
+        }
+      },
+      "fuente_financiamiento": {
+        "Donante internacional": 1
+      },
       "lugares_adicionales_reportados": 0
     },
     "Esquipulas": {
-      "organizaciones": [],
-      "total_programas": 0,
+      "organizaciones": [
+        "ORGANIZATION AMERICAN STATES"
+      ],
+      "total_programas": 1,
       "comunidades_cubiertas": 0,
       "comunidades_total_catalogo": 171,
       "inversion_estimada": 0,
-      "sectores": {},
-      "estado": {},
-      "instituciones": {},
-      "fuente_financiamiento": {},
+      "sectores": {
+        "Agua y saneamiento": 1,
+        "Ambiente y cambio climático": 1,
+        "Gobernanza y fortalecimiento institucional": 1,
+        "Desarrollo económico local": 1,
+        "Género": 1
+      },
+      "estado": {
+        "Próximo a finalizar": 1
+      },
+      "instituciones": {
+        "Municipalidades": {
+          "registros": 1,
+          "cantidad": 3,
+          "con_cantidad": true
+        }
+      },
+      "fuente_financiamiento": {
+        "Donante internacional": 1
+      },
       "lugares_adicionales_reportados": 0
     },
     "Ipala": {
@@ -866,21 +990,34 @@
     },
     "Olopa": {
       "organizaciones": [
-        "Asociación de Servicios y Desarrollo Socioeconómico de Chiquimula -ASEDECHI-"
+        "Asociación de Servicios y Desarrollo Socioeconómico de Chiquimula -ASEDECHI-",
+        "ORGANIZATION AMERICAN STATES"
       ],
-      "total_programas": 1,
-      "comunidades_cubiertas": 2,
+      "total_programas": 2,
+      "comunidades_cubiertas": 3,
       "comunidades_total_catalogo": 58,
       "inversion_estimada": 0,
       "sectores": {
-        "Desarrollo económico local": 1
+        "Desarrollo económico local": 2,
+        "Agua y saneamiento": 1,
+        "Ambiente y cambio climático": 1,
+        "Gobernanza y fortalecimiento institucional": 1,
+        "Género": 1
       },
       "estado": {
-        "En ejecución": 1
+        "En ejecución": 1,
+        "Próximo a finalizar": 1
       },
-      "instituciones": {},
+      "instituciones": {
+        "Municipalidades": {
+          "registros": 1,
+          "cantidad": 3,
+          "con_cantidad": true
+        }
+      },
       "fuente_financiamiento": {
-        "Fondos propios": 1
+        "Fondos propios": 1,
+        "Donante internacional": 1
       },
       "lugares_adicionales_reportados": 0
     },
@@ -936,9 +1073,11 @@
   "matriz_sector_municipio": {
     "Desarrollo económico local": {
       "Jocotán": 3,
-      "Olopa": 1,
       "Chiquimula": 2,
-      "Camotán": 2
+      "Olopa": 2,
+      "Camotán": 2,
+      "Esquipulas": 1,
+      "Concepción las Minas": 1
     },
     "Seguridad alimentaria y nutricional": {
       "Jocotán": 2,
@@ -947,22 +1086,34 @@
     },
     "Gobernanza y fortalecimiento institucional": {
       "Jocotán": 1,
-      "Camotán": 1
+      "Camotán": 1,
+      "Esquipulas": 1,
+      "Concepción las Minas": 1,
+      "Olopa": 1
     },
     "Ambiente y cambio climático": {
       "Jocotán": 1,
       "Camotán": 1,
-      "Chiquimula": 1
+      "Chiquimula": 1,
+      "Esquipulas": 1,
+      "Concepción las Minas": 1,
+      "Olopa": 1
     },
     "Género": {
       "Jocotán": 1,
-      "Camotán": 1
+      "Camotán": 1,
+      "Esquipulas": 1,
+      "Concepción las Minas": 1,
+      "Olopa": 1
     },
     "Salud": {
       "Chiquimula": 1
     },
     "Agua y saneamiento": {
-      "Chiquimula": 1
+      "Chiquimula": 1,
+      "Esquipulas": 1,
+      "Concepción las Minas": 1,
+      "Olopa": 1
     },
     "Infraestructura": {
       "Chiquimula": 1
@@ -3726,13 +3877,6 @@
       "municipio": "Camotán",
       "lat": 14.836823,
       "lon": -89.35862
-    },
-    {
-      "codigo_lugar": "olopa_olopa",
-      "lugar_poblado": "Olopa",
-      "municipio": "Olopa",
-      "lat": 14.690299,
-      "lon": -89.34933
     },
     {
       "codigo_lugar": "olopa_agua_blanca",
@@ -6618,6 +6762,11 @@
       "registros": 1,
       "cantidad": 1,
       "con_cantidad": true
+    },
+    "Municipalidades": {
+      "registros": 1,
+      "cantidad": 3,
+      "con_cantidad": true
     }
   },
   "matriz_poblacion_accion": {
@@ -6625,8 +6774,11 @@
       "Otro": 3,
       "Emprendimientos": 8,
       "COLRED (Coordinadora Local para la Reducción de Desastres)": 6,
-      "Grupos de Auto Ahorro y Préstamo": 3,
-      "Cooperativas o asociaciones productivas": 1
+      "Grupos de Auto Ahorro y Préstamo": 4,
+      "Cooperativas o asociaciones productivas": 1,
+      "Organizaciones comunitarias / COCODES": 1,
+      "Cuadrillas contra incendios": 1,
+      "Viveros forestales": 1
     },
     "Agricultores / productores": {
       "Otro": 3,
@@ -6645,16 +6797,22 @@
     "Hogares con niñez menor de 5 años": {
       "Grupos de Auto Ahorro y Préstamo": 1,
       "Emprendimientos": 1
+    },
+    "Pueblos indígenas": {
+      "Organizaciones comunitarias / COCODES": 1,
+      "Grupos de Auto Ahorro y Préstamo": 1,
+      "Cuadrillas contra incendios": 1,
+      "Viveros forestales": 1
     }
   },
   "inversion": {
-    "programas_con_monto": 4,
+    "programas_con_monto": 5,
     "programas_sin_monto": 0,
     "nota_metodologica": "La inversión se conserva como rango reportado. No se calculan puntos medios ni se distribuyen montos entre municipios o sectores."
   },
   "control": {
-    "registros_kobo": 2,
-    "programas_procesados": 4,
+    "registros_kobo": 3,
+    "programas_procesados": 5,
     "lugares_catalogo": 996,
     "lugares_con_coordenadas": 816,
     "lugares_adicionales_reportados": 0
