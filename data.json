@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-09T19:22:35.978848+00:00",
+  "generado": "2026-10-09T22:37:34.312371+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -1072,48 +1072,48 @@
   },
   "matriz_sector_municipio": {
     "Desarrollo económico local": {
-      "Olopa": 2,
       "Jocotán": 3,
+      "Olopa": 2,
       "Chiquimula": 2,
       "Camotán": 2,
-      "Esquipulas": 1,
-      "Concepción las Minas": 1
+      "Concepción las Minas": 1,
+      "Esquipulas": 1
     },
     "Seguridad alimentaria y nutricional": {
-      "Camotán": 2,
       "Jocotán": 2,
+      "Camotán": 2,
       "Chiquimula": 1
     },
     "Gobernanza y fortalecimiento institucional": {
-      "Camotán": 1,
       "Jocotán": 1,
+      "Camotán": 1,
+      "Concepción las Minas": 1,
       "Olopa": 1,
-      "Esquipulas": 1,
-      "Concepción las Minas": 1
+      "Esquipulas": 1
     },
     "Ambiente y cambio climático": {
-      "Camotán": 1,
       "Jocotán": 1,
+      "Camotán": 1,
       "Chiquimula": 1,
+      "Concepción las Minas": 1,
       "Olopa": 1,
-      "Esquipulas": 1,
-      "Concepción las Minas": 1
+      "Esquipulas": 1
     },
     "Género": {
-      "Camotán": 1,
       "Jocotán": 1,
+      "Camotán": 1,
+      "Concepción las Minas": 1,
       "Olopa": 1,
-      "Esquipulas": 1,
-      "Concepción las Minas": 1
+      "Esquipulas": 1
     },
     "Salud": {
       "Chiquimula": 1
     },
     "Agua y saneamiento": {
       "Chiquimula": 1,
+      "Concepción las Minas": 1,
       "Olopa": 1,
-      "Esquipulas": 1,
-      "Concepción las Minas": 1
+      "Esquipulas": 1
     },
     "Infraestructura": {
       "Chiquimula": 1
