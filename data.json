@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-13T14:10:14.523909+00:00",
+  "generado": "2026-10-13T22:44:02.259234+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -793,6 +793,842 @@
           "area": "Rural"
         }
       ]
+    },
+    {
+      "organizacion": "Asociación Regional Campesina Ch'ortí' -ASORECH-",
+      "tipo_actor": "ONG nacional",
+      "trabajo_comunitario": "Sí",
+      "pais_origen": "",
+      "contacto": "Danilo Guerra Gutiérrez",
+      "nombre_programa": "Acción Niñez, Gobierno de Noruega, Save the Children.",
+      "tipo_atencion": "Desarrollo / atención ordinaria",
+      "sector": [
+        "Educación",
+        "Ambiente y cambio climático",
+        "Género",
+        "Protección (niñez, migrantes, víctimas de violencia)"
+      ],
+      "modalidad": [
+        "Mixta"
+      ],
+      "fecha_inicio": "2024-06-03",
+      "tipo_duracion": "Sí, tiene fecha de finalización definida",
+      "fecha_fin": "2028-12-29",
+      "duracion_aproximada": "",
+      "estado_programa": "En ejecución",
+      "contraparte_gubernamental": "Municipalidades de Jocotán y Camotán, MINEDUC (Dirección Departamental), MAGA, MARN, Red de Derivación de los municipios de Jocotán y Camotán.",
+      "monto_rango": "Q500,000 – Q2,000,000",
+      "monto_rango_codigo": "500k_2m",
+      "fuente_financiamiento": [
+        "Donante internacional"
+      ],
+      "espacios_coordinacion": [
+        "Mesa Técnica Agroclimática",
+        "Espacios sectoriales (educación, salud, etc.)"
+      ],
+      "disposicion_coordinar": "Sí",
+      "beneficiarios_institucionales": {
+        "Municipalidades": 2,
+        "Oficina Municipal de Juventud": 2
+      },
+      "municipios_cobertura_institucional": [
+        "Camotán",
+        "Jocotán"
+      ],
+      "comunidades": [
+        {
+          "codigo_lugar": "jocotan_el_guayabo",
+          "lugar_poblado": "El Guayabo",
+          "municipio": "Jocotán",
+          "clasificacion": "Caserío",
+          "viviendas_catalogo": 47,
+          "lat": 14.78192,
+          "lon": -89.3138,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Pueblos indígenas",
+            "Personas con discapacidad",
+            "Adultos mayores",
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias",
+            "Agricultores / productores",
+            "Alumnos / estudiantes",
+            "Docentes / personal educativo",
+            "Padres, madres y cuidadores"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres": null,
+            "Pueblos indígenas": null,
+            "Personas con discapacidad": null,
+            "Adultos mayores": null,
+            "Hogares con niñez menor de 5 años": null,
+            "Hogares / familias": null,
+            "Agricultores / productores": null,
+            "Alumnos / estudiantes": null,
+            "Docentes / personal educativo": null,
+            "Padres, madres y cuidadores": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Escuelas / centros educativos",
+            "Organizaciones comunitarias / COCODES",
+            "COLRED (Coordinadora Local para la Reducción de Desastres)"
+          ],
+          "ac_cantidades": {
+            "Escuelas / centros educativos": 1,
+            "Organizaciones comunitarias / COCODES": 1,
+            "COLRED (Coordinadora Local para la Reducción de Desastres)": 1
+          },
+          "etnia": [
+            "Maya"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "camotan_la_libertad_centro",
+          "lugar_poblado": "La Libertad Centro",
+          "municipio": "Camotán",
+          "clasificacion": "Paraje",
+          "viviendas_catalogo": 142,
+          "lat": 14.870226,
+          "lon": -89.27144,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Pueblos indígenas",
+            "Migrantes retornados",
+            "Personas con discapacidad",
+            "Adultos mayores",
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias",
+            "Agricultores / productores",
+            "Alumnos / estudiantes",
+            "Docentes / personal educativo",
+            "Padres, madres y cuidadores",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres": null,
+            "Pueblos indígenas": null,
+            "Migrantes retornados": null,
+            "Personas con discapacidad": null,
+            "Adultos mayores": null,
+            "Hogares con niñez menor de 5 años": null,
+            "Hogares / familias": null,
+            "Agricultores / productores": null,
+            "Alumnos / estudiantes": null,
+            "Docentes / personal educativo": null,
+            "Padres, madres y cuidadores": null,
+            "Comites Comunitarios de Protección, Comités de Acción Climática, Establecimiento Educativo": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Escuelas / centros educativos",
+            "Organizaciones comunitarias / COCODES",
+            "COLRED (Coordinadora Local para la Reducción de Desastres)"
+          ],
+          "ac_cantidades": {
+            "Escuelas / centros educativos": 1,
+            "Organizaciones comunitarias / COCODES": 1,
+            "COLRED (Coordinadora Local para la Reducción de Desastres)": 1
+          },
+          "etnia": [
+            "Maya"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        }
+      ]
+    },
+    {
+      "organizacion": "Asociación Regional Campesina Ch'ortí' -ASORECH-",
+      "tipo_actor": "ONG nacional",
+      "trabajo_comunitario": "Sí",
+      "pais_origen": "",
+      "contacto": "Danilo Guerra Gutiérrez",
+      "nombre_programa": "Agua y Suelo para la Agricultura -CRS-",
+      "tipo_atencion": "Desarrollo / atención ordinaria",
+      "sector": [
+        "Seguridad alimentaria y nutricional",
+        "Desarrollo económico local"
+      ],
+      "modalidad": [
+        "Asistencia técnica"
+      ],
+      "fecha_inicio": "2023-07-01",
+      "tipo_duracion": "Sí, tiene fecha de finalización definida",
+      "fecha_fin": "2028-06-30",
+      "duracion_aproximada": "",
+      "estado_programa": "En ejecución",
+      "contraparte_gubernamental": "MAGA, ACADEMIA (Epesistas)",
+      "monto_rango": "Q2,000,000 – Q10,000,000",
+      "monto_rango_codigo": "2m_10m",
+      "fuente_financiamiento": [
+        "Donante internacional"
+      ],
+      "espacios_coordinacion": [
+        "Mesa Técnica Agroclimática"
+      ],
+      "disposicion_coordinar": "Tal vez / depende del caso",
+      "beneficiarios_institucionales": {},
+      "municipios_cobertura_institucional": [],
+      "comunidades": [
+        {
+          "codigo_lugar": "concepcion_las_minas_apantes",
+          "lugar_poblado": "Apantes",
+          "municipio": "Concepción las Minas",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 111,
+          "lat": 14.54462,
+          "lon": -89.40904,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Agricultores / productores"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Agricultores / productores": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Cooperativas o asociaciones productivas",
+            "Emprendimientos"
+          ],
+          "ac_cantidades": {
+            "Cooperativas o asociaciones productivas": 1,
+            "Emprendimientos": 1
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "ipala_jicamapa",
+          "lugar_poblado": "Jicamapa",
+          "municipio": "Ipala",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 263,
+          "lat": 14.660755,
+          "lon": -89.63509,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Agricultores / productores"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres": null,
+            "Agricultores / productores": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Cooperativas o asociaciones productivas",
+            "Emprendimientos"
+          ],
+          "ac_cantidades": {
+            "Cooperativas o asociaciones productivas": 1,
+            "Emprendimientos": 1
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "olopa_tituque",
+          "lugar_poblado": "Tituque",
+          "municipio": "Olopa",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 323,
+          "lat": 14.718058,
+          "lon": -89.3616,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Agricultores / productores"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres": null,
+            "Agricultores / productores": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Emprendimientos"
+          ],
+          "ac_cantidades": {
+            "Emprendimientos": 4
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Juventud (18-29 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_jacinto_lomas_abajo",
+          "lugar_poblado": "Lomas Abajo",
+          "municipio": "San Jacinto",
+          "clasificacion": "Paraje",
+          "viviendas_catalogo": 1,
+          "lat": null,
+          "lon": null,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Agricultores / productores"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Agricultores / productores": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Cooperativas o asociaciones productivas"
+          ],
+          "ac_cantidades": {
+            "Cooperativas o asociaciones productivas": 1
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        }
+      ]
+    },
+    {
+      "organizacion": "Asociación Regional Campesina Ch'ortí' -ASORECH-",
+      "tipo_actor": "ONG nacional",
+      "trabajo_comunitario": "Sí",
+      "pais_origen": "",
+      "contacto": "Danilo Guerra Gutiérrez",
+      "nombre_programa": "Agua para la vida -ASB-",
+      "tipo_atencion": "Desarrollo / atención ordinaria",
+      "sector": [
+        "Seguridad alimentaria y nutricional",
+        "Agua y saneamiento",
+        "Ambiente y cambio climático",
+        "Gobernanza y fortalecimiento institucional"
+      ],
+      "modalidad": [
+        "Asistencia técnica",
+        "Fortalecimiento institucional"
+      ],
+      "fecha_inicio": "2026-08-01",
+      "tipo_duracion": "No hay fecha exacta, pero puedo indicar una duración aproximada",
+      "fecha_fin": "",
+      "duracion_aproximada": "2026-2029",
+      "estado_programa": "En ejecución",
+      "contraparte_gubernamental": "Municipalidad de Olopa, MAGA",
+      "monto_rango": "Q500,000 – Q2,000,000",
+      "monto_rango_codigo": "500k_2m",
+      "fuente_financiamiento": [
+        "Donante internacional"
+      ],
+      "espacios_coordinacion": [
+        "COMUSAN"
+      ],
+      "disposicion_coordinar": "Sí",
+      "beneficiarios_institucionales": {
+        "Municipalidades": 1,
+        "COMUSAN (Comisión Municipal de Seguridad Alimentaria y Nutricional)": 1,
+        "Mesa Técnica de Agua y Saneamiento -UGAM-": 1
+      },
+      "municipios_cobertura_institucional": [
+        "Olopa"
+      ],
+      "comunidades": [
+        {
+          "codigo_lugar": "olopa_el_chucte",
+          "lugar_poblado": "El Chucte",
+          "municipio": "Olopa",
+          "clasificacion": "Caserío",
+          "viviendas_catalogo": 97,
+          "lat": 14.696124,
+          "lon": -89.32239,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Hogares / familias",
+            "Agricultores / productores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares / familias": 30,
+            "Agricultores / productores": 30
+          },
+          "poblacion_total_estimada": 30,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 1
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "olopa_los_ramos",
+          "lugar_poblado": "Los Ramos",
+          "municipio": "Olopa",
+          "clasificacion": "Paraje",
+          "viviendas_catalogo": 77,
+          "lat": 14.700477,
+          "lon": -89.33143,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Hogares / familias",
+            "Agricultores / productores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares / familias": 30,
+            "Agricultores / productores": 30
+          },
+          "poblacion_total_estimada": 30,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 1
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "olopa_nochan",
+          "lugar_poblado": "Nochan",
+          "municipio": "Olopa",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 109,
+          "lat": 14.679734,
+          "lon": -89.36759,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Hogares / familias",
+            "Agricultores / productores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares / familias": 30,
+            "Agricultores / productores": 30
+          },
+          "poblacion_total_estimada": 30,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 1
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "olopa_los_ramos",
+          "lugar_poblado": "Los Ramos",
+          "municipio": "Olopa",
+          "clasificacion": "Paraje",
+          "viviendas_catalogo": 77,
+          "lat": 14.700477,
+          "lon": -89.33143,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Hogares / familias",
+            "Agricultores / productores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares / familias": 30,
+            "Agricultores / productores": 30
+          },
+          "poblacion_total_estimada": 30,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 1
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "olopa_las_palmas",
+          "lugar_poblado": "Las Palmas",
+          "municipio": "Olopa",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 129,
+          "lat": 14.680226,
+          "lon": -89.3109,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Hogares / familias",
+            "Agricultores / productores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares / familias": 30,
+            "Agricultores / productores": 30
+          },
+          "poblacion_total_estimada": 30,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 1
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        }
+      ]
+    },
+    {
+      "organizacion": "Asociación Regional Campesina Ch'ortí' -ASORECH-",
+      "tipo_actor": "ONG nacional",
+      "trabajo_comunitario": "Sí",
+      "pais_origen": "",
+      "contacto": "Danilo Guerra Gutiérrez",
+      "nombre_programa": "Cosechas Resilientes -ADH-",
+      "tipo_atencion": "Ambas (emergencia y desarrollo)",
+      "sector": [
+        "Seguridad alimentaria y nutricional",
+        "Agua y saneamiento"
+      ],
+      "modalidad": [
+        "Asistencia técnica"
+      ],
+      "fecha_inicio": "2026-10-01",
+      "tipo_duracion": "Sí, tiene fecha de finalización definida",
+      "fecha_fin": "2027-10-31",
+      "duracion_aproximada": "",
+      "estado_programa": "En ejecución",
+      "contraparte_gubernamental": "Municipalidad, MAGA.",
+      "monto_rango": "Menos de Q500,000",
+      "monto_rango_codigo": "menos_500k",
+      "fuente_financiamiento": [
+        "Donante internacional"
+      ],
+      "espacios_coordinacion": [
+        "Otro"
+      ],
+      "disposicion_coordinar": "Sí",
+      "beneficiarios_institucionales": {
+        "Municipalidades": 2
+      },
+      "municipios_cobertura_institucional": [
+        "Olopa",
+        "San Juan Ermita"
+      ],
+      "comunidades": [
+        {
+          "codigo_lugar": "olopa_tituque",
+          "lugar_poblado": "Tituque",
+          "municipio": "Olopa",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 323,
+          "lat": 14.718058,
+          "lon": -89.3616,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Hogares / familias",
+            "Agricultores / productores"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres": null,
+            "Hogares / familias": null,
+            "Agricultores / productores": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES",
+            "Grupos de Auto Ahorro y Préstamo"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 1,
+            "Grupos de Auto Ahorro y Préstamo": 1
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_juan_ermita_rio_arriba",
+          "lugar_poblado": "Rio Arriba",
+          "municipio": "San Juan Ermita",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 69,
+          "lat": 14.719871,
+          "lon": -89.41374,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Hogares / familias",
+            "Agricultores / productores"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres": null,
+            "Hogares / familias": null,
+            "Agricultores / productores": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES",
+            "Grupos de Auto Ahorro y Préstamo"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 1,
+            "Grupos de Auto Ahorro y Préstamo": 1
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "olopa_tuticopote_centro",
+          "lugar_poblado": "Tuticopote Centro",
+          "municipio": "Olopa",
+          "clasificacion": "Paraje",
+          "viviendas_catalogo": 68,
+          "lat": 14.717588,
+          "lon": -89.33983,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Hogares / familias",
+            "Agricultores / productores"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres": null,
+            "Hogares / familias": null,
+            "Agricultores / productores": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES",
+            "Grupos de Auto Ahorro y Préstamo"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 1,
+            "Grupos de Auto Ahorro y Préstamo": 1
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_juan_ermita_lagunetas",
+          "lugar_poblado": "Lagunetas",
+          "municipio": "San Juan Ermita",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 125,
+          "lat": 14.748168,
+          "lon": -89.39585,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Hogares / familias",
+            "Agricultores / productores"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres": null,
+            "Hogares / familias": null,
+            "Agricultores / productores": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES",
+            "Grupos de Auto Ahorro y Préstamo"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 1,
+            "Grupos de Auto Ahorro y Préstamo": 1
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_juan_ermita_quequexque",
+          "lugar_poblado": "Quequexque",
+          "municipio": "San Juan Ermita",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 82,
+          "lat": 14.71629,
+          "lon": -89.37791,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres": null,
+            "Hogares / familias": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES",
+            "Grupos de Auto Ahorro y Préstamo"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 1,
+            "Grupos de Auto Ahorro y Préstamo": 1
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        }
+      ]
     }
   ],
   "municipios": [
@@ -811,9 +1647,10 @@
   "resumen_municipio": {
     "Camotán": {
       "organizaciones": [
+        "Asociación Regional Campesina Ch'ortí' -ASORECH-",
         "Asociación de Servicios y Desarrollo Socioeconómico de Chiquimula -ASEDECHI-"
       ],
-      "total_programas": 2,
+      "total_programas": 3,
       "comunidades_cubiertas": 4,
       "comunidades_total_catalogo": 155,
       "inversion_estimada": 0,
@@ -821,12 +1658,14 @@
         "Seguridad alimentaria y nutricional": 2,
         "Gobernanza y fortalecimiento institucional": 1,
         "Desarrollo económico local": 2,
-        "Ambiente y cambio climático": 1,
-        "Género": 1
+        "Ambiente y cambio climático": 2,
+        "Género": 2,
+        "Educación": 1,
+        "Protección (niñez, migrantes, víctimas de violencia)": 1
       },
       "estado": {
         "Próximo a finalizar": 1,
-        "En ejecución": 1
+        "En ejecución": 2
       },
       "instituciones": {
         "COMRED (Coordinadora Municipal para la Reducción de Desastres)": {
@@ -838,10 +1677,20 @@
           "registros": 1,
           "cantidad": 2,
           "con_cantidad": true
+        },
+        "Municipalidades": {
+          "registros": 1,
+          "cantidad": 2,
+          "con_cantidad": true
+        },
+        "Oficina Municipal de Juventud": {
+          "registros": 1,
+          "cantidad": 2,
+          "con_cantidad": true
         }
       },
       "fuente_financiamiento": {
-        "Donante internacional": 2
+        "Donante internacional": 3
       },
       "lugares_adicionales_reportados": 0
     },
@@ -881,21 +1730,24 @@
     },
     "Concepción las Minas": {
       "organizaciones": [
+        "Asociación Regional Campesina Ch'ortí' -ASORECH-",
         "ORGANIZATION AMERICAN STATES"
       ],
-      "total_programas": 1,
-      "comunidades_cubiertas": 0,
+      "total_programas": 2,
+      "comunidades_cubiertas": 1,
       "comunidades_total_catalogo": 80,
       "inversion_estimada": 0,
       "sectores": {
         "Agua y saneamiento": 1,
         "Ambiente y cambio climático": 1,
         "Gobernanza y fortalecimiento institucional": 1,
-        "Desarrollo económico local": 1,
-        "Género": 1
+        "Desarrollo económico local": 2,
+        "Género": 1,
+        "Seguridad alimentaria y nutricional": 1
       },
       "estado": {
-        "Próximo a finalizar": 1
+        "Próximo a finalizar": 1,
+        "En ejecución": 1
       },
       "instituciones": {
         "Municipalidades": {
@@ -905,7 +1757,7 @@
         }
       },
       "fuente_financiamiento": {
-        "Donante internacional": 1
+        "Donante internacional": 2
       },
       "lugares_adicionales_reportados": 0
     },
@@ -940,34 +1792,46 @@
       "lugares_adicionales_reportados": 0
     },
     "Ipala": {
-      "organizaciones": [],
-      "total_programas": 0,
-      "comunidades_cubiertas": 0,
+      "organizaciones": [
+        "Asociación Regional Campesina Ch'ortí' -ASORECH-"
+      ],
+      "total_programas": 1,
+      "comunidades_cubiertas": 1,
       "comunidades_total_catalogo": 80,
       "inversion_estimada": 0,
-      "sectores": {},
-      "estado": {},
+      "sectores": {
+        "Seguridad alimentaria y nutricional": 1,
+        "Desarrollo económico local": 1
+      },
+      "estado": {
+        "En ejecución": 1
+      },
       "instituciones": {},
-      "fuente_financiamiento": {},
+      "fuente_financiamiento": {
+        "Donante internacional": 1
+      },
       "lugares_adicionales_reportados": 0
     },
     "Jocotán": {
       "organizaciones": [
+        "Asociación Regional Campesina Ch'ortí' -ASORECH-",
         "Asociación de Servicios y Desarrollo Socioeconómico de Chiquimula -ASEDECHI-"
       ],
-      "total_programas": 3,
-      "comunidades_cubiertas": 4,
+      "total_programas": 4,
+      "comunidades_cubiertas": 5,
       "comunidades_total_catalogo": 89,
       "inversion_estimada": 0,
       "sectores": {
         "Desarrollo económico local": 3,
         "Seguridad alimentaria y nutricional": 2,
         "Gobernanza y fortalecimiento institucional": 1,
-        "Ambiente y cambio climático": 1,
-        "Género": 1
+        "Ambiente y cambio climático": 2,
+        "Género": 2,
+        "Educación": 1,
+        "Protección (niñez, migrantes, víctimas de violencia)": 1
       },
       "estado": {
-        "En ejecución": 2,
+        "En ejecución": 3,
         "Próximo a finalizar": 1
       },
       "instituciones": {
@@ -980,44 +1844,66 @@
           "registros": 1,
           "cantidad": 2,
           "con_cantidad": true
-        }
-      },
-      "fuente_financiamiento": {
-        "Fondos propios": 1,
-        "Donante internacional": 2
-      },
-      "lugares_adicionales_reportados": 0
-    },
-    "Olopa": {
-      "organizaciones": [
-        "Asociación de Servicios y Desarrollo Socioeconómico de Chiquimula -ASEDECHI-",
-        "ORGANIZATION AMERICAN STATES"
-      ],
-      "total_programas": 2,
-      "comunidades_cubiertas": 3,
-      "comunidades_total_catalogo": 58,
-      "inversion_estimada": 0,
-      "sectores": {
-        "Desarrollo económico local": 2,
-        "Agua y saneamiento": 1,
-        "Ambiente y cambio climático": 1,
-        "Gobernanza y fortalecimiento institucional": 1,
-        "Género": 1
-      },
-      "estado": {
-        "En ejecución": 1,
-        "Próximo a finalizar": 1
-      },
-      "instituciones": {
+        },
         "Municipalidades": {
           "registros": 1,
-          "cantidad": 3,
+          "cantidad": 2,
+          "con_cantidad": true
+        },
+        "Oficina Municipal de Juventud": {
+          "registros": 1,
+          "cantidad": 2,
           "con_cantidad": true
         }
       },
       "fuente_financiamiento": {
         "Fondos propios": 1,
-        "Donante internacional": 1
+        "Donante internacional": 3
+      },
+      "lugares_adicionales_reportados": 0
+    },
+    "Olopa": {
+      "organizaciones": [
+        "Asociación Regional Campesina Ch'ortí' -ASORECH-",
+        "Asociación de Servicios y Desarrollo Socioeconómico de Chiquimula -ASEDECHI-",
+        "ORGANIZATION AMERICAN STATES"
+      ],
+      "total_programas": 5,
+      "comunidades_cubiertas": 9,
+      "comunidades_total_catalogo": 58,
+      "inversion_estimada": 0,
+      "sectores": {
+        "Desarrollo económico local": 3,
+        "Agua y saneamiento": 3,
+        "Ambiente y cambio climático": 2,
+        "Gobernanza y fortalecimiento institucional": 2,
+        "Género": 1,
+        "Seguridad alimentaria y nutricional": 3
+      },
+      "estado": {
+        "En ejecución": 4,
+        "Próximo a finalizar": 1
+      },
+      "instituciones": {
+        "Municipalidades": {
+          "registros": 3,
+          "cantidad": 6,
+          "con_cantidad": true
+        },
+        "COMUSAN (Comisión Municipal de Seguridad Alimentaria y Nutricional)": {
+          "registros": 1,
+          "cantidad": 1,
+          "con_cantidad": true
+        },
+        "Mesa Técnica de Agua y Saneamiento -UGAM-": {
+          "registros": 1,
+          "cantidad": 1,
+          "con_cantidad": true
+        }
+      },
+      "fuente_financiamiento": {
+        "Fondos propios": 1,
+        "Donante internacional": 4
       },
       "lugares_adicionales_reportados": 0
     },
@@ -1034,15 +1920,24 @@
       "lugares_adicionales_reportados": 0
     },
     "San Jacinto": {
-      "organizaciones": [],
-      "total_programas": 0,
-      "comunidades_cubiertas": 0,
+      "organizaciones": [
+        "Asociación Regional Campesina Ch'ortí' -ASORECH-"
+      ],
+      "total_programas": 1,
+      "comunidades_cubiertas": 1,
       "comunidades_total_catalogo": 44,
       "inversion_estimada": 0,
-      "sectores": {},
-      "estado": {},
+      "sectores": {
+        "Seguridad alimentaria y nutricional": 1,
+        "Desarrollo económico local": 1
+      },
+      "estado": {
+        "En ejecución": 1
+      },
       "instituciones": {},
-      "fuente_financiamiento": {},
+      "fuente_financiamiento": {
+        "Donante internacional": 1
+      },
       "lugares_adicionales_reportados": 0
     },
     "San José la Arada": {
@@ -1058,52 +1953,74 @@
       "lugares_adicionales_reportados": 0
     },
     "San Juan Ermita": {
-      "organizaciones": [],
-      "total_programas": 0,
-      "comunidades_cubiertas": 0,
+      "organizaciones": [
+        "Asociación Regional Campesina Ch'ortí' -ASORECH-"
+      ],
+      "total_programas": 1,
+      "comunidades_cubiertas": 3,
       "comunidades_total_catalogo": 50,
       "inversion_estimada": 0,
-      "sectores": {},
-      "estado": {},
-      "instituciones": {},
-      "fuente_financiamiento": {},
+      "sectores": {
+        "Seguridad alimentaria y nutricional": 1,
+        "Agua y saneamiento": 1
+      },
+      "estado": {
+        "En ejecución": 1
+      },
+      "instituciones": {
+        "Municipalidades": {
+          "registros": 1,
+          "cantidad": 2,
+          "con_cantidad": true
+        }
+      },
+      "fuente_financiamiento": {
+        "Donante internacional": 1
+      },
       "lugares_adicionales_reportados": 0
     }
   },
   "matriz_sector_municipio": {
     "Desarrollo económico local": {
       "Chiquimula": 2,
+      "Olopa": 3,
       "Jocotán": 3,
-      "Olopa": 2,
       "Camotán": 2,
+      "Concepción las Minas": 2,
       "Esquipulas": 1,
-      "Concepción las Minas": 1
+      "San Jacinto": 1,
+      "Ipala": 1
     },
     "Seguridad alimentaria y nutricional": {
-      "Jocotán": 2,
       "Camotán": 2,
-      "Chiquimula": 1
+      "Jocotán": 2,
+      "Chiquimula": 1,
+      "San Jacinto": 1,
+      "Concepción las Minas": 1,
+      "Olopa": 3,
+      "Ipala": 1,
+      "San Juan Ermita": 1
     },
     "Gobernanza y fortalecimiento institucional": {
-      "Jocotán": 1,
       "Camotán": 1,
-      "Esquipulas": 1,
+      "Jocotán": 1,
       "Concepción las Minas": 1,
-      "Olopa": 1
+      "Esquipulas": 1,
+      "Olopa": 2
     },
     "Ambiente y cambio climático": {
-      "Jocotán": 1,
-      "Camotán": 1,
+      "Camotán": 2,
+      "Jocotán": 2,
       "Chiquimula": 1,
-      "Esquipulas": 1,
       "Concepción las Minas": 1,
-      "Olopa": 1
+      "Esquipulas": 1,
+      "Olopa": 2
     },
     "Género": {
-      "Jocotán": 1,
-      "Camotán": 1,
-      "Esquipulas": 1,
+      "Camotán": 2,
+      "Jocotán": 2,
       "Concepción las Minas": 1,
+      "Esquipulas": 1,
       "Olopa": 1
     },
     "Salud": {
@@ -1111,12 +2028,21 @@
     },
     "Agua y saneamiento": {
       "Chiquimula": 1,
-      "Esquipulas": 1,
       "Concepción las Minas": 1,
-      "Olopa": 1
+      "Esquipulas": 1,
+      "Olopa": 3,
+      "San Juan Ermita": 1
     },
     "Infraestructura": {
       "Chiquimula": 1
+    },
+    "Educación": {
+      "Camotán": 1,
+      "Jocotán": 1
+    },
+    "Protección (niñez, migrantes, víctimas de violencia)": {
+      "Camotán": 1,
+      "Jocotán": 1
     }
   },
   "comunidades_sin_cobertura": [
@@ -2101,13 +3027,6 @@
       "lon": -89.46393
     },
     {
-      "codigo_lugar": "san_juan_ermita_lagunetas",
-      "lugar_poblado": "Lagunetas",
-      "municipio": "San Juan Ermita",
-      "lat": 14.748168,
-      "lon": -89.39585
-    },
-    {
       "codigo_lugar": "san_juan_ermita_los_lopez",
       "lugar_poblado": "Los Lopez",
       "municipio": "San Juan Ermita",
@@ -2176,20 +3095,6 @@
       "municipio": "San Juan Ermita",
       "lat": 14.713238,
       "lon": -89.43693
-    },
-    {
-      "codigo_lugar": "san_juan_ermita_quequexque",
-      "lugar_poblado": "Quequexque",
-      "municipio": "San Juan Ermita",
-      "lat": 14.71629,
-      "lon": -89.37791
-    },
-    {
-      "codigo_lugar": "san_juan_ermita_rio_arriba",
-      "lugar_poblado": "Rio Arriba",
-      "municipio": "San Juan Ermita",
-      "lat": 14.719871,
-      "lon": -89.41374
     },
     {
       "codigo_lugar": "san_juan_ermita_el_roblarcito",
@@ -2575,13 +3480,6 @@
       "municipio": "Jocotán",
       "lat": 14.886033,
       "lon": -89.44319
-    },
-    {
-      "codigo_lugar": "jocotan_el_guayabo",
-      "lugar_poblado": "El Guayabo",
-      "municipio": "Jocotán",
-      "lat": 14.78192,
-      "lon": -89.3138
     },
     {
       "codigo_lugar": "jocotan_ingenio_guaraquiche",
@@ -3900,13 +4798,6 @@
       "lon": -89.30456
     },
     {
-      "codigo_lugar": "olopa_el_chucte",
-      "lugar_poblado": "El Chucte",
-      "municipio": "Olopa",
-      "lat": 14.696124,
-      "lon": -89.32239
-    },
-    {
       "codigo_lugar": "olopa_el_cerron",
       "lugar_poblado": "El Cerron",
       "municipio": "Olopa",
@@ -3991,13 +4882,6 @@
       "lon": -89.26594
     },
     {
-      "codigo_lugar": "olopa_las_palmas",
-      "lugar_poblado": "Las Palmas",
-      "municipio": "Olopa",
-      "lat": 14.680226,
-      "lon": -89.3109
-    },
-    {
       "codigo_lugar": "olopa_las_pomas",
       "lugar_poblado": "Las Pomas",
       "municipio": "Olopa",
@@ -4010,13 +4894,6 @@
       "municipio": "Olopa",
       "lat": 14.655881,
       "lon": -89.30423
-    },
-    {
-      "codigo_lugar": "olopa_nochan",
-      "lugar_poblado": "Nochan",
-      "municipio": "Olopa",
-      "lat": 14.679734,
-      "lon": -89.36759
     },
     {
       "codigo_lugar": "olopa_piedra_de_amolar",
@@ -4038,13 +4915,6 @@
       "municipio": "Olopa",
       "lat": 14.702561,
       "lon": -89.34045
-    },
-    {
-      "codigo_lugar": "olopa_tituque",
-      "lugar_poblado": "Tituque",
-      "municipio": "Olopa",
-      "lat": 14.718058,
-      "lon": -89.3616
     },
     {
       "codigo_lugar": "olopa_valle_nuevo",
@@ -4173,13 +5043,6 @@
       "lon": -89.31295
     },
     {
-      "codigo_lugar": "olopa_los_ramos",
-      "lugar_poblado": "Los Ramos",
-      "municipio": "Olopa",
-      "lat": 14.700477,
-      "lon": -89.33143
-    },
-    {
       "codigo_lugar": "olopa_los_segundos",
       "lugar_poblado": "Los Segundos",
       "municipio": "Olopa",
@@ -4234,13 +5097,6 @@
       "municipio": "Olopa",
       "lat": 14.724744,
       "lon": -89.34382
-    },
-    {
-      "codigo_lugar": "olopa_tuticopote_centro",
-      "lugar_poblado": "Tuticopote Centro",
-      "municipio": "Olopa",
-      "lat": 14.717588,
-      "lon": -89.33983
     },
     {
       "codigo_lugar": "esquipulas_esquipulas",
@@ -5200,13 +6056,6 @@
       "municipio": "Concepción las Minas",
       "lat": 14.422851,
       "lon": -89.4491
-    },
-    {
-      "codigo_lugar": "concepcion_las_minas_apantes",
-      "lugar_poblado": "Apantes",
-      "municipio": "Concepción las Minas",
-      "lat": 14.54462,
-      "lon": -89.40904
     },
     {
       "codigo_lugar": "concepcion_las_minas_monte_barroso",
@@ -6567,13 +7416,6 @@
       "lon": -89.58459
     },
     {
-      "codigo_lugar": "ipala_jicamapa",
-      "lugar_poblado": "Jicamapa",
-      "municipio": "Ipala",
-      "lat": 14.660755,
-      "lon": -89.63509
-    },
-    {
       "codigo_lugar": "ipala_el_jicaral",
       "lugar_poblado": "El Jicaral",
       "municipio": "Ipala",
@@ -6764,31 +7606,52 @@
       "con_cantidad": true
     },
     "Municipalidades": {
+      "registros": 4,
+      "cantidad": 8,
+      "con_cantidad": true
+    },
+    "Oficina Municipal de Juventud": {
       "registros": 1,
-      "cantidad": 3,
+      "cantidad": 2,
+      "con_cantidad": true
+    },
+    "COMUSAN (Comisión Municipal de Seguridad Alimentaria y Nutricional)": {
+      "registros": 1,
+      "cantidad": 1,
+      "con_cantidad": true
+    },
+    "Mesa Técnica de Agua y Saneamiento -UGAM-": {
+      "registros": 1,
+      "cantidad": 1,
       "con_cantidad": true
     }
   },
   "matriz_poblacion_accion": {
     "Mujeres": {
       "Otro": 3,
-      "Emprendimientos": 8,
-      "COLRED (Coordinadora Local para la Reducción de Desastres)": 6,
-      "Grupos de Auto Ahorro y Préstamo": 4,
-      "Cooperativas o asociaciones productivas": 1,
-      "Organizaciones comunitarias / COCODES": 1,
+      "Emprendimientos": 10,
+      "COLRED (Coordinadora Local para la Reducción de Desastres)": 8,
+      "Grupos de Auto Ahorro y Préstamo": 9,
+      "Cooperativas o asociaciones productivas": 2,
+      "Organizaciones comunitarias / COCODES": 8,
       "Cuadrillas contra incendios": 1,
-      "Viveros forestales": 1
+      "Viveros forestales": 1,
+      "Escuelas / centros educativos": 2
     },
     "Agricultores / productores": {
       "Otro": 3,
-      "Emprendimientos": 7,
-      "COLRED (Coordinadora Local para la Reducción de Desastres)": 6,
-      "Grupos de Auto Ahorro y Préstamo": 1
+      "Emprendimientos": 10,
+      "COLRED (Coordinadora Local para la Reducción de Desastres)": 8,
+      "Grupos de Auto Ahorro y Préstamo": 5,
+      "Escuelas / centros educativos": 2,
+      "Organizaciones comunitarias / COCODES": 11,
+      "Cooperativas o asociaciones productivas": 3
     },
     "Otro": {
       "Emprendimientos": 1,
-      "COLRED (Coordinadora Local para la Reducción de Desastres)": 1
+      "COLRED (Coordinadora Local para la Reducción de Desastres)": 2,
+      "Escuelas / centros educativos": 1,
+      "Organizaciones comunitarias / COCODES": 1
     },
     "Mujeres embarazadas y lactantes": {
       "Grupos de Auto Ahorro y Préstamo": 1,
@@ -6796,23 +7659,64 @@
     },
     "Hogares con niñez menor de 5 años": {
       "Grupos de Auto Ahorro y Préstamo": 1,
-      "Emprendimientos": 1
+      "Emprendimientos": 1,
+      "Escuelas / centros educativos": 2,
+      "Organizaciones comunitarias / COCODES": 2,
+      "COLRED (Coordinadora Local para la Reducción de Desastres)": 2
     },
     "Pueblos indígenas": {
-      "Organizaciones comunitarias / COCODES": 1,
+      "Organizaciones comunitarias / COCODES": 3,
       "Grupos de Auto Ahorro y Préstamo": 1,
       "Cuadrillas contra incendios": 1,
-      "Viveros forestales": 1
+      "Viveros forestales": 1,
+      "Escuelas / centros educativos": 2,
+      "COLRED (Coordinadora Local para la Reducción de Desastres)": 2
+    },
+    "Personas con discapacidad": {
+      "Escuelas / centros educativos": 2,
+      "Organizaciones comunitarias / COCODES": 2,
+      "COLRED (Coordinadora Local para la Reducción de Desastres)": 2
+    },
+    "Adultos mayores": {
+      "Escuelas / centros educativos": 2,
+      "Organizaciones comunitarias / COCODES": 2,
+      "COLRED (Coordinadora Local para la Reducción de Desastres)": 2
+    },
+    "Hogares / familias": {
+      "Escuelas / centros educativos": 2,
+      "Organizaciones comunitarias / COCODES": 12,
+      "COLRED (Coordinadora Local para la Reducción de Desastres)": 2,
+      "Grupos de Auto Ahorro y Préstamo": 5
+    },
+    "Alumnos / estudiantes": {
+      "Escuelas / centros educativos": 2,
+      "Organizaciones comunitarias / COCODES": 2,
+      "COLRED (Coordinadora Local para la Reducción de Desastres)": 2
+    },
+    "Docentes / personal educativo": {
+      "Escuelas / centros educativos": 2,
+      "Organizaciones comunitarias / COCODES": 2,
+      "COLRED (Coordinadora Local para la Reducción de Desastres)": 2
+    },
+    "Padres, madres y cuidadores": {
+      "Escuelas / centros educativos": 2,
+      "Organizaciones comunitarias / COCODES": 2,
+      "COLRED (Coordinadora Local para la Reducción de Desastres)": 2
+    },
+    "Migrantes retornados": {
+      "Escuelas / centros educativos": 1,
+      "Organizaciones comunitarias / COCODES": 1,
+      "COLRED (Coordinadora Local para la Reducción de Desastres)": 1
     }
   },
   "inversion": {
-    "programas_con_monto": 5,
+    "programas_con_monto": 9,
     "programas_sin_monto": 0,
     "nota_metodologica": "La inversión se conserva como rango reportado. No se calculan puntos medios ni se distribuyen montos entre municipios o sectores."
   },
   "control": {
-    "registros_kobo": 3,
-    "programas_procesados": 5,
+    "registros_kobo": 4,
+    "programas_procesados": 9,
     "lugares_catalogo": 996,
     "lugares_con_coordenadas": 816,
     "lugares_adicionales_reportados": 0
