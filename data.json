@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-16T16:38:33.675799+00:00",
+  "generado": "2026-10-16T19:03:46.920259+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -1629,6 +1629,44 @@
           "area": "Rural"
         }
       ]
+    },
+    {
+      "organizacion": "Asociación Lumaltik Herriak",
+      "tipo_actor": "ONG internacional",
+      "trabajo_comunitario": "No",
+      "pais_origen": "",
+      "contacto": "Nuria Arelí Cordón Guerra",
+      "nombre_programa": "“Mujeres organizadas fortalecen sus capacidades  para la defensa de la salud integral” A",
+      "tipo_atencion": "Desarrollo / atención ordinaria",
+      "sector": [
+        "Salud",
+        "Género",
+        "Protección (niñez, migrantes, víctimas de violencia)",
+        "Violencia basada en género"
+      ],
+      "modalidad": [
+        "Asistencia técnica",
+        "Fortalecimiento institucional"
+      ],
+      "fecha_inicio": "2025-09-25",
+      "tipo_duracion": "Sí, tiene fecha de finalización definida",
+      "fecha_fin": "2027-09-24",
+      "duracion_aproximada": "",
+      "estado_programa": "En ejecución",
+      "contraparte_gubernamental": "Nuestra organización con instancias operadoras de Justicia",
+      "monto_rango": "Menos de Q500,000",
+      "monto_rango_codigo": "menos_500k",
+      "fuente_financiamiento": [
+        "Donante internacional"
+      ],
+      "espacios_coordinacion": [
+        "Mesa de Cooperación",
+        "Otro"
+      ],
+      "disposicion_coordinar": "Sí",
+      "beneficiarios_institucionales": {},
+      "municipios_cobertura_institucional": [],
+      "comunidades": []
     }
   ],
   "municipios": [
@@ -1983,22 +2021,22 @@
   "matriz_sector_municipio": {
     "Desarrollo económico local": {
       "Chiquimula": 2,
-      "Olopa": 3,
       "Jocotán": 3,
+      "Olopa": 3,
       "Camotán": 2,
       "Concepción las Minas": 2,
       "Esquipulas": 1,
-      "Ipala": 1,
-      "San Jacinto": 1
+      "San Jacinto": 1,
+      "Ipala": 1
     },
     "Seguridad alimentaria y nutricional": {
       "Camotán": 2,
       "Jocotán": 2,
       "Chiquimula": 1,
       "Olopa": 3,
+      "San Jacinto": 1,
       "Ipala": 1,
       "Concepción las Minas": 1,
-      "San Jacinto": 1,
       "San Juan Ermita": 1
     },
     "Gobernanza y fortalecimiento institucional": {
@@ -2043,7 +2081,8 @@
     "Protección (niñez, migrantes, víctimas de violencia)": {
       "Camotán": 1,
       "Jocotán": 1
-    }
+    },
+    "Violencia basada en género": {}
   },
   "comunidades_sin_cobertura": [
     {
@@ -7710,13 +7749,13 @@
     }
   },
   "inversion": {
-    "programas_con_monto": 9,
+    "programas_con_monto": 10,
     "programas_sin_monto": 0,
     "nota_metodologica": "La inversión se conserva como rango reportado. No se calculan puntos medios ni se distribuyen montos entre municipios o sectores."
   },
   "control": {
-    "registros_kobo": 4,
-    "programas_procesados": 9,
+    "registros_kobo": 5,
+    "programas_procesados": 10,
     "lugares_catalogo": 996,
     "lugares_con_coordenadas": 816,
     "lugares_adicionales_reportados": 0
