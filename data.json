@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-16T11:22:36.134039+00:00",
+  "generado": "2026-10-16T16:38:33.675799+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -1982,9 +1982,9 @@
   },
   "matriz_sector_municipio": {
     "Desarrollo económico local": {
-      "Jocotán": 3,
       "Chiquimula": 2,
       "Olopa": 3,
+      "Jocotán": 3,
       "Camotán": 2,
       "Concepción las Minas": 2,
       "Esquipulas": 1,
@@ -1992,36 +1992,36 @@
       "San Jacinto": 1
     },
     "Seguridad alimentaria y nutricional": {
-      "Jocotán": 2,
       "Camotán": 2,
+      "Jocotán": 2,
       "Chiquimula": 1,
-      "Concepción las Minas": 1,
-      "Ipala": 1,
       "Olopa": 3,
+      "Ipala": 1,
+      "Concepción las Minas": 1,
       "San Jacinto": 1,
       "San Juan Ermita": 1
     },
     "Gobernanza y fortalecimiento institucional": {
-      "Jocotán": 1,
       "Camotán": 1,
+      "Jocotán": 1,
       "Concepción las Minas": 1,
-      "Olopa": 2,
-      "Esquipulas": 1
+      "Esquipulas": 1,
+      "Olopa": 2
     },
     "Ambiente y cambio climático": {
-      "Jocotán": 2,
       "Camotán": 2,
+      "Jocotán": 2,
       "Chiquimula": 1,
       "Concepción las Minas": 1,
-      "Olopa": 2,
-      "Esquipulas": 1
+      "Esquipulas": 1,
+      "Olopa": 2
     },
     "Género": {
-      "Jocotán": 2,
       "Camotán": 2,
+      "Jocotán": 2,
       "Concepción las Minas": 1,
-      "Olopa": 1,
-      "Esquipulas": 1
+      "Esquipulas": 1,
+      "Olopa": 1
     },
     "Salud": {
       "Chiquimula": 1
@@ -2029,20 +2029,20 @@
     "Agua y saneamiento": {
       "Chiquimula": 1,
       "Concepción las Minas": 1,
-      "Olopa": 3,
       "Esquipulas": 1,
+      "Olopa": 3,
       "San Juan Ermita": 1
     },
     "Infraestructura": {
       "Chiquimula": 1
     },
     "Educación": {
-      "Jocotán": 1,
-      "Camotán": 1
+      "Camotán": 1,
+      "Jocotán": 1
     },
     "Protección (niñez, migrantes, víctimas de violencia)": {
-      "Jocotán": 1,
-      "Camotán": 1
+      "Camotán": 1,
+      "Jocotán": 1
     }
   },
   "comunidades_sin_cobertura": [
