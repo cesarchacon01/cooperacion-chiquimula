@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-16T21:06:55.643030+00:00",
+  "generado": "2026-10-17T04:24:19.268591+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -1667,6 +1667,89 @@
       "beneficiarios_institucionales": {},
       "municipios_cobertura_institucional": [],
       "comunidades": []
+    },
+    {
+      "organizacion": "Asociación Aldeas Infantiles SOS Guatemala",
+      "tipo_actor": "ONG internacional",
+      "trabajo_comunitario": "Sí",
+      "pais_origen": "",
+      "contacto": "Kevin Armando Monroy Guerrero",
+      "nombre_programa": "Proyecto Standar 2025-2027",
+      "tipo_atencion": "Ambas (emergencia y desarrollo)",
+      "sector": [
+        "Gobernanza y fortalecimiento institucional",
+        "Protección (niñez, migrantes, víctimas de violencia)"
+      ],
+      "modalidad": [
+        "Asistencia técnica",
+        "Donación en especie",
+        "Fortalecimiento institucional"
+      ],
+      "fecha_inicio": "2025-01-02",
+      "tipo_duracion": "Aún no está definida",
+      "fecha_fin": "",
+      "duracion_aproximada": "",
+      "estado_programa": "En ejecución",
+      "contraparte_gubernamental": "Municipalidad",
+      "monto_rango": "Prefiere no indicar",
+      "monto_rango_codigo": "prefiere_no_indicar",
+      "fuente_financiamiento": [
+        "Donante internacional"
+      ],
+      "espacios_coordinacion": [
+        "Mesa de Cooperación",
+        "COMUSAN",
+        "COE (Coordinadora/Comité de Emergencia)",
+        "Otro"
+      ],
+      "disposicion_coordinar": "Sí",
+      "beneficiarios_institucionales": {
+        "COMUSAN (Comisión Municipal de Seguridad Alimentaria y Nutricional)": 25,
+        "Oficina/Dirección Municipal de Seguridad Alimentaria y Nutricional (SAN)": 2,
+        "Formación a Red de Derivación del Ministerio Público": 50
+      },
+      "municipios_cobertura_institucional": [
+        "Jocotán"
+      ],
+      "comunidades": [
+        {
+          "codigo_lugar": "jocotan_despoblado_oquen",
+          "lugar_poblado": "Despoblado Oquen",
+          "municipio": "Jocotán",
+          "clasificacion": "Caserío",
+          "viviendas_catalogo": 125,
+          "lat": 14.816941,
+          "lon": -89.41227,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares / familias": 50
+          },
+          "poblacion_total_estimada": 50,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES",
+            "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 1,
+            "Facilitación de semillas y kits nutricionales": 50
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        }
+      ]
     }
   ],
   "municipios": [
@@ -1852,24 +1935,25 @@
     },
     "Jocotán": {
       "organizaciones": [
+        "Asociación Aldeas Infantiles SOS Guatemala",
         "Asociación Regional Campesina Ch'ortí' -ASORECH-",
         "Asociación de Servicios y Desarrollo Socioeconómico de Chiquimula -ASEDECHI-"
       ],
-      "total_programas": 4,
-      "comunidades_cubiertas": 5,
+      "total_programas": 5,
+      "comunidades_cubiertas": 6,
       "comunidades_total_catalogo": 89,
       "inversion_estimada": 0,
       "sectores": {
         "Desarrollo económico local": 3,
         "Seguridad alimentaria y nutricional": 2,
-        "Gobernanza y fortalecimiento institucional": 1,
+        "Gobernanza y fortalecimiento institucional": 2,
         "Ambiente y cambio climático": 2,
         "Género": 2,
         "Educación": 1,
-        "Protección (niñez, migrantes, víctimas de violencia)": 1
+        "Protección (niñez, migrantes, víctimas de violencia)": 2
       },
       "estado": {
-        "En ejecución": 3,
+        "En ejecución": 4,
         "Próximo a finalizar": 1
       },
       "instituciones": {
@@ -1892,11 +1976,26 @@
           "registros": 1,
           "cantidad": 2,
           "con_cantidad": true
+        },
+        "COMUSAN (Comisión Municipal de Seguridad Alimentaria y Nutricional)": {
+          "registros": 1,
+          "cantidad": 25,
+          "con_cantidad": true
+        },
+        "Oficina/Dirección Municipal de Seguridad Alimentaria y Nutricional (SAN)": {
+          "registros": 1,
+          "cantidad": 2,
+          "con_cantidad": true
+        },
+        "Formación a Red de Derivación del Ministerio Público": {
+          "registros": 1,
+          "cantidad": 50,
+          "con_cantidad": true
         }
       },
       "fuente_financiamiento": {
         "Fondos propios": 1,
-        "Donante internacional": 3
+        "Donante internacional": 4
       },
       "lugares_adicionales_reportados": 0
     },
@@ -2020,12 +2119,12 @@
   },
   "matriz_sector_municipio": {
     "Desarrollo económico local": {
-      "Olopa": 3,
       "Chiquimula": 2,
       "Jocotán": 3,
+      "Olopa": 3,
       "Camotán": 2,
-      "Esquipulas": 1,
       "Concepción las Minas": 2,
+      "Esquipulas": 1,
       "Ipala": 1,
       "San Jacinto": 1
     },
@@ -2033,42 +2132,42 @@
       "Jocotán": 2,
       "Camotán": 2,
       "Chiquimula": 1,
-      "Olopa": 3,
       "Ipala": 1,
+      "Olopa": 3,
       "Concepción las Minas": 1,
       "San Jacinto": 1,
       "San Juan Ermita": 1
     },
     "Gobernanza y fortalecimiento institucional": {
-      "Jocotán": 1,
+      "Jocotán": 2,
       "Camotán": 1,
-      "Olopa": 2,
+      "Concepción las Minas": 1,
       "Esquipulas": 1,
-      "Concepción las Minas": 1
+      "Olopa": 2
     },
     "Ambiente y cambio climático": {
       "Jocotán": 2,
       "Camotán": 2,
       "Chiquimula": 1,
-      "Olopa": 2,
+      "Concepción las Minas": 1,
       "Esquipulas": 1,
-      "Concepción las Minas": 1
+      "Olopa": 2
     },
     "Género": {
       "Jocotán": 2,
       "Camotán": 2,
-      "Olopa": 1,
+      "Concepción las Minas": 1,
       "Esquipulas": 1,
-      "Concepción las Minas": 1
+      "Olopa": 1
     },
     "Salud": {
       "Chiquimula": 1
     },
     "Agua y saneamiento": {
       "Chiquimula": 1,
-      "Olopa": 3,
-      "Esquipulas": 1,
       "Concepción las Minas": 1,
+      "Esquipulas": 1,
+      "Olopa": 3,
       "San Juan Ermita": 1
     },
     "Infraestructura": {
@@ -2079,7 +2178,7 @@
       "Camotán": 1
     },
     "Protección (niñez, migrantes, víctimas de violencia)": {
-      "Jocotán": 1,
+      "Jocotán": 2,
       "Camotán": 1
     },
     "Violencia basada en género": {}
@@ -3386,13 +3485,6 @@
       "municipio": "Jocotán",
       "lat": 14.819417,
       "lon": -89.44433
-    },
-    {
-      "codigo_lugar": "jocotan_despoblado_oquen",
-      "lugar_poblado": "Despoblado Oquen",
-      "municipio": "Jocotán",
-      "lat": 14.816941,
-      "lon": -89.41227
     },
     {
       "codigo_lugar": "jocotan_escobillal",
@@ -7655,13 +7747,23 @@
       "con_cantidad": true
     },
     "COMUSAN (Comisión Municipal de Seguridad Alimentaria y Nutricional)": {
-      "registros": 1,
-      "cantidad": 1,
+      "registros": 2,
+      "cantidad": 26,
       "con_cantidad": true
     },
     "Mesa Técnica de Agua y Saneamiento -UGAM-": {
       "registros": 1,
       "cantidad": 1,
+      "con_cantidad": true
+    },
+    "Oficina/Dirección Municipal de Seguridad Alimentaria y Nutricional (SAN)": {
+      "registros": 1,
+      "cantidad": 2,
+      "con_cantidad": true
+    },
+    "Formación a Red de Derivación del Ministerio Público": {
+      "registros": 1,
+      "cantidad": 50,
       "con_cantidad": true
     }
   },
@@ -7723,9 +7825,10 @@
     },
     "Hogares / familias": {
       "Escuelas / centros educativos": 2,
-      "Organizaciones comunitarias / COCODES": 12,
+      "Organizaciones comunitarias / COCODES": 13,
       "COLRED (Coordinadora Local para la Reducción de Desastres)": 2,
-      "Grupos de Auto Ahorro y Préstamo": 5
+      "Grupos de Auto Ahorro y Préstamo": 5,
+      "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)": 1
     },
     "Alumnos / estudiantes": {
       "Escuelas / centros educativos": 2,
@@ -7749,13 +7852,13 @@
     }
   },
   "inversion": {
-    "programas_con_monto": 10,
+    "programas_con_monto": 11,
     "programas_sin_monto": 0,
     "nota_metodologica": "La inversión se conserva como rango reportado. No se calculan puntos medios ni se distribuyen montos entre municipios o sectores."
   },
   "control": {
-    "registros_kobo": 5,
-    "programas_procesados": 10,
+    "registros_kobo": 6,
+    "programas_procesados": 11,
     "lugares_catalogo": 996,
     "lugares_con_coordenadas": 816,
     "lugares_adicionales_reportados": 0
