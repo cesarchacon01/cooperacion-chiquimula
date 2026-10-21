@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-21T11:47:39.285180+00:00",
+  "generado": "2026-10-21T17:11:17.043287+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -2299,6 +2299,95 @@
           "area": "Rural"
         }
       ]
+    },
+    {
+      "organizacion": "Fundación Ayuda en Acción Guatemala",
+      "tipo_actor": "ONG internacional",
+      "trabajo_comunitario": "Sí",
+      "pais_origen": "",
+      "contacto": "Ada Beda Gaytan Gonzalez-Directora País. Geidy Miranda Trigueros-Referente en Chiquimula",
+      "nombre_programa": "Programa Nacional Ayuda en Acción",
+      "tipo_atencion": "Ambas (emergencia y desarrollo)",
+      "sector": [
+        "Educación",
+        "Ambiente y cambio climático",
+        "Desarrollo económico local",
+        "Protección (niñez, migrantes, víctimas de violencia)",
+        "Migración y movilidad humana"
+      ],
+      "modalidad": [
+        "Asistencia técnica",
+        "Donación en especie",
+        "Fortalecimiento institucional"
+      ],
+      "fecha_inicio": "2026-01-01",
+      "tipo_duracion": "Aún no está definida",
+      "fecha_fin": "",
+      "duracion_aproximada": "",
+      "estado_programa": "En ejecución",
+      "contraparte_gubernamental": "MINEDUC, ACADEMIA, MINTRAB, MUNICIPALIDADES, INTECAP",
+      "monto_rango": "Prefiere no indicar",
+      "monto_rango_codigo": "prefiere_no_indicar",
+      "fuente_financiamiento": [
+        "Fondos propios",
+        "Donante internacional"
+      ],
+      "espacios_coordinacion": [
+        "Mesa de Cooperación",
+        "Espacios sectoriales (educación, salud, etc.)"
+      ],
+      "disposicion_coordinar": "Sí",
+      "beneficiarios_institucionales": {
+        "Municipalidades": 2,
+        "Escuelas": 13
+      },
+      "municipios_cobertura_institucional": [
+        "Camotán",
+        "Jocotán"
+      ],
+      "comunidades": [
+        {
+          "codigo_lugar": "jocotan_jocotan",
+          "lugar_poblado": "Jocotan",
+          "municipio": "Jocotán",
+          "clasificacion": "Pueblo",
+          "viviendas_catalogo": 1344,
+          "lat": 14.819268,
+          "lon": -89.3896,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Alumnos / estudiantes",
+            "Docentes / personal educativo",
+            "Padres, madres y cuidadores"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Alumnos / estudiantes": null,
+            "Docentes / personal educativo": null,
+            "Padres, madres y cuidadores": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Escuelas / centros educativos"
+          ],
+          "ac_cantidades": {
+            "Escuelas / centros educativos": 13
+          },
+          "etnia": [
+            "Maya"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Mixta"
+        }
+      ]
     }
   ],
   "municipios": [
@@ -2319,26 +2408,28 @@
       "organizaciones": [
         "Asociación Regional Campesina Ch'ortí' -ASORECH-",
         "Asociación de Servicios y Desarrollo Socioeconómico de Chiquimula -ASEDECHI-",
+        "Fundación Ayuda en Acción Guatemala",
         "Unbound"
       ],
-      "total_programas": 4,
+      "total_programas": 5,
       "comunidades_cubiertas": 16,
       "comunidades_total_catalogo": 155,
       "inversion_estimada": 0,
       "sectores": {
         "Seguridad alimentaria y nutricional": 2,
         "Gobernanza y fortalecimiento institucional": 1,
-        "Desarrollo económico local": 2,
-        "Ambiente y cambio climático": 3,
+        "Desarrollo económico local": 3,
+        "Ambiente y cambio climático": 4,
         "Género": 3,
-        "Educación": 2,
-        "Protección (niñez, migrantes, víctimas de violencia)": 1,
+        "Educación": 3,
+        "Protección (niñez, migrantes, víctimas de violencia)": 2,
         "Salud": 1,
-        "Agua y saneamiento": 1
+        "Agua y saneamiento": 1,
+        "Migración y movilidad humana": 1
       },
       "estado": {
         "Próximo a finalizar": 1,
-        "En ejecución": 3
+        "En ejecución": 4
       },
       "instituciones": {
         "COMRED (Coordinadora Municipal para la Reducción de Desastres)": {
@@ -2352,18 +2443,24 @@
           "con_cantidad": true
         },
         "Municipalidades": {
-          "registros": 1,
-          "cantidad": 2,
+          "registros": 2,
+          "cantidad": 4,
           "con_cantidad": true
         },
         "Oficina Municipal de Juventud": {
           "registros": 1,
           "cantidad": 2,
           "con_cantidad": true
+        },
+        "Escuelas": {
+          "registros": 1,
+          "cantidad": 13,
+          "con_cantidad": true
         }
       },
       "fuente_financiamiento": {
-        "Donante internacional": 4
+        "Donante internacional": 5,
+        "Fondos propios": 1
       },
       "lugares_adicionales_reportados": 0
     },
@@ -2490,25 +2587,27 @@
         "Asociación Aldeas Infantiles SOS Guatemala",
         "Asociación Regional Campesina Ch'ortí' -ASORECH-",
         "Asociación de Servicios y Desarrollo Socioeconómico de Chiquimula -ASEDECHI-",
+        "Fundación Ayuda en Acción Guatemala",
         "Unbound"
       ],
-      "total_programas": 6,
-      "comunidades_cubiertas": 8,
+      "total_programas": 7,
+      "comunidades_cubiertas": 9,
       "comunidades_total_catalogo": 89,
       "inversion_estimada": 0,
       "sectores": {
-        "Desarrollo económico local": 3,
+        "Desarrollo económico local": 4,
         "Seguridad alimentaria y nutricional": 2,
         "Gobernanza y fortalecimiento institucional": 2,
-        "Ambiente y cambio climático": 3,
+        "Ambiente y cambio climático": 4,
         "Género": 3,
-        "Educación": 2,
-        "Protección (niñez, migrantes, víctimas de violencia)": 2,
+        "Educación": 3,
+        "Protección (niñez, migrantes, víctimas de violencia)": 3,
         "Salud": 1,
-        "Agua y saneamiento": 1
+        "Agua y saneamiento": 1,
+        "Migración y movilidad humana": 1
       },
       "estado": {
-        "En ejecución": 5,
+        "En ejecución": 6,
         "Próximo a finalizar": 1
       },
       "instituciones": {
@@ -2523,8 +2622,8 @@
           "con_cantidad": true
         },
         "Municipalidades": {
-          "registros": 1,
-          "cantidad": 2,
+          "registros": 2,
+          "cantidad": 4,
           "con_cantidad": true
         },
         "Oficina Municipal de Juventud": {
@@ -2546,11 +2645,16 @@
           "registros": 1,
           "cantidad": 50,
           "con_cantidad": true
+        },
+        "Escuelas": {
+          "registros": 1,
+          "cantidad": 13,
+          "con_cantidad": true
         }
       },
       "fuente_financiamiento": {
-        "Fondos propios": 1,
-        "Donante internacional": 5
+        "Fondos propios": 2,
+        "Donante internacional": 6
       },
       "lugares_adicionales_reportados": 0
     },
@@ -2674,10 +2778,10 @@
   },
   "matriz_sector_municipio": {
     "Desarrollo económico local": {
-      "Chiquimula": 2,
+      "Jocotán": 4,
       "Olopa": 3,
-      "Jocotán": 3,
-      "Camotán": 2,
+      "Chiquimula": 2,
+      "Camotán": 3,
       "Esquipulas": 1,
       "Concepción las Minas": 2,
       "Ipala": 1,
@@ -2688,32 +2792,32 @@
       "Jocotán": 2,
       "Chiquimula": 1,
       "Ipala": 1,
-      "Olopa": 3,
       "San Jacinto": 1,
       "Concepción las Minas": 1,
+      "Olopa": 3,
       "San Juan Ermita": 1
     },
     "Gobernanza y fortalecimiento institucional": {
       "Camotán": 1,
       "Jocotán": 2,
       "Esquipulas": 1,
-      "Olopa": 2,
-      "Concepción las Minas": 1
+      "Concepción las Minas": 1,
+      "Olopa": 2
     },
     "Ambiente y cambio climático": {
-      "Camotán": 3,
-      "Jocotán": 3,
+      "Camotán": 4,
+      "Jocotán": 4,
       "Chiquimula": 1,
       "Esquipulas": 1,
-      "Olopa": 2,
-      "Concepción las Minas": 1
+      "Concepción las Minas": 1,
+      "Olopa": 2
     },
     "Género": {
       "Camotán": 3,
       "Jocotán": 3,
       "Esquipulas": 1,
-      "Olopa": 1,
-      "Concepción las Minas": 1
+      "Concepción las Minas": 1,
+      "Olopa": 1
     },
     "Salud": {
       "Chiquimula": 1,
@@ -2723,8 +2827,8 @@
     "Agua y saneamiento": {
       "Chiquimula": 1,
       "Esquipulas": 1,
-      "Olopa": 3,
       "Concepción las Minas": 1,
+      "Olopa": 3,
       "San Juan Ermita": 1,
       "Camotán": 1,
       "Jocotán": 1
@@ -2733,14 +2837,18 @@
       "Chiquimula": 1
     },
     "Educación": {
-      "Camotán": 2,
-      "Jocotán": 2
+      "Camotán": 3,
+      "Jocotán": 3
     },
     "Protección (niñez, migrantes, víctimas de violencia)": {
-      "Camotán": 1,
-      "Jocotán": 2
+      "Camotán": 2,
+      "Jocotán": 3
     },
-    "Violencia basada en género": {}
+    "Violencia basada en género": {},
+    "Migración y movilidad humana": {
+      "Camotán": 1,
+      "Jocotán": 1
+    }
   },
   "comunidades_sin_cobertura": [
     {
@@ -3911,13 +4019,6 @@
       "municipio": "San Juan Ermita",
       "lat": 14.761523,
       "lon": -89.43696
-    },
-    {
-      "codigo_lugar": "jocotan_jocotan",
-      "lugar_poblado": "Jocotan",
-      "municipio": "Jocotán",
-      "lat": 14.819268,
-      "lon": -89.3896
     },
     {
       "codigo_lugar": "jocotan_agua_fria",
@@ -8198,8 +8299,8 @@
       "con_cantidad": true
     },
     "Municipalidades": {
-      "registros": 4,
-      "cantidad": 8,
+      "registros": 5,
+      "cantidad": 10,
       "con_cantidad": true
     },
     "Oficina Municipal de Juventud": {
@@ -8225,6 +8326,11 @@
     "Formación a Red de Derivación del Ministerio Público": {
       "registros": 1,
       "cantidad": 50,
+      "con_cantidad": true
+    },
+    "Escuelas": {
+      "registros": 1,
+      "cantidad": 13,
       "con_cantidad": true
     }
   },
@@ -8292,17 +8398,17 @@
       "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)": 1
     },
     "Alumnos / estudiantes": {
-      "Escuelas / centros educativos": 2,
+      "Escuelas / centros educativos": 3,
       "Organizaciones comunitarias / COCODES": 2,
       "COLRED (Coordinadora Local para la Reducción de Desastres)": 2
     },
     "Docentes / personal educativo": {
-      "Escuelas / centros educativos": 2,
+      "Escuelas / centros educativos": 3,
       "Organizaciones comunitarias / COCODES": 2,
       "COLRED (Coordinadora Local para la Reducción de Desastres)": 2
     },
     "Padres, madres y cuidadores": {
-      "Escuelas / centros educativos": 2,
+      "Escuelas / centros educativos": 3,
       "Organizaciones comunitarias / COCODES": 2,
       "COLRED (Coordinadora Local para la Reducción de Desastres)": 2
     },
@@ -8313,13 +8419,13 @@
     }
   },
   "inversion": {
-    "programas_con_monto": 12,
+    "programas_con_monto": 13,
     "programas_sin_monto": 0,
     "nota_metodologica": "La inversión se conserva como rango reportado. No se calculan puntos medios ni se distribuyen montos entre municipios o sectores."
   },
   "control": {
-    "registros_kobo": 7,
-    "programas_procesados": 12,
+    "registros_kobo": 8,
+    "programas_procesados": 13,
     "lugares_catalogo": 996,
     "lugares_con_coordenadas": 816,
     "lugares_adicionales_reportados": 0
