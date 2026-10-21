@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-21T04:44:49.915803+00:00",
+  "generado": "2026-10-21T11:47:39.285180+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -2674,71 +2674,71 @@
   },
   "matriz_sector_municipio": {
     "Desarrollo económico local": {
-      "Jocotán": 3,
-      "Olopa": 3,
       "Chiquimula": 2,
+      "Olopa": 3,
+      "Jocotán": 3,
       "Camotán": 2,
-      "Concepción las Minas": 2,
       "Esquipulas": 1,
+      "Concepción las Minas": 2,
       "Ipala": 1,
       "San Jacinto": 1
     },
     "Seguridad alimentaria y nutricional": {
-      "Jocotán": 2,
       "Camotán": 2,
+      "Jocotán": 2,
       "Chiquimula": 1,
       "Ipala": 1,
-      "Concepción las Minas": 1,
       "Olopa": 3,
       "San Jacinto": 1,
+      "Concepción las Minas": 1,
       "San Juan Ermita": 1
     },
     "Gobernanza y fortalecimiento institucional": {
-      "Jocotán": 2,
       "Camotán": 1,
+      "Jocotán": 2,
+      "Esquipulas": 1,
       "Olopa": 2,
-      "Concepción las Minas": 1,
-      "Esquipulas": 1
+      "Concepción las Minas": 1
     },
     "Ambiente y cambio climático": {
-      "Jocotán": 3,
       "Camotán": 3,
+      "Jocotán": 3,
       "Chiquimula": 1,
+      "Esquipulas": 1,
       "Olopa": 2,
-      "Concepción las Minas": 1,
-      "Esquipulas": 1
+      "Concepción las Minas": 1
     },
     "Género": {
-      "Jocotán": 3,
       "Camotán": 3,
+      "Jocotán": 3,
+      "Esquipulas": 1,
       "Olopa": 1,
-      "Concepción las Minas": 1,
-      "Esquipulas": 1
+      "Concepción las Minas": 1
     },
     "Salud": {
       "Chiquimula": 1,
-      "Jocotán": 1,
-      "Camotán": 1
+      "Camotán": 1,
+      "Jocotán": 1
     },
     "Agua y saneamiento": {
       "Chiquimula": 1,
+      "Esquipulas": 1,
       "Olopa": 3,
       "Concepción las Minas": 1,
-      "Esquipulas": 1,
       "San Juan Ermita": 1,
-      "Jocotán": 1,
-      "Camotán": 1
+      "Camotán": 1,
+      "Jocotán": 1
     },
     "Infraestructura": {
       "Chiquimula": 1
     },
     "Educación": {
-      "Jocotán": 2,
-      "Camotán": 2
+      "Camotán": 2,
+      "Jocotán": 2
     },
     "Protección (niñez, migrantes, víctimas de violencia)": {
-      "Jocotán": 2,
-      "Camotán": 1
+      "Camotán": 1,
+      "Jocotán": 2
     },
     "Violencia basada en género": {}
   },
