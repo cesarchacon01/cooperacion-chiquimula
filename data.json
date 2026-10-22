@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-21T21:41:53.254755+00:00",
+  "generado": "2026-10-22T04:42:58.332137+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -2778,9 +2778,9 @@
   },
   "matriz_sector_municipio": {
     "Desarrollo económico local": {
-      "Chiquimula": 2,
-      "Olopa": 3,
       "Jocotán": 4,
+      "Olopa": 3,
+      "Chiquimula": 2,
       "Camotán": 3,
       "Concepción las Minas": 2,
       "Esquipulas": 1,
@@ -2792,9 +2792,9 @@
       "Jocotán": 2,
       "Chiquimula": 1,
       "Concepción las Minas": 1,
-      "Olopa": 3,
       "Ipala": 1,
       "San Jacinto": 1,
+      "Olopa": 3,
       "San Juan Ermita": 1
     },
     "Gobernanza y fortalecimiento institucional": {
