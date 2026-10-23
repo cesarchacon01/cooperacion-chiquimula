@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-22T21:34:41.436196+00:00",
+  "generado": "2026-10-23T04:47:41.776712+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -3063,9 +3063,9 @@
   },
   "matriz_sector_municipio": {
     "Desarrollo económico local": {
-      "Olopa": 3,
-      "Jocotán": 5,
       "Chiquimula": 2,
+      "Jocotán": 5,
+      "Olopa": 3,
       "Camotán": 3,
       "Concepción las Minas": 2,
       "Esquipulas": 1,
@@ -3077,33 +3077,33 @@
       "Camotán": 3,
       "Jocotán": 4,
       "Chiquimula": 1,
-      "Olopa": 3,
-      "Concepción las Minas": 2,
       "Ipala": 1,
+      "Concepción las Minas": 2,
+      "Olopa": 3,
       "San Jacinto": 1,
       "San Juan Ermita": 3
     },
     "Gobernanza y fortalecimiento institucional": {
       "Camotán": 2,
       "Jocotán": 3,
-      "Olopa": 2,
       "Concepción las Minas": 2,
+      "Olopa": 2,
       "Esquipulas": 1
     },
     "Ambiente y cambio climático": {
       "Camotán": 5,
       "Jocotán": 6,
       "Chiquimula": 1,
-      "Olopa": 2,
       "Concepción las Minas": 2,
+      "Olopa": 2,
       "Esquipulas": 1,
       "San Juan Ermita": 2
     },
     "Género": {
       "Camotán": 4,
       "Jocotán": 5,
-      "Olopa": 1,
       "Concepción las Minas": 2,
+      "Olopa": 1,
       "Esquipulas": 1,
       "San Juan Ermita": 2
     },
@@ -3115,8 +3115,8 @@
     },
     "Agua y saneamiento": {
       "Chiquimula": 1,
-      "Olopa": 3,
       "Concepción las Minas": 1,
+      "Olopa": 3,
       "Esquipulas": 1,
       "San Juan Ermita": 3,
       "Camotán": 1,
@@ -3124,9 +3124,9 @@
     },
     "Infraestructura": {
       "Chiquimula": 1,
+      "Jocotán": 1,
       "Camotán": 1,
-      "Concepción las Minas": 1,
-      "Jocotán": 1
+      "Concepción las Minas": 1
     },
     "Educación": {
       "Camotán": 3,
