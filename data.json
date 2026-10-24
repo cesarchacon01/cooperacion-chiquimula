@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-24T15:56:19.953858+00:00",
+  "generado": "2026-10-24T20:48:06.297563+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -3124,8 +3124,8 @@
     },
     "Infraestructura": {
       "Chiquimula": 1,
-      "Concepción las Minas": 1,
       "Jocotán": 1,
+      "Concepción las Minas": 1,
       "Camotán": 1
     },
     "Educación": {
