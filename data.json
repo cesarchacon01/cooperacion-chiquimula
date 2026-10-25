@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-24T20:48:06.297563+00:00",
+  "generado": "2026-10-25T04:39:51.615527+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -3063,8 +3063,8 @@
   },
   "matriz_sector_municipio": {
     "Desarrollo económico local": {
-      "Chiquimula": 2,
       "Jocotán": 5,
+      "Chiquimula": 2,
       "Olopa": 3,
       "Camotán": 3,
       "Concepción las Minas": 2,
@@ -3124,8 +3124,8 @@
     },
     "Infraestructura": {
       "Chiquimula": 1,
-      "Jocotán": 1,
       "Concepción las Minas": 1,
+      "Jocotán": 1,
       "Camotán": 1
     },
     "Educación": {
