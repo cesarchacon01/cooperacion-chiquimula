@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-26T04:45:22.046918+00:00",
+  "generado": "2026-10-26T13:00:22.613046+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -3063,12 +3063,12 @@
   },
   "matriz_sector_municipio": {
     "Desarrollo económico local": {
-      "Jocotán": 5,
-      "Olopa": 3,
       "Chiquimula": 2,
+      "Olopa": 3,
+      "Jocotán": 5,
       "Camotán": 3,
-      "Concepción las Minas": 2,
       "Esquipulas": 1,
+      "Concepción las Minas": 2,
       "San Jacinto": 1,
       "Ipala": 1,
       "San Juan Ermita": 1
@@ -3078,33 +3078,33 @@
       "Jocotán": 4,
       "Chiquimula": 1,
       "San Jacinto": 1,
-      "Concepción las Minas": 2,
-      "Ipala": 1,
       "Olopa": 3,
+      "Ipala": 1,
+      "Concepción las Minas": 2,
       "San Juan Ermita": 3
     },
     "Gobernanza y fortalecimiento institucional": {
       "Camotán": 2,
       "Jocotán": 3,
-      "Concepción las Minas": 2,
+      "Esquipulas": 1,
       "Olopa": 2,
-      "Esquipulas": 1
+      "Concepción las Minas": 2
     },
     "Ambiente y cambio climático": {
       "Camotán": 5,
       "Jocotán": 6,
       "Chiquimula": 1,
-      "Concepción las Minas": 2,
-      "Olopa": 2,
       "Esquipulas": 1,
+      "Olopa": 2,
+      "Concepción las Minas": 2,
       "San Juan Ermita": 2
     },
     "Género": {
       "Camotán": 4,
       "Jocotán": 5,
-      "Concepción las Minas": 2,
-      "Olopa": 1,
       "Esquipulas": 1,
+      "Olopa": 1,
+      "Concepción las Minas": 2,
       "San Juan Ermita": 2
     },
     "Salud": {
@@ -3115,18 +3115,18 @@
     },
     "Agua y saneamiento": {
       "Chiquimula": 1,
-      "Concepción las Minas": 1,
-      "Olopa": 3,
       "Esquipulas": 1,
+      "Olopa": 3,
+      "Concepción las Minas": 1,
       "San Juan Ermita": 3,
       "Camotán": 1,
       "Jocotán": 2
     },
     "Infraestructura": {
       "Chiquimula": 1,
-      "Concepción las Minas": 1,
+      "Jocotán": 1,
       "Camotán": 1,
-      "Jocotán": 1
+      "Concepción las Minas": 1
     },
     "Educación": {
       "Camotán": 3,
