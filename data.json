@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-27T22:12:46.630498+00:00",
+  "generado": "2026-10-28T05:41:03.897668+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -2600,6 +2600,55 @@
         "Jocotán"
       ],
       "comunidades": []
+    },
+    {
+      "organizacion": "Organización de las Naciones Unidas para Alimentación y Agricultura -FAO-",
+      "tipo_actor": "Cooperación multilateral",
+      "trabajo_comunitario": "Sí",
+      "pais_origen": "",
+      "contacto": "Walter José Aristondo Martinez",
+      "nombre_programa": "Fortalecimiento de Capacidades para el Manejo Integral del Fuego en el Corredor Seco Centroamericano",
+      "tipo_atencion": "Emergencia / respuesta humanitaria",
+      "sector": [
+        "Seguridad alimentaria y nutricional",
+        "Ambiente y cambio climático",
+        "Gobernanza y fortalecimiento institucional",
+        "Reducción de riesgo ante desastres"
+      ],
+      "modalidad": [
+        "Asistencia técnica",
+        "Donación en especie",
+        "Fortalecimiento institucional"
+      ],
+      "fecha_inicio": "2025-06-30",
+      "tipo_duracion": "Sí, tiene fecha de finalización definida",
+      "fecha_fin": "2027-05-31",
+      "duracion_aproximada": "",
+      "estado_programa": "En ejecución",
+      "contraparte_gubernamental": "Municipalidad, SE-CONRED, INAB, CRUZ ROJA GUATEMALTECA.",
+      "monto_rango": "Q2,000,000 – Q10,000,000",
+      "monto_rango_codigo": "2m_10m",
+      "fuente_financiamiento": [
+        "Donante internacional"
+      ],
+      "espacios_coordinacion": [
+        "Mesa de Cooperación",
+        "COMUSAN",
+        "Mesa Técnica Agroclimática",
+        "COE (Coordinadora/Comité de Emergencia)",
+        "Cuadrillas Municipales contra Incendios"
+      ],
+      "disposicion_coordinar": "Sí",
+      "beneficiarios_institucionales": {
+        "Municipalidades": 3,
+        "Oficina Municipal de Gestión Integral de Riesgo de Desastres (GIRD)": 3
+      },
+      "municipios_cobertura_institucional": [
+        "Chiquimula",
+        "San José la Arada",
+        "San Juan Ermita"
+      ],
+      "comunidades": []
     }
   ],
   "municipios": [
@@ -2686,22 +2735,25 @@
     "Chiquimula": {
       "organizaciones": [
         "Asociación de Servicios y Desarrollo Socioeconómico de Chiquimula -ASEDECHI-",
-        "Asociación santiago Jocotán, ONG"
+        "Asociación santiago Jocotán, ONG",
+        "Organización de las Naciones Unidas para Alimentación y Agricultura -FAO-"
       ],
-      "total_programas": 2,
+      "total_programas": 3,
       "comunidades_cubiertas": 3,
       "comunidades_total_catalogo": 124,
       "inversion_estimada": 0,
       "sectores": {
         "Desarrollo económico local": 2,
         "Salud": 1,
-        "Seguridad alimentaria y nutricional": 1,
+        "Seguridad alimentaria y nutricional": 2,
         "Agua y saneamiento": 1,
-        "Ambiente y cambio climático": 1,
-        "Infraestructura": 1
+        "Ambiente y cambio climático": 2,
+        "Infraestructura": 1,
+        "Gobernanza y fortalecimiento institucional": 1,
+        "Reducción de riesgo ante desastres": 1
       },
       "estado": {
-        "En ejecución": 1,
+        "En ejecución": 2,
         "Próximo a finalizar": 1
       },
       "instituciones": {
@@ -2709,11 +2761,21 @@
           "registros": 1,
           "cantidad": 1,
           "con_cantidad": true
+        },
+        "Municipalidades": {
+          "registros": 1,
+          "cantidad": 3,
+          "con_cantidad": true
+        },
+        "Oficina Municipal de Gestión Integral de Riesgo de Desastres (GIRD)": {
+          "registros": 1,
+          "cantidad": 3,
+          "con_cantidad": true
         }
       },
       "fuente_financiamiento": {
         "Fondos propios": 1,
-        "Donante internacional": 1
+        "Donante internacional": 2
       },
       "lugares_adicionales_reportados": 0
     },
@@ -2977,45 +3039,69 @@
       "lugares_adicionales_reportados": 0
     },
     "San José la Arada": {
-      "organizaciones": [],
-      "total_programas": 0,
+      "organizaciones": [
+        "Organización de las Naciones Unidas para Alimentación y Agricultura -FAO-"
+      ],
+      "total_programas": 1,
       "comunidades_cubiertas": 0,
       "comunidades_total_catalogo": 46,
       "inversion_estimada": 0,
-      "sectores": {},
-      "estado": {},
-      "instituciones": {},
-      "fuente_financiamiento": {},
+      "sectores": {
+        "Seguridad alimentaria y nutricional": 1,
+        "Ambiente y cambio climático": 1,
+        "Gobernanza y fortalecimiento institucional": 1,
+        "Reducción de riesgo ante desastres": 1
+      },
+      "estado": {
+        "En ejecución": 1
+      },
+      "instituciones": {
+        "Municipalidades": {
+          "registros": 1,
+          "cantidad": 3,
+          "con_cantidad": true
+        },
+        "Oficina Municipal de Gestión Integral de Riesgo de Desastres (GIRD)": {
+          "registros": 1,
+          "cantidad": 3,
+          "con_cantidad": true
+        }
+      },
+      "fuente_financiamiento": {
+        "Donante internacional": 1
+      },
       "lugares_adicionales_reportados": 0
     },
     "San Juan Ermita": {
       "organizaciones": [
         "Asociación Regional Campesina Ch'ortí' -ASORECH-",
+        "Organización de las Naciones Unidas para Alimentación y Agricultura -FAO-",
         "World Vision"
       ],
-      "total_programas": 3,
+      "total_programas": 4,
       "comunidades_cubiertas": 3,
       "comunidades_total_catalogo": 50,
       "inversion_estimada": 0,
       "sectores": {
-        "Seguridad alimentaria y nutricional": 3,
+        "Seguridad alimentaria y nutricional": 4,
         "Agua y saneamiento": 3,
         "Educación": 1,
         "Salud": 2,
-        "Ambiente y cambio climático": 2,
-        "Reducción de riesgo ante desastres": 1,
+        "Ambiente y cambio climático": 3,
+        "Reducción de riesgo ante desastres": 2,
         "Desarrollo económico local": 1,
         "Género": 2,
         "Protección (niñez, migrantes, víctimas de violencia)": 2,
-        "Migración y movilidad humana": 1
+        "Migración y movilidad humana": 1,
+        "Gobernanza y fortalecimiento institucional": 1
       },
       "estado": {
-        "En ejecución": 3
+        "En ejecución": 4
       },
       "instituciones": {
         "Municipalidades": {
-          "registros": 2,
-          "cantidad": 3,
+          "registros": 3,
+          "cantidad": 6,
           "con_cantidad": true
         },
         "Centros o puestos de salud": {
@@ -3044,8 +3130,8 @@
           "con_cantidad": true
         },
         "Oficina Municipal de Gestión Integral de Riesgo de Desastres (GIRD)": {
-          "registros": 1,
-          "cantidad": 1,
+          "registros": 2,
+          "cantidad": 4,
           "con_cantidad": true
         },
         "Oficina/Dirección Municipal de Seguridad Alimentaria y Nutricional (SAN)": {
@@ -3055,7 +3141,7 @@
         }
       },
       "fuente_financiamiento": {
-        "Donante internacional": 2,
+        "Donante internacional": 3,
         "Fondos propios": 2
       },
       "lugares_adicionales_reportados": 0
@@ -3063,8 +3149,8 @@
   },
   "matriz_sector_municipio": {
     "Desarrollo económico local": {
-      "Jocotán": 5,
       "Chiquimula": 2,
+      "Jocotán": 5,
       "Olopa": 3,
       "Camotán": 3,
       "Concepción las Minas": 2,
@@ -3076,28 +3162,33 @@
     "Seguridad alimentaria y nutricional": {
       "Jocotán": 4,
       "Camotán": 3,
-      "Chiquimula": 1,
-      "San Jacinto": 1,
+      "Chiquimula": 2,
       "Concepción las Minas": 2,
-      "Olopa": 3,
+      "San Jacinto": 1,
       "Ipala": 1,
-      "San Juan Ermita": 3
+      "Olopa": 3,
+      "San Juan Ermita": 4,
+      "San José la Arada": 1
     },
     "Gobernanza y fortalecimiento institucional": {
       "Jocotán": 3,
       "Camotán": 2,
       "Concepción las Minas": 2,
       "Esquipulas": 1,
-      "Olopa": 2
+      "Olopa": 2,
+      "Chiquimula": 1,
+      "San Juan Ermita": 1,
+      "San José la Arada": 1
     },
     "Ambiente y cambio climático": {
       "Jocotán": 6,
       "Camotán": 5,
-      "Chiquimula": 1,
+      "Chiquimula": 2,
       "Concepción las Minas": 2,
       "Esquipulas": 1,
       "Olopa": 2,
-      "San Juan Ermita": 2
+      "San Juan Ermita": 3,
+      "San José la Arada": 1
     },
     "Género": {
       "Jocotán": 5,
@@ -3124,8 +3215,8 @@
     },
     "Infraestructura": {
       "Chiquimula": 1,
-      "Jocotán": 1,
       "Concepción las Minas": 1,
+      "Jocotán": 1,
       "Camotán": 1
     },
     "Educación": {
@@ -3146,7 +3237,9 @@
     },
     "Reducción de riesgo ante desastres": {
       "Jocotán": 1,
-      "San Juan Ermita": 1
+      "San Juan Ermita": 2,
+      "Chiquimula": 1,
+      "San José la Arada": 1
     }
   },
   "comunidades_sin_cobertura": [
@@ -8588,8 +8681,8 @@
       "con_cantidad": true
     },
     "Oficina Municipal de Gestión Integral de Riesgo de Desastres (GIRD)": {
-      "registros": 3,
-      "cantidad": 4,
+      "registros": 4,
+      "cantidad": 7,
       "con_cantidad": true
     },
     "Centros o puestos de salud": {
@@ -8598,8 +8691,8 @@
       "con_cantidad": true
     },
     "Municipalidades": {
-      "registros": 8,
-      "cantidad": 20,
+      "registros": 9,
+      "cantidad": 23,
       "con_cantidad": true
     },
     "Oficina Municipal de Juventud": {
@@ -8728,13 +8821,13 @@
     }
   },
   "inversion": {
-    "programas_con_monto": 17,
+    "programas_con_monto": 18,
     "programas_sin_monto": 0,
     "nota_metodologica": "La inversión se conserva como rango reportado. No se calculan puntos medios ni se distribuyen montos entre municipios o sectores."
   },
   "control": {
-    "registros_kobo": 10,
-    "programas_procesados": 17,
+    "registros_kobo": 11,
+    "programas_procesados": 18,
     "lugares_catalogo": 996,
     "lugares_con_coordenadas": 816,
     "lugares_adicionales_reportados": 0
