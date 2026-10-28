@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-28T12:52:46.454521+00:00",
+  "generado": "2026-10-28T22:34:16.416612+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -3149,9 +3149,9 @@
   },
   "matriz_sector_municipio": {
     "Desarrollo económico local": {
-      "Jocotán": 5,
-      "Olopa": 3,
       "Chiquimula": 2,
+      "Olopa": 3,
+      "Jocotán": 5,
       "Camotán": 3,
       "Concepción las Minas": 2,
       "Esquipulas": 1,
@@ -3163,9 +3163,9 @@
       "Jocotán": 4,
       "Camotán": 3,
       "Chiquimula": 2,
+      "Concepción las Minas": 2,
       "Olopa": 3,
       "Ipala": 1,
-      "Concepción las Minas": 2,
       "San Jacinto": 1,
       "San Juan Ermita": 4,
       "San José la Arada": 1
@@ -3176,9 +3176,9 @@
       "Concepción las Minas": 2,
       "Olopa": 2,
       "Esquipulas": 1,
-      "San José la Arada": 1,
+      "Chiquimula": 1,
       "San Juan Ermita": 1,
-      "Chiquimula": 1
+      "San José la Arada": 1
     },
     "Ambiente y cambio climático": {
       "Jocotán": 6,
@@ -3215,8 +3215,8 @@
     },
     "Infraestructura": {
       "Chiquimula": 1,
-      "Jocotán": 1,
       "Concepción las Minas": 1,
+      "Jocotán": 1,
       "Camotán": 1
     },
     "Educación": {
@@ -3238,8 +3238,8 @@
     "Reducción de riesgo ante desastres": {
       "Jocotán": 1,
       "San Juan Ermita": 2,
-      "San José la Arada": 1,
-      "Chiquimula": 1
+      "Chiquimula": 1,
+      "San José la Arada": 1
     }
   },
   "comunidades_sin_cobertura": [
