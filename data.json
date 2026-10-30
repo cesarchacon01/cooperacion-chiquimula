@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-30T12:53:28.997259+00:00",
+  "generado": "2026-10-30T22:18:31.461462+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -3149,12 +3149,12 @@
   },
   "matriz_sector_municipio": {
     "Desarrollo económico local": {
-      "Olopa": 3,
       "Chiquimula": 2,
       "Jocotán": 5,
+      "Olopa": 3,
       "Camotán": 3,
-      "Esquipulas": 1,
       "Concepción las Minas": 2,
+      "Esquipulas": 1,
       "San Jacinto": 1,
       "Ipala": 1,
       "San Juan Ermita": 1
@@ -3165,37 +3165,37 @@
       "Chiquimula": 2,
       "San Jacinto": 1,
       "Ipala": 1,
-      "Olopa": 3,
       "Concepción las Minas": 2,
+      "Olopa": 3,
       "San Juan Ermita": 4,
       "San José la Arada": 1
     },
     "Gobernanza y fortalecimiento institucional": {
       "Camotán": 2,
       "Jocotán": 3,
-      "Olopa": 2,
-      "Esquipulas": 1,
       "Concepción las Minas": 2,
-      "San Juan Ermita": 1,
+      "Esquipulas": 1,
+      "Olopa": 2,
       "Chiquimula": 1,
-      "San José la Arada": 1
+      "San José la Arada": 1,
+      "San Juan Ermita": 1
     },
     "Ambiente y cambio climático": {
       "Camotán": 5,
       "Jocotán": 6,
       "Chiquimula": 2,
-      "Olopa": 2,
-      "Esquipulas": 1,
       "Concepción las Minas": 2,
+      "Esquipulas": 1,
+      "Olopa": 2,
       "San Juan Ermita": 3,
       "San José la Arada": 1
     },
     "Género": {
       "Camotán": 4,
       "Jocotán": 5,
-      "Olopa": 1,
-      "Esquipulas": 1,
       "Concepción las Minas": 2,
+      "Esquipulas": 1,
+      "Olopa": 1,
       "San Juan Ermita": 2
     },
     "Salud": {
@@ -3206,17 +3206,17 @@
     },
     "Agua y saneamiento": {
       "Chiquimula": 1,
-      "Olopa": 3,
-      "Esquipulas": 1,
       "Concepción las Minas": 1,
+      "Esquipulas": 1,
+      "Olopa": 3,
       "San Juan Ermita": 3,
       "Camotán": 1,
       "Jocotán": 2
     },
     "Infraestructura": {
       "Chiquimula": 1,
-      "Jocotán": 1,
       "Camotán": 1,
+      "Jocotán": 1,
       "Concepción las Minas": 1
     },
     "Educación": {
