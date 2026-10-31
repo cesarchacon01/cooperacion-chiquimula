@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-31T05:38:50.655890+00:00",
+  "generado": "2026-10-31T12:26:24.999176+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -3149,40 +3149,40 @@
   },
   "matriz_sector_municipio": {
     "Desarrollo económico local": {
-      "Chiquimula": 2,
-      "Olopa": 3,
       "Jocotán": 5,
+      "Olopa": 3,
+      "Chiquimula": 2,
       "Camotán": 3,
       "Concepción las Minas": 2,
       "Esquipulas": 1,
-      "San Jacinto": 1,
       "Ipala": 1,
+      "San Jacinto": 1,
       "San Juan Ermita": 1
     },
     "Seguridad alimentaria y nutricional": {
-      "Camotán": 3,
       "Jocotán": 4,
+      "Camotán": 3,
       "Chiquimula": 2,
-      "San Jacinto": 1,
       "Ipala": 1,
-      "Concepción las Minas": 2,
       "Olopa": 3,
+      "Concepción las Minas": 2,
+      "San Jacinto": 1,
       "San Juan Ermita": 4,
       "San José la Arada": 1
     },
     "Gobernanza y fortalecimiento institucional": {
-      "Camotán": 2,
       "Jocotán": 3,
+      "Camotán": 2,
       "Concepción las Minas": 2,
       "Olopa": 2,
       "Esquipulas": 1,
-      "Chiquimula": 1,
       "San Juan Ermita": 1,
-      "San José la Arada": 1
+      "San José la Arada": 1,
+      "Chiquimula": 1
     },
     "Ambiente y cambio climático": {
-      "Camotán": 5,
       "Jocotán": 6,
+      "Camotán": 5,
       "Chiquimula": 2,
       "Concepción las Minas": 2,
       "Olopa": 2,
@@ -3191,8 +3191,8 @@
       "San José la Arada": 1
     },
     "Género": {
-      "Camotán": 4,
       "Jocotán": 5,
+      "Camotán": 4,
       "Concepción las Minas": 2,
       "Olopa": 1,
       "Esquipulas": 1,
@@ -3200,8 +3200,8 @@
     },
     "Salud": {
       "Chiquimula": 1,
-      "Camotán": 1,
       "Jocotán": 2,
+      "Camotán": 1,
       "San Juan Ermita": 2
     },
     "Agua y saneamiento": {
@@ -3210,36 +3210,36 @@
       "Olopa": 3,
       "Esquipulas": 1,
       "San Juan Ermita": 3,
-      "Camotán": 1,
-      "Jocotán": 2
+      "Jocotán": 2,
+      "Camotán": 1
     },
     "Infraestructura": {
       "Chiquimula": 1,
+      "Jocotán": 1,
       "Camotán": 1,
-      "Concepción las Minas": 1,
-      "Jocotán": 1
+      "Concepción las Minas": 1
     },
     "Educación": {
-      "Camotán": 3,
       "Jocotán": 4,
+      "Camotán": 3,
       "San Juan Ermita": 1
     },
     "Protección (niñez, migrantes, víctimas de violencia)": {
-      "Camotán": 2,
       "Jocotán": 4,
+      "Camotán": 2,
       "San Juan Ermita": 2
     },
     "Violencia basada en género": {},
     "Migración y movilidad humana": {
-      "Camotán": 1,
       "Jocotán": 1,
+      "Camotán": 1,
       "San Juan Ermita": 1
     },
     "Reducción de riesgo ante desastres": {
       "Jocotán": 1,
       "San Juan Ermita": 2,
-      "Chiquimula": 1,
-      "San José la Arada": 1
+      "San José la Arada": 1,
+      "Chiquimula": 1
     }
   },
   "comunidades_sin_cobertura": [
