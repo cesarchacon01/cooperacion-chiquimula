@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-06T19:23:17.324783+00:00",
+  "generado": "2026-11-07T05:56:36.515180+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -2649,6 +2649,42 @@
         "San Juan Ermita"
       ],
       "comunidades": []
+    },
+    {
+      "organizacion": "Cáritas Zacapa",
+      "tipo_actor": "Otro",
+      "trabajo_comunitario": "Sí",
+      "pais_origen": "",
+      "contacto": "Selvyn Sancé",
+      "nombre_programa": "Caminos hacia la resiliencia",
+      "tipo_atencion": "Ambas (emergencia y desarrollo)",
+      "sector": [
+        "Seguridad alimentaria y nutricional",
+        "Gobernanza y fortalecimiento institucional",
+        "Desarrollo económico local",
+        "Infraestructura"
+      ],
+      "modalidad": [
+        "Asistencia técnica"
+      ],
+      "fecha_inicio": "2024-04-01",
+      "tipo_duracion": "Sí, tiene fecha de finalización definida",
+      "fecha_fin": "2026-11-11",
+      "duracion_aproximada": "",
+      "estado_programa": "Próximo a finalizar",
+      "contraparte_gubernamental": "CRS",
+      "monto_rango": "Q10,000,000+",
+      "monto_rango_codigo": "mas_10m",
+      "fuente_financiamiento": [
+        "Donante internacional"
+      ],
+      "espacios_coordinacion": [
+        "No participa"
+      ],
+      "disposicion_coordinar": "Sí",
+      "beneficiarios_institucionales": {},
+      "municipios_cobertura_institucional": [],
+      "comunidades": []
     }
   ],
   "municipios": [
@@ -3150,39 +3186,39 @@
   "matriz_sector_municipio": {
     "Desarrollo económico local": {
       "Jocotán": 5,
-      "Olopa": 3,
       "Chiquimula": 2,
+      "Olopa": 3,
       "Camotán": 3,
       "Concepción las Minas": 2,
       "Esquipulas": 1,
-      "Ipala": 1,
       "San Jacinto": 1,
+      "Ipala": 1,
       "San Juan Ermita": 1
     },
     "Seguridad alimentaria y nutricional": {
-      "Camotán": 3,
       "Jocotán": 4,
+      "Camotán": 3,
       "Chiquimula": 2,
-      "Concepción las Minas": 2,
-      "Ipala": 1,
-      "San Jacinto": 1,
       "Olopa": 3,
+      "San Jacinto": 1,
+      "Ipala": 1,
+      "Concepción las Minas": 2,
       "San Juan Ermita": 4,
       "San José la Arada": 1
     },
     "Gobernanza y fortalecimiento institucional": {
-      "Camotán": 2,
       "Jocotán": 3,
+      "Camotán": 2,
       "Concepción las Minas": 2,
       "Olopa": 2,
       "Esquipulas": 1,
-      "San José la Arada": 1,
+      "Chiquimula": 1,
       "San Juan Ermita": 1,
-      "Chiquimula": 1
+      "San José la Arada": 1
     },
     "Ambiente y cambio climático": {
-      "Camotán": 5,
       "Jocotán": 6,
+      "Camotán": 5,
       "Chiquimula": 2,
       "Concepción las Minas": 2,
       "Olopa": 2,
@@ -3191,8 +3227,8 @@
       "San José la Arada": 1
     },
     "Género": {
-      "Camotán": 4,
       "Jocotán": 5,
+      "Camotán": 4,
       "Concepción las Minas": 2,
       "Olopa": 1,
       "Esquipulas": 1,
@@ -3200,8 +3236,8 @@
     },
     "Salud": {
       "Chiquimula": 1,
-      "Camotán": 1,
       "Jocotán": 2,
+      "Camotán": 1,
       "San Juan Ermita": 2
     },
     "Agua y saneamiento": {
@@ -3210,36 +3246,36 @@
       "Olopa": 3,
       "Esquipulas": 1,
       "San Juan Ermita": 3,
-      "Camotán": 1,
-      "Jocotán": 2
+      "Jocotán": 2,
+      "Camotán": 1
     },
     "Infraestructura": {
       "Chiquimula": 1,
-      "Camotán": 1,
+      "Jocotán": 1,
       "Concepción las Minas": 1,
-      "Jocotán": 1
+      "Camotán": 1
     },
     "Educación": {
-      "Camotán": 3,
       "Jocotán": 4,
+      "Camotán": 3,
       "San Juan Ermita": 1
     },
     "Protección (niñez, migrantes, víctimas de violencia)": {
-      "Camotán": 2,
       "Jocotán": 4,
+      "Camotán": 2,
       "San Juan Ermita": 2
     },
     "Violencia basada en género": {},
     "Migración y movilidad humana": {
-      "Camotán": 1,
       "Jocotán": 1,
+      "Camotán": 1,
       "San Juan Ermita": 1
     },
     "Reducción de riesgo ante desastres": {
       "Jocotán": 1,
       "San Juan Ermita": 2,
-      "San José la Arada": 1,
-      "Chiquimula": 1
+      "Chiquimula": 1,
+      "San José la Arada": 1
     }
   },
   "comunidades_sin_cobertura": [
@@ -8821,13 +8857,13 @@
     }
   },
   "inversion": {
-    "programas_con_monto": 18,
+    "programas_con_monto": 19,
     "programas_sin_monto": 0,
     "nota_metodologica": "La inversión se conserva como rango reportado. No se calculan puntos medios ni se distribuyen montos entre municipios o sectores."
   },
   "control": {
-    "registros_kobo": 11,
-    "programas_procesados": 18,
+    "registros_kobo": 12,
+    "programas_procesados": 19,
     "lugares_catalogo": 996,
     "lugares_con_coordenadas": 816,
     "lugares_adicionales_reportados": 0
