@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-11T06:16:21.258844+00:00",
+  "generado": "2026-11-11T14:29:15.283079+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -3185,53 +3185,53 @@
   },
   "matriz_sector_municipio": {
     "Desarrollo económico local": {
+      "Chiquimula": 2,
       "Olopa": 3,
       "Jocotán": 5,
-      "Chiquimula": 2,
       "Camotán": 3,
-      "Concepción las Minas": 2,
       "Esquipulas": 1,
-      "San Jacinto": 1,
+      "Concepción las Minas": 2,
       "Ipala": 1,
+      "San Jacinto": 1,
       "San Juan Ermita": 1
     },
     "Seguridad alimentaria y nutricional": {
       "Jocotán": 4,
       "Camotán": 3,
       "Chiquimula": 2,
-      "Concepción las Minas": 2,
-      "San Jacinto": 1,
       "Olopa": 3,
       "Ipala": 1,
+      "Concepción las Minas": 2,
+      "San Jacinto": 1,
       "San Juan Ermita": 4,
       "San José la Arada": 1
     },
     "Gobernanza y fortalecimiento institucional": {
       "Jocotán": 3,
       "Camotán": 2,
-      "Concepción las Minas": 2,
-      "Olopa": 2,
       "Esquipulas": 1,
-      "San Juan Ermita": 1,
+      "Olopa": 2,
+      "Concepción las Minas": 2,
       "Chiquimula": 1,
+      "San Juan Ermita": 1,
       "San José la Arada": 1
     },
     "Ambiente y cambio climático": {
       "Jocotán": 6,
       "Camotán": 5,
       "Chiquimula": 2,
-      "Concepción las Minas": 2,
-      "Olopa": 2,
       "Esquipulas": 1,
+      "Olopa": 2,
+      "Concepción las Minas": 2,
       "San Juan Ermita": 3,
       "San José la Arada": 1
     },
     "Género": {
       "Jocotán": 5,
       "Camotán": 4,
-      "Concepción las Minas": 2,
-      "Olopa": 1,
       "Esquipulas": 1,
+      "Olopa": 1,
+      "Concepción las Minas": 2,
       "San Juan Ermita": 2
     },
     "Salud": {
@@ -3242,9 +3242,9 @@
     },
     "Agua y saneamiento": {
       "Chiquimula": 1,
-      "Concepción las Minas": 1,
-      "Olopa": 3,
       "Esquipulas": 1,
+      "Olopa": 3,
+      "Concepción las Minas": 1,
       "San Juan Ermita": 3,
       "Jocotán": 2,
       "Camotán": 1
@@ -3252,8 +3252,8 @@
     "Infraestructura": {
       "Chiquimula": 1,
       "Concepción las Minas": 1,
-      "Camotán": 1,
-      "Jocotán": 1
+      "Jocotán": 1,
+      "Camotán": 1
     },
     "Educación": {
       "Jocotán": 4,
