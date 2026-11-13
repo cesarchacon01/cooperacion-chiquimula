@@ -4078,5 +4078,44 @@
     "lat": 14.676556,
     "lon": -89.62241,
     "fuente": "INE Censo 2018"
-  }
+  },
+  "san_jacinto_san_nicolas": {
+    "lat": 14.650511,
+    "lon": -89.531711,
+    "fuente": "GeoNames (San Nicolás, Municipio de San Jacinto)"
+  },
+  "san_jacinto_los_galvez": {
+    "lat": 14.686539,
+    "lon": -89.519819,
+    "fuente": "GeoNames (Los Gálvez, Municipio de San Jacinto)"
+  },
+  "san_jacinto_valle_de_los_martinez": {
+    "lat": 14.727489,
+    "lon": -89.468769,
+    "fuente": "GeoNames (Valle de Los Martínez, Municipio de San Jacinto)"
+  },
+  "san_jacinto_laguneta_del_carrizo": {
+    "lat": 14.656,
+    "lon": -89.4935,
+    "fuente": "Sin coordenada propia publicada. Se ubica junto a la aldea El Carrizal de San Jacinto (INE Censo 2018), por la similitud del nombre."  },
+  "san_jacinto_los_roque_zapote": {
+    "lat": 14.659,
+    "lon": -89.5508,
+    "fuente": "Sin coordenada propia publicada. Se ubica junto a la aldea El Zapote de San Jacinto (INE Censo 2018), por la similitud del nombre."  },
+  "san_jacinto_los_cruz": {
+    "lat": 14.679489,
+    "lon": -89.486689,
+    "fuente": "Sin coordenada propia publicada. Se usa la del lugar Las Cruces de San Jacinto (GeoNames), por la similitud del nombre; puede no ser el mismo lugar."  },
+  "san_jacinto_los_linares": {
+    "lat": 14.6868,
+    "lon": -89.513,
+    "fuente": "Sin coordenada propia publicada ni lugar de referencia. Se ubica cerca del centro del municipio de San Jacinto."  },
+  "san_jacinto_sandoval": {
+    "lat": 14.6868,
+    "lon": -89.507,
+    "fuente": "Sin coordenada propia publicada ni lugar de referencia. Se ubica cerca del centro del municipio de San Jacinto."  },
+  "san_jacinto_lomas_abajo": {
+    "lat": 14.6672,
+    "lon": -89.5272,
+    "fuente": "Sin coordenada propia publicada. Se ubica junto a la aldea Las Lomas de San Jacinto (INE Censo 2018; OpenStreetMap), por la similitud del nombre."  }
 }

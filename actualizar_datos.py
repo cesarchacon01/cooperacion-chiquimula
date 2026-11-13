@@ -60,6 +60,9 @@ COORDS=cargar_coordenadas()
 
 def coord_for(code):
     c=COORDS.get(code,{})
+    # Las coordenadas marcadas como "aproximada" no cuentan como georreferenciación:
+    # el visor las usa solo para dibujar el punto con borde punteado.
+    if c.get('aproximada'): return None, None
     return c.get('lat'), c.get('lon')
 
 def api_get(url, token):
@@ -79,7 +82,65 @@ def descargar():
     resultados=[r for r in resultados if not find_value(r,'_deleted_at',None)]
     return resultados
 
-def programa_desde(rep, actor):
+# Diagnóstico de lugares: se imprime en el registro de la tarea y se resume en data.json.
+RECUPERADOS=[]      # lugares hallados fuera del campo estándar
+SIN_LUGARES=[]      # programas con trabajo comunitario que llegan sin lugares
+
+def codigos_en(obj):
+    """Busca códigos del catálogo de lugares en cualquier campo de un envío.
+
+    Sirve de red de seguridad: si el formulario cambió el nombre del grupo o del
+    campo, o si los lugares vienen como selección múltiple, se recuperan igual.
+    Devuelve pares (codigo, nombre_del_campo)."""
+    hallados=[]
+    def recorrer(o, campo):
+        if isinstance(o,dict):
+            for k,v in o.items(): recorrer(v, k.split('/')[-1])
+        elif isinstance(o,list):
+            for v in o: recorrer(v, campo)
+        elif isinstance(o,str):
+            partes=o.split()
+            if partes and all(t in LUGARES for t in partes):
+                hallados.extend((t,campo) for t in partes)
+    recorrer(obj,'')
+    return hallados
+
+def comunidad_minima(code):
+    """Lugar del catálogo sin detalle de población ni acciones (dato recuperado)."""
+    meta=LUGARES.get(code,{})
+    lat,lon=coord_for(code)
+    return {'codigo_lugar':code,'lugar_poblado':meta.get('lugar_poblado') or code,'municipio':label('municipios',meta.get('municipio_codigo','')),'clasificacion':meta.get('clasificacion'),'viviendas_catalogo':meta.get('viviendas'),'lat':lat,'lon':lon,'fuera_catalogo':False,'estado_validacion':'Catálogo territorial','referencia_lugar':'','poblacion_meta':[],'datos_cuantitativos_poblacion':'','pm_cantidades':{},'poblacion_total_estimada':None,'accion_comunidad':[],'ac_cantidades':{},'etnia':[],'grupo_etario':[],'area':''}
+
+def valor_grupo(rep, nombre):
+    """Valor de una pregunta común del modo "varias comunidades a la vez".
+
+    Esas preguntas viven en el programa (no en cada lugar) y su nombre lleva un
+    prefijo o sufijo sobre el nombre base (p. ej. g_poblacion_meta). Se busca solo
+    entre los campos directos del programa, nunca dentro de bloques repetidos."""
+    exacto=None; candidato=None
+    for k,v in rep.items():
+        if isinstance(v,(list,dict)): continue
+        corto=k.split('/')[-1]
+        if corto=='g_'+nombre: return v
+        if corto==nombre: exacto=v
+        elif candidato is None and (corto.endswith('_'+nombre) or re.fullmatch(nombre+r'_(g|grupo|varias|multi)\w*',corto)): candidato=v
+    return candidato if candidato not in (None,'') else (exacto if exacto is not None else '')
+
+def campos_de_lugar(obj):
+    """Nombres de campos que parecen referirse a lugares (solo nombres, sin valores)."""
+    nombres=set()
+    def recorrer(o):
+        if isinstance(o,dict):
+            for k,v in o.items():
+                corto=k.split('/')[-1]
+                if re.search(r'lugar|comun|cobert|aldea|caser|territ',corto,re.I): nombres.add(corto+(' [lista]' if isinstance(v,list) else ''))
+                recorrer(v)
+        elif isinstance(o,list):
+            for v in o: recorrer(v)
+    recorrer(obj)
+    return sorted(nombres)
+
+def programa_desde(rep, actor, extra=None):
     trabajo_comunitario=label('si_no',find_value(rep,'trabajo_comunitario',''))
     sectores=labels('sector',find_value(rep,'sector',''))
     if find_value(rep,'sector_otro'):
@@ -99,8 +160,51 @@ def programa_desde(rep, actor):
             otro=str(find_value(rep,'beneficiarios_institucionales_otro','Otro')); inst_counts[otro]=num(find_value(rep,'bi_cant_otro'))
         else: inst_counts[x]=num(find_value(rep,inst_code_to_field.get(x,''))) if inst_code_to_field.get(x) else 0
     comunidades=[]
+    # Un mismo bloque puede traer varios lugares si el campo es de selección múltiple:
+    # se separa en un lugar por código. Los bloques sin lugar se omiten.
+    bloques=[]
     for c in find_repeat(rep,'cobertura_comunidad'):
-        code=str(find_value(c,'lugar_poblado','') or '')
+        crudo=str(find_value(c,'lugar_poblado','') or '').strip()
+        partes=crudo.split()
+        if not crudo: continue
+        if crudo not in LUGARES and len(partes)>1 and all(t in LUGARES for t in partes): bloques.extend((c,t) for t in partes)
+        else: bloques.append((c,crudo))
+
+    # Modo "Varias comunidades a la vez" del formulario: los lugares se marcan en una
+    # sola pregunta del programa, la población y las acciones son comunes a todos, y
+    # las cantidades van en el bloque repetido "cantidades_grupo" (un ítem por lugar,
+    # con el código en g_lugar_i). Antes este modo no se leía y esos programas
+    # quedaban sin comunidades en el mapa.
+    comunes={n:valor_grupo(rep,n) for n in ('poblacion_meta','poblacion_meta_otro','datos_cuantitativos_poblacion','accion_comunidad','accion_comunidad_otro','accion_comunidad_agropecuaria_otro','etnia','grupo_etario','area')}
+    for g in find_repeat(rep,'cantidades_grupo'):
+        code=str(find_value(g,'g_lugar_i','') or '').strip()
+        if not code: continue
+        sintetico=dict(comunes)
+        for k,v in g.items():
+            if isinstance(v,(list,dict)): continue
+            corto=k.split('/')[-1]
+            if corto.startswith('g_'): corto=corto[2:]
+            sintetico[corto]=v
+            m=re.search(r'(pm|ac)_cant_.+$',corto)      # p. ej. g2_pm_cant_mujeres -> pm_cant_mujeres
+            if m: sintetico[m.group(0)]=v
+        sintetico['lugar_poblado']=code
+        bloques.append((sintetico,code))
+    # Lugares marcados en campos del programa que no llegaron por ninguno de los dos bloques.
+    vistos={code for _,code in bloques}
+    for code,campo in codigos_en({k:v for k,v in rep.items() if not isinstance(v,(list,dict))}):
+        if code in vistos: continue
+        vistos.add(code); sintetico=dict(comunes); sintetico['lugar_poblado']=code
+        bloques.append((sintetico,code))
+        RECUPERADOS.append({'organizacion':actor['organizacion'],'programa':str(find_value(rep,'nombre_programa','') or ''),'codigo_lugar':code,'campo':campo})
+    # Un mismo lugar no se repite dentro del programa (salvo los "otros", que se distinguen por nombre).
+    unicos=[]; repetidos=set()
+    for c,code in bloques:
+        if code!='otro_lugar_no_lista':
+            if code in repetidos: continue
+            repetidos.add(code)
+        unicos.append((c,code))
+    bloques=unicos
+    for c,code in bloques:
         es_adicional=(code=='otro_lugar_no_lista')
         if es_adicional:
             muni_codigo=str(find_value(c,'otro_lugar_municipio','') or '')
@@ -147,6 +251,15 @@ def programa_desde(rep, actor):
         valores_cuantificados=[v for v in cantidades.values() if isinstance(v,(int,float))]
         poblacion_total_estimada=max(valores_cuantificados) if valores_cuantificados else None
         comunidades.append({'codigo_lugar':codigo_registro,'lugar_poblado':lugar,'municipio':muni,'clasificacion':meta.get('clasificacion'),'viviendas_catalogo':meta.get('viviendas'),'lat':lat,'lon':lon,'fuera_catalogo':es_adicional,'estado_validacion':'Pendiente de validación' if es_adicional else 'Catálogo territorial','referencia_lugar':referencia,'poblacion_meta':pob,'datos_cuantitativos_poblacion':datos_cuantitativos,'pm_cantidades':cantidades,'poblacion_total_estimada':poblacion_total_estimada,'accion_comunidad':acciones,'ac_cantidades':ac_counts,'etnia':labels('etnia',find_value(c,'etnia','')),'grupo_etario':labels('grupo_etario',find_value(c,'grupo_etario','')),'area':label('area',find_value(c,'area',''))})
+    # Red de seguridad: lugares del catálogo presentes en otros campos del envío.
+    ya={c['codigo_lugar'] for c in comunidades}
+    nombre_prog=str(find_value(rep,'nombre_programa','') or '')
+    for code,campo in codigos_en(rep)+(codigos_en(extra) if extra is not None else []):
+        if code in ya: continue
+        ya.add(code); comunidades.append(comunidad_minima(code))
+        RECUPERADOS.append({'organizacion':actor['organizacion'],'programa':nombre_prog,'codigo_lugar':code,'campo':campo})
+    if trabajo_comunitario=='Sí' and not comunidades:
+        SIN_LUGARES.append({'organizacion':actor['organizacion'],'programa':nombre_prog,'campos_de_lugar':campos_de_lugar(extra if extra is not None else rep)})
     return {'organizacion':actor['organizacion'],'tipo_actor':actor['tipo_actor'],'trabajo_comunitario':trabajo_comunitario,'pais_origen':actor['pais_origen'],'contacto':actor['contacto'],'nombre_programa':str(find_value(rep,'nombre_programa','')),'tipo_atencion':label('tipo_atencion',find_value(rep,'tipo_atencion','')),'sector':sectores,'modalidad':modalidad,'fecha_inicio':str(find_value(rep,'fecha_inicio','') or ''),'tipo_duracion':label('tipo_duracion',find_value(rep,'tipo_duracion','')),'fecha_fin':str(find_value(rep,'fecha_fin','') or ''),'duracion_aproximada':str(find_value(rep,'duracion_aproximada_texto','') or ''),'estado_programa':label('estado_programa',find_value(rep,'estado_programa','')),'contraparte_gubernamental':str(find_value(rep,'contraparte_gubernamental','') or ''),'monto_rango':label('monto_rango',find_value(rep,'monto_rango','')),'monto_rango_codigo':str(find_value(rep,'monto_rango','') or ''),'fuente_financiamiento':fuentes,'espacios_coordinacion':labels('espacios_coordinacion',find_value(rep,'espacios_coordinacion','')),'disposicion_coordinar':label('disposicion_coordinar',find_value(rep,'disposicion_coordinar','')),'beneficiarios_institucionales':inst_counts,'municipios_cobertura_institucional':mun_inst,'comunidades':comunidades}
 
 def construir(registros):
@@ -156,8 +269,14 @@ def construir(registros):
         reps=find_repeat(r,'programa_proyecto')
         if not reps and find_value(r,'nombre_programa'): reps=[r]
         for rep in reps:
-            p=programa_desde(rep,actor)
+            # Si el envío tiene un solo programa, también se revisa el envío completo:
+            # los lugares podrían estar fuera del bloque del programa.
+            p=programa_desde(rep,actor,r if len(reps)==1 else None)
             if p['nombre_programa'] or p['organizacion']: programas.append(p)
+    return agregar(programas,len(registros))
+
+def agregar(programas, n_registros):
+    """Calcula los resúmenes de data.json a partir de la lista de programas."""
     resumen={m:{'organizaciones':[],'total_programas':0,'comunidades_cubiertas':0,'comunidades_total_catalogo':0,'inversion_estimada':0,'sectores':{},'estado':{},'instituciones':{},'fuente_financiamiento':{}} for m in MUNICIPIOS}
     for meta in LUGARES.values():
         m=label('municipios',meta.get('municipio_codigo',''))
@@ -221,7 +340,7 @@ def construir(registros):
         a['organizaciones']=sorted(a['organizaciones']); a['programas']=sorted(a['programas']); adicionales_lista.append(a)
     adicionales_lista.sort(key=lambda x:(x['municipio'],x['lugar_poblado']))
 
-    return {'generado':datetime.now(timezone.utc).isoformat(),'nota':'Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.','programas':programas,'municipios':MUNICIPIOS,'resumen_municipio':resumen,'matriz_sector_municipio':matriz,'comunidades_sin_cobertura':sin,'lugares_adicionales_reportados':adicionales_lista,'duplicidad':duplicidad,'instituciones_resumen':inst_res,'matriz_poblacion_accion':pop_acc,'inversion':inv,'control':{'registros_kobo':len(registros),'programas_procesados':len(programas),'lugares_catalogo':len(LUGARES),'lugares_con_coordenadas':len(COORDS),'lugares_adicionales_reportados':len(adicionales_lista)}}
+    return {'generado':datetime.now(timezone.utc).isoformat(),'nota':'Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.','programas':programas,'municipios':MUNICIPIOS,'resumen_municipio':resumen,'matriz_sector_municipio':matriz,'comunidades_sin_cobertura':sin,'lugares_adicionales_reportados':adicionales_lista,'duplicidad':duplicidad,'instituciones_resumen':inst_res,'matriz_poblacion_accion':pop_acc,'inversion':inv,'control':{'registros_kobo':n_registros,'programas_procesados':len(programas),'lugares_catalogo':len(LUGARES),'lugares_con_coordenadas':len([c for c in COORDS.values() if not c.get('aproximada')]),'lugares_adicionales_reportados':len(adicionales_lista),'lugares_recuperados_de_otros_campos':len(RECUPERADOS),'programas_comunitarios_sin_lugares':len(SIN_LUGARES)}}
 
 def main():
     try:
@@ -229,6 +348,13 @@ def main():
         data=construir(regs)
         (BASE/'data.json').write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')
         print(f"Programas/proyectos procesados: {len(data['programas'])}")
+        # Diagnóstico de lugares (solo nombres de campos, sin datos personales).
+        if RECUPERADOS:
+            print(f'AVISO: {len(RECUPERADOS)} lugar(es) se recuperaron de campos no estándar:')
+            for x in RECUPERADOS: print(f"  - {x['organizacion']} | {x['programa']} | {x['codigo_lugar']} (campo: {x['campo']})")
+        if SIN_LUGARES:
+            print(f'AVISO: {len(SIN_LUGARES)} programa(s) indican trabajo comunitario pero no traen lugares poblados:')
+            for x in SIN_LUGARES: print(f"  - {x['organizacion']} | {x['programa']} | campos de lugar en el envío: {', '.join(x['campos_de_lugar']) or 'ninguno'}")
         print('data.json actualizado correctamente.')
     except Exception as e:
         print('ERROR:',e,file=sys.stderr); raise

@@ -6,7 +6,7 @@
 <title>Mapeo de Actores de Cooperación — SEGEPLAN Chiquimula</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&family=Sora:wght@600;700;800&display=swap">
 <style>
   :root{
     --navy:#003058; --navy-deep:#002040; --gold:#DFB26F; --gold-deep:#C99048;
@@ -218,7 +218,24 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
   .cierre-det{color:var(--muted);font-size:12px;margin-top:2px}
   .btn-imprimir{margin-left:auto;font-size:12px;font-weight:700;color:#fff;background:var(--navy);border:none;border-radius:8px;padding:8px 14px;cursor:pointer}
   .solo-impresion{display:none}
+  /* ===== Vista aligerada: notas plegables y tablas resumidas ===== */
+  details.nota-plegable{font-size:12.5px;color:var(--muted);margin:0 0 12px;line-height:1.5}
+  details.nota-plegable summary{display:inline-flex;align-items:center;gap:6px;cursor:pointer;color:var(--navy);font-weight:600;font-size:12px;list-style:none;border-radius:6px}
+  details.nota-plegable summary::-webkit-details-marker{display:none}
+  details.nota-plegable summary::before{content:"i";display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border:1.5px solid currentColor;border-radius:50%;font-size:10px;font-weight:700;font-family:Georgia,serif}
+  details.nota-plegable summary:hover{text-decoration:underline}
+  details.nota-plegable summary:focus-visible{outline:2px solid var(--gold-deep);outline-offset:2px}
+  details.nota-plegable[open] summary{margin-bottom:6px}
+  details.nota-plegable .nota-texto{max-width:78ch}
+  tr.fila-oculta{display:none}
+  .tabla-pie{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:12px;font-size:12.5px;color:var(--muted)}
+  .tabla-pie button{font:inherit;font-weight:600;color:var(--navy);background:#fff;border:1px solid var(--border);border-radius:18px;padding:7px 14px;cursor:pointer}
+  .tabla-pie button:hover{background:#F4F7F9}
+  .tabla-pie button:focus-visible{outline:2px solid var(--gold-deep);outline-offset:2px}
   @media print{
+    tr.fila-oculta{display:table-row}
+    .mk-actor{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .tabla-pie{display:none!important}
     @page{size:letter;margin:14mm}
     body.imprimir-ficha{background:#fff!important}
     body.imprimir-ficha .top-accent, body.imprimir-ficha nav, body.imprimir-ficha .calidad-note,
@@ -301,6 +318,267 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
   .view{min-width:0}
   .card,.layout>*,.pa-main>*,.org-layout>*{min-width:0}
   @media (max-width:640px){ table{max-width:100%} }
+  /* ===== Vista aligerada: cifras en una sola franja y filtros compactos ===== */
+  .stats,.coverage-kpis,.pa-stats{display:flex;flex-wrap:wrap;gap:1px;background:var(--border);border:1px solid var(--border);border-top:3px solid var(--gold);border-radius:12px;overflow:hidden}
+  .stats>.stat-card,.coverage-kpis>.coverage-kpi,.pa-stats>.pa-stat{flex:1 1 150px;min-width:0;min-height:0;background:#fff;border:none;border-radius:0;padding:12px 16px}
+  .stats>.stat-card .label,.coverage-kpi .klabel,.pa-stat .l{font-size:12px;color:var(--muted);margin:0}
+  .stats>.stat-card .value,.coverage-kpi .kvalue,.pa-stat .k{font-size:22px;line-height:1.2;margin-top:2px}
+  .pa-stat{display:flex;flex-direction:column-reverse;justify-content:flex-end}
+  .filters select,.territorial-tools select,.org-toolbar select{flex:0 1 210px;min-width:0;max-width:240px;text-overflow:ellipsis}
+  .org-toolbar select{flex-basis:340px;max-width:420px}
+  .territorial-tools{background:none;border:none;padding:0;margin:-10px 0 18px}
+  .territorial-tools select{min-width:0}
+  @media (max-width:640px){
+    .filters select,.filters input,.territorial-tools select{flex:1 1 calc(50% - 8px);max-width:none;font-size:14px}
+    .org-toolbar select{flex:1 1 100%;max-width:none}
+    .stats>.stat-card,.coverage-kpis>.coverage-kpi,.pa-stats>.pa-stat{flex-basis:130px;padding:10px 12px!important}
+  }
+
+  /* ===================================================================
+     IDENTIDAD VISUAL "ATLAS TERRITORIAL"
+     Franja tejida, curvas de nivel, cifras en cinta azul y títulos serif.
+     Todo es presentación: no cambia datos ni comportamiento.
+     =================================================================== */
+  :root{
+    --terracota:#C98A6B;
+    --curvas-claras:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='200' fill='none' stroke='%23ffffff' stroke-opacity='.07' stroke-width='1.2'%3E%3Cpath d='M0 20C70-10 130 55 200 25S290 0 320 20'/%3E%3Cpath d='M0 50C60 20 140 90 210 55S285 30 320 50'/%3E%3Cpath d='M0 85C80 50 130 125 215 90S280 65 320 85'/%3E%3Cpath d='M0 120C70 90 150 160 220 125S290 100 320 120'/%3E%3Cpath d='M0 155C60 125 140 195 215 160S285 135 320 155'/%3E%3Cpath d='M0 188C80 160 150 225 220 192S290 170 320 188'/%3E%3C/svg%3E");
+    --curvas-azules:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='200' fill='none' stroke='%23003058' stroke-opacity='.055' stroke-width='1.2'%3E%3Cpath d='M0 20C70-10 130 55 200 25S290 0 320 20'/%3E%3Cpath d='M0 50C60 20 140 90 210 55S285 30 320 50'/%3E%3Cpath d='M0 85C80 50 130 125 215 90S280 65 320 85'/%3E%3Cpath d='M0 120C70 90 150 160 220 125S290 100 320 120'/%3E%3Cpath d='M0 155C60 125 140 195 215 160S285 135 320 155'/%3E%3Cpath d='M0 188C80 160 150 225 220 192S290 170 320 188'/%3E%3C/svg%3E");
+    --sombra-suave:0 1px 2px rgba(16,32,52,.04),0 10px 26px -14px rgba(16,32,52,.16);
+  }
+  body{background:radial-gradient(circle,rgba(0,48,88,.055) 1px,transparent 1.3px) 0 0/22px 22px,var(--bg)}
+
+  /* Franja tejida: rombos dorados y terracota sobre azul */
+  .top-accent{height:12px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='12'%3E%3Crect width='24' height='12' fill='%23002040'/%3E%3Cpath d='M12 1.2 20 6l-8 4.8L4 6z' fill='none' stroke='%23DFB26F' stroke-width='1.3'/%3E%3Cpath d='M12 4.1 15.2 6 12 7.9 8.8 6z' fill='%23C98A6B'/%3E%3Ccircle cx='0' cy='6' r='1.1' fill='%23DFB26F'/%3E%3Ccircle cx='24' cy='6' r='1.1' fill='%23DFB26F'/%3E%3C/svg%3E") repeat-x left center/24px 12px}
+
+  /* Encabezado */
+  header{background:var(--curvas-azules) right center/320px 200px,linear-gradient(90deg,#fff 0%,#fff 45%,#FBF8F1 100%);border-bottom:none}
+  .badge{background:#fff;border:1px solid var(--warn-border);color:#6F4F10;box-shadow:var(--sombra-suave);border-radius:999px;display:inline-flex;align-items:center;gap:8px}
+  .badge::before{content:"";width:7px;height:7px;background:var(--gold-deep);transform:rotate(45deg);flex:none}
+  @media (min-width:641px){
+    .brand h1{font-size:23px;letter-spacing:-.01em}
+    .brand p{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep);font-weight:600}
+  }
+
+  /* Navegación en pastillas con icono */
+  nav{background:var(--curvas-claras) 0 0/320px 200px,linear-gradient(90deg,#002040 0%,#003058 55%,#0B4674 100%);border-bottom:none;padding:9px 32px;gap:6px;align-items:center}
+  nav button{display:inline-flex;align-items:center;gap:8px;border:1px solid transparent;border-radius:999px;padding:8px 15px;color:#C9D6E2;transition:background .15s,color .15s,border-color .15s}
+  nav button svg{flex:none;opacity:.85}
+  nav button:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.18);color:#fff}
+  nav button.active{background:var(--gold);color:var(--navy-deep);border-color:var(--gold);box-shadow:0 4px 14px -6px rgba(0,0,0,.6)}
+  nav button.active svg{opacity:1}
+  nav button:focus-visible{outline:2px solid #fff;outline-offset:2px}
+  @media (max-width:640px){ nav{padding:8px 10px} nav button{padding:7px 12px;font-size:13px} }
+
+  /* Entrada suave de cada vista */
+  @keyframes aparecer{from{opacity:0}to{opacity:1}}
+  @keyframes crecer{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+  .view.active{animation:aparecer .35s ease both}
+
+  /* Título de cada vista: serif grande con regla dorada */
+  .view>.section-title{font-family:'Source Serif 4',Georgia,serif;font-size:clamp(22px,2.6vw,30px);letter-spacing:-.01em;line-height:1.15;margin:4px 0 10px;text-wrap:balance}
+  .view>.section-title::after{content:"";display:block;width:64px;height:3px;margin-top:10px;border-radius:2px;background:linear-gradient(90deg,var(--gold-deep),var(--gold) 60%,var(--terracota))}
+  /* Títulos de tarjeta con rombo */
+  .side-title,.pa-title,.card>.section-title{display:flex;align-items:baseline;gap:10px}
+  .side-title::before,.pa-title::before,.card>.section-title::before{content:"";flex:none;width:8px;height:8px;background:var(--gold-deep);transform:rotate(45deg) translateY(-2px)}
+
+  /* Cinta de cifras: azul profundo, numerales serif */
+  .stats,.coverage-kpis,.pa-stats{gap:0;border:none;border-top:3px solid var(--gold);border-radius:16px;background:var(--curvas-claras) 0 0/320px 200px,linear-gradient(120deg,#002040 0%,#003058 60%,#0B4674 100%);box-shadow:0 14px 30px -18px rgba(0,32,64,.55)}
+  .stats>.stat-card,.coverage-kpis>.coverage-kpi,.pa-stats>.pa-stat{background:transparent;color:#DCE5EE;padding:16px 20px;box-shadow:-1px -1px 0 rgba(255,255,255,.13)}
+  .stats>.stat-card .label,.coverage-kpi .klabel,.pa-stat .l{color:#E8C88F;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+  .stats>.stat-card .value,.coverage-kpi .kvalue,.pa-stat .k{font-family:'Source Serif 4',Georgia,serif;font-size:30px;font-weight:700;color:#fff;margin-top:4px}
+  .stats>.stat-card :is(div,span)[style*="color"],.coverage-kpi .ksub{color:#B9C6D3!important}
+  @media (max-width:640px){ .stats>.stat-card .value,.coverage-kpi .kvalue,.pa-stat .k{font-size:24px!important} }
+
+  /* Tarjetas */
+  .card,.pa-map-card,.pa-side-card,.pa-table-card,.org-map-card,.cierre-card{border-radius:18px;box-shadow:var(--sombra-suave)}
+  .card,.pa-map-card,.pa-side-card,.pa-table-card{border-color:#E9E3D6}
+  #map,.org-map,#map-poblacion-accion{border-radius:14px;border:1px solid #D5DCE3}
+  .territorial-summary .mini{background:#F6F8FA;border:none;border-left:3px solid var(--gold);border-radius:4px 10px 10px 4px}
+  .method-note{border-left:4px solid var(--gold-deep);border-radius:4px 10px 10px 4px}
+  .map-legend-control{border-radius:12px!important}
+
+  /* Controles */
+  select{appearance:none;-webkit-appearance:none;padding-right:34px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%23003058' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1.5 6 6.5l5-5'/%3E%3C/svg%3E") no-repeat right 13px center;transition:border-color .15s,box-shadow .15s;cursor:pointer}
+  select:hover:not(:disabled){border-color:var(--gold-deep)}
+  select:focus-visible{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(223,178,111,.45)}
+  select:disabled{opacity:.6;cursor:default}
+  .filters label,.filter-label,.territorial-tools>label,.org-toolbar label{letter-spacing:.1em}
+  .layer-toggle{transition:background .15s,color .15s,border-color .15s;cursor:pointer}
+  .layer-toggle:has(input:checked){background:var(--navy);border-color:var(--navy);color:#fff}
+  .layer-toggle input{accent-color:var(--gold)}
+  .clear-btn:hover{text-decoration:underline}
+  .csv-btn{border-radius:999px;padding:6px 13px;transition:background .15s,border-color .15s}
+  .csv-btn::before{content:"↓";margin-right:6px;color:var(--gold-deep);font-weight:700}
+  .csv-btn:hover{border-color:var(--gold-deep)}
+  .btn-imprimir{border-radius:999px;padding:9px 18px;background:linear-gradient(120deg,#002040,#0B4674);box-shadow:0 8px 18px -10px rgba(0,32,64,.7)}
+  .tabla-pie button{transition:background .15s,border-color .15s}
+  .tabla-pie button:hover{border-color:var(--gold-deep)}
+
+  /* Tablas, barras y etiquetas */
+  th{color:var(--navy);font-size:11px;letter-spacing:.07em;border-bottom:2px solid var(--gold)}
+  tbody tr{transition:background .12s}
+  tbody tr:hover td{background:#FBF8F1}
+  .barra-track{height:8px;background:#ECE7DB}
+  .barra-fill{background:linear-gradient(90deg,var(--navy) 0%,#2B6A9B 100%);transform-origin:left center;animation:crecer .7s cubic-bezier(.2,.7,.2,1) both}
+  .legend .bar{background:linear-gradient(90deg,#D6DDE2,#2B6A9B,#003058)}
+  .pill{background:#EEF3F7;border:1px solid #DCE5EC;color:var(--navy);border-radius:999px;padding:4px 11px}
+
+  /* Pie de página */
+  .pie-sitio{background:var(--curvas-claras) 0 0/320px 200px,var(--navy-deep);color:#B9C6D3;font-size:12.5px;text-align:center}
+  .pie-sitio p{margin:0;padding:18px 16px 22px}
+  .pie-sitio b{color:#fff;font-family:'Source Serif 4',Georgia,serif;font-weight:600}
+
+  @media (prefers-reduced-motion:reduce){ .view.active,.barra-fill{animation:none} *{transition:none!important} }
+  @media print{ body{background:#fff} body.imprimir-ficha .pie-sitio{display:none!important} .view.active,.barra-fill{animation:none} }
+
+  /* ===================================================================
+     TITULARES, MAPA DE ACTORES Y GRÁFICAS
+     Colores institucionales (azul, dorado, crema). Titulares en Sora.
+     =================================================================== */
+  :root{ --titular:'Sora','IBM Plex Sans',system-ui,sans-serif; --verde-azul:#2E8B7A; }
+  .brand h1{font-family:var(--titular);font-weight:800;letter-spacing:-.02em}
+  nav button{font-family:var(--titular);font-size:13px}
+  .view>.section-title,.panorama-head h2{font-family:var(--titular);font-weight:800;color:var(--navy);font-size:clamp(24px,3vw,36px);letter-spacing:-.03em;line-height:1.12}
+  .side-title,.pa-title,.card>.section-title{font-family:var(--titular);letter-spacing:-.01em}
+  .stats>.stat-card .value,.coverage-kpi .kvalue,.pa-stat .k{font-family:var(--titular);font-weight:800;letter-spacing:-.02em}
+
+  /* Mapa principal */
+  #map{height:620px}
+  .modo-mapa{display:inline-flex;border:1px solid var(--border);border-radius:999px;background:#fff;padding:3px;gap:2px}
+  .modo-mapa button{font:inherit;font-size:12px;font-weight:600;color:var(--navy);background:none;border:none;border-radius:999px;padding:6px 13px;cursor:pointer;transition:background .15s,color .15s}
+  .modo-mapa button:hover{background:#F1EDE3}
+  .modo-mapa button[aria-pressed="true"]{background:var(--navy);color:#fff}
+  .modo-mapa button:focus-visible,.actor-fila:focus-visible,.g-fila:focus-visible,.g-leyenda-item:focus-visible,.tabla-buscar:focus-visible{outline:2px solid var(--gold-deep);outline-offset:2px}
+  .mk-actor-wrap{background:none;border:none}
+  .mk-actor{display:flex;align-items:center;justify-content:center;border-radius:50%;border:2.5px solid #fff;box-shadow:0 2px 6px rgba(16,32,52,.45);box-sizing:border-box;transition:transform .15s,opacity .15s;cursor:pointer}
+  .mk-actor b{display:flex;align-items:center;justify-content:center;min-width:16px;height:16px;padding:0 3px;border-radius:999px;background:#fff;color:var(--navy);font-size:10.5px;font-weight:700;line-height:1}
+  .mk-actor-wrap:hover .mk-actor,.mk-actor-wrap:focus-visible .mk-actor{transform:scale(1.18)}
+  .mk-actor-wrap:focus-visible{outline:none}
+  .mk-actor-wrap:focus-visible .mk-actor{box-shadow:0 0 0 3px var(--gold),0 2px 6px rgba(16,32,52,.45)}
+  .sin-punto{display:grid;grid-template-columns:14px minmax(0,1fr);gap:10px;align-items:start;padding:10px 0;border-top:1px solid #EFEBE2;font-size:13px;line-height:1.35}
+  .sin-punto:first-child{border-top:none}
+  .sin-punto .actor-chip{width:12px;height:12px;margin:3px 0 0}
+  .sin-punto small{display:block;color:var(--muted);font-size:11.5px;margin-top:3px}
+  .sin-punto.alerta small{color:#8A3A22;font-weight:600}
+  .mk-actor.mk-aprox{border:2.5px dashed #fff;outline:2px dashed #B5462B;outline-offset:1px}
+  .atenuado{opacity:.14!important}
+  .tip-actores{font-size:12px;line-height:1.5}
+  .tip-actores i,.actor-chip{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px;flex:none}
+
+  /* Lista de actores (leyenda que filtra) */
+  .actores-lista{display:flex;flex-direction:column;gap:2px;margin-top:6px}
+  .actor-fila{display:grid;grid-template-columns:14px minmax(0,1fr) auto;gap:10px;align-items:center;width:100%;padding:8px 10px;margin:0 -10px;width:calc(100% + 20px);border:1px solid transparent;border-radius:10px;background:none;font:inherit;font-size:13px;color:var(--text);text-align:left;cursor:pointer;transition:background .15s,border-color .15s}
+  .actor-fila:hover{background:#F6F2E8}
+  .actor-fila.activa{background:var(--warn-bg);border-color:var(--gold-deep)}
+  .actor-fila .actor-chip{width:14px;height:14px;margin:0;border:2px solid #fff;box-shadow:0 0 0 1px rgba(16,32,52,.25)}
+  .actor-nombre{min-width:0;overflow-wrap:anywhere;font-weight:600;line-height:1.3}
+  .actor-nombre small{display:block;font-weight:400;color:var(--muted);font-size:11.5px}
+  .actor-cifras{font-size:11.5px;color:var(--muted);text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+  .actor-cifras b{color:var(--navy);font-size:13px}
+
+  /* Panorama: gráficas */
+  .panorama{margin-top:30px}
+  .panorama-head{margin-bottom:18px}
+  .kicker{display:inline-block;font-family:var(--titular);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--navy-deep);background:var(--gold);border-radius:999px;padding:5px 12px}
+  .panorama-head h2{margin:12px 0 8px;text-wrap:balance}
+  .panorama-head p{margin:0;color:var(--muted);font-size:13.5px;max-width:78ch;line-height:1.5}
+  .panorama-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+  .g-card{background:#fff;border:1px solid #E9E3D6;border-radius:18px;box-shadow:var(--sombra-suave);padding:22px;color:var(--text);min-width:0}
+  .g-card h3{font-family:var(--titular);font-size:16px;font-weight:700;margin:0 0 14px;color:var(--navy);letter-spacing:-.01em;display:flex;align-items:baseline;gap:10px}
+  .g-card h3::before{content:"";flex:none;width:8px;height:8px;background:var(--gold-deep);transform:rotate(45deg) translateY(-2px)}
+  .g-fila{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr) 28px;align-items:center;gap:12px;width:calc(100% + 16px);padding:6px 8px;margin:0 -8px;border:1px solid transparent;border-radius:10px;background:none;color:inherit;font:inherit;font-size:13px;text-align:left}
+  button.g-fila,button.g-leyenda-item{cursor:pointer;transition:background .15s,border-color .15s}
+  button.g-fila:hover,button.g-leyenda-item:hover{background:#F6F2E8}
+  .g-fila.activa,.g-leyenda-item.activa{background:var(--warn-bg);border-color:var(--gold-deep)}
+  .g-nombre{min-width:0;overflow-wrap:anywhere;line-height:1.3}
+  .g-pista{height:10px;border-radius:6px;background:#ECE7DB;overflow:hidden}
+  .g-barra{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,var(--navy),#2B6A9B);transform-origin:left center;animation:crecer .7s cubic-bezier(.2,.7,.2,1) both}
+  .g-valor{font-family:var(--titular);font-weight:700;color:var(--navy);text-align:right;font-variant-numeric:tabular-nums}
+  .g-fila.cero,.g-fila.cero .g-valor{color:#8B9199}
+  .g-dona{display:grid;grid-template-columns:minmax(120px,170px) minmax(0,1fr);gap:20px;align-items:center}
+  .g-dona svg{width:100%;height:auto}
+  .g-dona-total{font-family:var(--titular);font-weight:800;font-size:9px;fill:var(--navy)}
+  .g-dona-unidad{font-size:2.6px;fill:var(--muted);letter-spacing:.04em}
+  .g-leyenda{display:flex;flex-direction:column;gap:2px;min-width:0}
+  .g-leyenda-item{display:grid;grid-template-columns:12px minmax(0,1fr) auto;gap:10px;align-items:center;width:100%;padding:6px 8px;border:1px solid transparent;border-radius:10px;background:none;color:inherit;font:inherit;font-size:13px;text-align:left}
+  .g-muestra{width:12px;height:12px;border-radius:4px}
+  .g-vacio{color:var(--muted);font-size:13px;padding:18px 0}
+  @media (max-width:900px){ .panorama-grid{grid-template-columns:1fr} }
+  @media (max-width:640px){ #map{height:440px} }
+  @media (max-width:420px){ .g-dona{grid-template-columns:1fr} .g-dona svg{max-width:170px;margin:0 auto} .g-card{padding:16px} }
+
+  /* Filtros activos y buscador de tablas */
+  .filtros-activos{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:-8px 0 16px;font-size:12px;color:var(--muted)}
+  .filtros-activos:empty{display:none}
+  .filtro-chip{display:inline-flex;align-items:center;gap:8px;font:inherit;font-size:12px;font-weight:600;color:var(--navy);background:var(--warn-bg);border:1px solid var(--gold-deep);border-radius:999px;padding:5px 8px 5px 12px;cursor:pointer}
+  .filtro-chip::after{content:"×";font-size:15px;line-height:1;color:var(--gold-deep)}
+  .filtro-chip:hover{background:#F5E6C8}
+  .tabla-buscar{float:right;font:inherit;font-size:12.5px;color:var(--text);border:1px solid var(--border);border-radius:999px;padding:6px 14px;margin:0 0 6px 8px;width:220px;max-width:100%;background:#fff}
+  .tabla-buscar:hover{border-color:var(--gold-deep)}
+  @media (max-width:640px){ .tabla-buscar{float:none;width:100%;margin:0 0 8px} }
+
+  /* ===== Información por niveles: más aire y detalle plegable ===== */
+  .layout,.org-layout,.pa-main{gap:24px}
+  @media (min-width:641px){ .card,.pa-map-card,.pa-side-card,.pa-table-card,.g-card{padding:24px 26px} }
+  td{padding-top:13px;padding-bottom:13px}
+  .card-toggle{display:flex;align-items:center;justify-content:space-between;gap:14px;flex:1;min-width:0;padding:0;border:none;background:none;font:inherit;color:inherit;letter-spacing:inherit;text-align:left;cursor:pointer;border-radius:6px}
+  .card-toggle span{min-width:0}
+  .card-toggle svg{flex:none;color:var(--gold-deep);transition:transform .2s}
+  .card-toggle[aria-expanded="true"] svg{transform:rotate(180deg)}
+  .card-toggle:hover span{text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px}
+  .card-toggle:focus-visible{outline:2px solid var(--gold-deep);outline-offset:4px}
+  .plegada>.side-title,.plegada>.section-title,.plegada>.pa-title{margin-bottom:0}
+  .plegada{background:#FCFBF8}
+  .card-cuerpo{margin-top:10px}
+  .filtros-extra:not([hidden]){display:contents}
+  .mas-filtros,.actores-mas{font:inherit;font-size:12.5px;font-weight:600;color:var(--navy);background:#fff;border:1px dashed var(--gold-deep);border-radius:999px;padding:7px 14px;cursor:pointer;transition:background .15s}
+  .mas-filtros:hover,.actores-mas:hover{background:var(--warn-bg)}
+  .mas-filtros:focus-visible,.actores-mas:focus-visible,.g-tabs button:focus-visible{outline:2px solid var(--gold-deep);outline-offset:2px}
+  .actores-mas{align-self:flex-start;margin-top:10px}
+  .g-tabs{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+  .g-tabs-titulo{font-family:var(--titular);font-size:16px;font-weight:700;color:var(--navy);letter-spacing:-.01em;margin-right:8px}
+  .g-tabs button{font:inherit;font-size:12.5px;font-weight:600;color:var(--navy);background:#F4F1EA;border:1px solid transparent;border-radius:999px;padding:6px 13px;cursor:pointer;transition:background .15s,color .15s}
+  .g-tabs button:hover{background:#EAE4D6}
+  .g-tabs button[aria-pressed="true"]{background:var(--navy);color:#fff}
+  .panorama-grid{align-items:start}
+
+  /* ===== Documentos: botones Excel / PDF e impresión de cualquier vista ===== */
+  .cabecera-derecha{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+  .acciones-exportar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .acciones-exportar button{display:inline-flex;align-items:center;gap:7px;font-family:var(--titular);font-size:12.5px;font-weight:700;color:#fff;background:var(--navy);border:1px solid var(--navy);border-radius:999px;padding:8px 15px;cursor:pointer;transition:background .15s,transform .1s}
+  .acciones-exportar button:hover{background:#0B4674}
+  .acciones-exportar button:active{transform:translateY(1px)}
+  .acciones-exportar button:disabled{opacity:.6;cursor:progress}
+  .acciones-exportar button:focus-visible{outline:2px solid var(--gold-deep);outline-offset:2px}
+  .acciones-exportar #btn-pdf{background:#fff;color:var(--navy)}
+  .acciones-exportar #btn-pdf:hover{background:#F1EDE3}
+  .exportar-estado{font-size:12px;color:var(--muted);max-width:260px}
+  .exportar-estado:empty{display:none}
+  .solo-impresion-vista{display:none}
+  @media (max-width:640px){ .cabecera-derecha{justify-content:flex-start;width:100%} .acciones-exportar button{padding:7px 12px} .csv-btn{display:inline-block;margin:0 6px 8px 0} }
+  @media print{
+    .acciones-exportar,.mas-filtros,.actores-mas,.clear-btn,.pa-reset,.btn-imprimir,.csv-btn,.card-toggle svg,.leaflet-control-zoom,.leaflet-control-layers,.leaflet-control-attribution{display:none!important}
+    body.imprimir-vista{background:#fff!important}
+    body.imprimir-vista .top-accent,body.imprimir-vista nav,body.imprimir-vista .calidad-note,body.imprimir-vista .pie-sitio,body.imprimir-vista .tabla-pie{display:none!important}
+    body.imprimir-vista .solo-impresion-vista{display:block;font-size:12px;color:#444;line-height:1.5;margin:0 0 14px;padding-bottom:10px;border-bottom:2px solid #DFB26F}
+    body.imprimir-vista .solo-impresion-vista b{font-size:18px;color:#003058}
+    body.imprimir-vista main{padding:0;max-width:none}
+    body.imprimir-vista .layout,body.imprimir-vista .org-layout,body.imprimir-vista .pa-main,body.imprimir-vista .panorama-grid{display:block}
+    body.imprimir-vista .card,body.imprimir-vista .pa-map-card,body.imprimir-vista .pa-side-card,body.imprimir-vista .pa-table-card,body.imprimir-vista .org-map-card,body.imprimir-vista .g-card{box-shadow:none!important;margin-bottom:12px}
+    body.imprimir-vista .g-card,body.imprimir-vista .stats,body.imprimir-vista .coverage-kpis,body.imprimir-vista .pa-stats,body.imprimir-vista tr{break-inside:avoid}
+    body.imprimir-vista .g-card [hidden]{display:block!important;margin-top:14px}
+    /* PDF de una sola tabla: se oculta todo lo que no esté en la ruta hasta su tarjeta */
+    body.imprimir-tabla .view.active > *:not(.ruta-impresion):not(.objetivo-impresion),
+    body.imprimir-tabla .ruta-impresion > *:not(.ruta-impresion):not(.objetivo-impresion){display:none!important}
+    body.imprimir-tabla .objetivo-impresion{border:none!important;padding:0!important;margin:0!important}
+    body.imprimir-tabla .tabla-buscar{display:none!important}
+    body.imprimir-vista table{font-size:10px}
+    body.imprimir-vista th{position:static}
+    body.imprimir-vista *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+
+  @media (prefers-reduced-motion:reduce){ .g-barra{animation:none} .mk-actor{transition:none} }
+  @media print{ .g-barra{animation:none} .tabla-buscar,.filtros-activos,.modo-mapa{display:none!important} }
 </style>
 </head>
 <body>
@@ -317,12 +595,24 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
       <p>Departamento de Chiquimula</p>
     </div>
   </div>
-  <div id="data-badge" class="badge">Base territorial · 996 lugares poblados · 816 georreferenciados</div>
+  <div class="cabecera-derecha">
+    <div id="data-badge" class="badge">Base territorial · 996 lugares poblados · 816 georreferenciados</div>
+    <div class="acciones-exportar" role="group" aria-label="Generar documentos">
+      <button type="button" id="btn-excel" onclick="exportarExcel()" title="Descarga un libro de Excel con los programas, los lugares poblados y las tablas de esta vista">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 10h16M4 15h16M10 4v16"/></svg><span>Excel</span>
+      </button>
+      <button type="button" id="btn-pdf" onclick="exportarPDF()" title="Abre la impresión de esta vista para guardarla como PDF">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg><span>PDF</span>
+      </button>
+      <span id="exportar-estado" class="exportar-estado" role="status" aria-live="polite"></span>
+    </div>
+  </div>
 </header>
 
 <nav id="nav"></nav>
 
 <main>
+  <div class="solo-impresion-vista" id="encabezado-impresion-vista"></div>
 
   <!-- ===== VISTA: MAPA ===== -->
   <section class="view active" id="view-mapa">
@@ -330,10 +620,14 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
 
     <div class="filters">
       <label>FILTROS</label>
+      <select id="f-organizacion" aria-label="Organización"><option value="">Organización: todas</option></select>
       <select id="f-sector"><option value="">Sector: todos</option></select>
-      <select id="f-atencion"><option value="">Tipo de atención: todos</option></select>
-      <select id="f-actor"><option value="">Tipo de actor: todos</option></select>
-      <select id="f-estado"><option value="">Estado: todos</option></select>
+      <span class="filtros-extra" id="filtros-extra" hidden>
+        <select id="f-atencion"><option value="">Tipo de atención: todos</option></select>
+        <select id="f-actor"><option value="">Tipo de actor: todos</option></select>
+        <select id="f-estado"><option value="">Estado: todos</option></select>
+      </span>
+      <button type="button" class="mas-filtros" id="mas-filtros" aria-expanded="false" aria-controls="filtros-extra">Más filtros</button>
       <select id="f-municipio" style="display:none" aria-hidden="true"><option value="">Municipio: todos</option></select>
       <button class="clear-btn" onclick="limpiarFiltros()">Limpiar filtros</button>
     </div>
@@ -343,19 +637,24 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
       <select id="t-municipio"><option value="">Municipio: todos</option></select>
       <select id="t-lugar" disabled><option value="">Lugar poblado: todos</option></select>
       <label class="layer-toggle"><input type="checkbox" id="layer-coop" checked> Cooperación registrada</label>
-      <label class="layer-toggle"><input type="checkbox" id="layer-base" checked> Base territorial</label>
+      <label class="layer-toggle"><input type="checkbox" id="layer-base"> Base territorial</label>
+      <div class="modo-mapa" id="modo-mapa" role="group" aria-label="Colorear los puntos del mapa">
+        <button type="button" data-modo="actor" aria-pressed="true">Color por actor</button>
+        <button type="button" data-modo="intensidad" aria-pressed="false">Color por intensidad</button>
+      </div>
       <span class="territorial-note" id="territorial-status">Base territorial disponible</span>
     </div>
+    <div class="filtros-activos" id="filtros-activos" aria-live="polite"></div>
 
     <div class="layout">
       <div class="card">
         <div class="side-title">Presencia de cooperación por comunidad</div>
         <div class="side-sub">Los puntos sólidos muestran cooperación registrada. Active “Base territorial” para consultar los lugares poblados georreferenciados; un punto hueco significa “sin presencia de cooperación registrada”.</div>
         <div id="map"></div>
-        <div class="legend">
-          <span><span class="dot" style="background:#003058;border:2px solid #fff;box-shadow:0 0 0 1px #003058;"></span>Cooperación registrada</span>
-          <span><span class="dot" style="background:#fff;border:2px solid #C98A6B;"></span>Lugar poblado · base territorial</span>
-          <span style="margin-left:8px;">Intensidad:</span><span>menor</span><div class="bar"></div><span>mayor</span>
+        <div class="legend" id="leyenda-actor">Cada color es una organización. Los puntos con número reúnen a varias; el detalle aparece al tocarlos.</div>
+        <div class="legend" id="leyenda-aprox" style="margin-top:6px;color:#8A3A22" hidden></div>
+        <div class="legend" id="leyenda-intensidad" hidden>
+          <span>Intensidad de cooperación:</span><span>menor</span><div class="bar"></div><span>mayor</span>
         </div>
         <div class="boundary-note">Límites municipales: servicio geográfico de CONRED · La ausencia de registro no confirma una brecha de atención.</div>
       </div>
@@ -364,6 +663,45 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
           <div class="side-title">Resumen territorial</div>
           <div class="side-sub">El resumen se actualiza según el municipio seleccionado y los filtros de cooperación.</div>
           <div id="resumen-territorial"></div>
+        </div>
+        <div class="card" id="panel-actores" style="margin-top:16px;">
+          <div class="side-title">Actores en el mapa</div>
+          <div class="side-sub" id="actores-sub"></div>
+          <div class="actores-lista" id="actores-lista"></div>
+        </div>
+        <div class="card" id="panel-sin-puntos" data-plegada-inicial="1" style="margin-top:16px;">
+          <div class="side-title">Programas sin puntos en el mapa</div>
+          <div class="side-sub" id="sin-puntos-sub"></div>
+          <div id="sin-puntos-lista"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panorama: gráficas que responden a los filtros del mapa -->
+    <div class="panorama" id="panorama">
+      <div class="panorama-head">
+        <span class="kicker">Panorama</span>
+        <h2>La cooperación de un vistazo</h2>
+        <p id="panorama-sub"></p>
+      </div>
+      <div class="panorama-grid">
+        <div class="g-card">
+          <div class="g-tabs" role="group" aria-label="Programas por">
+            <span class="g-tabs-titulo">Programas por</span>
+            <button type="button" data-panel="g-sector" aria-pressed="true">Sector</button>
+            <button type="button" data-panel="g-municipio" aria-pressed="false">Municipio</button>
+          </div>
+          <div id="g-sector"></div>
+          <div id="g-municipio" hidden></div>
+        </div>
+        <div class="g-card">
+          <div class="g-tabs" role="group" aria-label="Composición">
+            <span class="g-tabs-titulo">Composición</span>
+            <button type="button" data-panel="g-actor" aria-pressed="true">Tipo de actor</button>
+            <button type="button" data-panel="g-estado" aria-pressed="false">Estado</button>
+          </div>
+          <div id="g-actor"></div>
+          <div id="g-estado" hidden></div>
         </div>
       </div>
     </div>
@@ -678,6 +1016,11 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
 
 </main>
 
+<footer class="pie-sitio">
+  <div class="top-accent"></div>
+  <p><b>Mapeo de Actores de Cooperación</b> · Departamento de Chiquimula</p>
+</footer>
+
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 let DATA = null;
@@ -695,7 +1038,17 @@ const VISTAS = [
 
 function initNav(){
   const nav = document.getElementById('nav');
-  nav.innerHTML = VISTAS.map(v => `<button data-view="${v.id}" class="${v.id==='mapa'?'active':''}">${v.label}</button>`).join('');
+  const ICONOS = {
+    'mapa':'<path d="M12 21s-6-5.3-6-10a6 6 0 1 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/>',
+    'municipio':'<path d="M4 20h16M6 20V10M10 20V10M14 20V10M18 20V10M3 10l9-6 9 6z"/>',
+    'instituciones':'<circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.3"/><path d="M16 14.2c2.8.3 5 2.6 5 5.8"/>',
+    'brechas':'<rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/>',
+    'inversion':'<path d="M5 20V11M11 20V4M17 20v-7M2 20h20"/>',
+    'articulacion':'<circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="8" r="2.5"/><circle cx="11" cy="18" r="2.5"/><path d="M8.4 6.4l7.2 1.2M7 8.3l3 7.4M16.6 10l-4.2 6"/>',
+    'poblacion-accion':'<circle cx="8" cy="8" r="3"/><path d="M2 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16.5 6.5l5 5M21.5 6.5l-5 5"/>'
+  };
+  const icono = id => ICONOS[id] ? `<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONOS[id]}</svg>` : '';
+  nav.innerHTML = VISTAS.map(v => `<button data-view="${v.id}" class="${v.id==='mapa'?'active':''}">${icono(v.id)}<span>${v.label}</span></button>`).join('');
   nav.querySelectorAll('button').forEach(btn=>{
     btn.onclick = () => mostrarVista(btn.dataset.view);
   });
@@ -720,7 +1073,7 @@ function mostrarVista(id){
   if(ancla) setTimeout(()=>document.getElementById(ancla)?.scrollIntoView({behavior:'smooth'}),120);
 }
 
-const filtros = { sector:'', atencion:'', actor:'', estado:'', municipio:'' };
+const filtros = { organizacion:'', sector:'', atencion:'', actor:'', estado:'', municipio:'' };
 let CATALOGO=null, COORDS={}, baseLayer=null, coopLayer=null, instLayer=null, basePlaces=[], limitesLayer=null, exteriorMaskLayer=null, LIMITES=null;
 
 
@@ -805,13 +1158,14 @@ function normalizarPresentacionData(data){
 
 function limpiarFiltros(){
   Object.keys(filtros).forEach(k=>filtros[k]='');
-  ['f-sector','f-atencion','f-actor','f-estado','f-municipio'].forEach(id=>document.getElementById(id).value='');
+  ['f-organizacion','f-sector','f-atencion','f-actor','f-estado','f-municipio'].forEach(id=>document.getElementById(id).value='');
   const tm=document.getElementById('t-municipio');
   if(tm && tm.value){ tm.value=''; tm.dispatchEvent(new Event('change')); return; }
   renderMapaYStats();
 }
 
 function coincide(p){
+  if(filtros.organizacion && p.organizacion !== filtros.organizacion) return false;
   if(filtros.sector && !p.sector.includes(filtros.sector)) return false;
   if(filtros.atencion && p.tipo_atencion !== filtros.atencion) return false;
   if(filtros.actor && p.tipo_actor !== filtros.actor) return false;
@@ -841,7 +1195,17 @@ function poblarSelects(){
   };
   fill('f-sector', sectores); fill('f-atencion', atenciones); fill('f-actor', actores);
   fill('f-estado', estados); fill('f-municipio', municipios);
+  fill('f-organizacion', new Set(DATA.programas.map(p=>p.organizacion)));
 
+  document.getElementById('f-organizacion').onchange = e=>{filtros.organizacion=e.target.value; renderMapaYStats();};
+  document.getElementById('modo-mapa').addEventListener('click', e=>{
+    const b=e.target.closest('button[data-modo]'); if(!b || b.dataset.modo===MODO_MAPA) return;
+    MODO_MAPA=b.dataset.modo;
+    document.querySelectorAll('#modo-mapa button').forEach(x=>x.setAttribute('aria-pressed', String(x===b)));
+    document.getElementById('leyenda-actor').hidden = MODO_MAPA!=='actor';
+    document.getElementById('leyenda-intensidad').hidden = MODO_MAPA!=='intensidad';
+    renderMapaYStats();
+  });
   document.getElementById('f-sector').onchange = e=>{filtros.sector=e.target.value; renderMapaYStats();};
   document.getElementById('f-atencion').onchange = e=>{filtros.atencion=e.target.value; renderMapaYStats();};
   document.getElementById('f-actor').onchange = e=>{filtros.actor=e.target.value; renderMapaYStats();};
@@ -909,6 +1273,136 @@ function renderStats(filtrados){
   `;
 }
 
+/* ===== Mapa de actores ===== */
+let MODO_MAPA='actor', marcadoresActor=[], PUNTOS_MAPA=[];
+const ACTORES_VISIBLES=5; let ACTORES_EXPANDIDO=false;
+// Sin tonos dorados: ese color queda reservado a la presencia institucional/municipal.
+const PALETA_ACTORES=['#003058','#D1495B','#2E8B7A','#B5462B','#6B4E9B','#2B8FC2','#7C8F1E','#C2578A','#4A5568','#E07B2E','#159A9C','#7A3420','#3F6FD8','#9B6B2F'];
+let _coloresActor=null;
+function colorActor(org){
+  // El color se asigna por orden alfabético de todas las organizaciones,
+  // así no cambia cuando se aplican filtros.
+  if(!_coloresActor){
+    _coloresActor=new Map();
+    [...new Set((DATA.programas||[]).map(p=>p.organizacion).filter(Boolean))]
+      .sort((a,b)=>String(a).localeCompare(String(b),'es'))
+      .forEach((o,i)=>_coloresActor.set(o,PALETA_ACTORES[i%PALETA_ACTORES.length]));
+  }
+  return _coloresActor.get(org)||'#8B9199';
+}
+function resaltarActor(org){
+  marcadoresActor.forEach(m=>{
+    const el=m.marker.getElement && m.marker.getElement();
+    if(el) el.classList.toggle('atenuado', !!org && !m.orgs.has(org));
+  });
+}
+function aplicarFiltro(idSelect, valor){
+  const sel=document.getElementById(idSelect); if(!sel) return;
+  sel.value = sel.value===valor ? '' : valor;
+  sel.dispatchEvent(new Event('change',{bubbles:true}));
+}
+function renderActores(filtrados){
+  const lista=document.getElementById('actores-lista'); if(!lista) return;
+  const foco=lista.contains(document.activeElement) ? document.activeElement.dataset.org : null;
+  const datos=new Map();
+  filtrados.forEach(p=>{
+    if(!p.organizacion) return;
+    if(!datos.has(p.organizacion)) datos.set(p.organizacion,{tipo:p.tipo_actor||'',programas:0,lugares:0});
+    datos.get(p.organizacion).programas++;
+  });
+  PUNTOS_MAPA.forEach(pt=>new Set(pt.entradas.map(e=>e.organizacion)).forEach(o=>{ if(datos.has(o)) datos.get(o).lugares++; }));
+  const todas=[...datos.entries()].sort((a,b)=>b[1].lugares-a[1].lugares||b[1].programas-a[1].programas||a[0].localeCompare(b[0],'es'));
+  document.getElementById('actores-sub').textContent = todas.length
+    ? `${todas.length} organización(es). Tocá una para ver solo su presencia.`
+    : 'Ninguna organización cumple los filtros activos.';
+  // Se muestran las de mayor presencia; el resto queda a un clic.
+  const recortar = !ACTORES_EXPANDIDO && todas.length>ACTORES_VISIBLES+1;
+  const filas = recortar ? todas.slice(0,ACTORES_VISIBLES) : todas;
+  const pieActores = todas.length>ACTORES_VISIBLES+1
+    ? `<button type="button" class="actores-mas">${recortar?`Ver las ${todas.length} organizaciones`:'Ver menos'}</button>` : '';
+  lista.innerHTML=filas.map(([org,d])=>{
+    const activa=filtros.organizacion===org;
+    return `<button type="button" class="actor-fila${activa?' activa':''}" data-org="${escaparHtml(org)}" aria-pressed="${activa}">
+      <span class="actor-chip" style="background:${colorActor(org)}"></span>
+      <span class="actor-nombre">${escaparHtml(org)}<small>${escaparHtml(d.tipo)}</small></span>
+      <span class="actor-cifras"><b>${d.lugares}</b> lugar(es)<br>${d.programas} programa(s)</span>
+    </button>`;
+  }).join('')+pieActores;
+  if(!lista.dataset.listo){
+    lista.dataset.listo='1';
+    lista.addEventListener('click',e=>{
+      if(e.target.closest('.actores-mas')){ ACTORES_EXPANDIDO=!ACTORES_EXPANDIDO; renderActores(DATA.programas.filter(coincide)); lista.querySelector('.actores-mas')?.focus({preventScroll:true}); return; }
+      const b=e.target.closest('.actor-fila'); if(b) aplicarFiltro('f-organizacion',b.dataset.org);
+    });
+    const entrar=e=>{ const b=e.target.closest && e.target.closest('.actor-fila'); if(b) resaltarActor(b.dataset.org); };
+    lista.addEventListener('mouseover',entrar); lista.addEventListener('focusin',entrar);
+    lista.addEventListener('mouseleave',()=>resaltarActor(null)); lista.addEventListener('focusout',()=>resaltarActor(null));
+  }
+  if(foco){ const el=[...lista.querySelectorAll('.actor-fila')].find(x=>x.dataset.org===foco); if(el) el.focus({preventScroll:true}); }
+}
+/* Programas que no generan ningún punto de comunidad en el mapa, con el motivo.
+   Sirve para detectar registros de Kobo a los que les faltan lugares poblados. */
+function renderSinPuntos(filtrados){
+  const panel=document.getElementById('panel-sin-puntos'); if(!panel) return;
+  const sin=filtrados.filter(p=>!(p.comunidades||[]).length);
+  const faltantes=sin.filter(p=>p.trabajo_comunitario==='Sí');
+  const titulo=`Programas sin puntos en el mapa (${sin.length})`;
+  const t=panel.querySelector('.card-toggle span')||panel.querySelector('.side-title');
+  if(t) t.textContent=titulo;
+  panel.hidden=!sin.length;
+  document.getElementById('sin-puntos-sub').textContent=faltantes.length
+    ? `${faltantes.length} de ellos indican trabajo comunitario, pero su registro no trae lugares poblados: conviene revisarlos en Kobo.`
+    : 'Estos programas no reportaron lugares poblados.';
+  const motivo=p=>{
+    const inst=(p.municipios_cobertura_institucional||[]);
+    if(p.trabajo_comunitario==='Sí') return ['Indica trabajo comunitario, pero no trae lugares poblados'+(inst.length?`. Presencia institucional en ${inst.join(', ')}`:''), true];
+    if(inst.length) return [`Solo presencia institucional/municipal en ${inst.join(', ')}`, false];
+    return ['No reporta ubicación comunitaria ni institucional', false];
+  };
+  document.getElementById('sin-puntos-lista').innerHTML=sin.map(p=>{
+    const [texto,alerta]=motivo(p);
+    return `<div class="sin-punto${alerta?' alerta':''}"><span class="actor-chip" style="background:${colorActor(p.organizacion)}"></span><div><b>${escaparHtml(p.organizacion)}</b><br>${escaparHtml(p.nombre_programa||'Programa sin nombre')}<small>${escaparHtml(texto)}</small></div></div>`;
+  }).join('');
+}
+
+/* Filtros activos: una etiqueta por filtro, que se quita al tocarla */
+function renderFiltrosActivos(){
+  const cont=document.getElementById('filtros-activos'); if(!cont) return;
+  const defs=[['f-organizacion','Organización'],['f-sector','Sector'],['f-atencion','Tipo de atención'],['f-actor','Tipo de actor'],['f-estado','Estado'],['t-municipio','Municipio'],['t-lugar','Lugar poblado']];
+  const chips=defs.map(([id,nombre])=>{
+    const sel=document.getElementById(id); if(!sel || !sel.value) return '';
+    const texto=sel.options[sel.selectedIndex]?.textContent||sel.value;
+    return `<button type="button" class="filtro-chip" data-id="${id}" aria-label="Quitar filtro ${escaparHtml(nombre)}: ${escaparHtml(texto)}">${escaparHtml(nombre)}: ${escaparHtml(texto)}</button>`;
+  }).filter(Boolean);
+  // El botón "Más filtros" indica cuántos de los filtros plegados están en uso.
+  const mas=document.getElementById('mas-filtros');
+  if(mas){
+    const enUso=['f-atencion','f-actor','f-estado'].filter(id=>document.getElementById(id)?.value).length;
+    const abierto=mas.getAttribute('aria-expanded')==='true';
+    mas.textContent=(abierto?'Menos filtros':'Más filtros')+(enUso?` (${enUso} en uso)`:'');
+    if(!mas.dataset.listo){
+      mas.dataset.listo='1';
+      mas.onclick=()=>{
+        const abrir=mas.getAttribute('aria-expanded')!=='true';
+        mas.setAttribute('aria-expanded',String(abrir));
+        document.getElementById('filtros-extra').hidden=!abrir;
+        renderFiltrosActivos();
+      };
+    }
+  }
+  const habiaFoco=cont.contains(document.activeElement);
+  cont.innerHTML = chips.length ? `<span>Filtros activos:</span>${chips.join('')}` : '';
+  if(!cont.dataset.listo){
+    cont.dataset.listo='1';
+    cont.addEventListener('click',e=>{
+      const b=e.target.closest('.filtro-chip'); if(!b) return;
+      const sel=document.getElementById(b.dataset.id); if(!sel) return;
+      sel.value=''; sel.dispatchEvent(new Event('change',{bubbles:true}));
+    });
+  }
+  if(habiaFoco){ (cont.querySelector('.filtro-chip')||document.getElementById('f-organizacion')).focus({preventScroll:true}); }
+}
+
 function colorPorConteo(n, max){
   const t = max > 1 ? (n-1)/(max-1) : 1;
   const c1=[214,221,226], c2=[0,48,88];
@@ -925,14 +1419,42 @@ function renderMapa(filtrados){
   const muniTerritorial=document.getElementById('t-municipio')?.value||'';
   const lugarTerritorial=document.getElementById('t-lugar')?.value||'';
   const porPunto = {};
+  const sinCoordenadas = {};
+  const centroMunicipioBase = m=>{
+    const pts=basePlaces.filter(x=>x.municipio===m && Number.isFinite(Number(x.lat)) && Number.isFinite(Number(x.lon)));
+    if(!pts.length) return null;
+    return [pts.reduce((a,x)=>a+Number(x.lat),0)/pts.length, pts.reduce((a,x)=>a+Number(x.lon),0)/pts.length];
+  };
   filtrados.forEach(p=>{
     (p.comunidades||[]).forEach(c=>{
-      if(c.lat==null || c.lon==null) return;
       // La consulta territorial restringe también los puntos de cooperación.
       if(muniTerritorial && c.municipio!==muniTerritorial) return;
       if(lugarTerritorial && c.codigo_lugar!==lugarTerritorial) return;
       const key = c.codigo_lugar || (c.lugar_poblado+'|'+c.municipio);
-      if(!porPunto[key]) porPunto[key] = {codigo:c.codigo_lugar||'',lat:c.lat, lon:c.lon, municipio:c.municipio, lugar:c.lugar_poblado, entradas:[], poblacion:new Set(), acciones:new Set()};
+      // Lugares sin coordenadas en el catálogo (p. ej. Lomas Abajo, San Jacinto):
+      // antes se omitían del mapa. Ahora se dibujan con ubicación aproximada,
+      // cerca del centro de su municipio y con borde punteado.
+      let lat=c.lat, lon=c.lon, aproximado=false, referencia='';
+      const aprox=COORDS[c.codigo_lugar];
+      if(aprox && aprox.aproximada && Number.isFinite(Number(aprox.lat)) && Number.isFinite(Number(aprox.lon))){
+        // Coordenada de referencia cargada en coordenadas_lugares.json con "aproximada": true.
+        lat=Number(aprox.lat); lon=Number(aprox.lon); aproximado=true; referencia=aprox.fuente||'';
+      }else if((lat==null || lon==null) && aprox && Number.isFinite(Number(aprox.lat)) && Number.isFinite(Number(aprox.lon))){
+        // data.json puede ser anterior al catálogo de coordenadas: se usa la del catálogo.
+        lat=Number(aprox.lat); lon=Number(aprox.lon);
+      }else if(lat==null || lon==null){
+        const centro=centroMunicipioBase(c.municipio);
+        if(!centro) return;
+        referencia='Sin coordenadas en el catálogo; se dibuja cerca del centro del municipio.';
+        if(!sinCoordenadas[c.municipio]) sinCoordenadas[c.municipio]=new Map();
+        const orden=sinCoordenadas[c.municipio];
+        if(!orden.has(key)) orden.set(key,orden.size);
+        const i=orden.get(key);
+        lat=centro[0]-0.022-0.014*Math.floor(i/4);
+        lon=centro[1]+((i%4)-1.5)*0.016;
+        aproximado=true;
+      }
+      if(!porPunto[key]) porPunto[key] = {codigo:c.codigo_lugar||'',lat:lat, lon:lon, aproximado:aproximado, referencia:referencia, municipio:c.municipio, lugar:c.lugar_poblado, entradas:[], poblacion:new Set(), acciones:new Set()};
       porPunto[key].entradas.push({
         organizacion:p.organizacion, sector:p.sector||[], programa:p.nombre_programa, cantidades:c.pm_cantidades,
         tipo_actor:p.tipo_actor||'', tipo_atencion:p.tipo_atencion||'', estado:p.estado_programa||'',
@@ -949,13 +1471,43 @@ function renderMapa(filtrados){
   const puntos = Object.values(porPunto);
   const maxConteo = Math.max(1, ...puntos.map(p=>new Set(p.entradas.map(e=>e.organizacion)).size));
 
+  marcadoresActor=[];
+  PUNTOS_MAPA=puntos;
+  const avisoAprox=document.getElementById('leyenda-aprox');
+  if(avisoAprox){
+    const nAprox=puntos.filter(p=>p.aproximado).length;
+    avisoAprox.hidden=!nAprox;
+    avisoAprox.textContent=nAprox?`Borde punteado: ${nAprox} lugar(es) sin coordenada propia, dibujado(s) en una ubicación aproximada. Tocá el punto para ver la referencia usada.`:'';
+  }
+  if(!map.getPane('actorPane')){ map.createPane('actorPane'); map.getPane('actorPane').style.zIndex=645; }
   if(document.getElementById('layer-coop').checked){
     puntos.forEach(p=>{
       const orgsUnicas = new Set(p.entradas.map(e=>e.organizacion));
       const n = orgsUnicas.size;
-      const marker = L.circleMarker([p.lat,p.lon], {radius:7+n*3, fillColor:colorPorConteo(n,maxConteo), color:'#fff', weight:1.5, fillOpacity:0.92});
+      let marker;
+      if(MODO_MAPA==='actor'){
+        // Mapa de actores: cada organización tiene un color fijo; un punto con
+        // varias organizaciones se reparte en porciones y muestra cuántas son.
+        const orgs=[...orgsUnicas].sort((a,b)=>String(a).localeCompare(String(b),'es'));
+        const paso=100/orgs.length;
+        const fondo=orgs.length===1 ? colorActor(orgs[0])
+          : `conic-gradient(${orgs.map((o,i)=>`${colorActor(o)} ${(i*paso).toFixed(2)}% ${((i+1)*paso).toFixed(2)}%`).join(',')})`;
+        const tam=18+Math.min(n,5)*4;
+        marker=L.marker([p.lat,p.lon],{
+          pane:'actorPane', keyboard:true, alt:`${p.lugar}, ${p.municipio}: ${n} organización(es)`,
+          icon:L.divIcon({className:'mk-actor-wrap', iconSize:[tam,tam], iconAnchor:[tam/2,tam/2],
+            html:`<span class="mk-actor${p.aproximado?' mk-aprox':''}" style="width:${tam}px;height:${tam}px;background:${fondo}">${n>1?`<b>${n}</b>`:''}</span>`})
+        });
+        marker.bindTooltip(`<div class="tip-actores"><b>${escaparHtml(p.lugar)}</b> · ${escaparHtml(p.municipio)}<br>${orgs.map(o=>`<i style="background:${colorActor(o)}"></i>${escaparHtml(o)}`).join('<br>')}${p.aproximado?'<br><em>Ubicación aproximada: sin coordenadas en el catálogo</em>':''}</div>`,{direction:'top',opacity:.97,offset:[0,-tam/2]});
+      }else{
+        marker = L.circleMarker([p.lat,p.lon], p.aproximado
+          ? {radius:7+n*3, fillColor:colorPorConteo(n,maxConteo), color:'#B5462B', weight:2, dashArray:'3 3', fillOpacity:0.92}
+          : {radius:7+n*3, fillColor:colorPorConteo(n,maxConteo), color:'#fff', weight:1.5, fillOpacity:0.92});
+        if(p.aproximado) marker.bindTooltip(`${escaparHtml(p.lugar)} · ${escaparHtml(p.municipio)} · ubicación aproximada`,{direction:'top',opacity:.95});
+      }
+      marcadoresActor.push({marker, orgs:orgsUnicas});
       const programasUnicos=new Set(p.entradas.map(e=>e.programa).filter(Boolean));
-      marker.bindPopup(`<b>${escaparHtml(p.lugar)}</b> · ${escaparHtml(p.municipio)}<br><br><b>${n}</b> organización(es) · <b>${programasUnicos.size}</b> programa(s) / proyecto(s)<br><span style="color:#6B7280">El detalle completo se muestra en el panel lateral.</span>`,{maxWidth:285});
+      marker.bindPopup(`<b>${escaparHtml(p.lugar)}</b> · ${escaparHtml(p.municipio)}<br><br><b>${n}</b> organización(es) · <b>${programasUnicos.size}</b> programa(s) / proyecto(s)<br><span style="color:#6B7280">El detalle completo se muestra en el panel lateral.</span>${p.aproximado?'<br><span style="color:#B5462B"><b>Ubicación aproximada.</b> '+escaparHtml(p.referencia)+'</span>':''}`,{maxWidth:285});
       marker.on('click', ()=>mostrarPanelComunidad(p));
       marker.addTo(coopLayer);
     });
@@ -992,7 +1544,6 @@ function renderMapa(filtrados){
       mk.on('click',(e)=>{
         if(e?.originalEvent) L.DomEvent.stopPropagation(e.originalEvent);
         mk.closeTooltip();
-        map.closeTooltip();
       });
       mk.addTo(instLayer);
     });
@@ -1143,14 +1694,15 @@ async function cargarLimitesMunicipales(){
           if(limitesLayer) limitesLayer.resetStyle(e.target);
         },
         click:(e)=>{
+          // Nota: map.closeTooltip() sin argumento lanza un error en Leaflet y
+          // cortaba este clic antes de aplicar la consulta; basta cerrar el de la capa.
           if(e?.target?.closeTooltip) e.target.closeTooltip();
-          map.closeTooltip();
 
           // El clic sobre un municipio inicia una consulta territorial limpia:
           // conserva únicamente el municipio seleccionado y restablece los
           // filtros generales para mostrar toda la cooperación registrada allí.
           Object.keys(filtros).forEach(k=>filtros[k]='');
-          ['f-sector','f-atencion','f-actor','f-estado','f-municipio'].forEach(id=>{
+          ['f-organizacion','f-sector','f-atencion','f-actor','f-estado','f-municipio'].forEach(id=>{
             const control=document.getElementById(id);
             if(control) control.value='';
           });
@@ -1326,7 +1878,7 @@ function agregarLimitesSecundarios(mapa){
       l.on({
         mouseover:e=>e.target.setStyle({color:'#1971A8',weight:2.5,opacity:1,fillColor:'#8FC1DF',fillOpacity:.20}),
         mouseout:e=>capa.resetStyle(e.target),
-        click:e=>{ mapa.closeTooltip(); mapa.fitBounds(e.target.getBounds(),{padding:[25,25],maxZoom:12}); }
+        click:e=>{ e.target.closeTooltip(); mapa.fitBounds(e.target.getBounds(),{padding:[25,25],maxZoom:12}); }
       });
     }
   }).addTo(mapa);
@@ -1341,11 +1893,20 @@ function renderResumenTerritorial(filtrados){
   const codigosCoop=new Set();
   const orgs=new Set();
   const programas=new Set();
+  const sinCoord=new Set();
   filtrados.forEach(pr=>{
     (pr.comunidades||[]).forEach(c=>{
-      if((!muni||c.municipio===muni) && c.lat!=null){ if(c.codigo_lugar) codigosCoop.add(c.codigo_lugar); orgs.add(pr.organizacion); programas.add(pr.nombre_programa); }
+      // Antes se exigían coordenadas (c.lat) y los lugares sin georreferenciar
+      // dejaban al municipio en cero. Ahora cuentan, y se informan aparte.
+      if(!muni||c.municipio===muni){
+        if(c.codigo_lugar) codigosCoop.add(c.codigo_lugar);
+        if((c.lat==null && !COORDS[c.codigo_lugar]) || COORDS[c.codigo_lugar]?.aproximada) sinCoord.add(c.lugar_poblado||c.codigo_lugar||'Lugar sin nombre');
+        orgs.add(pr.organizacion); programas.add(pr.nombre_programa);
+      }
     });
   });
+  const notaSinCoord=sinCoord.size
+    ? `<div class="side-sub" style="margin-top:10px;color:#8A3A22;"><b>+ ${sinCoord.size} lugar(es) con presencia sin coordenada propia:</b> ${[...sinCoord].map(escaparHtml).join(', ')}. Se dibujan con ubicación aproximada (borde punteado).</div>` : '';
   const conPresencia=base.filter(p=>codigosCoop.has(p.codigo)).length;
   const sinPresencia=Math.max(0,base.length-conPresencia);
   panel.innerHTML=`<div class="side-title">${muni?'Municipio de '+muni:'Resumen territorial'}</div>
@@ -1355,7 +1916,7 @@ function renderResumenTerritorial(filtrados){
       <div class="mini"><b>${conPresencia.toLocaleString('es-GT')}</b><span>Con presencia registrada</span></div>
       <div class="mini"><b>${sinPresencia.toLocaleString('es-GT')}</b><span>Sin presencia registrada</span></div>
       <div class="mini"><b>${orgs.size}</b><span>Organizaciones registradas</span></div>
-    </div>
+    </div>${notaSinCoord}
     <div class="side-title" style="font-size:14px;margin-top:15px;">Programas / proyectos</div>
     <div class="side-sub">${programas.size} registrado(s) para esta consulta.</div>
     <div class="side-sub" style="margin-top:10px;">Seleccioná un punto del mapa para ver su detalle.</div>`;
@@ -1644,6 +2205,99 @@ function renderMapaYStats(){
   const filtrados = DATA.programas.filter(coincide);
   renderStats(filtrados);
   renderMapa(filtrados);
+  try{ renderActores(filtrados); }catch(e){ console.warn('No se pudo dibujar la lista de actores', e); }
+  try{ renderSinPuntos(filtrados); }catch(e){ console.warn(e); }
+  try{ renderGraficas(filtrados); }catch(e){ console.warn('No se pudieron dibujar las gráficas', e); }
+  try{ renderFiltrosActivos(); }catch(e){ console.warn(e); }
+}
+
+/* ===== Panorama: gráficas del mapeo =====
+   Se calculan con los mismos programas filtrados que el mapa.
+   Las barras y leyendas de sector, tipo de actor y estado funcionan como filtro. */
+const COLORES_GRAFICA=['#003058','#DFB26F','#2E8B7A','#C98A6B','#6B4E9B','#9AA3AD'];
+function contarValores(lista){
+  const m=new Map();
+  lista.forEach(k=>{ if(k) m.set(k,(m.get(k)||0)+1); });
+  return [...m.entries()].sort((a,b)=>b[1]-a[1]||String(a[0]).localeCompare(String(b[0]),'es'));
+}
+function graficaBarras(pares, filtroId, activo){
+  if(!pares.length) return '<div class="g-vacio">Sin registros para esta consulta.</div>';
+  const max=Math.max(1,...pares.map(p=>p[1]));
+  return pares.map(([k,n])=>{
+    const esActivo=!!activo && activo===k;
+    const attrs=filtroId?` type="button" data-filtro="${filtroId}" data-valor="${escaparHtml(k)}" aria-pressed="${esActivo}"`:'';
+    const tag=filtroId?'button':'div';
+    return `<${tag} class="g-fila${esActivo?' activa':''}${n?'':' cero'}"${attrs}><span class="g-nombre">${escaparHtml(k)}</span><span class="g-pista"><span class="g-barra" style="width:${Math.round(n/max*100)}%"></span></span><span class="g-valor">${n}</span></${tag}>`;
+  }).join('');
+}
+function graficaDona(pares, filtroId, activo, unidad){
+  const total=pares.reduce((a,p)=>a+p[1],0);
+  if(!total) return '<div class="g-vacio">Sin registros para esta consulta.</div>';
+  let items=pares.map(([k,n])=>({k,n,filtrable:true}));
+  if(items.length>COLORES_GRAFICA.length){
+    const resto=items.slice(COLORES_GRAFICA.length-1);
+    items=items.slice(0,COLORES_GRAFICA.length-1).concat({k:`Otros (${resto.length})`,n:resto.reduce((a,x)=>a+x.n,0),filtrable:false});
+  }
+  let acumulado=0;
+  const arcos=items.map((it,i)=>{
+    const pct=it.n/total*100;
+    const arco=`<circle cx="21" cy="21" r="15.915" fill="none" stroke="${COLORES_GRAFICA[i]}" stroke-width="5" stroke-dasharray="${pct.toFixed(3)} ${(100-pct).toFixed(3)}" stroke-dashoffset="${(25-acumulado).toFixed(3)}"/>`;
+    acumulado+=pct; return arco;
+  }).join('');
+  const leyenda=items.map((it,i)=>{
+    const esActivo=!!activo && activo===it.k;
+    const clic=filtroId && it.filtrable;
+    const attrs=clic?` type="button" data-filtro="${filtroId}" data-valor="${escaparHtml(it.k)}" aria-pressed="${esActivo}"`:'';
+    const tag=clic?'button':'div';
+    return `<${tag} class="g-leyenda-item${esActivo?' activa':''}"${attrs}><span class="g-muestra" style="background:${COLORES_GRAFICA[i]}"></span><span class="g-nombre">${escaparHtml(it.k)}</span><span class="g-valor">${it.n}</span></${tag}>`;
+  }).join('');
+  return `<div class="g-dona"><svg viewBox="0 0 42 42" role="img" aria-label="${total} ${escaparHtml(unidad)}"><circle cx="21" cy="21" r="15.915" fill="none" stroke="#ECE7DB" stroke-width="5"/>${arcos}<text x="21" y="21.5" text-anchor="middle" class="g-dona-total">${total}</text><text x="21" y="26.5" text-anchor="middle" class="g-dona-unidad">${escaparHtml(unidad)}</text></svg><div class="g-leyenda">${leyenda}</div></div>`;
+}
+function renderGraficas(filtrados){
+  const cont=document.getElementById('panorama'); if(!cont) return;
+  const foco=document.activeElement && cont.contains(document.activeElement) ? document.activeElement.dataset : null;
+
+  const sectores=contarValores(filtrados.flatMap(p=>[...new Set(p.sector||[])]));
+  const porMuni=new Map((DATA.municipios||[]).map(m=>[m,0]));
+  filtrados.forEach(p=>{
+    new Set([...(p.comunidades||[]).map(c=>c.municipio),...(p.municipios_cobertura_institucional||[])])
+      .forEach(m=>{ if(porMuni.has(m)) porMuni.set(m,porMuni.get(m)+1); });
+  });
+  const municipios=[...porMuni.entries()].sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],'es'));
+  const tipoPorOrg=new Map();
+  filtrados.forEach(p=>{ if(p.organizacion && !tipoPorOrg.has(p.organizacion)) tipoPorOrg.set(p.organizacion,p.tipo_actor||'Sin dato'); });
+  const actores=contarValores([...tipoPorOrg.values()]);
+  const estados=contarValores(filtrados.map(p=>p.estado_programa||'Sin dato'));
+
+  document.getElementById('g-sector').innerHTML=graficaBarras(sectores,'f-sector',filtros.sector);
+  document.getElementById('g-municipio').innerHTML=graficaBarras(municipios,'t-municipio',document.getElementById('t-municipio')?.value||'');
+  document.getElementById('g-actor').innerHTML=graficaDona(actores,'f-actor',filtros.actor,'organizaciones');
+  document.getElementById('g-estado').innerHTML=graficaDona(estados,'f-estado',filtros.estado,'programas');
+  document.getElementById('panorama-sub').textContent=
+    `${filtrados.length} programa(s)/proyecto(s) según los filtros activos. Tocá una barra o categoría para filtrar el mapa.`;
+
+  if(!cont.dataset.listo){
+    cont.dataset.listo='1';
+    cont.addEventListener('click',e=>{
+      // Pestañas: cada tarjeta muestra una gráfica a la vez.
+      const tab=e.target.closest('.g-tabs button');
+      if(tab){
+        tab.parentElement.querySelectorAll('button').forEach(x=>{
+          x.setAttribute('aria-pressed',String(x===tab));
+          document.getElementById(x.dataset.panel).hidden = x!==tab;
+        });
+        return;
+      }
+      const b=e.target.closest('[data-filtro]'); if(!b) return;
+      const sel=document.getElementById(b.dataset.filtro); if(!sel) return;
+      sel.value = sel.value===b.dataset.valor ? '' : b.dataset.valor;
+      sel.dispatchEvent(new Event('change',{bubbles:true}));
+    });
+  }
+  if(foco && foco.filtro){
+    const el=[...cont.querySelectorAll('[data-filtro]')].find(x=>x.dataset.filtro===foco.filtro && x.dataset.valor===foco.valor);
+    if(el) el.focus({preventScroll:true});
+  }
 }
 
 function renderMatriz(){
@@ -1694,8 +2348,8 @@ function renderBrechas(){
     lugar:m.lugar_poblado,
     clasificacion:m.clasificacion||'',
     viviendas:m.viviendas||0,
-    lat:COORDS[codigo]?.lat ?? null,
-    lon:COORDS[codigo]?.lon ?? null
+    lat:COORDS[codigo]?.aproximada ? null : (COORDS[codigo]?.lat ?? null),
+    lon:COORDS[codigo]?.aproximada ? null : (COORDS[codigo]?.lon ?? null)
   }));
   const municipios=[...new Set(catalogoCompleto.map(x=>x.municipio).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es'));
   if(sel.options.length===1) municipios.forEach(m=>sel.add(new Option(m,m)));
@@ -2520,11 +3174,11 @@ function renderProgramas(){
 
 async function cargarBaseTerritorial(){
   try{
-    const [rc,rx]=await Promise.all([fetch('catalogo_xlsform.json'),fetch('coordenadas_lugares.json')]);
+    const [rc,rx]=await Promise.all([fetch('catalogo_xlsform.json',{cache:'no-cache'}),fetch('coordenadas_lugares.json',{cache:'no-cache'})]); // no-cache: revalida para no usar un catálogo viejo
     if(!rc.ok||!rx.ok) throw new Error('No se pudo leer la base territorial');
     CATALOGO=await rc.json(); COORDS=await rx.json();
     const munChoices=(CATALOGO.choices&&CATALOGO.choices.municipios)||{};
-    basePlaces=Object.entries(CATALOGO.lugares_poblados||{}).filter(([codigo])=>COORDS[codigo]).map(([codigo,m])=>({
+    basePlaces=Object.entries(CATALOGO.lugares_poblados||{}).filter(([codigo])=>COORDS[codigo] && !COORDS[codigo].aproximada).map(([codigo,m])=>({
       codigo, municipio:munChoices[m.municipio_codigo]||m.municipio_codigo, lugar:m.lugar_poblado,
       clasificacion:m.clasificacion||'', viviendas:m.viviendas||0, lat:COORDS[codigo].lat, lon:COORDS[codigo].lon
     }));
@@ -2631,28 +3285,315 @@ async function iniciar(){
   });
 }
 
-function exportarTablaCSV(tabla){
-  const filas=[...tabla.querySelectorAll('tr')].map(tr=>[...tr.children].map(td=>{
-    const t=(td.innerText||'').replace(/\s+/g,' ').trim().replace(/"/g,'""');
-    return `"${t}"`;
-  }).join(','));
-  const blob=new Blob(['\ufeff'+filas.join('\r\n')],{type:'text/csv;charset=utf-8'});
-  const vista=tabla.closest('.view');
-  const nombre=(tabla.id||'tabla')+(vista?'_'+vista.id.replace('view-',''):'')+'.csv';
-  const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=nombre;
-  document.body.appendChild(a); a.click(); setTimeout(()=>{URL.revokeObjectURL(a.href); a.remove();},500);
+/* Descargas por tabla: Excel y PDF (reemplazan a la antigua descarga CSV). */
+function tituloDeTabla(tabla){
+  const tarjeta=tabla.closest('[data-plegable], .card, .pa-table-card');
+  return (tarjeta?.querySelector('.card-toggle span, .side-title, .section-title, .pa-title')?.textContent||tabla.id.replace('tabla-','')||'Tabla').trim();
 }
-function agregarBotonesCSV(){
+async function exportarTablaExcel(tabla, btn){
+  if(btn) btn.disabled=true;
+  avisoExportar('Generando Excel\u2026');
+  try{
+    if(!window.XLSX) await cargarScript(URL_XLSX);
+    // Todas las filas de la tabla, incluidas las plegadas o fuera de la b\u00fasqueda.
+    const filas=[...tabla.querySelectorAll('tr')].map(tr=>[...tr.children].map(td=>{
+      const s=(td.textContent||'').replace(/\s+/g,' ').trim();
+      return /^\d+$/.test(s)?Number(s):s;
+    })).filter(f=>f.length);
+    const titulo=tituloDeTabla(tabla);
+    const wb=XLSX.utils.book_new();
+    const ws=XLSX.utils.aoa_to_sheet(filas);
+    const anchos=[];
+    filas.forEach(f=>f.forEach((c,i)=>{ anchos[i]=Math.min(60,Math.max(anchos[i]||8,String(c??'').length+2)); }));
+    ws['!cols']=anchos.map(w=>({wch:w}));
+    XLSX.utils.book_append_sheet(wb,ws,nombreHoja(titulo,new Set()));
+    XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet([
+      ['Mapeo de Actores de Cooperaci\u00f3n \u2014 Departamento de Chiquimula'],
+      ['Tabla',titulo],['Vista',vistaActiva().nombre],['Datos al',fechaCorteTexto()],
+      ['Documento generado',new Date().toLocaleString('es-GT')],
+      ['Nota','La ausencia de registro no confirma por s\u00ed sola una brecha de atenci\u00f3n.']
+    ]),'Acerca de');
+    const vista=tabla.closest('.view');
+    XLSX.writeFile(wb,`${tabla.id||'tabla'}${vista?'_'+vista.id.replace('view-',''):''}_${new Date().toISOString().slice(0,10)}.xlsx`);
+    avisoExportar(`Excel descargado: ${filas.length-1} fila(s).`);
+  }catch(e){
+    console.error(e); avisoExportar(e.message||'No se pudo generar el Excel.');
+  }finally{ if(btn) btn.disabled=false; }
+}
+function exportarTablaPDF(tabla){
+  // Imprime solo la tarjeta de esta tabla: se marca la ruta desde la vista
+  // hasta la tarjeta y el resto se oculta mientras dura la impresi\u00f3n.
+  const objetivo=tabla.closest('[data-plegable], .card, .pa-table-card')||tabla.parentElement;
+  const ruta=[]; let n=objetivo.parentElement;
+  while(n && !n.matches('main')){ ruta.push(n); n=n.parentElement; }
+  document.getElementById('encabezado-impresion-vista').innerHTML=
+    `<b>${escaparHtml(tituloDeTabla(tabla))}</b><br>${escaparHtml(vistaActiva().nombre)} \u00b7 Datos al ${escaparHtml(fechaCorteTexto())}`+
+    `<br>La ausencia de registro no confirma por s\u00ed sola una brecha de atenci\u00f3n.`;
+  objetivo.classList.add('objetivo-impresion'); ruta.forEach(x=>x.classList.add('ruta-impresion'));
+  document.body.classList.add('imprimir-vista','imprimir-tabla');
+  const quitar=()=>{
+    document.body.classList.remove('imprimir-vista','imprimir-tabla');
+    objetivo.classList.remove('objetivo-impresion'); ruta.forEach(x=>x.classList.remove('ruta-impresion'));
+    window.removeEventListener('afterprint',quitar);
+  };
+  window.addEventListener('afterprint',quitar);
+  avisoExportar('En el cuadro de impresi\u00f3n eleg\u00ed "Guardar como PDF".');
+  window.print();
+  setTimeout(quitar,1500);
+}
+function agregarBotonesDescarga(){
   document.querySelectorAll('main table').forEach(t=>{
-    if(t.dataset.csv) return; t.dataset.csv='1';
-    const b=document.createElement('button'); b.type='button'; b.className='csv-btn'; b.textContent='Descargar CSV';
-    b.onclick=()=>exportarTablaCSV(t);
+    if(t.dataset.descarga) return; t.dataset.descarga='1';
     const cont=t.parentElement.style.overflowX==='auto'||t.parentElement.classList.contains('matrix-wrap')?t.parentElement:t;
-    cont.parentElement.insertBefore(b,cont);
+    // La clase csv-btn se conserva solo por sus estilos (bot\u00f3n flotante de tabla).
+    const pdf=document.createElement('button'); pdf.type='button'; pdf.className='csv-btn'; pdf.textContent='PDF';
+    pdf.setAttribute('aria-label','Guardar esta tabla como PDF'); pdf.onclick=()=>exportarTablaPDF(t);
+    const xls=document.createElement('button'); xls.type='button'; xls.className='csv-btn'; xls.textContent='Excel';
+    xls.setAttribute('aria-label','Descargar esta tabla en Excel'); xls.onclick=()=>exportarTablaExcel(t,xls);
+    cont.parentElement.insertBefore(pdf,cont);
+    cont.parentElement.insertBefore(xls,cont);
   });
 }
 
-iniciar().then(()=>{ try{ agregarBotonesCSV(); }catch(e){ console.warn(e); } });
+/* ===== Vista aligerada =====
+   1) Los textos explicativos largos se pliegan tras un enlace "Cómo leer esta sección".
+   2) Las tablas largas muestran las primeras filas y un botón para ver el resto.
+   No se elimina información: el Excel y el PDF siguen incluyendo todo. */
+const FILAS_VISIBLES=10;
+function plegarNotasLargas(){
+  const sel='.section-sub,.side-sub,.pa-sub,.org-note,.map-note,.boundary-note';
+  document.querySelectorAll(sel).forEach(el=>{
+    // Los textos con id se rellenan con datos de la consulta: se dejan visibles.
+    if(el.id || el.dataset.plegado) return;
+    const texto=el.textContent.trim();
+    if(texto.length<110) return;
+    el.dataset.plegado='1';
+    const d=document.createElement('details'); d.className='nota-plegable';
+    const s=document.createElement('summary'); s.textContent='Cómo leer esta sección';
+    const t=document.createElement('div'); t.className='nota-texto'; t.textContent=texto;
+    d.append(s,t); el.replaceWith(d);
+  });
+  window.addEventListener('beforeprint',()=>document.querySelectorAll('details.nota-plegable').forEach(d=>{ d.dataset.abiertoAntes=d.open?'1':''; d.open=true; }));
+  window.addEventListener('afterprint',()=>document.querySelectorAll('details.nota-plegable').forEach(d=>{ d.open=!!d.dataset.abiertoAntes; }));
+}
+function resumirTabla(tabla){
+  const tbody=tabla.tBodies[0]; if(!tbody) return;
+  const cont=tabla.parentElement.style.overflowX==='auto'?tabla.parentElement:tabla;
+  let pie=cont.nextElementSibling;
+  if(!pie || !pie.classList.contains('tabla-pie')){
+    pie=document.createElement('div'); pie.className='tabla-pie'; cont.after(pie);
+  }
+  const todas=[...tbody.rows];
+  const expandida=tabla.dataset.expandida==='1';
+  // Buscador: aparece solo en tablas largas y filtra por cualquier texto de la fila.
+  let buscador=tabla._buscador;
+  if(!buscador && todas.length>FILAS_VISIBLES+2){
+    buscador=document.createElement('input'); buscador.type='search'; buscador.className='tabla-buscar';
+    buscador.placeholder='Buscar en la tabla…'; buscador.setAttribute('aria-label','Buscar en la tabla');
+    buscador.oninput=()=>{ tabla.dataset.expandida=''; resumirTabla(tabla); };
+    cont.parentElement.insertBefore(buscador,cont); tabla._buscador=buscador;
+  }
+  const sinAcentos=s=>String(s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
+  const q=buscador?sinAcentos(buscador.value.trim()):'';
+  if(buscador) buscador.hidden = todas.length<=FILAS_VISIBLES+2 && !q;
+  const filas=q?todas.filter(f=>sinAcentos(f.textContent).includes(q)):todas;
+  todas.forEach(f=>f.classList.add('fila-oculta'));
+  if(filas.length<=FILAS_VISIBLES+2){
+    filas.forEach(f=>f.classList.remove('fila-oculta'));
+    pie.hidden=!q; pie.innerHTML='';
+    if(q){ const s=document.createElement('span'); s.textContent=filas.length?`${filas.length} fila(s) coinciden con la búsqueda, de ${todas.length}`:`Ninguna fila coincide con la búsqueda (${todas.length} en total)`; pie.append(s); }
+    return;
+  }
+  filas.forEach((f,i)=>f.classList.toggle('fila-oculta', !expandida && i>=FILAS_VISIBLES));
+  pie.hidden=false; pie.innerHTML='';
+  const info=document.createElement('span');
+  const sufijo=q?` que coinciden (de ${todas.length})`:'';
+  info.textContent=expandida?`Mostrando las ${filas.length} filas${sufijo}`:`Mostrando ${FILAS_VISIBLES} de ${filas.length} filas${sufijo}`;
+  const b=document.createElement('button'); b.type='button';
+  b.textContent=expandida?'Ver menos':`Ver las ${filas.length-FILAS_VISIBLES} restantes`;
+  b.onclick=()=>{
+    tabla.dataset.expandida=expandida?'':'1'; resumirTabla(tabla);
+    if(expandida) tabla.scrollIntoView({block:'nearest'});
+  };
+  pie.append(info,b);
+}
+function resumirTablasLargas(){
+  document.querySelectorAll('main table').forEach(t=>{
+    // Las matrices se leen completas: no se recortan.
+    if(t.classList.contains('matrix') || /matriz/.test(t.id) || !t.tBodies[0] || t.dataset.resumida) return;
+    t.dataset.resumida='1';
+    resumirTabla(t);
+    // Cada nueva consulta vuelve a la vista resumida.
+    new MutationObserver(()=>{ t.dataset.expandida=''; resumirTabla(t); }).observe(t.tBodies[0],{childList:true});
+  });
+}
+
+/* ===== Documentos: Excel y PDF =====
+   Excel: libro .xlsx con los programas, los lugares poblados y las tablas de la vista abierta.
+   PDF: usa la impresión del navegador ("Guardar como PDF"), con todo desplegado.
+   No se exporta el correo de contacto de las organizaciones. */
+const URL_XLSX='https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js';
+function cargarScript(src){
+  return new Promise((ok,err)=>{
+    const s=document.createElement('script'); s.src=src; s.onload=()=>ok();
+    s.onerror=()=>err(new Error('No se pudo cargar el generador de Excel (revisá la conexión a internet).'));
+    document.head.appendChild(s);
+  });
+}
+function avisoExportar(texto){
+  const e=document.getElementById('exportar-estado'); if(!e) return;
+  e.textContent=texto; clearTimeout(avisoExportar._t);
+  if(texto) avisoExportar._t=setTimeout(()=>{ e.textContent=''; },6000);
+}
+function vistaActiva(){
+  const el=document.querySelector('.view.active');
+  const id=el?el.id.replace('view-',''):'mapa';
+  return {el,id,nombre:(VISTAS.find(v=>v.id===id)||{}).label||id};
+}
+function fechaCorteTexto(){
+  return DATA&&DATA.generado?new Date(DATA.generado).toLocaleDateString('es-GT',{day:'2-digit',month:'long',year:'numeric'}):'';
+}
+function filtrosEnTexto(){
+  const defs=[['f-organizacion','Organización'],['f-sector','Sector'],['f-atencion','Tipo de atención'],['f-actor','Tipo de actor'],['f-estado','Estado'],['t-municipio','Municipio'],['t-lugar','Lugar poblado']];
+  const activos=defs.map(([id,n])=>{ const s=document.getElementById(id); return s&&s.value?`${n}: ${s.options[s.selectedIndex]?.textContent||s.value}`:''; }).filter(Boolean);
+  return activos.length?activos.join(' · '):'Ninguno';
+}
+function nombreHoja(texto, usados){
+  let base=String(texto||'Tabla').replace(/[\[\]:*?\/\\]/g,' ').replace(/\s+/g,' ').trim().slice(0,31)||'Tabla';
+  let nombre=base, i=2;
+  while(usados.has(nombre.toLowerCase())){ const suf=` (${i++})`; nombre=base.slice(0,31-suf.length)+suf; }
+  usados.add(nombre.toLowerCase()); return nombre;
+}
+function construirLibroExcel(){
+  const {el,id,nombre}=vistaActiva();
+  const wb=XLSX.utils.book_new(), usados=new Set();
+  const agregar=(titulo,filas)=>{
+    const ws=XLSX.utils.aoa_to_sheet(filas);
+    const anchos=[];
+    filas.forEach(f=>f.forEach((c,i)=>{ anchos[i]=Math.min(60,Math.max(anchos[i]||8,String(c??'').length+2)); }));
+    ws['!cols']=anchos.map(w=>({wch:w}));
+    XLSX.utils.book_append_sheet(wb,ws,nombreHoja(titulo,usados));
+  };
+  // En la vista Mapa se respetan sus filtros; en las demás se exportan todos los programas.
+  const enMapa=id==='mapa';
+  const muni=enMapa?(document.getElementById('t-municipio')?.value||''):'';
+  const lugar=enMapa?(document.getElementById('t-lugar')?.value||''):'';
+  const enTerritorio=c=>(!muni||c.municipio===muni)&&(!lugar||c.codigo_lugar===lugar);
+  let programas=enMapa?DATA.programas.filter(coincide):DATA.programas.slice();
+  if(muni||lugar) programas=programas.filter(p=>(p.comunidades||[]).some(enTerritorio)||(!lugar&&(p.municipios_cobertura_institucional||[]).includes(muni)));
+  const lista=v=>(Array.isArray(v)?v:[v]).filter(x=>x!==null&&x!==undefined&&x!=='').join('; ');
+
+  agregar('Acerca de',[
+    ['Mapeo de Actores de Cooperación — Departamento de Chiquimula'],
+    ['Datos al',fechaCorteTexto()],
+    ['Documento generado',new Date().toLocaleString('es-GT')],
+    ['Vista exportada',nombre],
+    ['Filtros aplicados a Programas y Lugares',enMapa?filtrosEnTexto():'Ninguno (todos los programas)'],
+    ['Programas incluidos',programas.length],
+    ['Nota','La ausencia de registro no confirma por sí sola una brecha de atención. Las cantidades de población son las reportadas y no representan personas únicas.']
+  ]);
+  agregar('Programas',[
+    ['Organización','Tipo de actor','País de origen','Programa / proyecto','Tipo de atención','Sectores','Modalidad','Estado','Fecha de inicio','Fecha de fin','Inversión reportada (rango)','Fuentes de financiamiento','Espacios de coordinación','Contraparte gubernamental','Municipios con presencia comunitaria','Municipios con presencia institucional','Lugares poblados reportados'],
+    ...programas.map(p=>[
+      p.organizacion||'',p.tipo_actor||'',p.pais_origen||'',p.nombre_programa||'',p.tipo_atencion||'',lista(p.sector||[]),lista(p.modalidad||[]),p.estado_programa||'',
+      p.fecha_inicio||'',p.fecha_fin||'',p.monto_rango||'',lista(p.fuente_financiamiento||[]),lista(p.espacios_coordinacion||[]),p.contraparte_gubernamental||'',
+      lista([...new Set((p.comunidades||[]).map(c=>c.municipio))]),lista(p.municipios_cobertura_institucional||[]),(p.comunidades||[]).length
+    ])
+  ]);
+  agregar('Lugares poblados',[
+    ['Organización','Programa / proyecto','Municipio','Lugar poblado','En catálogo territorial','Población meta','Acciones / capacidades','Población de referencia','Latitud','Longitud'],
+    ...programas.flatMap(p=>(p.comunidades||[]).filter(enTerritorio).map(c=>[
+      p.organizacion||'',p.nombre_programa||'',c.municipio||'',c.lugar_poblado||'',c.fuera_catalogo?'No (pendiente de validación)':'Sí',
+      lista(c.poblacion_meta||[]),lista(c.accion_comunidad||[]),
+      (typeof c.poblacion_total_estimada==='number'&&c.poblacion_total_estimada>=0)?c.poblacion_total_estimada:'',c.lat??'',c.lon??''
+    ]))
+  ]);
+  // Tablas de la vista abierta, completas (incluye las filas plegadas).
+  el.querySelectorAll('table').forEach(t=>{
+    const filas=[...t.querySelectorAll('tr')].map(tr=>[...tr.children].map(td=>{
+      const s=(td.textContent||'').replace(/\s+/g,' ').trim();
+      return /^\d+$/.test(s)?Number(s):s;
+    })).filter(f=>f.length);
+    if(filas.length<2) return;
+    const tarjeta=t.closest('[data-plegable], .card, .pa-table-card');
+    const titulo=tarjeta?.querySelector('.card-toggle span, .side-title, .section-title, .pa-title')?.textContent||t.id.replace('tabla-','');
+    agregar(titulo,filas);
+  });
+  return {wb, archivo:`mapeo-cooperacion-chiquimula_${id}_${new Date().toISOString().slice(0,10)}.xlsx`};
+}
+async function exportarExcel(){
+  const btn=document.getElementById('btn-excel');
+  if(!DATA){ avisoExportar('Los datos aún no terminan de cargar.'); return; }
+  btn.disabled=true; avisoExportar('Generando Excel…');
+  try{
+    if(!window.XLSX) await cargarScript(URL_XLSX);
+    const {wb,archivo}=construirLibroExcel();
+    XLSX.writeFile(wb,archivo);
+    avisoExportar(`Excel descargado: ${wb.SheetNames.length} hojas.`);
+  }catch(e){
+    console.error(e); avisoExportar(e.message||'No se pudo generar el Excel.');
+  }finally{ btn.disabled=false; }
+}
+function exportarPDF(){
+  if(!DATA){ avisoExportar('Los datos aún no terminan de cargar.'); return; }
+  const {id,nombre}=vistaActiva();
+  // La ficha municipal ya tiene su propio formato de impresión.
+  if(id==='municipio'){ imprimirFichaMunicipal(); return; }
+  document.getElementById('encabezado-impresion-vista').innerHTML=
+    `<b>${escaparHtml(nombre)}</b> · Datos al ${escaparHtml(fechaCorteTexto())}`+
+    (id==='mapa'?`<br>Filtros: ${escaparHtml(filtrosEnTexto())}`:'')+
+    `<br>La ausencia de registro no confirma por sí sola una brecha de atención.`;
+  document.body.classList.add('imprimir-vista');
+  const quitar=()=>{ document.body.classList.remove('imprimir-vista'); window.removeEventListener('afterprint',quitar); };
+  window.addEventListener('afterprint',quitar);
+  avisoExportar('En el cuadro de impresión elegí "Guardar como PDF".');
+  window.print();
+  setTimeout(quitar,1500);
+}
+
+/* ===== Tarjetas plegables =====
+   Lo principal de cada vista queda abierto; el detalle secundario se abre con un clic.
+   Nada se elimina: al imprimir se abren todas. */
+const TARJETAS_PLEGADAS=new Set([
+  'Población atendida / meta','Acciones / capacidades locales','Cobertura por lugar poblado',
+  'Instituciones fortalecidas','Fuentes de financiamiento reportadas',
+  'Lectura territorial','Cobertura del dato de inversión','Criterio de interpretación','Listado de programas y proyectos',
+  'Lugares adicionales reportados','Coincidencia de organizaciones por sector',
+  'Cobertura comunitaria registrada',
+  'Contrapartes y aliados estratégicos reportados','Matriz Organización × Contraparte / aliado','Matriz Espacio × Organización','Detalle de articulación reportada',
+  'Municipios','Cantidades reportadas'
+]);
+function fijarTarjeta(card, abierta){
+  card.classList.toggle('plegada',!abierta);
+  card.querySelector(':scope > .card-cuerpo').hidden=!abierta;
+  card.querySelector('.card-toggle').setAttribute('aria-expanded',String(abierta));
+}
+function hacerTarjetasPlegables(){
+  document.querySelectorAll('main .card, main .pa-side-card, main .pa-table-card').forEach(card=>{
+    // El panel del mapa se reescribe completo al tocar un punto: no se toca.
+    if(card.id==='panel-comunidad' || card.dataset.plegable) return;
+    const titulo=card.firstElementChild;
+    if(!titulo || titulo.id || !titulo.matches('.side-title,.section-title,.pa-title')) return;
+    card.dataset.plegable='1';
+    const cuerpo=document.createElement('div'); cuerpo.className='card-cuerpo';
+    while(titulo.nextSibling) cuerpo.appendChild(titulo.nextSibling);
+    card.appendChild(cuerpo);
+    const texto=titulo.textContent.trim();
+    const btn=document.createElement('button'); btn.type='button'; btn.className='card-toggle';
+    btn.innerHTML=`<span>${escaparHtml(texto)}</span><svg viewBox="0 0 12 8" width="12" height="8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 1.5 6 6.5l5-5"/></svg>`;
+    titulo.textContent=''; titulo.appendChild(btn);
+    btn.onclick=()=>fijarTarjeta(card, card.classList.contains('plegada'));
+    fijarTarjeta(card, !TARJETAS_PLEGADAS.has(texto) && !card.dataset.plegadaInicial);
+  });
+  window.addEventListener('beforeprint',()=>document.querySelectorAll('[data-plegable]').forEach(c=>{ c.dataset.plegadaAntes=c.classList.contains('plegada')?'1':''; fijarTarjeta(c,true); }));
+  window.addEventListener('afterprint',()=>document.querySelectorAll('[data-plegable]').forEach(c=>fijarTarjeta(c,!c.dataset.plegadaAntes)));
+}
+
+iniciar().then(()=>{
+  try{ agregarBotonesDescarga(); }catch(e){ console.warn(e); }
+  try{ plegarNotasLargas(); resumirTablasLargas(); }catch(e){ console.warn(e); }
+  try{ hacerTarjetasPlegables(); }catch(e){ console.warn(e); }
+});
 </script>
 </body>
 </html>
