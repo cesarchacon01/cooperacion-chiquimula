@@ -1,6 +1,6 @@
 {
-  "generado": "2026-11-13T21:28:05.919684+00:00",
-  "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación. Copia local actualizada con la exportación de Kobo (modo de varias comunidades).",
+  "generado": "2026-11-14T06:19:59.225183+00:00",
+  "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
       "organizacion": "Asociación de Servicios y Desarrollo Socioeconómico de Chiquimula -ASEDECHI-",
@@ -1108,8 +1108,8 @@
           "municipio": "San Jacinto",
           "clasificacion": "Paraje",
           "viviendas_catalogo": 1,
-          "lat": null,
-          "lon": null,
+          "lat": 14.6672,
+          "lon": -89.5272,
           "fuera_catalogo": false,
           "estado_validacion": "Catálogo territorial",
           "referencia_lugar": "",
@@ -1266,45 +1266,6 @@
           "viviendas_catalogo": 109,
           "lat": 14.679734,
           "lon": -89.36759,
-          "fuera_catalogo": false,
-          "estado_validacion": "Catálogo territorial",
-          "referencia_lugar": "",
-          "poblacion_meta": [
-            "Hogares / familias",
-            "Agricultores / productores"
-          ],
-          "datos_cuantitativos_poblacion": "Sí",
-          "pm_cantidades": {
-            "Hogares / familias": 30,
-            "Agricultores / productores": 30
-          },
-          "poblacion_total_estimada": 30,
-          "accion_comunidad": [
-            "Organizaciones comunitarias / COCODES"
-          ],
-          "ac_cantidades": {
-            "Organizaciones comunitarias / COCODES": 1
-          },
-          "etnia": [
-            "Ladino/Mestizo"
-          ],
-          "grupo_etario": [
-            "Niñez (0-12 años)",
-            "Adolescencia (13-17 años)",
-            "Juventud (18-29 años)",
-            "Adultez (30-59 años)",
-            "Adulto mayor (60+ años)"
-          ],
-          "area": "Rural"
-        },
-        {
-          "codigo_lugar": "olopa_los_ramos",
-          "lugar_poblado": "Los Ramos",
-          "municipio": "Olopa",
-          "clasificacion": "Paraje",
-          "viviendas_catalogo": 77,
-          "lat": 14.700477,
-          "lon": -89.33143,
           "fuera_catalogo": false,
           "estado_validacion": "Catálogo territorial",
           "referencia_lugar": "",
@@ -2458,10 +2419,10 @@
           "poblacion_meta": [
             "Mujeres",
             "Mujeres embarazadas y lactantes",
-            "Agricultores / productores",
             "Personas con discapacidad",
             "Hogares con niñez menor de 5 años",
             "Hogares / familias",
+            "Agricultores / productores",
             "Alumnos / estudiantes",
             "Docentes / personal educativo",
             "Padres, madres y cuidadores",
@@ -2471,10 +2432,10 @@
           "pm_cantidades": {
             "Mujeres": 315,
             "Mujeres embarazadas y lactantes": 10,
-            "Agricultores / productores": 25,
             "Personas con discapacidad": 1,
             "Hogares con niñez menor de 5 años": 60,
             "Hogares / familias": 315,
+            "Agricultores / productores": 25,
             "Alumnos / estudiantes": 0,
             "Docentes / personal educativo": 0,
             "Padres, madres y cuidadores": 0,
@@ -2484,10 +2445,10 @@
           "accion_comunidad": [
             "Escuelas / centros educativos",
             "Organizaciones comunitarias / COCODES",
-            "COLRED (Coordinadora Local para la Reducción de Desastres)",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Emprendimientos"
+            "Emprendimientos",
+            "COLRED (Coordinadora Local para la Reducción de Desastres)",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)"
           ],
           "ac_cantidades": {
             "Escuelas / centros educativos": 0,
@@ -2523,10 +2484,10 @@
           "poblacion_meta": [
             "Mujeres",
             "Mujeres embarazadas y lactantes",
-            "Agricultores / productores",
             "Personas con discapacidad",
             "Hogares con niñez menor de 5 años",
             "Hogares / familias",
+            "Agricultores / productores",
             "Alumnos / estudiantes",
             "Docentes / personal educativo",
             "Padres, madres y cuidadores",
@@ -2536,10 +2497,10 @@
           "pm_cantidades": {
             "Mujeres": 60,
             "Mujeres embarazadas y lactantes": 0,
-            "Agricultores / productores": 0,
             "Personas con discapacidad": 3,
             "Hogares con niñez menor de 5 años": 60,
             "Hogares / familias": 60,
+            "Agricultores / productores": 0,
             "Alumnos / estudiantes": 65,
             "Docentes / personal educativo": 0,
             "Padres, madres y cuidadores": 125,
@@ -2549,10 +2510,10 @@
           "accion_comunidad": [
             "Escuelas / centros educativos",
             "Organizaciones comunitarias / COCODES",
-            "COLRED (Coordinadora Local para la Reducción de Desastres)",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Emprendimientos"
+            "Emprendimientos",
+            "COLRED (Coordinadora Local para la Reducción de Desastres)",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)"
           ],
           "ac_cantidades": {
             "Escuelas / centros educativos": 1,
@@ -2588,10 +2549,10 @@
           "poblacion_meta": [
             "Mujeres",
             "Mujeres embarazadas y lactantes",
-            "Agricultores / productores",
             "Personas con discapacidad",
             "Hogares con niñez menor de 5 años",
             "Hogares / familias",
+            "Agricultores / productores",
             "Alumnos / estudiantes",
             "Docentes / personal educativo",
             "Padres, madres y cuidadores",
@@ -2601,10 +2562,10 @@
           "pm_cantidades": {
             "Mujeres": 199,
             "Mujeres embarazadas y lactantes": 0,
-            "Agricultores / productores": 0,
             "Personas con discapacidad": 4,
             "Hogares con niñez menor de 5 años": 210,
             "Hogares / familias": 210,
+            "Agricultores / productores": 0,
             "Alumnos / estudiantes": 0,
             "Docentes / personal educativo": 0,
             "Padres, madres y cuidadores": 403,
@@ -2614,10 +2575,10 @@
           "accion_comunidad": [
             "Escuelas / centros educativos",
             "Organizaciones comunitarias / COCODES",
-            "COLRED (Coordinadora Local para la Reducción de Desastres)",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Emprendimientos"
+            "Emprendimientos",
+            "COLRED (Coordinadora Local para la Reducción de Desastres)",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)"
           ],
           "ac_cantidades": {
             "Escuelas / centros educativos": 0,
@@ -2653,10 +2614,10 @@
           "poblacion_meta": [
             "Mujeres",
             "Mujeres embarazadas y lactantes",
-            "Agricultores / productores",
             "Personas con discapacidad",
             "Hogares con niñez menor de 5 años",
             "Hogares / familias",
+            "Agricultores / productores",
             "Alumnos / estudiantes",
             "Docentes / personal educativo",
             "Padres, madres y cuidadores",
@@ -2666,10 +2627,10 @@
           "pm_cantidades": {
             "Mujeres": 387,
             "Mujeres embarazadas y lactantes": 0,
-            "Agricultores / productores": 0,
             "Personas con discapacidad": 1,
             "Hogares con niñez menor de 5 años": 451,
             "Hogares / familias": 451,
+            "Agricultores / productores": 0,
             "Alumnos / estudiantes": 0,
             "Docentes / personal educativo": 0,
             "Padres, madres y cuidadores": 682,
@@ -2679,10 +2640,10 @@
           "accion_comunidad": [
             "Escuelas / centros educativos",
             "Organizaciones comunitarias / COCODES",
-            "COLRED (Coordinadora Local para la Reducción de Desastres)",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Emprendimientos"
+            "Emprendimientos",
+            "COLRED (Coordinadora Local para la Reducción de Desastres)",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)"
           ],
           "ac_cantidades": {
             "Escuelas / centros educativos": 1,
@@ -2718,10 +2679,10 @@
           "poblacion_meta": [
             "Mujeres",
             "Mujeres embarazadas y lactantes",
-            "Agricultores / productores",
             "Personas con discapacidad",
             "Hogares con niñez menor de 5 años",
             "Hogares / familias",
+            "Agricultores / productores",
             "Alumnos / estudiantes",
             "Docentes / personal educativo",
             "Padres, madres y cuidadores",
@@ -2731,10 +2692,10 @@
           "pm_cantidades": {
             "Mujeres": 334,
             "Mujeres embarazadas y lactantes": 0,
-            "Agricultores / productores": 0,
             "Personas con discapacidad": 1,
             "Hogares con niñez menor de 5 años": 186,
             "Hogares / familias": 334,
+            "Agricultores / productores": 0,
             "Alumnos / estudiantes": 0,
             "Docentes / personal educativo": 0,
             "Padres, madres y cuidadores": 666,
@@ -2744,10 +2705,10 @@
           "accion_comunidad": [
             "Escuelas / centros educativos",
             "Organizaciones comunitarias / COCODES",
-            "COLRED (Coordinadora Local para la Reducción de Desastres)",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Emprendimientos"
+            "Emprendimientos",
+            "COLRED (Coordinadora Local para la Reducción de Desastres)",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)"
           ],
           "ac_cantidades": {
             "Escuelas / centros educativos": 1,
@@ -2783,10 +2744,10 @@
           "poblacion_meta": [
             "Mujeres",
             "Mujeres embarazadas y lactantes",
-            "Agricultores / productores",
             "Personas con discapacidad",
             "Hogares con niñez menor de 5 años",
             "Hogares / familias",
+            "Agricultores / productores",
             "Alumnos / estudiantes",
             "Docentes / personal educativo",
             "Padres, madres y cuidadores",
@@ -2796,10 +2757,10 @@
           "pm_cantidades": {
             "Mujeres": 169,
             "Mujeres embarazadas y lactantes": 0,
-            "Agricultores / productores": 0,
             "Personas con discapacidad": 4,
             "Hogares con niñez menor de 5 años": 169,
             "Hogares / familias": 177,
+            "Agricultores / productores": 0,
             "Alumnos / estudiantes": 0,
             "Docentes / personal educativo": 0,
             "Padres, madres y cuidadores": 0,
@@ -2809,10 +2770,10 @@
           "accion_comunidad": [
             "Escuelas / centros educativos",
             "Organizaciones comunitarias / COCODES",
-            "COLRED (Coordinadora Local para la Reducción de Desastres)",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Emprendimientos"
+            "Emprendimientos",
+            "COLRED (Coordinadora Local para la Reducción de Desastres)",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)"
           ],
           "ac_cantidades": {
             "Escuelas / centros educativos": 0,
@@ -2848,10 +2809,10 @@
           "poblacion_meta": [
             "Mujeres",
             "Mujeres embarazadas y lactantes",
-            "Agricultores / productores",
             "Personas con discapacidad",
             "Hogares con niñez menor de 5 años",
             "Hogares / familias",
+            "Agricultores / productores",
             "Alumnos / estudiantes",
             "Docentes / personal educativo",
             "Padres, madres y cuidadores",
@@ -2861,10 +2822,10 @@
           "pm_cantidades": {
             "Mujeres": 190,
             "Mujeres embarazadas y lactantes": 0,
-            "Agricultores / productores": 0,
             "Personas con discapacidad": 1,
             "Hogares con niñez menor de 5 años": 190,
             "Hogares / familias": 370,
+            "Agricultores / productores": 0,
             "Alumnos / estudiantes": 0,
             "Docentes / personal educativo": 0,
             "Padres, madres y cuidadores": 370,
@@ -2874,10 +2835,10 @@
           "accion_comunidad": [
             "Escuelas / centros educativos",
             "Organizaciones comunitarias / COCODES",
-            "COLRED (Coordinadora Local para la Reducción de Desastres)",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Emprendimientos"
+            "Emprendimientos",
+            "COLRED (Coordinadora Local para la Reducción de Desastres)",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)"
           ],
           "ac_cantidades": {
             "Escuelas / centros educativos": 1,
@@ -2973,10 +2934,10 @@
           "poblacion_meta": [
             "Mujeres",
             "Mujeres embarazadas y lactantes",
-            "Agricultores / productores",
             "Personas con discapacidad",
             "Hogares con niñez menor de 5 años",
             "Hogares / familias",
+            "Agricultores / productores",
             "Alumnos / estudiantes",
             "Docentes / personal educativo",
             "Padres, madres y cuidadores"
@@ -2985,10 +2946,10 @@
           "pm_cantidades": {
             "Mujeres": 647,
             "Mujeres embarazadas y lactantes": 100,
-            "Agricultores / productores": 50,
             "Personas con discapacidad": 6,
             "Hogares con niñez menor de 5 años": 267,
             "Hogares / familias": 267,
+            "Agricultores / productores": 50,
             "Alumnos / estudiantes": 0,
             "Docentes / personal educativo": 0,
             "Padres, madres y cuidadores": 715
@@ -2998,10 +2959,10 @@
             "Escuelas / centros educativos",
             "Organizaciones comunitarias / COCODES",
             "Cooperativas o asociaciones productivas",
-            "COLRED (Coordinadora Local para la Reducción de Desastres)",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Emprendimientos"
+            "Emprendimientos",
+            "COLRED (Coordinadora Local para la Reducción de Desastres)",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)"
           ],
           "ac_cantidades": {
             "Escuelas / centros educativos": 0,
@@ -3038,10 +2999,10 @@
           "poblacion_meta": [
             "Mujeres",
             "Mujeres embarazadas y lactantes",
-            "Agricultores / productores",
             "Personas con discapacidad",
             "Hogares con niñez menor de 5 años",
             "Hogares / familias",
+            "Agricultores / productores",
             "Alumnos / estudiantes",
             "Docentes / personal educativo",
             "Padres, madres y cuidadores"
@@ -3050,10 +3011,10 @@
           "pm_cantidades": {
             "Mujeres": 308,
             "Mujeres embarazadas y lactantes": 50,
-            "Agricultores / productores": 50,
             "Personas con discapacidad": 2,
             "Hogares con niñez menor de 5 años": 225,
             "Hogares / familias": 225,
+            "Agricultores / productores": 50,
             "Alumnos / estudiantes": 0,
             "Docentes / personal educativo": 0,
             "Padres, madres y cuidadores": 496
@@ -3063,10 +3024,10 @@
             "Escuelas / centros educativos",
             "Organizaciones comunitarias / COCODES",
             "Cooperativas o asociaciones productivas",
-            "COLRED (Coordinadora Local para la Reducción de Desastres)",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Emprendimientos"
+            "Emprendimientos",
+            "COLRED (Coordinadora Local para la Reducción de Desastres)",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)"
           ],
           "ac_cantidades": {
             "Escuelas / centros educativos": 0,
@@ -3103,10 +3064,10 @@
           "poblacion_meta": [
             "Mujeres",
             "Mujeres embarazadas y lactantes",
-            "Agricultores / productores",
             "Personas con discapacidad",
             "Hogares con niñez menor de 5 años",
             "Hogares / familias",
+            "Agricultores / productores",
             "Alumnos / estudiantes",
             "Docentes / personal educativo",
             "Padres, madres y cuidadores"
@@ -3115,10 +3076,10 @@
           "pm_cantidades": {
             "Mujeres": 496,
             "Mujeres embarazadas y lactantes": 25,
-            "Agricultores / productores": 50,
             "Personas con discapacidad": 2,
             "Hogares con niñez menor de 5 años": 246,
             "Hogares / familias": 246,
+            "Agricultores / productores": 50,
             "Alumnos / estudiantes": 0,
             "Docentes / personal educativo": 0,
             "Padres, madres y cuidadores": 925
@@ -3128,10 +3089,10 @@
             "Escuelas / centros educativos",
             "Organizaciones comunitarias / COCODES",
             "Cooperativas o asociaciones productivas",
-            "COLRED (Coordinadora Local para la Reducción de Desastres)",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Emprendimientos"
+            "Emprendimientos",
+            "COLRED (Coordinadora Local para la Reducción de Desastres)",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)"
           ],
           "ac_cantidades": {
             "Escuelas / centros educativos": 1,
@@ -3168,10 +3129,10 @@
           "poblacion_meta": [
             "Mujeres",
             "Mujeres embarazadas y lactantes",
-            "Agricultores / productores",
             "Personas con discapacidad",
             "Hogares con niñez menor de 5 años",
             "Hogares / familias",
+            "Agricultores / productores",
             "Alumnos / estudiantes",
             "Docentes / personal educativo",
             "Padres, madres y cuidadores"
@@ -3180,10 +3141,10 @@
           "pm_cantidades": {
             "Mujeres": 211,
             "Mujeres embarazadas y lactantes": 25,
-            "Agricultores / productores": 1,
             "Personas con discapacidad": 2,
             "Hogares con niñez menor de 5 años": 183,
             "Hogares / familias": 183,
+            "Agricultores / productores": 1,
             "Alumnos / estudiantes": 0,
             "Docentes / personal educativo": 0,
             "Padres, madres y cuidadores": 435
@@ -3193,10 +3154,10 @@
             "Escuelas / centros educativos",
             "Organizaciones comunitarias / COCODES",
             "Cooperativas o asociaciones productivas",
-            "COLRED (Coordinadora Local para la Reducción de Desastres)",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Emprendimientos"
+            "Emprendimientos",
+            "COLRED (Coordinadora Local para la Reducción de Desastres)",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)"
           ],
           "ac_cantidades": {
             "Escuelas / centros educativos": 0,
@@ -3233,10 +3194,10 @@
           "poblacion_meta": [
             "Mujeres",
             "Mujeres embarazadas y lactantes",
-            "Agricultores / productores",
             "Personas con discapacidad",
             "Hogares con niñez menor de 5 años",
             "Hogares / familias",
+            "Agricultores / productores",
             "Alumnos / estudiantes",
             "Docentes / personal educativo",
             "Padres, madres y cuidadores"
@@ -3245,10 +3206,10 @@
           "pm_cantidades": {
             "Mujeres": 0,
             "Mujeres embarazadas y lactantes": 0,
-            "Agricultores / productores": 0,
             "Personas con discapacidad": 0,
             "Hogares con niñez menor de 5 años": 0,
             "Hogares / familias": 0,
+            "Agricultores / productores": 0,
             "Alumnos / estudiantes": 0,
             "Docentes / personal educativo": 0,
             "Padres, madres y cuidadores": 0
@@ -3258,10 +3219,10 @@
             "Escuelas / centros educativos",
             "Organizaciones comunitarias / COCODES",
             "Cooperativas o asociaciones productivas",
-            "COLRED (Coordinadora Local para la Reducción de Desastres)",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Emprendimientos"
+            "Emprendimientos",
+            "COLRED (Coordinadora Local para la Reducción de Desastres)",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)"
           ],
           "ac_cantidades": {
             "Escuelas / centros educativos": 0,
@@ -3298,10 +3259,10 @@
           "poblacion_meta": [
             "Mujeres",
             "Mujeres embarazadas y lactantes",
-            "Agricultores / productores",
             "Personas con discapacidad",
             "Hogares con niñez menor de 5 años",
             "Hogares / familias",
+            "Agricultores / productores",
             "Alumnos / estudiantes",
             "Docentes / personal educativo",
             "Padres, madres y cuidadores"
@@ -3310,10 +3271,10 @@
           "pm_cantidades": {
             "Mujeres": 0,
             "Mujeres embarazadas y lactantes": 0,
-            "Agricultores / productores": 0,
             "Personas con discapacidad": 0,
             "Hogares con niñez menor de 5 años": 0,
             "Hogares / familias": 0,
+            "Agricultores / productores": 0,
             "Alumnos / estudiantes": 0,
             "Docentes / personal educativo": 0,
             "Padres, madres y cuidadores": 0
@@ -3323,10 +3284,10 @@
             "Escuelas / centros educativos",
             "Organizaciones comunitarias / COCODES",
             "Cooperativas o asociaciones productivas",
-            "COLRED (Coordinadora Local para la Reducción de Desastres)",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Emprendimientos"
+            "Emprendimientos",
+            "COLRED (Coordinadora Local para la Reducción de Desastres)",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)"
           ],
           "ac_cantidades": {
             "Escuelas / centros educativos": 0,
@@ -3363,10 +3324,10 @@
           "poblacion_meta": [
             "Mujeres",
             "Mujeres embarazadas y lactantes",
-            "Agricultores / productores",
             "Personas con discapacidad",
             "Hogares con niñez menor de 5 años",
             "Hogares / familias",
+            "Agricultores / productores",
             "Alumnos / estudiantes",
             "Docentes / personal educativo",
             "Padres, madres y cuidadores"
@@ -3375,10 +3336,10 @@
           "pm_cantidades": {
             "Mujeres": 0,
             "Mujeres embarazadas y lactantes": 0,
-            "Agricultores / productores": 0,
             "Personas con discapacidad": 0,
             "Hogares con niñez menor de 5 años": 0,
             "Hogares / familias": 0,
+            "Agricultores / productores": 0,
             "Alumnos / estudiantes": 0,
             "Docentes / personal educativo": 0,
             "Padres, madres y cuidadores": 0
@@ -3388,10 +3349,10 @@
             "Escuelas / centros educativos",
             "Organizaciones comunitarias / COCODES",
             "Cooperativas o asociaciones productivas",
-            "COLRED (Coordinadora Local para la Reducción de Desastres)",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Emprendimientos"
+            "Emprendimientos",
+            "COLRED (Coordinadora Local para la Reducción de Desastres)",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)"
           ],
           "ac_cantidades": {
             "Escuelas / centros educativos": 0,
@@ -5204,17 +5165,17 @@
           "poblacion_meta": [
             "Mujeres",
             "Pueblos indígenas",
-            "Agricultores / productores",
             "Personas con discapacidad",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "No",
           "pm_cantidades": {
             "Mujeres": null,
             "Pueblos indígenas": null,
-            "Agricultores / productores": null,
             "Personas con discapacidad": null,
-            "Hogares / familias": null
+            "Hogares / familias": null,
+            "Agricultores / productores": null
           },
           "poblacion_total_estimada": null,
           "accion_comunidad": [
@@ -5249,17 +5210,17 @@
           "poblacion_meta": [
             "Mujeres",
             "Pueblos indígenas",
-            "Agricultores / productores",
             "Personas con discapacidad",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "No",
           "pm_cantidades": {
             "Mujeres": null,
             "Pueblos indígenas": null,
-            "Agricultores / productores": null,
             "Personas con discapacidad": null,
-            "Hogares / familias": null
+            "Hogares / familias": null,
+            "Agricultores / productores": null
           },
           "poblacion_total_estimada": null,
           "accion_comunidad": [
@@ -5294,17 +5255,17 @@
           "poblacion_meta": [
             "Mujeres",
             "Pueblos indígenas",
-            "Agricultores / productores",
             "Personas con discapacidad",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "No",
           "pm_cantidades": {
             "Mujeres": null,
             "Pueblos indígenas": null,
-            "Agricultores / productores": null,
             "Personas con discapacidad": null,
-            "Hogares / familias": null
+            "Hogares / familias": null,
+            "Agricultores / productores": null
           },
           "poblacion_total_estimada": null,
           "accion_comunidad": [
@@ -5339,17 +5300,17 @@
           "poblacion_meta": [
             "Mujeres",
             "Pueblos indígenas",
-            "Agricultores / productores",
             "Personas con discapacidad",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "No",
           "pm_cantidades": {
             "Mujeres": null,
             "Pueblos indígenas": null,
-            "Agricultores / productores": null,
             "Personas con discapacidad": null,
-            "Hogares / familias": null
+            "Hogares / familias": null,
+            "Agricultores / productores": null
           },
           "poblacion_total_estimada": null,
           "accion_comunidad": [
@@ -5384,17 +5345,17 @@
           "poblacion_meta": [
             "Mujeres",
             "Pueblos indígenas",
-            "Agricultores / productores",
             "Personas con discapacidad",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "No",
           "pm_cantidades": {
             "Mujeres": null,
             "Pueblos indígenas": null,
-            "Agricultores / productores": null,
             "Personas con discapacidad": null,
-            "Hogares / familias": null
+            "Hogares / familias": null,
+            "Agricultores / productores": null
           },
           "poblacion_total_estimada": null,
           "accion_comunidad": [
@@ -5429,17 +5390,17 @@
           "poblacion_meta": [
             "Mujeres",
             "Pueblos indígenas",
-            "Agricultores / productores",
             "Personas con discapacidad",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "No",
           "pm_cantidades": {
             "Mujeres": null,
             "Pueblos indígenas": null,
-            "Agricultores / productores": null,
             "Personas con discapacidad": null,
-            "Hogares / familias": null
+            "Hogares / familias": null,
+            "Agricultores / productores": null
           },
           "poblacion_total_estimada": null,
           "accion_comunidad": [
@@ -5474,17 +5435,17 @@
           "poblacion_meta": [
             "Mujeres",
             "Pueblos indígenas",
-            "Agricultores / productores",
             "Personas con discapacidad",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "No",
           "pm_cantidades": {
             "Mujeres": null,
             "Pueblos indígenas": null,
-            "Agricultores / productores": null,
             "Personas con discapacidad": null,
-            "Hogares / familias": null
+            "Hogares / familias": null,
+            "Agricultores / productores": null
           },
           "poblacion_total_estimada": null,
           "accion_comunidad": [
@@ -5519,17 +5480,17 @@
           "poblacion_meta": [
             "Mujeres",
             "Pueblos indígenas",
-            "Agricultores / productores",
             "Personas con discapacidad",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "No",
           "pm_cantidades": {
             "Mujeres": null,
             "Pueblos indígenas": null,
-            "Agricultores / productores": null,
             "Personas con discapacidad": null,
-            "Hogares / familias": null
+            "Hogares / familias": null,
+            "Agricultores / productores": null
           },
           "poblacion_total_estimada": null,
           "accion_comunidad": [
@@ -5564,17 +5525,17 @@
           "poblacion_meta": [
             "Mujeres",
             "Pueblos indígenas",
-            "Agricultores / productores",
             "Personas con discapacidad",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "No",
           "pm_cantidades": {
             "Mujeres": null,
             "Pueblos indígenas": null,
-            "Agricultores / productores": null,
             "Personas con discapacidad": null,
-            "Hogares / familias": null
+            "Hogares / familias": null,
+            "Agricultores / productores": null
           },
           "poblacion_total_estimada": null,
           "accion_comunidad": [
@@ -5609,17 +5570,17 @@
           "poblacion_meta": [
             "Mujeres",
             "Pueblos indígenas",
-            "Agricultores / productores",
             "Personas con discapacidad",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "No",
           "pm_cantidades": {
             "Mujeres": null,
             "Pueblos indígenas": null,
-            "Agricultores / productores": null,
             "Personas con discapacidad": null,
-            "Hogares / familias": null
+            "Hogares / familias": null,
+            "Agricultores / productores": null
           },
           "poblacion_total_estimada": null,
           "accion_comunidad": [
@@ -5654,17 +5615,17 @@
           "poblacion_meta": [
             "Mujeres",
             "Pueblos indígenas",
-            "Agricultores / productores",
             "Personas con discapacidad",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "No",
           "pm_cantidades": {
             "Mujeres": null,
             "Pueblos indígenas": null,
-            "Agricultores / productores": null,
             "Personas con discapacidad": null,
-            "Hogares / familias": null
+            "Hogares / familias": null,
+            "Agricultores / productores": null
           },
           "poblacion_total_estimada": null,
           "accion_comunidad": [
@@ -5699,17 +5660,17 @@
           "poblacion_meta": [
             "Mujeres",
             "Pueblos indígenas",
-            "Agricultores / productores",
             "Personas con discapacidad",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "No",
           "pm_cantidades": {
             "Mujeres": null,
             "Pueblos indígenas": null,
-            "Agricultores / productores": null,
             "Personas con discapacidad": null,
-            "Hogares / familias": null
+            "Hogares / familias": null,
+            "Agricultores / productores": null
           },
           "poblacion_total_estimada": null,
           "accion_comunidad": [
@@ -5780,22 +5741,22 @@
           "referencia_lugar": "",
           "poblacion_meta": [
             "Mujeres",
-            "Agricultores / productores",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "Sí",
           "pm_cantidades": {
             "Mujeres": 30,
-            "Agricultores / productores": 66,
-            "Hogares / familias": 66
+            "Hogares / familias": 66,
+            "Agricultores / productores": 66
           },
           "poblacion_total_estimada": 66,
           "accion_comunidad": [
             "Organizaciones comunitarias / COCODES",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Sistemas de riego",
             "Emprendimientos",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
+            "Sistemas de riego",
             "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)"
           ],
           "ac_cantidades": {
@@ -5828,22 +5789,22 @@
           "referencia_lugar": "",
           "poblacion_meta": [
             "Mujeres",
-            "Agricultores / productores",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "Sí",
           "pm_cantidades": {
             "Mujeres": 40,
-            "Agricultores / productores": 48,
-            "Hogares / familias": 48
+            "Hogares / familias": 48,
+            "Agricultores / productores": 48
           },
           "poblacion_total_estimada": 48,
           "accion_comunidad": [
             "Organizaciones comunitarias / COCODES",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Sistemas de riego",
             "Emprendimientos",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
+            "Sistemas de riego",
             "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)"
           ],
           "ac_cantidades": {
@@ -5876,22 +5837,22 @@
           "referencia_lugar": "",
           "poblacion_meta": [
             "Mujeres",
-            "Agricultores / productores",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "Sí",
           "pm_cantidades": {
             "Mujeres": 28,
-            "Agricultores / productores": 40,
-            "Hogares / familias": 40
+            "Hogares / familias": 40,
+            "Agricultores / productores": 40
           },
           "poblacion_total_estimada": 40,
           "accion_comunidad": [
             "Organizaciones comunitarias / COCODES",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Sistemas de riego",
             "Emprendimientos",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
+            "Sistemas de riego",
             "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)"
           ],
           "ac_cantidades": {
@@ -5924,22 +5885,22 @@
           "referencia_lugar": "",
           "poblacion_meta": [
             "Mujeres",
-            "Agricultores / productores",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "Sí",
           "pm_cantidades": {
             "Mujeres": 6,
-            "Agricultores / productores": 26,
-            "Hogares / familias": 26
+            "Hogares / familias": 26,
+            "Agricultores / productores": 26
           },
           "poblacion_total_estimada": 26,
           "accion_comunidad": [
             "Organizaciones comunitarias / COCODES",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Sistemas de riego",
             "Emprendimientos",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
+            "Sistemas de riego",
             "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)"
           ],
           "ac_cantidades": {
@@ -5972,22 +5933,22 @@
           "referencia_lugar": "",
           "poblacion_meta": [
             "Mujeres",
-            "Agricultores / productores",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "Sí",
           "pm_cantidades": {
             "Mujeres": 25,
-            "Agricultores / productores": 49,
-            "Hogares / familias": 49
+            "Hogares / familias": 49,
+            "Agricultores / productores": 49
           },
           "poblacion_total_estimada": 49,
           "accion_comunidad": [
             "Organizaciones comunitarias / COCODES",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Sistemas de riego",
             "Emprendimientos",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
+            "Sistemas de riego",
             "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)"
           ],
           "ac_cantidades": {
@@ -6020,22 +5981,22 @@
           "referencia_lugar": "",
           "poblacion_meta": [
             "Mujeres",
-            "Agricultores / productores",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "Sí",
           "pm_cantidades": {
             "Mujeres": 0,
-            "Agricultores / productores": 19,
-            "Hogares / familias": 19
+            "Hogares / familias": 19,
+            "Agricultores / productores": 19
           },
           "poblacion_total_estimada": 19,
           "accion_comunidad": [
             "Organizaciones comunitarias / COCODES",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Sistemas de riego",
             "Emprendimientos",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
+            "Sistemas de riego",
             "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)"
           ],
           "ac_cantidades": {
@@ -6068,22 +6029,22 @@
           "referencia_lugar": "",
           "poblacion_meta": [
             "Mujeres",
-            "Agricultores / productores",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "Sí",
           "pm_cantidades": {
             "Mujeres": 26,
-            "Agricultores / productores": 37,
-            "Hogares / familias": 38
+            "Hogares / familias": 38,
+            "Agricultores / productores": 37
           },
           "poblacion_total_estimada": 38,
           "accion_comunidad": [
             "Organizaciones comunitarias / COCODES",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Sistemas de riego",
             "Emprendimientos",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
+            "Sistemas de riego",
             "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)"
           ],
           "ac_cantidades": {
@@ -6116,22 +6077,22 @@
           "referencia_lugar": "",
           "poblacion_meta": [
             "Mujeres",
-            "Agricultores / productores",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "Sí",
           "pm_cantidades": {
             "Mujeres": 47,
-            "Agricultores / productores": 72,
-            "Hogares / familias": 72
+            "Hogares / familias": 72,
+            "Agricultores / productores": 72
           },
           "poblacion_total_estimada": 72,
           "accion_comunidad": [
             "Organizaciones comunitarias / COCODES",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Sistemas de riego",
             "Emprendimientos",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
+            "Sistemas de riego",
             "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)"
           ],
           "ac_cantidades": {
@@ -6164,22 +6125,22 @@
           "referencia_lugar": "",
           "poblacion_meta": [
             "Mujeres",
-            "Agricultores / productores",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "Sí",
           "pm_cantidades": {
             "Mujeres": 23,
-            "Agricultores / productores": 23,
-            "Hogares / familias": 23
+            "Hogares / familias": 23,
+            "Agricultores / productores": 23
           },
           "poblacion_total_estimada": 23,
           "accion_comunidad": [
             "Organizaciones comunitarias / COCODES",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Sistemas de riego",
             "Emprendimientos",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
+            "Sistemas de riego",
             "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)"
           ],
           "ac_cantidades": {
@@ -6212,22 +6173,22 @@
           "referencia_lugar": "",
           "poblacion_meta": [
             "Mujeres",
-            "Agricultores / productores",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "Sí",
           "pm_cantidades": {
             "Mujeres": 109,
-            "Agricultores / productores": 126,
-            "Hogares / familias": 126
+            "Hogares / familias": 126,
+            "Agricultores / productores": 126
           },
           "poblacion_total_estimada": 126,
           "accion_comunidad": [
             "Organizaciones comunitarias / COCODES",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Sistemas de riego",
             "Emprendimientos",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
+            "Sistemas de riego",
             "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)"
           ],
           "ac_cantidades": {
@@ -6260,22 +6221,22 @@
           "referencia_lugar": "",
           "poblacion_meta": [
             "Mujeres",
-            "Agricultores / productores",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "Sí",
           "pm_cantidades": {
             "Mujeres": 219,
-            "Agricultores / productores": 332,
-            "Hogares / familias": 332
+            "Hogares / familias": 332,
+            "Agricultores / productores": 332
           },
           "poblacion_total_estimada": 332,
           "accion_comunidad": [
             "Organizaciones comunitarias / COCODES",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Sistemas de riego",
             "Emprendimientos",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
+            "Sistemas de riego",
             "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)"
           ],
           "ac_cantidades": {
@@ -6308,22 +6269,22 @@
           "referencia_lugar": "",
           "poblacion_meta": [
             "Mujeres",
-            "Agricultores / productores",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "Sí",
           "pm_cantidades": {
             "Mujeres": 70,
-            "Agricultores / productores": 83,
-            "Hogares / familias": 83
+            "Hogares / familias": 83,
+            "Agricultores / productores": 83
           },
           "poblacion_total_estimada": 83,
           "accion_comunidad": [
             "Organizaciones comunitarias / COCODES",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Sistemas de riego",
             "Emprendimientos",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
+            "Sistemas de riego",
             "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)"
           ],
           "ac_cantidades": {
@@ -6356,22 +6317,22 @@
           "referencia_lugar": "",
           "poblacion_meta": [
             "Mujeres",
-            "Agricultores / productores",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "Sí",
           "pm_cantidades": {
             "Mujeres": 20,
-            "Agricultores / productores": 29,
-            "Hogares / familias": 29
+            "Hogares / familias": 29,
+            "Agricultores / productores": 29
           },
           "poblacion_total_estimada": 29,
           "accion_comunidad": [
             "Organizaciones comunitarias / COCODES",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Sistemas de riego",
             "Emprendimientos",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
+            "Sistemas de riego",
             "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)"
           ],
           "ac_cantidades": {
@@ -6404,22 +6365,22 @@
           "referencia_lugar": "",
           "poblacion_meta": [
             "Mujeres",
-            "Agricultores / productores",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "Sí",
           "pm_cantidades": {
             "Mujeres": 90,
-            "Agricultores / productores": 113,
-            "Hogares / familias": 113
+            "Hogares / familias": 113,
+            "Agricultores / productores": 113
           },
           "poblacion_total_estimada": 113,
           "accion_comunidad": [
             "Organizaciones comunitarias / COCODES",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Sistemas de riego",
             "Emprendimientos",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
+            "Sistemas de riego",
             "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)"
           ],
           "ac_cantidades": {
@@ -6452,22 +6413,22 @@
           "referencia_lugar": "",
           "poblacion_meta": [
             "Mujeres",
-            "Agricultores / productores",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "Sí",
           "pm_cantidades": {
             "Mujeres": 80,
-            "Agricultores / productores": 99,
-            "Hogares / familias": 99
+            "Hogares / familias": 99,
+            "Agricultores / productores": 99
           },
           "poblacion_total_estimada": 99,
           "accion_comunidad": [
             "Organizaciones comunitarias / COCODES",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Sistemas de riego",
             "Emprendimientos",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
+            "Sistemas de riego",
             "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)"
           ],
           "ac_cantidades": {
@@ -6500,22 +6461,22 @@
           "referencia_lugar": "",
           "poblacion_meta": [
             "Mujeres",
-            "Agricultores / productores",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "Sí",
           "pm_cantidades": {
             "Mujeres": 88,
-            "Agricultores / productores": 125,
-            "Hogares / familias": 125
+            "Hogares / familias": 125,
+            "Agricultores / productores": 125
           },
           "poblacion_total_estimada": 125,
           "accion_comunidad": [
             "Organizaciones comunitarias / COCODES",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Sistemas de riego",
             "Emprendimientos",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
+            "Sistemas de riego",
             "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)"
           ],
           "ac_cantidades": {
@@ -6548,22 +6509,22 @@
           "referencia_lugar": "",
           "poblacion_meta": [
             "Mujeres",
-            "Agricultores / productores",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "Sí",
           "pm_cantidades": {
             "Mujeres": 265,
-            "Agricultores / productores": 310,
-            "Hogares / familias": 310
+            "Hogares / familias": 310,
+            "Agricultores / productores": 310
           },
           "poblacion_total_estimada": 310,
           "accion_comunidad": [
             "Organizaciones comunitarias / COCODES",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Sistemas de riego",
             "Emprendimientos",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
+            "Sistemas de riego",
             "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)"
           ],
           "ac_cantidades": {
@@ -6596,22 +6557,22 @@
           "referencia_lugar": "",
           "poblacion_meta": [
             "Mujeres",
-            "Agricultores / productores",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "Sí",
           "pm_cantidades": {
             "Mujeres": 17,
-            "Agricultores / productores": 23,
-            "Hogares / familias": 23
+            "Hogares / familias": 23,
+            "Agricultores / productores": 23
           },
           "poblacion_total_estimada": 23,
           "accion_comunidad": [
             "Organizaciones comunitarias / COCODES",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Sistemas de riego",
             "Emprendimientos",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
+            "Sistemas de riego",
             "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)"
           ],
           "ac_cantidades": {
@@ -6644,22 +6605,22 @@
           "referencia_lugar": "",
           "poblacion_meta": [
             "Mujeres",
-            "Agricultores / productores",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "Sí",
           "pm_cantidades": {
             "Mujeres": 70,
-            "Agricultores / productores": 74,
-            "Hogares / familias": 74
+            "Hogares / familias": 74,
+            "Agricultores / productores": 74
           },
           "poblacion_total_estimada": 74,
           "accion_comunidad": [
             "Organizaciones comunitarias / COCODES",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Sistemas de riego",
             "Emprendimientos",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
+            "Sistemas de riego",
             "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)"
           ],
           "ac_cantidades": {
@@ -6692,22 +6653,22 @@
           "referencia_lugar": "",
           "poblacion_meta": [
             "Mujeres",
-            "Agricultores / productores",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "Sí",
           "pm_cantidades": {
             "Mujeres": 49,
-            "Agricultores / productores": 65,
-            "Hogares / familias": 65
+            "Hogares / familias": 65,
+            "Agricultores / productores": 65
           },
           "poblacion_total_estimada": 65,
           "accion_comunidad": [
             "Organizaciones comunitarias / COCODES",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Sistemas de riego",
             "Emprendimientos",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
+            "Sistemas de riego",
             "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)"
           ],
           "ac_cantidades": {
@@ -6740,22 +6701,22 @@
           "referencia_lugar": "",
           "poblacion_meta": [
             "Mujeres",
-            "Agricultores / productores",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "Sí",
           "pm_cantidades": {
             "Mujeres": 15,
-            "Agricultores / productores": 19,
-            "Hogares / familias": 19
+            "Hogares / familias": 19,
+            "Agricultores / productores": 19
           },
           "poblacion_total_estimada": 19,
           "accion_comunidad": [
             "Organizaciones comunitarias / COCODES",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Sistemas de riego",
             "Emprendimientos",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
+            "Sistemas de riego",
             "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)"
           ],
           "ac_cantidades": {
@@ -6788,22 +6749,22 @@
           "referencia_lugar": "",
           "poblacion_meta": [
             "Mujeres",
-            "Agricultores / productores",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "Sí",
           "pm_cantidades": {
             "Mujeres": 28,
-            "Agricultores / productores": 44,
-            "Hogares / familias": 44
+            "Hogares / familias": 44,
+            "Agricultores / productores": 44
           },
           "poblacion_total_estimada": 44,
           "accion_comunidad": [
             "Organizaciones comunitarias / COCODES",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Sistemas de riego",
             "Emprendimientos",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
+            "Sistemas de riego",
             "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)"
           ],
           "ac_cantidades": {
@@ -6836,22 +6797,22 @@
           "referencia_lugar": "",
           "poblacion_meta": [
             "Mujeres",
-            "Agricultores / productores",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "Sí",
           "pm_cantidades": {
             "Mujeres": 84,
-            "Agricultores / productores": 111,
-            "Hogares / familias": 111
+            "Hogares / familias": 111,
+            "Agricultores / productores": 111
           },
           "poblacion_total_estimada": 111,
           "accion_comunidad": [
             "Organizaciones comunitarias / COCODES",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Sistemas de riego",
             "Emprendimientos",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
+            "Sistemas de riego",
             "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)"
           ],
           "ac_cantidades": {
@@ -6884,22 +6845,22 @@
           "referencia_lugar": "",
           "poblacion_meta": [
             "Mujeres",
-            "Agricultores / productores",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "Sí",
           "pm_cantidades": {
             "Mujeres": 5,
-            "Agricultores / productores": 17,
-            "Hogares / familias": 17
+            "Hogares / familias": 17,
+            "Agricultores / productores": 17
           },
           "poblacion_total_estimada": 17,
           "accion_comunidad": [
             "Organizaciones comunitarias / COCODES",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Sistemas de riego",
             "Emprendimientos",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
+            "Sistemas de riego",
             "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)"
           ],
           "ac_cantidades": {
@@ -6932,22 +6893,22 @@
           "referencia_lugar": "",
           "poblacion_meta": [
             "Mujeres",
-            "Agricultores / productores",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "Sí",
           "pm_cantidades": {
             "Mujeres": 36,
-            "Agricultores / productores": 50,
-            "Hogares / familias": 50
+            "Hogares / familias": 50,
+            "Agricultores / productores": 50
           },
           "poblacion_total_estimada": 50,
           "accion_comunidad": [
             "Organizaciones comunitarias / COCODES",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Sistemas de riego",
             "Emprendimientos",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
+            "Sistemas de riego",
             "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)"
           ],
           "ac_cantidades": {
@@ -6980,22 +6941,22 @@
           "referencia_lugar": "",
           "poblacion_meta": [
             "Mujeres",
-            "Agricultores / productores",
-            "Hogares / familias"
+            "Hogares / familias",
+            "Agricultores / productores"
           ],
           "datos_cuantitativos_poblacion": "Sí",
           "pm_cantidades": {
             "Mujeres": 13,
-            "Agricultores / productores": 13,
-            "Hogares / familias": 13
+            "Hogares / familias": 13,
+            "Agricultores / productores": 13
           },
           "poblacion_total_estimada": 13,
           "accion_comunidad": [
             "Organizaciones comunitarias / COCODES",
-            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
             "Grupos de Auto Ahorro y Préstamo",
-            "Sistemas de riego",
             "Emprendimientos",
+            "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)",
+            "Sistemas de riego",
             "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)"
           ],
           "ac_cantidades": {
@@ -7581,103 +7542,103 @@
   },
   "matriz_sector_municipio": {
     "Desarrollo económico local": {
-      "Olopa": 4,
       "Jocotán": 6,
+      "Olopa": 4,
       "Chiquimula": 2,
       "Camotán": 4,
-      "Esquipulas": 1,
       "Concepción las Minas": 2,
+      "Esquipulas": 1,
       "San Jacinto": 2,
       "Ipala": 1,
       "San Juan Ermita": 2
     },
     "Seguridad alimentaria y nutricional": {
-      "Jocotán": 5,
       "Camotán": 4,
+      "Jocotán": 5,
       "Chiquimula": 2,
       "Olopa": 5,
-      "San Jacinto": 2,
       "Concepción las Minas": 2,
+      "San Jacinto": 2,
       "Ipala": 2,
       "San Juan Ermita": 6,
       "Quezaltepeque": 1,
       "San José la Arada": 1
     },
     "Gobernanza y fortalecimiento institucional": {
-      "Jocotán": 4,
       "Camotán": 3,
-      "Olopa": 4,
-      "Esquipulas": 1,
+      "Jocotán": 4,
       "Concepción las Minas": 2,
+      "Esquipulas": 1,
+      "Olopa": 4,
+      "Ipala": 1,
       "San Juan Ermita": 3,
       "Quezaltepeque": 1,
-      "Ipala": 1,
       "San José la Arada": 1,
       "Chiquimula": 1,
       "San Jacinto": 1
     },
     "Ambiente y cambio climático": {
-      "Jocotán": 6,
       "Camotán": 5,
+      "Jocotán": 6,
       "Chiquimula": 2,
-      "Olopa": 3,
-      "Esquipulas": 1,
       "Concepción las Minas": 2,
+      "Esquipulas": 1,
+      "Olopa": 3,
       "San Juan Ermita": 4,
-      "Quezaltepeque": 1,
       "Ipala": 1,
+      "Quezaltepeque": 1,
       "San José la Arada": 1
     },
     "Género": {
-      "Jocotán": 5,
       "Camotán": 4,
-      "Olopa": 2,
-      "Esquipulas": 1,
+      "Jocotán": 5,
       "Concepción las Minas": 2,
+      "Esquipulas": 1,
+      "Olopa": 2,
       "San Juan Ermita": 3,
-      "Quezaltepeque": 1,
-      "Ipala": 1
+      "Ipala": 1,
+      "Quezaltepeque": 1
     },
     "Salud": {
       "Chiquimula": 1,
-      "Jocotán": 2,
       "Camotán": 1,
+      "Jocotán": 2,
       "San Juan Ermita": 2
     },
     "Agua y saneamiento": {
       "Chiquimula": 1,
-      "Olopa": 3,
-      "Esquipulas": 1,
       "Concepción las Minas": 1,
+      "Esquipulas": 1,
+      "Olopa": 3,
       "San Juan Ermita": 3,
-      "Jocotán": 2,
-      "Camotán": 1
+      "Camotán": 1,
+      "Jocotán": 2
     },
     "Infraestructura": {
       "Chiquimula": 1,
+      "Camotán": 2,
+      "Ipala": 1,
       "San Juan Ermita": 2,
-      "Jocotán": 2,
       "Olopa": 2,
       "Quezaltepeque": 1,
-      "Ipala": 1,
+      "Jocotán": 2,
       "Concepción las Minas": 1,
-      "Camotán": 2,
       "San Jacinto": 1
     },
     "Educación": {
-      "Jocotán": 4,
       "Camotán": 3,
+      "Jocotán": 4,
       "San Juan Ermita": 1
     },
     "Protección (niñez, migrantes, víctimas de violencia)": {
-      "Jocotán": 4,
       "Camotán": 2,
+      "Jocotán": 4,
       "San Juan Ermita": 2
     },
     "Violencia basada en género": {},
     "Migración y movilidad humana": {
-      "Jocotán": 1,
       "Camotán": 1,
+      "Jocotán": 1,
       "San Juan Ermita": 1
     },
     "Reducción de riesgo ante desastres": {
@@ -13308,7 +13269,7 @@
       "COLRED (Coordinadora Local para la Reducción de Desastres)": 22,
       "Grupos de Auto Ahorro y Préstamo": 45,
       "Escuelas / centros educativos": 16,
-      "Organizaciones comunitarias / COCODES": 63,
+      "Organizaciones comunitarias / COCODES": 62,
       "Cooperativas o asociaciones productivas": 10,
       "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)": 40,
       "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)": 70,
@@ -13320,8 +13281,8 @@
       "COLRED (Coordinadora Local para la Reducción de Desastres)": 9,
       "Escuelas / centros educativos": 8,
       "Organizaciones comunitarias / COCODES": 8,
-      "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)": 7,
-      "Grupos de Auto Ahorro y Préstamo": 7
+      "Grupos de Auto Ahorro y Préstamo": 7,
+      "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)": 7
     },
     "Mujeres embarazadas y lactantes": {
       "Grupos de Auto Ahorro y Préstamo": 15,
@@ -13353,9 +13314,9 @@
       "Escuelas / centros educativos": 16,
       "Organizaciones comunitarias / COCODES": 28,
       "COLRED (Coordinadora Local para la Reducción de Desastres)": 16,
-      "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)": 14,
       "Grupos de Auto Ahorro y Préstamo": 14,
       "Emprendimientos": 14,
+      "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)": 14,
       "Cooperativas o asociaciones productivas": 7,
       "Cuadrillas contra incendios": 12
     },
@@ -13366,12 +13327,12 @@
     },
     "Hogares / familias": {
       "Escuelas / centros educativos": 16,
-      "Organizaciones comunitarias / COCODES": 65,
+      "Organizaciones comunitarias / COCODES": 64,
       "COLRED (Coordinadora Local para la Reducción de Desastres)": 16,
       "Grupos de Auto Ahorro y Préstamo": 45,
       "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)": 27,
-      "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)": 40,
       "Emprendimientos": 40,
+      "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)": 40,
       "Cooperativas o asociaciones productivas": 7,
       "Cuadrillas contra incendios": 12,
       "Sistemas de riego": 26
@@ -13380,27 +13341,27 @@
       "Escuelas / centros educativos": 17,
       "Organizaciones comunitarias / COCODES": 16,
       "COLRED (Coordinadora Local para la Reducción de Desastres)": 16,
-      "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)": 14,
       "Grupos de Auto Ahorro y Préstamo": 14,
       "Emprendimientos": 14,
+      "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)": 14,
       "Cooperativas o asociaciones productivas": 7
     },
     "Docentes / personal educativo": {
       "Escuelas / centros educativos": 17,
       "Organizaciones comunitarias / COCODES": 16,
       "COLRED (Coordinadora Local para la Reducción de Desastres)": 16,
-      "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)": 14,
       "Grupos de Auto Ahorro y Préstamo": 14,
       "Emprendimientos": 14,
+      "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)": 14,
       "Cooperativas o asociaciones productivas": 7
     },
     "Padres, madres y cuidadores": {
       "Escuelas / centros educativos": 17,
       "Organizaciones comunitarias / COCODES": 16,
       "COLRED (Coordinadora Local para la Reducción de Desastres)": 16,
-      "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)": 14,
       "Grupos de Auto Ahorro y Préstamo": 14,
       "Emprendimientos": 14,
+      "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)": 14,
       "Cooperativas o asociaciones productivas": 7
     },
     "Migrantes retornados": {
