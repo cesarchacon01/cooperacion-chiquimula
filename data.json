@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-16T21:59:46.690777+00:00",
+  "generado": "2026-11-16T22:24:58.161675+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -7012,6 +7012,1165 @@
       "beneficiarios_institucionales": {},
       "municipios_cobertura_institucional": [],
       "comunidades": []
+    },
+    {
+      "organizacion": "Catholic Relief Services",
+      "tipo_actor": "ONG internacional",
+      "trabajo_comunitario": "Sí",
+      "pais_origen": "",
+      "contacto": "Ana Lucia Cerrate",
+      "nombre_programa": "SALVA",
+      "tipo_atencion": "Emergencia / respuesta humanitaria",
+      "sector": [
+        "Seguridad alimentaria y nutricional"
+      ],
+      "modalidad": [
+        "Transferencias Monetarias, e Insumos Wash"
+      ],
+      "fecha_inicio": "2026-06-01",
+      "tipo_duracion": "Sí, tiene fecha de finalización definida",
+      "fecha_fin": "2026-11-30",
+      "duracion_aproximada": "",
+      "estado_programa": "Próximo a finalizar",
+      "contraparte_gubernamental": "Aliado Estrategico",
+      "monto_rango": "Prefiere no indicar",
+      "monto_rango_codigo": "prefiere_no_indicar",
+      "fuente_financiamiento": [
+        "Donante internacional"
+      ],
+      "espacios_coordinacion": [
+        "COMUSAN"
+      ],
+      "disposicion_coordinar": "Sí",
+      "beneficiarios_institucionales": {},
+      "municipios_cobertura_institucional": [],
+      "comunidades": [
+        {
+          "codigo_lugar": "san_juan_ermita_buena_vista",
+          "lugar_poblado": "Buena Vista",
+          "municipio": "San Juan Ermita",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 128,
+          "lat": 14.769026,
+          "lon": -89.43672,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres embarazadas y lactantes",
+            "Personas con discapacidad",
+            "Adultos mayores",
+            "Hogares con niñez menor de 5 años",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres embarazadas y lactantes": null,
+            "Personas con discapacidad": null,
+            "Adultos mayores": null,
+            "Hogares con niñez menor de 5 años": null,
+            "Hogares Monoparentales": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 100
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_juan_ermita_el_carrizal",
+          "lugar_poblado": "El Carrizal",
+          "municipio": "San Juan Ermita",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 122,
+          "lat": 14.757204,
+          "lon": -89.40227,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres embarazadas y lactantes",
+            "Personas con discapacidad",
+            "Adultos mayores",
+            "Hogares con niñez menor de 5 años",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres embarazadas y lactantes": null,
+            "Personas con discapacidad": null,
+            "Adultos mayores": null,
+            "Hogares con niñez menor de 5 años": null,
+            "Hogares Monoparentales": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 111
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_juan_ermita_caulotes",
+          "lugar_poblado": "Caulotes",
+          "municipio": "San Juan Ermita",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 54,
+          "lat": 14.77359,
+          "lon": -89.43591,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres embarazadas y lactantes",
+            "Personas con discapacidad",
+            "Adultos mayores",
+            "Hogares con niñez menor de 5 años",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres embarazadas y lactantes": null,
+            "Personas con discapacidad": null,
+            "Adultos mayores": null,
+            "Hogares con niñez menor de 5 años": null,
+            "Hogares Monoparentales": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 58
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_juan_ermita_chispan_jaral",
+          "lugar_poblado": "Chispan Jaral",
+          "municipio": "San Juan Ermita",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 167,
+          "lat": 14.698007,
+          "lon": -89.40405,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres embarazadas y lactantes",
+            "Personas con discapacidad",
+            "Adultos mayores",
+            "Hogares con niñez menor de 5 años",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres embarazadas y lactantes": null,
+            "Personas con discapacidad": null,
+            "Adultos mayores": null,
+            "Hogares con niñez menor de 5 años": null,
+            "Hogares Monoparentales": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 301
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_juan_ermita_los_coronados",
+          "lugar_poblado": "Los Coronados",
+          "municipio": "San Juan Ermita",
+          "clasificacion": "Caserío",
+          "viviendas_catalogo": 33,
+          "lat": 14.72014,
+          "lon": -89.42323,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres embarazadas y lactantes",
+            "Personas con discapacidad",
+            "Adultos mayores",
+            "Hogares con niñez menor de 5 años",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres embarazadas y lactantes": null,
+            "Personas con discapacidad": null,
+            "Adultos mayores": null,
+            "Hogares con niñez menor de 5 años": null,
+            "Hogares Monoparentales": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 23
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_juan_ermita_los_coyotes",
+          "lugar_poblado": "Los Coyotes",
+          "municipio": "San Juan Ermita",
+          "clasificacion": "Caserío",
+          "viviendas_catalogo": 39,
+          "lat": 14.706773,
+          "lon": -89.4296,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres embarazadas y lactantes",
+            "Personas con discapacidad",
+            "Adultos mayores",
+            "Hogares con niñez menor de 5 años",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres embarazadas y lactantes": null,
+            "Personas con discapacidad": null,
+            "Adultos mayores": null,
+            "Hogares con niñez menor de 5 años": null,
+            "Hogares Monoparentales": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 32
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_juan_ermita_el_coco",
+          "lugar_poblado": "El Coco",
+          "municipio": "San Juan Ermita",
+          "clasificacion": "Caserío",
+          "viviendas_catalogo": 63,
+          "lat": 14.770472,
+          "lon": -89.41069,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres embarazadas y lactantes",
+            "Personas con discapacidad",
+            "Adultos mayores",
+            "Hogares con niñez menor de 5 años",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres embarazadas y lactantes": null,
+            "Personas con discapacidad": null,
+            "Adultos mayores": null,
+            "Hogares con niñez menor de 5 años": null,
+            "Hogares Monoparentales": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 76
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_juan_ermita_los_encuentros",
+          "lugar_poblado": "Los Encuentros",
+          "municipio": "San Juan Ermita",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 112,
+          "lat": 14.718788,
+          "lon": -89.40369,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres embarazadas y lactantes",
+            "Personas con discapacidad",
+            "Adultos mayores",
+            "Hogares con niñez menor de 5 años",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres embarazadas y lactantes": null,
+            "Personas con discapacidad": null,
+            "Adultos mayores": null,
+            "Hogares con niñez menor de 5 años": null,
+            "Hogares Monoparentales": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 56
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_juan_ermita_la_ceiba",
+          "lugar_poblado": "La Ceiba",
+          "municipio": "San Juan Ermita",
+          "clasificacion": "Caserío",
+          "viviendas_catalogo": 26,
+          "lat": 14.730719,
+          "lon": -89.44672,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres embarazadas y lactantes",
+            "Personas con discapacidad",
+            "Adultos mayores",
+            "Hogares con niñez menor de 5 años",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres embarazadas y lactantes": null,
+            "Personas con discapacidad": null,
+            "Adultos mayores": null,
+            "Hogares con niñez menor de 5 años": null,
+            "Hogares Monoparentales": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 45
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_juan_ermita_lagunetas",
+          "lugar_poblado": "Lagunetas",
+          "municipio": "San Juan Ermita",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 125,
+          "lat": 14.748168,
+          "lon": -89.39585,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres embarazadas y lactantes",
+            "Personas con discapacidad",
+            "Adultos mayores",
+            "Hogares con niñez menor de 5 años",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres embarazadas y lactantes": null,
+            "Personas con discapacidad": null,
+            "Adultos mayores": null,
+            "Hogares con niñez menor de 5 años": null,
+            "Hogares Monoparentales": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 150
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_juan_ermita_los_planes",
+          "lugar_poblado": "Los Planes",
+          "municipio": "San Juan Ermita",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 139,
+          "lat": 14.753308,
+          "lon": -89.4404,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres embarazadas y lactantes",
+            "Personas con discapacidad",
+            "Adultos mayores",
+            "Hogares con niñez menor de 5 años",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres embarazadas y lactantes": null,
+            "Personas con discapacidad": null,
+            "Adultos mayores": null,
+            "Hogares con niñez menor de 5 años": null,
+            "Hogares Monoparentales": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 0
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_juan_ermita_el_magueyal",
+          "lugar_poblado": "El Magueyal",
+          "municipio": "San Juan Ermita",
+          "clasificacion": "Caserío",
+          "viviendas_catalogo": 95,
+          "lat": 14.724867,
+          "lon": -89.38212,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres embarazadas y lactantes",
+            "Personas con discapacidad",
+            "Adultos mayores",
+            "Hogares con niñez menor de 5 años",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres embarazadas y lactantes": null,
+            "Personas con discapacidad": null,
+            "Adultos mayores": null,
+            "Hogares con niñez menor de 5 años": null,
+            "Hogares Monoparentales": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 83
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_juan_ermita_minas_abajo",
+          "lugar_poblado": "Minas Abajo",
+          "municipio": "San Juan Ermita",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 126,
+          "lat": 14.76996,
+          "lon": -89.44983,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres embarazadas y lactantes",
+            "Personas con discapacidad",
+            "Adultos mayores",
+            "Hogares con niñez menor de 5 años",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres embarazadas y lactantes": null,
+            "Personas con discapacidad": null,
+            "Adultos mayores": null,
+            "Hogares con niñez menor de 5 años": null,
+            "Hogares Monoparentales": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 111
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_juan_ermita_minas_arriba",
+          "lugar_poblado": "Minas Arriba",
+          "municipio": "San Juan Ermita",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 193,
+          "lat": 14.784261,
+          "lon": -89.45182,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres embarazadas y lactantes",
+            "Personas con discapacidad",
+            "Adultos mayores",
+            "Hogares con niñez menor de 5 años",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres embarazadas y lactantes": null,
+            "Personas con discapacidad": null,
+            "Adultos mayores": null,
+            "Hogares con niñez menor de 5 años": null,
+            "Hogares Monoparentales": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 231
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_juan_ermita_el_mojon",
+          "lugar_poblado": "El Mojon",
+          "municipio": "San Juan Ermita",
+          "clasificacion": "Caserío",
+          "viviendas_catalogo": 104,
+          "lat": 14.700861,
+          "lon": -89.41506,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres embarazadas y lactantes",
+            "Personas con discapacidad",
+            "Adultos mayores",
+            "Hogares con niñez menor de 5 años",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres embarazadas y lactantes": null,
+            "Personas con discapacidad": null,
+            "Adultos mayores": null,
+            "Hogares con niñez menor de 5 años": null,
+            "Hogares Monoparentales": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 0
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_juan_ermita_san_antonio_lajas",
+          "lugar_poblado": "San Antonio Lajas",
+          "municipio": "San Juan Ermita",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 110,
+          "lat": 14.722381,
+          "lon": -89.43106,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres embarazadas y lactantes",
+            "Personas con discapacidad",
+            "Adultos mayores",
+            "Hogares con niñez menor de 5 años",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres embarazadas y lactantes": null,
+            "Personas con discapacidad": null,
+            "Adultos mayores": null,
+            "Hogares con niñez menor de 5 años": null,
+            "Hogares Monoparentales": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 98
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_juan_ermita_ticanlu",
+          "lugar_poblado": "Ticanlu",
+          "municipio": "San Juan Ermita",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 65,
+          "lat": 14.739077,
+          "lon": -89.46328,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres embarazadas y lactantes",
+            "Personas con discapacidad",
+            "Adultos mayores",
+            "Hogares con niñez menor de 5 años",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres embarazadas y lactantes": null,
+            "Personas con discapacidad": null,
+            "Adultos mayores": null,
+            "Hogares con niñez menor de 5 años": null,
+            "Hogares Monoparentales": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 323
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_juan_ermita_veguitas",
+          "lugar_poblado": "Veguitas",
+          "municipio": "San Juan Ermita",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 156,
+          "lat": 14.748383,
+          "lon": -89.45778,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres embarazadas y lactantes",
+            "Personas con discapacidad",
+            "Adultos mayores",
+            "Hogares con niñez menor de 5 años",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres embarazadas y lactantes": null,
+            "Personas con discapacidad": null,
+            "Adultos mayores": null,
+            "Hogares con niñez menor de 5 años": null,
+            "Hogares Monoparentales": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 181
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_juan_ermita_vivienda_nueva",
+          "lugar_poblado": "Vivienda Nueva",
+          "municipio": "San Juan Ermita",
+          "clasificacion": "Caserío",
+          "viviendas_catalogo": 41,
+          "lat": 14.750106,
+          "lon": -89.44752,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres embarazadas y lactantes",
+            "Personas con discapacidad",
+            "Adultos mayores",
+            "Hogares con niñez menor de 5 años",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres embarazadas y lactantes": null,
+            "Personas con discapacidad": null,
+            "Adultos mayores": null,
+            "Hogares con niñez menor de 5 años": null,
+            "Hogares Monoparentales": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 60
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_jacinto_agua_zarca",
+          "lugar_poblado": "Agua Zarca",
+          "municipio": "San Jacinto",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 193,
+          "lat": 14.677257,
+          "lon": -89.52119,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres embarazadas y lactantes",
+            "Personas con discapacidad",
+            "Adultos mayores",
+            "Hogares con niñez menor de 5 años",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres embarazadas y lactantes": null,
+            "Personas con discapacidad": null,
+            "Adultos mayores": null,
+            "Hogares con niñez menor de 5 años": null,
+            "Hogares Monoparentales": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 319
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_jacinto_el_carrizal",
+          "lugar_poblado": "El Carrizal ",
+          "municipio": "San Jacinto",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 116,
+          "lat": 14.65759,
+          "lon": -89.49212,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres embarazadas y lactantes",
+            "Personas con discapacidad",
+            "Adultos mayores",
+            "Hogares con niñez menor de 5 años",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres embarazadas y lactantes": null,
+            "Personas con discapacidad": null,
+            "Adultos mayores": null,
+            "Hogares con niñez menor de 5 años": null,
+            "Hogares Monoparentales": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 111
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_jacinto_la_majada",
+          "lugar_poblado": "La Majada",
+          "municipio": "San Jacinto",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 255,
+          "lat": 14.704116,
+          "lon": -89.49371,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres embarazadas y lactantes",
+            "Personas con discapacidad",
+            "Adultos mayores",
+            "Hogares con niñez menor de 5 años",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres embarazadas y lactantes": null,
+            "Personas con discapacidad": null,
+            "Adultos mayores": null,
+            "Hogares con niñez menor de 5 años": null,
+            "Hogares Monoparentales": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 181
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_jacinto_las_lomas",
+          "lugar_poblado": "Las Lomas",
+          "municipio": "San Jacinto",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 446,
+          "lat": 14.668849,
+          "lon": -89.52597,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres embarazadas y lactantes",
+            "Personas con discapacidad",
+            "Adultos mayores",
+            "Hogares con niñez menor de 5 años",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres embarazadas y lactantes": null,
+            "Personas con discapacidad": null,
+            "Adultos mayores": null,
+            "Hogares con niñez menor de 5 años": null,
+            "Hogares Monoparentales": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 230
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_jacinto_pueblo_nuevo",
+          "lugar_poblado": "Pueblo Nuevo",
+          "municipio": "San Jacinto",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 97,
+          "lat": 14.6679,
+          "lon": -89.50559,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres embarazadas y lactantes",
+            "Personas con discapacidad",
+            "Adultos mayores",
+            "Hogares con niñez menor de 5 años",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres embarazadas y lactantes": null,
+            "Personas con discapacidad": null,
+            "Adultos mayores": null,
+            "Hogares con niñez menor de 5 años": null,
+            "Hogares Monoparentales": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 65
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_jacinto_tizubin",
+          "lugar_poblado": "Tizubin",
+          "municipio": "San Jacinto",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 126,
+          "lat": 14.69386,
+          "lon": -89.51302,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres embarazadas y lactantes",
+            "Personas con discapacidad",
+            "Adultos mayores",
+            "Hogares con niñez menor de 5 años",
+            "Otro"
+          ],
+          "datos_cuantitativos_poblacion": "No",
+          "pm_cantidades": {
+            "Mujeres embarazadas y lactantes": null,
+            "Personas con discapacidad": null,
+            "Adultos mayores": null,
+            "Hogares con niñez menor de 5 años": null,
+            "Hogares Monoparentales": null
+          },
+          "poblacion_total_estimada": null,
+          "accion_comunidad": [
+            "Organizaciones comunitarias / COCODES"
+          ],
+          "ac_cantidades": {
+            "Organizaciones comunitarias / COCODES": 65
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        }
+      ]
     }
   ],
   "municipios": [
@@ -7405,25 +8564,26 @@
     "San Jacinto": {
       "organizaciones": [
         "Asociación Regional Campesina Ch'ortí' -ASORECH-",
+        "Catholic Relief Services",
         "Cáritas Zacapa"
       ],
-      "total_programas": 2,
-      "comunidades_cubiertas": 4,
+      "total_programas": 3,
+      "comunidades_cubiertas": 8,
       "comunidades_total_catalogo": 44,
       "inversion_estimada": 0,
       "sectores": {
-        "Seguridad alimentaria y nutricional": 2,
+        "Seguridad alimentaria y nutricional": 3,
         "Desarrollo económico local": 2,
         "Gobernanza y fortalecimiento institucional": 1,
         "Infraestructura": 1
       },
       "estado": {
         "En ejecución": 1,
-        "Próximo a finalizar": 1
+        "Próximo a finalizar": 2
       },
       "instituciones": {},
       "fuente_financiamiento": {
-        "Donante internacional": 2
+        "Donante internacional": 3
       },
       "lugares_adicionales_reportados": 0
     },
@@ -7465,16 +8625,17 @@
       "organizaciones": [
         "Asociación Regional Campesina Ch'ortí' -ASORECH-",
         "Banco Aleman- KfW",
+        "Catholic Relief Services",
         "Cáritas Zacapa",
         "Organización de las Naciones Unidas para Alimentación y Agricultura -FAO-",
         "World Vision"
       ],
-      "total_programas": 6,
-      "comunidades_cubiertas": 21,
+      "total_programas": 7,
+      "comunidades_cubiertas": 28,
       "comunidades_total_catalogo": 50,
       "inversion_estimada": 0,
       "sectores": {
-        "Seguridad alimentaria y nutricional": 6,
+        "Seguridad alimentaria y nutricional": 7,
         "Agua y saneamiento": 3,
         "Educación": 1,
         "Salud": 2,
@@ -7489,7 +8650,7 @@
       },
       "estado": {
         "En ejecución": 5,
-        "Próximo a finalizar": 1
+        "Próximo a finalizar": 2
       },
       "instituciones": {
         "Municipalidades": {
@@ -7534,7 +8695,7 @@
         }
       },
       "fuente_financiamiento": {
-        "Donante internacional": 5,
+        "Donante internacional": 6,
         "Fondos propios": 2
       },
       "lugares_adicionales_reportados": 0
@@ -7542,9 +8703,9 @@
   },
   "matriz_sector_municipio": {
     "Desarrollo económico local": {
+      "Chiquimula": 2,
       "Jocotán": 6,
       "Olopa": 4,
-      "Chiquimula": 2,
       "Camotán": 4,
       "Concepción las Minas": 2,
       "Esquipulas": 1,
@@ -7553,56 +8714,56 @@
       "San Juan Ermita": 2
     },
     "Seguridad alimentaria y nutricional": {
-      "Jocotán": 5,
       "Camotán": 4,
+      "Jocotán": 5,
       "Chiquimula": 2,
       "Concepción las Minas": 2,
       "Ipala": 2,
       "Olopa": 5,
-      "San Jacinto": 2,
-      "San Juan Ermita": 6,
+      "San Jacinto": 3,
+      "San Juan Ermita": 7,
       "Quezaltepeque": 1,
       "San José la Arada": 1
     },
     "Gobernanza y fortalecimiento institucional": {
-      "Jocotán": 4,
       "Camotán": 3,
+      "Jocotán": 4,
       "Concepción las Minas": 2,
       "Esquipulas": 1,
       "Olopa": 4,
       "San Juan Ermita": 3,
-      "Ipala": 1,
       "Quezaltepeque": 1,
-      "San José la Arada": 1,
+      "Ipala": 1,
       "Chiquimula": 1,
+      "San José la Arada": 1,
       "San Jacinto": 1
     },
     "Ambiente y cambio climático": {
-      "Jocotán": 6,
       "Camotán": 5,
+      "Jocotán": 6,
       "Chiquimula": 2,
       "Concepción las Minas": 2,
       "Esquipulas": 1,
       "Olopa": 3,
       "San Juan Ermita": 4,
-      "Ipala": 1,
       "Quezaltepeque": 1,
+      "Ipala": 1,
       "San José la Arada": 1
     },
     "Género": {
-      "Jocotán": 5,
       "Camotán": 4,
+      "Jocotán": 5,
       "Concepción las Minas": 2,
       "Esquipulas": 1,
       "Olopa": 2,
       "San Juan Ermita": 3,
-      "Ipala": 1,
-      "Quezaltepeque": 1
+      "Quezaltepeque": 1,
+      "Ipala": 1
     },
     "Salud": {
       "Chiquimula": 1,
-      "Jocotán": 2,
       "Camotán": 1,
+      "Jocotán": 2,
       "San Juan Ermita": 2
     },
     "Agua y saneamiento": {
@@ -7611,41 +8772,41 @@
       "Esquipulas": 1,
       "Olopa": 3,
       "San Juan Ermita": 3,
-      "Jocotán": 2,
-      "Camotán": 1
+      "Camotán": 1,
+      "Jocotán": 2
     },
     "Infraestructura": {
       "Chiquimula": 1,
       "Jocotán": 2,
       "San Juan Ermita": 2,
-      "Ipala": 1,
-      "Camotán": 2,
-      "Concepción las Minas": 1,
       "Quezaltepeque": 1,
+      "Concepción las Minas": 1,
+      "Ipala": 1,
       "Olopa": 2,
+      "Camotán": 2,
       "San Jacinto": 1
     },
     "Educación": {
-      "Jocotán": 4,
       "Camotán": 3,
+      "Jocotán": 4,
       "San Juan Ermita": 1
     },
     "Protección (niñez, migrantes, víctimas de violencia)": {
-      "Jocotán": 4,
       "Camotán": 2,
+      "Jocotán": 4,
       "San Juan Ermita": 2
     },
     "Violencia basada en género": {},
     "Migración y movilidad humana": {
-      "Jocotán": 1,
       "Camotán": 1,
+      "Jocotán": 1,
       "San Juan Ermita": 1
     },
     "Reducción de riesgo ante desastres": {
       "Jocotán": 1,
       "San Juan Ermita": 2,
-      "San José la Arada": 1,
-      "Chiquimula": 1
+      "Chiquimula": 1,
+      "San José la Arada": 1
     }
   },
   "comunidades_sin_cobertura": [
@@ -8469,25 +9630,11 @@
       "lon": -89.43082
     },
     {
-      "codigo_lugar": "san_juan_ermita_caulotes",
-      "lugar_poblado": "Caulotes",
-      "municipio": "San Juan Ermita",
-      "lat": 14.77359,
-      "lon": -89.43591
-    },
-    {
       "codigo_lugar": "san_juan_ermita_chanco",
       "lugar_poblado": "Chanco",
       "municipio": "San Juan Ermita",
       "lat": 14.711739,
       "lon": -89.44421
-    },
-    {
-      "codigo_lugar": "san_juan_ermita_los_coronados",
-      "lugar_poblado": "Los Coronados",
-      "municipio": "San Juan Ermita",
-      "lat": 14.72014,
-      "lon": -89.42323
     },
     {
       "codigo_lugar": "san_juan_ermita_corral_de_piedra",
@@ -8497,39 +9644,11 @@
       "lon": -89.45448
     },
     {
-      "codigo_lugar": "san_juan_ermita_los_coyotes",
-      "lugar_poblado": "Los Coyotes",
-      "municipio": "San Juan Ermita",
-      "lat": 14.706773,
-      "lon": -89.4296
-    },
-    {
       "codigo_lugar": "san_juan_ermita_el_cerron",
       "lugar_poblado": "El Cerron",
       "municipio": "San Juan Ermita",
       "lat": 14.737778,
       "lon": -89.41593
-    },
-    {
-      "codigo_lugar": "san_juan_ermita_el_coco",
-      "lugar_poblado": "El Coco",
-      "municipio": "San Juan Ermita",
-      "lat": 14.770472,
-      "lon": -89.41069
-    },
-    {
-      "codigo_lugar": "san_juan_ermita_los_encuentros",
-      "lugar_poblado": "Los Encuentros",
-      "municipio": "San Juan Ermita",
-      "lat": 14.718788,
-      "lon": -89.40369
-    },
-    {
-      "codigo_lugar": "san_juan_ermita_la_ceiba",
-      "lugar_poblado": "La Ceiba",
-      "municipio": "San Juan Ermita",
-      "lat": 14.730719,
-      "lon": -89.44672
     },
     {
       "codigo_lugar": "san_juan_ermita_ceibita_centro",
@@ -8600,13 +9719,6 @@
       "municipio": "San Juan Ermita",
       "lat": 14.78969,
       "lon": -89.43183
-    },
-    {
-      "codigo_lugar": "san_juan_ermita_ticanlu",
-      "lugar_poblado": "Ticanlu",
-      "municipio": "San Juan Ermita",
-      "lat": 14.739077,
-      "lon": -89.46328
     },
     {
       "codigo_lugar": "san_juan_ermita_el_campo",
@@ -12025,25 +13137,11 @@
       "lon": -89.50219
     },
     {
-      "codigo_lugar": "san_jacinto_agua_zarca",
-      "lugar_poblado": "Agua Zarca",
-      "municipio": "San Jacinto",
-      "lat": 14.677257,
-      "lon": -89.52119
-    },
-    {
       "codigo_lugar": "san_jacinto_dolores",
       "lugar_poblado": "Dolores",
       "municipio": "San Jacinto",
       "lat": 14.649112,
       "lon": -89.51696
-    },
-    {
-      "codigo_lugar": "san_jacinto_el_carrizal",
-      "lugar_poblado": "El Carrizal ",
-      "municipio": "San Jacinto",
-      "lat": 14.65759,
-      "lon": -89.49212
     },
     {
       "codigo_lugar": "san_jacinto_el_escalon",
@@ -12060,13 +13158,6 @@
       "lon": -89.477
     },
     {
-      "codigo_lugar": "san_jacinto_la_majada",
-      "lugar_poblado": "La Majada",
-      "municipio": "San Jacinto",
-      "lat": 14.704116,
-      "lon": -89.49371
-    },
-    {
       "codigo_lugar": "san_jacinto_laguneta_del_carrizo",
       "lugar_poblado": "Laguneta Del Carrizo",
       "municipio": "San Jacinto",
@@ -12079,13 +13170,6 @@
       "municipio": "San Jacinto",
       "lat": 14.679489,
       "lon": -89.486689
-    },
-    {
-      "codigo_lugar": "san_jacinto_las_lomas",
-      "lugar_poblado": "Las Lomas",
-      "municipio": "San Jacinto",
-      "lat": 14.668849,
-      "lon": -89.52597
     },
     {
       "codigo_lugar": "san_jacinto_los_agosto",
@@ -12820,6 +13904,7 @@
       "sector": "Seguridad alimentaria y nutricional",
       "organizaciones": [
         "Asociación Regional Campesina Ch'ortí' -ASORECH-",
+        "Catholic Relief Services",
         "World Vision"
       ]
     },
@@ -12874,6 +13959,7 @@
       "municipio": "San Juan Ermita",
       "sector": "Seguridad alimentaria y nutricional",
       "organizaciones": [
+        "Catholic Relief Services",
         "Cáritas Zacapa",
         "World Vision"
       ]
@@ -12893,6 +13979,7 @@
       "sector": "Seguridad alimentaria y nutricional",
       "organizaciones": [
         "Banco Aleman- KfW",
+        "Catholic Relief Services",
         "World Vision"
       ]
     },
@@ -13051,6 +14138,24 @@
       ]
     },
     {
+      "lugar_poblado": "El Magueyal",
+      "municipio": "San Juan Ermita",
+      "sector": "Seguridad alimentaria y nutricional",
+      "organizaciones": [
+        "Banco Aleman- KfW",
+        "Catholic Relief Services"
+      ]
+    },
+    {
+      "lugar_poblado": "El Mojon",
+      "municipio": "San Juan Ermita",
+      "sector": "Seguridad alimentaria y nutricional",
+      "organizaciones": [
+        "Banco Aleman- KfW",
+        "Catholic Relief Services"
+      ]
+    },
+    {
       "lugar_poblado": "Quequexque",
       "municipio": "San Juan Ermita",
       "sector": "Gobernanza y fortalecimiento institucional",
@@ -13084,6 +14189,15 @@
       "organizaciones": [
         "Banco Aleman- KfW",
         "Cáritas Zacapa"
+      ]
+    },
+    {
+      "lugar_poblado": "San Antonio Lajas",
+      "municipio": "San Juan Ermita",
+      "sector": "Seguridad alimentaria y nutricional",
+      "organizaciones": [
+        "Banco Aleman- KfW",
+        "Catholic Relief Services"
       ]
     },
     {
@@ -13150,10 +14264,20 @@
       ]
     },
     {
+      "lugar_poblado": "Minas Arriba",
+      "municipio": "San Juan Ermita",
+      "sector": "Seguridad alimentaria y nutricional",
+      "organizaciones": [
+        "Catholic Relief Services",
+        "Organización de las Naciones Unidas para Alimentación y Agricultura -FAO-"
+      ]
+    },
+    {
       "lugar_poblado": "Veguitas",
       "municipio": "San Juan Ermita",
       "sector": "Seguridad alimentaria y nutricional",
       "organizaciones": [
+        "Catholic Relief Services",
         "Cáritas Zacapa",
         "Organización de las Naciones Unidas para Alimentación y Agricultura -FAO-"
       ]
@@ -13172,6 +14296,7 @@
       "municipio": "San Juan Ermita",
       "sector": "Seguridad alimentaria y nutricional",
       "organizaciones": [
+        "Catholic Relief Services",
         "Cáritas Zacapa",
         "Organización de las Naciones Unidas para Alimentación y Agricultura -FAO-"
       ]
@@ -13183,6 +14308,51 @@
       "organizaciones": [
         "Cáritas Zacapa",
         "Organización de las Naciones Unidas para Alimentación y Agricultura -FAO-"
+      ]
+    },
+    {
+      "lugar_poblado": "El Carrizal",
+      "municipio": "San Juan Ermita",
+      "sector": "Seguridad alimentaria y nutricional",
+      "organizaciones": [
+        "Catholic Relief Services",
+        "Cáritas Zacapa"
+      ]
+    },
+    {
+      "lugar_poblado": "Los Planes",
+      "municipio": "San Juan Ermita",
+      "sector": "Seguridad alimentaria y nutricional",
+      "organizaciones": [
+        "Catholic Relief Services",
+        "Cáritas Zacapa"
+      ]
+    },
+    {
+      "lugar_poblado": "Minas Abajo",
+      "municipio": "San Juan Ermita",
+      "sector": "Seguridad alimentaria y nutricional",
+      "organizaciones": [
+        "Catholic Relief Services",
+        "Cáritas Zacapa"
+      ]
+    },
+    {
+      "lugar_poblado": "Pueblo Nuevo",
+      "municipio": "San Jacinto",
+      "sector": "Seguridad alimentaria y nutricional",
+      "organizaciones": [
+        "Catholic Relief Services",
+        "Cáritas Zacapa"
+      ]
+    },
+    {
+      "lugar_poblado": "Tizubin",
+      "municipio": "San Jacinto",
+      "sector": "Seguridad alimentaria y nutricional",
+      "organizaciones": [
+        "Catholic Relief Services",
+        "Cáritas Zacapa"
       ]
     }
   ],
@@ -13280,7 +14450,7 @@
       "Emprendimientos": 8,
       "COLRED (Coordinadora Local para la Reducción de Desastres)": 9,
       "Escuelas / centros educativos": 8,
-      "Organizaciones comunitarias / COCODES": 8,
+      "Organizaciones comunitarias / COCODES": 33,
       "Grupos de Auto Ahorro y Préstamo": 7,
       "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)": 7
     },
@@ -13288,7 +14458,7 @@
       "Grupos de Auto Ahorro y Préstamo": 15,
       "Emprendimientos": 15,
       "Escuelas / centros educativos": 14,
-      "Organizaciones comunitarias / COCODES": 14,
+      "Organizaciones comunitarias / COCODES": 39,
       "COLRED (Coordinadora Local para la Reducción de Desastres)": 14,
       "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)": 14,
       "Cooperativas o asociaciones productivas": 7
@@ -13297,7 +14467,7 @@
       "Grupos de Auto Ahorro y Préstamo": 15,
       "Emprendimientos": 15,
       "Escuelas / centros educativos": 16,
-      "Organizaciones comunitarias / COCODES": 16,
+      "Organizaciones comunitarias / COCODES": 41,
       "COLRED (Coordinadora Local para la Reducción de Desastres)": 16,
       "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)": 14,
       "Cooperativas o asociaciones productivas": 7
@@ -13312,7 +14482,7 @@
     },
     "Personas con discapacidad": {
       "Escuelas / centros educativos": 16,
-      "Organizaciones comunitarias / COCODES": 28,
+      "Organizaciones comunitarias / COCODES": 53,
       "COLRED (Coordinadora Local para la Reducción de Desastres)": 16,
       "Grupos de Auto Ahorro y Préstamo": 14,
       "Emprendimientos": 14,
@@ -13322,7 +14492,7 @@
     },
     "Adultos mayores": {
       "Escuelas / centros educativos": 2,
-      "Organizaciones comunitarias / COCODES": 2,
+      "Organizaciones comunitarias / COCODES": 27,
       "COLRED (Coordinadora Local para la Reducción de Desastres)": 2
     },
     "Hogares / familias": {
@@ -13371,13 +14541,13 @@
     }
   },
   "inversion": {
-    "programas_con_monto": 20,
+    "programas_con_monto": 21,
     "programas_sin_monto": 0,
     "nota_metodologica": "La inversión se conserva como rango reportado. No se calculan puntos medios ni se distribuyen montos entre municipios o sectores."
   },
   "control": {
-    "registros_kobo": 13,
-    "programas_procesados": 20,
+    "registros_kobo": 14,
+    "programas_procesados": 21,
     "lugares_catalogo": 996,
     "lugares_con_coordenadas": 825,
     "lugares_adicionales_reportados": 1,
