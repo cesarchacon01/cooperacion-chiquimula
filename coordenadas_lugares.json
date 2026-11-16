@@ -170,9 +170,9 @@
     "fuente": "INE Censo 2018"
   },
   "chiquimula_el_sauce_2": {
-    "lat": 14.769739,
-    "lon": -89.66534,
-    "fuente": "INE Censo 2018"
+    "lat": 14.806022,
+    "lon": -89.45674,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Sauce, código 2001043)"
   },
   "chiquimula_guayabillas": {
     "lat": 14.847199,
@@ -250,9 +250,9 @@
     "fuente": "INE Censo 2018"
   },
   "chiquimula_el_morral_2": {
-    "lat": 14.808435,
-    "lon": -89.50251,
-    "fuente": "INE Censo 2018"
+    "lat": 14.835282,
+    "lon": -89.628898,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Morral, código 2001069)"
   },
   "chiquimula_los_felipe": {
     "lat": 14.830306,
@@ -345,9 +345,9 @@
     "fuente": "INE Censo 2018"
   },
   "chiquimula_plan_del_jocote_2": {
-    "lat": 14.852966,
-    "lon": -89.5833,
-    "fuente": "INE Censo 2018"
+    "lat": 14.759541,
+    "lon": -89.496769,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Plan Del Jocote, código 2001092)"
   },
   "chiquimula_quebrada_seca": {
     "lat": 14.737412,
@@ -1400,9 +1400,9 @@
     "fuente": "INE Censo 2018"
   },
   "camotan_el_chorro": {
-    "lat": 14.80632,
-    "lon": -89.36836,
-    "fuente": "INE Censo 2018"
+    "lat": 14.801863,
+    "lon": -89.287464,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Chorro, código 2005020)"
   },
   "camotan_el_florido": {
     "lat": 14.858121,
@@ -1425,9 +1425,9 @@
     "fuente": "INE Censo 2018"
   },
   "camotan_el_limar_2": {
-    "lat": 14.844264,
-    "lon": -89.32425,
-    "fuente": "INE Censo 2018"
+    "lat": 14.879682,
+    "lon": -89.345192,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Limar, código 2005025)"
   },
   "camotan_el_plan": {
     "lat": 14.787343,
@@ -1645,9 +1645,9 @@
     "fuente": "INE Censo 2018"
   },
   "camotan_roblarcito_2": {
-    "lat": 14.848516,
-    "lon": -89.24443,
-    "fuente": "INE Censo 2018"
+    "lat": 14.877556,
+    "lon": -89.315992,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Roblarcito, código 2005074)"
   },
   "camotan_rodeo": {
     "lat": 14.845887,
@@ -1705,9 +1705,9 @@
     "fuente": "INE Censo 2018"
   },
   "camotan_tierra_blanca_2": {
-    "lat": 14.810115,
-    "lon": -89.34701,
-    "fuente": "INE Censo 2018"
+    "lat": 14.887479,
+    "lon": -89.259282,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Tierra Blanca, código 2005086)"
   },
   "camotan_tizamarte": {
     "lat": 14.914872,
@@ -1755,9 +1755,9 @@
     "fuente": "INE Censo 2018"
   },
   "camotan_el_cementerio": {
-    "lat": 14.818097,
-    "lon": -89.37767,
-    "fuente": "INE Censo 2018"
+    "lat": 14.849712,
+    "lon": -89.266295,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Rodeo, Cementerio, código 2005103)"
   },
   "camotan_la_barrera": {
     "lat": 14.82211,
@@ -1820,14 +1820,14 @@
     "fuente": "INE Censo 2018"
   },
   "camotan_el_bordo": {
-    "lat": 14.863293,
-    "lon": -89.27444,
-    "fuente": "INE Censo 2018"
+    "lat": 14.863328,
+    "lon": -89.274615,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Despoblado, El Bordo, código 2005109)"
   },
   "camotan_el_bordo_2": {
-    "lat": 14.863293,
-    "lon": -89.27444,
-    "fuente": "INE Censo 2018"
+    "lat": 14.874852,
+    "lon": -89.271414,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; La Libertad, El Bordo, código 2005110)"
   },
   "camotan_el_cedral": {
     "lat": 14.875017,
@@ -1835,9 +1835,9 @@
     "fuente": "INE Censo 2018"
   },
   "camotan_el_cementerio_2": {
-    "lat": 14.818097,
-    "lon": -89.37767,
-    "fuente": "INE Censo 2018"
+    "lat": 14.807748,
+    "lon": -89.353607,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Lantiquin, El Cementerio, código 2005112)"
   },
   "camotan_el_centro": {
     "lat": 14.815181,
@@ -1915,14 +1915,14 @@
     "fuente": "INE Censo 2018"
   },
   "camotan_la_nueva_esperanza": {
-    "lat": 14.903009,
-    "lon": -89.23702,
-    "fuente": "INE Censo 2018"
+    "lat": 14.878467,
+    "lon": -89.253684,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Anicillo, La Nueva Esperanza, código 2005130)"
   },
   "camotan_la_nueva_esperanza_2": {
     "lat": 14.903009,
-    "lon": -89.23702,
-    "fuente": "INE Censo 2018"
+    "lon": -89.237026,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Tesoro, La Nueva Esperanza, código 2005131)"
   },
   "camotan_la_reforma": {
     "lat": 14.910022,
@@ -1975,14 +1975,14 @@
     "fuente": "INE Censo 2018"
   },
   "camotan_pinalito": {
-    "lat": 14.878951,
-    "lon": -89.3524,
-    "fuente": "INE Censo 2018"
+    "lat": 14.879238,
+    "lon": -89.352512,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Limar, El Pinalito, código 2005143)"
   },
   "camotan_pinalito_2": {
-    "lat": 14.878951,
-    "lon": -89.3524,
-    "fuente": "INE Censo 2018"
+    "lat": 14.935561,
+    "lon": -89.185023,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Morola, Pinalito, código 2005144)"
   },
   "camotan_plan_centro": {
     "lat": 14.796805,
@@ -2010,14 +2010,14 @@
     "fuente": "INE Censo 2018"
   },
   "camotan_zarzal": {
-    "lat": 14.911572,
-    "lon": -89.19547,
-    "fuente": "INE Censo 2018"
+    "lat": 14.912172,
+    "lon": -89.195065,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Morola, Zarzal, código 2005154)"
   },
   "camotan_zarzal_2": {
-    "lat": 14.911572,
-    "lon": -89.19547,
-    "fuente": "INE Censo 2018"
+    "lat": 14.871467,
+    "lon": -89.281202,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Shupa, Zarzal, código 2005155)"
   },
   "camotan_pajco_barrio_nuevo": {
     "lat": 14.836823,
@@ -2405,9 +2405,9 @@
     "fuente": "INE Censo 2018"
   },
   "esquipulas_cuevitas": {
-    "lat": 14.631957,
-    "lon": -89.29896,
-    "fuente": "INE Censo 2018"
+    "lat": 14.708507,
+    "lon": -89.134803,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Cuevitas, código 2007026)"
   },
   "esquipulas_cuevitas_2": {
     "lat": 14.631957,
@@ -2425,9 +2425,9 @@
     "fuente": "INE Censo 2018"
   },
   "esquipulas_cerron_2": {
-    "lat": 14.585146,
-    "lon": -89.25857,
-    "fuente": "INE Censo 2018"
+    "lat": 14.769626,
+    "lon": -89.173446,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Cerron, código 2007035)"
   },
   "esquipulas_el_empedrado": {
     "lat": 14.62492,
@@ -2455,9 +2455,9 @@
     "fuente": "INE Censo 2018"
   },
   "esquipulas_el_tablon_2": {
-    "lat": 14.564595,
-    "lon": -89.29751,
-    "fuente": "INE Censo 2018"
+    "lat": 14.617902,
+    "lon": -89.336684,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Tablon, código 2007044)"
   },
   "esquipulas_el_zompopero": {
     "lat": 14.543539,
@@ -2765,9 +2765,9 @@
     "fuente": "INE Censo 2018"
   },
   "esquipulas_san_juan": {
-    "lat": 14.567405,
-    "lon": -89.35627,
-    "fuente": "INE Censo 2018"
+    "lat": 14.611616,
+    "lon": -89.322134,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; San Juan, código 2007130)"
   },
   "esquipulas_san_nicolas": {
     "lat": 14.538956,
@@ -2975,9 +2975,9 @@
     "fuente": "INE Censo 2018"
   },
   "concepcion_las_minas_agua_caliente_2": {
-    "lat": 14.540179,
-    "lon": -89.49625,
-    "fuente": "INE Censo 2018"
+    "lat": 14.47386,
+    "lon": -89.482471,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Agua Caliente, código 2008003)"
   },
   "concepcion_las_minas_anguiatu": {
     "lat": 14.422851,
@@ -3290,9 +3290,9 @@
     "fuente": "INE Censo 2018"
   },
   "quezaltepeque_cuje_2": {
-    "lat": 14.63217,
-    "lon": -89.39568,
-    "fuente": "INE Censo 2018"
+    "lat": 14.580611,
+    "lon": -89.525253,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Cuje, código 2009020)"
   },
   "quezaltepeque_el_chile": {
     "lat": 14.621385,
@@ -3520,9 +3520,9 @@
     "fuente": "INE Censo 2018"
   },
   "quezaltepeque_san_antonio_2": {
-    "lat": 14.608157,
-    "lon": -89.50806,
-    "fuente": "INE Censo 2018"
+    "lat": 14.556321,
+    "lon": -89.525683,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; San Antonio, código 2009070)"
   },
   "quezaltepeque_san_jacintillo": {
     "lat": 14.626931,
@@ -3805,9 +3805,9 @@
     "fuente": "INE Censo 2018"
   },
   "san_jacinto_los_borja_2": {
-    "lat": 14.695869,
-    "lon": -89.50711,
-    "fuente": "INE Censo 2018"
+    "lat": 14.667551,
+    "lon": -89.527056,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Los Borja, código 2010042)"
   },
   "san_jacinto_los_gonzales": {
     "lat": 14.685072,
@@ -3845,9 +3845,9 @@
     "fuente": "INE Censo 2018"
   },
   "ipala_buena_vista_2": {
-    "lat": 14.578916,
-    "lon": -89.57317,
-    "fuente": "INE Censo 2018"
+    "lat": 14.631803,
+    "lon": -89.571443,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Buena Vista, código 2011005)"
   },
   "ipala_cacahuatepeque": {
     "lat": 14.529763,
@@ -4080,42 +4080,908 @@
     "fuente": "INE Censo 2018"
   },
   "san_jacinto_san_nicolas": {
-    "lat": 14.650511,
-    "lon": -89.531711,
-    "fuente": "GeoNames (San Nicolás, Municipio de San Jacinto)"
+    "lat": 14.653913,
+    "lon": -89.530917,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; San Nicolas, código 2010026)"
   },
   "san_jacinto_los_galvez": {
-    "lat": 14.686539,
-    "lon": -89.519819,
-    "fuente": "GeoNames (Los Gálvez, Municipio de San Jacinto)"
+    "lat": 14.685534,
+    "lon": -89.508663,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Los Galvez, código 2010043)"
   },
   "san_jacinto_valle_de_los_martinez": {
-    "lat": 14.727489,
-    "lon": -89.468769,
-    "fuente": "GeoNames (Valle de Los Martínez, Municipio de San Jacinto)"
+    "lat": 14.7293,
+    "lon": -89.465297,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Valle De Los Martinez, código 2010032)"
   },
   "san_jacinto_laguneta_del_carrizo": {
-    "lat": 14.656,
-    "lon": -89.4935,
-    "fuente": "Sin coordenada propia publicada. Se ubica junto a la aldea El Carrizal de San Jacinto (INE Censo 2018), por la similitud del nombre."  },
+    "lat": 14.630355,
+    "lon": -89.538978,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Laguneta Del Carrizo, código 2010009)"
+  },
   "san_jacinto_los_roque_zapote": {
-    "lat": 14.659,
-    "lon": -89.5508,
-    "fuente": "Sin coordenada propia publicada. Se ubica junto a la aldea El Zapote de San Jacinto (INE Censo 2018), por la similitud del nombre."  },
+    "lat": 14.66494,
+    "lon": -89.544775,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Los Roque Zapote, código 2010021)"
+  },
   "san_jacinto_los_cruz": {
-    "lat": 14.679489,
-    "lon": -89.486689,
-    "fuente": "Sin coordenada propia publicada. Se usa la del lugar Las Cruces de San Jacinto (GeoNames), por la similitud del nombre; puede no ser el mismo lugar."  },
+    "lat": 14.67889,
+    "lon": -89.483963,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Los Cruz, código 2010010)"
+  },
   "san_jacinto_los_linares": {
-    "lat": 14.6868,
-    "lon": -89.513,
-    "fuente": "Sin coordenada propia publicada ni lugar de referencia. Se ubica cerca del centro del municipio de San Jacinto."  },
+    "lat": 14.726047,
+    "lon": -89.480497,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Los Linares, código 2010015)"
+  },
   "san_jacinto_sandoval": {
-    "lat": 14.6868,
-    "lon": -89.507,
-    "fuente": "Sin coordenada propia publicada ni lugar de referencia. Se ubica cerca del centro del municipio de San Jacinto."  },
+    "lat": 14.731097,
+    "lon": -89.480887,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Sandoval, código 2010027)"
+  },
   "san_jacinto_lomas_abajo": {
-    "lat": 14.6672,
-    "lon": -89.5272,
-    "fuente": "Sin coordenada propia publicada. Se ubica junto a la aldea Las Lomas de San Jacinto (INE Censo 2018; OpenStreetMap), por la similitud del nombre."  }
+    "lat": 14.666914,
+    "lon": -89.529198,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Lomas Abajo, código 2010040)"
+  },
+  "camotan_el_matochal": {
+    "lat": 14.89287,
+    "lon": -89.228556,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Matochal, código 2005026)"
+  },
+  "camotan_el_palmarcito": {
+    "lat": 14.820377,
+    "lon": -89.317295,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Palmarcito, código 2005027)"
+  },
+  "camotan_la_rebalsa": {
+    "lat": 14.869731,
+    "lon": -89.295431,
+    "fuente": "GeoNames (La Rebalsa, Camotán; id 12068009)"
+  },
+  "camotan_pie_de_las_flores": {
+    "lat": 14.806717,
+    "lon": -89.245027,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Pie De Las Flores, código 2005066)"
+  },
+  "chiquimula_el_pital": {
+    "lat": 14.781549,
+    "lon": -89.648939,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Pital, código 2001035)"
+  },
+  "chiquimula_quebrada_los_cangrejos": {
+    "lat": 14.825077,
+    "lon": -89.56973,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Quebrada Los Cangrejos, código 2001067)"
+  },
+  "chiquimula_tamiz": {
+    "lat": 14.773929,
+    "lon": -89.599142,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Tamiz, código 2001114)"
+  },
+  "concepcion_las_minas_el_aguajal": {
+    "lat": 14.483881,
+    "lon": -89.410977,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Aguajal, código 2008004)"
+  },
+  "concepcion_las_minas_el_capulin": {
+    "lat": 14.544,
+    "lon": -89.438461,
+    "fuente": "GeoNames (El Capulín, Concepción las Minas; id 3597478)"
+  },
+  "concepcion_las_minas_el_chaguite": {
+    "lat": 14.474269,
+    "lon": -89.460731,
+    "fuente": "GeoNames (El Chagüite, Concepción las Minas; id 12068835)"
+  },
+  "concepcion_las_minas_el_naranjo": {
+    "lat": 14.477262,
+    "lon": -89.424909,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Naranjo, código 2008022)"
+  },
+  "concepcion_las_minas_el_panal": {
+    "lat": 14.540189,
+    "lon": -89.504601,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Panal, código 2008024)"
+  },
+  "concepcion_las_minas_el_papayo": {
+    "lat": 14.560142,
+    "lon": -89.410232,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Papayo, código 2008025)"
+  },
+  "concepcion_las_minas_guachipilin": {
+    "lat": 14.517347,
+    "lon": -89.48778,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Guachipilin, código 2008033)"
+  },
+  "concepcion_las_minas_la_hondura": {
+    "lat": 14.5275,
+    "lon": -89.42398,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; La Hondura, código 2008036)"
+  },
+  "concepcion_las_minas_la_laguna": {
+    "lat": 14.541679,
+    "lon": -89.425364,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; La Laguna, código 2008037)"
+  },
+  "concepcion_las_minas_las_burras": {
+    "lat": 14.427151,
+    "lon": -89.425267,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Las Burras, código 2008040)"
+  },
+  "concepcion_las_minas_las_granadillas": {
+    "lat": 14.4746,
+    "lon": -89.3977,
+    "fuente": "GeoNames (Granadillas, Concepción las Minas; id 3595636)"
+  },
+  "concepcion_las_minas_las_marias": {
+    "lat": 14.482629,
+    "lon": -89.492913,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Las Marias, código 2008043)"
+  },
+  "concepcion_las_minas_las_mesas": {
+    "lat": 14.534316,
+    "lon": -89.47656,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Las Mesas, código 2008044)"
+  },
+  "concepcion_las_minas_las_presas": {
+    "lat": 14.479069,
+    "lon": -89.418631,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Las Presas, código 2008045)"
+  },
+  "concepcion_las_minas_llano_grande": {
+    "lat": 14.48689,
+    "lon": -89.507742,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Llano Grande, código 2008050)"
+  },
+  "concepcion_las_minas_llano_grande_2": {
+    "lat": 14.48689,
+    "lon": -89.507742,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Llano Grande, código 2008050)"
+  },
+  "concepcion_las_minas_los_llanitos": {
+    "lat": 14.524015,
+    "lon": -89.476952,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Los Llanitos, código 2008047)"
+  },
+  "concepcion_las_minas_los_vasos": {
+    "lat": 14.488864,
+    "lon": -89.444088,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Los Vasos, código 2008056)"
+  },
+  "concepcion_las_minas_monte_oscuro": {
+    "lat": 14.53302,
+    "lon": -89.490825,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Monte Oscuro, código 2008057)"
+  },
+  "concepcion_las_minas_tisizon": {
+    "lat": 14.494011,
+    "lon": -89.488306,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Tisizon, código 2008088)"
+  },
+  "esquipulas_el_amatal": {
+    "lat": 14.550899,
+    "lon": -89.293066,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Amatal, código 2007033)"
+  },
+  "esquipulas_el_bajio": {
+    "lat": 14.704315,
+    "lon": -89.209819,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Bajio, código 2007034)"
+  },
+  "esquipulas_el_cascajal": {
+    "lat": 14.52864,
+    "lon": -89.310653,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Cascajal, código 2007014)"
+  },
+  "esquipulas_el_chuctal": {
+    "lat": 14.577189,
+    "lon": -89.177493,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Chuctal, código 2007036)"
+  },
+  "esquipulas_el_guineal": {
+    "lat": 14.601648,
+    "lon": -89.223255,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Guineal, código 2007050)"
+  },
+  "esquipulas_el_tabloncito": {
+    "lat": 14.683577,
+    "lon": -89.163687,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Tabloncito, código 2007045)"
+  },
+  "esquipulas_espinos": {
+    "lat": 14.574828,
+    "lon": -89.29249,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Espinos, código 2007049)"
+  },
+  "esquipulas_floripundio": {
+    "lat": 14.505993,
+    "lon": -89.324818,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Floripundio, código 2007051)"
+  },
+  "esquipulas_la_casona": {
+    "lat": 14.517046,
+    "lon": -89.293014,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; La Casona, código 2007067)"
+  },
+  "esquipulas_llano_de_guerra": {
+    "lat": 14.649386,
+    "lon": -89.241795,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Llano De Guerra, código 2007081)"
+  },
+  "esquipulas_los_fierros": {
+    "lat": 14.719319,
+    "lon": -89.153128,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Los Fierros, código 2007088)"
+  },
+  "esquipulas_los_ranchos": {
+    "lat": 14.494411,
+    "lon": -89.312025,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Los Ranchos, código 2007092)"
+  },
+  "esquipulas_mesa_grande": {
+    "lat": 14.539897,
+    "lon": -89.310286,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Mesa Grande, código 2007099)"
+  },
+  "esquipulas_miramundo": {
+    "lat": 14.517108,
+    "lon": -89.320943,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Miramundo, código 2007101)"
+  },
+  "esquipulas_miramundo_2": {
+    "lat": 14.605954,
+    "lon": -89.234545,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Miramundo, código 2007102)"
+  },
+  "esquipulas_ojo_de_agua": {
+    "lat": 14.644187,
+    "lon": -89.242293,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Ojo De Agua, código 2007107)"
+  },
+  "esquipulas_palmitas": {
+    "lat": 14.651961,
+    "lon": -89.244981,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Palmitas, código 2007110)"
+  },
+  "esquipulas_queseras": {
+    "lat": 14.585651,
+    "lon": -89.253201,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Queseras, código 2007120)"
+  },
+  "esquipulas_suyate": {
+    "lat": 14.7,
+    "lon": -89.183331,
+    "fuente": "GeoNames (Suyate, Esquipulas; id 3588636)"
+  },
+  "esquipulas_tontoles": {
+    "lat": 14.60508,
+    "lon": -89.281903,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Tontoles, código 2007148)"
+  },
+  "ipala_carboneras": {
+    "lat": 14.518896,
+    "lon": -89.560682,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Carboneras, código 2011009)"
+  },
+  "ipala_el_napoleon": {
+    "lat": 14.626495,
+    "lon": -89.570009,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Napoleon, código 2011070)"
+  },
+  "ipala_el_panuelo": {
+    "lat": 14.500831,
+    "lon": -89.554411,
+    "fuente": "GeoNames (El Pañuelo, Ipala; id 3596624)"
+  },
+  "ipala_jocote_dulce": {
+    "lat": 14.632102,
+    "lon": -89.597126,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Jocote Dulce, código 2011042)"
+  },
+  "ipala_la_cumbre": {
+    "lat": 14.628576,
+    "lon": -89.572591,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; La Cumbre, código 2011047)"
+  },
+  "ipala_la_laguna": {
+    "lat": 14.632802,
+    "lon": -89.546671,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; La Laguna, código 2011051)"
+  },
+  "ipala_la_oscurana": {
+    "lat": 14.61695,
+    "lon": -89.557947,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; La Oscurana, código 2011072)"
+  },
+  "ipala_las_anonas": {
+    "lat": 14.538616,
+    "lon": -89.545844,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Las Anonas, código 2011056)"
+  },
+  "ipala_san_lorenzo": {
+    "lat": 14.536695,
+    "lon": -89.672392,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; San Lorenzo, código 2011080)"
+  },
+  "ipala_san_nicolas": {
+    "lat": 14.561757,
+    "lon": -89.560437,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; San Nicolas, código 2011081)"
+  },
+  "jocotan_el_morral": {
+    "lat": 14.834328,
+    "lon": -89.382553,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Morral, código 2004026)"
+  },
+  "olopa_el_lajillal": {
+    "lat": 14.67095,
+    "lon": -89.364339,
+    "fuente": "GeoNames (Lajillal, Olopa; id 3594485)"
+  },
+  "quezaltepeque_cuernavaca": {
+    "lat": 14.594659,
+    "lon": -89.542813,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Cuernavaca, código 2009018)"
+  },
+  "quezaltepeque_la_tigra": {
+    "lat": 14.610552,
+    "lon": -89.536451,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; La Tigra, código 2009037)"
+  },
+  "quezaltepeque_las_escobas": {
+    "lat": 14.605014,
+    "lon": -89.543743,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Las Escobas, código 2009025)"
+  },
+  "quezaltepeque_salitre": {
+    "lat": 14.652533,
+    "lon": -89.469021,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Salitre, código 2009069)"
+  },
+  "san_jose_la_arada_chiscu": {
+    "lat": 14.750773,
+    "lon": -89.628942,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Chiscu, código 2002007)"
+  },
+  "san_jose_la_arada_doncellas": {
+    "lat": 14.743831,
+    "lon": -89.633439,
+    "fuente": "GeoNames (La Doncella, San José la Arada; id 3594745)"
+  },
+  "san_jose_la_arada_el_conacaste": {
+    "lat": 14.695178,
+    "lon": -89.634307,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Conacaste, código 2002013)"
+  },
+  "san_jose_la_arada_el_obraje": {
+    "lat": 14.681466,
+    "lon": -89.587282,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Obraje, código 2002015)"
+  },
+  "san_jose_la_arada_granadillas": {
+    "lat": 14.725457,
+    "lon": -89.628512,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Granadillas, código 2002028)"
+  },
+  "san_jose_la_arada_la_chorrera": {
+    "lat": 14.747214,
+    "lon": -89.65983,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Chorrera, código 2002025)"
+  },
+  "san_jose_la_arada_pedrero": {
+    "lat": 14.744591,
+    "lon": -89.62359,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Pedrero, código 2002016)"
+  },
+  "san_jose_la_arada_quebrada_de_lopez": {
+    "lat": 14.711767,
+    "lon": -89.582593,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Quebrada De Lopez, código 2002033)"
+  },
+  "san_jose_la_arada_san_miguel": {
+    "lat": 14.680214,
+    "lon": -89.59025,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; San Miguel, código 2002035)"
+  },
+  "san_jose_la_arada_tambor": {
+    "lat": 14.72937,
+    "lon": -89.640433,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Tambor, código 2002041)"
+  },
+  "san_jose_la_arada_tontol": {
+    "lat": 14.74448,
+    "lon": -89.641699,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Tontol, código 2002045)"
+  },
+  "san_jose_la_arada_tontol_2": {
+    "lat": 14.74709,
+    "lon": -89.649813,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Tontol, código 2002046)"
+  },
+  "san_jose_la_arada_tres_ceibas": {
+    "lat": 14.692595,
+    "lon": -89.58735,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Tres Ceibas, código 2002047)"
+  },
+  "san_juan_ermita_los_achiotes": {
+    "lat": 14.702119,
+    "lon": -89.435124,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Los Achiotes, código 2003002)"
+  },
+  "san_juan_ermita_vuelta_el_roble": {
+    "lat": 14.746351,
+    "lon": -89.444059,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Vuelta El Roble, código 2003044)"
+  },
+  "chiquimula_la_diadema": {
+    "lat": 14.776979,
+    "lon": -89.530502,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; La Diadema, código 2001051)"
+  },
+  "chiquimula_la_florida": {
+    "lat": 14.776433,
+    "lon": -89.52876,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; La Florida, código 2001053)"
+  },
+  "chiquimula_ticanto_orellana": {
+    "lat": 14.815083,
+    "lon": -89.520924,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Ticanto Orellana, código 2001120)"
+  },
+  "concepcion_las_minas_san_diego": {
+    "lat": 14.542332,
+    "lon": -89.444188,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; San Diego, código 2008072)"
+  },
+  "concepcion_las_minas_santa_maria": {
+    "lat": 14.518869,
+    "lon": -89.40795,
+    "fuente": "GeoNames (Finca Santa María, Concepción las Minas; id 3589263)"
+  },
+  "ipala_san_andres": {
+    "lat": 14.579383,
+    "lon": -89.562244,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; San Andres, código 2011076)"
+  },
+  "ipala_san_juan": {
+    "lat": 14.518104,
+    "lon": -89.585098,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; San Juan, código 2011079)"
+  },
+  "quezaltepeque_palo_gordo": {
+    "lat": 14.55495,
+    "lon": -89.470619,
+    "fuente": "GeoNames (Finca Palo Gordo, Quezaltepeque; id 3591805)"
+  },
+  "san_jose_la_arada_dominada_el_cerron": {
+    "lat": 14.711093,
+    "lon": -89.598255,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Dominada El Cerron, código 2002008)"
+  },
+  "san_jose_la_arada_el_jute": {
+    "lat": 14.736394,
+    "lon": -89.622925,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Jute, código 2002048)"
+  },
+  "chiquimula_piedra_de_cal": {
+    "lat": 14.773823,
+    "lon": -89.706586,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Piedra De Cal, código 2001088)"
+  },
+  "chiquimula_condado_la_pradera": {
+    "lat": 14.828011,
+    "lon": -89.520633,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; La Pradera, código 2001056)"
+  },
+  "chiquimula_el_dorado": {
+    "lat": 14.766015,
+    "lon": -89.524937,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Dorado, código 2001016)"
+  },
+  "chiquimula_el_morral_o_los_sagastume": {
+    "lat": 14.82658,
+    "lon": -89.601156,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Los Sagastumes, código 2001098)"
+  },
+  "chiquimula_el_pericon": {
+    "lat": 14.797633,
+    "lon": -89.609732,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Pericon, código 2001031)"
+  },
+  "chiquimula_el_puente": {
+    "lat": 14.79973,
+    "lon": -89.58685,
+    "fuente": "Referencia municipal: el Censo INE 2018 no registra este lugar; se ubica cerca del centro de su municipio."
+  },
+  "chiquimula_el_rosario": {
+    "lat": 14.774316,
+    "lon": -89.527702,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Rosario, código 2001041)"
+  },
+  "chiquimula_la_ceiba": {
+    "lat": 14.781009,
+    "lon": -89.534236,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; La Ceiba, código 2001050)"
+  },
+  "chiquimula_la_esperanza": {
+    "lat": 14.770263,
+    "lon": -89.525517,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; La Esperanza, código 2001052)"
+  },
+  "chiquimula_las_perlas": {
+    "lat": 14.77654,
+    "lon": -89.556899,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Las Perlas, código 2001063)"
+  },
+  "chiquimula_limon_2": {
+    "lat": 14.817255,
+    "lon": -89.658654,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Limon 2, código 2001135)"
+  },
+  "chiquimula_quebrachito": {
+    "lat": 14.740577,
+    "lon": -89.494039,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Quebrachito, código 2001093)"
+  },
+  "chiquimula_toronjo": {
+    "lat": 14.760442,
+    "lon": -89.553634,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Toronjo, código 2001140)"
+  },
+  "chiquimula_zarzal": {
+    "lat": 14.781267,
+    "lon": -89.705506,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Zarzal, código 2001131)"
+  },
+  "san_jose_la_arada_barro": {
+    "lat": 14.739293,
+    "lon": -89.640957,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Barro, código 2002009)"
+  },
+  "san_jose_la_arada_candelaria": {
+    "lat": 14.719286,
+    "lon": -89.609686,
+    "fuente": "Referencia municipal: el Censo INE 2018 no registra este lugar; se ubica cerca del centro de su municipio."
+  },
+  "san_jose_la_arada_chucte": {
+    "lat": 14.695114,
+    "lon": -89.551065,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Chucte, código 2002012)"
+  },
+  "san_jose_la_arada_el_plan_de_las_vigas": {
+    "lat": 14.69695,
+    "lon": -89.626002,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Plan De Las Vigas, código 2002017)"
+  },
+  "san_jose_la_arada_el_salto": {
+    "lat": 14.690152,
+    "lon": -89.653349,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Salto, código 2002021)"
+  },
+  "san_jose_la_arada_joyitas": {
+    "lat": 14.751702,
+    "lon": -89.634953,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Joyitas, código 2002024)"
+  },
+  "san_jose_la_arada_miramundo": {
+    "lat": 14.743326,
+    "lon": -89.565726,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Miramundo, código 2002031)"
+  },
+  "san_jose_la_arada_san_victor": {
+    "lat": 14.737308,
+    "lon": -89.570854,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; San Victor, código 2002036)"
+  },
+  "san_jose_la_arada_weshque": {
+    "lat": 14.719729,
+    "lon": -89.586522,
+    "fuente": "Referencia municipal: el Censo INE 2018 no registra este lugar; se ubica cerca del centro de su municipio."
+  },
+  "san_juan_ermita_las_pavas": {
+    "lat": 14.711846,
+    "lon": -89.412906,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Las Pavas, código 2003020)"
+  },
+  "camotan_el_maranonal": {
+    "lat": 14.842355,
+    "lon": -89.286193,
+    "fuente": "Referencia municipal: el Censo INE 2018 no registra este lugar; se ubica cerca del centro de su municipio."
+  },
+  "camotan_la_ceiba": {
+    "lat": 14.92205,
+    "lon": -89.234832,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Tisamarte, La Ceiba, código 2005156)"
+  },
+  "camotan_la_escondida": {
+    "lat": 14.847855,
+    "lon": -89.351921,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; La Escondida, código 2005037)"
+  },
+  "camotan_plan_de_la_escuela": {
+    "lat": 14.873842,
+    "lon": -89.286597,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Shupa, Plan De La Escuela, código 2005146)"
+  },
+  "camotan_plan_de_murul": {
+    "lat": 14.871667,
+    "lon": -89.295524,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Shupa, Plan De Murul, código 2005147)"
+  },
+  "camotan_plan_del_bordo": {
+    "lat": 14.824929,
+    "lon": -89.262345,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Cajon Del Rio, Plan Del Bordo, código 2005148)"
+  },
+  "camotan_san_lorenzo": {
+    "lat": 14.811096,
+    "lon": -89.269677,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; San Lorenzo, código 2005151)"
+  },
+  "olopa_chaguiton": {
+    "lat": 14.670926,
+    "lon": -89.301078,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Chaguiton, código 2006005)"
+  },
+  "olopa_jesus_y_maria": {
+    "lat": 14.689381,
+    "lon": -89.332461,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Jesus Y Maria, código 2006018)"
+  },
+  "esquipulas_chaguite": {
+    "lat": 14.649228,
+    "lon": -89.335202,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Chaguite, código 2007017)"
+  },
+  "esquipulas_chaguiton": {
+    "lat": 14.498074,
+    "lon": -89.306078,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Chaguiton, código 2007018)"
+  },
+  "esquipulas_de_don_cesar_guillen": {
+    "lat": 14.593383,
+    "lon": -89.250185,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; De Don Cesar Guillen, código 2007029)"
+  },
+  "esquipulas_de_don_marcos_lemus": {
+    "lat": 14.609926,
+    "lon": -89.271544,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; De Don Marcos Lemus, código 2007031)"
+  },
+  "esquipulas_el_bosque": {
+    "lat": 14.579886,
+    "lon": -89.338552,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Esquipulas, Condominio El Bosque, código 2007180)"
+  },
+  "esquipulas_el_jobo": {
+    "lat": 14.718167,
+    "lon": -89.200433,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Jobo, código 2007040)"
+  },
+  "esquipulas_el_sauce": {
+    "lat": 14.643654,
+    "lon": -89.259003,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Sauce, código 2007042)"
+  },
+  "esquipulas_la_encantada": {
+    "lat": 14.720589,
+    "lon": -89.188895,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; La Encantada, código 2007069)"
+  },
+  "esquipulas_las_nubes": {
+    "lat": 14.609421,
+    "lon": -89.258035,
+    "fuente": "Referencia municipal: el Censo INE 2018 no registra este lugar; se ubica cerca del centro de su municipio."
+  },
+  "esquipulas_loma_linda": {
+    "lat": 14.557573,
+    "lon": -89.355071,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Esquipulas, Colonia Loma Linda, código 2007167)"
+  },
+  "esquipulas_los_calzontes": {
+    "lat": 14.68353,
+    "lon": -89.271151,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Los Calzontes, código 2007087)"
+  },
+  "esquipulas_los_manantiales": {
+    "lat": 14.555071,
+    "lon": -89.33653,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Los Manantiales, código 2007089)"
+  },
+  "esquipulas_los_olivos": {
+    "lat": 14.559597,
+    "lon": -89.33302,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Los Olivos, código 2007090)"
+  },
+  "esquipulas_los_repastos": {
+    "lat": 14.634134,
+    "lon": -89.230581,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Los Repastos, código 2007093)"
+  },
+  "esquipulas_mango_solo": {
+    "lat": 14.686543,
+    "lon": -89.166374,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Mango Solo, código 2007098)"
+  },
+  "esquipulas_san_antonio_sulay": {
+    "lat": 14.706627,
+    "lon": -89.203404,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; San Antonio Sulay, código 2007125)"
+  },
+  "esquipulas_tablon_de_gamez": {
+    "lat": 14.678989,
+    "lon": -89.236521,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Tablon De Gamez, código 2007141)"
+  },
+  "esquipulas_tiosinte": {
+    "lat": 14.600383,
+    "lon": -89.264721,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Tiosinte, código 2007146)"
+  },
+  "concepcion_las_minas_camulian": {
+    "lat": 14.4738,
+    "lon": -89.498951,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Camulian, código 2008009)"
+  },
+  "concepcion_las_minas_cuesta_del_pito": {
+    "lat": 14.470488,
+    "lon": -89.44541,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Cuesta Del Pito, código 2008014)"
+  },
+  "concepcion_las_minas_el_hospital": {
+    "lat": 14.528415,
+    "lon": -89.523853,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Hospital, código 2008019)"
+  },
+  "concepcion_las_minas_el_purgatorio": {
+    "lat": 14.530391,
+    "lon": -89.402922,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Purgatorio, código 2008027)"
+  },
+  "concepcion_las_minas_llano_las_pitas": {
+    "lat": 14.540658,
+    "lon": -89.468821,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Llano Las Pitas, código 2008048)"
+  },
+  "concepcion_las_minas_llano_las_tareas": {
+    "lat": 14.520999,
+    "lon": -89.543451,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Llano Las Tareas, código 2008021)"
+  },
+  "concepcion_las_minas_monte_grande": {
+    "lat": 14.524864,
+    "lon": -89.483947,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Monte Grande, código 2008059)"
+  },
+  "concepcion_las_minas_montenegro": {
+    "lat": 14.46933,
+    "lon": -89.40227,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Montenegro, código 2008058)"
+  },
+  "concepcion_las_minas_quebrada_de_hueso": {
+    "lat": 14.547032,
+    "lon": -89.398763,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Quebrada De Hueso, código 2008065)"
+  },
+  "quezaltepeque_agua_fria": {
+    "lat": 14.623478,
+    "lon": -89.381087,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Agua Fria, código 2009005)"
+  },
+  "quezaltepeque_ciracil_cubiletes": {
+    "lat": 14.570787,
+    "lon": -89.496658,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Ciracilcubiletes, código 2009013)"
+  },
+  "quezaltepeque_de_la_mora": {
+    "lat": 14.615383,
+    "lon": -89.45695,
+    "fuente": "Referencia municipal: el Censo INE 2018 no registra este lugar; se ubica cerca del centro de su municipio."
+  },
+  "quezaltepeque_la_laguna": {
+    "lat": 14.627166,
+    "lon": -89.536315,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; La Laguna, código 2009100)"
+  },
+  "quezaltepeque_san_marcos": {
+    "lat": 14.527893,
+    "lon": -89.531583,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; San Marcos, código 2009075)"
+  },
+  "quezaltepeque_terrerito": {
+    "lat": 14.555963,
+    "lon": -89.520639,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Terrerito, código 2009079)"
+  },
+  "ipala_buenos_aires": {
+    "lat": 14.54338,
+    "lon": -89.604709,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Buenos Aires, código 2011006)"
+  },
+  "ipala_colmenar": {
+    "lat": 14.606575,
+    "lon": -89.625487,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Colmenar, código 2011014)"
+  },
+  "ipala_el_aguacate": {
+    "lat": 14.560113,
+    "lon": -89.554763,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Aguacate, código 2011017)"
+  },
+  "ipala_el_apante": {
+    "lat": 14.570208,
+    "lon": -89.562118,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Apante, código 2011019)"
+  },
+  "ipala_el_manantial": {
+    "lat": 14.5754,
+    "lon": -89.61087,
+    "fuente": "Referencia municipal: el Censo INE 2018 no registra este lugar; se ubica cerca del centro de su municipio."
+  },
+  "ipala_el_mango": {
+    "lat": 14.538952,
+    "lon": -89.607528,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Mango, código 2011028)"
+  },
+  "ipala_el_oregano": {
+    "lat": 14.565079,
+    "lon": -89.581746,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Oregano, código 2011029)"
+  },
+  "ipala_el_palo_herrado": {
+    "lat": 14.583015,
+    "lon": -89.614837,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Palo Herrado, código 2011030)"
+  },
+  "ipala_el_recuerdo": {
+    "lat": 14.583911,
+    "lon": -89.580751,
+    "fuente": "Referencia municipal: el Censo INE 2018 no registra este lugar; se ubica cerca del centro de su municipio."
+  },
+  "ipala_la_giralda": {
+    "lat": 14.640912,
+    "lon": -89.596751,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; La Giralda, código 2011049)"
+  },
+  "ipala_las_flores": {
+    "lat": 14.55539,
+    "lon": -89.583775,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Las Flores, código 2011060)"
+  },
+  "ipala_las_vegas": {
+    "lat": 14.597568,
+    "lon": -89.591438,
+    "fuente": "Referencia municipal: el Censo INE 2018 no registra este lugar; se ubica cerca del centro de su municipio."
+  },
+  "ipala_llano_de_las_tareas": {
+    "lat": 14.521996,
+    "lon": -89.548417,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Llano De Las Tareas, código 2011063)"
+  },
+  "ipala_monte_grande": {
+    "lat": 14.642846,
+    "lon": -89.556975,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Monte Grande, código 2011069)"
+  },
+  "ipala_puerta_de_golpe": {
+    "lat": 14.596747,
+    "lon": -89.611023,
+    "fuente": "Referencia municipal: el Censo INE 2018 no registra este lugar; se ubica cerca del centro de su municipio."
+  },
+  "ipala_puerta_del_cielo": {
+    "lat": 14.553935,
+    "lon": -89.600744,
+    "fuente": "Referencia municipal: el Censo INE 2018 no registra este lugar; se ubica cerca del centro de su municipio."
+  },
+  "ipala_villafer": {
+    "lat": 14.593678,
+    "lon": -89.578742,
+    "fuente": "Referencia municipal: el Censo INE 2018 no registra este lugar; se ubica cerca del centro de su municipio."
+  },
+  "adicional:chiquimula:laguneta": {
+    "lat": 14.831931,
+    "lon": -89.4884,
+    "fuente": "GeoNames (Laguneta, Municipio de Chiquimula). Lugar reportado fuera del catalogo."
+  }
 }

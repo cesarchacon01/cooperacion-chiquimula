@@ -196,14 +196,8 @@ def programa_desde(rep, actor, extra=None):
         vistos.add(code); sintetico=dict(comunes); sintetico['lugar_poblado']=code
         bloques.append((sintetico,code))
         RECUPERADOS.append({'organizacion':actor['organizacion'],'programa':str(find_value(rep,'nombre_programa','') or ''),'codigo_lugar':code,'campo':campo})
-    # Un mismo lugar no se repite dentro del programa (salvo los "otros", que se distinguen por nombre).
-    unicos=[]; repetidos=set()
-    for c,code in bloques:
-        if code!='otro_lugar_no_lista':
-            if code in repetidos: continue
-            repetidos.add(code)
-        unicos.append((c,code))
-    bloques=unicos
+    # Se conservan todos los registros tal como llegan de Kobo, incluso si un programa
+    # repite un lugar: el visor informa cuántos registros y cuántos lugares distintos hay.
     for c,code in bloques:
         es_adicional=(code=='otro_lugar_no_lista')
         if es_adicional:
@@ -215,7 +209,9 @@ def programa_desde(rep, actor, extra=None):
             slug=re.sub(r'[^a-z0-9]+','_',lugar.lower()).strip('_')
             codigo_registro=f"adicional:{muni_codigo}:{slug or 'sin_nombre'}"
             meta={}
-            lat,lon=None,None
+            # Un lugar fuera de catálogo puede tener coordenada si se agregó a
+            # coordenadas_lugares.json con su código "adicional:municipio:nombre".
+            lat,lon=coord_for(codigo_registro)
         else:
             meta=LUGARES.get(code,{})
             muni=label('municipios',meta.get('municipio_codigo',''))
@@ -273,7 +269,67 @@ def construir(registros):
             # los lugares podrían estar fuera del bloque del programa.
             p=programa_desde(rep,actor,r if len(reps)==1 else None)
             if p['nombre_programa'] or p['organizacion']: programas.append(p)
-    return agregar(programas,len(registros))
+    return agregar(corregir_programas(programas),len(registros))
+
+# Correcciones automáticas de calidad: se aplican en cada sincronización y se
+# listan en el registro de la tarea. No modifican nada en Kobo.
+CORRECCIONES=[]
+CONECTORES={'de','del','la','las','los','y','e','para','en','el','a','con','por'}
+
+def nombre_propio(texto):
+    """Unifica la escritura de un nombre: 'ORGANIZATION AMERICAN STATES' -> 'Organization American States'."""
+    s=' '.join(str(texto or '').split())
+    letras=[ch for ch in s if ch.isalpha()]
+    todo_may=bool(letras) and all(ch.isupper() for ch in letras)
+    salida=[]
+    for i,w in enumerate(s.split(' ')):
+        bajo=w.lower()
+        if todo_may:
+            if i>0 and bajo in CONECTORES: salida.append(bajo)
+            elif len(w)<=3 and w.isalpha(): salida.append(w)            # siglas: ONG, FAO, CRS
+            else: salida.append(bajo[:1].upper()+bajo[1:])
+        else:
+            salida.append(w[:1].upper()+w[1:] if (w.isalpha() and w.islower() and bajo not in CONECTORES) else w)
+    return ' '.join(salida)
+
+def corregir_programas(programas):
+    hoy=datetime.now(timezone.utc).date().isoformat()
+    for p in programas:
+        t=f"{p['organizacion']} · {p['nombre_programa']}"
+        # 1) Nombre de la organización con escritura uniforme.
+        limpio=nombre_propio(p['organizacion'])
+        if limpio!=p['organizacion']:
+            CORRECCIONES.append(f"Nombre unificado: '{p['organizacion']}' -> '{limpio}'"); p['organizacion']=limpio
+        # 2) Cantidades negativas: no son válidas; se dejan como no reportadas.
+        for c in p['comunidades']:
+            for bolsa in ('pm_cantidades','ac_cantidades'):
+                for g,v in list((c.get(bolsa) or {}).items()):
+                    if isinstance(v,(int,float)) and v<0:
+                        c[bolsa][g]=None; CORRECCIONES.append(f"Cantidad negativa descartada: {t} · {c['lugar_poblado']} · {g}: {v}")
+            nums=[v for v in (c.get('pm_cantidades') or {}).values() if isinstance(v,(int,float))]
+            c['poblacion_total_estimada']=max(nums) if nums else None
+        # 3) Trabajo comunitario sin respuesta, pero con comunidades registradas.
+        if not p.get('trabajo_comunitario') and p['comunidades']:
+            p['trabajo_comunitario']='Sí'; CORRECCIONES.append(f"Trabajo comunitario deducido como 'Sí' (tiene comunidades): {t}")
+        # 4) Estado activo con fecha de finalización ya vencida.
+        fin=str(p.get('fecha_fin') or '')[:10]
+        if fin and fin<hoy and p.get('estado_programa') in ('En ejecución','Próximo a finalizar'):
+            CORRECCIONES.append(f"Estado actualizado a 'Finalizado' (terminó el {fin}): {t}"); p['estado_programa']='Finalizado'
+    # 5) Envíos duplicados: misma organización y mismo programa, donde uno no trae ubicación.
+    grupos={}
+    for p in programas: grupos.setdefault((p['organizacion'].strip().lower(),p['nombre_programa'].strip().lower()),[]).append(p)
+    descartar=[]
+    for lista in grupos.values():
+        if len(lista)<2: continue
+        base=max(lista,key=lambda x:(len(x['comunidades']),len(x['municipios_cobertura_institucional'])))
+        for otro in lista:
+            if otro is base or otro['comunidades'] or otro['municipios_cobertura_institucional']: continue
+            for k,v in otro.items():
+                vacio=base.get(k) in ('',None,[],{}) or (k in ('monto_rango','monto_rango_codigo') and str(base.get('monto_rango_codigo','')).startswith('prefiere'))
+                if vacio and v not in ('',None,[],{}) and k not in ('trabajo_comunitario',): base[k]=v
+            descartar.append(otro)
+            CORRECCIONES.append(f"Envío duplicado unificado: {base['organizacion']} · {base['nombre_programa']}")
+    return [p for p in programas if not any(p is d for d in descartar)]
 
 def agregar(programas, n_registros):
     """Calcula los resúmenes de data.json a partir de la lista de programas."""
@@ -340,7 +396,7 @@ def agregar(programas, n_registros):
         a['organizaciones']=sorted(a['organizaciones']); a['programas']=sorted(a['programas']); adicionales_lista.append(a)
     adicionales_lista.sort(key=lambda x:(x['municipio'],x['lugar_poblado']))
 
-    return {'generado':datetime.now(timezone.utc).isoformat(),'nota':'Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.','programas':programas,'municipios':MUNICIPIOS,'resumen_municipio':resumen,'matriz_sector_municipio':matriz,'comunidades_sin_cobertura':sin,'lugares_adicionales_reportados':adicionales_lista,'duplicidad':duplicidad,'instituciones_resumen':inst_res,'matriz_poblacion_accion':pop_acc,'inversion':inv,'control':{'registros_kobo':n_registros,'programas_procesados':len(programas),'lugares_catalogo':len(LUGARES),'lugares_con_coordenadas':len([c for c in COORDS.values() if not c.get('aproximada')]),'lugares_adicionales_reportados':len(adicionales_lista),'lugares_recuperados_de_otros_campos':len(RECUPERADOS),'programas_comunitarios_sin_lugares':len(SIN_LUGARES)}}
+    return {'generado':datetime.now(timezone.utc).isoformat(),'nota':'Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.','programas':programas,'municipios':MUNICIPIOS,'resumen_municipio':resumen,'matriz_sector_municipio':matriz,'comunidades_sin_cobertura':sin,'lugares_adicionales_reportados':adicionales_lista,'duplicidad':duplicidad,'instituciones_resumen':inst_res,'matriz_poblacion_accion':pop_acc,'inversion':inv,'control':{'registros_kobo':n_registros,'programas_procesados':len(programas),'lugares_catalogo':len(LUGARES),'lugares_con_coordenadas':len([k for k,c in COORDS.items() if k in LUGARES and not c.get('aproximada')]),'lugares_adicionales_reportados':len(adicionales_lista),'lugares_recuperados_de_otros_campos':len(RECUPERADOS),'programas_comunitarios_sin_lugares':len(SIN_LUGARES)}}
 
 def main():
     try:
@@ -348,6 +404,9 @@ def main():
         data=construir(regs)
         (BASE/'data.json').write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')
         print(f"Programas/proyectos procesados: {len(data['programas'])}")
+        if CORRECCIONES:
+            print(f'Correcciones automáticas aplicadas: {len(CORRECCIONES)}')
+            for x in CORRECCIONES: print('  -',x)
         # Diagnóstico de lugares (solo nombres de campos, sin datos personales).
         if RECUPERADOS:
             print(f'AVISO: {len(RECUPERADOS)} lugar(es) se recuperaron de campos no estándar:')
