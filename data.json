@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-17T15:34:08.253281+00:00",
+  "generado": "2026-11-17T15:45:06.158769+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -3592,8 +3592,8 @@
           "municipio": "San Juan Ermita",
           "clasificacion": "Caserío",
           "viviendas_catalogo": 95,
-          "lat": 14.724867,
-          "lon": -89.38212,
+          "lat": 14.722243,
+          "lon": -89.381302,
           "fuera_catalogo": false,
           "estado_validacion": "Catálogo territorial",
           "referencia_lugar": "",
@@ -5556,8 +5556,8 @@
           "municipio": "San Juan Ermita",
           "clasificacion": "Aldea",
           "viviendas_catalogo": 193,
-          "lat": 14.784261,
-          "lon": -89.45182,
+          "lat": 14.781364,
+          "lon": -89.451839,
           "fuera_catalogo": false,
           "estado_validacion": "Catálogo territorial",
           "referencia_lugar": "",
@@ -7325,8 +7325,8 @@
           "municipio": "San Juan Ermita",
           "clasificacion": "Caserío",
           "viviendas_catalogo": 63,
-          "lat": 14.770472,
-          "lon": -89.41069,
+          "lat": 14.773475,
+          "lon": -89.414863,
           "fuera_catalogo": false,
           "estado_validacion": "Catálogo territorial",
           "referencia_lugar": "",
@@ -7550,8 +7550,8 @@
           "municipio": "San Juan Ermita",
           "clasificacion": "Caserío",
           "viviendas_catalogo": 95,
-          "lat": 14.724867,
-          "lon": -89.38212,
+          "lat": 14.722243,
+          "lon": -89.381302,
           "fuera_catalogo": false,
           "estado_validacion": "Catálogo territorial",
           "referencia_lugar": "",
@@ -7640,8 +7640,8 @@
           "municipio": "San Juan Ermita",
           "clasificacion": "Aldea",
           "viviendas_catalogo": 193,
-          "lat": 14.784261,
-          "lon": -89.45182,
+          "lat": 14.781364,
+          "lon": -89.451839,
           "fuera_catalogo": false,
           "estado_validacion": "Catálogo territorial",
           "referencia_lugar": "",
@@ -8712,24 +8712,24 @@
   },
   "matriz_sector_municipio": {
     "Desarrollo económico local": {
-      "Olopa": 4,
-      "Chiquimula": 2,
       "Jocotán": 6,
+      "Chiquimula": 2,
+      "Olopa": 4,
       "Camotán": 4,
       "Esquipulas": 1,
       "Concepción las Minas": 2,
-      "Ipala": 1,
       "San Jacinto": 2,
+      "Ipala": 1,
       "San Juan Ermita": 2
     },
     "Seguridad alimentaria y nutricional": {
       "Camotán": 4,
       "Jocotán": 5,
       "Chiquimula": 2,
-      "Olopa": 5,
-      "Ipala": 2,
       "San Jacinto": 3,
+      "Ipala": 2,
       "Concepción las Minas": 2,
+      "Olopa": 5,
       "San Juan Ermita": 7,
       "Quezaltepeque": 1,
       "San José la Arada": 1
@@ -8737,12 +8737,12 @@
     "Gobernanza y fortalecimiento institucional": {
       "Camotán": 3,
       "Jocotán": 4,
-      "Olopa": 4,
       "Esquipulas": 1,
       "Concepción las Minas": 2,
-      "Quezaltepeque": 1,
+      "Olopa": 4,
       "Ipala": 1,
       "San Juan Ermita": 3,
+      "Quezaltepeque": 1,
       "Chiquimula": 1,
       "San José la Arada": 1,
       "San Jacinto": 1
@@ -8751,23 +8751,23 @@
       "Camotán": 5,
       "Jocotán": 6,
       "Chiquimula": 2,
-      "Olopa": 3,
       "Esquipulas": 1,
       "Concepción las Minas": 2,
+      "Olopa": 3,
       "San Juan Ermita": 4,
-      "Quezaltepeque": 1,
       "Ipala": 1,
+      "Quezaltepeque": 1,
       "San José la Arada": 1
     },
     "Género": {
       "Camotán": 4,
       "Jocotán": 5,
-      "Olopa": 2,
       "Esquipulas": 1,
       "Concepción las Minas": 2,
+      "Olopa": 2,
       "San Juan Ermita": 3,
-      "Quezaltepeque": 1,
-      "Ipala": 1
+      "Ipala": 1,
+      "Quezaltepeque": 1
     },
     "Salud": {
       "Chiquimula": 1,
@@ -8777,22 +8777,22 @@
     },
     "Agua y saneamiento": {
       "Chiquimula": 1,
-      "Olopa": 3,
       "Esquipulas": 1,
       "Concepción las Minas": 1,
+      "Olopa": 3,
       "San Juan Ermita": 3,
       "Camotán": 1,
       "Jocotán": 2
     },
     "Infraestructura": {
       "Chiquimula": 1,
-      "Camotán": 2,
-      "Quezaltepeque": 1,
-      "Ipala": 1,
       "Concepción las Minas": 1,
-      "Olopa": 2,
+      "Camotán": 2,
+      "Ipala": 1,
       "San Juan Ermita": 2,
       "Jocotán": 2,
+      "Quezaltepeque": 1,
+      "Olopa": 2,
       "San Jacinto": 1
     },
     "Educación": {
@@ -9173,8 +9173,8 @@
       "codigo_lugar": "chiquimula_la_puente",
       "lugar_poblado": "La Puente",
       "municipio": "Chiquimula",
-      "lat": 14.793521,
-      "lon": -89.46036
+      "lat": 14.802571,
+      "lon": -89.455762
     },
     {
       "codigo_lugar": "chiquimula_puerta_de_la_montana",
@@ -9390,8 +9390,8 @@
       "codigo_lugar": "chiquimula_rincon_de_santa_barbara",
       "lugar_poblado": "Rincon De Santa Barbara",
       "municipio": "Chiquimula",
-      "lat": 14.849267,
-      "lon": -89.46606
+      "lat": 14.849645,
+      "lon": -89.466766
     },
     {
       "codigo_lugar": "chiquimula_roble_amarillo",
@@ -9432,8 +9432,8 @@
       "codigo_lugar": "chiquimula_san_jorge",
       "lugar_poblado": "San Jorge",
       "municipio": "Chiquimula",
-      "lat": 14.738026,
-      "lon": -89.47866
+      "lat": 14.738923,
+      "lon": -89.478526
     },
     {
       "codigo_lugar": "chiquimula_san_miguel",
@@ -9509,8 +9509,8 @@
       "codigo_lugar": "chiquimula_tapazan",
       "lugar_poblado": "Tapazan",
       "municipio": "Chiquimula",
-      "lat": 14.865126,
-      "lon": -89.47399
+      "lat": 14.85922,
+      "lon": -89.475355
     },
     {
       "codigo_lugar": "chiquimula_terrero_barroso",
@@ -9614,8 +9614,8 @@
       "codigo_lugar": "chiquimula_zarzal",
       "lugar_poblado": "Zarzal",
       "municipio": "Chiquimula",
-      "lat": 14.781267,
-      "lon": -89.705506
+      "lat": 14.781411,
+      "lon": -89.703414
     },
     {
       "codigo_lugar": "chiquimula_limon_2",
@@ -9719,8 +9719,8 @@
       "codigo_lugar": "san_jose_la_arada_chucte",
       "lugar_poblado": "Chucte",
       "municipio": "San José la Arada",
-      "lat": 14.695114,
-      "lon": -89.551065
+      "lat": 14.694919,
+      "lon": -89.55307
     },
     {
       "codigo_lugar": "san_jose_la_arada_el_conacaste",
@@ -9775,8 +9775,8 @@
       "codigo_lugar": "san_jose_la_arada_el_salto",
       "lugar_poblado": "El Salto",
       "municipio": "San José la Arada",
-      "lat": 14.690152,
-      "lon": -89.653349
+      "lat": 14.689827,
+      "lon": -89.652593
     },
     {
       "codigo_lugar": "san_jose_la_arada_guacamayas_abajo",
@@ -9831,8 +9831,8 @@
       "codigo_lugar": "san_jose_la_arada_miramundo",
       "lugar_poblado": "Miramundo",
       "municipio": "San José la Arada",
-      "lat": 14.743326,
-      "lon": -89.565726
+      "lat": 14.742458,
+      "lon": -89.566177
     },
     {
       "codigo_lugar": "san_jose_la_arada_plan_redondo",
@@ -10097,8 +10097,8 @@
       "codigo_lugar": "jocotan_agua_fria",
       "lugar_poblado": "Agua Fria",
       "municipio": "Jocotán",
-      "lat": 14.910379,
-      "lon": -89.36469
+      "lat": 14.899726,
+      "lon": -89.359382
     },
     {
       "codigo_lugar": "jocotan_agua_zarca",
@@ -10216,8 +10216,8 @@
       "codigo_lugar": "jocotan_el_filo",
       "lugar_poblado": "El Filo",
       "municipio": "Jocotán",
-      "lat": 14.905908,
-      "lon": -89.36014
+      "lat": 14.900374,
+      "lon": -89.357844
     },
     {
       "codigo_lugar": "jocotan_el_limar",
@@ -10391,8 +10391,8 @@
       "codigo_lugar": "jocotan_los_perez",
       "lugar_poblado": "Los Perez",
       "municipio": "Jocotán",
-      "lat": 14.898728,
-      "lon": -89.36397
+      "lat": 14.898429,
+      "lon": -89.363166
     },
     {
       "codigo_lugar": "jocotan_los_vados",
@@ -10727,8 +10727,8 @@
       "codigo_lugar": "camotan_el_plan",
       "lugar_poblado": "El Plan",
       "municipio": "Camotán",
-      "lat": 14.787343,
-      "lon": -89.26257
+      "lat": 14.787444,
+      "lon": -89.261905
     },
     {
       "codigo_lugar": "camotan_el_roblar",
@@ -11119,8 +11119,8 @@
       "codigo_lugar": "camotan_tempizque",
       "lugar_poblado": "Tempizque",
       "municipio": "Camotán",
-      "lat": 14.81531,
-      "lon": -89.37399
+      "lat": 14.815797,
+      "lon": -89.373074
     },
     {
       "codigo_lugar": "camotan_calichal",
@@ -11154,8 +11154,8 @@
       "codigo_lugar": "camotan_shalom",
       "lugar_poblado": "Shalom",
       "municipio": "Camotán",
-      "lat": 14.817468,
-      "lon": -89.37365
+      "lat": 14.816801,
+      "lon": -89.37336
     },
     {
       "codigo_lugar": "camotan_crucitas",
@@ -11413,8 +11413,8 @@
       "codigo_lugar": "camotan_pinalito_2",
       "lugar_poblado": "Pinalito",
       "municipio": "Camotán",
-      "lat": 14.935561,
-      "lon": -89.185023
+      "lat": 14.934781,
+      "lon": -89.188307
     },
     {
       "codigo_lugar": "camotan_plan_centro",
@@ -11644,8 +11644,8 @@
       "codigo_lugar": "olopa_el_tercero",
       "lugar_poblado": "El Tercero",
       "municipio": "Olopa",
-      "lat": 14.703366,
-      "lon": -89.38441
+      "lat": 14.699436,
+      "lon": -89.377333
     },
     {
       "codigo_lugar": "olopa_la_casona",
@@ -11658,8 +11658,8 @@
       "codigo_lugar": "olopa_la_consolacion",
       "lugar_poblado": "La Consolacion",
       "municipio": "Olopa",
-      "lat": 14.726939,
-      "lon": -89.23904
+      "lat": 14.732627,
+      "lon": -89.243383
     },
     {
       "codigo_lugar": "olopa_la_cumbrita",
@@ -11707,8 +11707,8 @@
       "codigo_lugar": "olopa_los_cafetales",
       "lugar_poblado": "Los Cafetales",
       "municipio": "Olopa",
-      "lat": 14.717676,
-      "lon": -89.37046
+      "lat": 14.717687,
+      "lon": -89.367243
     },
     {
       "codigo_lugar": "olopa_los_garcia",
@@ -11728,8 +11728,8 @@
       "codigo_lugar": "olopa_los_lirios",
       "lugar_poblado": "Los Lirios",
       "municipio": "Olopa",
-      "lat": 14.682987,
-      "lon": -89.28461
+      "lat": 14.683788,
+      "lon": -89.285958
     },
     {
       "codigo_lugar": "olopa_los_pinos",
@@ -11749,8 +11749,8 @@
       "codigo_lugar": "olopa_los_vasquez",
       "lugar_poblado": "Los Vasquez",
       "municipio": "Olopa",
-      "lat": 14.686296,
-      "lon": -89.2795
+      "lat": 14.689125,
+      "lon": -89.284026
     },
     {
       "codigo_lugar": "olopa_pie_de_la_cumbre",
@@ -13093,8 +13093,8 @@
       "codigo_lugar": "concepcion_las_minas_el_hospital",
       "lugar_poblado": "El Hospital",
       "municipio": "Concepción las Minas",
-      "lat": 14.528415,
-      "lon": -89.523853
+      "lat": 14.527194,
+      "lon": -89.523239
     },
     {
       "codigo_lugar": "concepcion_las_minas_el_jicaro",
@@ -13730,8 +13730,8 @@
       "codigo_lugar": "quezaltepeque_los_espana",
       "lugar_poblado": "Los España",
       "municipio": "Quezaltepeque",
-      "lat": 14.64456,
-      "lon": -89.50634
+      "lat": 14.642734,
+      "lon": -89.506592
     },
     {
       "codigo_lugar": "quezaltepeque_los_perez",
@@ -14185,8 +14185,8 @@
       "codigo_lugar": "san_jacinto_valle_de_la_escuela",
       "lugar_poblado": "Valle De La Escuela",
       "municipio": "San Jacinto",
-      "lat": 14.735186,
-      "lon": -89.47043
+      "lat": 14.731838,
+      "lon": -89.471566
     },
     {
       "codigo_lugar": "san_jacinto_los_linares",
@@ -14262,8 +14262,8 @@
       "codigo_lugar": "san_jacinto_sandoval",
       "lugar_poblado": "Sandoval",
       "municipio": "San Jacinto",
-      "lat": 14.731097,
-      "lon": -89.480887
+      "lat": 14.730934,
+      "lon": -89.480122
     },
     {
       "codigo_lugar": "san_jacinto_santa_cruz",
@@ -14276,15 +14276,15 @@
       "codigo_lugar": "san_jacinto_valle_de_la_escuela_2",
       "lugar_poblado": "Valle De La Escuela",
       "municipio": "San Jacinto",
-      "lat": 14.735186,
-      "lon": -89.47043
+      "lat": 14.731838,
+      "lon": -89.471566
     },
     {
       "codigo_lugar": "san_jacinto_valle_de_los_martinez",
       "lugar_poblado": "Valle De Los Martinez",
       "municipio": "San Jacinto",
-      "lat": 14.7293,
-      "lon": -89.465297
+      "lat": 14.727605,
+      "lon": -89.467032
     },
     {
       "codigo_lugar": "san_jacinto_valle_nuevo",
@@ -14458,8 +14458,8 @@
       "codigo_lugar": "ipala_chaguiton",
       "lugar_poblado": "Chaguiton",
       "municipio": "Ipala",
-      "lat": 14.550425,
-      "lon": -89.65381
+      "lat": 14.551334,
+      "lon": -89.653635
     },
     {
       "codigo_lugar": "ipala_ciracil",
@@ -14479,8 +14479,8 @@
       "codigo_lugar": "ipala_cruz_de_villeda",
       "lugar_poblado": "Cruz De Villeda",
       "municipio": "Ipala",
-      "lat": 14.620772,
-      "lon": -89.66801
+      "lat": 14.619653,
+      "lon": -89.667463
     },
     {
       "codigo_lugar": "ipala_dolores",
@@ -14493,8 +14493,8 @@
       "codigo_lugar": "ipala_el_aguacate",
       "lugar_poblado": "El Aguacate",
       "municipio": "Ipala",
-      "lat": 14.560113,
-      "lon": -89.554763
+      "lat": 14.55941,
+      "lon": -89.554414
     },
     {
       "codigo_lugar": "ipala_el_amatillo",
@@ -14787,8 +14787,8 @@
       "codigo_lugar": "ipala_llano_de_las_tareas",
       "lugar_poblado": "Llano De Las Tareas",
       "municipio": "Ipala",
-      "lat": 14.521996,
-      "lon": -89.548417
+      "lat": 14.522319,
+      "lon": -89.54766
     },
     {
       "codigo_lugar": "ipala_llano_grande",
@@ -14815,8 +14815,8 @@
       "codigo_lugar": "ipala_los_horcones",
       "lugar_poblado": "Los Horcones",
       "municipio": "Ipala",
-      "lat": 14.547861,
-      "lon": -89.69342
+      "lat": 14.547485,
+      "lon": -89.691673
     },
     {
       "codigo_lugar": "ipala_monte_grande",
@@ -14899,8 +14899,8 @@
       "codigo_lugar": "ipala_san_lorenzo",
       "lugar_poblado": "San Lorenzo",
       "municipio": "Ipala",
-      "lat": 14.536695,
-      "lon": -89.672392
+      "lat": 14.537543,
+      "lon": -89.672566
     },
     {
       "codigo_lugar": "ipala_san_nicolas",
