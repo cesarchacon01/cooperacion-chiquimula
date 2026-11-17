@@ -215,9 +215,11 @@
     "fuente": "INE Censo 2018"
   },
   "chiquimula_la_puente": {
-    "lat": 14.793521,
-    "lon": -89.46036,
-    "fuente": "INE Censo 2018"
+    "lat": 14.802571,
+    "lon": -89.455762,
+    "fuente": "INE Censo 2018 Ajustada 1116 m para quedar dentro del límite municipal de Chiquimula (capa de CONRED).",
+    "lat_original": 14.793521,
+    "lon_original": -89.46036
   },
   "chiquimula_puerta_de_la_montana": {
     "lat": 14.823541,
@@ -355,9 +357,11 @@
     "fuente": "INE Censo 2018"
   },
   "chiquimula_rincon_de_santa_barbara": {
-    "lat": 14.849267,
-    "lon": -89.46606,
-    "fuente": "INE Censo 2018"
+    "lat": 14.849645,
+    "lon": -89.466766,
+    "fuente": "INE Censo 2018 Ajustada 87 m para quedar dentro del límite municipal de Chiquimula (capa de CONRED).",
+    "lat_original": 14.849267,
+    "lon_original": -89.46606
   },
   "chiquimula_roble_amarillo": {
     "lat": 14.807493,
@@ -385,9 +389,11 @@
     "fuente": "INE Censo 2018"
   },
   "chiquimula_san_jorge": {
-    "lat": 14.738026,
-    "lon": -89.47866,
-    "fuente": "INE Censo 2018"
+    "lat": 14.738923,
+    "lon": -89.478526,
+    "fuente": "INE Censo 2018 Ajustada 100 m para quedar dentro del límite municipal de Chiquimula (capa de CONRED).",
+    "lat_original": 14.738026,
+    "lon_original": -89.47866
   },
   "chiquimula_san_miguel": {
     "lat": 14.82476,
@@ -440,9 +446,11 @@
     "fuente": "INE Censo 2018"
   },
   "chiquimula_tapazan": {
-    "lat": 14.865126,
-    "lon": -89.47399,
-    "fuente": "INE Censo 2018"
+    "lat": 14.85922,
+    "lon": -89.475355,
+    "fuente": "INE Censo 2018 Ajustada 669 m para quedar dentro del límite municipal de Chiquimula (capa de CONRED).",
+    "lat_original": 14.865126,
+    "lon_original": -89.47399
   },
   "chiquimula_terrero_barroso": {
     "lat": 14.764186,
@@ -685,9 +693,11 @@
     "fuente": "INE Censo 2018"
   },
   "san_juan_ermita_el_coco": {
-    "lat": 14.770472,
-    "lon": -89.41069,
-    "fuente": "INE Censo 2018"
+    "lat": 14.773475,
+    "lon": -89.414863,
+    "fuente": "INE Censo 2018 Ajustada 558 m para quedar dentro del límite municipal de San Juan Ermita (capa de CONRED).",
+    "lat_original": 14.770472,
+    "lon_original": -89.41069
   },
   "san_juan_ermita_los_encuentros": {
     "lat": 14.718788,
@@ -730,9 +740,11 @@
     "fuente": "INE Censo 2018"
   },
   "san_juan_ermita_el_magueyal": {
-    "lat": 14.724867,
-    "lon": -89.38212,
-    "fuente": "INE Censo 2018"
+    "lat": 14.722243,
+    "lon": -89.381302,
+    "fuente": "INE Censo 2018 Ajustada 303 m para quedar dentro del límite municipal de San Juan Ermita (capa de CONRED).",
+    "lat_original": 14.724867,
+    "lon_original": -89.38212
   },
   "san_juan_ermita_el_matasano": {
     "lat": 14.703833,
@@ -745,9 +757,11 @@
     "fuente": "INE Censo 2018"
   },
   "san_juan_ermita_minas_arriba": {
-    "lat": 14.784261,
-    "lon": -89.45182,
-    "fuente": "INE Censo 2018"
+    "lat": 14.781364,
+    "lon": -89.451839,
+    "fuente": "INE Censo 2018 Ajustada 320 m para quedar dentro del límite municipal de San Juan Ermita (capa de CONRED).",
+    "lat_original": 14.784261,
+    "lon_original": -89.45182
   },
   "san_juan_ermita_miramundo": {
     "lat": 14.752959,
@@ -870,9 +884,11 @@
     "fuente": "INE Censo 2018"
   },
   "jocotan_agua_fria": {
-    "lat": 14.910379,
-    "lon": -89.36469,
-    "fuente": "INE Censo 2018"
+    "lat": 14.899726,
+    "lon": -89.359382,
+    "fuente": "INE Censo 2018 Ajustada 1309 m para quedar dentro del límite municipal de Jocotán (capa de CONRED).",
+    "lat_original": 14.910379,
+    "lon_original": -89.36469
   },
   "jocotan_agua_zarca": {
     "lat": 14.837105,
@@ -975,9 +991,11 @@
     "fuente": "INE Censo 2018"
   },
   "jocotan_el_filo": {
-    "lat": 14.905908,
-    "lon": -89.36014,
-    "fuente": "INE Censo 2018"
+    "lat": 14.900374,
+    "lon": -89.357844,
+    "fuente": "INE Censo 2018 Ajustada 660 m para quedar dentro del límite municipal de Jocotán (capa de CONRED).",
+    "lat_original": 14.905908,
+    "lon_original": -89.36014
   },
   "jocotan_el_limar": {
     "lat": 14.772841,
@@ -1115,9 +1133,11 @@
     "fuente": "INE Censo 2018"
   },
   "jocotan_los_perez": {
-    "lat": 14.898728,
-    "lon": -89.36397,
-    "fuente": "INE Censo 2018"
+    "lat": 14.898429,
+    "lon": -89.363166,
+    "fuente": "INE Censo 2018 Ajustada 92 m para quedar dentro del límite municipal de Jocotán (capa de CONRED).",
+    "lat_original": 14.898728,
+    "lon_original": -89.36397
   },
   "jocotan_los_vados": {
     "lat": 14.789551,
@@ -1430,9 +1450,11 @@
     "fuente": "INE Censo 2018 (capa oficial de CONRED; El Limar, código 2005025)"
   },
   "camotan_el_plan": {
-    "lat": 14.787343,
-    "lon": -89.26257,
-    "fuente": "INE Censo 2018"
+    "lat": 14.787444,
+    "lon": -89.261905,
+    "fuente": "INE Censo 2018 Ajustada 72 m para quedar dentro del límite municipal de Camotán (capa de CONRED).",
+    "lat_original": 14.787343,
+    "lon_original": -89.26257
   },
   "camotan_el_roblar": {
     "lat": 14.883739,
@@ -1775,9 +1797,11 @@
     "fuente": "INE Censo 2018"
   },
   "camotan_tempizque": {
-    "lat": 14.81531,
-    "lon": -89.37399,
-    "fuente": "INE Censo 2018"
+    "lat": 14.815797,
+    "lon": -89.373074,
+    "fuente": "INE Censo 2018 Ajustada 112 m para quedar dentro del límite municipal de Camotán (capa de CONRED).",
+    "lat_original": 14.81531,
+    "lon_original": -89.37399
   },
   "camotan_calichal": {
     "lat": 14.899326,
@@ -1800,9 +1824,11 @@
     "fuente": "INE Censo 2018"
   },
   "camotan_shalom": {
-    "lat": 14.817468,
-    "lon": -89.37365,
-    "fuente": "INE Censo 2018"
+    "lat": 14.816801,
+    "lon": -89.37336,
+    "fuente": "INE Censo 2018 Ajustada 80 m para quedar dentro del límite municipal de Camotán (capa de CONRED).",
+    "lat_original": 14.817468,
+    "lon_original": -89.37365
   },
   "camotan_crucitas": {
     "lat": 14.81486,
@@ -1980,9 +2006,11 @@
     "fuente": "INE Censo 2018 (capa oficial de CONRED; El Limar, El Pinalito, código 2005143)"
   },
   "camotan_pinalito_2": {
-    "lat": 14.935561,
-    "lon": -89.185023,
-    "fuente": "INE Censo 2018 (capa oficial de CONRED; Morola, Pinalito, código 2005144)"
+    "lat": 14.934781,
+    "lon": -89.188307,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Morola, Pinalito, código 2005144) Ajustada 363 m para quedar dentro del límite municipal de Camotán (capa de CONRED).",
+    "lat_original": 14.935561,
+    "lon_original": -89.185023
   },
   "camotan_plan_centro": {
     "lat": 14.796805,
@@ -2180,9 +2208,11 @@
     "fuente": "INE Censo 2018"
   },
   "olopa_el_tercero": {
-    "lat": 14.703366,
-    "lon": -89.38441,
-    "fuente": "INE Censo 2018"
+    "lat": 14.699436,
+    "lon": -89.377333,
+    "fuente": "INE Censo 2018 Ajustada 876 m para quedar dentro del límite municipal de Olopa (capa de CONRED).",
+    "lat_original": 14.703366,
+    "lon_original": -89.38441
   },
   "olopa_la_casona": {
     "lat": 14.694706,
@@ -2190,9 +2220,11 @@
     "fuente": "INE Censo 2018"
   },
   "olopa_la_consolacion": {
-    "lat": 14.726939,
-    "lon": -89.23904,
-    "fuente": "INE Censo 2018"
+    "lat": 14.732627,
+    "lon": -89.243383,
+    "fuente": "INE Censo 2018 Ajustada 783 m para quedar dentro del límite municipal de Olopa (capa de CONRED).",
+    "lat_original": 14.726939,
+    "lon_original": -89.23904
   },
   "olopa_la_cumbrita": {
     "lat": 14.694608,
@@ -2225,9 +2257,11 @@
     "fuente": "INE Censo 2018"
   },
   "olopa_los_cafetales": {
-    "lat": 14.717676,
-    "lon": -89.37046,
-    "fuente": "INE Censo 2018"
+    "lat": 14.717687,
+    "lon": -89.367243,
+    "fuente": "INE Censo 2018 Ajustada 346 m para quedar dentro del límite municipal de Olopa (capa de CONRED).",
+    "lat_original": 14.717676,
+    "lon_original": -89.37046
   },
   "olopa_los_garcia": {
     "lat": 14.706069,
@@ -2240,9 +2274,11 @@
     "fuente": "INE Censo 2018"
   },
   "olopa_los_lirios": {
-    "lat": 14.682987,
-    "lon": -89.28461,
-    "fuente": "INE Censo 2018"
+    "lat": 14.683788,
+    "lon": -89.285958,
+    "fuente": "INE Censo 2018 Ajustada 170 m para quedar dentro del límite municipal de Olopa (capa de CONRED).",
+    "lat_original": 14.682987,
+    "lon_original": -89.28461
   },
   "olopa_los_pinos": {
     "lat": 14.717151,
@@ -2260,9 +2296,11 @@
     "fuente": "INE Censo 2018"
   },
   "olopa_los_vasquez": {
-    "lat": 14.686296,
-    "lon": -89.2795,
-    "fuente": "INE Censo 2018"
+    "lat": 14.689125,
+    "lon": -89.284026,
+    "fuente": "INE Censo 2018 Ajustada 578 m para quedar dentro del límite municipal de Olopa (capa de CONRED).",
+    "lat_original": 14.686296,
+    "lon_original": -89.2795
   },
   "olopa_pie_de_la_cumbre": {
     "lat": 14.692957,
@@ -3390,9 +3428,11 @@
     "fuente": "INE Censo 2018"
   },
   "quezaltepeque_los_espana": {
-    "lat": 14.64456,
-    "lon": -89.50634,
-    "fuente": "INE Censo 2018"
+    "lat": 14.642734,
+    "lon": -89.506592,
+    "fuente": "INE Censo 2018 Ajustada 204 m para quedar dentro del límite municipal de Quezaltepeque (capa de CONRED).",
+    "lat_original": 14.64456,
+    "lon_original": -89.50634
   },
   "quezaltepeque_los_perez": {
     "lat": 14.613944,
@@ -3700,9 +3740,11 @@
     "fuente": "INE Censo 2018"
   },
   "san_jacinto_valle_de_la_escuela": {
-    "lat": 14.735186,
-    "lon": -89.47043,
-    "fuente": "INE Censo 2018"
+    "lat": 14.731838,
+    "lon": -89.471566,
+    "fuente": "INE Censo 2018 Ajustada 390 m para quedar dentro del límite municipal de San Jacinto (capa de CONRED).",
+    "lat_original": 14.735186,
+    "lon_original": -89.47043
   },
   "san_jacinto_los_lopez": {
     "lat": 14.681587,
@@ -3760,9 +3802,11 @@
     "fuente": "INE Censo 2018"
   },
   "san_jacinto_valle_de_la_escuela_2": {
-    "lat": 14.735186,
-    "lon": -89.47043,
-    "fuente": "INE Censo 2018"
+    "lat": 14.731838,
+    "lon": -89.471566,
+    "fuente": "INE Censo 2018 Ajustada 390 m para quedar dentro del límite municipal de San Jacinto (capa de CONRED).",
+    "lat_original": 14.735186,
+    "lon_original": -89.47043
   },
   "san_jacinto_valle_nuevo": {
     "lat": 14.690178,
@@ -3870,9 +3914,11 @@
     "fuente": "INE Censo 2018"
   },
   "ipala_chaguiton": {
-    "lat": 14.550425,
-    "lon": -89.65381,
-    "fuente": "INE Censo 2018"
+    "lat": 14.551334,
+    "lon": -89.653635,
+    "fuente": "INE Censo 2018 Ajustada 102 m para quedar dentro del límite municipal de Ipala (capa de CONRED).",
+    "lat_original": 14.550425,
+    "lon_original": -89.65381
   },
   "ipala_ciracil": {
     "lat": 14.657193,
@@ -3880,9 +3926,11 @@
     "fuente": "INE Censo 2018"
   },
   "ipala_cruz_de_villeda": {
-    "lat": 14.620772,
-    "lon": -89.66801,
-    "fuente": "INE Censo 2018"
+    "lat": 14.619653,
+    "lon": -89.667463,
+    "fuente": "INE Censo 2018 Ajustada 137 m para quedar dentro del límite municipal de Ipala (capa de CONRED).",
+    "lat_original": 14.620772,
+    "lon_original": -89.66801
   },
   "ipala_dolores": {
     "lat": 14.625468,
@@ -4050,9 +4098,11 @@
     "fuente": "INE Censo 2018"
   },
   "ipala_los_horcones": {
-    "lat": 14.547861,
-    "lon": -89.69342,
-    "fuente": "INE Censo 2018"
+    "lat": 14.547485,
+    "lon": -89.691673,
+    "fuente": "INE Censo 2018 Ajustada 192 m para quedar dentro del límite municipal de Ipala (capa de CONRED).",
+    "lat_original": 14.547861,
+    "lon_original": -89.69342
   },
   "ipala_el_obraje": {
     "lat": 14.624259,
@@ -4090,9 +4140,11 @@
     "fuente": "INE Censo 2018 (capa oficial de CONRED; Los Galvez, código 2010043)"
   },
   "san_jacinto_valle_de_los_martinez": {
-    "lat": 14.7293,
-    "lon": -89.465297,
-    "fuente": "INE Censo 2018 (capa oficial de CONRED; Valle De Los Martinez, código 2010032)"
+    "lat": 14.727605,
+    "lon": -89.467032,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Valle De Los Martinez, código 2010032) Ajustada 264 m para quedar dentro del límite municipal de San Jacinto (capa de CONRED).",
+    "lat_original": 14.7293,
+    "lon_original": -89.465297
   },
   "san_jacinto_laguneta_del_carrizo": {
     "lat": 14.630355,
@@ -4115,9 +4167,11 @@
     "fuente": "INE Censo 2018 (capa oficial de CONRED; Los Linares, código 2010015)"
   },
   "san_jacinto_sandoval": {
-    "lat": 14.731097,
-    "lon": -89.480887,
-    "fuente": "INE Censo 2018 (capa oficial de CONRED; Sandoval, código 2010027)"
+    "lat": 14.730934,
+    "lon": -89.480122,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Sandoval, código 2010027) Ajustada 84 m para quedar dentro del límite municipal de San Jacinto (capa de CONRED).",
+    "lat_original": 14.731097,
+    "lon_original": -89.480887
   },
   "san_jacinto_lomas_abajo": {
     "lat": 14.666914,
@@ -4400,9 +4454,11 @@
     "fuente": "INE Censo 2018 (capa oficial de CONRED; Las Anonas, código 2011056)"
   },
   "ipala_san_lorenzo": {
-    "lat": 14.536695,
-    "lon": -89.672392,
-    "fuente": "INE Censo 2018 (capa oficial de CONRED; San Lorenzo, código 2011080)"
+    "lat": 14.537543,
+    "lon": -89.672566,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; San Lorenzo, código 2011080) Ajustada 96 m para quedar dentro del límite municipal de Ipala (capa de CONRED).",
+    "lat_original": 14.536695,
+    "lon_original": -89.672392
   },
   "ipala_san_nicolas": {
     "lat": 14.561757,
@@ -4630,9 +4686,11 @@
     "fuente": "INE Censo 2018 (capa oficial de CONRED; Toronjo, código 2001140)"
   },
   "chiquimula_zarzal": {
-    "lat": 14.781267,
-    "lon": -89.705506,
-    "fuente": "INE Censo 2018 (capa oficial de CONRED; Zarzal, código 2001131)"
+    "lat": 14.781411,
+    "lon": -89.703414,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Zarzal, código 2001131) Ajustada 225 m para quedar dentro del límite municipal de Chiquimula (capa de CONRED).",
+    "lat_original": 14.781267,
+    "lon_original": -89.705506
   },
   "san_jose_la_arada_barro": {
     "lat": 14.739293,
@@ -4645,9 +4703,11 @@
     "fuente": "Referencia municipal: el Censo INE 2018 no registra este lugar; se ubica cerca del centro de su municipio."
   },
   "san_jose_la_arada_chucte": {
-    "lat": 14.695114,
-    "lon": -89.551065,
-    "fuente": "INE Censo 2018 (capa oficial de CONRED; Chucte, código 2002012)"
+    "lat": 14.694919,
+    "lon": -89.55307,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Chucte, código 2002012) Ajustada 217 m para quedar dentro del límite municipal de San José la Arada (capa de CONRED).",
+    "lat_original": 14.695114,
+    "lon_original": -89.551065
   },
   "san_jose_la_arada_el_plan_de_las_vigas": {
     "lat": 14.69695,
@@ -4655,9 +4715,11 @@
     "fuente": "INE Censo 2018 (capa oficial de CONRED; El Plan De Las Vigas, código 2002017)"
   },
   "san_jose_la_arada_el_salto": {
-    "lat": 14.690152,
-    "lon": -89.653349,
-    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Salto, código 2002021)"
+    "lat": 14.689827,
+    "lon": -89.652593,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Salto, código 2002021) Ajustada 89 m para quedar dentro del límite municipal de San José la Arada (capa de CONRED).",
+    "lat_original": 14.690152,
+    "lon_original": -89.653349
   },
   "san_jose_la_arada_joyitas": {
     "lat": 14.751702,
@@ -4665,9 +4727,11 @@
     "fuente": "INE Censo 2018 (capa oficial de CONRED; Joyitas, código 2002024)"
   },
   "san_jose_la_arada_miramundo": {
-    "lat": 14.743326,
-    "lon": -89.565726,
-    "fuente": "INE Censo 2018 (capa oficial de CONRED; Miramundo, código 2002031)"
+    "lat": 14.742458,
+    "lon": -89.566177,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Miramundo, código 2002031) Ajustada 108 m para quedar dentro del límite municipal de San José la Arada (capa de CONRED).",
+    "lat_original": 14.743326,
+    "lon_original": -89.565726
   },
   "san_jose_la_arada_san_victor": {
     "lat": 14.737308,
@@ -4830,9 +4894,11 @@
     "fuente": "INE Censo 2018 (capa oficial de CONRED; Cuesta Del Pito, código 2008014)"
   },
   "concepcion_las_minas_el_hospital": {
-    "lat": 14.528415,
-    "lon": -89.523853,
-    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Hospital, código 2008019)"
+    "lat": 14.527194,
+    "lon": -89.523239,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Hospital, código 2008019) Ajustada 150 m para quedar dentro del límite municipal de Concepción las Minas (capa de CONRED).",
+    "lat_original": 14.528415,
+    "lon_original": -89.523853
   },
   "concepcion_las_minas_el_purgatorio": {
     "lat": 14.530391,
@@ -4905,9 +4971,11 @@
     "fuente": "INE Censo 2018 (capa oficial de CONRED; Colmenar, código 2011014)"
   },
   "ipala_el_aguacate": {
-    "lat": 14.560113,
-    "lon": -89.554763,
-    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Aguacate, código 2011017)"
+    "lat": 14.55941,
+    "lon": -89.554414,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; El Aguacate, código 2011017) Ajustada 86 m para quedar dentro del límite municipal de Ipala (capa de CONRED).",
+    "lat_original": 14.560113,
+    "lon_original": -89.554763
   },
   "ipala_el_apante": {
     "lat": 14.570208,
@@ -4955,9 +5023,11 @@
     "fuente": "Referencia municipal: el Censo INE 2018 no registra este lugar; se ubica cerca del centro de su municipio."
   },
   "ipala_llano_de_las_tareas": {
-    "lat": 14.521996,
-    "lon": -89.548417,
-    "fuente": "INE Censo 2018 (capa oficial de CONRED; Llano De Las Tareas, código 2011063)"
+    "lat": 14.522319,
+    "lon": -89.54766,
+    "fuente": "INE Censo 2018 (capa oficial de CONRED; Llano De Las Tareas, código 2011063) Ajustada 89 m para quedar dentro del límite municipal de Ipala (capa de CONRED).",
+    "lat_original": 14.521996,
+    "lon_original": -89.548417
   },
   "ipala_monte_grande": {
     "lat": 14.642846,
