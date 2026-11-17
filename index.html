@@ -1031,7 +1031,7 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
         </div>
         <div class="pa-side-card">
           <div class="pa-title">Cantidades reportadas</div>
-          <div class="pa-sub">Se presentan por grupo de población. No se suman categorías distintas como personas únicas.</div>
+          <div class="pa-sub">Se presentan por grupo de población. Cada programa en cada lugar se cuenta una vez, aunque registre varias acciones. Si varias organizaciones atienden el mismo lugar, sus cantidades se suman y pueden incluir a las mismas personas.</div>
           <div id="pa-cantidades" class="pa-list"></div>
         </div>
       </div>
@@ -3111,16 +3111,13 @@ function valorCantidadPA(c, grupo){
 
 function registrosPoblacionAccion(){
   const rows=[];
-  let nReg=0;
   (DATA.programas||[]).forEach(p=>{
     (p.comunidades||[]).forEach(c=>{
-      const registro=++nReg; // identifica el registro de comunidad: su cantidad se cuenta una sola vez
       const poblaciones=(c.poblacion_meta||[]).filter(Boolean);
       const acciones=(c.accion_comunidad||[]).filter(Boolean);
       poblaciones.forEach(pop=>{
         acciones.forEach(acc=>{
           rows.push({
-            registro,
             poblacion:pop, accion:acc, organizacion:p.organizacion||'No reportada',
             programa:p.nombre_programa||'No reportado', municipio:c.municipio||'No reportado',
             lugar:c.lugar_poblado||'No reportado', codigo:c.codigo_lugar||'',
@@ -3199,14 +3196,16 @@ function renderPoblacionAccion(){
     : '<div class="pa-empty">Sin municipios para esta consulta.</div>';
 
   // Cantidades: consolidar solamente dentro del mismo grupo de población.
-  // La cantidad pertenece al grupo de población en ese lugar, no a cada acción: una fila por
-  // acción repetía la misma cantidad, así que se cuenta una vez por registro de comunidad y grupo.
-  const cant={}, contados=new Set();
+  // Cada fila es población × acción; la cantidad pertenece a la población del lugar,
+  // no a la acción. Se cuenta una sola vez por organización + programa + lugar + población
+  // para no multiplicarla por el número de acciones marcadas.
+  const cant={};
+  const vistos=new Set();
   rows.forEach(r=>{
     if(r.cantidad===null || r.cantidad===undefined || r.cantidad==='') return;
-    const clave=r.registro+'|'+r.poblacion;
-    if(contados.has(clave)) return;
-    contados.add(clave);
+    const clave=[r.organizacion,r.programa,r.municipio,(r.codigo||r.lugar),r.poblacion].join('|');
+    if(vistos.has(clave)) return;
+    vistos.add(clave);
     if(!cant[r.poblacion]) cant[r.poblacion]=[];
     cant[r.poblacion].push(r.cantidad);
   });
