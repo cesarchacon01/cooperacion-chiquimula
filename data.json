@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-20T07:13:37.609829+00:00",
+  "generado": "2026-11-20T18:08:42.845300+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -11084,6 +11084,2107 @@
           "area": "Rural"
         }
       ]
+    },
+    {
+      "organizacion": "Asociación Paz y Bien Delegación Guatemala",
+      "tipo_actor": "ONG internacional",
+      "trabajo_comunitario": "Sí",
+      "pais_origen": "",
+      "contacto": "María Elena Vettorazzi",
+      "nombre_programa": "Programa de Prevención de Violencia hacia la mujer y niñez en riesgo",
+      "tipo_atencion": "Desarrollo / atención ordinaria",
+      "sector": [
+        "Salud",
+        "Desarrollo económico local",
+        "Género",
+        "Protección (niñez, migrantes, víctimas de violencia)"
+      ],
+      "modalidad": [
+        "Mixta"
+      ],
+      "fecha_inicio": "2025-04-01",
+      "tipo_duracion": "Sí, tiene fecha de finalización definida",
+      "fecha_fin": "2028-03-31",
+      "duracion_aproximada": "",
+      "estado_programa": "En ejecución",
+      "contraparte_gubernamental": "Los aliados estratégicos son: Municipalidades, Redes de Derivación de Víctimas, Juzgado de Feminicidio",
+      "monto_rango": "Prefiere no indicar",
+      "monto_rango_codigo": "prefiere_no_indicar",
+      "fuente_financiamiento": [
+        "Donante internacional"
+      ],
+      "espacios_coordinacion": [
+        "Mesa de Cooperación",
+        "COMUSAN",
+        "Otro"
+      ],
+      "disposicion_coordinar": "Sí",
+      "beneficiarios_institucionales": {
+        "Municipalidades": 4,
+        "Redes de Derivación de Víctimas": 3
+      },
+      "municipios_cobertura_institucional": [
+        "Camotán",
+        "Chiquimula",
+        "Esquipulas",
+        "Ipala",
+        "Quezaltepeque",
+        "San Jacinto"
+      ],
+      "comunidades": [
+        {
+          "codigo_lugar": "camotan_cumbre_de_nenoja",
+          "lugar_poblado": "Cumbre De Nenoja",
+          "municipio": "Camotán",
+          "clasificacion": "Caserío",
+          "viviendas_catalogo": 60,
+          "lat": 14.81601,
+          "lon": -89.30512,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Alumnos / estudiantes",
+            "Padres, madres y cuidadores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 40,
+            "Alumnos / estudiantes": 0,
+            "Padres, madres y cuidadores": 0
+          },
+          "poblacion_total_estimada": 40,
+          "accion_comunidad": [
+            "Escuelas / centros educativos",
+            "Grupos de Auto Ahorro y Préstamo",
+            "Emprendimientos"
+          ],
+          "ac_cantidades": {
+            "Escuelas / centros educativos": 0,
+            "Grupos de Auto Ahorro y Préstamo": 0,
+            "Emprendimientos": 0
+          },
+          "etnia": [
+            "Maya",
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "esquipulas_cafetales",
+          "lugar_poblado": "Cafetales",
+          "municipio": "Esquipulas",
+          "clasificacion": "Caserío",
+          "viviendas_catalogo": 121,
+          "lat": 14.626864,
+          "lon": -89.16952,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Alumnos / estudiantes",
+            "Padres, madres y cuidadores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 0,
+            "Alumnos / estudiantes": 21,
+            "Padres, madres y cuidadores": 15
+          },
+          "poblacion_total_estimada": 21,
+          "accion_comunidad": [
+            "Escuelas / centros educativos",
+            "Grupos de Auto Ahorro y Préstamo",
+            "Emprendimientos"
+          ],
+          "ac_cantidades": {
+            "Escuelas / centros educativos": 0,
+            "Grupos de Auto Ahorro y Préstamo": 0,
+            "Emprendimientos": 0
+          },
+          "etnia": [
+            "Maya",
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "quezaltepeque_las_cebollas",
+          "lugar_poblado": "Las Cebollas",
+          "municipio": "Quezaltepeque",
+          "clasificacion": "Caserío",
+          "viviendas_catalogo": 64,
+          "lat": 14.587982,
+          "lon": -89.41549,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Alumnos / estudiantes",
+            "Padres, madres y cuidadores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 15,
+            "Alumnos / estudiantes": 0,
+            "Padres, madres y cuidadores": 0
+          },
+          "poblacion_total_estimada": 15,
+          "accion_comunidad": [
+            "Escuelas / centros educativos",
+            "Grupos de Auto Ahorro y Préstamo",
+            "Emprendimientos"
+          ],
+          "ac_cantidades": {
+            "Escuelas / centros educativos": 0,
+            "Grupos de Auto Ahorro y Préstamo": 0,
+            "Emprendimientos": 0
+          },
+          "etnia": [
+            "Maya",
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "quezaltepeque_chiramay",
+          "lugar_poblado": "Chiramay",
+          "municipio": "Quezaltepeque",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 55,
+          "lat": 14.624076,
+          "lon": -89.37289,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Alumnos / estudiantes",
+            "Padres, madres y cuidadores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 33,
+            "Alumnos / estudiantes": 0,
+            "Padres, madres y cuidadores": 0
+          },
+          "poblacion_total_estimada": 33,
+          "accion_comunidad": [
+            "Escuelas / centros educativos",
+            "Grupos de Auto Ahorro y Préstamo",
+            "Emprendimientos"
+          ],
+          "ac_cantidades": {
+            "Escuelas / centros educativos": 0,
+            "Grupos de Auto Ahorro y Préstamo": 0,
+            "Emprendimientos": 2
+          },
+          "etnia": [
+            "Maya",
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "quezaltepeque_estanzuela_abajo",
+          "lugar_poblado": "Estanzuela Abajo",
+          "municipio": "Quezaltepeque",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 66,
+          "lat": 14.613043,
+          "lon": -89.50451,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Alumnos / estudiantes",
+            "Padres, madres y cuidadores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 15,
+            "Alumnos / estudiantes": 0,
+            "Padres, madres y cuidadores": 0
+          },
+          "poblacion_total_estimada": 15,
+          "accion_comunidad": [
+            "Escuelas / centros educativos",
+            "Grupos de Auto Ahorro y Préstamo",
+            "Emprendimientos"
+          ],
+          "ac_cantidades": {
+            "Escuelas / centros educativos": 0,
+            "Grupos de Auto Ahorro y Préstamo": 0,
+            "Emprendimientos": 2
+          },
+          "etnia": [
+            "Maya",
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "quezaltepeque_estanzuela_arriba",
+          "lugar_poblado": "Estanzuela Arriba",
+          "municipio": "Quezaltepeque",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 113,
+          "lat": 14.594376,
+          "lon": -89.51768,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Alumnos / estudiantes",
+            "Padres, madres y cuidadores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 20,
+            "Alumnos / estudiantes": 0,
+            "Padres, madres y cuidadores": 0
+          },
+          "poblacion_total_estimada": 20,
+          "accion_comunidad": [
+            "Escuelas / centros educativos",
+            "Grupos de Auto Ahorro y Préstamo",
+            "Emprendimientos"
+          ],
+          "ac_cantidades": {
+            "Escuelas / centros educativos": 0,
+            "Grupos de Auto Ahorro y Préstamo": 2,
+            "Emprendimientos": 4
+          },
+          "etnia": [
+            "Maya",
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "quezaltepeque_javillal",
+          "lugar_poblado": "Javillal",
+          "municipio": "Quezaltepeque",
+          "clasificacion": "Caserío",
+          "viviendas_catalogo": 48,
+          "lat": 14.612837,
+          "lon": -89.51878,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Alumnos / estudiantes",
+            "Padres, madres y cuidadores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 31,
+            "Alumnos / estudiantes": 0,
+            "Padres, madres y cuidadores": 0
+          },
+          "poblacion_total_estimada": 31,
+          "accion_comunidad": [
+            "Escuelas / centros educativos",
+            "Grupos de Auto Ahorro y Préstamo",
+            "Emprendimientos"
+          ],
+          "ac_cantidades": {
+            "Escuelas / centros educativos": 0,
+            "Grupos de Auto Ahorro y Préstamo": 3,
+            "Emprendimientos": 7
+          },
+          "etnia": [
+            "Maya",
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "quezaltepeque_llano_grande",
+          "lugar_poblado": "Llano Grande",
+          "municipio": "Quezaltepeque",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 259,
+          "lat": 14.624695,
+          "lon": -89.44196,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Alumnos / estudiantes",
+            "Padres, madres y cuidadores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 9,
+            "Alumnos / estudiantes": 0,
+            "Padres, madres y cuidadores": 0
+          },
+          "poblacion_total_estimada": 9,
+          "accion_comunidad": [
+            "Escuelas / centros educativos",
+            "Grupos de Auto Ahorro y Préstamo",
+            "Emprendimientos"
+          ],
+          "ac_cantidades": {
+            "Escuelas / centros educativos": 0,
+            "Grupos de Auto Ahorro y Préstamo": 1,
+            "Emprendimientos": 2
+          },
+          "etnia": [
+            "Maya",
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "quezaltepeque_los_planes",
+          "lugar_poblado": "Los Planes",
+          "municipio": "Quezaltepeque",
+          "clasificacion": "Caserío",
+          "viviendas_catalogo": 39,
+          "lat": 14.632043,
+          "lon": -89.38027,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Alumnos / estudiantes",
+            "Padres, madres y cuidadores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 22,
+            "Alumnos / estudiantes": 0,
+            "Padres, madres y cuidadores": 0
+          },
+          "poblacion_total_estimada": 22,
+          "accion_comunidad": [
+            "Escuelas / centros educativos",
+            "Grupos de Auto Ahorro y Préstamo",
+            "Emprendimientos"
+          ],
+          "ac_cantidades": {
+            "Escuelas / centros educativos": 0,
+            "Grupos de Auto Ahorro y Préstamo": 2,
+            "Emprendimientos": 5
+          },
+          "etnia": [
+            "Maya",
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "quezaltepeque_padre_miguel",
+          "lugar_poblado": "Padre Miguel",
+          "municipio": "Quezaltepeque",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 152,
+          "lat": 14.566272,
+          "lon": -89.45407,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Alumnos / estudiantes",
+            "Padres, madres y cuidadores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 15,
+            "Alumnos / estudiantes": 0,
+            "Padres, madres y cuidadores": 0
+          },
+          "poblacion_total_estimada": 15,
+          "accion_comunidad": [
+            "Escuelas / centros educativos",
+            "Grupos de Auto Ahorro y Préstamo",
+            "Emprendimientos"
+          ],
+          "ac_cantidades": {
+            "Escuelas / centros educativos": 0,
+            "Grupos de Auto Ahorro y Préstamo": 0,
+            "Emprendimientos": 0
+          },
+          "etnia": [
+            "Maya",
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "quezaltepeque_el_palmar",
+          "lugar_poblado": "El Palmar",
+          "municipio": "Quezaltepeque",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 140,
+          "lat": 14.587537,
+          "lon": -89.49253,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Alumnos / estudiantes",
+            "Padres, madres y cuidadores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 35,
+            "Alumnos / estudiantes": 0,
+            "Padres, madres y cuidadores": 0
+          },
+          "poblacion_total_estimada": 35,
+          "accion_comunidad": [
+            "Escuelas / centros educativos",
+            "Grupos de Auto Ahorro y Préstamo",
+            "Emprendimientos"
+          ],
+          "ac_cantidades": {
+            "Escuelas / centros educativos": 0,
+            "Grupos de Auto Ahorro y Préstamo": 3,
+            "Emprendimientos": 6
+          },
+          "etnia": [
+            "Maya",
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "quezaltepeque_quequexque",
+          "lugar_poblado": "Quequexque",
+          "municipio": "Quezaltepeque",
+          "clasificacion": "Caserío",
+          "viviendas_catalogo": 71,
+          "lat": 14.63367,
+          "lon": -89.39035,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Alumnos / estudiantes",
+            "Padres, madres y cuidadores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 12,
+            "Alumnos / estudiantes": 0,
+            "Padres, madres y cuidadores": 0
+          },
+          "poblacion_total_estimada": 12,
+          "accion_comunidad": [
+            "Escuelas / centros educativos",
+            "Grupos de Auto Ahorro y Préstamo",
+            "Emprendimientos"
+          ],
+          "ac_cantidades": {
+            "Escuelas / centros educativos": 0,
+            "Grupos de Auto Ahorro y Préstamo": 1,
+            "Emprendimientos": 2
+          },
+          "etnia": [
+            "Maya",
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "quezaltepeque_salfate",
+          "lugar_poblado": "Salfate",
+          "municipio": "Quezaltepeque",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 125,
+          "lat": 14.605443,
+          "lon": -89.45165,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Alumnos / estudiantes",
+            "Padres, madres y cuidadores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 12,
+            "Alumnos / estudiantes": 0,
+            "Padres, madres y cuidadores": 0
+          },
+          "poblacion_total_estimada": 12,
+          "accion_comunidad": [
+            "Escuelas / centros educativos",
+            "Grupos de Auto Ahorro y Préstamo",
+            "Emprendimientos"
+          ],
+          "ac_cantidades": {
+            "Escuelas / centros educativos": 0,
+            "Grupos de Auto Ahorro y Préstamo": 1,
+            "Emprendimientos": 2
+          },
+          "etnia": [
+            "Maya",
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_jacinto_el_escalon",
+          "lugar_poblado": "El Escalon",
+          "municipio": "San Jacinto",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 179,
+          "lat": 14.689941,
+          "lon": -89.49484,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Alumnos / estudiantes",
+            "Padres, madres y cuidadores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 40,
+            "Alumnos / estudiantes": 0,
+            "Padres, madres y cuidadores": 0
+          },
+          "poblacion_total_estimada": 40,
+          "accion_comunidad": [
+            "Escuelas / centros educativos",
+            "Grupos de Auto Ahorro y Préstamo",
+            "Emprendimientos"
+          ],
+          "ac_cantidades": {
+            "Escuelas / centros educativos": 0,
+            "Grupos de Auto Ahorro y Préstamo": 0,
+            "Emprendimientos": 0
+          },
+          "etnia": [
+            "Maya",
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_jacinto_los_molina",
+          "lugar_poblado": "Los Molina",
+          "municipio": "San Jacinto",
+          "clasificacion": "Caserío",
+          "viviendas_catalogo": 27,
+          "lat": 14.702615,
+          "lon": -89.50671,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Alumnos / estudiantes",
+            "Padres, madres y cuidadores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 20,
+            "Alumnos / estudiantes": 0,
+            "Padres, madres y cuidadores": 0
+          },
+          "poblacion_total_estimada": 20,
+          "accion_comunidad": [
+            "Escuelas / centros educativos",
+            "Grupos de Auto Ahorro y Préstamo",
+            "Emprendimientos"
+          ],
+          "ac_cantidades": {
+            "Escuelas / centros educativos": 0,
+            "Grupos de Auto Ahorro y Préstamo": 1,
+            "Emprendimientos": 2
+          },
+          "etnia": [
+            "Maya",
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "san_jacinto_tizubin",
+          "lugar_poblado": "Tizubin",
+          "municipio": "San Jacinto",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 126,
+          "lat": 14.69386,
+          "lon": -89.51302,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Alumnos / estudiantes",
+            "Padres, madres y cuidadores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 12,
+            "Alumnos / estudiantes": 0,
+            "Padres, madres y cuidadores": 0
+          },
+          "poblacion_total_estimada": 12,
+          "accion_comunidad": [
+            "Escuelas / centros educativos",
+            "Grupos de Auto Ahorro y Préstamo",
+            "Emprendimientos"
+          ],
+          "ac_cantidades": {
+            "Escuelas / centros educativos": 0,
+            "Grupos de Auto Ahorro y Préstamo": 1,
+            "Emprendimientos": 2
+          },
+          "etnia": [
+            "Maya",
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "ipala_el_chaparroncito",
+          "lugar_poblado": "El Chaparroncito",
+          "municipio": "Ipala",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 178,
+          "lat": 14.567819,
+          "lon": -89.65621,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Alumnos / estudiantes",
+            "Padres, madres y cuidadores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 15,
+            "Alumnos / estudiantes": 0,
+            "Padres, madres y cuidadores": 0
+          },
+          "poblacion_total_estimada": 15,
+          "accion_comunidad": [
+            "Escuelas / centros educativos",
+            "Grupos de Auto Ahorro y Préstamo",
+            "Emprendimientos"
+          ],
+          "ac_cantidades": {
+            "Escuelas / centros educativos": 0,
+            "Grupos de Auto Ahorro y Préstamo": 0,
+            "Emprendimientos": 0
+          },
+          "etnia": [
+            "Maya",
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "ipala_el_rosario",
+          "lugar_poblado": "El Rosario",
+          "municipio": "Ipala",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 300,
+          "lat": 14.599104,
+          "lon": -89.57294,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Mujeres",
+            "Alumnos / estudiantes",
+            "Padres, madres y cuidadores"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Mujeres": 40,
+            "Alumnos / estudiantes": 0,
+            "Padres, madres y cuidadores": 0
+          },
+          "poblacion_total_estimada": 40,
+          "accion_comunidad": [
+            "Escuelas / centros educativos",
+            "Grupos de Auto Ahorro y Préstamo",
+            "Emprendimientos"
+          ],
+          "ac_cantidades": {
+            "Escuelas / centros educativos": 0,
+            "Grupos de Auto Ahorro y Préstamo": 4,
+            "Emprendimientos": 8
+          },
+          "etnia": [
+            "Maya",
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)"
+          ],
+          "area": "Rural"
+        }
+      ]
+    },
+    {
+      "organizacion": "Helvetas",
+      "tipo_actor": "ONG internacional",
+      "trabajo_comunitario": "Sí",
+      "pais_origen": "",
+      "contacto": "Virginia Berganza",
+      "nombre_programa": "Respuesta Wash en emergencia de acciones anticipatorias",
+      "tipo_atencion": "Emergencia / respuesta humanitaria",
+      "sector": [
+        "Agua y saneamiento"
+      ],
+      "modalidad": [
+        "Donación en especie",
+        "Capacitaciones"
+      ],
+      "fecha_inicio": "2026-07-15",
+      "tipo_duracion": "Sí, tiene fecha de finalización definida",
+      "fecha_fin": "2026-11-30",
+      "duracion_aproximada": "",
+      "estado_programa": "Próximo a finalizar",
+      "contraparte_gubernamental": "MSPAS, Municipalidades",
+      "monto_rango": "Q2,000,000 – Q10,000,000",
+      "monto_rango_codigo": "2m_10m",
+      "fuente_financiamiento": [
+        "Donante internacional"
+      ],
+      "espacios_coordinacion": [
+        "CODESAN",
+        "COMUSAN"
+      ],
+      "disposicion_coordinar": "Sí",
+      "beneficiarios_institucionales": {
+        "Centros o puestos de salud": 5,
+        "Municipalidades": 3,
+        "COMUSAN (Comisión Municipal de Seguridad Alimentaria y Nutricional)": 3,
+        "Oficina/Dirección Municipal de Seguridad Alimentaria y Nutricional (SAN)": 3,
+        "Dirección Municipal de la Mujer": 3
+      },
+      "municipios_cobertura_institucional": [
+        "Esquipulas",
+        "San Jacinto",
+        "San José la Arada"
+      ],
+      "comunidades": [
+        {
+          "codigo_lugar": "adicional:san_jose_la_arada:la_linea",
+          "lugar_poblado": "La Linea",
+          "municipio": "San José la Arada",
+          "clasificacion": null,
+          "viviendas_catalogo": null,
+          "lat": null,
+          "lon": null,
+          "fuera_catalogo": true,
+          "estado_validacion": "Pendiente de validación",
+          "referencia_lugar": "Caserio",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 17,
+            "Hogares / familias": 45
+          },
+          "poblacion_total_estimada": 45,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Ecofiltro, kit de higiene y capacitaciones": 0
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Mixta"
+        },
+        {
+          "codigo_lugar": "san_jose_la_arada_cerro_de_cal",
+          "lugar_poblado": "Cerro De Cal",
+          "municipio": "San José la Arada",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 34,
+          "lat": 14.692697,
+          "lon": -89.56114,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 0,
+            "Hogares / familias": 46
+          },
+          "poblacion_total_estimada": 46,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Ecofiltro, kit de higiene y capacitaciones": 0
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Mixta"
+        },
+        {
+          "codigo_lugar": "san_jose_la_arada_el_carrizal",
+          "lugar_poblado": "El Carrizal",
+          "municipio": "San José la Arada",
+          "clasificacion": "Caserío",
+          "viviendas_catalogo": 64,
+          "lat": 14.720346,
+          "lon": -89.55651,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 0,
+            "Hogares / familias": 88
+          },
+          "poblacion_total_estimada": 88,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Ecofiltro, kit de higiene y capacitaciones": 0
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Mixta"
+        },
+        {
+          "codigo_lugar": "san_jose_la_arada_chucte",
+          "lugar_poblado": "Chucte",
+          "municipio": "San José la Arada",
+          "clasificacion": "Caserío",
+          "viviendas_catalogo": 5,
+          "lat": 14.694919,
+          "lon": -89.55307,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 0,
+            "Hogares / familias": 46
+          },
+          "poblacion_total_estimada": 46,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Ecofiltro, kit de higiene y capacitaciones": 0
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Mixta"
+        },
+        {
+          "codigo_lugar": "san_jose_la_arada_el_potrero",
+          "lugar_poblado": "El Potrero",
+          "municipio": "San José la Arada",
+          "clasificacion": "Caserío",
+          "viviendas_catalogo": 35,
+          "lat": 14.674605,
+          "lon": -89.57864,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 0,
+            "Hogares / familias": 62
+          },
+          "poblacion_total_estimada": 62,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Ecofiltro, kit de higiene y capacitaciones": 0
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Mixta"
+        },
+        {
+          "codigo_lugar": "san_jose_la_arada_el_rincon",
+          "lugar_poblado": "El Rincon",
+          "municipio": "San José la Arada",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 247,
+          "lat": 14.690205,
+          "lon": -89.61847,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 0,
+            "Hogares / familias": 300
+          },
+          "poblacion_total_estimada": 300,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Ecofiltro, kit de higiene y capacitaciones": 0
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Mixta"
+        },
+        {
+          "codigo_lugar": "san_jose_la_arada_el_rodeo_abajo",
+          "lugar_poblado": "El Rodeo Abajo",
+          "municipio": "San José la Arada",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 11,
+          "lat": 14.681221,
+          "lon": -89.57813,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 0,
+            "Hogares / familias": 48
+          },
+          "poblacion_total_estimada": 48,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Ecofiltro, kit de higiene y capacitaciones": 0
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Mixta"
+        },
+        {
+          "codigo_lugar": "san_jose_la_arada_guacamayas_abajo",
+          "lugar_poblado": "Guacamayas Abajo",
+          "municipio": "San José la Arada",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 20,
+          "lat": 14.672109,
+          "lon": -89.59165,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 0,
+            "Hogares / familias": 43
+          },
+          "poblacion_total_estimada": 43,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Ecofiltro, kit de higiene y capacitaciones": 0
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Mixta"
+        },
+        {
+          "codigo_lugar": "san_jose_la_arada_la_joya",
+          "lugar_poblado": "La Joya",
+          "municipio": "San José la Arada",
+          "clasificacion": "Caserío",
+          "viviendas_catalogo": 59,
+          "lat": 14.695969,
+          "lon": -89.61785,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 0,
+            "Hogares / familias": 90
+          },
+          "poblacion_total_estimada": 90,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Ecofiltro, kit de higiene y capacitaciones": 0
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Mixta"
+        },
+        {
+          "codigo_lugar": "san_jose_la_arada_la_torera",
+          "lugar_poblado": "La Torera",
+          "municipio": "San José la Arada",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 33,
+          "lat": 14.715114,
+          "lon": -89.6137,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 0,
+            "Hogares / familias": 49
+          },
+          "poblacion_total_estimada": 49,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Ecofiltro, kit de higiene y capacitaciones": 0
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Mixta"
+        },
+        {
+          "codigo_lugar": "san_jose_la_arada_granadillas",
+          "lugar_poblado": "Granadillas",
+          "municipio": "San José la Arada",
+          "clasificacion": "Caserío",
+          "viviendas_catalogo": 6,
+          "lat": 14.725457,
+          "lon": -89.628512,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 0,
+            "Hogares / familias": 9
+          },
+          "poblacion_total_estimada": 9,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Ecofiltro, kit de higiene y capacitaciones": 0
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Mixta"
+        },
+        {
+          "codigo_lugar": "san_jose_la_arada_los_cimientos",
+          "lugar_poblado": "Los Cimientos",
+          "municipio": "San José la Arada",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 204,
+          "lat": 14.689208,
+          "lon": -89.63888,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 0,
+            "Hogares / familias": 140
+          },
+          "poblacion_total_estimada": 140,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Ecofiltro, kit de higiene y capacitaciones": 0
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Mixta"
+        },
+        {
+          "codigo_lugar": "san_jose_la_arada_plan_redondo",
+          "lugar_poblado": "Plan Redondo",
+          "municipio": "San José la Arada",
+          "clasificacion": "Caserío",
+          "viviendas_catalogo": 12,
+          "lat": 14.672144,
+          "lon": -89.56211,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 0,
+            "Hogares / familias": 26
+          },
+          "poblacion_total_estimada": 26,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Ecofiltro, kit de higiene y capacitaciones": 0
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Mixta"
+        },
+        {
+          "codigo_lugar": "san_jose_la_arada_el_rodeo_arriba",
+          "lugar_poblado": "El Rodeo Arriba",
+          "municipio": "San José la Arada",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 27,
+          "lat": 14.68636,
+          "lon": -89.57222,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 17,
+            "Hogares / familias": 17
+          },
+          "poblacion_total_estimada": 17,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Ecofiltro, kit de higiene y capacitaciones": 0
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Mixta"
+        },
+        {
+          "codigo_lugar": "san_jose_la_arada_santa_rosa",
+          "lugar_poblado": "Santa Rosa",
+          "municipio": "San José la Arada",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 116,
+          "lat": 14.690658,
+          "lon": -89.60151,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 0,
+            "Hogares / familias": 145
+          },
+          "poblacion_total_estimada": 145,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Ecofiltro, kit de higiene y capacitaciones": 0
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Mixta"
+        },
+        {
+          "codigo_lugar": "san_jose_la_arada_saspan",
+          "lugar_poblado": "Saspan",
+          "municipio": "San José la Arada",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 205,
+          "lat": 14.710264,
+          "lon": -89.54798,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 0,
+            "Hogares / familias": 148
+          },
+          "poblacion_total_estimada": 148,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Ecofiltro, kit de higiene y capacitaciones": 0
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Mixta"
+        },
+        {
+          "codigo_lugar": "san_jose_la_arada_tashan",
+          "lugar_poblado": "Tashan",
+          "municipio": "San José la Arada",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 11,
+          "lat": 14.744297,
+          "lon": -89.61025,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 0,
+            "Hogares / familias": 12
+          },
+          "poblacion_total_estimada": 12,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Ecofiltro, kit de higiene y capacitaciones": 0
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Mixta"
+        },
+        {
+          "codigo_lugar": "san_jose_la_arada_tierra_colorada",
+          "lugar_poblado": "Tierra Colorada",
+          "municipio": "San José la Arada",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 189,
+          "lat": 14.74723,
+          "lon": -89.5757,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 0,
+            "Hogares / familias": 124
+          },
+          "poblacion_total_estimada": 124,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Ecofiltro, kit de higiene y capacitaciones": 0
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Mixta"
+        },
+        {
+          "codigo_lugar": "san_jose_la_arada_tontol",
+          "lugar_poblado": "Tontol",
+          "municipio": "San José la Arada",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 5,
+          "lat": 14.74448,
+          "lon": -89.641699,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 0,
+            "Hogares / familias": 70
+          },
+          "poblacion_total_estimada": 70,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Ecofiltro, kit de higiene y capacitaciones": 0
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Mixta"
+        },
+        {
+          "codigo_lugar": "san_jose_la_arada_tres_ceibas",
+          "lugar_poblado": "Tres Ceibas",
+          "municipio": "San José la Arada",
+          "clasificacion": "Aldea",
+          "viviendas_catalogo": 11,
+          "lat": 14.692595,
+          "lon": -89.58735,
+          "fuera_catalogo": false,
+          "estado_validacion": "Catálogo territorial",
+          "referencia_lugar": "",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 0,
+            "Hogares / familias": 9
+          },
+          "poblacion_total_estimada": 9,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Ecofiltro, kit de higiene y capacitaciones": 0
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Mixta"
+        }
+      ]
+    },
+    {
+      "organizacion": "Helvetas",
+      "tipo_actor": "ONG internacional",
+      "trabajo_comunitario": "Sí",
+      "pais_origen": "",
+      "contacto": "Virginia Berganza",
+      "nombre_programa": "Respuesta Wash en emergencia de acciones anticipatorias",
+      "tipo_atencion": "Emergencia / respuesta humanitaria",
+      "sector": [
+        "Agua y saneamiento"
+      ],
+      "modalidad": [
+        "Donación en especie",
+        "Capacitación"
+      ],
+      "fecha_inicio": "2026-07-15",
+      "tipo_duracion": "Sí, tiene fecha de finalización definida",
+      "fecha_fin": "2026-11-30",
+      "duracion_aproximada": "",
+      "estado_programa": "Próximo a finalizar",
+      "contraparte_gubernamental": "MSPAS, Municipalidad, Dirección Municipal de la Mujer, Dirección Municipal de SAN",
+      "monto_rango": "Q2,000,000 – Q10,000,000",
+      "monto_rango_codigo": "2m_10m",
+      "fuente_financiamiento": [
+        "Donante internacional"
+      ],
+      "espacios_coordinacion": [
+        "CODESAN",
+        "COMUSAN"
+      ],
+      "disposicion_coordinar": "Sí",
+      "beneficiarios_institucionales": {
+        "Centros o puestos de salud": 5,
+        "Municipalidades": 3,
+        "COMUSAN (Comisión Municipal de Seguridad Alimentaria y Nutricional)": 3,
+        "Dirección Municipal de la Mujer": 3
+      },
+      "municipios_cobertura_institucional": [
+        "Esquipulas",
+        "San Jacinto",
+        "San José la Arada"
+      ],
+      "comunidades": [
+        {
+          "codigo_lugar": "adicional:san_jose_la_arada:los_angeles",
+          "lugar_poblado": "Los Angeles",
+          "municipio": "San José la Arada",
+          "clasificacion": null,
+          "viviendas_catalogo": null,
+          "lat": null,
+          "lon": null,
+          "fuera_catalogo": true,
+          "estado_validacion": "Pendiente de validación",
+          "referencia_lugar": "Caserio",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 0,
+            "Hogares / familias": 90
+          },
+          "poblacion_total_estimada": 90,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Ecofiltro, kit de higiene y capacitaciones": 90
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Mixta"
+        },
+        {
+          "codigo_lugar": "adicional:san_jose_la_arada:guacamayas_arriba",
+          "lugar_poblado": "Guacamayas Arriba",
+          "municipio": "San José la Arada",
+          "clasificacion": null,
+          "viviendas_catalogo": null,
+          "lat": null,
+          "lon": null,
+          "fuera_catalogo": true,
+          "estado_validacion": "Pendiente de validación",
+          "referencia_lugar": "Aldea",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 0,
+            "Hogares / familias": 27
+          },
+          "poblacion_total_estimada": 27,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Ecofiltro, kit de higiene y capacitaciones": 27
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "adicional:san_jose_la_arada:paraiso",
+          "lugar_poblado": "Paraiso",
+          "municipio": "San José la Arada",
+          "clasificacion": null,
+          "viviendas_catalogo": null,
+          "lat": null,
+          "lon": null,
+          "fuera_catalogo": true,
+          "estado_validacion": "Pendiente de validación",
+          "referencia_lugar": "Aldea",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 0,
+            "Hogares / familias": 90
+          },
+          "poblacion_total_estimada": 90,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Ecofiltro, kit de higiene y capacitaciones": 90
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "adicional:san_jose_la_arada:padre_juan_barnoswki",
+          "lugar_poblado": "Padre Juan Barnoswki",
+          "municipio": "San José la Arada",
+          "clasificacion": null,
+          "viviendas_catalogo": null,
+          "lat": null,
+          "lon": null,
+          "fuera_catalogo": true,
+          "estado_validacion": "Pendiente de validación",
+          "referencia_lugar": "Aldea",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 0,
+            "Hogares / familias": 86
+          },
+          "poblacion_total_estimada": 86,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Filtros de agua segura": 86
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "adicional:san_jose_la_arada:el_naranjo",
+          "lugar_poblado": "El Naranjo",
+          "municipio": "San José la Arada",
+          "clasificacion": null,
+          "viviendas_catalogo": null,
+          "lat": null,
+          "lon": null,
+          "fuera_catalogo": true,
+          "estado_validacion": "Pendiente de validación",
+          "referencia_lugar": "Aldea",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 0,
+            "Hogares / familias": 50
+          },
+          "poblacion_total_estimada": 50,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Filtro de agua segura": 50
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "adicional:san_jose_la_arada:palmarcito",
+          "lugar_poblado": "Palmarcito",
+          "municipio": "San José la Arada",
+          "clasificacion": null,
+          "viviendas_catalogo": null,
+          "lat": null,
+          "lon": null,
+          "fuera_catalogo": true,
+          "estado_validacion": "Pendiente de validación",
+          "referencia_lugar": "Aldea",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 0,
+            "Hogares / familias": 21
+          },
+          "poblacion_total_estimada": 21,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Filtros de agua segura": 21
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Rural"
+        },
+        {
+          "codigo_lugar": "adicional:san_jose_la_arada:la_estaci_n",
+          "lugar_poblado": "La Estación",
+          "municipio": "San José la Arada",
+          "clasificacion": null,
+          "viviendas_catalogo": null,
+          "lat": null,
+          "lon": null,
+          "fuera_catalogo": true,
+          "estado_validacion": "Pendiente de validación",
+          "referencia_lugar": "Barrio",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 0,
+            "Hogares / familias": 65
+          },
+          "poblacion_total_estimada": 65,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Filtros de agua segura": 65
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Mixta"
+        },
+        {
+          "codigo_lugar": "adicional:san_jose_la_arada:el_mirador",
+          "lugar_poblado": "El Mirador",
+          "municipio": "San José la Arada",
+          "clasificacion": null,
+          "viviendas_catalogo": null,
+          "lat": null,
+          "lon": null,
+          "fuera_catalogo": true,
+          "estado_validacion": "Pendiente de validación",
+          "referencia_lugar": "Barrio",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 0,
+            "Hogares / familias": 40
+          },
+          "poblacion_total_estimada": 40,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Filtros de agua segura": 40
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Mixta"
+        },
+        {
+          "codigo_lugar": "adicional:san_jose_la_arada:barrio_nuevo",
+          "lugar_poblado": "Barrio Nuevo",
+          "municipio": "San José la Arada",
+          "clasificacion": null,
+          "viviendas_catalogo": null,
+          "lat": null,
+          "lon": null,
+          "fuera_catalogo": true,
+          "estado_validacion": "Pendiente de validación",
+          "referencia_lugar": "Barrio",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 0,
+            "Hogares / familias": 65
+          },
+          "poblacion_total_estimada": 65,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Filtros de agua segura": 65
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Mixta"
+        },
+        {
+          "codigo_lugar": "adicional:san_jose_la_arada:las_brisas",
+          "lugar_poblado": "Las Brisas",
+          "municipio": "San José la Arada",
+          "clasificacion": null,
+          "viviendas_catalogo": null,
+          "lat": null,
+          "lon": null,
+          "fuera_catalogo": true,
+          "estado_validacion": "Pendiente de validación",
+          "referencia_lugar": "Barrio",
+          "poblacion_meta": [
+            "Hogares con niñez menor de 5 años",
+            "Hogares / familias"
+          ],
+          "datos_cuantitativos_poblacion": "Sí",
+          "pm_cantidades": {
+            "Hogares con niñez menor de 5 años": 70,
+            "Hogares / familias": 70
+          },
+          "poblacion_total_estimada": 70,
+          "accion_comunidad": [
+            "Otro"
+          ],
+          "ac_cantidades": {
+            "Filtros de agua segura": 70
+          },
+          "etnia": [
+            "Ladino/Mestizo"
+          ],
+          "grupo_etario": [
+            "Niñez (0-12 años)",
+            "Adolescencia (13-17 años)",
+            "Juventud (18-29 años)",
+            "Adultez (30-59 años)",
+            "Adulto mayor (60+ años)"
+          ],
+          "area": "Mixta"
+        }
+      ]
     }
   ],
   "municipios": [
@@ -11102,6 +13203,7 @@
   "resumen_municipio": {
     "Camotán": {
       "organizaciones": [
+        "Asociación Paz y Bien Delegación Guatemala",
         "Asociación Regional Campesina Ch'ortí' -ASORECH-",
         "Asociación de Servicios y Desarrollo Socioeconómico de Chiquimula -ASEDECHI-",
         "Banco Aleman- KfW",
@@ -11110,26 +13212,26 @@
         "Fundación Ayuda en Acción Guatemala",
         "Unbound"
       ],
-      "total_programas": 8,
-      "comunidades_cubiertas": 33,
+      "total_programas": 9,
+      "comunidades_cubiertas": 34,
       "comunidades_total_catalogo": 155,
       "inversion_estimada": 0,
       "sectores": {
         "Seguridad alimentaria y nutricional": 5,
         "Gobernanza y fortalecimiento institucional": 4,
-        "Desarrollo económico local": 5,
+        "Desarrollo económico local": 6,
         "Ambiente y cambio climático": 6,
-        "Género": 5,
+        "Género": 6,
         "Educación": 3,
-        "Protección (niñez, migrantes, víctimas de violencia)": 2,
-        "Salud": 1,
+        "Protección (niñez, migrantes, víctimas de violencia)": 3,
+        "Salud": 2,
         "Agua y saneamiento": 2,
         "Migración y movilidad humana": 1,
         "Infraestructura": 3
       },
       "estado": {
         "Próximo a finalizar": 1,
-        "En ejecución": 5,
+        "En ejecución": 6,
         "Finalizado": 2
       },
       "instituciones": {
@@ -11144,8 +13246,8 @@
           "con_cantidad": true
         },
         "Municipalidades": {
-          "registros": 4,
-          "cantidad": 17,
+          "registros": 5,
+          "cantidad": 21,
           "con_cantidad": true
         },
         "Oficina Municipal de Juventud": {
@@ -11182,38 +13284,45 @@
           "registros": 1,
           "cantidad": 5,
           "con_cantidad": true
+        },
+        "Redes de Derivación de Víctimas": {
+          "registros": 1,
+          "cantidad": 3,
+          "con_cantidad": true
         }
       },
       "fuente_financiamiento": {
-        "Donante internacional": 8,
+        "Donante internacional": 9,
         "Fondos propios": 1
       },
       "lugares_adicionales_reportados": 0
     },
     "Chiquimula": {
       "organizaciones": [
+        "Asociación Paz y Bien Delegación Guatemala",
         "Asociación Santiago Jocotán, ONG",
         "Asociación de Servicios y Desarrollo Socioeconómico de Chiquimula -ASEDECHI-",
         "FAO Naciones Unidas",
         "Organización de las Naciones Unidas para Alimentación y Agricultura -FAO-"
       ],
-      "total_programas": 4,
+      "total_programas": 5,
       "comunidades_cubiertas": 13,
       "comunidades_total_catalogo": 124,
       "inversion_estimada": 0,
       "sectores": {
-        "Desarrollo económico local": 3,
-        "Salud": 1,
+        "Desarrollo económico local": 4,
+        "Salud": 2,
         "Seguridad alimentaria y nutricional": 3,
         "Agua y saneamiento": 2,
         "Ambiente y cambio climático": 3,
         "Infraestructura": 2,
         "Gobernanza y fortalecimiento institucional": 2,
         "Reducción de riesgo ante desastres": 1,
-        "Género": 1
+        "Género": 2,
+        "Protección (niñez, migrantes, víctimas de violencia)": 1
       },
       "estado": {
-        "En ejecución": 2,
+        "En ejecución": 3,
         "Próximo a finalizar": 1,
         "Finalizado": 1
       },
@@ -11224,8 +13333,8 @@
           "con_cantidad": true
         },
         "Municipalidades": {
-          "registros": 2,
-          "cantidad": 8,
+          "registros": 3,
+          "cantidad": 12,
           "con_cantidad": true
         },
         "Oficina Municipal de Gestión Integral de Riesgo de Desastres (GIRD)": {
@@ -11257,11 +13366,16 @@
           "registros": 1,
           "cantidad": 5,
           "con_cantidad": true
+        },
+        "Redes de Derivación de Víctimas": {
+          "registros": 1,
+          "cantidad": 3,
+          "con_cantidad": true
         }
       },
       "fuente_financiamiento": {
         "Fondos propios": 1,
-        "Donante internacional": 3
+        "Donante internacional": 4
       },
       "lugares_adicionales_reportados": 2
     },
@@ -11307,57 +13421,101 @@
     },
     "Esquipulas": {
       "organizaciones": [
+        "Asociación Paz y Bien Delegación Guatemala",
+        "Helvetas",
         "Organization American States"
       ],
-      "total_programas": 1,
-      "comunidades_cubiertas": 0,
+      "total_programas": 4,
+      "comunidades_cubiertas": 1,
       "comunidades_total_catalogo": 171,
       "inversion_estimada": 0,
       "sectores": {
-        "Agua y saneamiento": 1,
+        "Agua y saneamiento": 3,
         "Ambiente y cambio climático": 1,
         "Gobernanza y fortalecimiento institucional": 1,
-        "Desarrollo económico local": 1,
-        "Género": 1
+        "Desarrollo económico local": 2,
+        "Género": 2,
+        "Salud": 1,
+        "Protección (niñez, migrantes, víctimas de violencia)": 1
       },
       "estado": {
-        "Próximo a finalizar": 1
+        "Próximo a finalizar": 3,
+        "En ejecución": 1
       },
       "instituciones": {
         "Municipalidades": {
+          "registros": 4,
+          "cantidad": 13,
+          "con_cantidad": true
+        },
+        "Redes de Derivación de Víctimas": {
+          "registros": 1,
+          "cantidad": 3,
+          "con_cantidad": true
+        },
+        "Centros o puestos de salud": {
+          "registros": 2,
+          "cantidad": 10,
+          "con_cantidad": true
+        },
+        "COMUSAN (Comisión Municipal de Seguridad Alimentaria y Nutricional)": {
+          "registros": 2,
+          "cantidad": 6,
+          "con_cantidad": true
+        },
+        "Oficina/Dirección Municipal de Seguridad Alimentaria y Nutricional (SAN)": {
+          "registros": 1,
+          "cantidad": 3,
+          "con_cantidad": true
+        },
+        "Dirección Municipal de la Mujer": {
+          "registros": 2,
+          "cantidad": 6,
+          "con_cantidad": true
+        }
+      },
+      "fuente_financiamiento": {
+        "Donante internacional": 4
+      },
+      "lugares_adicionales_reportados": 0
+    },
+    "Ipala": {
+      "organizaciones": [
+        "Asociación Paz y Bien Delegación Guatemala",
+        "Asociación Regional Campesina Ch'ortí' -ASORECH-",
+        "Banco Aleman- KfW"
+      ],
+      "total_programas": 3,
+      "comunidades_cubiertas": 3,
+      "comunidades_total_catalogo": 80,
+      "inversion_estimada": 0,
+      "sectores": {
+        "Seguridad alimentaria y nutricional": 2,
+        "Desarrollo económico local": 2,
+        "Ambiente y cambio climático": 1,
+        "Gobernanza y fortalecimiento institucional": 1,
+        "Género": 2,
+        "Infraestructura": 1,
+        "Salud": 1,
+        "Protección (niñez, migrantes, víctimas de violencia)": 1
+      },
+      "estado": {
+        "En ejecución": 3
+      },
+      "instituciones": {
+        "Municipalidades": {
+          "registros": 1,
+          "cantidad": 4,
+          "con_cantidad": true
+        },
+        "Redes de Derivación de Víctimas": {
           "registros": 1,
           "cantidad": 3,
           "con_cantidad": true
         }
       },
       "fuente_financiamiento": {
-        "Donante internacional": 1
-      },
-      "lugares_adicionales_reportados": 0
-    },
-    "Ipala": {
-      "organizaciones": [
-        "Asociación Regional Campesina Ch'ortí' -ASORECH-",
-        "Banco Aleman- KfW"
-      ],
-      "total_programas": 2,
-      "comunidades_cubiertas": 2,
-      "comunidades_total_catalogo": 80,
-      "inversion_estimada": 0,
-      "sectores": {
-        "Seguridad alimentaria y nutricional": 2,
-        "Desarrollo económico local": 1,
-        "Ambiente y cambio climático": 1,
-        "Gobernanza y fortalecimiento institucional": 1,
-        "Género": 1,
-        "Infraestructura": 1
-      },
-      "estado": {
-        "En ejecución": 2
-      },
-      "instituciones": {},
-      "fuente_financiamiento": {
-        "Donante internacional": 2
+        "Donante internacional": 3
       },
       "lugares_adicionales_reportados": 0
     },
@@ -11536,88 +13694,163 @@
     },
     "Quezaltepeque": {
       "organizaciones": [
+        "Asociación Paz y Bien Delegación Guatemala",
         "Banco Aleman- KfW"
       ],
-      "total_programas": 1,
-      "comunidades_cubiertas": 5,
+      "total_programas": 2,
+      "comunidades_cubiertas": 14,
       "comunidades_total_catalogo": 99,
       "inversion_estimada": 0,
       "sectores": {
         "Seguridad alimentaria y nutricional": 1,
         "Ambiente y cambio climático": 1,
         "Gobernanza y fortalecimiento institucional": 1,
-        "Género": 1,
-        "Infraestructura": 1
+        "Género": 2,
+        "Infraestructura": 1,
+        "Salud": 1,
+        "Desarrollo económico local": 1,
+        "Protección (niñez, migrantes, víctimas de violencia)": 1
       },
       "estado": {
-        "En ejecución": 1
-      },
-      "instituciones": {},
-      "fuente_financiamiento": {
-        "Donante internacional": 1
-      },
-      "lugares_adicionales_reportados": 0
-    },
-    "San Jacinto": {
-      "organizaciones": [
-        "Asociación Regional Campesina Ch'ortí' -ASORECH-",
-        "Catholic Relief Services",
-        "Cáritas Zacapa"
-      ],
-      "total_programas": 3,
-      "comunidades_cubiertas": 8,
-      "comunidades_total_catalogo": 44,
-      "inversion_estimada": 0,
-      "sectores": {
-        "Seguridad alimentaria y nutricional": 3,
-        "Desarrollo económico local": 2,
-        "Gobernanza y fortalecimiento institucional": 1,
-        "Infraestructura": 1
-      },
-      "estado": {
-        "En ejecución": 1,
-        "Finalizado": 1,
-        "Próximo a finalizar": 1
-      },
-      "instituciones": {},
-      "fuente_financiamiento": {
-        "Donante internacional": 3
-      },
-      "lugares_adicionales_reportados": 0
-    },
-    "San José la Arada": {
-      "organizaciones": [
-        "Organización de las Naciones Unidas para Alimentación y Agricultura -FAO-"
-      ],
-      "total_programas": 1,
-      "comunidades_cubiertas": 4,
-      "comunidades_total_catalogo": 46,
-      "inversion_estimada": 0,
-      "sectores": {
-        "Seguridad alimentaria y nutricional": 1,
-        "Ambiente y cambio climático": 1,
-        "Gobernanza y fortalecimiento institucional": 1,
-        "Reducción de riesgo ante desastres": 1
-      },
-      "estado": {
-        "En ejecución": 1
+        "En ejecución": 2
       },
       "instituciones": {
         "Municipalidades": {
           "registros": 1,
-          "cantidad": 3,
+          "cantidad": 4,
           "con_cantidad": true
         },
-        "Oficina Municipal de Gestión Integral de Riesgo de Desastres (GIRD)": {
+        "Redes de Derivación de Víctimas": {
           "registros": 1,
           "cantidad": 3,
           "con_cantidad": true
         }
       },
       "fuente_financiamiento": {
-        "Donante internacional": 1
+        "Donante internacional": 2
       },
       "lugares_adicionales_reportados": 0
+    },
+    "San Jacinto": {
+      "organizaciones": [
+        "Asociación Paz y Bien Delegación Guatemala",
+        "Asociación Regional Campesina Ch'ortí' -ASORECH-",
+        "Catholic Relief Services",
+        "Cáritas Zacapa",
+        "Helvetas"
+      ],
+      "total_programas": 6,
+      "comunidades_cubiertas": 10,
+      "comunidades_total_catalogo": 44,
+      "inversion_estimada": 0,
+      "sectores": {
+        "Seguridad alimentaria y nutricional": 3,
+        "Desarrollo económico local": 3,
+        "Gobernanza y fortalecimiento institucional": 1,
+        "Infraestructura": 1,
+        "Salud": 1,
+        "Género": 1,
+        "Protección (niñez, migrantes, víctimas de violencia)": 1,
+        "Agua y saneamiento": 2
+      },
+      "estado": {
+        "En ejecución": 2,
+        "Finalizado": 1,
+        "Próximo a finalizar": 3
+      },
+      "instituciones": {
+        "Municipalidades": {
+          "registros": 3,
+          "cantidad": 10,
+          "con_cantidad": true
+        },
+        "Redes de Derivación de Víctimas": {
+          "registros": 1,
+          "cantidad": 3,
+          "con_cantidad": true
+        },
+        "Centros o puestos de salud": {
+          "registros": 2,
+          "cantidad": 10,
+          "con_cantidad": true
+        },
+        "COMUSAN (Comisión Municipal de Seguridad Alimentaria y Nutricional)": {
+          "registros": 2,
+          "cantidad": 6,
+          "con_cantidad": true
+        },
+        "Oficina/Dirección Municipal de Seguridad Alimentaria y Nutricional (SAN)": {
+          "registros": 1,
+          "cantidad": 3,
+          "con_cantidad": true
+        },
+        "Dirección Municipal de la Mujer": {
+          "registros": 2,
+          "cantidad": 6,
+          "con_cantidad": true
+        }
+      },
+      "fuente_financiamiento": {
+        "Donante internacional": 6
+      },
+      "lugares_adicionales_reportados": 0
+    },
+    "San José la Arada": {
+      "organizaciones": [
+        "Helvetas",
+        "Organización de las Naciones Unidas para Alimentación y Agricultura -FAO-"
+      ],
+      "total_programas": 3,
+      "comunidades_cubiertas": 19,
+      "comunidades_total_catalogo": 46,
+      "inversion_estimada": 0,
+      "sectores": {
+        "Seguridad alimentaria y nutricional": 1,
+        "Ambiente y cambio climático": 1,
+        "Gobernanza y fortalecimiento institucional": 1,
+        "Reducción de riesgo ante desastres": 1,
+        "Agua y saneamiento": 2
+      },
+      "estado": {
+        "En ejecución": 1,
+        "Próximo a finalizar": 2
+      },
+      "instituciones": {
+        "Municipalidades": {
+          "registros": 3,
+          "cantidad": 9,
+          "con_cantidad": true
+        },
+        "Oficina Municipal de Gestión Integral de Riesgo de Desastres (GIRD)": {
+          "registros": 1,
+          "cantidad": 3,
+          "con_cantidad": true
+        },
+        "Centros o puestos de salud": {
+          "registros": 2,
+          "cantidad": 10,
+          "con_cantidad": true
+        },
+        "COMUSAN (Comisión Municipal de Seguridad Alimentaria y Nutricional)": {
+          "registros": 2,
+          "cantidad": 6,
+          "con_cantidad": true
+        },
+        "Oficina/Dirección Municipal de Seguridad Alimentaria y Nutricional (SAN)": {
+          "registros": 1,
+          "cantidad": 3,
+          "con_cantidad": true
+        },
+        "Dirección Municipal de la Mujer": {
+          "registros": 2,
+          "cantidad": 6,
+          "con_cantidad": true
+        }
+      },
+      "fuente_financiamiento": {
+        "Donante internacional": 3
+      },
+      "lugares_adicionales_reportados": 11
     },
     "San Juan Ermita": {
       "organizaciones": [
@@ -11708,23 +13941,24 @@
   },
   "matriz_sector_municipio": {
     "Desarrollo económico local": {
-      "Chiquimula": 3,
-      "Jocotán": 7,
       "Olopa": 5,
-      "Camotán": 5,
+      "Chiquimula": 4,
+      "Jocotán": 7,
+      "Camotán": 6,
       "Concepción las Minas": 2,
-      "Esquipulas": 1,
-      "Ipala": 1,
-      "San Jacinto": 2,
-      "San Juan Ermita": 3
+      "Esquipulas": 2,
+      "Ipala": 2,
+      "San Jacinto": 3,
+      "San Juan Ermita": 3,
+      "Quezaltepeque": 1
     },
     "Seguridad alimentaria y nutricional": {
       "Jocotán": 6,
       "Camotán": 5,
       "Chiquimula": 3,
-      "Concepción las Minas": 2,
       "Ipala": 2,
       "Olopa": 6,
+      "Concepción las Minas": 2,
       "San Jacinto": 3,
       "San Juan Ermita": 8,
       "Quezaltepeque": 1,
@@ -11733,12 +13967,12 @@
     "Gobernanza y fortalecimiento institucional": {
       "Jocotán": 5,
       "Camotán": 4,
-      "Concepción las Minas": 2,
       "Olopa": 5,
+      "Concepción las Minas": 2,
       "Esquipulas": 1,
       "Ipala": 1,
-      "San Juan Ermita": 4,
       "Quezaltepeque": 1,
+      "San Juan Ermita": 4,
       "Chiquimula": 2,
       "San José la Arada": 1,
       "San Jacinto": 1
@@ -11747,8 +13981,8 @@
       "Jocotán": 7,
       "Camotán": 6,
       "Chiquimula": 3,
-      "Concepción las Minas": 2,
       "Olopa": 4,
+      "Concepción las Minas": 2,
       "Esquipulas": 1,
       "San Juan Ermita": 5,
       "Ipala": 1,
@@ -11757,39 +13991,46 @@
     },
     "Género": {
       "Jocotán": 6,
-      "Camotán": 5,
-      "Concepción las Minas": 2,
+      "Camotán": 6,
       "Olopa": 3,
-      "Esquipulas": 1,
+      "Concepción las Minas": 2,
+      "Esquipulas": 2,
       "San Juan Ermita": 4,
-      "Ipala": 1,
-      "Quezaltepeque": 1,
-      "Chiquimula": 1
+      "Ipala": 2,
+      "Quezaltepeque": 2,
+      "Chiquimula": 2,
+      "San Jacinto": 1
     },
     "Salud": {
-      "Chiquimula": 1,
+      "Chiquimula": 2,
       "Jocotán": 2,
-      "Camotán": 1,
-      "San Juan Ermita": 2
+      "Camotán": 2,
+      "San Juan Ermita": 2,
+      "Ipala": 1,
+      "San Jacinto": 1,
+      "Quezaltepeque": 1,
+      "Esquipulas": 1
     },
     "Agua y saneamiento": {
       "Chiquimula": 2,
-      "Concepción las Minas": 1,
       "Olopa": 4,
-      "Esquipulas": 1,
+      "Concepción las Minas": 1,
+      "Esquipulas": 3,
       "San Juan Ermita": 4,
       "Jocotán": 3,
-      "Camotán": 2
+      "Camotán": 2,
+      "San Jacinto": 2,
+      "San José la Arada": 2
     },
     "Infraestructura": {
       "Chiquimula": 2,
-      "Jocotán": 3,
       "Ipala": 1,
-      "San Juan Ermita": 3,
-      "Quezaltepeque": 1,
+      "Camotán": 3,
       "Olopa": 3,
       "Concepción las Minas": 1,
-      "Camotán": 3,
+      "Quezaltepeque": 1,
+      "Jocotán": 3,
+      "San Juan Ermita": 3,
       "San Jacinto": 1
     },
     "Educación": {
@@ -11799,8 +14040,13 @@
     },
     "Protección (niñez, migrantes, víctimas de violencia)": {
       "Jocotán": 4,
-      "Camotán": 2,
-      "San Juan Ermita": 2
+      "Camotán": 3,
+      "San Juan Ermita": 2,
+      "Ipala": 1,
+      "San Jacinto": 1,
+      "Quezaltepeque": 1,
+      "Esquipulas": 1,
+      "Chiquimula": 1
     },
     "Violencia basada en género": {},
     "Migración y movilidad humana": {
@@ -12615,13 +14861,6 @@
       "lon": -89.609686
     },
     {
-      "codigo_lugar": "san_jose_la_arada_cerro_de_cal",
-      "lugar_poblado": "Cerro De Cal",
-      "municipio": "San José la Arada",
-      "lat": 14.692697,
-      "lon": -89.56114
-    },
-    {
       "codigo_lugar": "san_jose_la_arada_chilar",
       "lugar_poblado": "Chilar",
       "municipio": "San José la Arada",
@@ -12650,25 +14889,11 @@
       "lon": -89.640957
     },
     {
-      "codigo_lugar": "san_jose_la_arada_el_carrizal",
-      "lugar_poblado": "El Carrizal",
-      "municipio": "San José la Arada",
-      "lat": 14.720346,
-      "lon": -89.55651
-    },
-    {
       "codigo_lugar": "san_jose_la_arada_el_carrizal_2",
       "lugar_poblado": "El Carrizal",
       "municipio": "San José la Arada",
       "lat": 14.720346,
       "lon": -89.55651
-    },
-    {
-      "codigo_lugar": "san_jose_la_arada_chucte",
-      "lugar_poblado": "Chucte",
-      "municipio": "San José la Arada",
-      "lat": 14.694919,
-      "lon": -89.55307
     },
     {
       "codigo_lugar": "san_jose_la_arada_el_conacaste",
@@ -12706,39 +14931,11 @@
       "lon": -89.626002
     },
     {
-      "codigo_lugar": "san_jose_la_arada_el_potrero",
-      "lugar_poblado": "El Potrero",
-      "municipio": "San José la Arada",
-      "lat": 14.674605,
-      "lon": -89.57864
-    },
-    {
-      "codigo_lugar": "san_jose_la_arada_el_rodeo_abajo",
-      "lugar_poblado": "El Rodeo Abajo",
-      "municipio": "San José la Arada",
-      "lat": 14.681221,
-      "lon": -89.57813
-    },
-    {
       "codigo_lugar": "san_jose_la_arada_el_salto",
       "lugar_poblado": "El Salto",
       "municipio": "San José la Arada",
       "lat": 14.689827,
       "lon": -89.652593
-    },
-    {
-      "codigo_lugar": "san_jose_la_arada_guacamayas_abajo",
-      "lugar_poblado": "Guacamayas Abajo",
-      "municipio": "San José la Arada",
-      "lat": 14.672109,
-      "lon": -89.59165
-    },
-    {
-      "codigo_lugar": "san_jose_la_arada_la_joya",
-      "lugar_poblado": "La Joya",
-      "municipio": "San José la Arada",
-      "lat": 14.695969,
-      "lon": -89.61785
     },
     {
       "codigo_lugar": "san_jose_la_arada_joyitas",
@@ -12762,13 +14959,6 @@
       "lon": -89.633439
     },
     {
-      "codigo_lugar": "san_jose_la_arada_granadillas",
-      "lugar_poblado": "Granadillas",
-      "municipio": "San José la Arada",
-      "lat": 14.725457,
-      "lon": -89.628512
-    },
-    {
       "codigo_lugar": "san_jose_la_arada_los_encuentros",
       "lugar_poblado": "Los Encuentros",
       "municipio": "San José la Arada",
@@ -12783,25 +14973,11 @@
       "lon": -89.566177
     },
     {
-      "codigo_lugar": "san_jose_la_arada_plan_redondo",
-      "lugar_poblado": "Plan Redondo",
-      "municipio": "San José la Arada",
-      "lat": 14.672144,
-      "lon": -89.56211
-    },
-    {
       "codigo_lugar": "san_jose_la_arada_quebrada_de_lopez",
       "lugar_poblado": "Quebrada De Lopez",
       "municipio": "San José la Arada",
       "lat": 14.711767,
       "lon": -89.582593
-    },
-    {
-      "codigo_lugar": "san_jose_la_arada_el_rodeo_arriba",
-      "lugar_poblado": "El Rodeo Arriba",
-      "municipio": "San José la Arada",
-      "lat": 14.68636,
-      "lon": -89.57222
     },
     {
       "codigo_lugar": "san_jose_la_arada_san_miguel",
@@ -12818,32 +14994,11 @@
       "lon": -89.570854
     },
     {
-      "codigo_lugar": "san_jose_la_arada_saspan",
-      "lugar_poblado": "Saspan",
-      "municipio": "San José la Arada",
-      "lat": 14.710264,
-      "lon": -89.54798
-    },
-    {
       "codigo_lugar": "san_jose_la_arada_tambor",
       "lugar_poblado": "Tambor",
       "municipio": "San José la Arada",
       "lat": 14.72937,
       "lon": -89.640433
-    },
-    {
-      "codigo_lugar": "san_jose_la_arada_tashan",
-      "lugar_poblado": "Tashan",
-      "municipio": "San José la Arada",
-      "lat": 14.744297,
-      "lon": -89.61025
-    },
-    {
-      "codigo_lugar": "san_jose_la_arada_tierra_colorada",
-      "lugar_poblado": "Tierra Colorada",
-      "municipio": "San José la Arada",
-      "lat": 14.74723,
-      "lon": -89.5757
     },
     {
       "codigo_lugar": "san_jose_la_arada_tobar",
@@ -12853,25 +15008,11 @@
       "lon": -89.65486
     },
     {
-      "codigo_lugar": "san_jose_la_arada_tontol",
-      "lugar_poblado": "Tontol",
-      "municipio": "San José la Arada",
-      "lat": 14.74448,
-      "lon": -89.641699
-    },
-    {
       "codigo_lugar": "san_jose_la_arada_tontol_2",
       "lugar_poblado": "Tontol",
       "municipio": "San José la Arada",
       "lat": 14.74709,
       "lon": -89.649813
-    },
-    {
-      "codigo_lugar": "san_jose_la_arada_tres_ceibas",
-      "lugar_poblado": "Tres Ceibas",
-      "municipio": "San José la Arada",
-      "lat": 14.692595,
-      "lon": -89.58735
     },
     {
       "codigo_lugar": "san_jose_la_arada_el_jute",
@@ -13742,13 +15883,6 @@
       "lon": -89.28198
     },
     {
-      "codigo_lugar": "camotan_cumbre_de_nenoja",
-      "lugar_poblado": "Cumbre De Nenoja",
-      "municipio": "Camotán",
-      "lat": 14.81601,
-      "lon": -89.30512
-    },
-    {
       "codigo_lugar": "camotan_nuevo_lantiquin",
       "lugar_poblado": "Nuevo Lantiquin",
       "municipio": "Camotán",
@@ -14615,13 +16749,6 @@
       "municipio": "Esquipulas",
       "lat": 14.632794,
       "lon": -89.24592
-    },
-    {
-      "codigo_lugar": "esquipulas_cafetales",
-      "lugar_poblado": "Cafetales",
-      "municipio": "Esquipulas",
-      "lat": 14.626864,
-      "lon": -89.16952
     },
     {
       "codigo_lugar": "esquipulas_canada_del_pino",
@@ -16290,13 +18417,6 @@
       "lon": -89.44493
     },
     {
-      "codigo_lugar": "quezaltepeque_chiramay",
-      "lugar_poblado": "Chiramay",
-      "municipio": "Quezaltepeque",
-      "lat": 14.624076,
-      "lon": -89.37289
-    },
-    {
       "codigo_lugar": "quezaltepeque_cimarron",
       "lugar_poblado": "Cimarron",
       "municipio": "Quezaltepeque",
@@ -16409,32 +18529,11 @@
       "lon": -89.51807
     },
     {
-      "codigo_lugar": "quezaltepeque_estanzuela_abajo",
-      "lugar_poblado": "Estanzuela Abajo",
-      "municipio": "Quezaltepeque",
-      "lat": 14.613043,
-      "lon": -89.50451
-    },
-    {
-      "codigo_lugar": "quezaltepeque_estanzuela_arriba",
-      "lugar_poblado": "Estanzuela Arriba",
-      "municipio": "Quezaltepeque",
-      "lat": 14.594376,
-      "lon": -89.51768
-    },
-    {
       "codigo_lugar": "quezaltepeque_el_guayabo",
       "lugar_poblado": "El Guayabo",
       "municipio": "Quezaltepeque",
       "lat": 14.597084,
       "lon": -89.50911
-    },
-    {
-      "codigo_lugar": "quezaltepeque_javillal",
-      "lugar_poblado": "Javillal",
-      "municipio": "Quezaltepeque",
-      "lat": 14.612837,
-      "lon": -89.51878
     },
     {
       "codigo_lugar": "quezaltepeque_jicaro",
@@ -16493,13 +18592,6 @@
       "lon": -89.39937
     },
     {
-      "codigo_lugar": "quezaltepeque_llano_grande",
-      "lugar_poblado": "Llano Grande",
-      "municipio": "Quezaltepeque",
-      "lat": 14.624695,
-      "lon": -89.44196
-    },
-    {
       "codigo_lugar": "quezaltepeque_los_espana",
       "lugar_poblado": "Los España",
       "municipio": "Quezaltepeque",
@@ -16512,13 +18604,6 @@
       "municipio": "Quezaltepeque",
       "lat": 14.613944,
       "lon": -89.48537
-    },
-    {
-      "codigo_lugar": "quezaltepeque_los_planes",
-      "lugar_poblado": "Los Planes",
-      "municipio": "Quezaltepeque",
-      "lat": 14.632043,
-      "lon": -89.38027
     },
     {
       "codigo_lugar": "quezaltepeque_de_la_mora",
@@ -16547,20 +18632,6 @@
       "municipio": "Quezaltepeque",
       "lat": 14.692838,
       "lon": -89.41079
-    },
-    {
-      "codigo_lugar": "quezaltepeque_padre_miguel",
-      "lugar_poblado": "Padre Miguel",
-      "municipio": "Quezaltepeque",
-      "lat": 14.566272,
-      "lon": -89.45407
-    },
-    {
-      "codigo_lugar": "quezaltepeque_el_palmar",
-      "lugar_poblado": "El Palmar",
-      "municipio": "Quezaltepeque",
-      "lat": 14.587537,
-      "lon": -89.49253
     },
     {
       "codigo_lugar": "quezaltepeque_palmilla",
@@ -16673,13 +18744,6 @@
       "municipio": "Quezaltepeque",
       "lat": 14.640203,
       "lon": -89.48457
-    },
-    {
-      "codigo_lugar": "quezaltepeque_salfate",
-      "lugar_poblado": "Salfate",
-      "municipio": "Quezaltepeque",
-      "lat": 14.605443,
-      "lon": -89.45165
     },
     {
       "codigo_lugar": "quezaltepeque_salitre",
@@ -16913,13 +18977,6 @@
       "lon": -89.51696
     },
     {
-      "codigo_lugar": "san_jacinto_el_escalon",
-      "lugar_poblado": "El Escalon",
-      "municipio": "San Jacinto",
-      "lat": 14.689941,
-      "lon": -89.49484
-    },
-    {
       "codigo_lugar": "san_jacinto_el_jocotal",
       "lugar_poblado": "El Jocotal",
       "municipio": "San Jacinto",
@@ -16974,13 +19031,6 @@
       "municipio": "San Jacinto",
       "lat": 14.681587,
       "lon": -89.53585
-    },
-    {
-      "codigo_lugar": "san_jacinto_los_molina",
-      "lugar_poblado": "Los Molina",
-      "municipio": "San Jacinto",
-      "lat": 14.702615,
-      "lon": -89.50671
     },
     {
       "codigo_lugar": "san_jacinto_los_pascual",
@@ -17368,13 +19418,6 @@
       "lon": -89.580751
     },
     {
-      "codigo_lugar": "ipala_el_rosario",
-      "lugar_poblado": "El Rosario",
-      "municipio": "Ipala",
-      "lat": 14.599104,
-      "lon": -89.57294
-    },
-    {
       "codigo_lugar": "ipala_el_sauce",
       "lugar_poblado": "El Sauce",
       "municipio": "Ipala",
@@ -17722,6 +19765,149 @@
       ],
       "programas": [
         "Fortalecimiento de la resiliencia de los hogares en el Corredor Seco de Guatemala para vivir mejor: Aumento de capacidades para la seguridad hídrica y alimentaria"
+      ]
+    },
+    {
+      "codigo_lugar": "adicional:san_jose_la_arada:barrio_nuevo",
+      "lugar_poblado": "Barrio Nuevo",
+      "municipio": "San José la Arada",
+      "referencia_lugar": "Barrio",
+      "estado_validacion": "Pendiente de validación",
+      "organizaciones": [
+        "Helvetas"
+      ],
+      "programas": [
+        "Respuesta Wash en emergencia de acciones anticipatorias"
+      ]
+    },
+    {
+      "codigo_lugar": "adicional:san_jose_la_arada:el_mirador",
+      "lugar_poblado": "El Mirador",
+      "municipio": "San José la Arada",
+      "referencia_lugar": "Barrio",
+      "estado_validacion": "Pendiente de validación",
+      "organizaciones": [
+        "Helvetas"
+      ],
+      "programas": [
+        "Respuesta Wash en emergencia de acciones anticipatorias"
+      ]
+    },
+    {
+      "codigo_lugar": "adicional:san_jose_la_arada:el_naranjo",
+      "lugar_poblado": "El Naranjo",
+      "municipio": "San José la Arada",
+      "referencia_lugar": "Aldea",
+      "estado_validacion": "Pendiente de validación",
+      "organizaciones": [
+        "Helvetas"
+      ],
+      "programas": [
+        "Respuesta Wash en emergencia de acciones anticipatorias"
+      ]
+    },
+    {
+      "codigo_lugar": "adicional:san_jose_la_arada:guacamayas_arriba",
+      "lugar_poblado": "Guacamayas Arriba",
+      "municipio": "San José la Arada",
+      "referencia_lugar": "Aldea",
+      "estado_validacion": "Pendiente de validación",
+      "organizaciones": [
+        "Helvetas"
+      ],
+      "programas": [
+        "Respuesta Wash en emergencia de acciones anticipatorias"
+      ]
+    },
+    {
+      "codigo_lugar": "adicional:san_jose_la_arada:la_estaci_n",
+      "lugar_poblado": "La Estación",
+      "municipio": "San José la Arada",
+      "referencia_lugar": "Barrio",
+      "estado_validacion": "Pendiente de validación",
+      "organizaciones": [
+        "Helvetas"
+      ],
+      "programas": [
+        "Respuesta Wash en emergencia de acciones anticipatorias"
+      ]
+    },
+    {
+      "codigo_lugar": "adicional:san_jose_la_arada:la_linea",
+      "lugar_poblado": "La Linea",
+      "municipio": "San José la Arada",
+      "referencia_lugar": "Caserio",
+      "estado_validacion": "Pendiente de validación",
+      "organizaciones": [
+        "Helvetas"
+      ],
+      "programas": [
+        "Respuesta Wash en emergencia de acciones anticipatorias"
+      ]
+    },
+    {
+      "codigo_lugar": "adicional:san_jose_la_arada:las_brisas",
+      "lugar_poblado": "Las Brisas",
+      "municipio": "San José la Arada",
+      "referencia_lugar": "Barrio",
+      "estado_validacion": "Pendiente de validación",
+      "organizaciones": [
+        "Helvetas"
+      ],
+      "programas": [
+        "Respuesta Wash en emergencia de acciones anticipatorias"
+      ]
+    },
+    {
+      "codigo_lugar": "adicional:san_jose_la_arada:los_angeles",
+      "lugar_poblado": "Los Angeles",
+      "municipio": "San José la Arada",
+      "referencia_lugar": "Caserio",
+      "estado_validacion": "Pendiente de validación",
+      "organizaciones": [
+        "Helvetas"
+      ],
+      "programas": [
+        "Respuesta Wash en emergencia de acciones anticipatorias"
+      ]
+    },
+    {
+      "codigo_lugar": "adicional:san_jose_la_arada:padre_juan_barnoswki",
+      "lugar_poblado": "Padre Juan Barnoswki",
+      "municipio": "San José la Arada",
+      "referencia_lugar": "Aldea",
+      "estado_validacion": "Pendiente de validación",
+      "organizaciones": [
+        "Helvetas"
+      ],
+      "programas": [
+        "Respuesta Wash en emergencia de acciones anticipatorias"
+      ]
+    },
+    {
+      "codigo_lugar": "adicional:san_jose_la_arada:palmarcito",
+      "lugar_poblado": "Palmarcito",
+      "municipio": "San José la Arada",
+      "referencia_lugar": "Aldea",
+      "estado_validacion": "Pendiente de validación",
+      "organizaciones": [
+        "Helvetas"
+      ],
+      "programas": [
+        "Respuesta Wash en emergencia de acciones anticipatorias"
+      ]
+    },
+    {
+      "codigo_lugar": "adicional:san_jose_la_arada:paraiso",
+      "lugar_poblado": "Paraiso",
+      "municipio": "San José la Arada",
+      "referencia_lugar": "Aldea",
+      "estado_validacion": "Pendiente de validación",
+      "organizaciones": [
+        "Helvetas"
+      ],
+      "programas": [
+        "Respuesta Wash en emergencia de acciones anticipatorias"
       ]
     }
   ],
@@ -18752,6 +20938,33 @@
       ]
     },
     {
+      "lugar_poblado": "Las Cebollas",
+      "municipio": "Quezaltepeque",
+      "sector": "Género",
+      "organizaciones": [
+        "Asociación Paz y Bien Delegación Guatemala",
+        "Banco Aleman- KfW"
+      ]
+    },
+    {
+      "lugar_poblado": "Quequexque",
+      "municipio": "Quezaltepeque",
+      "sector": "Género",
+      "organizaciones": [
+        "Asociación Paz y Bien Delegación Guatemala",
+        "Banco Aleman- KfW"
+      ]
+    },
+    {
+      "lugar_poblado": "El Chaparroncito",
+      "municipio": "Ipala",
+      "sector": "Género",
+      "organizaciones": [
+        "Asociación Paz y Bien Delegación Guatemala",
+        "Banco Aleman- KfW"
+      ]
+    },
+    {
       "lugar_poblado": "Minas Arriba",
       "municipio": "San Juan Ermita",
       "sector": "Seguridad alimentaria y nutricional",
@@ -19053,6 +21266,15 @@
       ]
     },
     {
+      "lugar_poblado": "Tizubin",
+      "municipio": "San Jacinto",
+      "sector": "Desarrollo económico local",
+      "organizaciones": [
+        "Asociación Paz y Bien Delegación Guatemala",
+        "Cáritas Zacapa"
+      ]
+    },
+    {
       "lugar_poblado": "Los Coronados",
       "municipio": "San Juan Ermita",
       "sector": "Seguridad alimentaria y nutricional",
@@ -19092,13 +21314,13 @@
       "con_cantidad": true
     },
     "Centros o puestos de salud": {
-      "registros": 4,
-      "cantidad": 4,
+      "registros": 6,
+      "cantidad": 14,
       "con_cantidad": true
     },
     "Municipalidades": {
-      "registros": 10,
-      "cantidad": 28,
+      "registros": 13,
+      "cantidad": 38,
       "con_cantidad": true
     },
     "Oficina Municipal de Juventud": {
@@ -19107,8 +21329,8 @@
       "con_cantidad": true
     },
     "COMUSAN (Comisión Municipal de Seguridad Alimentaria y Nutricional)": {
-      "registros": 6,
-      "cantidad": 34,
+      "registros": 8,
+      "cantidad": 40,
       "con_cantidad": true
     },
     "Mesa Técnica de Agua y Saneamiento -UGAM-": {
@@ -19117,8 +21339,8 @@
       "con_cantidad": true
     },
     "Oficina/Dirección Municipal de Seguridad Alimentaria y Nutricional (SAN)": {
-      "registros": 5,
-      "cantidad": 9,
+      "registros": 6,
+      "cantidad": 12,
       "con_cantidad": true
     },
     "Formación a Red de Derivación del Ministerio Público": {
@@ -19145,19 +21367,29 @@
       "registros": 1,
       "cantidad": 5,
       "con_cantidad": true
+    },
+    "Redes de Derivación de Víctimas": {
+      "registros": 1,
+      "cantidad": 3,
+      "con_cantidad": true
+    },
+    "Dirección Municipal de la Mujer": {
+      "registros": 2,
+      "cantidad": 6,
+      "con_cantidad": true
     }
   },
   "matriz_poblacion_accion": {
     "Mujeres": {
       "Otro": 3,
-      "Emprendimientos": 107,
+      "Emprendimientos": 125,
       "COLRED (Coordinadora Local para la Reducción de Desastres)": 22,
-      "Grupos de Auto Ahorro y Préstamo": 49,
+      "Grupos de Auto Ahorro y Préstamo": 67,
       "Cooperativas o asociaciones productivas": 9,
       "Organizaciones comunitarias / COCODES": 117,
       "Cuadrillas contra incendios": 13,
       "Viveros forestales": 1,
-      "Escuelas / centros educativos": 31,
+      "Escuelas / centros educativos": 49,
       "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)": 40,
       "Sistemas de riego": 26,
       "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)": 83
@@ -19200,7 +21432,8 @@
       "COLRED (Coordinadora Local para la Reducción de Desastres)": 16,
       "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)": 14,
       "Cooperativas o asociaciones productivas": 7,
-      "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)": 57
+      "Infraestructura o actividad productiva agropecuaria (estanques, avícola, acopio, granos, semillas, etc.)": 57,
+      "Otro": 30
     },
     "Pueblos indígenas": {
       "Organizaciones comunitarias / COCODES": 72,
@@ -19238,14 +21471,15 @@
       "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)": 40,
       "Cooperativas o asociaciones productivas": 7,
       "Cuadrillas contra incendios": 12,
-      "Sistemas de riego": 26
+      "Sistemas de riego": 26,
+      "Otro": 30
     },
     "Alumnos / estudiantes": {
-      "Escuelas / centros educativos": 17,
+      "Escuelas / centros educativos": 35,
       "Organizaciones comunitarias / COCODES": 16,
       "COLRED (Coordinadora Local para la Reducción de Desastres)": 16,
-      "Grupos de Auto Ahorro y Préstamo": 14,
-      "Emprendimientos": 14,
+      "Grupos de Auto Ahorro y Préstamo": 32,
+      "Emprendimientos": 32,
       "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)": 14,
       "Cooperativas o asociaciones productivas": 7
     },
@@ -19259,11 +21493,11 @@
       "Cooperativas o asociaciones productivas": 7
     },
     "Padres, madres y cuidadores": {
-      "Escuelas / centros educativos": 17,
+      "Escuelas / centros educativos": 35,
       "Organizaciones comunitarias / COCODES": 16,
       "COLRED (Coordinadora Local para la Reducción de Desastres)": 16,
-      "Grupos de Auto Ahorro y Préstamo": 14,
-      "Emprendimientos": 14,
+      "Grupos de Auto Ahorro y Préstamo": 32,
+      "Emprendimientos": 32,
       "CADER / ECA (Centros de Aprendizaje para el Desarrollo Rural / Escuelas de Campo)": 14,
       "Cooperativas o asociaciones productivas": 7
     },
@@ -19274,16 +21508,16 @@
     }
   },
   "inversion": {
-    "programas_con_monto": 21,
+    "programas_con_monto": 24,
     "programas_sin_monto": 0,
     "nota_metodologica": "La inversión se conserva como rango reportado. No se calculan puntos medios ni se distribuyen montos entre municipios o sectores."
   },
   "control": {
-    "registros_kobo": 15,
-    "programas_procesados": 21,
+    "registros_kobo": 17,
+    "programas_procesados": 24,
     "lugares_catalogo": 996,
     "lugares_con_coordenadas": 996,
-    "lugares_adicionales_reportados": 2,
+    "lugares_adicionales_reportados": 13,
     "lugares_recuperados_de_otros_campos": 0,
     "programas_comunitarios_sin_lugares": 0
   }
