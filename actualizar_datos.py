@@ -85,6 +85,7 @@ def descargar():
 # Diagnóstico de lugares: se imprime en el registro de la tarea y se resume en data.json.
 RECUPERADOS=[]      # lugares hallados fuera del campo estándar
 SIN_LUGARES=[]      # programas con trabajo comunitario que llegan sin lugares
+CEROS_TOTALES=[]    # grupos/acciones marcados que quedaron en 0 en todas las comunidades del programa
 
 def codigos_en(obj):
     """Busca códigos del catálogo de lugares en cualquier campo de un envío.
@@ -189,6 +190,19 @@ def programa_desde(rep, actor, extra=None):
             if m: sintetico[m.group(0)]=v
         sintetico['lugar_poblado']=code
         bloques.append((sintetico,code))
+    # Formulario v3+: en "varias a la vez" las comunidades que no aparecen en la lista
+    # llegan en el bloque repetido "g_otros_lugares" (prefijo go_), una por ítem.
+    for g in find_repeat(rep,'g_otros_lugares'):
+        sintetico=dict(comunes)
+        for k,v in g.items():
+            if isinstance(v,(list,dict)): continue
+            corto=k.split('/')[-1]
+            if corto.startswith('go_'): corto=corto[3:]
+            sintetico[corto]=v
+        if not (sintetico.get('otro_lugar_nombre') or sintetico.get('otro_lugar_municipio')): continue
+        sintetico['lugar_poblado']='otro_lugar_no_lista'
+        bloques.append((sintetico,'otro_lugar_no_lista'))
+    ceros_por_comunidad=[]
     # Lugares marcados en campos del programa que no llegaron por ninguno de los dos bloques.
     vistos={code for _,code in bloques}
     for code,campo in codigos_en({k:v for k,v in rep.items() if not isinstance(v,(list,dict))}):
@@ -244,6 +258,27 @@ def programa_desde(rep, actor, extra=None):
         if 'otro' in acciones_codigos:
             ac_counts[str(find_value(c,'accion_comunidad_otro','Otro'))]=num(find_value(c,'ac_cant_otro'))
 
+        # Formulario v10: un 0 significa "en esta comunidad no se atiende a este grupo / no se
+        # realiza esta acción". Se quita de la comunidad en lugar de mostrarse como cero.
+        ceros=set()
+        codigos_pob=str(find_value(c,'poblacion_meta','') or '').split()
+        for pc in codigos_pob:
+            campo='pm_cant_'+pc
+            if tiene_cantidades and num(find_value(c,campo))==0 and str(find_value(c,campo,'')).strip()!='':
+                ceros.add('población: '+label('poblacion_meta',pc))
+                clave_c=str(find_value(c,'poblacion_meta_otro','Otro')) if pc=='otro' else label('poblacion_meta',pc)
+                cantidades.pop(clave_c,None)
+                pob=[x for x in pob if x!=label('poblacion_meta',pc)]
+        for ac in acciones_codigos:
+            campo='ac_cant_'+ac
+            if num(find_value(c,campo))==0 and str(find_value(c,campo,'')).strip()!='':
+                ceros.add('acción: '+label('accion_comunidad',ac))
+                if ac=='otro': clave_a=str(find_value(c,'accion_comunidad_otro','Otro'))
+                elif ac=='infraestructura_productiva_agropecuaria': clave_a=str(find_value(c,'accion_comunidad_agropecuaria_otro','') or label('accion_comunidad',ac))
+                else: clave_a=label('accion_comunidad',ac)
+                ac_counts.pop(clave_a,None)
+                acciones=[x for x in acciones if x!=label('accion_comunidad',ac)]
+        ceros_por_comunidad.append(ceros)
         valores_cuantificados=[v for v in cantidades.values() if isinstance(v,(int,float))]
         poblacion_total_estimada=max(valores_cuantificados) if valores_cuantificados else None
         comunidades.append({'codigo_lugar':codigo_registro,'lugar_poblado':lugar,'municipio':muni,'clasificacion':meta.get('clasificacion'),'viviendas_catalogo':meta.get('viviendas'),'lat':lat,'lon':lon,'fuera_catalogo':es_adicional,'estado_validacion':'Pendiente de validación' if es_adicional else 'Catálogo territorial','referencia_lugar':referencia,'poblacion_meta':pob,'datos_cuantitativos_poblacion':datos_cuantitativos,'pm_cantidades':cantidades,'poblacion_total_estimada':poblacion_total_estimada,'accion_comunidad':acciones,'ac_cantidades':ac_counts,'etnia':labels('etnia',find_value(c,'etnia','')),'grupo_etario':labels('grupo_etario',find_value(c,'grupo_etario','')),'area':label('area',find_value(c,'area',''))})
@@ -254,6 +289,10 @@ def programa_desde(rep, actor, extra=None):
         if code in ya: continue
         ya.add(code); comunidades.append(comunidad_minima(code))
         RECUPERADOS.append({'organizacion':actor['organizacion'],'programa':nombre_prog,'codigo_lugar':code,'campo':campo})
+    # Aviso de calidad: un grupo o acción marcado para el programa que quedó en 0 en todas sus comunidades.
+    if ceros_por_comunidad and all(ceros_por_comunidad):
+        en_todas=set.intersection(*ceros_por_comunidad)
+        if en_todas: CEROS_TOTALES.append({'organizacion':actor['organizacion'],'programa':nombre_prog,'items':sorted(en_todas)})
     if trabajo_comunitario=='Sí' and not comunidades:
         SIN_LUGARES.append({'organizacion':actor['organizacion'],'programa':nombre_prog,'campos_de_lugar':campos_de_lugar(extra if extra is not None else rep)})
     return {'organizacion':actor['organizacion'],'tipo_actor':actor['tipo_actor'],'trabajo_comunitario':trabajo_comunitario,'pais_origen':actor['pais_origen'],'contacto':actor['contacto'],'nombre_programa':str(find_value(rep,'nombre_programa','')),'tipo_atencion':label('tipo_atencion',find_value(rep,'tipo_atencion','')),'sector':sectores,'modalidad':modalidad,'fecha_inicio':str(find_value(rep,'fecha_inicio','') or ''),'tipo_duracion':label('tipo_duracion',find_value(rep,'tipo_duracion','')),'fecha_fin':str(find_value(rep,'fecha_fin','') or ''),'duracion_aproximada':str(find_value(rep,'duracion_aproximada_texto','') or ''),'estado_programa':label('estado_programa',find_value(rep,'estado_programa','')),'contraparte_gubernamental':str(find_value(rep,'contraparte_gubernamental','') or ''),'monto_rango':label('monto_rango',find_value(rep,'monto_rango','')),'monto_rango_codigo':str(find_value(rep,'monto_rango','') or ''),'fuente_financiamiento':fuentes,'espacios_coordinacion':labels('espacios_coordinacion',find_value(rep,'espacios_coordinacion','')),'disposicion_coordinar':label('disposicion_coordinar',find_value(rep,'disposicion_coordinar','')),'beneficiarios_institucionales':inst_counts,'municipios_cobertura_institucional':mun_inst,'comunidades':comunidades}
@@ -269,7 +308,18 @@ def construir(registros):
             # los lugares podrían estar fuera del bloque del programa.
             p=programa_desde(rep,actor,r if len(reps)==1 else None)
             if p['nombre_programa'] or p['organizacion']: programas.append(p)
-    return agregar(corregir_programas(programas),len(registros))
+    programas=corregir_programas(programas)
+    # Formulario v9+: un programa por registro. Los registros de una misma organización
+    # se unen aunque el nombre difiera en mayúsculas, tildes o espacios ("CRS" / "crs").
+    import unicodedata
+    from collections import Counter
+    clave=lambda s:' '.join(unicodedata.normalize('NFKD',str(s or '')).encode('ascii','ignore').decode().lower().split())
+    formas={}
+    for p in programas: formas.setdefault(clave(p['organizacion']),Counter())[p['organizacion']]+=1
+    for p in programas:
+        c=formas[clave(p['organizacion'])]
+        if len(c)>1: p['organizacion']=max(c,key=lambda f:(c[f],sum(ch.isupper() for ch in f)))
+    return agregar(programas,len(registros))
 
 # Correcciones automáticas de calidad: se aplican en cada sincronización y se
 # listan en el registro de la tarea. No modifican nada en Kobo.
@@ -396,7 +446,7 @@ def agregar(programas, n_registros):
         a['organizaciones']=sorted(a['organizaciones']); a['programas']=sorted(a['programas']); adicionales_lista.append(a)
     adicionales_lista.sort(key=lambda x:(x['municipio'],x['lugar_poblado']))
 
-    return {'generado':datetime.now(timezone.utc).isoformat(),'nota':'Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.','programas':programas,'municipios':MUNICIPIOS,'resumen_municipio':resumen,'matriz_sector_municipio':matriz,'comunidades_sin_cobertura':sin,'lugares_adicionales_reportados':adicionales_lista,'duplicidad':duplicidad,'instituciones_resumen':inst_res,'matriz_poblacion_accion':pop_acc,'inversion':inv,'control':{'registros_kobo':n_registros,'programas_procesados':len(programas),'lugares_catalogo':len(LUGARES),'lugares_con_coordenadas':len([k for k,c in COORDS.items() if k in LUGARES and not c.get('aproximada')]),'lugares_adicionales_reportados':len(adicionales_lista),'lugares_recuperados_de_otros_campos':len(RECUPERADOS),'programas_comunitarios_sin_lugares':len(SIN_LUGARES)}}
+    return {'generado':datetime.now(timezone.utc).isoformat(),'nota':'Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.','programas':programas,'municipios':MUNICIPIOS,'resumen_municipio':resumen,'matriz_sector_municipio':matriz,'comunidades_sin_cobertura':sin,'lugares_adicionales_reportados':adicionales_lista,'duplicidad':duplicidad,'instituciones_resumen':inst_res,'matriz_poblacion_accion':pop_acc,'inversion':inv,'control':{'registros_kobo':n_registros,'programas_procesados':len(programas),'lugares_catalogo':len(LUGARES),'lugares_con_coordenadas':len([k for k,c in COORDS.items() if k in LUGARES and not c.get('aproximada')]),'lugares_adicionales_reportados':len(adicionales_lista),'lugares_recuperados_de_otros_campos':len(RECUPERADOS),'programas_comunitarios_sin_lugares':len(SIN_LUGARES),'programas_con_grupos_en_cero':len(CEROS_TOTALES)}}
 
 def main():
     try:
@@ -414,6 +464,9 @@ def main():
         if SIN_LUGARES:
             print(f'AVISO: {len(SIN_LUGARES)} programa(s) indican trabajo comunitario pero no traen lugares poblados:')
             for x in SIN_LUGARES: print(f"  - {x['organizacion']} | {x['programa']} | campos de lugar en el envío: {', '.join(x['campos_de_lugar']) or 'ninguno'}")
+        if CEROS_TOTALES:
+            print(f'AVISO: {len(CEROS_TOTALES)} programa(s) marcaron grupos o acciones que quedaron en 0 en todas sus comunidades (revisar en la validación):')
+            for x in CEROS_TOTALES: print(f"  - {x['organizacion']} | {x['programa']} | {'; '.join(x['items'])}")
         print('data.json actualizado correctamente.')
     except Exception as e:
         print('ERROR:',e,file=sys.stderr); raise
