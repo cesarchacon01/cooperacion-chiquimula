@@ -652,7 +652,7 @@ main:has(#view-instituciones.active){max-width:none;width:100%;padding-left:4vw;
     <div class="filters">
       <label>FILTROS</label>
       <select id="f-organizacion" aria-label="Organización"><option value="">Organización: todas</option></select>
-      <select id="f-sector"><option value="">Sector: todos</option></select>
+      <select id="f-sector" aria-label="Sector" title="Filtra por el sector declarado en cada programa. Se muestran todas las comunidades de los programas con ese sector."><option value="">Sector: todos</option></select>
       <span class="filtros-extra" id="filtros-extra" hidden>
         <select id="f-atencion"><option value="">Tipo de atención: todos</option></select>
         <select id="f-actor"><option value="">Tipo de actor: todos</option></select>
@@ -1493,7 +1493,9 @@ function renderFiltrosActivos(){
     }
   }
   const habiaFoco=cont.contains(document.activeElement);
-  cont.innerHTML = chips.length ? `<span>Filtros activos:</span>${chips.join('')}` : '';
+  const notaSector=document.getElementById('f-sector')?.value
+    ? `<span class="nota-sector" style="flex-basis:100%;color:#5B6672">ℹ️ Se muestran las comunidades donde trabaja al menos un programa con este sector. El sector se registra por programa (no por comunidad): un programa con varios sectores aparece en todas sus comunidades.</span>` : '';
+  cont.innerHTML = chips.length ? `<span>Filtros activos:</span>${chips.join('')}${notaSector}` : '';
   if(!cont.dataset.listo){
     cont.dataset.listo='1';
     cont.addEventListener('click',e=>{
@@ -1622,7 +1624,8 @@ function renderMapa(filtrados){
         fillOpacity:.72,weight:2.2,dashArray:'4 3'
       });
       mk.bindTooltip(`${escaparHtml(m)} · presencia institucional/municipal`,{direction:'top',opacity:.95,permanent:false,sticky:false});
-      mk.bindPopup(`<b>${escaparHtml(m)}</b><br><b>Presencia institucional / municipal</b><br>${orgs.length} organización(es)<br>${programas.length} programa(s) / proyecto(s)<br><br><span style="color:#5B6672">Marcador de referencia municipal; no representa una comunidad específica.</span>`,{closeButton:true,autoPan:true});
+      const detalleProgs=progs.map(p=>`<div style="border-top:1px solid #E5E7EB;padding-top:6px;margin-top:6px"><b>${escaparHtml(p.organizacion||'')}</b><br>${escaparHtml(p.nombre_programa||'')}</div>`).join('');
+      mk.bindPopup(`<div style="max-height:300px;overflow:auto;padding-right:4px"><b>${escaparHtml(m)}</b> · <b>Presencia institucional / municipal</b>${detalleProgs}<div style="color:#5B6672;font-size:11px;margin-top:8px">Marcador de referencia ubicado en el centro del municipio; no representa una comunidad específica.</div></div>`,{closeButton:true,autoPan:true,maxWidth:320,minWidth:220});
       mk.on('click',(e)=>{
         if(e?.originalEvent) L.DomEvent.stopPropagation(e.originalEvent);
         mk.closeTooltip();
