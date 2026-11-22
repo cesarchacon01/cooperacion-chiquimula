@@ -7,6 +7,18 @@ from urllib.error import HTTPError, URLError
 BASE = Path(__file__).resolve().parent
 CATALOGO = json.loads((BASE/'catalogo_xlsform.json').read_text(encoding='utf-8'))
 CHOICES = CATALOGO['choices']; LUGARES = CATALOGO['lugares_poblados']
+# v18: nombres de las opciones nuevas del formulario. Se agregan solo si el catálogo no las trae,
+# para no tener que editar a mano catalogo_xlsform.json.
+CHOICES_V18={
+ 'modalidad':{'capacitaciones':'Capacitaciones','transferencias_monetarias':'Transferencias monetarias / bonos','obras_infraestructura':'Obras o infraestructura','estudios_investigacion':'Estudios, diagnósticos o investigación','incidencia_politicas':'Incidencia o asesoría en políticas públicas'},
+ 'beneficiarios_institucionales':{'direccion_municipal_mujer':'Dirección Municipal de la Mujer (DMM)','comude':'COMUDE (Consejo Municipal de Desarrollo)','omas':'Oficina Municipal de Agua y Saneamiento (OMAS)','ugam':'Unidad de Gestión Ambiental Municipal (UGAM)','oficina_forestal_municipal':'Oficina Forestal Municipal','gobernacion':'Gobernación departamental','codede':'CODEDE (Consejo Departamental de Desarrollo)','area_salud':'Área de Salud (MSPAS)','direccion_departamental_educacion':'Dirección Departamental de Educación (MINEDUC)','maga':'MAGA','sesan':'SESAN','conred_codred':'CONRED / CODRED','segeplan':'SEGEPLAN','mides':'MIDES','sosep':'SOSEP','marn':'MARN','inab':'INAB','otra_departamental':'Otra institución departamental','escuelas_centros_educativos':'Escuelas o centros educativos','cocodes_organizaciones_comunitarias':'COCODES u organizaciones comunitarias','mancomunidades':'Mancomunidades'},
+ 'poblacion_meta':{'ninez_menor_5':'Niñez menor de 5 años','ninez_mayor_5':'Niñez mayor de 5 años','hogares_discapacidad':'Hogares con personas con discapacidad','hogares_adultos_mayores':'Hogares con adultos mayores','hogares_monoparentales':'Hogares monoparentales'},
+ 'espacios_coordinacion':{'codede':'CODEDE (Consejo Departamental de Desarrollo)','comude':'COMUDE (Consejo Municipal de Desarrollo)'},
+ 'area':{'periurbana':'Periurbana'},
+ 'accion_comunidad':{'comites_agua':'Comités o comisiones de agua','sistemas_agua_potable':'Sistemas de agua potable','saneamiento':'Saneamiento (letrinas, manejo de desechos)','filtros_domiciliares':'Filtros de agua domiciliares (ecofiltros)','jornadas_nutricionales':'Jornadas nutricionales'},
+}
+for _lista,_ops in CHOICES_V18.items():
+    for _c,_l in _ops.items(): CHOICES.setdefault(_lista,{}).setdefault(_c,_l)
 MUNICIPIOS = ['Camotán','Chiquimula','Concepción las Minas','Esquipulas','Ipala','Jocotán','Olopa','Quezaltepeque','San Jacinto','San José la Arada','San Juan Ermita']
 
 def label(lista, valor):
@@ -153,13 +165,20 @@ def programa_desde(rep, actor, extra=None):
     mun_inst=labels('municipios',find_value(rep,'municipios_cobertura_institucional',''))
     mun_inst=[m for m in mun_inst if m!='Otro']
     if find_value(rep,'municipios_cobertura_institucional_otro'): mun_inst.append(str(find_value(rep,'municipios_cobertura_institucional_otro')))
+    # v18: programas sin comunidades ni instituciones se ubican con municipios_operacion.
+    if not mun_inst and find_value(rep,'municipios_operacion'):
+        mun_inst=labels('municipios',find_value(rep,'municipios_operacion',''))
     inst=labels('beneficiarios_institucionales',find_value(rep,'beneficiarios_institucionales',''))
+    # v18: muestra el nombre escrito en 'Otra institución departamental'.
+    inst=[str(find_value(rep,'beneficiarios_institucionales_departamental_otro','') or x) if x=='Otra institución departamental' else x for x in inst]
     inst_counts={}
     inst_code_to_field={'Centros o puestos de salud':'bi_cant_centros_salud','Municipalidades':'bi_cant_municipalidades','COMRED (Coordinadora Municipal para la Reducción de Desastres)':'bi_cant_comred','COMUSAN (Comisión Municipal de Seguridad Alimentaria y Nutricional)':'bi_cant_comusan','Oficina Municipal de Juventud':'bi_cant_oficina_municipal_juventud','Dirección Municipal de Planificación (DMP)':'bi_cant_direccion_municipal_planificacion','Oficina Municipal de Desarrollo Económico Local':'bi_cant_oficina_municipal_desarrollo_economico','Oficina Municipal de Gestión Integral de Riesgo de Desastres (GIRD)':'bi_cant_oficina_municipal_gird','Oficina/Dirección Municipal de Seguridad Alimentaria y Nutricional (SAN)':'bi_cant_oficina_municipal_san'}
+    # v18: instituciones municipales nuevas (cantidad calculada por el formulario).
+    inst_code_to_field.update({'Dirección Municipal de la Mujer (DMM)':'bi_cant_direccion_municipal_mujer','COMUDE (Consejo Municipal de Desarrollo)':'bi_cant_comude','Oficina Municipal de Agua y Saneamiento (OMAS)':'bi_cant_omas','Unidad de Gestión Ambiental Municipal (UGAM)':'bi_cant_ugam','Oficina Forestal Municipal':'bi_cant_oficina_forestal_municipal'})
     for x in inst:
         if x=='Otra':
             otro=str(find_value(rep,'beneficiarios_institucionales_otro','Otro')); inst_counts[otro]=num(find_value(rep,'bi_cant_otro'))
-        else: inst_counts[x]=num(find_value(rep,inst_code_to_field.get(x,''))) if inst_code_to_field.get(x) else 0
+        else: inst_counts[x]=num(find_value(rep,inst_code_to_field.get(x,''))) if inst_code_to_field.get(x) else None  # v18: sin cantidad (departamentales y locales) en lugar de 0
     comunidades=[]
     # Un mismo bloque puede traer varios lugares si el campo es de selección múltiple:
     # se separa en un lugar por código. Los bloques sin lugar se omiten.
@@ -176,7 +195,7 @@ def programa_desde(rep, actor, extra=None):
     # las cantidades van en el bloque repetido "cantidades_grupo" (un ítem por lugar,
     # con el código en g_lugar_i). Antes este modo no se leía y esos programas
     # quedaban sin comunidades en el mapa.
-    comunes={n:valor_grupo(rep,n) for n in ('poblacion_meta','poblacion_meta_otro','datos_cuantitativos_poblacion','accion_comunidad','accion_comunidad_otro','accion_comunidad_agropecuaria_otro','etnia','grupo_etario','area')}
+    comunes={n:valor_grupo(rep,n) for n in ('poblacion_meta','grupo_principal','poblacion_meta_otro','datos_cuantitativos_poblacion','accion_comunidad','accion_comunidad_otro','accion_comunidad_agropecuaria_otro','etnia','grupo_etario','area')}
     for g in find_repeat(rep,'cantidades_grupo'):
         code=str(find_value(g,'g_lugar_i','') or '').strip()
         if not code: continue
@@ -188,6 +207,8 @@ def programa_desde(rep, actor, extra=None):
             sintetico[corto]=v
             m=re.search(r'(pm|ac)_cant_.+$',corto)      # p. ej. g2_pm_cant_mujeres -> pm_cant_mujeres
             if m: sintetico[m.group(0)]=v
+        # v18: acciones confirmadas en esta comunidad (g_acciones_ficha).
+        if sintetico.get('acciones_ficha'): sintetico['accion_comunidad']=sintetico['acciones_ficha']
         sintetico['lugar_poblado']=code
         bloques.append((sintetico,code))
     # Formulario v3+: en "varias a la vez" las comunidades que no aparecen en la lista
@@ -200,6 +221,8 @@ def programa_desde(rep, actor, extra=None):
             if corto.startswith('go_'): corto=corto[3:]
             sintetico[corto]=v
         if not (sintetico.get('otro_lugar_nombre') or sintetico.get('otro_lugar_municipio')): continue
+        # v18: acciones confirmadas en esta comunidad (go_acciones_ficha).
+        if sintetico.get('acciones_ficha'): sintetico['accion_comunidad']=sintetico['acciones_ficha']
         sintetico['lugar_poblado']='otro_lugar_no_lista'
         bloques.append((sintetico,'otro_lugar_no_lista'))
     ceros_por_comunidad=[]
@@ -237,7 +260,7 @@ def programa_desde(rep, actor, extra=None):
         datos_cuantitativos=label('si_no',find_value(c,'datos_cuantitativos_poblacion',''))
         tiene_cantidades=str(find_value(c,'datos_cuantitativos_poblacion','') or '').lower()=='si'
         cantidades={}
-        for pc in ['mujeres','mujeres_embarazadas_lactantes','pueblos_indigenas','migrantes_retornados','personas_discapacidad','adultos_mayores','hogares_ninez_menor_5','familias','agricultores','estudiantes','docentes','padres_cuidadores']:
+        for pc in ['mujeres','mujeres_embarazadas_lactantes','pueblos_indigenas','migrantes_retornados','personas_discapacidad','adultos_mayores','ninez_menor_5','ninez_mayor_5','hogares_ninez_menor_5','hogares_discapacidad','hogares_adultos_mayores','hogares_monoparentales','familias','agricultores','estudiantes','docentes','padres_cuidadores']:
             if pc in str(find_value(c,'poblacion_meta','')).split():
                 cantidades[label('poblacion_meta',pc)]=num(find_value(c,'pm_cant_'+pc)) if tiene_cantidades else None
         if 'otro' in str(find_value(c,'poblacion_meta','')).split():
@@ -247,7 +270,7 @@ def programa_desde(rep, actor, extra=None):
         ac_counts={}
         # COCOSAN está en el XLSForm como acción/capacidad, pero no tiene campo de cantidad.
         acciones_codigos=str(find_value(c,'accion_comunidad','') or '').split()
-        for ac in ['escuelas','organizaciones_comunitarias','cooperativas','grupos_auto_ahorro_prestamo','emprendimientos','colred','cuadrillas_incendios','cader_eca','viveros_forestales','sistemas_riego']:
+        for ac in ['escuelas','organizaciones_comunitarias','cooperativas','grupos_auto_ahorro_prestamo','emprendimientos','colred','cuadrillas_incendios','cader_eca','viveros_forestales','sistemas_riego','comites_agua','sistemas_agua_potable','saneamiento','filtros_domiciliares','jornadas_nutricionales']:
             if ac in acciones_codigos:
                 ac_counts[label('accion_comunidad',ac)]=num(find_value(c,'ac_cant_'+ac))
         if 'infraestructura_productiva_agropecuaria' in acciones_codigos:
@@ -281,7 +304,12 @@ def programa_desde(rep, actor, extra=None):
         ceros_por_comunidad.append(ceros)
         valores_cuantificados=[v for v in cantidades.values() if isinstance(v,(int,float))]
         poblacion_total_estimada=max(valores_cuantificados) if valores_cuantificados else None
-        comunidades.append({'codigo_lugar':codigo_registro,'lugar_poblado':lugar,'municipio':muni,'clasificacion':meta.get('clasificacion'),'viviendas_catalogo':meta.get('viviendas'),'lat':lat,'lon':lon,'fuera_catalogo':es_adicional,'estado_validacion':'Pendiente de validación' if es_adicional else 'Catálogo territorial','referencia_lugar':referencia,'poblacion_meta':pob,'datos_cuantitativos_poblacion':datos_cuantitativos,'pm_cantidades':cantidades,'poblacion_total_estimada':poblacion_total_estimada,'accion_comunidad':acciones,'ac_cantidades':ac_counts,'etnia':labels('etnia',find_value(c,'etnia','')),'grupo_etario':labels('grupo_etario',find_value(c,'grupo_etario','')),'area':label('area',find_value(c,'area',''))})
+        # v18: el total de la comunidad usa la cantidad del grupo priorizado, si existe.
+        gp_codigo=str(find_value(c,'grupo_principal','') or '').strip()
+        if gp_codigo and tiene_cantidades:
+            v_gp=num(find_value(c,'pm_cant_'+gp_codigo))
+            if v_gp: poblacion_total_estimada=v_gp
+        comunidades.append({'codigo_lugar':codigo_registro,'lugar_poblado':lugar,'grupo_priorizado':(label('poblacion_meta',gp_codigo) if gp_codigo else ''),'municipio':muni,'clasificacion':meta.get('clasificacion'),'viviendas_catalogo':meta.get('viviendas'),'lat':lat,'lon':lon,'fuera_catalogo':es_adicional,'estado_validacion':'Pendiente de validación' if es_adicional else 'Catálogo territorial','referencia_lugar':referencia,'poblacion_meta':pob,'datos_cuantitativos_poblacion':datos_cuantitativos,'pm_cantidades':cantidades,'poblacion_total_estimada':poblacion_total_estimada,'accion_comunidad':acciones,'ac_cantidades':ac_counts,'etnia':labels('etnia',find_value(c,'etnia','')),'grupo_etario':labels('grupo_etario',find_value(c,'grupo_etario','')),'area':label('area',find_value(c,'area',''))})
     # Red de seguridad: lugares del catálogo presentes en otros campos del envío.
     ya={c['codigo_lugar'] for c in comunidades}
     nombre_prog=str(find_value(rep,'nombre_programa','') or '')
@@ -357,7 +385,10 @@ def corregir_programas(programas):
                     if isinstance(v,(int,float)) and v<0:
                         c[bolsa][g]=None; CORRECCIONES.append(f"Cantidad negativa descartada: {t} · {c['lugar_poblado']} · {g}: {v}")
             nums=[v for v in (c.get('pm_cantidades') or {}).values() if isinstance(v,(int,float))]
-            c['poblacion_total_estimada']=max(nums) if nums else None
+            # v18: si la comunidad tiene grupo priorizado con cantidad, el total es esa cantidad;
+            # si no, se mantiene el criterio anterior (la mayor cantidad reportada).
+            vp=(c.get('pm_cantidades') or {}).get(c.get('grupo_priorizado')) if c.get('grupo_priorizado') else None
+            c['poblacion_total_estimada']=vp if isinstance(vp,(int,float)) and vp>0 else (max(nums) if nums else None)
         # 3) Trabajo comunitario sin respuesta, pero con comunidades registradas.
         if not p.get('trabajo_comunitario') and p['comunidades']:
             p['trabajo_comunitario']='Sí'; CORRECCIONES.append(f"Trabajo comunitario deducido como 'Sí' (tiene comunidades): {t}")
