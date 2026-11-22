@@ -70,6 +70,75 @@ def cargar_coordenadas():
 
 COORDS=cargar_coordenadas()
 
+# v18: límites municipales oficiales (CONRED) para ubicar DENTRO de su municipio los lugares
+# sin coordenadas (por ejemplo, los registrados como 'no aparece en la lista'). Si el servicio
+# no responde, esos lugares quedan sin punto, como antes, y el visor los ubica a su manera.
+URL_LIMITES=('https://sig.conred.gob.gt/server/rest/services/Hosted/Limites_municipales/FeatureServer/0/query'
+             '?where=cod_dept_1%3D%2720%27&outFields=nombre_1&outSR=4326&f=geojson')
+def _norm_txt(s):
+    import unicodedata
+    s=unicodedata.normalize('NFKD',str(s or '')).encode('ascii','ignore').decode().lower()
+    return re.sub(r'[^a-z]','',s)
+def cargar_limites():
+    try:
+        with urlopen(Request(URL_LIMITES,headers={'User-Agent':'mapeo-cooperacion-chiquimula'}),timeout=60) as r:
+            g=json.loads(r.read().decode('utf-8'))
+    except Exception as e:
+        print('AVISO: no se pudieron descargar los límites municipales de CONRED:',e)
+        return {}
+    out={}
+    for f in g.get('features',[]):
+        geom=f.get('geometry') or {}
+        if geom.get('type')=='Polygon': polys=[geom.get('coordinates') or []]
+        elif geom.get('type')=='MultiPolygon': polys=geom.get('coordinates') or []
+        else: continue
+        out.setdefault(_norm_txt((f.get('properties') or {}).get('nombre_1')),[]).extend(polys)
+    print('Límites municipales de CONRED cargados:',len(out))
+    return out
+LIMITES=cargar_limites()
+def _en_anillo(x,y,anillo):
+    dentro=False; j=len(anillo)-1
+    for i in range(len(anillo)):
+        x1,y1=anillo[i][0],anillo[i][1]; x2,y2=anillo[j][0],anillo[j][1]
+        if (y1>y)!=(y2>y) and x<(x2-x1)*(y-y1)/((y2-y1) or 1e-12)+x1: dentro=not dentro
+        j=i
+    return dentro
+def _en_municipio(x,y,polys):
+    return any(p and _en_anillo(x,y,p[0]) and not any(_en_anillo(x,y,h) for h in p[1:]) for p in polys)
+_BASES={}; _ORDEN={}; _SIG={}
+def _base(mn,polys):
+    if mn in _BASES: return _BASES[mn]
+    anillo=max((p[0] for p in polys if p),key=len)
+    cx=sum(pt[0] for pt in anillo)/len(anillo); cy=sum(pt[1] for pt in anillo)/len(anillo)
+    if not _en_municipio(cx,cy,polys):
+        xs=[pt[0] for pt in anillo]; ys=[pt[1] for pt in anillo]; mejor=None
+        for i in range(1,40):
+            for j in range(1,40):
+                x=min(xs)+(max(xs)-min(xs))*i/40; y=min(ys)+(max(ys)-min(ys))*j/40
+                if _en_municipio(x,y,polys):
+                    d=(x-cx)**2+(y-cy)**2
+                    if mejor is None or d<mejor[0]: mejor=(d,x,y)
+        if mejor: cx,cy=mejor[1],mejor[2]
+    _BASES[mn]=(cx,cy)
+    return cx,cy
+def punto_aproximado(muni,clave):
+    import math
+    mn=_norm_txt(muni); polys=LIMITES.get(mn)
+    if not polys: return None,None
+    orden=_ORDEN.setdefault(mn,{})
+    if clave in orden: return orden[clave]
+    cx,cy=_base(mn,polys)
+    # Espiral desde el centro del municipio: el siguiente punto libre que cae dentro del límite.
+    for _ in range(5000):
+        i=_SIG.get(mn,0); _SIG[mn]=i+1
+        r=0.004*math.sqrt(i); a=i*2.399963
+        x=cx+r*math.cos(a); y=cy+r*math.sin(a)
+        if _en_municipio(x,y,polys):
+            orden[clave]=(round(y,6),round(x,6))
+            return orden[clave]
+    orden[clave]=(round(cy,6),round(cx,6))
+    return orden[clave]
+
 def coord_for(code):
     c=COORDS.get(code,{})
     # Las coordenadas marcadas como "aproximada" no cuentan como georreferenciación:
@@ -256,6 +325,11 @@ def programa_desde(rep, actor, extra=None):
             referencia=''
             codigo_registro=code
             lat,lon=coord_for(code)
+        # v18: lugar sin coordenadas -> punto aproximado DENTRO de su municipio (límites de CONRED).
+        ubic_aprox=False
+        if (lat is None or lon is None) and muni:
+            lat,lon=punto_aproximado(muni,codigo_registro)
+            ubic_aprox=lat is not None
         pob=labels('poblacion_meta',find_value(c,'poblacion_meta',''))
         datos_cuantitativos=label('si_no',find_value(c,'datos_cuantitativos_poblacion',''))
         tiene_cantidades=str(find_value(c,'datos_cuantitativos_poblacion','') or '').lower()=='si'
@@ -309,7 +383,7 @@ def programa_desde(rep, actor, extra=None):
         if gp_codigo and tiene_cantidades:
             v_gp=num(find_value(c,'pm_cant_'+gp_codigo))
             if v_gp: poblacion_total_estimada=v_gp
-        comunidades.append({'codigo_lugar':codigo_registro,'lugar_poblado':lugar,'grupo_priorizado':(label('poblacion_meta',gp_codigo) if gp_codigo else ''),'municipio':muni,'clasificacion':meta.get('clasificacion'),'viviendas_catalogo':meta.get('viviendas'),'lat':lat,'lon':lon,'fuera_catalogo':es_adicional,'estado_validacion':'Pendiente de validación' if es_adicional else 'Catálogo territorial','referencia_lugar':referencia,'poblacion_meta':pob,'datos_cuantitativos_poblacion':datos_cuantitativos,'pm_cantidades':cantidades,'poblacion_total_estimada':poblacion_total_estimada,'accion_comunidad':acciones,'ac_cantidades':ac_counts,'etnia':labels('etnia',find_value(c,'etnia','')),'grupo_etario':labels('grupo_etario',find_value(c,'grupo_etario','')),'area':label('area',find_value(c,'area',''))})
+        comunidades.append({'codigo_lugar':codigo_registro,'lugar_poblado':lugar,'grupo_priorizado':(label('poblacion_meta',gp_codigo) if gp_codigo else ''),'municipio':muni,'clasificacion':meta.get('clasificacion'),'viviendas_catalogo':meta.get('viviendas'),'lat':lat,'lon':lon,'ubicacion_aproximada':ubic_aprox,'ubicacion_referencia':('Ubicación aproximada dentro del municipio (sin coordenadas en el catálogo)' if ubic_aprox else ''),'fuera_catalogo':es_adicional,'estado_validacion':'Pendiente de validación' if es_adicional else 'Catálogo territorial','referencia_lugar':referencia,'poblacion_meta':pob,'datos_cuantitativos_poblacion':datos_cuantitativos,'pm_cantidades':cantidades,'poblacion_total_estimada':poblacion_total_estimada,'accion_comunidad':acciones,'ac_cantidades':ac_counts,'etnia':labels('etnia',find_value(c,'etnia','')),'grupo_etario':labels('grupo_etario',find_value(c,'grupo_etario','')),'area':label('area',find_value(c,'area',''))})
     # Red de seguridad: lugares del catálogo presentes en otros campos del envío.
     ya={c['codigo_lugar'] for c in comunidades}
     nombre_prog=str(find_value(rep,'nombre_programa','') or '')
