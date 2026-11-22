@@ -3,10 +3,16 @@ name: Actualizar cooperación desde Kobo
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 */6 * * *"
+    # Cada 30 minutos (minutos 7 y 37). GitHub puede retrasar u omitir ejecuciones programadas.
+    - cron: "7,37 * * * *"
 
 permissions:
   contents: write
+
+# Evita que dos ejecuciones se crucen si una tarda más de lo normal.
+concurrency:
+  group: actualizar-datos
+  cancel-in-progress: false
 
 jobs:
   actualizar:
@@ -30,6 +36,19 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Si solo cambió la hora de generación, no se guarda (evita un cambio cada 30 minutos sin datos nuevos).
+          python - <<'PY'
+          import json, subprocess, sys
+          try:
+              viejo = json.loads(subprocess.check_output(["git", "show", "HEAD:data.json"]))
+          except Exception:
+              sys.exit(0)
+          nuevo = json.load(open("data.json", encoding="utf-8"))
+          viejo.pop("generado", None); nuevo.pop("generado", None)
+          if viejo == nuevo:
+              subprocess.run(["git", "checkout", "--", "data.json"], check=True)
+              print("Sin datos nuevos desde Kobo.")
+          PY
           git add data.json
           if git diff --cached --quiet; then
             echo "No hay cambios en data.json"
