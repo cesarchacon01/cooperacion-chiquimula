@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-22T03:06:13.756074+00:00",
+  "generado": "2026-11-22T03:11:53.226638+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -7,7 +7,6 @@
       "tipo_actor": "Otro",
       "trabajo_comunitario": "Sí",
       "pais_origen": "",
-      "contacto": "Mirian del Cid Hernández",
       "nombre_programa": "FIDECSEM-ASEDECHI",
       "tipo_atencion": "Desarrollo / atención ordinaria",
       "sector": [
@@ -249,7 +248,6 @@
       "tipo_actor": "Otro",
       "trabajo_comunitario": "Sí",
       "pais_origen": "",
-      "contacto": "Mirian del Cid Hernández",
       "nombre_programa": "Fortalecimiento de la preparación comunitaria para la respuesta y recuperación ante desastres en Centroamérica – Guatemala, Fase III (ATECA)",
       "tipo_atencion": "Desarrollo / atención ordinaria",
       "sector": [
@@ -527,7 +525,6 @@
       "tipo_actor": "Otro",
       "trabajo_comunitario": "Sí",
       "pais_origen": "",
-      "contacto": "Mirian del Cid Hernández",
       "nombre_programa": "Empoderamiento Economico de mujeres y jóvenes y su participación en la acción climática",
       "tipo_atencion": "Desarrollo / atención ordinaria",
       "sector": [
@@ -641,7 +638,6 @@
       "tipo_actor": "ONG internacional",
       "trabajo_comunitario": "Sí",
       "pais_origen": "",
-      "contacto": "Elder Mariano Pineda Cabrera",
       "nombre_programa": "NICHIR",
       "tipo_atencion": "Ambas (emergencia y desarrollo)",
       "sector": [
@@ -726,7 +722,6 @@
       "tipo_actor": "Otro",
       "trabajo_comunitario": "Sí",
       "pais_origen": "",
-      "contacto": "Emmanuel Fontalvo Patiño",
       "nombre_programa": "Proyecto Fomentando la Seguridad Hídrica en la Región del Trifinio.",
       "tipo_atencion": "Desarrollo / atención ordinaria",
       "sector": [
@@ -815,7 +810,6 @@
       "tipo_actor": "ONG nacional",
       "trabajo_comunitario": "Sí",
       "pais_origen": "",
-      "contacto": "Danilo Guerra Gutiérrez",
       "nombre_programa": "Acción Niñez, Gobierno de Noruega, Save the Children.",
       "tipo_atencion": "Desarrollo / atención ordinaria",
       "sector": [
@@ -983,7 +977,6 @@
       "tipo_actor": "ONG nacional",
       "trabajo_comunitario": "Sí",
       "pais_origen": "",
-      "contacto": "Danilo Guerra Gutiérrez",
       "nombre_programa": "Agua y Suelo para la Agricultura -CRS-",
       "tipo_atencion": "Desarrollo / atención ordinaria",
       "sector": [
@@ -1165,7 +1158,6 @@
       "tipo_actor": "ONG nacional",
       "trabajo_comunitario": "Sí",
       "pais_origen": "",
-      "contacto": "Danilo Guerra Gutiérrez",
       "nombre_programa": "Agua para la vida -ASB-",
       "tipo_atencion": "Desarrollo / atención ordinaria",
       "sector": [
@@ -1409,7 +1401,6 @@
       "tipo_actor": "ONG nacional",
       "trabajo_comunitario": "Sí",
       "pais_origen": "",
-      "contacto": "Danilo Guerra Gutiérrez",
       "nombre_programa": "Cosechas Resilientes -ADH-",
       "tipo_atencion": "Ambas (emergencia y desarrollo)",
       "sector": [
@@ -1667,7 +1658,6 @@
       "tipo_actor": "ONG internacional",
       "trabajo_comunitario": "No",
       "pais_origen": "",
-      "contacto": "Nuria Arelí Cordón Guerra",
       "nombre_programa": "“Mujeres organizadas fortalecen sus capacidades  para la defensa de la salud integral” A",
       "tipo_atencion": "Desarrollo / atención ordinaria",
       "sector": [
@@ -1705,7 +1695,6 @@
       "tipo_actor": "ONG internacional",
       "trabajo_comunitario": "Sí",
       "pais_origen": "",
-      "contacto": "Kevin Armando Monroy Guerrero",
       "nombre_programa": "Proyecto Standar 2025-2027",
       "tipo_atencion": "Ambas (emergencia y desarrollo)",
       "sector": [
@@ -1789,7 +1778,6 @@
       "tipo_actor": "Fundación",
       "trabajo_comunitario": "Sí",
       "pais_origen": "",
-      "contacto": "Carlos Roberto García Lorenzo",
       "nombre_programa": "Unbound",
       "tipo_atencion": "Ambas (emergencia y desarrollo)",
       "sector": [
@@ -2353,7 +2341,6 @@
       "tipo_actor": "ONG internacional",
       "trabajo_comunitario": "Sí",
       "pais_origen": "",
-      "contacto": "Ada Beda Gaytan Gonzalez-Directora País. Geidy Miranda Trigueros-Referente en Chiquimula",
       "nombre_programa": "Programa Nacional Ayuda en Acción",
       "tipo_atencion": "Ambas (emergencia y desarrollo)",
       "sector": [
@@ -2443,7 +2430,6 @@
       "tipo_actor": "ONG internacional",
       "trabajo_comunitario": "Sí",
       "pais_origen": "",
-      "contacto": "Héctor López",
       "nombre_programa": "Programa de área Jocotán",
       "tipo_atencion": "Ambas (emergencia y desarrollo)",
       "sector": [
@@ -2860,7 +2846,6 @@
       "tipo_actor": "ONG internacional",
       "trabajo_comunitario": "Sí",
       "pais_origen": "",
-      "contacto": "Héctor López",
       "nombre_programa": "Programa de área San Juan Ermita.",
       "tipo_atencion": "Ambas (emergencia y desarrollo)",
       "sector": [
@@ -3228,7 +3213,6 @@
       "tipo_actor": "ONG internacional",
       "trabajo_comunitario": "No",
       "pais_origen": "",
-      "contacto": "Héctor López",
       "nombre_programa": "Mas allá del acceso",
       "tipo_atencion": "Desarrollo / atención ordinaria",
       "sector": [
@@ -3274,7 +3258,6 @@
       "tipo_actor": "Cooperación bilateral",
       "trabajo_comunitario": "Sí",
       "pais_origen": "Alemania",
-      "contacto": "Jorge Urbina",
       "nombre_programa": "Proyecto de Proteccion de Reserva de Biosfera Transfronteriza Trifinio Fraternidad",
       "tipo_atencion": "Ambas (emergencia y desarrollo)",
       "sector": [
@@ -4998,7 +4981,6 @@
       "tipo_actor": "Cooperación multilateral",
       "trabajo_comunitario": "Sí",
       "pais_origen": "",
-      "contacto": "Walter José Aristondo Martinez",
       "nombre_programa": "Fortalecimiento de Capacidades para el Manejo Integral del Fuego en el Corredor Seco Centroamericano",
       "tipo_atencion": "Emergencia / respuesta humanitaria",
       "sector": [
@@ -5600,7 +5582,6 @@
       "tipo_actor": "Otro",
       "trabajo_comunitario": "Sí",
       "pais_origen": "",
-      "contacto": "Selvyn Sancé",
       "nombre_programa": "Caminos hacia la resiliencia",
       "tipo_atencion": "Ambas (emergencia y desarrollo)",
       "sector": [
@@ -6771,7 +6752,6 @@
       "tipo_actor": "ONG internacional",
       "trabajo_comunitario": "Sí",
       "pais_origen": "",
-      "contacto": "Ana Lucia Cerrate",
       "nombre_programa": "SALVA",
       "tipo_atencion": "Emergencia / respuesta humanitaria",
       "sector": [
@@ -7947,7 +7927,6 @@
       "tipo_actor": "Otro",
       "trabajo_comunitario": "Sí",
       "pais_origen": "",
-      "contacto": "Gustavo Adolfo Ramirez Rivera",
       "nombre_programa": "Fortalecimiento de la resiliencia de los hogares en el Corredor Seco de Guatemala para vivir mejor: Aumento de capacidades para la seguridad hídrica y alimentaria",
       "tipo_atencion": "Desarrollo / atención ordinaria",
       "sector": [
@@ -10887,7 +10866,6 @@
       "tipo_actor": "ONG internacional",
       "trabajo_comunitario": "Sí",
       "pais_origen": "",
-      "contacto": "María Elena Vettorazzi",
       "nombre_programa": "Programa de Prevención de Violencia hacia la mujer y niñez en riesgo",
       "tipo_atencion": "Desarrollo / atención ordinaria",
       "sector": [
@@ -12284,14 +12262,14 @@
   },
   "matriz_sector_municipio": {
     "Desarrollo económico local": {
+      "Olopa": 5,
       "Jocotán": 7,
       "Chiquimula": 4,
-      "Olopa": 5,
       "Camotán": 6,
       "Esquipulas": 2,
       "Concepción las Minas": 2,
-      "San Jacinto": 3,
       "Ipala": 2,
+      "San Jacinto": 3,
       "San Juan Ermita": 3,
       "Quezaltepeque": 1
     },
@@ -12299,10 +12277,10 @@
       "Jocotán": 6,
       "Camotán": 5,
       "Chiquimula": 3,
-      "San Jacinto": 3,
       "Ipala": 2,
-      "Concepción las Minas": 2,
       "Olopa": 6,
+      "Concepción las Minas": 2,
+      "San Jacinto": 3,
       "San Juan Ermita": 8,
       "Quezaltepeque": 1,
       "San José la Arada": 1
@@ -12310,23 +12288,23 @@
     "Gobernanza y fortalecimiento institucional": {
       "Jocotán": 5,
       "Camotán": 4,
+      "Olopa": 5,
       "Esquipulas": 1,
       "Concepción las Minas": 2,
-      "Olopa": 5,
       "Quezaltepeque": 1,
       "Ipala": 1,
       "San Juan Ermita": 4,
-      "Chiquimula": 2,
       "San José la Arada": 1,
+      "Chiquimula": 2,
       "San Jacinto": 1
     },
     "Ambiente y cambio climático": {
       "Jocotán": 7,
       "Camotán": 6,
       "Chiquimula": 3,
+      "Olopa": 4,
       "Esquipulas": 1,
       "Concepción las Minas": 2,
-      "Olopa": 4,
       "San Juan Ermita": 5,
       "Quezaltepeque": 1,
       "Ipala": 1,
@@ -12335,9 +12313,9 @@
     "Género": {
       "Jocotán": 6,
       "Camotán": 6,
+      "Olopa": 3,
       "Esquipulas": 2,
       "Concepción las Minas": 2,
-      "Olopa": 3,
       "San Juan Ermita": 4,
       "Quezaltepeque": 2,
       "Ipala": 2,
@@ -12356,22 +12334,22 @@
     },
     "Agua y saneamiento": {
       "Chiquimula": 2,
+      "Olopa": 4,
       "Esquipulas": 1,
       "Concepción las Minas": 1,
-      "Olopa": 4,
       "San Juan Ermita": 4,
       "Jocotán": 3,
       "Camotán": 2
     },
     "Infraestructura": {
       "Chiquimula": 2,
+      "Camotán": 3,
       "Quezaltepeque": 1,
       "Ipala": 1,
+      "San Juan Ermita": 3,
       "Olopa": 3,
       "Jocotán": 3,
       "Concepción las Minas": 1,
-      "Camotán": 3,
-      "San Juan Ermita": 3,
       "San Jacinto": 1
     },
     "Educación": {
@@ -12383,11 +12361,11 @@
       "Jocotán": 4,
       "Camotán": 3,
       "San Juan Ermita": 2,
+      "Chiquimula": 1,
       "Quezaltepeque": 1,
       "Ipala": 1,
       "Esquipulas": 1,
-      "San Jacinto": 1,
-      "Chiquimula": 1
+      "San Jacinto": 1
     },
     "Violencia basada en género": {},
     "Migración y movilidad humana": {
@@ -12398,8 +12376,8 @@
     "Reducción de riesgo ante desastres": {
       "Jocotán": 1,
       "San Juan Ermita": 2,
-      "Chiquimula": 1,
-      "San José la Arada": 1
+      "San José la Arada": 1,
+      "Chiquimula": 1
     }
   },
   "comunidades_sin_cobertura": [
