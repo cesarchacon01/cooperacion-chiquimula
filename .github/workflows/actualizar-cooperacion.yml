@@ -30,6 +30,10 @@ jobs:
         env:
           KOBO_TOKEN: ${{ secrets.KOBO_TOKEN }}
           KOBO_ASSET_UID: ${{ secrets.KOBO_ASSET_UID }}
+          # Segundo formulario (copia del principal). Opcional: si falla, se publica solo el principal.
+          KOBO_ASSET_UID_2: ajfH3dzkqTkTcMnxr2gow3
+          # Solo si el segundo formulario necesita una clave distinta; si no existe, se usa KOBO_TOKEN.
+          KOBO_TOKEN_2: ${{ secrets.KOBO_TOKEN_2 }}
         run: python actualizar_datos.py
 
       - name: Guardar cambios
