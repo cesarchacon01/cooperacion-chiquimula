@@ -151,8 +151,26 @@ def api_get(url, token):
     with urlopen(req,timeout=90) as r: return json.loads(r.read().decode('utf-8'))
 
 def descargar():
+    """Lee el formulario principal y, si está configurado, un segundo formulario con la misma estructura.
+    El principal es obligatorio. El segundo (KOBO_ASSET_UID_2) es opcional: usa KOBO_TOKEN_2 si existe
+    y, si no, la misma clave del principal. Si el segundo falla, se avisa y el visor sigue con el principal."""
     token=os.environ.get('KOBO_TOKEN','').strip(); uid=os.environ.get('KOBO_ASSET_UID','').strip()
     if not token or not uid: raise RuntimeError('Faltan KOBO_TOKEN o KOBO_ASSET_UID en GitHub Secrets.')
+    resultados=descargar_formulario(uid,token)
+    print(f'Formulario principal: {len(resultados)} registros')
+    uid2=os.environ.get('KOBO_ASSET_UID_2','').strip()
+    if uid2 and uid2!=uid:
+        token2=os.environ.get('KOBO_TOKEN_2','').strip() or token
+        try:
+            extra=descargar_formulario(uid2,token2)
+            print(f'Segundo formulario: {len(extra)} registros')
+            resultados.extend(extra)
+        except Exception as e:
+            print(f'AVISO: no se pudo leer el segundo formulario ({e}). Se publica solo el principal. '
+                  'Revise que la cuenta de la clave tenga permiso para ver sus envíos.')
+    return resultados
+
+def descargar_formulario(uid, token):
     url=f'https://eu.kobotoolbox.org/api/v2/assets/{uid}/data/?format=json&limit=3000'
     data=api_get(url,token)
     resultados=data.get('results',data if isinstance(data,list) else [])

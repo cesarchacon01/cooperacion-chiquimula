@@ -17,6 +17,11 @@ SINCRONIZACIÓN CON KOBO
 La tarea necesita dos secretos en Settings > Secrets and variables > Actions:
   KOBO_TOKEN       token de la cuenta de Kobo
   KOBO_ASSET_UID   identificador del formulario
+  KOBO_TOKEN_2     (opcional) clave para el segundo formulario, solo si necesita una distinta
+Segundo formulario: el flujo también lee una copia del formulario principal (su identificador
+está escrito en .github/workflows/actualizar-cooperacion.yml como KOBO_ASSET_UID_2). Sus respuestas
+se suman a las del principal. La cuenta de KOBO_TOKEN debe tener permiso para ver sus envíos; si no
+lo tiene, la tarea avisa y publica solo el formulario principal.
 Para ejecutarla a mano: pestaña Actions > "Actualizar cooperación desde Kobo" > Run workflow.
 
 CÓMO SE UBICAN LOS LUGARES
