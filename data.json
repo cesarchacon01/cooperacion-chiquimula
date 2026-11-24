@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-23T22:38:32.507970+00:00",
+  "generado": "2026-11-24T21:54:01.082328+00:00",
   "nota": "Datos sincronizados automáticamente desde KoboToolbox. La base territorial oficial se mantiene separada de los lugares adicionales reportados pendientes de validación.",
   "programas": [
     {
@@ -11314,6 +11314,55 @@
           "area": "Rural"
         }
       ]
+    },
+    {
+      "organizacion": "Acnur",
+      "tipo_actor": "ONG internacional",
+      "trabajo_comunitario": "No",
+      "pais_origen": "",
+      "nombre_programa": "Operación",
+      "tipo_atencion": "Emergencia / respuesta humanitaria",
+      "sector": [
+        "Gobernanza y fortalecimiento institucional",
+        "Desarrollo económico local",
+        "Migración y movilidad humana"
+      ],
+      "modalidad": [
+        "Asistencia técnica",
+        "Financiamiento directo",
+        "Obras o infraestructura"
+      ],
+      "fecha_inicio": "2019-01-01",
+      "tipo_duracion": "No, es una intervención permanente / sin fecha de cierre",
+      "fecha_fin": "",
+      "duracion_aproximada": "",
+      "estado_programa": "En ejecución",
+      "contraparte_gubernamental": "Municipalidades",
+      "monto_rango": "Prefiere no indicar",
+      "monto_rango_codigo": "prefiere_no_indicar",
+      "fuente_financiamiento": [
+        "Donante internacional"
+      ],
+      "espacios_coordinacion": [
+        "Mesa de Cooperación"
+      ],
+      "disposicion_coordinar": "Sí",
+      "beneficiarios_institucionales": {
+        "Municipalidades": 9,
+        "Dirección Municipal de la Mujer (DMM)": 8
+      },
+      "municipios_cobertura_institucional": [
+        "Camotán",
+        "Chiquimula",
+        "Concepción las Minas",
+        "Esquipulas",
+        "Ipala",
+        "Jocotán",
+        "Olopa",
+        "San Jacinto",
+        "San Juan Ermita"
+      ],
+      "comunidades": []
     }
   ],
   "municipios": [
@@ -11332,6 +11381,7 @@
   "resumen_municipio": {
     "Camotán": {
       "organizaciones": [
+        "Acnur",
         "Asociación Regional Campesina Ch'ortí' -ASORECH-",
         "Asociación de Servicios y Desarrollo Socioeconómico de Chiquimula -ASEDECHI-",
         "Banco Aleman- KfW",
@@ -11340,26 +11390,26 @@
         "Fundación Ayuda en Acción Guatemala",
         "Unbound"
       ],
-      "total_programas": 8,
+      "total_programas": 9,
       "comunidades_cubiertas": 33,
       "comunidades_total_catalogo": 155,
       "inversion_estimada": 0,
       "sectores": {
         "Seguridad alimentaria y nutricional": 5,
-        "Gobernanza y fortalecimiento institucional": 4,
-        "Desarrollo económico local": 5,
+        "Gobernanza y fortalecimiento institucional": 5,
+        "Desarrollo económico local": 6,
         "Ambiente y cambio climático": 6,
         "Género": 5,
         "Educación": 3,
         "Protección (niñez, migrantes, víctimas de violencia)": 2,
         "Salud": 1,
         "Agua y saneamiento": 2,
-        "Migración y movilidad humana": 1,
+        "Migración y movilidad humana": 2,
         "Infraestructura": 3
       },
       "estado": {
         "Próximo a finalizar": 1,
-        "En ejecución": 5,
+        "En ejecución": 6,
         "Finalizado": 2
       },
       "instituciones": {
@@ -11374,8 +11424,8 @@
           "con_cantidad": true
         },
         "Municipalidades": {
-          "registros": 4,
-          "cantidad": 17,
+          "registros": 5,
+          "cantidad": 26,
           "con_cantidad": true
         },
         "Oficina Municipal de Juventud": {
@@ -11412,38 +11462,45 @@
           "registros": 1,
           "cantidad": 5,
           "con_cantidad": true
+        },
+        "Dirección Municipal de la Mujer (DMM)": {
+          "registros": 1,
+          "cantidad": 8,
+          "con_cantidad": true
         }
       },
       "fuente_financiamiento": {
-        "Donante internacional": 8,
+        "Donante internacional": 9,
         "Fondos propios": 1
       },
       "lugares_adicionales_reportados": 0
     },
     "Chiquimula": {
       "organizaciones": [
+        "Acnur",
         "Asociación Santiago Jocotán, ONG",
         "Asociación de Servicios y Desarrollo Socioeconómico de Chiquimula -ASEDECHI-",
         "FAO Naciones Unidas",
         "Organización de las Naciones Unidas para Alimentación y Agricultura -FAO-"
       ],
-      "total_programas": 4,
+      "total_programas": 5,
       "comunidades_cubiertas": 13,
       "comunidades_total_catalogo": 124,
       "inversion_estimada": 0,
       "sectores": {
-        "Desarrollo económico local": 3,
+        "Desarrollo económico local": 4,
         "Salud": 1,
         "Seguridad alimentaria y nutricional": 3,
         "Agua y saneamiento": 2,
         "Ambiente y cambio climático": 3,
         "Infraestructura": 2,
-        "Gobernanza y fortalecimiento institucional": 2,
+        "Gobernanza y fortalecimiento institucional": 3,
         "Reducción de riesgo ante desastres": 1,
-        "Género": 1
+        "Género": 1,
+        "Migración y movilidad humana": 1
       },
       "estado": {
-        "En ejecución": 2,
+        "En ejecución": 3,
         "Próximo a finalizar": 1,
         "Finalizado": 1
       },
@@ -11454,8 +11511,8 @@
           "con_cantidad": true
         },
         "Municipalidades": {
-          "registros": 2,
-          "cantidad": 8,
+          "registros": 3,
+          "cantidad": 17,
           "con_cantidad": true
         },
         "Oficina Municipal de Gestión Integral de Riesgo de Desastres (GIRD)": {
@@ -11487,46 +11544,135 @@
           "registros": 1,
           "cantidad": 5,
           "con_cantidad": true
+        },
+        "Dirección Municipal de la Mujer (DMM)": {
+          "registros": 1,
+          "cantidad": 8,
+          "con_cantidad": true
         }
       },
       "fuente_financiamiento": {
         "Fondos propios": 1,
-        "Donante internacional": 3
+        "Donante internacional": 4
       },
       "lugares_adicionales_reportados": 2
     },
     "Concepción las Minas": {
       "organizaciones": [
+        "Acnur",
         "Asociación Regional Campesina Ch'ortí' -ASORECH-",
         "Banco Aleman- KfW",
         "Organization American States"
       ],
-      "total_programas": 3,
+      "total_programas": 4,
       "comunidades_cubiertas": 10,
       "comunidades_total_catalogo": 80,
       "inversion_estimada": 0,
       "sectores": {
         "Agua y saneamiento": 1,
         "Ambiente y cambio climático": 2,
-        "Gobernanza y fortalecimiento institucional": 2,
-        "Desarrollo económico local": 2,
+        "Gobernanza y fortalecimiento institucional": 3,
+        "Desarrollo económico local": 3,
         "Género": 2,
         "Seguridad alimentaria y nutricional": 2,
-        "Infraestructura": 1
+        "Infraestructura": 1,
+        "Migración y movilidad humana": 1
       },
       "estado": {
         "Próximo a finalizar": 1,
-        "En ejecución": 2
+        "En ejecución": 3
       },
       "instituciones": {
         "Municipalidades": {
-          "registros": 2,
-          "cantidad": 11,
+          "registros": 3,
+          "cantidad": 20,
           "con_cantidad": true
         },
         "Cooperativas de Café, Asociación de Productores y Consejo de Pueblos Originarios": {
           "registros": 1,
           "cantidad": 3,
+          "con_cantidad": true
+        },
+        "Dirección Municipal de la Mujer (DMM)": {
+          "registros": 1,
+          "cantidad": 8,
+          "con_cantidad": true
+        }
+      },
+      "fuente_financiamiento": {
+        "Donante internacional": 4
+      },
+      "lugares_adicionales_reportados": 0
+    },
+    "Esquipulas": {
+      "organizaciones": [
+        "Acnur",
+        "Organization American States"
+      ],
+      "total_programas": 2,
+      "comunidades_cubiertas": 0,
+      "comunidades_total_catalogo": 171,
+      "inversion_estimada": 0,
+      "sectores": {
+        "Agua y saneamiento": 1,
+        "Ambiente y cambio climático": 1,
+        "Gobernanza y fortalecimiento institucional": 2,
+        "Desarrollo económico local": 2,
+        "Género": 1,
+        "Migración y movilidad humana": 1
+      },
+      "estado": {
+        "Próximo a finalizar": 1,
+        "En ejecución": 1
+      },
+      "instituciones": {
+        "Municipalidades": {
+          "registros": 2,
+          "cantidad": 12,
+          "con_cantidad": true
+        },
+        "Dirección Municipal de la Mujer (DMM)": {
+          "registros": 1,
+          "cantidad": 8,
+          "con_cantidad": true
+        }
+      },
+      "fuente_financiamiento": {
+        "Donante internacional": 2
+      },
+      "lugares_adicionales_reportados": 0
+    },
+    "Ipala": {
+      "organizaciones": [
+        "Acnur",
+        "Asociación Regional Campesina Ch'ortí' -ASORECH-",
+        "Banco Aleman- KfW"
+      ],
+      "total_programas": 3,
+      "comunidades_cubiertas": 2,
+      "comunidades_total_catalogo": 80,
+      "inversion_estimada": 0,
+      "sectores": {
+        "Seguridad alimentaria y nutricional": 2,
+        "Desarrollo económico local": 2,
+        "Ambiente y cambio climático": 1,
+        "Gobernanza y fortalecimiento institucional": 2,
+        "Género": 1,
+        "Infraestructura": 1,
+        "Migración y movilidad humana": 1
+      },
+      "estado": {
+        "En ejecución": 3
+      },
+      "instituciones": {
+        "Municipalidades": {
+          "registros": 1,
+          "cantidad": 9,
+          "con_cantidad": true
+        },
+        "Dirección Municipal de la Mujer (DMM)": {
+          "registros": 1,
+          "cantidad": 8,
           "con_cantidad": true
         }
       },
@@ -11535,64 +11681,9 @@
       },
       "lugares_adicionales_reportados": 0
     },
-    "Esquipulas": {
-      "organizaciones": [
-        "Organization American States"
-      ],
-      "total_programas": 1,
-      "comunidades_cubiertas": 0,
-      "comunidades_total_catalogo": 171,
-      "inversion_estimada": 0,
-      "sectores": {
-        "Agua y saneamiento": 1,
-        "Ambiente y cambio climático": 1,
-        "Gobernanza y fortalecimiento institucional": 1,
-        "Desarrollo económico local": 1,
-        "Género": 1
-      },
-      "estado": {
-        "Próximo a finalizar": 1
-      },
-      "instituciones": {
-        "Municipalidades": {
-          "registros": 1,
-          "cantidad": 3,
-          "con_cantidad": true
-        }
-      },
-      "fuente_financiamiento": {
-        "Donante internacional": 1
-      },
-      "lugares_adicionales_reportados": 0
-    },
-    "Ipala": {
-      "organizaciones": [
-        "Asociación Regional Campesina Ch'ortí' -ASORECH-",
-        "Banco Aleman- KfW"
-      ],
-      "total_programas": 2,
-      "comunidades_cubiertas": 2,
-      "comunidades_total_catalogo": 80,
-      "inversion_estimada": 0,
-      "sectores": {
-        "Seguridad alimentaria y nutricional": 2,
-        "Desarrollo económico local": 1,
-        "Ambiente y cambio climático": 1,
-        "Gobernanza y fortalecimiento institucional": 1,
-        "Género": 1,
-        "Infraestructura": 1
-      },
-      "estado": {
-        "En ejecución": 2
-      },
-      "instituciones": {},
-      "fuente_financiamiento": {
-        "Donante internacional": 2
-      },
-      "lugares_adicionales_reportados": 0
-    },
     "Jocotán": {
       "organizaciones": [
+        "Acnur",
         "Asociación Aldeas Infantiles SOS Guatemala",
         "Asociación Regional Campesina Ch'ortí' -ASORECH-",
         "Asociación de Servicios y Desarrollo Socioeconómico de Chiquimula -ASEDECHI-",
@@ -11603,26 +11694,26 @@
         "Unbound",
         "World Vision"
       ],
-      "total_programas": 11,
+      "total_programas": 12,
       "comunidades_cubiertas": 22,
       "comunidades_total_catalogo": 89,
       "inversion_estimada": 0,
       "sectores": {
-        "Desarrollo económico local": 7,
+        "Desarrollo económico local": 8,
         "Seguridad alimentaria y nutricional": 6,
-        "Gobernanza y fortalecimiento institucional": 5,
+        "Gobernanza y fortalecimiento institucional": 6,
         "Ambiente y cambio climático": 7,
         "Género": 6,
         "Educación": 4,
         "Protección (niñez, migrantes, víctimas de violencia)": 4,
         "Salud": 2,
         "Agua y saneamiento": 3,
-        "Migración y movilidad humana": 1,
+        "Migración y movilidad humana": 2,
         "Reducción de riesgo ante desastres": 1,
         "Infraestructura": 3
       },
       "estado": {
-        "En ejecución": 7,
+        "En ejecución": 8,
         "Próximo a finalizar": 2,
         "Finalizado": 2
       },
@@ -11638,8 +11729,8 @@
           "con_cantidad": true
         },
         "Municipalidades": {
-          "registros": 5,
-          "cantidad": 18,
+          "registros": 6,
+          "cantidad": 27,
           "con_cantidad": true
         },
         "Oficina Municipal de Juventud": {
@@ -11686,16 +11777,22 @@
           "registros": 1,
           "cantidad": 2,
           "con_cantidad": true
+        },
+        "Dirección Municipal de la Mujer (DMM)": {
+          "registros": 1,
+          "cantidad": 8,
+          "con_cantidad": true
         }
       },
       "fuente_financiamiento": {
         "Fondos propios": 3,
-        "Donante internacional": 10
+        "Donante internacional": 11
       },
       "lugares_adicionales_reportados": 0
     },
     "Olopa": {
       "organizaciones": [
+        "Acnur",
         "Asociación Regional Campesina Ch'ortí' -ASORECH-",
         "Asociación de Servicios y Desarrollo Socioeconómico de Chiquimula -ASEDECHI-",
         "Banco Aleman- KfW",
@@ -11703,28 +11800,29 @@
         "FAO Naciones Unidas",
         "Organization American States"
       ],
-      "total_programas": 8,
+      "total_programas": 9,
       "comunidades_cubiertas": 27,
       "comunidades_total_catalogo": 58,
       "inversion_estimada": 0,
       "sectores": {
-        "Desarrollo económico local": 5,
+        "Desarrollo económico local": 6,
         "Agua y saneamiento": 4,
         "Ambiente y cambio climático": 4,
-        "Gobernanza y fortalecimiento institucional": 5,
+        "Gobernanza y fortalecimiento institucional": 6,
         "Género": 3,
         "Seguridad alimentaria y nutricional": 6,
-        "Infraestructura": 3
+        "Infraestructura": 3,
+        "Migración y movilidad humana": 1
       },
       "estado": {
-        "En ejecución": 5,
+        "En ejecución": 6,
         "Próximo a finalizar": 1,
         "Finalizado": 2
       },
       "instituciones": {
         "Municipalidades": {
-          "registros": 4,
-          "cantidad": 11,
+          "registros": 5,
+          "cantidad": 20,
           "con_cantidad": true
         },
         "COMUSAN (Comisión Municipal de Seguridad Alimentaria y Nutricional)": {
@@ -11756,11 +11854,16 @@
           "registros": 1,
           "cantidad": 5,
           "con_cantidad": true
+        },
+        "Dirección Municipal de la Mujer (DMM)": {
+          "registros": 1,
+          "cantidad": 8,
+          "con_cantidad": true
         }
       },
       "fuente_financiamiento": {
         "Fondos propios": 1,
-        "Donante internacional": 7
+        "Donante internacional": 8
       },
       "lugares_adicionales_reportados": 0
     },
@@ -11790,28 +11893,41 @@
     },
     "San Jacinto": {
       "organizaciones": [
+        "Acnur",
         "Asociación Regional Campesina Ch'ortí' -ASORECH-",
         "Catholic Relief Services",
         "Cáritas Zacapa"
       ],
-      "total_programas": 3,
+      "total_programas": 4,
       "comunidades_cubiertas": 8,
       "comunidades_total_catalogo": 44,
       "inversion_estimada": 0,
       "sectores": {
         "Seguridad alimentaria y nutricional": 3,
-        "Desarrollo económico local": 2,
-        "Gobernanza y fortalecimiento institucional": 1,
-        "Infraestructura": 1
+        "Desarrollo económico local": 3,
+        "Gobernanza y fortalecimiento institucional": 2,
+        "Infraestructura": 1,
+        "Migración y movilidad humana": 1
       },
       "estado": {
-        "En ejecución": 1,
+        "En ejecución": 2,
         "Finalizado": 1,
         "Próximo a finalizar": 1
       },
-      "instituciones": {},
+      "instituciones": {
+        "Municipalidades": {
+          "registros": 1,
+          "cantidad": 9,
+          "con_cantidad": true
+        },
+        "Dirección Municipal de la Mujer (DMM)": {
+          "registros": 1,
+          "cantidad": 8,
+          "con_cantidad": true
+        }
+      },
       "fuente_financiamiento": {
-        "Donante internacional": 3
+        "Donante internacional": 4
       },
       "lugares_adicionales_reportados": 0
     },
@@ -11851,6 +11967,7 @@
     },
     "San Juan Ermita": {
       "organizaciones": [
+        "Acnur",
         "Asociación Regional Campesina Ch'ortí' -ASORECH-",
         "Banco Aleman- KfW",
         "Catholic Relief Services",
@@ -11859,7 +11976,7 @@
         "Organización de las Naciones Unidas para Alimentación y Agricultura -FAO-",
         "World Vision"
       ],
-      "total_programas": 8,
+      "total_programas": 9,
       "comunidades_cubiertas": 32,
       "comunidades_total_catalogo": 50,
       "inversion_estimada": 0,
@@ -11870,22 +11987,22 @@
         "Salud": 2,
         "Ambiente y cambio climático": 5,
         "Reducción de riesgo ante desastres": 2,
-        "Desarrollo económico local": 3,
+        "Desarrollo económico local": 4,
         "Género": 4,
         "Protección (niñez, migrantes, víctimas de violencia)": 2,
-        "Migración y movilidad humana": 1,
-        "Gobernanza y fortalecimiento institucional": 4,
+        "Migración y movilidad humana": 2,
+        "Gobernanza y fortalecimiento institucional": 5,
         "Infraestructura": 3
       },
       "estado": {
-        "En ejecución": 5,
+        "En ejecución": 6,
         "Finalizado": 2,
         "Próximo a finalizar": 1
       },
       "instituciones": {
         "Municipalidades": {
-          "registros": 4,
-          "cantidad": 11,
+          "registros": 5,
+          "cantidad": 20,
           "con_cantidad": true
         },
         "Centros o puestos de salud": {
@@ -11927,10 +12044,15 @@
           "registros": 1,
           "cantidad": 5,
           "con_cantidad": true
+        },
+        "Dirección Municipal de la Mujer (DMM)": {
+          "registros": 1,
+          "cantidad": 8,
+          "con_cantidad": true
         }
       },
       "fuente_financiamiento": {
-        "Donante internacional": 7,
+        "Donante internacional": 8,
         "Fondos propios": 2
       },
       "lugares_adicionales_reportados": 0
@@ -11938,59 +12060,59 @@
   },
   "matriz_sector_municipio": {
     "Desarrollo económico local": {
-      "Chiquimula": 3,
-      "Jocotán": 7,
-      "Olopa": 5,
-      "Camotán": 5,
-      "Esquipulas": 1,
-      "Concepción las Minas": 2,
-      "San Jacinto": 2,
-      "Ipala": 1,
-      "San Juan Ermita": 3
+      "Chiquimula": 4,
+      "Jocotán": 8,
+      "Olopa": 6,
+      "Camotán": 6,
+      "Esquipulas": 2,
+      "Concepción las Minas": 3,
+      "Ipala": 2,
+      "San Jacinto": 3,
+      "San Juan Ermita": 4
     },
     "Seguridad alimentaria y nutricional": {
-      "Camotán": 5,
       "Jocotán": 6,
+      "Camotán": 5,
       "Chiquimula": 3,
-      "San Jacinto": 3,
-      "Concepción las Minas": 2,
       "Ipala": 2,
       "Olopa": 6,
+      "San Jacinto": 3,
+      "Concepción las Minas": 2,
       "San Juan Ermita": 8,
       "Quezaltepeque": 1,
       "San José la Arada": 1
     },
     "Gobernanza y fortalecimiento institucional": {
-      "Camotán": 4,
-      "Jocotán": 5,
-      "Esquipulas": 1,
-      "Concepción las Minas": 2,
-      "Olopa": 5,
-      "Ipala": 1,
-      "San Juan Ermita": 4,
+      "Jocotán": 6,
+      "Camotán": 5,
+      "Esquipulas": 2,
+      "Olopa": 6,
+      "Concepción las Minas": 3,
+      "San Juan Ermita": 5,
+      "Ipala": 2,
       "Quezaltepeque": 1,
+      "Chiquimula": 3,
       "San José la Arada": 1,
-      "Chiquimula": 2,
-      "San Jacinto": 1
+      "San Jacinto": 2
     },
     "Ambiente y cambio climático": {
-      "Camotán": 6,
       "Jocotán": 7,
+      "Camotán": 6,
       "Chiquimula": 3,
       "Esquipulas": 1,
-      "Concepción las Minas": 2,
       "Olopa": 4,
+      "Concepción las Minas": 2,
       "San Juan Ermita": 5,
       "Ipala": 1,
       "Quezaltepeque": 1,
       "San José la Arada": 1
     },
     "Género": {
-      "Camotán": 5,
       "Jocotán": 6,
+      "Camotán": 5,
       "Esquipulas": 1,
-      "Concepción las Minas": 2,
       "Olopa": 3,
+      "Concepción las Minas": 2,
       "San Juan Ermita": 4,
       "Ipala": 1,
       "Quezaltepeque": 1,
@@ -11998,51 +12120,57 @@
     },
     "Salud": {
       "Chiquimula": 1,
-      "Camotán": 1,
       "Jocotán": 2,
+      "Camotán": 1,
       "San Juan Ermita": 2
     },
     "Agua y saneamiento": {
       "Chiquimula": 2,
       "Esquipulas": 1,
-      "Concepción las Minas": 1,
       "Olopa": 4,
+      "Concepción las Minas": 1,
       "San Juan Ermita": 4,
-      "Camotán": 2,
-      "Jocotán": 3
+      "Jocotán": 3,
+      "Camotán": 2
     },
     "Infraestructura": {
       "Chiquimula": 2,
-      "Ipala": 1,
-      "Concepción las Minas": 1,
+      "Camotán": 3,
       "Jocotán": 3,
       "San Juan Ermita": 3,
-      "Camotán": 3,
+      "Concepción las Minas": 1,
+      "Ipala": 1,
       "Quezaltepeque": 1,
       "Olopa": 3,
       "San Jacinto": 1
     },
     "Educación": {
-      "Camotán": 3,
       "Jocotán": 4,
+      "Camotán": 3,
       "San Juan Ermita": 1
     },
     "Protección (niñez, migrantes, víctimas de violencia)": {
-      "Camotán": 2,
       "Jocotán": 4,
+      "Camotán": 2,
       "San Juan Ermita": 2
     },
     "Violencia basada en género": {},
     "Migración y movilidad humana": {
-      "Camotán": 1,
-      "Jocotán": 1,
-      "San Juan Ermita": 1
+      "Jocotán": 2,
+      "Camotán": 2,
+      "San Juan Ermita": 2,
+      "Esquipulas": 1,
+      "San Jacinto": 1,
+      "Chiquimula": 1,
+      "Ipala": 1,
+      "Concepción las Minas": 1,
+      "Olopa": 1
     },
     "Reducción de riesgo ante desastres": {
       "Jocotán": 1,
       "San Juan Ermita": 2,
-      "San José la Arada": 1,
-      "Chiquimula": 1
+      "Chiquimula": 1,
+      "San José la Arada": 1
     }
   },
   "comunidades_sin_cobertura": [
@@ -19327,8 +19455,8 @@
       "con_cantidad": true
     },
     "Municipalidades": {
-      "registros": 10,
-      "cantidad": 28,
+      "registros": 11,
+      "cantidad": 37,
       "con_cantidad": true
     },
     "Oficina Municipal de Juventud": {
@@ -19374,6 +19502,11 @@
     "Dirección Municipal de Planificación (DMP)": {
       "registros": 1,
       "cantidad": 5,
+      "con_cantidad": true
+    },
+    "Dirección Municipal de la Mujer (DMM)": {
+      "registros": 1,
+      "cantidad": 8,
       "con_cantidad": true
     }
   },
@@ -19492,13 +19625,13 @@
     }
   },
   "inversion": {
-    "programas_con_monto": 21,
+    "programas_con_monto": 22,
     "programas_sin_monto": 0,
     "nota_metodologica": "La inversión se conserva como rango reportado. No se calculan puntos medios ni se distribuyen montos entre municipios o sectores."
   },
   "control": {
-    "registros_kobo": 15,
-    "programas_procesados": 21,
+    "registros_kobo": 16,
+    "programas_procesados": 22,
     "lugares_catalogo": 996,
     "lugares_con_coordenadas": 996,
     "lugares_adicionales_reportados": 2,
