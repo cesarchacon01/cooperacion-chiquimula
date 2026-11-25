@@ -1,17 +1,24 @@
 name: Actualizar cooperación desde Kobo
 
+# Cómo funciona:
+# - Cada ejecución actualiza data.json cada 30 minutos durante unas 5.5 horas.
+# - Al terminar, se relanza sola (no necesita claves: usa el permiso propio de la tarea).
+# - El horario de abajo es solo respaldo: si la cadena se corta, la vuelve a arrancar.
+# - Para detener todo: Actions > esta tarea > "..." > Disable workflow.
+
 on:
   workflow_dispatch:
   repository_dispatch:
     types: [kobo_envio]
   schedule:
-    # Cada 30 minutos (minutos 7 y 37). GitHub puede retrasar u omitir ejecuciones programadas.
+    # Respaldo. GitHub puede retrasar u omitir ejecuciones programadas.
     - cron: "7,37 * * * *"
 
 permissions:
   contents: write
+  actions: write
 
-# Evita que dos ejecuciones se crucen si una tarda más de lo normal.
+# Solo una ejecución a la vez; las demás esperan en fila (como máximo una).
 concurrency:
   group: actualizar-datos
   cancel-in-progress: false
@@ -19,6 +26,7 @@ concurrency:
 jobs:
   actualizar:
     runs-on: ubuntu-latest
+    timeout-minutes: 350
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v5
@@ -28,7 +36,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Actualizar data.json desde Kobo
+      - name: Actualizar data.json cada 30 minutos (11 vueltas)
         env:
           KOBO_TOKEN: ${{ secrets.KOBO_TOKEN }}
           KOBO_ASSET_UID: ${{ secrets.KOBO_ASSET_UID }}
@@ -36,14 +44,12 @@ jobs:
           KOBO_ASSET_UID_2: ajfH3dzkqTkTcMnxr2gow3
           # Solo si el segundo formulario necesita una clave distinta; si no existe, se usa KOBO_TOKEN.
           KOBO_TOKEN_2: ${{ secrets.KOBO_TOKEN_2 }}
-        run: python actualizar_datos.py
-
-      - name: Guardar cambios
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # Si solo cambió la hora de generación, no se guarda (evita un cambio cada 30 minutos sin datos nuevos).
-          python - <<'PY'
+
+          # Si solo cambió la hora de generación, no se guarda (evita un cambio sin datos nuevos).
+          cat > /tmp/sin_cambios.py <<'PY'
           import json, subprocess, sys
           try:
               viejo = json.loads(subprocess.check_output(["git", "show", "HEAD:data.json"]))
@@ -55,10 +61,30 @@ jobs:
               subprocess.run(["git", "checkout", "--", "data.json"], check=True)
               print("Sin datos nuevos desde Kobo.")
           PY
-          git add data.json
-          if git diff --cached --quiet; then
-            echo "No hay cambios en data.json"
-          else
-            git commit -m "Actualizar datos de cooperación desde Kobo"
-            git push
-          fi
+
+          VUELTAS=11
+          for i in $(seq 1 $VUELTAS); do
+            echo "::group::Vuelta $i de $VUELTAS ($(date -u +%H:%M) UTC)"
+            git pull --rebase --quiet origin main || echo "No se pudo traer la última versión; se sigue con la actual."
+            if python actualizar_datos.py; then
+              python /tmp/sin_cambios.py
+              git add data.json
+              if git diff --cached --quiet; then
+                echo "No hay cambios en data.json"
+              else
+                git commit -m "Actualizar datos de cooperación desde Kobo"
+                (git pull --rebase --quiet origin main && git push) || echo "No se pudo subir; se reintenta en la siguiente vuelta."
+              fi
+            else
+              echo "::warning::Falló la descarga desde Kobo en la vuelta $i; se reintenta en 30 minutos."
+              git checkout -- data.json 2>/dev/null || true
+            fi
+            echo "::endgroup::"
+            if [ "$i" -lt "$VUELTAS" ]; then sleep 1800; fi
+          done
+
+      - name: Relanzar la tarea
+        if: ${{ !cancelled() }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run actualizar-cooperacion.yml --ref main --repo "${{ github.repository }}"
