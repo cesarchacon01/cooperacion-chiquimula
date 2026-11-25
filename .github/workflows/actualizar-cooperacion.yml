@@ -2,6 +2,8 @@ name: Actualizar cooperación desde Kobo
 
 on:
   workflow_dispatch:
+  repository_dispatch:
+    types: [kobo_envio]
   schedule:
     # Cada 30 minutos (minutos 7 y 37). GitHub puede retrasar u omitir ejecuciones programadas.
     - cron: "7,37 * * * *"
