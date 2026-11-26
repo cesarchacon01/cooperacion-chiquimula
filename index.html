@@ -3359,7 +3359,7 @@ async function iniciar(){
     const ctl=DATA.control||{};
     const corte=DATA.generado ? new Date(DATA.generado).toLocaleDateString('es-GT',{day:'2-digit',month:'short',year:'numeric'}) : '';
     document.getElementById('data-badge').textContent=
-      `Datos al ${corte||'—'} · ${ctl.registros_kobo??'—'} registros Kobo · ${ctl.programas_procesados??DATA.programas.length} programas`;
+      `Último cambio en los datos: ${corte||'—'} · Kobo se revisa cada 30 min · ${ctl.registros_kobo??'—'} registros Kobo · ${ctl.programas_procesados??DATA.programas.length} programas`;
     document.getElementById('data-badge').title=
       `Base territorial: ${ctl.lugares_catalogo??''} lugares poblados · ${ctl.lugares_con_coordenadas??''} georreferenciados`;
     if(CALIDAD.negativos.length){
